@@ -14,11 +14,12 @@ from __future__ import annotations
 
 CAMPOS = ("entrada", "cache_escritura", "cache_lectura", "salida")
 
-# Modelo de consumo de un recorrido, medido en las 9 sesiones de `estudios/prueba-recorrido-web` (oct 2026):
-# cada paso son 2 llamadas (abrir la captura y responder) sobre un contexto que empieza en ≈ 7,500 tokens y crece
-# ≈ 1,900 por paso (las capturas anteriores siguen en la sesión). Salida ≈ 760 y caché nueva ≈ 2,900 por paso.
-RECORRIDO = dict(contexto_inicial=7_500, crecimiento_por_paso=1_900, llamadas_por_paso=2, salida_por_paso=760,
-                 cache_nueva_por_paso=2_900)
+# Modelo de consumo de un recorrido. Cada paso son 2 llamadas (abrir la captura y responder) sobre un contexto que
+# crece con cada captura que queda en la sesión. Medido en el piloto 3 de OU 2.0 (Figma, ventana visible, capturas de
+# 1200×1026, 22/10/2026): contexto inicial ≈ 7,600, +4,800 por paso, caché nueva ≈ 9,800 y salida ≈ 890 por paso.
+# (Con las capturas más chicas de `estudios/prueba-recorrido-web` el crecimiento era ≈ 1,900 por paso.)
+RECORRIDO = dict(contexto_inicial=7_600, crecimiento_por_paso=4_800, llamadas_por_paso=2, salida_por_paso=890,
+                 cache_nueva_por_paso=9_800)
 
 
 def de_usage(u: dict | None) -> dict:

@@ -1,2 +1,3 @@
 {"id": "T1-bryan", "ok": true, "costo_usd": 1.4765, "tokens": {"entrada": 26, "cache_escritura": 112742, "cache_lectura": 261044, "salida": 6034}, "resultado": "abandono", "t": "2026-10-22T01:14:24"}
 {"id": "T1-bryan", "ok": true, "costo_usd": 2.2968, "tokens": {"entrada": 42, "cache_escritura": 98041, "cache_lectura": 578010, "salida": 8440}, "resultado": "abandono", "t": "2026-10-22T01:20:03"}
+{"id": "T1-bryan", "ok": true, "costo_usd": 7.011, "tokens": {"entrada": 74, "cache_escritura": 176003, "cache_lectura": 1752510, "salida": 15980}, "resultado": "abandono", "t": "2026-10-22T01:35:33"}

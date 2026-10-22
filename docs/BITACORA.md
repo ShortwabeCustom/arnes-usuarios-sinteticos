@@ -104,7 +104,13 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   mismo patrón de capturas de la sesión: 23 pasos hasta «cargando». Evidencia en `datos/historial/piloto-2-…`.
 - Lección: **validar el instrumento con el mismo camino de código que la sesión** (ventana visible, mismas rutas de
   captura) antes de gastar; el mapeo sin ventana no lo cubría.
-- Pendiente (antes del piloto): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
+- **Piloto 3 válido** (1.9 M tokens, 192 mil nuevos): el instrumento funcionó en 18 pasos. Bryan llegó fluido hasta
+  el código; abandonó en «¿te está ayudando un asesor?»: «No» no habilita «Confirmar» porque el prototipo solo
+  conecta la rama «Sí» (estado de prototipado, B). En el código, el avance es una zona invisible al pie (D, en duda).
+  Decisión pendiente con Alexis: cómo tratar la rama del asesor en el panel.
+- **Modelo de tokens recalibrado** con el piloto 3: con capturas de 1200×1026 el contexto crece ≈ 4,800 por paso (no
+  1,900). Una sesión de 23 pasos ≈ 2.9 M. Recortar la captura al teléfono reduciría el crecimiento.
+- Pendiente (histórico): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 
 **Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el
