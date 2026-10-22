@@ -217,7 +217,7 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
 def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo):
     _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo)
     ses = reg.pop("_ses", None)
-    if ses and reg.get("resultado") != "fallo_max_pasos":
+    if ses and reg.get("resultado") not in ("fallo_max_pasos", "fallo_instrumento"):
         r = motor.llamar(motor.Llamada(f"{reg['id']}-ces", "La sesión terminó. Pensando en todo lo que hiciste para esta tarea, "
                                        "¿qué tan fácil o difícil te resultó? Responde en JSON: «ces» de 1 (muy difícil) a 7 (muy fácil) "
                                        "y «texto» con una frase de por qué.", sistema, ESQUEMA_CES, [], [], reanudar=ses,
@@ -253,6 +253,20 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
             reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
             reg["pasos"].append(dict(n=n, pantalla=pid, url=info["url"], captura=str(png.relative_to(e.dir)), fin=True))
             return
+        if material == "figma" and not zonas:
+            # sin zonas el perfil no puede tocar nada: se detecta otra vez y, si sigue en 0, se detiene ANTES de
+            # llamar al modelo. Un abandono así sería del instrumento, no del producto (piloto de OU 2.0).
+            info = nav.paso(png)
+            zonas = info.get("zonas", [])
+            marcar(png, zonas, marcas)
+            if not zonas:
+                reg["resultado"] = "fallo_instrumento"
+                reg["nota_instrumento"] = (f"Paso {n}: 0 zonas tocables en dos detecciones seguidas ({info.get('deteccion')}). "
+                                           "Revisar la captura antes de interpretar nada.")
+                reg["pasos"].append(dict(n=n, pantalla=pid, url=info["url"], captura=str(png.relative_to(e.dir)),
+                                         sin_zonas=True))
+                print(f"  ! {reg['nota_instrumento']}")
+                return
         intro = ""
         if n == 1:
             intro = (f"{' '.join(t.get('escenario', '').split())}\n\nTu tarea: {' '.join(t['instruccion'].split())}\n\n"

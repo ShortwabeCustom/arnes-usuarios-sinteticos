@@ -93,7 +93,12 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   registra los tokens de cada llamada (entrada, caché nueva, relectura de caché, salida) y los muestra en `arnes
   estado`, reportes y síntesis. `arnes recorrido … --simular` estima con un modelo medido en 9 sesiones reales
   (contexto ≈ 7,500 tokens + 1,900 por paso, 2 llamadas por paso). Las llamadas anteriores no guardaron tokens.
-- Pendiente: aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
+- **Piloto 1 fallido por el instrumento** (380 mil tokens): con la ventana visible en pantalla Retina la captura salía
+  al doble que las coordenadas de la página; 0 zonas en la bienvenida y Bryan «abandonó» sin poder tocar. El mapeo
+  no lo mostró porque corrió sin ventana. Arreglo: todas las capturas en `scale: 'css'`; y si una pantalla de Figma
+  da 0 zonas dos veces, la sesión se detiene como `fallo_instrumento` antes de llamar al modelo. Evidencia en
+  `datos/historial/piloto-1-fallo-instrumento/`.
+- Pendiente (antes del piloto): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 
 **Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el

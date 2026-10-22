@@ -1,0 +1,301 @@
+{
+ "id": "T1-bryan",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "figma",
+ "modelo": "sonnet",
+ "inicio": "2026-10-22T01:12:32",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p01.png",
+   "marcas": "datos/capturas/T1-bryan/p01-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y verde, con una ilustración chida, pero el mensaje habla de cuenta de débito y depósitos, no de un préstamo.",
+    "que_miras_primero": "El título grande «¡Recibe tu préstamo en tu cuenta de débito!» y luego el botón blanco de «Inicia tu solicitud».",
+    "interpretacion": "Es la pantalla de bienvenida. Para pedir el préstamo parece que primero tengo que abrir una cuenta. Los cinco puntitos de abajo parecen un carrusel. No veo cuántos pasos son ni cuánto tiempo toma.",
+    "pensamiento": "Yo vine por el efectivo, ¿por qué habla de depósitos de hasta $200,000? Bueno, le pico a iniciar y veo qué pide. Ojalá no sean mil pantallas.",
+    "intencion": "Quiero darle a «Inicia tu solicitud» para avanzar. Las cookies las ignoro por ahora.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Inicia tu solicitud», que es el único camino claro para seguir con el préstamo."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuántos pasos son ni cuánto falta. Solo veo unos puntitos que no explican nada."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "A-05",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": null,
+   "respuesta": "fuera_de_marcas"
+  },
+  {
+   "n": 2,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p02.png",
+   "marcas": "datos/capturas/T1-bryan/p02-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Otra pantalla de bienvenida, bonita y legible, pero ya es la segunda que solo me dice cosas y no me pide nada.",
+    "que_miras_primero": "«¡Tus datos están 100% seguros!» y el escudo con candado. Luego los puntitos de abajo, que ya van en el tercero.",
+    "interpretacion": "Es un carrusel de presentación que cambia solo. Ya pasó el de la tarjeta y ahora viene el de seguridad. Mi toque al botón no hizo nada, así que parece que el botón todavía no responde o que primero debo dejar pasar las diapositivas.",
+    "pensamiento": "¿100% seguros? Eso lo dice cualquiera. Yo vine por mi lana, no por un tour. ¿Cuántas de estas faltan?",
+    "intencion": "Quiero llegar ya al formulario. Como el botón no respondió, espero un momento a que el carrusel avance y vuelvo a intentar.",
+    "accion": {
+     "opcion": "esperar",
+     "texto": "Mi toque anterior no hizo nada y no hay ningún elemento marcado. Dejo que el carrusel avance a ver si aparece algo que sí responda, antes de abandonar."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Los puntitos me dicen que son cinco diapositivas, pero no sé cuántos pasos tiene la solicitud ni cuánto falta."
+    },
+    "confianza": 50,
+    "friccion": 3,
+    "reglas": [
+     "A-03",
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "esperar"
+   },
+   "espera_ms": 2019,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327419"
+  },
+  {
+   "n": 3,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p03.png",
+   "marcas": "datos/capturas/T1-bryan/p03-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Otra diapositiva bonita, con un chavo y un cochinito. Se entiende, pero sigo sin avanzar.",
+    "que_miras_primero": "«¡Si pagas antes, pagas menos!» y los puntitos: ya va en el cuarto de cinco.",
+    "interpretacion": "Sigue el carrusel de presentación, que cambia solo. Dice que pagar puntual baja los pagos semanales. Eso me dice que el préstamo se paga por semana, pero no veo cuánto ni el costo total. Sigue sin haber nada marcado que responda al toque.",
+    "pensamiento": "Ok, pago semanal, ya entendí. Falta una más y ya debería salir el formulario. Si no, me desespero.",
+    "intencion": "Quiero que salga ya el botón para empezar. Espero una diapositiva más, que es la última.",
+    "accion": {
+     "opcion": "esperar",
+     "texto": "Ningún elemento está marcado como táctil y mi toque anterior no hizo nada. Falta una diapositiva y espero a ver si ya aparece algo que responda."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Los puntitos me dicen que es la cuarta de cinco diapositivas. De la solicitud en sí no sé nada: ni pasos ni tiempo."
+    },
+    "confianza": 52,
+    "friccion": 3,
+    "reglas": [
+     "A-03",
+     "A-05",
+     "A-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "esperar"
+   },
+   "espera_ms": 3079,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327419"
+  },
+  {
+   "n": 4,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p04.png",
+   "marcas": "datos/capturas/T1-bryan/p04-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Regresó a la primera pantalla. Ya di la vuelta completa al carrusel y sigo en el mismo lugar.",
+    "que_miras_primero": "Que otra vez dice «¡Recibe tu préstamo en tu cuenta de débito!» y que el último puntito ya está encendido, o sea que esto se repite.",
+    "interpretacion": "El carrusel da vueltas sin parar. El botón «Inicia tu solicitud» se ve, pero no está marcado como algo que responda y mi primer toque no pasó nada. Nada en la pantalla me dice qué sigue.",
+    "pensamiento": "Ya vi las cinco y sigo igual. Esto ya se siente roto. Voy a ver si hay algo más abajo antes de salirme.",
+    "intencion": "Quiero ver si hay otro botón o más contenido abajo, porque el botón que veo no me deja avanzar.",
+    "accion": {
+     "opcion": "desplazar_abajo",
+     "texto": "Nada de lo que veo responde al toque. Antes de abandonar, deslizo hacia abajo a ver si aparece otra opción para seguir."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No avanzo. Llevo cuatro pantallas viendo lo mismo en bucle y no sé qué sigue ni cuánto falta."
+    },
+    "confianza": 38,
+    "friccion": 4,
+    "reglas": [
+     "A-03",
+     "A-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "desplazar",
+    "x": 600,
+    "y": 480,
+    "dy": 500
+   },
+   "espera_ms": 2605,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327419"
+  },
+  {
+   "n": 5,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p05.png",
+   "marcas": "datos/capturas/T1-bryan/p05-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Por fin dice algo de préstamo en efectivo: «Te prestamos hasta $70,000 para usar como quieras». Pero sigo en el mismo carrusel y no pasa nada.",
+    "que_miras_primero": "«$70,000 para usar como quieras» y la ilustración del chavo con billetes. Luego el botón «Inicia tu solicitud».",
+    "interpretacion": "Es la primera diapositiva del carrusel, ahora con el mensaje del préstamo. La página llegó hasta abajo: solo hay el botón y el pie con «Banco Azteca S.A.». No hay un camino distinto y nada de lo que veo responde al toque.",
+    "pensamiento": "Ya di la vuelta a todo el carrusel y el botón no hace nada. Si ni siquiera puedo empezar, para qué me quedo. Mejor lo busco en Nu.",
+    "intencion": "Quiero empezar la solicitud, pero ya no hay nada que me deje avanzar. Me salgo.",
+    "accion": {
+     "opcion": "abandonar",
+     "texto": "Llevo cinco pantallas sin poder pasar de la bienvenida. El botón no responde, no hay un mensaje que me diga por qué ni otra salida. Me cansé y me voy."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No avancé nada. Sigo en la presentación y no sé cuántos pasos tiene la solicitud ni cuánto falta."
+    },
+    "confianza": 30,
+    "friccion": 5,
+    "reglas": [
+     "A-03",
+     "A-10",
+     "A-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null
+  }
+ ],
+ "costo_usd": 1.4765,
+ "tokens": {
+  "entrada": 26,
+  "cache_escritura": 112742,
+  "cache_lectura": 261044,
+  "salida": 6034
+ },
+ "resultado": "abandono",
+ "ces": {
+  "ces": 2,
+  "texto": "Muy difícil: se veía bonito y legible, pero el botón «Inicia tu solicitud» no respondió, el carrusel daba vueltas sin avanzar y nada me explicaba qué seguía, así que me salí sin poder pedir el préstamo."
+ },
+ "video": "datos/videos/T1-bryan.webm",
+ "fin": "2026-10-22T01:14:24"
+}

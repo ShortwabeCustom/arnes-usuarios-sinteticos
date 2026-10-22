@@ -15,7 +15,9 @@ Lecciones heredadas del skill de auditoría que este módulo aplica:
 - asentar por estabilidad de imagen, nunca con `sleep` fijo;
 - un toque sin efecto NO declara un marco terminal: se registra como «sin respuesta» y el perfil
   decide qué hace después;
-- el node-id (Figma) o la URL (web) es la señal de estado más barata.
+- el node-id (Figma) o la URL (web) es la señal de estado más barata;
+- toda captura va en píxeles de página (`scale: 'css'`): en una pantalla Retina con la ventana visible, la captura
+  saldría al doble y las zonas y los toques no coincidirían con la imagen (piloto de OU 2.0, 22/10/2026).
 """
 
 from __future__ import annotations
@@ -111,13 +113,13 @@ async (page) => {
   // punto que eligió Python (fondo, o dentro del overlay si hay uno abierto), captura con resaltados y, ya
   // apagados, una tercera para comprobar que el toque no cambió la pantalla.
   const C = __CFG__;
-  await page.screenshot({ path: C.base });
+  await page.screenshot({ scale: 'css', path: C.base });
   await page.mouse.click(C.x, C.y);
   await page.waitForTimeout(C.pistas_ms || 160);
-  await page.screenshot({ path: C.pistas });
+  await page.screenshot({ scale: 'css', path: C.pistas });
   await page.mouse.move(C.x, C.y);
   await page.waitForTimeout(700);
-  await page.screenshot({ path: C.despues });
+  await page.screenshot({ scale: 'css', path: C.despues });
   return JSON.stringify({ url: page.url() });
 }
 """
@@ -138,7 +140,7 @@ async (page) => {
     d.innerHTML = html;
   }, { html, pos: C.overlay_pos || 'right:12px;top:12px' }).catch(() => {});
   const url0 = page.url();
-  const antes = C.accion ? await page.screenshot() : null;
+  const antes = C.accion ? await page.screenshot({ scale: 'css' }) : null;
   if (C.overlay && C.accion) await ov(C.overlay);
   const a = C.accion;
   if (a && a.tipo === 'recargar') await page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
@@ -166,7 +168,7 @@ async (page) => {
   while (Date.now() - t0 < max) {
     await page.waitForTimeout(pausa);
     if (C.overlay) await ov(null);
-    const b = await page.screenshot(), tb = Date.now();
+    const b = await page.screenshot({ scale: 'css' }), tb = Date.now();
     if (prev && hash(b) === hash(prev) && b.equals(prev)) {
       if (racha === 0) tEstable = tPrev;
       racha++;
@@ -177,10 +179,10 @@ async (page) => {
   }
   const espera = asentada ? Math.max(0, tEstable - t0) : Date.now() - t0;
   if (C.overlay) await ov(null);
-  await page.screenshot({ path: C.captura });
+  await page.screenshot({ scale: 'css', path: C.captura });
   const z = C.material === 'figma' ? await zonasFigma(page) : await zonasWeb(page);
   if (C.material === 'figma' && z.marco) await page.mouse.move(z.marco.x + 3, z.marco.y + 3);
-  const despues = await page.screenshot();
+  const despues = await page.screenshot({ scale: 'css' });
   const texto = C.material === 'web' ? await page.evaluate(() => document.body.innerText.slice(0, 4000)).catch(() => '') : '';
   const sen = C.material === 'web' ? await senales(page) : {};
   return JSON.stringify({ url_antes: url0, url: page.url(), cambio_url: page.url() !== url0,

@@ -1,0 +1,1 @@
+Piloto 1 (22/10/2026): 0 zonas detectadas en la bienvenida porque, con la ventana visible en pantalla Retina, la captura salía al doble de resolución que las coordenadas. Bryan no pudo tocar nada y abandonó: es un fallo del instrumento, no un hallazgo. Corregido con capturas en scale css y con la salvaguarda fallo_instrumento.
