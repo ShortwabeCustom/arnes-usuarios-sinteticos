@@ -98,6 +98,12 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   no lo mostró porque corrió sin ventana. Arreglo: todas las capturas en `scale: 'css'`; y si una pantalla de Figma
   da 0 zonas dos veces, la sesión se detiene como `fallo_instrumento` antes de llamar al modelo. Evidencia en
   `datos/historial/piloto-1-fallo-instrumento/`.
+- **Piloto 2 fallido por el instrumento** (685 mil tokens): las 4 primeras pantallas bien; en la hoja del plazo el
+  navegador comparaba la captura consigo misma (`siguiente.png` se sobrescribe), no veía el overlay, tocaba fuera y
+  lo cerraba. Arreglo: copia propia de la captura previa (`_previa.png`). Validado sin costo con ventana visible y el
+  mismo patrón de capturas de la sesión: 23 pasos hasta «cargando». Evidencia en `datos/historial/piloto-2-…`.
+- Lección: **validar el instrumento con el mismo camino de código que la sesión** (ventana visible, mismas rutas de
+  captura) antes de gastar; el mapeo sin ventana no lo cubría.
 - Pendiente (antes del piloto): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 

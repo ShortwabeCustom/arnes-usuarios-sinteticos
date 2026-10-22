@@ -1,0 +1,851 @@
+{
+ "id": "T1-bryan",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "figma",
+ "modelo": "sonnet",
+ "inicio": "2026-10-22T01:17:25",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p01.png",
+   "marcas": "datos/capturas/T1-bryan/p01-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y verde, con un candado grande, pero es un carrusel de seguridad y no me dice nada del préstamo.",
+    "que_miras_primero": "El título grande «¡Tus datos están 100% seguros!» y el candado. Luego el botón «Inicia tu solicitud».",
+    "interpretacion": "Es una pantalla de bienvenida con slides, y esta es la tercera de cinco por los puntitos. Me quiere tranquilizar antes de empezar. Para pedir el préstamo hay que tocar «Inicia tu solicitud».",
+    "pensamiento": "Ok, mucha promesa de seguridad, pero yo vine por el efectivo. Le pico a iniciar y ya veo cuántos pasos son.",
+    "intencion": "Quiero tocar el botón de iniciar solicitud para empezar el trámite del efectivo, sin leer más slides.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Inicia tu solicitud» para arrancar. No me detengo con las cookies ni con los otros slides."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Los puntitos dicen que voy en el slide 3 de 5, pero no sé cuántos pasos tiene la solicitud ni cuánto tarda."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "A-05",
+     "A-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 782,
+     "w": 328,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 806
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 782,
+    "w": 328,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 744,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327702"
+  },
+  {
+   "n": 2,
+   "pantalla": "7723-327702",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327702&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p02.png",
+   "marcas": "datos/capturas/T1-bryan/p02-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Clara y fácil: opciones con ilustraciones, y ahí está la moto.",
+    "que_miras_primero": "Las cuatro opciones con sus dibujitos: efectivo, celulares, línea blanca y motos.",
+    "interpretacion": "Me pide elegir para qué quiero el préstamo. El botón Continuar está apagado hasta que escoja una opción.",
+    "pensamiento": "Qué bueno que sí hay categoría de moto y celular. Hoy toca efectivo, así que lo elijo y sigo.",
+    "intencion": "Elegir «Efectivo», que es lo que me pidieron, y luego darle Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco la opción Efectivo para activar Continuar."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuántos pasos faltan. Aquí no hay ningún indicador de avance."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "A-01",
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 412,
+     "w": 328,
+     "h": 68,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 446
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 412,
+    "w": 328,
+    "h": 68,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 736,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327703"
+  },
+  {
+   "n": 3,
+   "pantalla": "7723-327703",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327703&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p03.png",
+   "marcas": "datos/capturas/T1-bryan/p03-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Ya quedó marcado Efectivo y el botón se prendió; todo claro.",
+    "que_miras_primero": "El botón Continuar que cambió a verde.",
+    "interpretacion": "Mi elección quedó guardada y ya puedo seguir. Abajo dice que el crédito está sujeto a aprobación.",
+    "pensamiento": "Bien, rápido. Sigo a ver qué sigue.",
+    "intencion": "Darle Continuar para avanzar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar para pasar a la siguiente pantalla."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Sigo sin saber cuántos pasos son ni cuánto falta."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 764,
+     "w": 328,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 788
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 764,
+    "w": 328,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 367,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 4,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p04.png",
+   "marcas": "datos/capturas/T1-bryan/p04-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Fácil de entender: un monto, un plazo y el pago semanal, pero ya viene con $22,000 puesto.",
+    "que_miras_primero": "El $22,000 enorme y el slider. Luego el «$0 Pesos» del pago semanal.",
+    "interpretacion": "Me deja escoger cuánto quiero y en cuántas semanas pagar. El pago semanal sale en $0 porque falta elegir las semanas. Confirmar está apagado.",
+    "pensamiento": "Es mi primer crédito, mejor algo chico para probar que me lo dan. Primero pongo las semanas a ver cuánto sale por semana.",
+    "intencion": "Abrir el menú de semanas y escoger un plazo para ver cuánto pagaría a la semana. Después bajo el monto con el slider.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de semanas para destrabar el pago semanal y poder confirmar."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuántas pantallas faltan. Tampoco veo el costo total, solo veré el pago semanal."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "A-04",
+     "A-09"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 546,
+     "y": 453,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 434,
+     "y": 606,
+     "w": 328,
+     "h": 62,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 637
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 606,
+    "w": 328,
+    "h": 62,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 1093,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 5,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p05.png",
+   "marcas": "datos/capturas/T1-bryan/p05-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Plazos larguísimos: 128, 120, 100 semanas. Eso son casi dos años.",
+    "que_miras_primero": "Los números de semanas tan altos y el de 100 que ya está marcado sin que yo lo escogiera.",
+    "interpretacion": "Es una lista para elegir el plazo, y ya trae 100 semanas preseleccionadas. Hay más opciones abajo, más cortas seguramente. No veo cuánto pagaría en total por cada plazo.",
+    "pensamiento": "¿100 semanas? Yo no pedí eso. Déjame bajar a ver si hay uno más corto.",
+    "intencion": "Deslizar la lista hacia abajo para ver los plazos más cortos antes de elegir.",
+    "accion": {
+     "opcion": "desplazar_abajo",
+     "texto": "No quiero quedarme con el plazo que ya vino marcado. Bajo la lista para ver las opciones más cortas."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Sigo sin saber cuántos pasos faltan. Y no veo el costo total de ningún plazo."
+    },
+    "confianza": 52,
+    "friccion": 2,
+    "reglas": [
+     "A-04",
+     "A-09"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 259,
+     "w": 360,
+     "h": 295,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 606,
+     "y": 385,
+     "w": 17,
+     "h": 26,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 647,
+     "y": 385,
+     "w": 17,
+     "h": 26,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 565,
+     "y": 386,
+     "w": 17,
+     "h": 25,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 448,
+     "y": 453,
+     "w": 123,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "desplazar",
+    "x": 600,
+    "y": 480,
+    "dy": 500
+   },
+   "espera_ms": 386,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 6,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p06.png",
+   "marcas": "datos/capturas/T1-bryan/p06-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Regresé a lo mismo: el plazo sigue en «---» y el pago en $0. Se me cerró la lista.",
+    "que_miras_primero": "El «---» en semanas y el botón Confirmar gris.",
+    "interpretacion": "La lista de plazos se cerró y no guardó nada. Tengo que abrir el selector otra vez y escoger bien.",
+    "pensamiento": "¿Y mi plazo? Ni modo, otra vez. Y lo de ver el pago semanal sigue sin decirme cuánto pago en total.",
+    "intencion": "Abrir otra vez el selector de semanas y ahora sí tocar un plazo, bajando hasta uno más corto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de semanas de nuevo para escoger un plazo."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Siento que doy vueltas en la misma pantalla. No sé cuánto falta."
+    },
+    "confianza": 45,
+    "friccion": 3,
+    "reglas": [
+     "A-03",
+     "A-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 546,
+     "y": 349,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 434,
+     "y": 502,
+     "w": 328,
+     "h": 62,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 533
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 502,
+    "w": 328,
+    "h": 62,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 1100,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 7,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p07.png",
+   "marcas": "datos/capturas/T1-bryan/p07-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Otra vez la lista de plazos, con 100 semanas marcadas y sin que yo las haya escogido.",
+    "que_miras_primero": "El 100 semanas ya seleccionado y el Continuar verde abajo.",
+    "interpretacion": "Es la misma hoja de plazos. Al deslizar se me cerró, así que ahora mejor toco una opción directo. El 80 se ve completo, es más corto que el 100.",
+    "pensamiento": "Ya no deslizo, que se cierra todo. Escojo 80 semanas y listo, sigue siendo mucho.",
+    "intencion": "Tocar la opción de 80 semanas, que es la más corta que veo completa, y luego darle Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco 80 semanas, el plazo más corto que alcanzo a ver sin deslizar."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuánto falta y ya llevo varias pantallas solo para elegir un plazo."
+    },
+    "confianza": 42,
+    "friccion": 3,
+    "reglas": [
+     "A-03",
+     "A-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 259,
+     "w": 360,
+     "h": 191,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 647,
+     "y": 281,
+     "w": 17,
+     "h": 26,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 565,
+     "y": 282,
+     "w": 17,
+     "h": 25,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 606,
+     "y": 282,
+     "w": 17,
+     "h": 25,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 448,
+     "y": 349,
+     "w": 123,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": null,
+   "respuesta": "fuera_de_marcas"
+  },
+  {
+   "n": 8,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p08.png",
+   "marcas": "datos/capturas/T1-bryan/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otra vez lo mismo: plazo en «---», pago en $0 y Confirmar apagado. Ya me está cansando.",
+    "que_miras_primero": "El «---» que no cambió y el botón gris.",
+    "interpretacion": "No se guardó mi plazo. La pantalla regresó igual, sin ningún mensaje de qué pasó. Tengo que abrir el selector de nuevo.",
+    "pensamiento": "¿Qué hice mal? Nada me avisa. Una vez más y si no, me voy.",
+    "intencion": "Abrir otra vez el selector, y esta vez confirmar con el botón Continuar de la hoja para que se guarde un plazo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Abro el selector de semanas por tercera vez. Si no se guarda, ya no insisto."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Estoy atorado en la misma pantalla. No hay indicador ni mensaje de error."
+    },
+    "confianza": 35,
+    "friccion": 4,
+    "reglas": [
+     "A-03",
+     "A-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 546,
+     "y": 349,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 434,
+     "y": 502,
+     "w": 328,
+     "h": 62,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 533
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 502,
+    "w": 328,
+    "h": 62,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 1097,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 9,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p09.png",
+   "marcas": "datos/capturas/T1-bryan/p09-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "La misma hoja de plazos otra vez, con 100 semanas ya marcadas. Parece un círculo.",
+    "que_miras_primero": "El botón Continuar verde, que está abajo y bien visible.",
+    "interpretacion": "Hay un plazo seleccionado (100) y un botón Continuar. Tocar las opciones y deslizar no me funcionó antes, así que el botón debe ser la forma de guardar el plazo.",
+    "pensamiento": "Ya, le doy Continuar y que se quede el de 100. No es lo que quería, pero así me sale el pago y avanzo.",
+    "intencion": "Tocar el botón Continuar de la hoja para que se guarde el plazo y regrese con el pago semanal calculado.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar abajo para guardar el plazo que viene marcado; el botón no aparece entre los marcados, así que lo intento a ojo."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuánto falta; llevo muchas pantallas y sigo en el cotizador."
+    },
+    "confianza": 33,
+    "friccion": 4,
+    "reglas": [
+     "A-03",
+     "A-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 259,
+     "w": 360,
+     "h": 191,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 606,
+     "y": 281,
+     "w": 17,
+     "h": 26,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 647,
+     "y": 281,
+     "w": 17,
+     "h": 26,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 565,
+     "y": 282,
+     "w": 17,
+     "h": 25,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 448,
+     "y": 349,
+     "w": 123,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": null,
+   "respuesta": "fuera_de_marcas"
+  },
+  {
+   "n": 10,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T1-bryan/p10.png",
+   "marcas": "datos/capturas/T1-bryan/p10-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otra vez en «---» y $0. Es la tercera vez que regreso aquí sin avanzar.",
+    "que_miras_primero": "El «---» que sigue igual y el Confirmar apagado.",
+    "interpretacion": "La app no guarda el plazo que elijo y tampoco me dice por qué. No hay mensaje ni otra salida. Estoy en un círculo.",
+    "pensamiento": "Ya van tres veces y nada. Sin un error que me diga qué hacer, no pienso intentarlo una cuarta. Con Nu esto sale en un minuto.",
+    "intencion": "Salirme. Ya no quiero seguir dando vueltas en la misma pantalla.",
+    "accion": {
+     "opcion": "abandonar",
+     "texto": "Abandono: tres intentos con el plazo, cero avance y ningún mensaje de ayuda. No intento una cuarta vez."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé dónde voy ni cuánto falta. Sigo en el cotizador y nunca vi el costo total."
+    },
+    "confianza": 25,
+    "friccion": 5,
+    "reglas": [
+     "A-10",
+     "A-03",
+     "A-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 546,
+     "y": 349,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 434,
+     "y": 502,
+     "w": 328,
+     "h": 62,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 48,
+    "y": 60,
+    "w": 1104,
+    "h": 841
+   },
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null
+  }
+ ],
+ "costo_usd": 2.2968,
+ "tokens": {
+  "entrada": 42,
+  "cache_escritura": 98041,
+  "cache_lectura": 578010,
+  "salida": 8440
+ },
+ "resultado": "abandono",
+ "ces": {
+  "ces": 2,
+  "texto": "Elegir efectivo y el monto fue fácil, pero el plazo nunca se guardó. Tres veces regresé a la misma pantalla sin ningún mensaje, y no llegué a ver el costo total, así que abandoné."
+ },
+ "video": "datos/videos/T1-bryan.webm",
+ "fin": "2026-10-22T01:20:03"
+}
