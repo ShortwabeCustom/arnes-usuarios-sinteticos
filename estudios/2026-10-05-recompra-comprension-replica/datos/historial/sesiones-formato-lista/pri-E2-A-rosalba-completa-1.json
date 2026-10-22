@@ -1,0 +1,83 @@
+{
+ "id": "pri-E2-A-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Veo que dice «Aprobado en producto» y que tengo $30,000 para mis productos favoritos. Más abajo, en letra más chica, dice que esta vez el préstamo es para comprar productos y no para disponer de efectivo. Se ve seria, con el logo de Banco Azteca. Pero yo pedí efectivo, y eso no me lo dan. Además hay un asterisco con «Sujeto a aprobación», y eso no me cuadra con «aprobado».",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Me aprobaron el monto, $30,000, pero no la forma que pedí. Pedí efectivo y me lo dan para comprar productos. Y el asterisco «Sujeto a aprobación» me deja con duda de si ya está aprobado de veras. La pantalla se contradice."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que no es para disponer de efectivo. Esa frase mide 16 px y se alcanza a leer, aunque está chica."
+  },
+  "p4": "\"Según la pantalla, en las tiendas que aparecen: Elektra y Shopinbaz. Hay un carrusel y quizá haya más opciones a la derecha, pero no lo sé. No dice si hay otros lugares, ni si hay plazo o condiciones de pago.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No me queda claro que ya sea mío. Dice «Ya está listo para usarse aquí», pero también «*Sujeto a aprobación». No dice qué falta ni quién lo aprueba. Tampoco veo cuánto voy a pagar en total ni las condiciones, y eso quiero leerlo antes de firmar."
+  },
+  "p6": "\"Vi el botón verde que dice «Continuar comprando». Supongo que me lleva a comprar, pero no dice a dónde, a Elektra, a Shopinbaz o a otra página. No sé si me sacará a un dominio que no reconozco. No lo tocaría sin saber eso.\"",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No. Solo dice «En esta ocasión» mi préstamo es para productos, pero no explica por qué. No sé si fue algo mío o una decisión del banco. Tiendo a pensar que fue error mío, pero la pantalla no me lo aclara. Quisiera preguntarle a alguien, y no veo a quién."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas» antes de nada, para ver si ahí explican por qué no me dan efectivo y qué significa el asterisco. Está en letra de 11 px, muy chica, y me costaría leerlo. Me daría más confianza si hubiera un teléfono o una sucursal a quien preguntar. En el banco al menos había alguien que te explicaba."
+  },
+  "reglas": [
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-01",
+   "C-04",
+   "C-08",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me aprobaron el monto, pero no como yo lo pedí. Pedí efectivo y me lo dan solo para usar en productos de sus tiendas. El panel no cambia eso. Tampoco aclara lo del «Sujeto a aprobación»."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy puedo usar el préstamo para comprar productos en sus tiendas. No menciona ninguna forma de recibir efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, pero a medias: «por tu historial crediticio». No explica qué de mi historial pesó ni qué estuvo mal. Como suelo pensar que el error fue mío, me hace preguntarme qué hice. Quisiera que alguien me lo explicara y no veo a quién preguntarle."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No del todo. Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a «nuevas opciones de financiamiento». No dice que esas opciones sean efectivo, ni cuánto tiempo toma, ni cuántos pagos hacen falta. Tampoco veo el total a pagar para compararlo con el precio de contado."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me deja regular. Se lee bien y la explicación es seria, y pagar al día lo hago sin problema. Pero sigo sin recibir el efectivo que pedí. Faltan las condiciones, el costo y un teléfono o sucursal para consultar. Antes de darle «De acuerdo» o continuar, quiero leer eso."
+   },
+   "reglas": [
+    "C-02",
+    "C-05",
+    "C-07",
+    "C-08",
+    "C-10",
+    "C-04"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1224
+}

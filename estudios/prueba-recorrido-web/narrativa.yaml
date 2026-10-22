@@ -1,0 +1,82 @@
+titulo_corto: Prueba de recorrido
+titular: "Al salir y volver, el flujo de prueba pierde el avance: los dos perfiles repiten sus datos"
+veredicto: >-
+  Estudio de humo del método de recorrido sobre un flujo web local de tres pasos. Sirve para comprobar que el arnés navega,
+  registra toques reales, deja que cada perfil decida y mide las métricas de flujo. No evalúa un producto real.
+decision:
+  - {texto: "El método de recorrido y sus métricas funcionan de punta a punta", si: true}
+  - {texto: "No citar estos hallazgos: el material es de prueba", si: false}
+kpis:
+  - {valor: "2 de 2", etiqueta: "sesiones completan con fricción", detalle: "Bryan y Arturo llegan a «Solicitud enviada» tras repetir sus datos.", tono: duda, verificar: "T1|exito_con_friccion"}
+  - {valor: "7", etiqueta: "clics hasta terminar (mediana)", detalle: "El camino directo son 4; la pérdida del avance agrega 3.", tono: duda, verificar: "metrica|T1|clics"}
+  - {valor: "2", etiqueta: "campos solicitados", detalle: "Nombre y teléfono, escritos dos veces por la retoma.", tono: "", verificar: "metrica|T1|campos"}
+  - {valor: "4.5", etiqueta: "esfuerzo percibido (CES 1–7, mediana)", detalle: "Los dos lo explican por el avance perdido y la cuota que no ven.", tono: duda, verificar: "metrica|T1|ces"}
+kpis_nota: "Corridas de perfiles sintéticos, no personas. El tiempo estimado es un modelo, no una medición."
+resumen:
+  - "Al recargar después del paso 2, el flujo vuelve al inicio y borra lo escrito en las 2 de 2 sesiones. Los dos perfiles lo notan y repiten sus datos."
+  - "La confianza de Arturo baja al volver a empezar («¿Otra vez desde el principio?… ya me da desconfianza») y su CES queda en 4 de 7."
+  - "Las tres pantallas muestran «Paso N de 3»; los perfiles dicen saber dónde van en 9 de 14 pasos."
+  - "La revisión menciona otro canal (llamada y sucursal) para dudas: no saca del flujo, pero es un punto de cambio de canal."
+pantallas:
+  "localhost:8737/index.html": "Inicio · oferta"
+  "localhost:8737/index.html#datos": "Tus datos"
+  "localhost:8737/index.html#confirmar": "Revisa tu solicitud"
+  "localhost:8737/index.html#listo": "Solicitud enviada"
+momentos:
+  - {pantalla: "Tus datos (al volver)", tipo: rojo, texto: "Arturo: «¿Otra vez desde el principio? No sé si se guardó mi nombre… ya me da desconfianza». Sabe dónde va: no."}
+  - {pantalla: "Revisa tu solicitud", tipo: amarillo, texto: "Los dos notan que no ven el pago semanal ni el total antes de enviar."}
+  - {pantalla: "Tus datos", tipo: verde, texto: "Solo dos campos: los dos perfiles lo leen como poco esfuerzo."}
+hallazgos:
+  - id: H1
+    titulo: "Salir del proceso borra el avance y obliga a empezar de nuevo"
+    severidad: 3
+    oportunidad: hacer_diferente
+    categoria: A
+    pantalla: "localhost:8737/index.html#datos"
+    sesiones: [T1-bryan, T1-arturo]
+    walkthrough: 4
+    impacto_negocio: 4
+    donde: "Retoma de solicitud, tras el paso 2"
+    hallazgo: "Al recargar la página después de escribir el nombre, el flujo vuelve a la oferta inicial y los campos quedan vacíos (2 de 2 sesiones). Cada perfil escribe sus datos dos veces: 7 clics en lugar de 4."
+    interpretacion: "El flujo no guarda el avance. En un trámite que se hace desde el celular, una interrupción es esperable; perder lo escrito convierte una pausa en un reinicio."
+    recomendacion: "Guardar el avance por paso y, al volver, ofrecer «Continuar tu solicitud» con los datos ya escritos."
+    evidencia: "Métrica de retoma (vuelve al inicio, 2 de 2); datos/capturas/T1-arturo/p03.png; CES 4 y 5 con la pérdida como razón."
+    heuristica: "Nielsen 3 · Control y libertad del usuario"
+    wcag: "3.3.7 Entrada redundante"
+    confianza: media
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+  - id: H2
+    titulo: "La revisión no muestra la cuota antes de autorizar la consulta de buró"
+    severidad: 3
+    oportunidad: incorporar
+    categoria: A
+    pantalla: "localhost:8737/index.html#confirmar"
+    sesiones: [T1-bryan, T1-arturo]
+    walkthrough: 3
+    impacto_negocio: 4
+    donde: "Revisa tu solicitud"
+    hallazgo: "Los dos perfiles llegan a la revisión sin ver el pago semanal ni el total, y lo mencionan en el cierre."
+    interpretacion: "Pedir el permiso de consulta antes de mostrar el costo invierte el orden que un perfil cuidadoso espera."
+    recomendacion: "Mostrar cuota semanal y total a pagar en la revisión, arriba de la autorización."
+    evidencia: "datos/capturas/T1-arturo/p07.png · pensamiento del paso 7 y respuesta CES de las dos sesiones."
+    heuristica: "Nielsen 1 · Visibilidad del estado del sistema"
+    confianza: media
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+aprendizajes_metodo:
+  - "En un flujo lineal de 3 pasos todas las sesiones siguen la misma ruta; la alerta de ruta idéntica no indica colapso del panel cuando el material no permite desviarse."
+  - "En sitios que navegan por #hash, la URL no alcanza para saber qué pantalla se ve: tras recargar, la URL seguía en #datos pero la pantalla era la oferta inicial. La retoma se juzga por el texto visible, no por la URL."
+  - "Medir la espera del sistema con pausas de 1.2 s la inflaba más de un segundo por paso; con sondeo de 300 ms una pantalla instantánea da 0.3 s."
+conceptos: [prevencion-de-errores-slips-vs-mistakes, accesibilidad-cognitiva]
+positivos:
+  - "Los campos «Nombre completo» y «Teléfono celular» se entienden sin ayuda: los dos perfiles escriben el dato correcto."
+  - "El indicador «Paso N de 3» está en todas las pantallas del proceso."
+limitaciones:
+  - "Material de prueba local, no un producto."
+  - "Dos perfiles y una corrida: no permite hablar de patrones."
+  - "La espera del sistema de estas sesiones se midió con el método anterior (pausas de 1.2 s) y está inflada; el tiempo estimado también. El arnés ya mide con sondeo de 300 ms."
+estado_prototipado: []
+proximos_pasos:
+  - "Correr el método sobre el prototipo de Figma o el ambiente dev con el panel completo, con `retoma` en la tarea más larga."
+fuentes:
+  - {nombre: "Flujo web de prueba", ruta: "tests/fixtures/flujo-web/index.html", uso: "material"}
+  - {nombre: "User Persona OU-PWA", ruta: "personas/pwa", uso: "perfiles base4-ocean"}

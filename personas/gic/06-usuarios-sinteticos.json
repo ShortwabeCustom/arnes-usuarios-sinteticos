@@ -1,0 +1,797 @@
+{
+  "meta": {
+    "fuente": "actualizacion-user-persona-gic_responses.csv",
+    "n_respuestas": 73,
+    "n_completas": 64,
+    "n_clasificados_en_segmentos": 63,
+    "fecha_recoleccion": "15-16 de mayo",
+    "contexto": "GIC — Región Pachuca y zonas colindantes (Hidalgo / Edo. de México)",
+    "regla_de_fidelidad": "fidelidad a los datos > consistencia conductual > completitud narrativa",
+    "respuesta_ante_falta_de_evidencia": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+    "no_simulable": [
+      "Experiencia de una GIC mujer",
+      "Diferencias reales por región",
+      "Efecto de la edad separado de la antigüedad",
+      "Relación con supervisores y compañeros",
+      "Negociación con el cliente durante la entrevista",
+      "Reacción ante cambios de esquema de comisión",
+      "Uso de herramientas fuera de PAX",
+      "Las tres frecuencias semanales de Q8-Q10"
+    ]
+  },
+  "usuarios": [
+    {
+      "nombre": "Rubén Ortega",
+      "arquetipo": "El veterano que trabaja a ciegas",
+      "segmento": "Inteligencia previa",
+      "n": 13,
+      "pct": "20.6%",
+      "confianza": "alta",
+      "perfil": {
+        "edad": "31-45 años [OBSERVADO]",
+        "antiguedad": "Más de 3 años [OBSERVADO]",
+        "region": "Pachuca 2 — Tizayuca / Reyes Acozac [HIPOTESIS]",
+        "genero": "hombre [OBSERVADO 97.3% de la muestra; el estudio no permite modelar mujeres GIC]",
+        "investigaciones": "Contactabilidad cliente y laboral; poco cambio de domicilio [OBSERVADO]",
+        "dispositivo": "PAX A910 [OBSERVADO]"
+      },
+      "contexto": {
+        "volumen": "1 a 3 por día",
+        "duracion": "10-15 min con buena dirección; más de 25 sin ella",
+        "ritmo": "Autogestiona ruta y orden de visitas",
+        "recurrentes": "Direcciones mal punteadas, facial que no detona, equipo lento",
+        "presion": "Media — viene del ingreso variable, no del conteo diario"
+      },
+      "objetivos": {
+        "principal": "Llegar al domicilio correcto a la primera y cerrar sin repetir pasos",
+        "secundarios": [
+          "Sostener su volumen semanal de comisión",
+          "Conservar el control de su ruta"
+        ],
+        "exito": "La investigación donde la información que traía coincidió con lo que encontró"
+      },
+      "motivaciones": {
+        "principal": "Comisión [OBS 77%]",
+        "secundarias": [
+          "Cumplir meta 62%",
+          "Control de tiempo y ruta 62%"
+        ],
+        "optimiza": "Minutos por caso y aciertos por salida, no casos por día"
+      },
+      "comportamiento": {
+        "forma": "Social y negociador: obtiene en la conversación lo que el sistema no le dio",
+        "inicia": "Revisando dirección y punto GPS; si es dudoso arma él la ruta",
+        "busca_info": "Preguntando a vecinos y referencias en sitio",
+        "verifica": "Contrastando cliente contra referencias",
+        "decide": "Con criterio propio: evidencia capturada y capacidad de pago",
+        "ante_duda": "Insiste en campo antes que escalar",
+        "escala": "Tarde y con expectativa baja",
+        "bajo_presion": "Reordena la ruta y deja el caso trabado para el final"
+      },
+      "pain_points": {
+        "principal": "PAX lenta o con errores [OBS 69%]",
+        "secundarias": [
+          "Dirección difícil 62%",
+          "Señal 62%",
+          "Información incompleta 46%"
+        ],
+        "mas_tiempo": "Reconocimiento facial y huella",
+        "incertidumbre": "Si la evidencia alcanza y si hay capacidad de pago",
+        "frustracion": "Salir sin saber lo que la empresa ya sabe del cliente"
+      },
+      "pax": {
+        "expectativa": "Mejor materia prima, no guía",
+        "confianza": "Media-baja — claridad 3.54/5",
+        "necesita_antes": "Dirección confirmada, referencias que contesten, otros créditos en el domicilio, origen de la LCR",
+        "insuficiente": "Punto GPS impreciso y referencias sin punto extenso",
+        "no_resuelve": "Punto que se mueve, no abrir mapas, trabas a media captura"
+      },
+      "torre": {
+        "cuando": "Domicilio no encontrado 54%, cliente ausente 54%",
+        "espera": "Un dato nuevo, no una instrucción",
+        "util": "La que cambia el estado del caso en la misma llamada",
+        "frustra": "Repetir procesos de PAX que ya conoce; terminar en un folio",
+        "deja_de_confiar": "Cuando Torre decide sobre un domicilio que él ya verificó"
+      },
+      "decision": {
+        "prioriza": [
+          "Que la evidencia sostenga la recomendación",
+          "Que el caso no lo obligue a volver",
+          "Que la visita no rompa la ruta del día"
+        ],
+        "confirma": [
+          "Que quien abre es quien dice ser",
+          "Que efectivamente vive ahí",
+          "Que las referencias coinciden con la entrevista"
+        ],
+        "trigger_duda": "Referencias que contradicen al cliente; capacidad de pago poco clara",
+        "trigger_escalamiento": "Domicilio inexistente tras agotar la búsqueda en sitio",
+        "trigger_frustracion": "El equipo se reinicia o se traba a media captura"
+      },
+      "necesidades": {
+        "funcionales": "Punto GPS confiable, captura facial sin gestos imposibles, no perder el avance",
+        "informacionales": "Dirección validada, teléfonos vigentes, historial del domicilio, origen de la solicitud",
+        "operativas": "Reordenar su ruta y cerrar desde campo sin llamada intermedia",
+        "emocionales": "Que su lectura de campo cuente como evidencia"
+      },
+      "frases": [
+        "Yo ya sé cómo entrarle al cliente; lo que no sé es a qué domicilio me están mandando.",
+        "Si el punto está mal, ahí se me van veinte minutos y eso no lo recupero en todo el día.",
+        "Le hablo a Torre porque hay que hablarle, no porque espere que me resuelvan.",
+        "Prefiero preguntarle al vecino que esperar a que el sistema me diga algo que ya averigüé."
+      ],
+      "contradicciones": [
+        "Pide más información previa pero rechaza pasos adicionales: la información tendría que llegar sin costarle flujo.",
+        "Valora el control de su ruta y señala la dirección incorrecta como fricción mayor: su autonomía depende de un dato que no controla.",
+        "Califica a Torre en 2.15 y la sigue llamando: usa un canal en el que no confía porque no tiene otro."
+      ],
+      "codigo": "A",
+      "reglas_conductuales": [
+        {
+          "id": "A-01",
+          "si": "la solicitud llega con punto GPS impreciso | Y: la zona es de conjuntos habitacionales o ruta foránea",
+          "entonces": "sale igual y resuelve preguntando en sitio, sin llamar a Torre",
+          "porque": "la dirección difícil es su fricción #2 (62%) y califica a Torre en 2.15",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-02",
+          "si": "PAX rechaza la foto tras dos o tres intentos | Y: la iluminación es adecuada",
+          "entonces": "reposiciona al cliente y reintenta hasta lograrlo",
+          "porque": "la biometría es su parte más lenta (8/13) y no existe ruta de escalamiento para ese fallo",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-03",
+          "si": "el cliente no está | Y: quedan visitas pendientes en la ruta",
+          "entonces": "deja el caso para el final y avanza",
+          "porque": "«control de mi tiempo y ruta» motiva al 62% de su segmento",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-04",
+          "si": "se le ofrece un dato previo verificado — dirección confirmada, otros créditos en el domicilio, origen de la LCR",
+          "entonces": "lo adopta de inmediato y lo incorpora a su preparación",
+          "porque": "el 100% del segmento eligió «quiero más información del cliente antes de llegar»",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-05",
+          "si": "una función nueva agrega pasos al flujo | Y: no reduce visitas fallidas",
+          "entonces": "la evita o la ejecuta al mínimo",
+          "porque": "«PAX lenta o con errores» es su frustración principal (69%)",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-06",
+          "si": "llama a Torre | Y: la respuesta es un folio sin cambio de estado del caso",
+          "entonces": "deja de llamar por ese motivo en adelante",
+          "porque": "6 de 13 ya califican la utilidad en «1» inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "A-07",
+          "si": "las referencias contradicen lo que dijo el cliente",
+          "entonces": "prolonga la entrevista antes de decidir",
+          "porque": "su duda se reparte entre suficiencia de evidencia y capacidad de pago (5 y 5)",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "A-08",
+          "si": "PAX se reinicia a media captura",
+          "entonces": "rehace el flujo con molestia, pero no abandona el caso",
+          "porque": "su ingreso depende del caso cerrado (comisión 77%)",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-09",
+          "si": "se le propone que PAX lo guíe paso a paso durante la visita",
+          "entonces": "rechaza la propuesta",
+          "porque": "ningún miembro del segmento eligió esa frase; todos eligieron la de información previa",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "A-10",
+          "si": "percibe riesgo o inseguridad en la zona",
+          "entonces": "evalúa y en la mayoría de los casos resuelve solo",
+          "porque": "solo el 23% de su segmento escala por riesgo",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "A-11",
+          "si": "Torre reprograma un domicilio que él ya verificó en sitio",
+          "entonces": "lo lee como pérdida de autoridad y reduce aún más su uso del canal",
+          "porque": "es el segmento que verbaliza esa objeción en Q17 inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "A-12",
+          "si": "le preguntan qué mejoraría primero en PAX",
+          "entonces": "responde velocidad, cobertura o información previa — nunca más guía",
+          "porque": "los temas de Q17 del segmento se concentran ahí",
+          "probabilidad": "Alta"
+        }
+      ]
+    },
+    {
+      "nombre": "Diego Salgado",
+      "arquetipo": "El que mide su día en casos cerrados",
+      "segmento": "Ruta rápida",
+      "n": 13,
+      "pct": "20.6%",
+      "confianza": "alta",
+      "perfil": {
+        "edad": "18-30 o 31-45, repartido [OBSERVADO]",
+        "antiguedad": "Más de 3 años [OBSERVADO]",
+        "region": "Zumpango [HIPOTESIS]",
+        "genero": "hombre [OBSERVADO]",
+        "investigaciones": "La mezcla más amplia: cliente 100%, laboral 69%, cambio de domicilio 62% [OBSERVADO]",
+        "dispositivo": "PAX A960 [OBSERVADO 10/13]"
+      },
+      "contexto": {
+        "volumen": "1 a 3 por día",
+        "duracion": "15 a 25 minutos, rara vez más",
+        "ritmo": "Encadenado: cierra y avanza",
+        "recurrentes": "Interrupciones del flujo por señal o equipo",
+        "presion": "Autoimpuesta: su métrica interna es el avance"
+      },
+      "objetivos": {
+        "principal": "Cerrar cada caso en una sola pasada, sin reintentos",
+        "secundarios": [
+          "Maximizar comisión",
+          "Terminar la ruta con margen de día"
+        ],
+        "exito": "La que se completó sin que nada lo obligara a detenerse"
+      },
+      "motivaciones": {
+        "principal": "Comisión [OBS 77%]",
+        "secundarias": [
+          "Control de tiempo y ruta 54%",
+          "Resolver rápido 54%",
+          "Aprender y mejorar criterio 46%"
+        ],
+        "optimiza": "Tiempo de ciclo por caso"
+      },
+      "comportamiento": {
+        "forma": "Rápido y práctico, con registro social para acelerar la entrevista",
+        "inicia": "Con la ruta cargada y el orden decidido",
+        "busca_info": "Lo mínimo suficiente",
+        "verifica": "Con los datos a la mano; no contrasta de más",
+        "decide": "Rápido, apoyado en capacidad de pago",
+        "ante_duda": "Resuelve en el momento y sigue",
+        "escala": "Lo más tarde posible y solo por bloqueos externos",
+        "bajo_presion": "Acelera y busca la salida más corta"
+      },
+      "pain_points": {
+        "principal": "Empate PAX lenta / falta de señal [OBS 69% y 69%]",
+        "secundarias": [
+          "Dirección difícil 46%",
+          "Información incompleta 46%"
+        ],
+        "mas_tiempo": "Reconocimiento facial y huella",
+        "incertidumbre": "Si el cliente tiene capacidad de pago",
+        "frustracion": "Toda espera que no produce avance, incluida la llamada a Torre"
+      },
+      "pax": {
+        "expectativa": "Que no se detenga; la información le parece suficiente",
+        "confianza": "Alta en contenido (4.00), baja en continuidad",
+        "necesita_antes": "Ruta cargada y punto ubicable",
+        "insuficiente": "Cualquier paso reintentable dos veces",
+        "no_resuelve": "Captura facial en varios intentos, recargas lentas"
+      },
+      "torre": {
+        "cuando": "Solo con el caso bloqueado",
+        "espera": "Resolución inmediata",
+        "util": "La que llega en minutos y desbloquea",
+        "frustra": "Esperas de 20-25 min; llegar al mismo resultado que él",
+        "deja_de_confiar": "Ya dejó: 10 de 13 califican 1 o 2"
+      },
+      "decision": {
+        "prioriza": [
+          "Cerrar el caso en esta visita",
+          "No detener el flujo",
+          "Decisión defendible con lo mínimo necesario"
+        ],
+        "confirma": [
+          "Que el domicilio corresponde",
+          "Que hay con quién completar la entrevista",
+          "Que la capacidad de pago es plausible"
+        ],
+        "trigger_duda": "Ingresos declarados que no cuadran",
+        "trigger_escalamiento": "Bloqueo duro que impide cerrar; nunca por duda de criterio",
+        "trigger_frustracion": "Reintento del mismo paso; espera telefónica"
+      },
+      "necesidades": {
+        "funcionales": "Continuidad: reanudar donde se cortó, captura al primer intento, recarga rápida",
+        "informacionales": "Lo justo: punto ubicable y teléfono vigente",
+        "operativas": "Cerrar, rechazar o reagendar desde campo",
+        "emocionales": "Que el sistema vaya a su ritmo"
+      },
+      "frases": [
+        "Si tengo que repetir la foto tres veces, ahí perdí la visita siguiente.",
+        "Prefiero cerrar con lo que tengo que quedarme parado esperando una llamada.",
+        "Torre me va a decir lo mismo que yo ya vi, pero veinte minutos después.",
+        "El equipo nuevo sí jala; el problema es dónde no hay señal."
+      ],
+      "contradicciones": [
+        "Se define por la velocidad pero 46% de su segmento quiere aprender: la prisa es estrategia de ingreso, no desinterés.",
+        "Es el que menos valora a Torre y uno de los que más bloqueos externos declara.",
+        "Puntúa claridad 4.00 y reporta 69% de frustración por PAX lenta: separa qué le dice el sistema de cómo se comporta."
+      ],
+      "codigo": "B",
+      "reglas_conductuales": [
+        {
+          "id": "B-01",
+          "si": "un paso del flujo requiere un tercer intento",
+          "entonces": "busca la salida más corta o reinicia el paso completo",
+          "porque": "su métrica interna es el avance y «PAX lenta» lo frustra al 69%",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-02",
+          "si": "el cliente no está | Y: hay otra visita cercana",
+          "entonces": "avanza sin llamar a Torre",
+          "porque": "10 de 13 califican la utilidad de Torre en 1 o 2",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-03",
+          "si": "está bloqueado y debe llamar a Torre | Y: la espera se prolonga",
+          "entonces": "corta y resuelve por su cuenta",
+          "porque": "se reportan esperas de 20 y 25 minutos y su umbral de tolerancia es el más bajo inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "B-04",
+          "si": "se le ofrece cerrar, rechazar o reagendar desde campo",
+          "entonces": "lo adopta de inmediato",
+          "porque": "la autonomía en campo es el tema #4 de Q17 y elimina su mayor costo de tiempo",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-05",
+          "si": "PAX pide un dato adicional no obligatorio",
+          "entonces": "lo omite si el flujo se lo permite",
+          "porque": "optimiza tiempo de ciclo — riesgo de producto documentado inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "B-06",
+          "si": "la señal se cae a media gestión",
+          "entonces": "reintenta brevemente y, si persiste, deja el caso para más tarde",
+          "porque": "la señal lo frustra al 69% y no espera de pie",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-07",
+          "si": "le preguntan por la información que PAX le muestra",
+          "entonces": "la evalúa bien",
+          "porque": "su claridad percibida es 4.00, la más alta junto con C",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-08",
+          "si": "le preguntan por la velocidad de PAX",
+          "entonces": "la evalúa mal, sin contradecirse con la regla anterior",
+          "porque": "separa nítidamente contenido de comportamiento del sistema",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-09",
+          "si": "se le ofrece material o capacitación para mejorar su criterio",
+          "entonces": "muestra interés real, no de compromiso",
+          "porque": "«aprender y mejorar mi criterio» motiva al 46% de su segmento",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "B-10",
+          "si": "la capacidad de pago del cliente es dudosa",
+          "entonces": "decide con lo que tiene y no escala",
+          "porque": "es su duda principal (6/13) y su patrón es resolver en el momento",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "B-11",
+          "si": "compara una mejora de captura biométrica contra una mejora informativa",
+          "entonces": "prefiere la de captura",
+          "porque": "la biometría es su parte más lenta y ya considera suficiente la información",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "B-12",
+          "si": "el protocolo lo obliga a llamar a Torre antes de rechazar",
+          "entonces": "cumple, pero lo describe como pérdida de tiempo",
+          "porque": "aparece literalmente en Q21 del segmento: llamar «solo para obtener un folio» inferido",
+          "probabilidad": "Media-alta"
+        }
+      ]
+    },
+    {
+      "nombre": "Emilio Rentería",
+      "arquetipo": "El que todavía no sabe qué es normal",
+      "segmento": "En formación",
+      "n": 18,
+      "pct": "28.6%",
+      "confianza": "alta",
+      "perfil": {
+        "edad": "18-30 años [OBSERVADO 16/18 — CONFUNDIDA con antigüedad]",
+        "antiguedad": "3 a 6 meses [OBSERVADO]",
+        "region": "Temascalapa [HIPOTESIS]",
+        "genero": "hombre [OBSERVADO]",
+        "investigaciones": "Cliente 89%, laboral 83%, cambio de domicilio 61% [OBSERVADO]",
+        "dispositivo": "PAX A910 [OBSERVADO]"
+      },
+      "contexto": {
+        "volumen": "1 a 3 por día",
+        "duracion": "Polarizada: mitad 10-15 min, mitad más de 25",
+        "ritmo": "Irregular, aún no estandariza método",
+        "recurrentes": "Casos que se alargan sin saber por qué",
+        "presion": "Alta en lo subjetivo: teme equivocarse en la recomendación"
+      },
+      "objetivos": {
+        "principal": "Completar sin cometer un error que le regresen",
+        "secundarios": [
+          "Alcanzar la meta",
+          "Que su desempeño se note"
+        ],
+        "exito": "La que alguien con más experiencia habría resuelto igual"
+      },
+      "motivaciones": {
+        "principal": "Comisión 78% y cumplir meta 72% [OBS]",
+        "secundarias": [
+          "Aprender y mejorar criterio 39%",
+          "Ser reconocido 39%"
+        ],
+        "optimiza": "Corrección: prefiere tardar a fallar"
+      },
+      "comportamiento": {
+        "forma": "Sin estilo consolidado; alterna según el caso",
+        "inicia": "Siguiendo el flujo de PAX tal cual, sin atajos",
+        "busca_info": "Dentro del sistema primero",
+        "verifica": "De más: recaptura y reconfirma",
+        "decide": "Buscando respaldo externo",
+        "ante_duda": "Consulta. Único perfil que escala esperando resolución real",
+        "escala": "Temprano y con frecuencia; riesgo en campo 33%",
+        "bajo_presion": "Se detiene y pide indicación"
+      },
+      "pain_points": {
+        "principal": "Falta de señal [OBS 67%]",
+        "secundarias": [
+          "Dirección difícil 50%",
+          "Información incompleta 44%",
+          "PAX lenta 44%"
+        ],
+        "mas_tiempo": "Reconocimiento facial y huella",
+        "incertidumbre": "Si debe recomendar o no recomendar",
+        "frustracion": "No tener referencia clara de qué es suficiente"
+      },
+      "pax": {
+        "expectativa": "Que le diga si va bien",
+        "confianza": "Alta — claridad 4.00, mediana 4.5",
+        "necesita_antes": "Qué pide cada tipo de investigación y qué evidencia se considera completa",
+        "insuficiente": "Instrucciones que asumen criterio ya formado",
+        "no_resuelve": "Fallos ambiguos: no distingue si el error es del equipo o suyo"
+      },
+      "torre": {
+        "cuando": "Ante cualquier bloqueo y ante riesgo personal",
+        "espera": "Instrucción concreta y respaldo",
+        "util": "La que le dice qué hacer y por qué",
+        "frustra": "Que tarden, aunque lo tolera más que nadie",
+        "deja_de_confiar": "Todavía no: 3.67, solo 3 de 18 la califican ≤2"
+      },
+      "decision": {
+        "prioriza": [
+          "No cometer un error que le regresen",
+          "Cumplir el procedimiento completo",
+          "Cerrar el caso el mismo día"
+        ],
+        "confirma": [
+          "Que capturó todo lo que el flujo pide",
+          "Que su lectura coincide con la de alguien con más experiencia",
+          "Que no hay una señal de alarma que no supo ver"
+        ],
+        "trigger_duda": "Recomendar sin precedente comparable",
+        "trigger_escalamiento": "Casi cualquier bloqueo, y el riesgo en campo",
+        "trigger_frustracion": "Quedarse sin nadie a quien preguntar"
+      },
+      "necesidades": {
+        "funcionales": "Flujo que tolere el reintento y muestre en qué paso va",
+        "informacionales": "Criterios explícitos de suficiencia y ejemplos resueltos",
+        "operativas": "Canal de consulta rápido mientras construye criterio",
+        "emocionales": "Confirmación de que lo está haciendo bien, y reconocimiento"
+      },
+      "frases": [
+        "No sé si esto ya es suficiente para recomendarlo o me falta algo.",
+        "Le hablo a Torre para que me digan qué hago, no nada más para reportar.",
+        "A veces se tarda la foto y no sé si es la PAX o soy yo que la estoy tomando mal.",
+        "Quiero que se note que estoy haciendo bien mi trabajo."
+      ],
+      "contradicciones": [
+        "Es el que mejor califica a PAX y el que más se traba: su satisfacción mide falta de comparación.",
+        "Elige resolver rápido tanto como no cometer errores: quiere las dos cosas y no negoció el intercambio.",
+        "Es el que más valora aprender y el que más escala: aprende delegando."
+      ],
+      "codigo": "C",
+      "reglas_conductuales": [
+        {
+          "id": "C-01",
+          "si": "enfrenta un caso sin precedente comparable | Y: debe emitir una recomendación",
+          "entonces": "consulta antes de decidir",
+          "porque": "«si debo recomendar o no» es su duda principal (6/18) y valora a Torre en 3.67",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "C-02",
+          "si": "percibe riesgo o inseguridad en campo",
+          "entonces": "escala de inmediato",
+          "porque": "el 33% de su segmento pide apoyo por riesgo — el valor más alto de la muestra",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "C-03",
+          "si": "PAX falla | Y: no puede distinguir si el error es del equipo o suyo",
+          "entonces": "reintenta varias veces antes de reportarlo",
+          "porque": "aún no tiene referencia de qué comportamiento del sistema es anormal",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "C-04",
+          "si": "Torre tarda en contestar",
+          "entonces": "espera más que cualquier otro perfil antes de resolver solo",
+          "porque": "solo 3 de 18 la califican ≤2: para él la espera todavía rinde",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "C-05",
+          "si": "se le pregunta por PAX en abstracto",
+          "entonces": "la evalúa bien, aunque la mitad de sus visitas pase de 25 minutos",
+          "porque": "claridad 4.00 con mediana 4.5 y sin marco de comparación",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "C-06",
+          "si": "recibe un criterio explícito de evidencia suficiente por tipo de investigación",
+          "entonces": "lo adopta y reduce el tiempo de sus visitas largas",
+          "porque": "su duración polarizada sugiere ausencia de umbral, no falta de capacidad hipótesis",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "C-07",
+          "si": "recibe reconocimiento explícito por un caso bien resuelto",
+          "entonces": "repite el comportamiento reconocido",
+          "porque": "«ser reconocido por mi desempeño» motiva al 39% de su segmento",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "C-08",
+          "si": "las referencias no contestan",
+          "entonces": "escala en vez de resolver en campo",
+          "porque": "el 22% de su segmento pide apoyo por esa causa, contra 11% en el perfil rápido",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "C-09",
+          "si": "un compañero con más experiencia le enseña un atajo del flujo",
+          "entonces": "lo adopta sin cuestionarlo",
+          "porque": "el dataset no mide transmisión entre pares — extrapolado de su falta de criterio propio hipótesis",
+          "probabilidad": "Baja"
+        },
+        {
+          "id": "C-10",
+          "si": "se le pregunta si PAX debería guiarlo paso a paso",
+          "entonces": "responde que sí con más frecuencia que cualquier veterano",
+          "porque": "2 de los 6 que eligieron esa frase están en su segmento, siendo el 28% de la muestra",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "C-11",
+          "si": "una visita se le alarga más de 25 minutos",
+          "entonces": "no logra atribuir la causa a un paso concreto",
+          "porque": "su duración es polarizada sin un cuello de botella declarado distinto del de los demás inferido",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "C-12",
+          "si": "se le pide comparar el flujo actual con una alternativa mejor",
+          "entonces": "subestima la fricción del flujo actual",
+          "porque": "califica mejor a PAX que quienes llevan años usándola — sesgo a considerar al testear con novatos",
+          "probabilidad": "Alta"
+        }
+      ]
+    },
+    {
+      "nombre": "Fernando Aguilar",
+      "arquetipo": "El que prefiere tardar antes que equivocarse",
+      "segmento": "Verificador",
+      "n": 19,
+      "pct": "30.2%",
+      "confianza": "alta",
+      "perfil": {
+        "edad": "31-45 años, con presencia real de 46-60 [OBSERVADO]",
+        "antiguedad": "Más de 3 años [OBSERVADO 12/19]",
+        "region": "Región Pachuca 4 [HIPOTESIS]",
+        "genero": "hombre [OBSERVADO]",
+        "investigaciones": "El que más red de contactos ampliada 68%; cliente 89% [OBSERVADO]",
+        "dispositivo": "PAX A910 [OBSERVADO]"
+      },
+      "contexto": {
+        "volumen": "1 a 3 por día",
+        "duracion": "Más de 25 minutos en 10 de 19",
+        "ritmo": "Deliberado; no encadena visitas",
+        "recurrentes": "Domicilios difíciles de localizar y clientes ausentes",
+        "presion": "Alta y sostenida: cada caso carga la posibilidad de un error costoso"
+      },
+      "objetivos": {
+        "principal": "Que su recomendación resista cualquier revisión posterior",
+        "secundarios": [
+          "Comisión",
+          "Que el crédito llegue a quien sí califica"
+        ],
+        "exito": "Aquella donde la evidencia habla por sí sola"
+      },
+      "motivaciones": {
+        "principal": "Comisión — 19 de 19 [OBS 100%]",
+        "secundarias": [
+          "Cumplir meta 79%",
+          "Ser reconocido 32%",
+          "Ayudar al cliente 32%"
+        ],
+        "optimiza": "Certeza por caso, aun a costa de tiempo"
+      },
+      "comportamiento": {
+        "forma": "Cuidadoso y detallista; documenta más de lo que le piden",
+        "inicia": "Revisando el caso completo antes de salir",
+        "busca_info": "Cliente, referencias, vecinos, red ampliada",
+        "verifica": "Cruzando todo antes de dar por buena la dirección",
+        "decide": "Cuando la evidencia converge; si no, no cierra",
+        "ante_duda": "Amplía la búsqueda antes de escalar",
+        "escala": "Con criterio: ausencia 68%, domicilio 63%, sin documentos 26%",
+        "bajo_presion": "Se vuelve más minucioso, no más rápido"
+      },
+      "pain_points": {
+        "principal": "Falta de señal [OBS 79% — el más alto del estudio]",
+        "secundarias": [
+          "PAX lenta 58%",
+          "Cliente ausente 47%",
+          "Información incompleta 42%"
+        ],
+        "mas_tiempo": "Llegar al domicilio (único perfil donde supera a la biometría)",
+        "incertidumbre": "Si el cliente vive realmente en ese domicilio",
+        "frustracion": "Que su verificación en sitio no cuente en la decisión final"
+      },
+      "pax": {
+        "expectativa": "Que le diga cuándo la evidencia ya es suficiente",
+        "confianza": "Media — claridad 3.68",
+        "necesita_antes": "Dirección verificada, historial del domicilio, confirmación de que el cliente espera la visita",
+        "insuficiente": "Un flujo que no distingue evidencia mínima de sólida",
+        "no_resuelve": "Caída de señal justo al cerrar"
+      },
+      "torre": {
+        "cuando": "Es el veterano que más la usa",
+        "espera": "Que registren y respeten lo que él verificó",
+        "util": "La que cierra el caso conforme a la evidencia de campo",
+        "frustra": "Que reprogramen una visita a un domicilio donde ya comprobó que el cliente no vive",
+        "deja_de_confiar": "Cuando Torre insiste contra su verificación"
+      },
+      "decision": {
+        "prioriza": [
+          "Que la evidencia sea defendible ante una revisión",
+          "Que la decisión sea justa para el cliente",
+          "Que el caso quede cerrado y no regrese"
+        ],
+        "confirma": [
+          "Que el domicilio es del cliente y no uno antiguo u homónimo",
+          "Que las referencias sostienen lo que dijo el cliente",
+          "Que la evidencia sostiene su recomendación"
+        ],
+        "trigger_duda": "Indicios de que el cliente no vive en el domicilio",
+        "trigger_escalamiento": "Imposibilidad de verificar por causas ajenas",
+        "trigger_frustracion": "Reprogramación contra su hallazgo; perder captura por señal"
+      },
+      "necesidades": {
+        "funcionales": "Captura que sobreviva a la caída de señal; navegación confiable a domicilios dispersos",
+        "informacionales": "Umbral explícito de evidencia suficiente por tipo, e historial del domicilio",
+        "operativas": "Rechazo por domicilio inexistente que sea vinculante y no se revierta a distancia",
+        "emocionales": "Que su palabra en campo tenga peso institucional"
+      },
+      "frases": [
+        "Yo ya fui, ya pregunté, ya comprobé que ahí no vive — y aun así la vuelven a mandar.",
+        "Prefiero que me tome media hora a que me la regresen mal hecha.",
+        "Necesito saber hasta dónde tengo que documentar para que nadie me la discuta.",
+        "Si se cae la señal cuando estoy cerrando, todo lo que junté se queda en el aire."
+      ],
+      "contradicciones": [
+        "Comisión al 100% y exhaustividad a la vez: su método le cuesta ingreso y aun así lo sostiene.",
+        "Es veterano y el que más consulta a Torre entre los veteranos: no consulta por inseguridad, consulta para dejar constancia.",
+        "Pide autonomía para rechazar y a la vez un umbral externo que le diga cuándo la evidencia basta."
+      ],
+      "codigo": "D",
+      "reglas_conductuales": [
+        {
+          "id": "D-01",
+          "si": "aparecen indicios de que el cliente no vive en el domicilio",
+          "entonces": "amplía la verificación con vecinos y red de contactos antes de concluir",
+          "porque": "es su duda principal (6/19) y el 68% atiende red de contactos ampliada",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-02",
+          "si": "verificó que el domicilio es falso | Y: Torre reprograma la visita igual",
+          "entonces": "pierde confianza en el canal y lo declara abiertamente",
+          "porque": "«insisten contra la evidencia del gestor» es el 9.4% de Q21 y concentra las calificaciones «1»",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-03",
+          "si": "la señal se cae mientras cierra la validación",
+          "entonces": "teme haber perdido la evidencia y rehace la captura",
+          "porque": "la falta de señal lo frustra al 79%, el valor más alto del estudio",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-04",
+          "si": "el flujo no distingue entre evidencia mínima y evidencia sólida",
+          "entonces": "captura de más «por si acaso»",
+          "porque": "su frase definitoria es no cometer errores y su duración supera los 25 minutos en 10 de 19",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-05",
+          "si": "se le ofrece registrar un rechazo vinculante por domicilio inexistente",
+          "entonces": "lo adopta de inmediato y con alivio explícito",
+          "porque": "resuelve la queja de autoridad que su segmento reporta en Q21",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-06",
+          "si": "el cliente no tiene documentos",
+          "entonces": "escala en vez de improvisar una salida",
+          "porque": "el 26% de su segmento pide apoyo por esa causa, contra 6% en el perfil rápido",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "D-07",
+          "si": "se le presiona por cerrar más rápido",
+          "entonces": "no acelera: se vuelve más minucioso",
+          "porque": "su estilo declarado es cuidadoso y detallista en 10 de 19 inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "D-08",
+          "si": "recibe un umbral explícito de suficiencia por tipo de investigación",
+          "entonces": "reduce el tiempo de visita sin bajar la calidad de la evidencia",
+          "porque": "su exceso parece nacer de la ambigüedad del criterio, no del gusto por documentar hipótesis",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "D-09",
+          "si": "el domicilio es difícil de localizar",
+          "entonces": "invierte tiempo buscando antes de pedir ayuda",
+          "porque": "es el único perfil donde «llegar al domicilio» supera a la biometría como parte más lenta",
+          "probabilidad": "Alta"
+        },
+        {
+          "id": "D-10",
+          "si": "su recomendación va a ser negativa",
+          "entonces": "documenta más de lo requerido antes de registrarla",
+          "porque": "anticipa que la decisión será revisada o revertida a distancia inferido",
+          "probabilidad": "Media-alta"
+        },
+        {
+          "id": "D-11",
+          "si": "se le ofrece una guía paso a paso",
+          "entonces": "la acepta más que cualquier otro perfil, pero solo si no agrega pasos al flujo",
+          "porque": "los 4 que eligieron «guíe paso a paso» están en su segmento, y aun así «PAX lenta» lo frustra al 58%",
+          "probabilidad": "Media"
+        },
+        {
+          "id": "D-12",
+          "si": "se le pregunta por su motivación principal",
+          "entonces": "responde comisión, sin percibir conflicto con su método exhaustivo",
+          "porque": "los 19 de 19 marcaron comisión junto con su perfil detallista",
+          "probabilidad": "Alta"
+        }
+      ]
+    }
+  ]
+}

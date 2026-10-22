@@ -1,0 +1,14 @@
+variable_a,variable_b,patron_observado,fuerza_aparente,n,interpretacion,nivel_evidencia
+Q3 Antiguedad,Q20 Utilidad de Torre,"4.25 -> 3.50 -> 2.75 -> 2.53, monotono",Alta,64,"La dependencia del soporte se sustituye por criterio propio, o el soporte deja de agregar valor",OBSERVADO
+Q6 Dispositivo,Q18 Claridad + Q14 PAX lenta,A910 3.30 y 76% vs A960 4.29 y 39%; controles sin diferencia,Alta,61,El hardware condiciona la percepcion del software,OBSERVADO
+Q12 = Referencias,Q13 Mayor duda,8 de 9 dudan en recomendar vs 12-15% del resto,Alta,9,Las referencias son el insumo con el que se construye la recomendacion. CELDA PEQUENA,OBSERVADO
+Q22 Frase,Q20 Utilidad de Torre,Guie paso a paso 4.33 / no cometer errores 3.37 / resolver rapido 2.44 / mas info 2.44,Alta,64,Quien quiere autonomia informativa no valora un soporte que decide por el,OBSERVADO
+Q18 Claridad de PAX,Q20 Utilidad de Torre,r = +0.47,Moderada,64,Se evaluan como un mismo sistema de apoyo,OBSERVADO
+Q3 Antiguedad,Q16 Control de mi tiempo y ruta,0% -> 14% -> 28% -> 53%,Moderada,66,La autonomia sobre la agenda se gana con los anios,OBSERVADO
+Q3 Antiguedad,Q16 Aprender y Ser reconocido,39-43% en novatos vs 20% en veteranos,Moderada,66,"El motivador cambia de forma, no de intensidad",OBSERVADO
+Q11 Duracion,Q18 Claridad de PAX,10-15 min 4.14 vs mas de 25 min 3.56,Moderada-baja,66,Compatible con dos direcciones causales; no concluyente,OBSERVADO
+Q18 baja (1-2),Q14 PAX lenta,88% vs 48% entre quienes puntuan 4-5,Moderada,48,Poco clara y lenta se reportan juntas. n=8 en el extremo bajo,OBSERVADO
+Q23 Estilo,Q20 Utilidad de Torre,Cuidadoso 3.14 / Resolutivo 3.00 / Social 2.83 / Rapido 2.50,Baja,64,Ordena en la direccion esperada pero el rango es estrecho. DEBIL,OBSERVADO
+Q1 Edad,Q3 Antiguedad,16 de 18 novatos tienen 18-30 anios,Alta,71,"CONFUSION, no hallazgo. Impide atribuir a la edad efectos de antiguedad",OBSERVADO
+Q4 Region,Q11 y Q12,Celdas de n=4 a n=20 sin patron estable,No concluyente,68,Insuficiente para modelar territorio. NO USAR,OBSERVADO
+Q8 Q9 Q10,Entre si y con Q18/Q20,r = +0.23 a +0.35 entre si; ~0 contra Q18 y Q20,No interpretable,67,Son tres items distintos pero sin enunciado no se pueden nombrar,OBSERVADO

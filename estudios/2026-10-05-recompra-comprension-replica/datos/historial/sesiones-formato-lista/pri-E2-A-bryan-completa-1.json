@@ -1,0 +1,76 @@
+{
+ "id": "pri-E2-A-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000, pero para comprar productos, no en efectivo. Sale \"Aprobado en producto\", y hay tiendas Elektra y shopinbaz para usarlo. Pero abajo hay un asterisco de \"sujeto a aprobación\", y eso me confunde: ¿ya está aprobado o no?",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo. El monto sí sale igual, pero en producto, no en efectivo. Y el asterisco «Sujeto a aprobación» contradice el «Aprobado». Eso lo digo: es ambiguo."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "La pantalla dice que es para comprar productos y no para disponer de efectivo. Así que no me van a dar el efectivo."
+  },
+  "p4": "Según la pantalla, en Elektra y en shopinbaz. Se ve un carrusel, así que quizá hay más opciones a la derecha, pero no las veo. No dice nada de moto ni de teléfono, y eso es lo que yo buscaría. Tampoco dice si sirve fuera de esas tiendas.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice «Ya está listo para usarse aquí», pero el asterisco dice «Sujeto a aprobación». No sé qué falta ni quién lo aprueba, porque la pantalla no lo explica. Tampoco veo plazo, pago semanal ni costo total."
+  },
+  "p6": "Lo vi: dice «Continuar comprando». Supongo que me lleva a comprar en las tiendas, pero no sé a cuál, ni si sigue dentro de la app o me saca a otra página. La pantalla no lo dice. Eso me preocupa, porque no quiero que me mande a otro dominio raro.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "Solo dice «En esta ocasión, tu préstamo es para comprar productos». No explica por qué cambió de efectivo a producto, ni si fue por mi historial. Yo sí había tenido un crédito con ellos, así que me quedo con la duda."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber más», aunque está bien chiquito y es fácil no verlo. Quiero entender por qué no es efectivo y qué significa el asterisco antes de seguir. Si no me aclara, mejor no sigo."
+  },
+  "reglas": [
+   "A-04",
+   "A-03",
+   "A-06",
+   "A-12"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Pedí $30,000 en efectivo y me dan $30,000 pero solo para productos. El monto coincide, la forma no. El panel no aclara el asterisco de «sujeto a aprobación», así que eso sigue ambiguo."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "El panel dice que hoy puedo usar el préstamo para comprar productos en sus tiendas. Efectivo no se menciona como opción."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Dice que es «por tu historial crediticio». Es una razón, pero general: no dice qué del historial ni qué le faltó. Yo ya había tenido un crédito con ellos, así que me deja con dudas."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "Dice que si lo uso y mantengo mis pagos al día fortalezco mi historial y puedo acceder a «nuevas opciones de financiamiento». No dice que eso sea efectivo, ni cuánto tiempo toma, ni qué condiciones. Yo lo supondría, pero el panel no lo promete."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Al menos me explicaron algo y el texto se lee bien. Me sirve que pagar a tiempo abre otras cosas, porque quiero construir historial. Pero no me dan efectivo, no veo el costo total y sigue el asterisco sin explicar. No me enojo, pero tampoco me convence del todo."
+   },
+   "reglas": [
+    "A-09",
+    "A-05",
+    "A-04"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.122
+}

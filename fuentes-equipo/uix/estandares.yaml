@@ -1,0 +1,86 @@
+# Estándares de UiX en forma verificable por el arnés.
+# Fuente: los 5 documentos de esta carpeta, tal como los entregó el equipo (abril 2026). Si cambian, actualizar aquí.
+# Lo que no viene de los documentos está marcado como «decisión del arnés».
+
+naming:
+  fuente: Naming.md
+  investigacion: "proyecto-metodologia-tema_aaaa-mm-dd-vN"
+  documentacion: "proyecto-tema_aaaa-mm-dd-vN"
+  patron: '^[a-z0-9]+-[a-z0-9]+(-[a-z0-9]+)*_\d{4}-\d{2}-\d{2}-v\d+$'
+  metodologias:
+    abtesting: A/B Testing
+    pdu: Prueba de usabilidad
+    psus: Prueba SUS
+    entrevistas: Entrevistas a profundidad
+    cardsorting: Card Sorting
+    treetesting: Tree Testing
+    encuestas: Encuestas
+    hmw: How Might We
+    mystery: Mystery Shopper
+    aheuristico: Análisis heurístico
+    bench: Benchmark
+    focusg: Focus Group
+  # Decisión del arnés: código por omisión de cada método y sufijo en el tema para que un estudio sintético no se
+  # confunda con uno hecho con personas. La guía no tiene código para investigación sintética.
+  por_metodo: {recorrido: pdu, comprension: abtesting}
+  sufijo_sintetico: sintetico
+
+completitud:
+  fuente: Completitud de tarea.md
+  promedio_referencia: 78
+  interpretacion:          # [mínimo %, texto], de mayor a menor
+    - [100, "Muy alta. Esperable en tareas críticas o con usuarios expertos"]
+    - [90, "Alta"]
+    - [80, "Por encima del promedio"]
+    - [78, "Promedio de referencia"]
+    - [67, "Por debajo del promedio"]
+    - [50, "Señal de problemas importantes de efectividad"]
+    - [0, "Problema considerable de usabilidad"]
+  semaforo:
+    - {nivel: verde, min: 90, accion: "Objetivo cumplido"}
+    - {nivel: amarillo, min: 78, accion: "Revisar oportunidades de mejora"}
+    - {nivel: naranja, min: 50, accion: "Problema de efectividad"}
+    - {nivel: rojo, min: 0, accion: "Problema crítico de usabilidad"}
+
+demograficos:
+  fuente: Demográficos.md
+  obligatorios: [edad, genero, region, ocupacion]      # desde mayo 2026
+  generaciones:            # [nombre, mínimo, máximo]
+    - [Centennials (Gen Z), 18, 30]
+    - [Millennials, 31, 45]
+    - [Gen X, 46, 60]
+    - [Boomers, 61, 200]
+  generos: [Mujer, Hombre, No binario, Otro, Prefiero no decirlo]
+  regiones:
+    Norte: [Baja California, Chihuahua, Coahuila, Nuevo León, Sonora, Tamaulipas]
+    Centro-norte: [Baja California Sur, Durango, Nayarit, Sinaloa, Zacatecas, Jalisco, Aguascalientes, Colima, Michoacán, San Luis Potosí]
+    Centro: [CDMX, Estado de México, Guanajuato, Hidalgo, Morelos, Puebla, Querétaro, Tlaxcala]
+    Sur: [Campeche, Chiapas, Guerrero, Oaxaca, Quintana Roo, Tabasco, Veracruz, Yucatán]
+  ocupaciones_diversos: [Estudiante, Empleado(a), Trabajador(a) independiente, Dedicado(a) al hogar, Pensionado(a), Prefiero no decirlo]
+
+muestra:
+  fuente: research-en-tus-proyectos.md
+  # Usuarios reales recomendados por metodología. No aplica a corridas sintéticas: el arnés lo usa para dimensionar
+  # el estudio con personas que valida los hallazgos.
+  pdu: [8, 10, "Los patrones de experiencia aparecen desde 8"]
+  abtesting: [8, 20, "La comparación es equiparable desde 8"]
+  psus: [20, 40, "La evaluación es confiable desde 20"]
+  entrevistas: [5, 10, "Los patrones aparecen desde 5 usuarios"]
+  encuestas: [5, 10, "Un patrón de 5 usuarios da el panorama"]
+  focusg: [6, null, "Los patrones de comportamiento aparecen desde 6"]
+  treetesting: [30, 60, "Con menos de 30 los datos son orientativos; unos 50 por grupo para tasas confiables"]
+  cardsorting: [20, 40, "Los patrones de jerarquía aparecen desde 20"]
+
+decision:
+  fuente: research-en-tus-proyectos.md
+  matriz:                  # impacto × incertidumbre
+    alto-alta: Sí investigar
+    alto-baja: Validar rápido
+    bajo-alta: Explorar
+    bajo-baja: No investigar
+
+protocolo:
+  fuente: Template protocolo-tipo-brief.md
+  alcances: [superficial, descriptiva, profunda, predictiva]
+  oportunidades: {mantener: Mantener, mejorar: Mejorar, incorporar: Incorporar, hacer_diferente: Hacer diferente}
+  entregables: [Reporte, Flash report, Infografía, Matriz comparativa, Insights y oportunidades priorizadas]

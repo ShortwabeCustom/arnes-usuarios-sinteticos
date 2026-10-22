@@ -1,0 +1,15 @@
+# Construcción de un User Persona con usuarios sintéticos (método 1).
+# El resultado es una biblioteca nueva en personas/<id_biblioteca>/ que los métodos 2 y 3 pueden usar.
+id: {{id}}
+titulo: "User Persona · NOMBRE"
+metodo: persona
+fecha: "{{fecha}}"
+autor: "Alexis Valdez + Claude"
+
+id_biblioteca: nombre-corto       # carpeta destino: personas/<id_biblioteca>/
+fuentes:                          # tal como llegan; van a material/ y se citan por ruta
+  - {ruta: material/respuestas.csv, tipo: encuesta, descripcion: "…"}
+  # - {ruta: material/mazo.pptx, tipo: presentacion, descripcion: "tablas dentro de láminas"}
+  # - {ruta: material/arquetipo.pdf, tipo: arquetipo, descripcion: "…"}
+documento_vigente: null           # si ya existe un User Persona previo, para auditarlo cifra por cifra
+eje_de_segmentacion: null         # se decide en el análisis, no antes

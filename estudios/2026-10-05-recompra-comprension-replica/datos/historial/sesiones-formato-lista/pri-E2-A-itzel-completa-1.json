@@ -1,0 +1,78 @@
+{
+ "id": "pri-E2-A-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 aprobados \"en producto\", para comprar en Elektra o shopinbaz, no en efectivo. Pero abajo, en letra chiquita, dice \"*Sujeto a aprobación\", y eso se contradice con \"Aprobado\". Tampoco veo cuota, plazo ni total a pagar.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto coincide, $30,000, pero no en la forma que pedí: pedí efectivo y me lo dan para productos. Además el asterisco dice 'sujeto a aprobación', así que no sé si de verdad ya está aprobado. Es ambiguo."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "La pantalla dice que mi préstamo es para comprar productos y no para disponer de efectivo. No hay nada que me deje sacar efectivo."
+  },
+  "p4": "\"Aquí\" se refiere a lo que se ve en la pantalla: Elektra y shopinbaz. Hay una tarjeta más cortada a la derecha, pero no la veo completa, así que no sé si hay otras tiendas. No sé si es en línea, en tienda o ambas.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No lo siento mío. Dice 'sujeto a aprobación' y no explica qué falta ni cuánto tardaría. Tampoco me dice cuánto voy a pagar al mes ni en total, ni las fechas, ni qué pasa si me atraso. Eso es justo lo que necesito saber antes de aceptar."
+  },
+  "p6": "Lo vi: dice \"Continuar comprando\". Supongo que me lleva a comprar, pero la pantalla no lo aclara. No sé si me saca del celular, ni si con eso ya acepto algo, ni si me muestran el costo antes. Me da desconfianza tocarlo sin ver el número final.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "Solo dice 'en esta ocasión', sin ninguna razón. No explica por qué no me dieron efectivo, que fue lo que pedí. Puede que 'Saber mas' lo explique, pero no lo sé porque no lo he abierto."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría 'Saber mas' primero, porque espero que explique por qué es en productos, qué es lo que está sujeto a aprobación y cuánto pagaría. Es chiquito y casi no se ve. Si no me da el costo total, no sigo."
+  },
+  "reglas": [
+   "B-02",
+   "B-05",
+   "B-06",
+   "B-08",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me dan los $30,000 que pedí, pero solo para comprar productos, no en efectivo. El panel no aclara lo del asterisco 'sujeto a aprobación', así que sigue la duda de si ya está aprobado."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel confirma que hoy solo puedo usar el préstamo para comprar productos en sus tiendas."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, pero a medias: 'por tu historial crediticio, hoy puedes usar tu préstamo para comprar productos'. No explica qué del historial pesó ni qué le falta. Y me pega, porque cuidé ese historial."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No dice cómo conseguir efectivo. Solo dice que si uso el préstamo y pago al día, fortalezco mi historial y puedo acceder a 'nuevas opciones de financiamiento'. No menciona efectivo, ni cuánto tiempo, ni qué se necesita. No voy a suponer que eso significa efectivo."
+   },
+   "p10": {
+    "opcion": "negativa",
+    "texto": "Me deja con desconfianza. Sigo sin saber cuota, plazo ni total a pagar, y el panel me empuja a usar el crédito en sus tiendas. Aclara el porqué, pero no lo que más necesito: el número final y qué significa 'sujeto a aprobación'. Con eso, no me comprometo."
+   },
+   "reglas": [
+    "B-02",
+    "B-05",
+    "B-06",
+    "B-08"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1401
+}

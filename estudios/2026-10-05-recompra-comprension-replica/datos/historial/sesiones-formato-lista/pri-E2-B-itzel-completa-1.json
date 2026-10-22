@@ -1,0 +1,75 @@
+{
+ "id": "pri-E2-B-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Dice que tengo $30,000 aprobados, pero no en efectivo: son para comprar productos, y ahí mismo me ofrecen shopinbaz e Italika. Pero también trae un asterisco que dice «Sujeto a aprobación», y eso me confunde. No veo cuota, ni total a pagar, ni plazo.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto sí es el que pedí, $30,000. Pero no es como lo pedí, porque es en productos y no en efectivo. Además dice «Aprobado en producto» y abajo «*Sujeto a aprobación». Se contradice: no sé si ya está aprobado o no."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Solo en lo que me muestra la pantalla: shopinbaz (ofertas) e Italika (motos). Dice «ya está listo para usarse aquí». No veo otro lugar donde usarlo. Tampoco sé si hay más tiendas, porque las tarjetas están cortadas de la orilla.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No me queda claro. Dice «ya está listo para usarse», pero el asterisco dice «sujeto a aprobación». Tampoco veo cuánto voy a pagar al mes, el total, ni el plazo. Antes de comprometerme me falta saber eso."
+  },
+  "p6": "Lo vi: dice «Continuar comprando». Supongo que me lleva a comprar en esas tiendas, pero la pantalla no lo dice. No sé si ahí ya me comprometo o si veré las condiciones antes. No lo tocaría a ciegas.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No explica por qué. Solo dice «en esta ocasión» mi préstamo es para productos. No da ninguna razón. Hay un enlace «Saber mas», pero no sé qué dice porque no lo he abierto."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas», porque quiero entender por qué no es efectivo y qué significa el asterisco. Quiero saber la cuota y el total a pagar antes de continuar. Si eso me saca del celular o no abre, me detengo."
+  },
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-10",
+   "B-11"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Sigue igual que antes: el monto es el que pedí, pero no en efectivo, solo para productos. El panel no aclara el asterisco de «sujeto a aprobación», así que sigo sin saber si está aprobado del todo."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy puedo usar el préstamo para comprar productos en sus tiendas. No habla de efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, pero a medias: «por tu historial crediticio». No explica qué del historial, ni por qué eso impide darme efectivo. Me preocupa, porque mi historial es lo que más cuido y no sé qué vieron."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice. Solo dice que si uso el préstamo y mantengo mis pagos al día puedo fortalecer mi historial y acceder a «nuevas opciones de financiamiento». No dice que eso sea efectivo, ni cuánto tiempo tardaría, ni qué requisitos hay. No voy a suponerlo."
+   },
+   "p10": {
+    "opcion": "negativa",
+    "texto": "Me deja con desconfianza. Sigo sin ver la cuota, el total a pagar ni el plazo, y el panel solo me habla de mi historial. Pedí efectivo y me dan productos sin explicarme las condiciones. Tampoco me dice qué pasa si me atraso. Para mí, eso es un cambio de términos."
+   },
+   "reglas": [
+    "B-02",
+    "B-08"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.0732
+}

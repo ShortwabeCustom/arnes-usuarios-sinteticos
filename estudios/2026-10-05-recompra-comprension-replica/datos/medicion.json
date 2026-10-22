@@ -1,0 +1,3494 @@
+{
+ "pantallas": {
+  "E1-A": {
+   "alto": 1010,
+   "ancho": 360,
+   "zonas": {
+    "chip": {
+     "caja": [
+      117,
+      158,
+      243,
+      197
+     ],
+     "nombre": "Chip de estado",
+     "rol": "estado",
+     "texto": "Aprobado",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 1.0,
+     "densidad": 0.62,
+     "pico": 0.58,
+     "alto_px": 13,
+     "contraste": 4.98,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 7
+    },
+    "ilustracion": {
+     "caja": [
+      60,
+      205,
+      300,
+      468
+     ],
+     "nombre": "ilustracion",
+     "rol": "ilustracion",
+     "texto": null,
+     "es_texto": false,
+     "palabras": 0,
+     "porcion": 32.4,
+     "densidad": 1.69,
+     "pico": 1.0,
+     "alto_px": null,
+     "contraste": null,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": null
+    },
+    "saludo": {
+     "caja": [
+      119,
+      507,
+      240,
+      524
+     ],
+     "nombre": "«María, tienes»",
+     "rol": "titular",
+     "texto": "¡María, tienes",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 1.3,
+     "densidad": 1.9,
+     "pico": 0.6,
+     "alto_px": 18,
+     "contraste": 12.13,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 2
+    },
+    "monto": {
+     "caja": [
+      53,
+      533,
+      307,
+      588
+     ],
+     "nombre": "monto",
+     "rol": "monto",
+     "texto": "$30,000*",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 10.8,
+     "densidad": 2.53,
+     "pico": 0.83,
+     "alto_px": 56,
+     "contraste": 6.17,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 1
+    },
+    "titular": {
+     "caja": [
+      62,
+      604,
+      297,
+      649
+     ],
+     "nombre": "Resto del titular",
+     "rol": "titular",
+     "texto": "en Efectivo ya son tuyos, listos para usar!",
+     "es_texto": true,
+     "palabras": 8,
+     "porcion": 4.1,
+     "densidad": 1.25,
+     "pico": 0.52,
+     "alto_px": 18,
+     "contraste": 12.08,
+     "visible": {
+      "640": "cortada",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 4
+    },
+    "tiendas_titulo": {
+     "caja": [
+      16,
+      686,
+      237,
+      700
+     ],
+     "nombre": "Título de tiendas",
+     "rol": "cuerpo",
+     "texto": "También puedes comprar en:",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 0.9,
+     "densidad": 0.87,
+     "pico": 0.28,
+     "alto_px": 15,
+     "contraste": 12.13,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 5
+    },
+    "tarjetas": {
+     "caja": [
+      16,
+      718,
+      359,
+      868
+     ],
+     "nombre": "Tarjetas de tienda",
+     "rol": "tarjeta",
+     "texto": "elektra Encuentra productos para renovar tu hogar. Estrenar ahora shopinbaz Tecnología, hogar, moda y más. Estrenar ahora",
+     "es_texto": true,
+     "palabras": 17,
+     "porcion": 9.3,
+     "densidad": 0.59,
+     "pico": 0.49,
+     "alto_px": 12,
+     "contraste": 6.54,
+     "visible": {
+      "640": "no",
+      "800": "cortada"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 8
+    },
+    "boton": {
+     "caja": [
+      16,
+      904,
+      344,
+      952
+     ],
+     "nombre": "Botón principal",
+     "rol": "accion",
+     "texto": "Continuar con mi monto",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 7.8,
+     "densidad": 1.61,
+     "pico": 0.67,
+     "alto_px": 49,
+     "contraste": 4.87,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 3
+    },
+    "nota": {
+     "caja": [
+      122,
+      971,
+      237,
+      982
+     ],
+     "nombre": "«*Sujeto a aprobación»",
+     "rol": "nota",
+     "texto": "*Sujeto a aprobación",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 0.3,
+     "densidad": 0.74,
+     "pico": 0.21,
+     "alto_px": 12,
+     "contraste": 4.67,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 6
+    }
+   },
+   "orden": [
+    "saludo",
+    "monto",
+    "chip",
+    "titular",
+    "tiendas_titulo",
+    "boton",
+    "tarjetas",
+    "nota"
+   ]
+  },
+  "E1-B": {
+   "alto": 1079,
+   "ancho": 360,
+   "zonas": {
+    "chip": {
+     "caja": [
+      118,
+      502,
+      242,
+      538
+     ],
+     "nombre": "Chip de estado",
+     "rol": "estado",
+     "texto": "Aprobado",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 0.7,
+     "densidad": 0.57,
+     "pico": 0.21,
+     "alto_px": 13,
+     "contraste": 7.73,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 7
+    },
+    "ilustracion": {
+     "caja": [
+      65,
+      172,
+      300,
+      431
+     ],
+     "nombre": "ilustracion",
+     "rol": "ilustracion",
+     "texto": null,
+     "es_texto": false,
+     "palabras": 0,
+     "porcion": 31.8,
+     "densidad": 1.85,
+     "pico": 1.0,
+     "alto_px": null,
+     "contraste": null,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": null
+    },
+    "saludo": {
+     "caja": [
+      119,
+      571,
+      240,
+      588
+     ],
+     "nombre": "«María, tienes»",
+     "rol": "titular",
+     "texto": "¡María, tienes",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 1.0,
+     "densidad": 1.69,
+     "pico": 0.49,
+     "alto_px": 18,
+     "contraste": 12.13,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 3
+    },
+    "monto": {
+     "caja": [
+      53,
+      597,
+      307,
+      652
+     ],
+     "nombre": "monto",
+     "rol": "monto",
+     "texto": "$30,000*",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 9.6,
+     "densidad": 2.41,
+     "pico": 0.76,
+     "alto_px": 56,
+     "contraste": 6.17,
+     "visible": {
+      "640": "cortada",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 1
+    },
+    "titular": {
+     "caja": [
+      62,
+      668,
+      297,
+      713
+     ],
+     "nombre": "Resto del titular",
+     "rol": "titular",
+     "texto": "en Efectivo ya son tuyos, listos para usar!",
+     "es_texto": true,
+     "palabras": 8,
+     "porcion": 3.2,
+     "densidad": 1.04,
+     "pico": 0.36,
+     "alto_px": 18,
+     "contraste": 12.08,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 4
+    },
+    "tiendas_titulo": {
+     "caja": [
+      16,
+      750,
+      237,
+      764
+     ],
+     "nombre": "Título de tiendas",
+     "rol": "cuerpo",
+     "texto": "También puedes comprar en:",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 0.9,
+     "densidad": 0.92,
+     "pico": 0.27,
+     "alto_px": 15,
+     "contraste": 12.13,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 5
+    },
+    "tarjetas": {
+     "caja": [
+      16,
+      782,
+      359,
+      932
+     ],
+     "nombre": "Tarjetas de tienda",
+     "rol": "tarjeta",
+     "texto": "elektra Encuentra productos para renovar tu hogar. Estrenar ahora shopinbaz Tecnología, hogar, moda y más. Estrenar ahora",
+     "es_texto": true,
+     "palabras": 17,
+     "porcion": 7.7,
+     "densidad": 0.53,
+     "pico": 0.49,
+     "alto_px": 12,
+     "contraste": 6.54,
+     "visible": {
+      "640": "no",
+      "800": "cortada"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 8
+    },
+    "boton": {
+     "caja": [
+      16,
+      968,
+      344,
+      1016
+     ],
+     "nombre": "Botón principal",
+     "rol": "accion",
+     "texto": "Continuar con mi monto",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 8.0,
+     "densidad": 1.77,
+     "pico": 0.64,
+     "alto_px": 49,
+     "contraste": 4.81,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 2
+    },
+    "nota": {
+     "caja": [
+      122,
+      1035,
+      237,
+      1046
+     ],
+     "nombre": "«*Sujeto a aprobación»",
+     "rol": "nota",
+     "texto": "*Sujeto a aprobación",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 0.3,
+     "densidad": 0.82,
+     "pico": 0.21,
+     "alto_px": 12,
+     "contraste": 4.76,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 6
+    }
+   },
+   "orden": [
+    "monto",
+    "saludo",
+    "chip",
+    "titular",
+    "boton",
+    "tiendas_titulo",
+    "tarjetas",
+    "nota"
+   ]
+  },
+  "E2-A": {
+   "alto": 1084,
+   "ancho": 360,
+   "zonas": {
+    "chip": {
+     "caja": [
+      77,
+      158,
+      283,
+      197
+     ],
+     "nombre": "Chip de estado",
+     "rol": "estado",
+     "texto": "Aprobado en producto",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 1.6,
+     "densidad": 0.68,
+     "pico": 0.6,
+     "alto_px": 13,
+     "contraste": 4.98,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 9
+    },
+    "ilustracion": {
+     "caja": [
+      61,
+      234,
+      298,
+      439
+     ],
+     "nombre": "ilustracion",
+     "rol": "ilustracion",
+     "texto": null,
+     "es_texto": false,
+     "palabras": 0,
+     "porcion": 18.8,
+     "densidad": 1.38,
+     "pico": 1.0,
+     "alto_px": null,
+     "contraste": null,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": null
+    },
+    "saludo": {
+     "caja": [
+      119,
+      507,
+      240,
+      523
+     ],
+     "nombre": "«María, tienes»",
+     "rol": "titular",
+     "texto": "!María, tienes",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 1.3,
+     "densidad": 2.21,
+     "pico": 0.62,
+     "alto_px": 17,
+     "contraste": 12.13,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 2
+    },
+    "monto": {
+     "caja": [
+      53,
+      533,
+      307,
+      588
+     ],
+     "nombre": "monto",
+     "rol": "monto",
+     "texto": "$30,000*",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 10.6,
+     "densidad": 2.68,
+     "pico": 0.82,
+     "alto_px": 56,
+     "contraste": 6.17,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 1
+    },
+    "titular": {
+     "caja": [
+      42,
+      604,
+      321,
+      621
+     ],
+     "nombre": "Resto del titular",
+     "rol": "titular",
+     "texto": "para tus productos favoritos!",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 2.3,
+     "densidad": 1.62,
+     "pico": 0.48,
+     "alto_px": 18,
+     "contraste": 12.13,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 4
+    },
+    "aclaracion": {
+     "caja": [
+      30,
+      645,
+      329,
+      695
+     ],
+     "nombre": "Aclaración (no efectivo)",
+     "rol": "cuerpo",
+     "texto": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "es_texto": true,
+     "palabras": 15,
+     "porcion": 5.9,
+     "densidad": 1.38,
+     "pico": 0.51,
+     "alto_px": 16,
+     "contraste": 12.13,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 5
+    },
+    "saber_mas": {
+     "caja": [
+      151,
+      708,
+      208,
+      721
+     ],
+     "nombre": "«Saber mas»",
+     "rol": "enlace",
+     "texto": "Saber mas",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 0.2,
+     "densidad": 0.7,
+     "pico": 0.21,
+     "alto_px": 11,
+     "contraste": 4.11,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 8
+    },
+    "tiendas_titulo": {
+     "caja": [
+      24,
+      753,
+      243,
+      768
+     ],
+     "nombre": "Título de tiendas",
+     "rol": "cuerpo",
+     "texto": "Ya está listo para usarse aquí",
+     "es_texto": true,
+     "palabras": 6,
+     "porcion": 0.9,
+     "densidad": 0.87,
+     "pico": 0.26,
+     "alto_px": 16,
+     "contraste": 12.18,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 6
+    },
+    "tarjetas": {
+     "caja": [
+      0,
+      786,
+      359,
+      936
+     ],
+     "nombre": "Tarjetas de tienda",
+     "rol": "tarjeta",
+     "texto": "elektra Renueva tu casa hoy y paga después Estrenar ahora shopinbaz Ofertas que solo tú tienes Estrenar ahora",
+     "es_texto": true,
+     "palabras": 18,
+     "porcion": 8.6,
+     "densidad": 0.57,
+     "pico": 0.51,
+     "alto_px": 12,
+     "contraste": 6.62,
+     "visible": {
+      "640": "no",
+      "800": "cortada"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 10
+    },
+    "boton": {
+     "caja": [
+      24,
+      972,
+      336,
+      1020
+     ],
+     "nombre": "Botón principal",
+     "rol": "accion",
+     "texto": "Continuar comprando",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 8.1,
+     "densidad": 1.9,
+     "pico": 0.75,
+     "alto_px": 49,
+     "contraste": 4.81,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 3
+    },
+    "nota": {
+     "caja": [
+      130,
+      1039,
+      245,
+      1050
+     ],
+     "nombre": "«*Sujeto a aprobación»",
+     "rol": "nota",
+     "texto": "*Sujeto a aprobación",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 0.3,
+     "densidad": 0.87,
+     "pico": 0.25,
+     "alto_px": 12,
+     "contraste": 4.67,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 7
+    }
+   },
+   "orden": [
+    "saludo",
+    "monto",
+    "titular",
+    "chip",
+    "aclaracion",
+    "boton",
+    "tiendas_titulo",
+    "saber_mas",
+    "nota",
+    "tarjetas"
+   ]
+  },
+  "E2-B": {
+   "alto": 1138,
+   "ancho": 360,
+   "zonas": {
+    "chip": {
+     "caja": [
+      78,
+      502,
+      282,
+      538
+     ],
+     "nombre": "Chip de estado",
+     "rol": "estado",
+     "texto": "Aprobado en producto",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 2.0,
+     "densidad": 1.02,
+     "pico": 0.31,
+     "alto_px": 13,
+     "contraste": 7.83,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 9
+    },
+    "ilustracion": {
+     "caja": [
+      61,
+      172,
+      298,
+      403
+     ],
+     "nombre": "ilustracion",
+     "rol": "ilustracion",
+     "texto": null,
+     "es_texto": false,
+     "palabras": 0,
+     "porcion": 19.1,
+     "densidad": 1.31,
+     "pico": 1.0,
+     "alto_px": null,
+     "contraste": null,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": null
+    },
+    "saludo": {
+     "caja": [
+      119,
+      571,
+      240,
+      587
+     ],
+     "nombre": "«María, tienes»",
+     "rol": "titular",
+     "texto": "!María, tienes",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 1.2,
+     "densidad": 2.1,
+     "pico": 0.56,
+     "alto_px": 17,
+     "contraste": 12.13,
+     "visible": {
+      "640": "completa",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 2
+    },
+    "monto": {
+     "caja": [
+      53,
+      597,
+      307,
+      652
+     ],
+     "nombre": "monto",
+     "rol": "monto",
+     "texto": "$30,000*",
+     "es_texto": true,
+     "palabras": 1,
+     "porcion": 9.5,
+     "densidad": 2.53,
+     "pico": 0.75,
+     "alto_px": 56,
+     "contraste": 6.17,
+     "visible": {
+      "640": "cortada",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": true,
+      "800": true
+     },
+     "rango_saliencia": 1
+    },
+    "titular": {
+     "caja": [
+      42,
+      668,
+      321,
+      685
+     ],
+     "nombre": "Resto del titular",
+     "rol": "titular",
+     "texto": "para tus productos favoritos!",
+     "es_texto": true,
+     "palabras": 4,
+     "porcion": 2.0,
+     "densidad": 1.47,
+     "pico": 0.37,
+     "alto_px": 18,
+     "contraste": 12.13,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 5
+    },
+    "aclaracion": {
+     "caja": [
+      30,
+      709,
+      329,
+      759
+     ],
+     "nombre": "Aclaración (no efectivo)",
+     "rol": "cuerpo",
+     "texto": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "es_texto": true,
+     "palabras": 15,
+     "porcion": 6.2,
+     "densidad": 1.53,
+     "pico": 0.51,
+     "alto_px": 16,
+     "contraste": 12.13,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 4
+    },
+    "saber_mas": {
+     "caja": [
+      151,
+      772,
+      208,
+      785
+     ],
+     "nombre": "«Saber mas»",
+     "rol": "enlace",
+     "texto": "Saber mas",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 0.2,
+     "densidad": 1.16,
+     "pico": 0.32,
+     "alto_px": 11,
+     "contraste": 4.11,
+     "visible": {
+      "640": "no",
+      "800": "completa"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": true
+     },
+     "rango_saliencia": 7
+    },
+    "tiendas_titulo": {
+     "caja": [
+      24,
+      817,
+      243,
+      832
+     ],
+     "nombre": "Título de tiendas",
+     "rol": "cuerpo",
+     "texto": "Ya está listo para usarse aquí",
+     "es_texto": true,
+     "palabras": 6,
+     "porcion": 1.0,
+     "densidad": 1.09,
+     "pico": 0.31,
+     "alto_px": 16,
+     "contraste": 12.18,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 8
+    },
+    "tarjetas": {
+     "caja": [
+      0,
+      850,
+      359,
+      1000
+     ],
+     "nombre": "Tarjetas de tienda",
+     "rol": "tarjeta",
+     "texto": "shopinbaz Ofertas que solo tú tienes Estrenar ahora ITALIKA Estrena moto y muévete ya Estrenar ahora",
+     "es_texto": true,
+     "palabras": 16,
+     "porcion": 9.2,
+     "densidad": 0.64,
+     "pico": 0.43,
+     "alto_px": 11,
+     "contraste": 15.54,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 10
+    },
+    "boton": {
+     "caja": [
+      24,
+      1036,
+      336,
+      1084
+     ],
+     "nombre": "Botón principal",
+     "rol": "accion",
+     "texto": "Continuar comprando",
+     "es_texto": true,
+     "palabras": 2,
+     "porcion": 7.4,
+     "densidad": 1.82,
+     "pico": 0.64,
+     "alto_px": 49,
+     "contraste": 4.87,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 3
+    },
+    "nota": {
+     "caja": [
+      130,
+      1103,
+      245,
+      1114
+     ],
+     "nombre": "«*Sujeto a aprobación»",
+     "rol": "nota",
+     "texto": "*Sujeto a aprobación",
+     "es_texto": true,
+     "palabras": 3,
+     "porcion": 0.5,
+     "densidad": 1.3,
+     "pico": 0.31,
+     "alto_px": 12,
+     "contraste": 4.67,
+     "visible": {
+      "640": "no",
+      "800": "no"
+     },
+     "sin_scroll": {
+      "640": false,
+      "800": false
+     },
+     "rango_saliencia": 6
+    }
+   },
+   "orden": [
+    "saludo",
+    "monto",
+    "titular",
+    "aclaracion",
+    "chip",
+    "boton",
+    "saber_mas",
+    "tiendas_titulo",
+    "nota",
+    "tarjetas"
+   ]
+  }
+ },
+ "lectura": {
+  "E1-A": {
+   "bryan": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 1.36,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.64,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 3.93,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 5.07,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "nota",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       7
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       3
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       4
+      ]
+     ]
+    },
+    "total": 6.2,
+    "config": {
+     "corta_en_accion": true,
+     "ilustracion_s": 0.5,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "A-04",
+      "A-05"
+     ],
+     "rasgos": []
+    }
+   },
+   "itzel": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 0.86,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.14,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 3.43,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 4.57,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 5.71,
+      "dur": 4.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 10.57,
+      "dur": 0.86,
+      "estado": "leida"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       1
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tarjetas",
+       2
+      ]
+     ]
+    },
+    "total": 11.4,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "B-07"
+     ],
+     "rasgos": []
+    }
+   },
+   "rosalba": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 0.86,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.14,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 3.43,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 4.57,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 5.71,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 5.71,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       1
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       4
+      ]
+     ]
+    },
+    "total": 5.7,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "C-01"
+     ],
+     "rasgos": []
+    }
+   },
+   "arturo": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 1.36,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.64,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 3.93,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 5.07,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       7
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       3
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "boton",
+       4
+      ]
+     ]
+    },
+    "total": 6.2,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0.5,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "D-02",
+      "D-03"
+     ],
+     "rasgos": []
+    }
+   }
+  },
+  "E1-B": {
+   "bryan": {
+    "pasos": [
+     {
+      "zona": "monto",
+      "inicio": 0.0,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.29,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "saludo",
+      "inicio": 0.79,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 1.36,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.64,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 3.93,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 5.07,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 5.07,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "nota",
+      "inicio": 5.07,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       7
+      ]
+     ],
+     "3.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       3
+      ]
+     ],
+     "4.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ]
+     ]
+    },
+    "total": 5.1,
+    "config": {
+     "corta_en_accion": true,
+     "ilustracion_s": 0.5,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "A-04",
+      "A-05"
+     ],
+     "rasgos": []
+    }
+   },
+   "itzel": {
+    "pasos": [
+     {
+      "zona": "monto",
+      "inicio": 0.0,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "saludo",
+      "inicio": 0.29,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 0.86,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.14,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 3.43,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 4.57,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 5.71,
+      "dur": 4.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 10.57,
+      "dur": 0.86,
+      "estado": "leida"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ]
+     ],
+     "3.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tiendas_titulo",
+       1
+      ]
+     ],
+     "4.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ],
+      [
+       "tarjetas",
+       2
+      ]
+     ]
+    },
+    "total": 11.4,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "B-07"
+     ],
+     "rasgos": []
+    }
+   },
+   "rosalba": {
+    "pasos": [
+     {
+      "zona": "monto",
+      "inicio": 0.0,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "saludo",
+      "inicio": 0.29,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 0.86,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.14,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 3.43,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 4.57,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 5.71,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 5.71,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ]
+     ],
+     "3.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tiendas_titulo",
+       1
+      ]
+     ],
+     "4.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ]
+     ]
+    },
+    "total": 5.7,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "C-01"
+     ],
+     "rasgos": []
+    }
+   },
+   "arturo": {
+    "pasos": [
+     {
+      "zona": "monto",
+      "inicio": 0.0,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.29,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "saludo",
+      "inicio": 0.79,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 1.36,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.64,
+      "dur": 2.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 3.93,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 5.07,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 6.21,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       7
+      ]
+     ],
+     "3.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       3
+      ]
+     ],
+     "4.5": [
+      [
+       "monto",
+       1
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "saludo",
+       2
+      ],
+      [
+       "chip",
+       1
+      ],
+      [
+       "titular",
+       8
+      ],
+      [
+       "boton",
+       4
+      ],
+      [
+       "tiendas_titulo",
+       4
+      ]
+     ]
+    },
+    "total": 6.2,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0.5,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "D-02",
+      "D-03"
+     ],
+     "rasgos": []
+    }
+   }
+  },
+  "E2-A": {
+   "bryan": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.36,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 2.5,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 3.36,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.64,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "nota",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       1
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       5
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       10
+      ]
+     ]
+    },
+    "total": 8.2,
+    "config": {
+     "corta_en_accion": true,
+     "ilustracion_s": 0.5,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "A-04",
+      "A-05"
+     ],
+     "rasgos": []
+    }
+   },
+   "itzel": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 0.86,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 2.0,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.86,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.14,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 7.71,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 9.43,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 10.0,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 10.86,
+      "dur": 5.14,
+      "estado": "leida"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       2
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       7
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       12
+      ]
+     ]
+    },
+    "total": 16.0,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "B-07"
+     ],
+     "rasgos": []
+    }
+   },
+   "rosalba": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 0.86,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 2.0,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.86,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.14,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 7.71,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 9.43,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 9.43,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 9.43,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       2
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       7
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       12
+      ]
+     ]
+    },
+    "total": 9.4,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "C-01"
+     ],
+     "rasgos": []
+    }
+   },
+   "arturo": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.36,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 2.5,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 3.36,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.64,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 8.21,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 9.93,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "nota",
+      "inicio": 9.93,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 9.93,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       1
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       5
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "chip",
+       3
+      ],
+      [
+       "aclaracion",
+       10
+      ]
+     ]
+    },
+    "total": 9.9,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0.5,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "D-02",
+      "D-03"
+     ],
+     "rasgos": []
+    }
+   }
+  },
+  "E2-B": {
+   "bryan": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.36,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.5,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 6.79,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.64,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "nota",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_cierre"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       4
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       8
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       13
+      ]
+     ]
+    },
+    "total": 8.2,
+    "config": {
+     "corta_en_accion": true,
+     "ilustracion_s": 0.5,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "A-04",
+      "A-05"
+     ],
+     "rasgos": []
+    }
+   },
+   "itzel": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 0.86,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.0,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 6.29,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.14,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 7.71,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 8.29,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 10.0,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 10.86,
+      "dur": 4.57,
+      "estado": "leida"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       5
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       10
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       15
+      ]
+     ]
+    },
+    "total": 15.4,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 0,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "B-07"
+     ],
+     "rasgos": []
+    }
+   },
+   "rosalba": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 0.57,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 0.86,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.0,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 6.29,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.14,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 7.71,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 7.71,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 9.43,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 9.43,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       5
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       10
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       15
+      ]
+     ]
+    },
+    "total": 9.4,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "C-01"
+     ],
+     "rasgos": []
+    }
+   },
+   "arturo": {
+    "pasos": [
+     {
+      "zona": "saludo",
+      "inicio": 0.0,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "ilustracion",
+      "inicio": 0.57,
+      "dur": 0.5,
+      "estado": "leida"
+     },
+     {
+      "zona": "monto",
+      "inicio": 1.07,
+      "dur": 0.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "titular",
+      "inicio": 1.36,
+      "dur": 1.14,
+      "estado": "leida"
+     },
+     {
+      "zona": "aclaracion",
+      "inicio": 2.5,
+      "dur": 4.29,
+      "estado": "leida"
+     },
+     {
+      "zona": "chip",
+      "inicio": 6.79,
+      "dur": 0.86,
+      "estado": "leida"
+     },
+     {
+      "zona": "boton",
+      "inicio": 7.64,
+      "dur": 0.57,
+      "estado": "leida"
+     },
+     {
+      "zona": "saber_mas",
+      "inicio": 8.21,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tiendas_titulo",
+      "inicio": 8.21,
+      "dur": 1.71,
+      "estado": "leida"
+     },
+     {
+      "zona": "nota",
+      "inicio": 9.93,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     },
+     {
+      "zona": "tarjetas",
+      "inicio": 9.93,
+      "dur": 0,
+      "estado": "no_leida_tamano"
+     }
+    ],
+    "vistazo": {
+     "2.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       4
+      ]
+     ],
+     "3.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       8
+      ]
+     ],
+     "4.5": [
+      [
+       "saludo",
+       2
+      ],
+      [
+       "ilustracion",
+       0
+      ],
+      [
+       "monto",
+       1
+      ],
+      [
+       "titular",
+       4
+      ],
+      [
+       "aclaracion",
+       13
+      ]
+     ]
+    },
+    "total": 9.9,
+    "config": {
+     "corta_en_accion": false,
+     "ilustracion_s": 0.5,
+     "umbral_px": 13,
+     "nota_primero": false,
+     "explora": false,
+     "reglas": [
+      "D-02",
+      "D-03"
+     ],
+     "rasgos": []
+    }
+   }
+  }
+ }
+}

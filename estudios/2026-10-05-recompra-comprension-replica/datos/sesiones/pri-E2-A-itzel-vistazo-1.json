@@ -1,0 +1,48 @@
+{
+ "id": "pri-E2-A-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra chica] «Aprobado en producto»\n5. [letra mediana] «En esta ocasión, tu préstamo es para…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 aprobados, pero la letra chica dice «Aprobado en producto» y que mi préstamo es «para…» algo. No me queda claro si es efectivo o es para comprar cosas. Me suena a que no es lo que pedí, pero no alcancé a leer más.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto de $30,000 sí coincide con lo que pedí. Pero dice «Aprobado en producto», y yo pedí efectivo. Además el monto tiene asterisco y no vi qué aclara. No me atrevo a decir que sí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo sé. «Aprobado en producto» suena a que no es efectivo. Pero la frase «tu préstamo es para…» se me cortó y no vi el resto. No voy a suponerlo."
+  },
+  "p4": "\"Dice «para tus productos favoritos», así que parece que sería en productos, quizá en tiendas. Pero no leí en cuáles ni dónde. No sé si es en tienda física, en línea o en ambas.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Siento que falta algo. Hay un asterisco que no leí, no sé la cuota, ni el total a pagar, ni las fechas. Y no sé si ya puedo usarlo o si falta algún paso. Antes de decir que es mío necesito esos números."
+  },
+  "p6": "\"No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasa si lo toco. No voy a adivinar.\"",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que leí no lo dice. Solo vi «En esta ocasión, tu préstamo es para…» y ahí se cortó. Puede que lo explique después, pero no lo alcancé a ver. Y que me lo cambien sin explicarme me da desconfianza."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Buscaría el detalle del asterisco y la parte que me faltó leer, sin salir del celular. Quiero ver la cuota, el total a pagar y por qué es en producto y no en efectivo. No avanzaría ni aceptaría nada hasta saber el número final."
+  },
+  "reglas": [
+   "B-02",
+   "B-05",
+   "B-06",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0324
+}

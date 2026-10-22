@@ -1,0 +1,41 @@
+{
+ "id": "pri-E1-B-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. [letra mediana] «¡María, tienes»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [botón] «Continuar con mi monto»\n6. [letra chica] «También…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo $30,000 con un asterisco, muy grande, y algo de que \"tienes... Aprobado\" y que \"en Efectivo ya son tuyos, listos para usar\". Parece que me aprobaron, pero el asterisco me hace dudar: no alcancé a leer qué aclara. \"Aprobado\" salió en letra chica, y eso no me da tanta seguridad. Se ve formal, pero quiero leer las condiciones antes de darle continuar.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Pedí $30,000 y la pantalla dice $30,000 con un asterisco. Parece que sí, pero no leí qué dice el asterisco y no sé si cambia algo, como el monto o las condiciones. Prefiero no afirmarlo sin leer eso."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice que \"en Efectivo ya son tuyos\", pero no vi cómo ni dónde se recibe: si es en sucursal, en una cuenta o de otra forma. Eso no lo alcancé a leer, así que no puedo decir que sí."
+  },
+  "p4": "Dice \\\"listos para usar\\\", pero no vi dónde ni en qué. No leí nada que lo explique, así que no lo sé. Hay una línea que empieza con \\\"También…\\\" y no pude terminarla.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice \"ya son tuyos\", pero hay un botón de \"Continuar con mi monto\", así que me parece que falta al menos ese paso. Además está el asterisco que no leí y la línea de \"También…\" que quedó cortada. No sé qué más falta, porque no alcancé a leerlo."
+  },
+  "p6": "Sí vi el botón: dice \\\"Continuar con mi monto\\\". No vi de qué color era. Supongo que sigue con el trámite, pero no sé qué paso sigue ni si ahí me muestran las condiciones. Antes de tocarlo querría leer el asterisco y preguntar si hay alguien a quien consultar.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-05",
+   "C-08",
+   "C-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0301
+}

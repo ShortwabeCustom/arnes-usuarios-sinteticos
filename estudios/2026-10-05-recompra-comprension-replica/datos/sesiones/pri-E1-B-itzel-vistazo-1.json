@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-B-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. [letra mediana] «¡María, tienes»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [botón] «Continuar con mi monto»\n6. [letra chica] «También…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 y que dice «Aprobado», pero con letra chica. Hay un asterisco junto al monto y eso me da desconfianza: algo viene con condiciones que no alcancé a leer. No vi cuánto voy a pagar al mes ni en total, ni plazos. Y la última línea, «También…», quedó cortada.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Dice «Aprobado» y $30,000, que es lo que pedí. Pero el asterisco me hace dudar si es exactamente eso o con condiciones. No lo leí completo, así que no puedo asegurarlo. Tampoco vi ningún número de cuota ni total a pagar."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos, listos para usar», pero el asterisco y el «También…» cortado me dejan con la duda. No vi cómo ni cuándo lo recibiría. No voy a suponerlo."
+  },
+  "p4": "Lo único que leí es «en Efectivo… listos para usar». No vi dónde ni en qué se puede usar: si es en tienda, retiro, transferencia o algo más. No lo voy a inventar.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "El texto dice que ya es mío, pero el asterisco, el botón «Continuar con mi monto» y el «También…» sin terminar me dicen que falta algo. No sé qué: quizá aceptar condiciones, elegir plazo o autorizar buró. No lo vi y no lo supongo. Antes de decir que sí necesito saber cuánto voy a pagar en total y que ese número no cambie."
+  },
+  "p6": "«Continuar con mi monto» sí lo vi, pero no sé si es verde. No sé qué sigue al tocarlo. Supongo que me lleva a otro paso, pero no sé cuál. Me preocupa que ahí salgan términos nuevos o me pidan autorizar buró. Si me saca del celular, lo dejo.",
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-10",
+   "B-07"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.016
+}

@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-B-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice \"Aprobado\" y que tengo $30,000 en efectivo, \"ya son tuyos, listos para usar\". Se ve institucional y seria, eso me da confianza. Pero abajo, muy chiquito, hay un asterisco: \"*Sujeto a aprobación\". Entonces dice que ya está aprobado y a la vez que está sujeto a aprobación. Eso se contradice y no me queda claro. Tampoco veo condiciones de costo ni total a pagar, y la letra de abajo casi no la alcanzo a leer.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Arriba dice \"Aprobado\" y el monto es $30,000, lo mismo que pedí. Pero el asterisco dice \"Sujeto a aprobación\", y eso no cuadra con \"Aprobado\". No sé si ya me lo aprobaron de verdad o si todavía falta. La pantalla se contradice."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice \"en Efectivo ya son tuyos\", pero no explica cómo ni dónde los recibo: si es depósito, retiro en sucursal u otra forma. Tampoco sé si con el asterisco cambia algo. No lo puedo afirmar con lo que veo."
+  },
+  "p4": "Dice que son en Efectivo, \\\"listos para usar\\\", sin decir en qué. Abajo me ofrecen también comprar en elektra y shopinbaz (\\\"Estrenar ahora\\\"), con productos para el hogar, tecnología y moda. No veo que diga que solo pueda usarlo ahí ni que pueda usarlo en cualquier lado. No lo aclara.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Por el asterisco \"Sujeto a aprobación\", yo entiendo que falta algo, aunque no dice qué. Además el botón dice \"Continuar con mi monto\", o sea que hay más pasos. No veo condiciones, total a pagar ni qué firmo. Antes de darle continuar quiero leer eso, y no lo veo."
+  },
+  "p6": "Sí lo vi: \\\"Continuar con mi monto\\\", verde y grande. No sé qué pasa al tocarlo. Supongo que sigue otro paso para completar el crédito, pero la pantalla no lo dice. Antes de tocarlo quisiera ver las condiciones y saber a quién preguntarle si tengo una duda.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-05",
+   "C-08",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0211
+}

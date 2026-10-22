@@ -1,0 +1,38 @@
+{
+ "id": "pri-E1-B-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron algo y que el dinero en Efectivo ya es mío. Vi \"$30,000*\" bien grande, con asterisco, y \"Aprobado\" en letra chica. Pero no leí lo demás, y el asterisco me late que trae condiciones que no alcancé a ver. Además dice \"María\" y yo me llamo Bryan, qué raro.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Vi \"Aprobado\" y $30,000, pero el monto trae asterisco y no leí qué dice. No sé si es lo que pedí completo o una oferta con condiciones. Con lo que leí no puedo asegurarlo."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no vi cómo ni cuándo me llega, ni si es a mi cuenta o a otro lado. Tampoco leí el texto del asterisco. No lo sé."
+  },
+  "p4": "Por lo que leí, \\\"listos para usar\\\" y \\\"en Efectivo\\\", o sea que lo puedo gastar como quiera. Pero no vi dónde ni cómo se retira o se usa. No quiero suponer nada que no leí.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice que ya son tuyos, pero el asterisco y el botón \"Continuar con mi…\" me hacen pensar que falta algún paso. No vi cuál. Prometen mucho y no me quedó claro; me da sospecha."
+  },
+  "p6": "Sí vi el botón, pero solo hasta \\\"Continuar con mi…\\\"; no sé con mi qué. Supongo que sigue a otro paso, pero no sé cuál ni si me saca de la app. Si me manda a sucursal o a otra página rara, ahí me bajo.",
+  "reglas": [
+   "A-04",
+   "A-06",
+   "A-03"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0341
+}

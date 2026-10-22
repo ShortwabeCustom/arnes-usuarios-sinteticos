@@ -1,0 +1,25 @@
+tabla,categoria,n,pct,fuente,nota
+Estado civil registrado,Soltero (a),322838,47.0,buyer-persona-9junio lamina 6,participacion en la base registrada
+Estado civil registrado,Union libre,155664,23.0,buyer-persona-9junio lamina 6,participacion en la base registrada
+Estado civil registrado,Casado (a),148997,22.0,buyer-persona-9junio lamina 6,participacion en la base registrada
+Estado civil registrado,Divorciado (a),48051,7.0,buyer-persona-9junio lamina 6,participacion en la base registrada
+Estado civil registrado,Viudo (a),9693,1.0,buyer-persona-9junio lamina 6,participacion en la base registrada
+Estado civil registrado,TOTAL,685243,100.0,suma calculada,N exacto de la base
+Producto solicitado,Efectivo,369000,54.0,buyer-persona-9junio lamina 8,
+Producto solicitado,Movilidad,161000,24.0,buyer-persona-9junio lamina 8,
+Producto solicitado,Productos del hogar,91000,13.0,buyer-persona-9junio lamina 8,
+Producto solicitado,Telefonia,62000,9.0,buyer-persona-9junio lamina 8,ausente del User-person-PWA v2.0
+Producto solicitado,Prestamo para autos,1000,0.18,buyer-persona-9junio lamina 8,
+Producto solicitado,TOTAL,684000,100.18,suma calculada,redondeo de lamina
+Estados con mas clientes,Ciudad de Mexico,86000,,buyer-persona-9junio lamina 5,
+Estados con mas clientes,Estado de Mexico,72000,,buyer-persona-9junio lamina 5,
+Estados con mas clientes,Veracruz,55000,,buyer-persona-9junio lamina 5,
+Estados con mas clientes,Jalisco,38000,,buyer-persona-9junio lamina 5,ausente del User-person-PWA v2.0
+Estados con mas clientes,Puebla,36000,,buyer-persona-9junio lamina 5,ausente del User-person-PWA v2.0
+Estados con menos clientes,Queretaro,6000,,buyer-persona-9junio lamina 5,
+Estados con menos clientes,Aguascalientes,5000,,buyer-persona-9junio lamina 5,
+Estados con menos clientes,Quintana Roo,5000,,buyer-persona-9junio lamina 5,
+Estados con menos clientes,Colima,3000,,buyer-persona-9junio lamina 5,
+Estados con menos clientes,Baja California Sur,2000,,buyer-persona-9junio lamina 5,
+Edad moda,Masculino 19 anios,,4.4,buyer-persona-9junio lamina 7,edad que mas se repite; generacion Centennial
+Edad moda,Femenino 22 anios,,4.1,buyer-persona-9junio lamina 7,edad que mas se repite; generacion Centennial

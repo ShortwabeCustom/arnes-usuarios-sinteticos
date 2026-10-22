@@ -1,0 +1,3 @@
+sesion,tarea,integrante,nombre,resultado,pasos,toques,sin_respuesta,fuera_de_marcas,pantallas,confianza_inicial,confianza_final,confianza_min,friccion_max,costo_usd
+T1-arturo,T1,arturo,Arturo Belmont,exito_con_friccion,8,7,0,0,4,50,58,40,3,0.8355
+T1-bryan,T1,bryan,Bryan Nájera,exito_con_friccion,8,7,0,0,4,60,55,48,3,0.9561

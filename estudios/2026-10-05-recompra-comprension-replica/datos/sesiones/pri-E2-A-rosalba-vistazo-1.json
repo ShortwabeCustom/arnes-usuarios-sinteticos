@@ -1,0 +1,51 @@
+{
+ "id": "pri-E2-A-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra chica] «Aprobado en producto»\n5. [letra mediana] «En esta ocasión, tu préstamo es para…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 aprobados, pero la letra chica dice «Aprobado en producto», no en efectivo. Y la última frase, «tu préstamo es para…», se quedó cortada y no alcancé a leer para qué. Entonces no me queda claro si me dan el dinero o algo distinto. Se ve formal, pero no me deja tranquila.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto de $30,000 coincide con lo que pedí. Pero dice «aprobado en producto» y yo pedí efectivo, así que no estoy segura de que me aprobaron lo que pedí. Hay algo que no cuadra y no alcancé a leer el resto."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo sé. Lo que alcancé a leer habla de producto y de «productos favoritos», no de efectivo. Tampoco vi nada que diga que me lo depositan. No voy a suponerlo."
+  },
+  "p4": "\"Para tus productos favoritos\" suena a que sería en compras, quizá en una tienda. No leí dónde ni en cuáles. Tampoco sé si el dinero se puede usar para otra cosa, porque la frase de «tu préstamo es para…» se cortó.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Creo que falta algo. El monto tiene un asterisco y no leí qué condiciones trae. Tampoco leí para qué es el préstamo ni qué sigue. No lo siento mío todavía."
+  },
+  "p6": "No alcancé a ver el botón verde, así que no sé qué pasa si lo toco. No voy a adivinarlo.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no lo dice. Solo vi «En esta ocasión, tu préstamo es para…» y ahí me quedé. No sé por qué no me dieron efectivo. Quizá lo explica más abajo, pero no lo leí."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de continuar buscaría leer el asterisco y el resto de la frase, y si el texto es muy chico, tratar de agrandarlo. Si no puedo leerlo, buscaría con quién preguntar, porque no quiero aceptar algo que no alcanzo a leer. No le daría continuar a ciegas."
+  },
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0325
+}

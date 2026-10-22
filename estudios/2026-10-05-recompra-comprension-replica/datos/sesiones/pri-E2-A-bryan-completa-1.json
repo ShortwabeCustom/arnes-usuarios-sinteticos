@@ -1,0 +1,75 @@
+{
+ "id": "pri-E2-A-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000, pero para comprar productos, no en efectivo. Lo puedo usar en Elektra y Shopinbaz. Abajo, en letra chiquita, dice «*Sujeto a aprobación», y eso se contradice con el «Aprobado» de arriba.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto sí es el que pedí, $30,000. Pero yo pedí efectivo y me lo dan en productos. Además dice «Aprobado en producto» y también «*Sujeto a aprobación». No me queda claro si ya está aprobado o no."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que en esta ocasión el préstamo es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Lo único que veo es Elektra y Shopinbaz. Dice «Ya está listo para usarse aquí» y muestra esas dos tiendas. La tarjeta de Shopinbaz se ve cortada a la derecha, así que puede haber más, pero no lo sé. No veo dónde más se puede usar.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta aclarar algo. El asterisco dice «Sujeto a aprobación» y no explica a qué se refiere. Tampoco veo costo total, plazo ni pago. El mensaje dice «Ya está listo para usarse», pero el aviso chiquito lo contradice. No sé si ya es mío."
+  },
+  "p6": "Creo que me lleva a comprar en las tiendas, porque dice «Continuar comprando». Pero la pantalla no dice a dónde me manda exactamente. Tampoco sé si me saca de la app o me lleva a otra página.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "La pantalla solo dice «en esta ocasión» y que es para productos. No explica por qué no me dieron efectivo. El «Saber mas» quizá lo explique, pero no lo abrí y no sé qué dice."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas» primero, para ver por qué no me dieron efectivo y qué significa lo de sujeto a aprobación. Es una letra chiquita y verde, casi no se nota, pero es lo único que puede explicar algo. No le pico al botón verde sin saber eso."
+  },
+  "reglas": [
+   "A-04",
+   "A-06",
+   "A-05"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "El monto sí, $30,000. Pero yo pedí efectivo y me lo dan solo para comprar en sus tiendas. El panel no cambia lo del asterisco de «Sujeto a aprobación», que sigue sin explicarse."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel confirma que hoy lo puedo usar para comprar productos en sus tiendas. No habla de efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí, ahora sí lo dice: «por tu historial crediticio». Es una razón general. No dice qué del historial, ni qué le falta. Pero al menos hay una razón."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "Solo dice que si uso el préstamo y pago al día, fortalezco mi historial y puedo acceder a «nuevas opciones de financiamiento». No dice que una de esas opciones sea efectivo. No da plazo, ni monto, ni condiciones. Tampoco dice cuántos pagos o cuánto tiempo necesito."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me queda más claro por qué, y lo de construir historial sí me sirve. Pero yo vine por efectivo y me siento un poco empujado a comprar en sus tiendas. Sigo sin ver costo total ni qué significa lo de sujeto a aprobación. No me enojo, pero tampoco me convence del todo."
+   },
+   "reglas": [
+    "A-09",
+    "A-04"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1355
+}

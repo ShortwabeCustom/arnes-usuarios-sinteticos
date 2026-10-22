@@ -1,0 +1,48 @@
+{
+ "id": "pri-E2-B-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra mediana] «En esta ocasión, tu préstamo es para comprar productos y…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo que me dan $30,000 \"para mis productos favoritos\". Y la última línea dice que mi préstamo es para comprar productos y… ahí me quedé. Entiendo que algo me aprobaron, pero no sé si es efectivo o es para comprar cosas. No vi cuota, total a pagar ni fechas.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo el monto de $30,000, igual a lo que pedí, pero con asterisco que no alcancé a leer. Dice que es para productos y yo pedí efectivo. No sé si me aprobaron lo que pedí o algo distinto."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo puedo saber. Lo que leí dice 'productos', no efectivo. Tampoco leí nada que diga que me lo depositan. Prefiero no asumirlo."
+  },
+  "p4": "\"Para tus productos favoritos\" y \"comprar productos y…\". Eso es lo que leí. No sé dónde ni en qué tiendas, porque la frase se cortó. No voy a inventarlo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Siento que falta algo. Hay un asterisco que no leí y una frase incompleta. No vi cuota mensual, total a pagar ni fechas. Tampoco vi si tengo que aceptar algo, ni si autorizo buró. Hasta no verlo, no es mío."
+  },
+  "p6": "No lo vi. No puedo decir qué pasa si lo toco. No voy a suponerlo.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no explica por qué me dan esto y no efectivo. Dice 'en esta ocasión', pero no el motivo. Puede que más abajo lo diga, pero no lo vi. Y me choca: pedí efectivo."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Buscaría el detalle completo, el asterisco y el resto de la frase, antes de continuar. Necesito saber cuánto voy a pagar en total y si de verdad es efectivo. Sin ese número, no avanzo. Si me sacan del celular para verlo, lo dejo."
+  },
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-05",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0174
+}

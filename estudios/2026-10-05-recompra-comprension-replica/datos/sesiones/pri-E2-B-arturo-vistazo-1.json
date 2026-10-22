@@ -1,0 +1,50 @@
+{
+ "id": "pri-E2-B-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra mediana] «En esta ocasión, tu préstamo es para comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo que dice que tengo $30,000 \"para mis productos favoritos\", pero la última línea dice que mi préstamo es \"para comprar…\" y ahí me quedé. No sé bien si me lo aprobaron en efectivo o si es para comprar cosas. Hay un asterisco junto a la cantidad y no alcancé a leer qué aclara.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Veo los $30,000, que es lo que pedí, pero dice 'para tus productos favoritos' y 'para comprar…'. No sé si es lo mismo que pedí. El asterisco me hace pensar que hay una condición que no leí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Yo pedí efectivo, pero lo que leí habla de productos y de comprar. No vi nada que diga que me lo dan en efectivo. No puedo asegurarlo."
+  },
+  "p4": "Por lo que leí, parece que en productos o para comprar algo, pero no alcancé a leer qué ni dónde. No me atrevo a decir más.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Creo que falta algo. El asterisco y la frase que se quedó cortada me hacen pensar que hay condiciones. No sé cuáles y no las leí."
+  },
+  "p6": "No alcancé a ver ningún botón verde, así que no sé qué pasaría si lo tocara. Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer no dice por qué me dieron esto y no efectivo. Dice 'en esta ocasión' y se corta. Puede que lo explique más abajo, pero yo no lo leí."
+  },
+  "p8": {
+   "opcion": "otro",
+   "texto": "Antes de tocar algo querría leer el resto con calma, sobre todo lo del asterisco, y que me expliquen qué pasa con mi dinero. Si no puedo leerlo o agrandar la letra, preferiría ir a una sucursal a que me lo expliquen. No tocaría nada a ciegas."
+  },
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-01"
+  ],
+  "sin_cobertura": [
+   "p6"
+  ]
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0173
+}

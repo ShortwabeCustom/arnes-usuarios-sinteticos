@@ -1,0 +1,42 @@
+{
+ "id": "pri-E1-A-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [letra chica] «También puedes comprar en:»\n6. [botón] «Continuar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Entiendo que me dicen que tengo $30,000 aprobados y que en Efectivo ya son míos. Pero hay un asterisco junto al monto que no alcancé a leer, y también dice algo de que puedo comprar en otros lados, y eso tampoco lo leí. Se ve serio, pero me quedo con dudas de lo que no pude ver.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Por lo que alcancé a leer, sí: aparece $30,000 y la palabra «Aprobado», que es lo que pedí. Pero el monto trae un asterisco y no leí qué dice, así que no sé si hay condiciones. Tampoco vi condiciones de costo."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos, listos para usar», y eso suena a que sí. Pero no leí cómo ni dónde los recibo, ni si falta algún paso. Y después dice «también puedes comprar en:», que no alcancé a leer. No puedo asegurarlo."
+  },
+  "p4": "Dice «listos para usar» en Efectivo, pero no vi dónde ni cómo. También leí «También puedes comprar en:» y ahí se cortó, no vi en qué lugares. No sé más que eso.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya son míos, pero hay un asterisco que no leí y un botón «Continuar…» que me indica que hay más pasos. Hasta donde leí, no sé qué falta. No quiero darlo por hecho sin leer las condiciones."
+  },
+  "p6": "No lo vi como verde; solo vi que el botón dice «Continuar…» y ahí me quedé. No sé qué pasa al tocarlo. Antes de darle quiero leer las condiciones, y si no puedo leerlas, me gustaría preguntarle a alguien.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0297
+}

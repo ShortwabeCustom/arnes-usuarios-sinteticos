@@ -1,0 +1,38 @@
+{
+ "id": "pri-E1-A-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice \"Aprobado\": ¡tienes $30,000 en efectivo, ya son tuyos, listos para usar! Pero abajo, chiquito, trae un asterisco que dice \"Sujeto a aprobación\". Entonces se contradice: dice aprobado y a la vez sujeto a aprobación. Y no me dice cuota, plazo ni total a pagar. Nada de eso aparece.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "El letrero dice \"Aprobado\" y el monto es justo $30,000, lo que pedí. Pero el asterisco dice \"Sujeto a aprobación\". Es ambiguo: no sé si ya está aprobado o falta una aprobación. No lo puedo afirmar."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no explica cómo ni cuándo me los dan, ni si es depósito, tarjeta o sucursal. Y el asterisco lo condiciona. No tengo cómo saberlo con esta pantalla."
+  },
+  "p4": "En efectivo, \\\"listos para usar\\\", sin decir dónde ni cómo. Además me sugieren comprar en Elektra (productos para renovar el hogar) y en Shopinbaz (tecnología, hogar, moda y más), con \\\"Estrenar ahora\\\". No sé si es obligatorio usarlo ahí o si puedo usarlo libremente.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Por el \"Sujeto a aprobación\" yo siento que falta algo, pero la pantalla no dice qué. Tampoco veo cuánto voy a pagar al mes ni en total, ni plazos. Antes de decir que sí necesito ese número. No me siento segura de que ya sea mío."
+  },
+  "p6": "Sí lo vi: \\\"Continuar con mi monto\\\". Supongo que sigo con el trámite con esos $30,000, pero no me dice qué sigue ni si me saca del celular o me pide documentos o autorizar buró. No sé si ahí me muestran la cuota y el total. No lo toco sin saber eso; lo más probable es que dude.",
+  "reglas": [
+   "B-04",
+   "B-08",
+   "B-02",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0361
+}

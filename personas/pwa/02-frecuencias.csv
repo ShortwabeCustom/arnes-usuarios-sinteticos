@@ -1,0 +1,73 @@
+variable,categoria,frecuencia,pct,n_valido,nivel_evidencia,fuente
+Generacion,Centennials (Z) 18-30,301000,43.9,686000,OBSERVADO,lamina 7
+Generacion,Millennials (Y) 31-45,229000,33.4,686000,OBSERVADO,lamina 7
+Generacion,Gen X 46-60,119000,17.3,686000,OBSERVADO,lamina 7
+Generacion,Boomers 61-80,37000,5.4,686000,OBSERVADO,lamina 7
+Genero (clientes),Hombres,365000,53.2,686000,OBSERVADO,lamina 7 suma
+Genero (clientes),Mujeres,321000,46.8,686000,OBSERVADO,lamina 7 suma
+Genero (colocacion),Masculino,,51.0,no reportado,OBSERVADO,lamina 16
+Genero (colocacion),Femenino,,49.0,no reportado,OBSERVADO,lamina 16
+Genero por generacion,Centennials hombres,162000,54.0,301000,OBSERVADO,lamina 7
+Genero por generacion,Centennials mujeres,139000,46.0,301000,OBSERVADO,lamina 7
+Genero por generacion,Millennials hombres,118000,52.0,229000,OBSERVADO,lamina 7
+Genero por generacion,Millennials mujeres,111000,48.0,229000,OBSERVADO,lamina 7
+Genero por generacion,Gen X hombres,64000,54.0,119000,OBSERVADO,lamina 7
+Genero por generacion,Gen X mujeres,55000,46.0,119000,OBSERVADO,lamina 7
+Genero por generacion,Boomers hombres,21000,57.0,37000,OBSERVADO,lamina 7
+Genero por generacion,Boomers mujeres,16000,43.0,37000,OBSERVADO,lamina 7
+Producto,Efectivo,369000,54.0,684000,OBSERVADO,lamina 8
+Producto,Movilidad,161000,24.0,684000,OBSERVADO,lamina 8
+Producto,Productos del hogar,91000,13.0,684000,OBSERVADO,lamina 8
+Producto,Telefonia,62000,9.0,684000,OBSERVADO,lamina 8
+Producto,Prestamo para autos,1000,0.18,684000,OBSERVADO,lamina 8
+Estado civil (registro),Soltero (a),322838,47.0,685243,OBSERVADO,lamina 6
+Estado civil (registro),Union libre,155664,23.0,685243,OBSERVADO,lamina 6
+Estado civil (registro),Casado (a),148997,22.0,685243,OBSERVADO,lamina 6
+Estado civil (registro),Divorciado (a),48051,7.0,685243,OBSERVADO,lamina 6
+Estado civil (registro),Viudo (a),9693,1.0,685243,OBSERVADO,lamina 6
+Estado civil (colocacion),Soltero,,42.5,no reportado,SUSPENDIDA,lamina 16
+Estado civil (colocacion),Casado,,25.8,no reportado,SUSPENDIDA,lamina 16
+Estado civil (colocacion),Divorciado,,21.8,no reportado,SUSPENDIDA,lamina 16
+Estado civil (colocacion),Union Libre,,8.1,no reportado,SUSPENDIDA,lamina 16
+Estado civil (colocacion),Viudo,,1.8,no reportado,SUSPENDIDA,lamina 16
+Colocacion por edad,<=21 anios,,11.8,no reportado,OBSERVADO,lamina 16
+Colocacion por edad,(21-25] anios,,14.6,no reportado,OBSERVADO,lamina 16
+Colocacion por edad,(25-30] anios,,15.1,no reportado,OBSERVADO,lamina 16
+Colocacion por edad,(30-40] anios,,25.0,no reportado,OBSERVADO,lamina 16
+Colocacion por edad,(40-50] anios,,17.6,no reportado,OBSERVADO,lamina 16
+Colocacion por edad,>50 anios,,15.9,no reportado,OBSERVADO,lamina 16
+Perdida por edad,<=21 anios,,14.3,no reportado,OBSERVADO,lamina 16
+Perdida por edad,(21-25] anios,,14.4,no reportado,OBSERVADO,lamina 16
+Perdida por edad,(25-30] anios,,15.1,no reportado,OBSERVADO,lamina 16
+Perdida por edad,(30-40] anios,,14.5,no reportado,OBSERVADO,lamina 16
+Perdida por edad,(40-50] anios,,12.3,no reportado,OBSERVADO,lamina 16
+Perdida por edad,>50 anios,,11.4,no reportado,OBSERVADO,lamina 16
+Perdida por genero,Femenino,,13.4,no reportado,OBSERVADO,lamina 16
+Perdida por genero,Masculino,,14.1,no reportado,OBSERVADO,lamina 16
+Entidad federativa (top),Ciudad de Mexico,86000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (top),Estado de Mexico,72000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (top),Veracruz,55000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (top),Jalisco,38000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (top),Puebla,36000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (bottom),Queretaro,6000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (bottom),Aguascalientes,5000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (bottom),Quintana Roo,5000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (bottom),Colima,3000,,no reportado,OBSERVADO,lamina 5
+Entidad federativa (bottom),Baja California Sur,2000,,no reportado,OBSERVADO,lamina 5
+Preferencia UI,Experiencia B entre Millennials,,50.0,no reportado,OBSERVADO,lamina 14
+Preferencia UI,Experiencia B entre Centennials,,25.0,no reportado,OBSERVADO,lamina 14
+Preferencia UI,Experiencia A entre Gen X,,,no reportado,SENIAL,lamina 14 sin cifra
+Preferencia UI,Experiencia C entre Centennials y Boomers,,,no reportado,SENIAL,lamina 14 sin cifra
+Severidad de hallazgos,S4 critico,5,26.3,19,OBSERVADO,dev-onboarding
+Severidad de hallazgos,S3 alto,5,26.3,19,OBSERVADO,dev-onboarding
+Severidad de hallazgos,S2 medio,6,31.6,19,OBSERVADO,dev-onboarding
+Severidad de hallazgos,S1 bajo,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,TRUST confianza,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,FIN informacion financiera,2,10.5,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,ACC accesibilidad,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,ERR manejo de error,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,DATA datos personales,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,NAV navegacion,2,10.5,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,CMP comprension,4,21.1,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,NEXT siguiente paso,3,15.8,19,OBSERVADO,dev-onboarding
+Taxonomia de hallazgos,CONTENT contenido,3,15.8,19,OBSERVADO,dev-onboarding

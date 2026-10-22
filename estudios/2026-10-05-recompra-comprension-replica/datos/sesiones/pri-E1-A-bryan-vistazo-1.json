@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-A-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra muy grande] «$30,000*»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [letra chica] «También puedes comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me dieron $30,000 y que ya son míos en Efectivo. Lo que sí vi grande fue el monto. \"Aprobado\" estaba en letra chica y el asterisco junto al monto me late que trae condiciones, pero no alcancé a leerlas. Y abajo dice \"También puedes comprar…\", no sé qué sigue.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo $30,000 y 'Aprobado', que es lo que pedí. Pero el asterisco me dice que hay algo más y no lo leí. Por eso no digo que sí del todo."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "Dice 'en Efectivo ya son tuyos', así que entiendo que sí. No vi cómo ni cuándo me llegan, ni si hay costo."
+  },
+  "p4": "\"Listos para usar\" me suena a que los uso en lo que quiera. No vi ningún lugar ni condición. Lo de \"También puedes comprar…\" se quedó cortado y no sé si el dinero se puede usar de otra forma o si es otra oferta.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "El texto dice que ya es mío, pero el asterisco me hace pensar que falta algo. No sé qué, porque no leí la letra chica. Tampoco vi el costo total ni el pago, y no sé si falta un paso más."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasa. No voy a inventarlo.",
+  "reglas": [
+   "A-04",
+   "A-06",
+   "A-09"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0301
+}

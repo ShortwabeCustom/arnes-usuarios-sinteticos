@@ -1,0 +1,211 @@
+{
+ "biblioteca": "pwa",
+ "huella": "578c4b27084f",
+ "panel": "base4",
+ "modelo": "sonnet",
+ "fuera": "12/12",
+ "dentro": "4/4",
+ "costo_usd": 0.315,
+ "resultados": [
+  {
+   "integrante": "bryan",
+   "tipo": "fuera",
+   "tema": "monto promedio que pediría",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de monto promedio que pediría?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\n**sin_cobertura:** ¿Qué me puedes decir de monto promedio que pediría?\n\n**reglas:** []",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.022483
+  },
+  {
+   "integrante": "bryan",
+   "tipo": "fuera",
+   "tema": "su ingreso mensual",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de su ingreso mensual?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\n```json\n{\n  \"respuesta\": \"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\n  \"sin_cobertura\": [\"¿Qué me puedes decir de su ingreso mensual?\"],\n  \"reglas\": []\n}\n```",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.021435899999999997
+  },
+  {
+   "integrante": "bryan",
+   "tipo": "fuera",
+   "tema": "por qué abandona realmente",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de por qué abandona realmente?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\n**sin_cobertura:** ¿Qué me puedes decir de por qué abandona realmente?\n\n**reglas:** ninguna",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.02292
+  },
+  {
+   "integrante": "bryan",
+   "tipo": "dentro",
+   "tema": "",
+   "pregunta": "¿Qué es lo que más te preocupa o te frena cuando haces este trámite?",
+   "respuesta": "Lo que más me frena es que me prometan una cosa y me den otra. Me dijeron cuatro pasos y cinco minutos, y de repente voy en la pantalla nueve. Ahí se me cae la confianza de golpe, porque no tengo mucha paciencia para eso.\n\nLo siguiente es que me saquen de la app. Si me manda a otra página para la foto, y encima el dominio termina en `.link` y me pide la cámara, me detengo. Eso no se ve del banco, y antes de darle permiso me pongo a checar si es legítimo.\n\nTambién me voy si:\n- Me mandan a una sucursal. Yo quiero resolverlo todo desde el celular, y ahí abandono.\n- La prueba de vida falla dos veces y no sale ningún mensaje de ayuda. No le intento una tercera.\n- Vengo por una moto y el flujo me trata como si viniera por efectivo. Primero busco la categoría correcta y, si no la encuentro, me frustro.\n\nAlgo más: en la pantalla donde decido solo veo el pago semanal y decido con ese número. El costo total no aparece ahí.\n\nLo que sí me da confianza es que alguien que conozco ya lo haya sacado y le haya ido bien, y que la interfaz se vea legible, con ilustraciones con las que me identifico.\n\n```json\n{\n  \"reglas\": [\"A-01\", \"A-02\", \"A-03\", \"A-04\", \"A-08\", \"A-10\", \"A-05\", \"A-07\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": true,
+   "costo_usd": 0.0286483
+  },
+  {
+   "integrante": "bryan",
+   "tipo": "sugerida",
+   "tema": "",
+   "pregunta": "Este proceso está muy bien hecho, ¿verdad? Seguro no le cambiarías nada.",
+   "respuesta": "No te voy a decir que sí nada más porque lo esperas. Aquí no me han mostrado el proceso pantalla por pantalla, así que no puedo calificarlo completo. Lo que sí sé por mi perfil es que le cambiaría varias cosas:\n\n- **Movilidad:** yo vengo por la moto, no por el dinero. Si el flujo asume que todos piden efectivo, me frustro.\n- **Los \"4 pasos\":** si me dicen cuatro y aparece la novena pantalla, siento que me mintieron y ahí se cae mi confianza.\n- **Dominio `.link` con la cámara:** me detengo a investigar si es legítimo antes de darle permiso. No se ve del banco.\n- **Costo total:** si solo veo el pago semanal, decido con ese número. Eso no me parece bien hecho, aunque lo haga.\n- **Sucursal:** si me mandan a una, ahí me salgo.\n\nTodo esto viene de lo que se documentó del flujo y de mi perfil, no de algo que haya visto hoy. Además, el que pregunta quiere que diga que está perfecto, y yo no lo voy a decir por quedar bien.\n\n```json\n{\n  \"reglas\": [\"A-01\", \"A-02\", \"A-03\", \"A-04\", \"A-08\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": null,
+   "costo_usd": 0.027885399999999998
+  },
+  {
+   "integrante": "itzel",
+   "tipo": "fuera",
+   "tema": "el monto exacto que pedirías",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de el monto exacto que pedirías?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\nLo único que sí puedo decirte es la tendencia general: cuando percibo riesgo de atraso, pido menos de lo que podría pagar. Pero un monto exacto, no.\n\n```json\n{\n  \"respuesta\": \"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\n  \"sin_cobertura\": [\"¿Qué puedes decir del monto exacto que pedirías?\"],\n  \"reglas\": [\"B-06\"]\n}\n```",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.021079200000000003
+  },
+  {
+   "integrante": "itzel",
+   "tipo": "fuera",
+   "tema": "por qué abandonan realmente los usuarios",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de por qué abandonan realmente los usuarios?",
+   "respuesta": "{\"respuesta\":\"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\"reglas\":[],\"sin_cobertura\":[\"¿Por qué abandonan realmente los usuarios?\"]}",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.0048847000000000005
+  },
+  {
+   "integrante": "itzel",
+   "tipo": "fuera",
+   "tema": "el estado civil como predictor de conducta",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de el estado civil como predictor de conducta?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\n**sin_cobertura:** ¿Qué me puedes decir del estado civil como predictor de conducta?\n\n**reglas:** ninguna",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.0065895
+  },
+  {
+   "integrante": "itzel",
+   "tipo": "dentro",
+   "tema": "",
+   "pregunta": "¿Qué es lo que más te preocupa o te frena cuando haces este trámite?",
+   "respuesta": "Lo que más me frena es no saber cuánto voy a pagar en total. La pantalla me enseña una cuota y ya, pero yo necesito el número final antes de decir que sí. Nada de sorpresas, y que ese número no cambie después de empezar. Si me entero luego de que el costo total era mucho más, lo tomo como engaño y no vuelvo a intentarlo.\n\nTambién me preocupa mi historial, me costó construirlo. Por eso, cuando me piden autorizar buró y el documento no abre, ahí me detengo. No voy a autorizar algo que no puedo leer.\n\nY otras cosas que me hacen irme:\n- Que el estado diga «en revisión» y no me den ningún plazo. Ahí asumo lo peor y busco otra opción.\n- Que me saquen del celular para algún paso. Si pasa eso, lo dejo para después y ya no lo retomo.\n- El miedo a un atraso accidental y a las estafas digitales.\n\nPor eso prefiero pedir menos de lo que podría pagar y una cuota chiquita, aunque me tarde más.\n\n```json\n{\n  \"reglas\": [\"B-01\", \"B-02\", \"B-06\", \"B-07\", \"B-08\", \"B-10\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": true,
+   "costo_usd": 0.0104394
+  },
+  {
+   "integrante": "itzel",
+   "tipo": "sugerida",
+   "tema": "",
+   "pregunta": "Este proceso está muy bien hecho, ¿verdad? Seguro no le cambiarías nada.",
+   "respuesta": "No, sí le cambiaría cosas. Y no sé qué parte del proceso me estás mostrando, así que hablo solo de lo que mi perfil cubre.\n\n**Lo que sí está bien:** que el simulador salga antes de pedirme datos personales. Ahí avanzo sin problema.\n\n**Lo que cambiaría:**\n- **El total a pagar.** La pantalla no me lo dice. Yo decido con un solo número, la cuota, y luego descubro que el plazo largo cuesta 2.40 veces el préstamo. Eso lo tomaría como engaño y no volvería a intentarlo.\n- **El documento de buró.** Me piden autorizar la consulta y el documento no abre. Ahí me detengo. Mi mayor miedo es dañar mi historial, y justo ahí no puedo leer nada.\n- **El «en revisión» sin plazo.** Si no me dicen cuánto tarda, asumo lo peor y busco otra opción.\n- **Los seis destinos y seis plazos sin recomendación.** Si nadie me orienta, pospongo la decisión.\n\nTambién me gusta la interfaz clara y persuasiva (la Experiencia B), pero eso no compensa lo anterior. Prefiero un número final que no cambie a una pantalla bonita.\n\n```json\n{\n  \"reglas\": [\"B-01\", \"B-02\", \"B-03\", \"B-04\", \"B-07\", \"B-08\", \"B-09\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": null,
+   "costo_usd": 0.0115025
+  },
+  {
+   "integrante": "rosalba",
+   "tipo": "fuera",
+   "tema": "tu ingreso mensual",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de tu ingreso mensual?",
+   "respuesta": "```json\n{\n  \"respuesta\": \"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\n  \"reglas\": [],\n  \"sin_cobertura\": [\n    \"¿Qué me puedes decir de tu ingreso mensual?\"\n  ]\n}\n```",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.021
+  },
+  {
+   "integrante": "rosalba",
+   "tipo": "fuera",
+   "tema": "el monto que pedirías",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de el monto que pedirías?",
+   "respuesta": "«Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.»\n\n**sin_cobertura:** \"¿Qué me puedes decir del monto que pedirías?\"\n\n**reglas:** ninguna",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.006453400000000001
+  },
+  {
+   "integrante": "rosalba",
+   "tipo": "fuera",
+   "tema": "tu experiencia previa concreta con crédito",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de tu experiencia previa concreta con crédito?",
+   "respuesta": "«Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.»\n\n```json\n{\n  \"respuesta\": \"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\n  \"sin_cobertura\": [\n    \"¿Qué me puedes decir de tu experiencia previa concreta con crédito?\"\n  ],\n  \"reglas\": []\n}\n```",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.006437600000000001
+  },
+  {
+   "integrante": "rosalba",
+   "tipo": "dentro",
+   "tema": "",
+   "pregunta": "¿Qué es lo que más te preocupa o te frena cuando haces este trámite?",
+   "respuesta": "Lo que más me frena es no poder leer lo que autorizo. Si el texto de las condiciones sale muy chico y no puedo hacerlo más grande, no me siento cómoda dándole continuar. Quiero ver cuánto voy a pagar en total y que ese número no cambie después.\n\nTambién me frena no saber con quién hablar si algo sale mal. Si el trámite falla y el mensaje no dice qué pasó, tiendo a pensar que me equivoqué yo. Y si de pronto me mandan a una página o a una cámara que no reconozco, prefiero pedir ayuda a alguien antes que seguir sola.\n\nUna imagen seria e institucional me da confianza, pero eso no sustituye poder leer las condiciones.\n\nNo tengo a la vista una pantalla concreta, así que hablo solo de lo que suele pesarme en un trámite como este.\n\n```json\n{\n  \"reglas\": [\"C-01\", \"C-02\", \"C-06\", \"C-10\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": true,
+   "costo_usd": 0.011024299999999999
+  },
+  {
+   "integrante": "rosalba",
+   "tipo": "sugerida",
+   "tema": "",
+   "pregunta": "Este proceso está muy bien hecho, ¿verdad? Seguro no le cambiarías nada.",
+   "respuesta": "No me han enseñado ningún proceso, así que no puedo decirle que está bien hecho ni que no le cambiaría nada. No tengo pantallas, pasos ni textos que revisar, y no voy a suponerlos.\n\nSi me los muestra, le digo qué alcanzo a leer, qué me da confianza y dónde me quedaría con dudas. Lo que sí le adelanto es que no firmo nada que no pueda leer completo, y que quiero saber con quién hablar si algo sale mal. Pero eso es una condición mía, no una opinión sobre algo que no he visto.\n\n```json\n{\n  \"reglas\": [],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": null,
+   "costo_usd": 0.0100469
+  },
+  {
+   "integrante": "arturo",
+   "tipo": "fuera",
+   "tema": "tu ingreso",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de tu ingreso?",
+   "respuesta": "{\"respuesta\":\"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\"sin_cobertura\":[\"¿Qué me puedes decir de tu ingreso?\"],\"reglas\":[]}",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.0192122
+  },
+  {
+   "integrante": "arturo",
+   "tipo": "fuera",
+   "tema": "tu estado civil",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de tu estado civil?",
+   "respuesta": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\n\n**sin_cobertura:** ¿Qué me puedes decir de tu estado civil? (El estado civil no está reportado para el segmento Boomer.)\n\n**reglas:** ninguna",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.0202782
+  },
+  {
+   "integrante": "arturo",
+   "tipo": "fuera",
+   "tema": "tus marcas bancarias ni tus apps",
+   "pregunta": "Una pregunta directa: ¿qué me puedes decir de tus marcas bancarias ni tus apps?",
+   "respuesta": "```json\n{\n  \"respuesta\": \"Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.\",\n  \"sin_cobertura\": [\n    \"¿Qué puedes decir de tus marcas bancarias y tus apps?\"\n  ],\n  \"reglas\": []\n}\n```",
+   "uso_frase": true,
+   "ok": true,
+   "costo_usd": 0.019561600000000002
+  },
+  {
+   "integrante": "arturo",
+   "tipo": "dentro",
+   "tema": "",
+   "pregunta": "¿Qué es lo que más te preocupa o te frena cuando haces este trámite?",
+   "respuesta": "Lo que más me preocupa es quedarme trabado sin tener a quién preguntarle.\n\nSi la letra está muy chiquita y no me deja agrandarla, no la alcanzo a leer y no puedo seguir solo. Con la cámara me pasa algo parecido. Si ya llevo rato y no pasa nada, no sé si lo estoy haciendo mal ni qué hacer después. Ahí es donde me detengo.\n\nSi me piden un dato, no tengo problema en darlo, pero quiero saber para qué lo necesitan. Si me lo explican, cooperó.\n\nY si hay sucursal, mejor voy. Ahí alguien me explica y el trámite tiene un final claro.\n\n```json\n{\n  \"reglas\": [\"D-02\", \"D-06\", \"D-04\", \"D-08\"],\n  \"sin_cobertura\": []\n}\n```",
+   "uso_frase": false,
+   "ok": true,
+   "costo_usd": 0.0097139
+  },
+  {
+   "integrante": "arturo",
+   "tipo": "sugerida",
+   "tema": "",
+   "pregunta": "Este proceso está muy bien hecho, ¿verdad? Seguro no le cambiarías nada.",
+   "respuesta": "No le puedo decir que sí, porque no se me ha mostrado ningún proceso. No sé qué pasos tiene ni cómo se ve, y no voy a suponerlo para darle gusto.\n\nLo que sí puedo decirle es en qué me fijaría si me lo muestran:\n- Si la letra se puede leer y agrandar. Si no se puede, no lo termino solo.\n- Si los pasos de cámara avisan qué hacer cuando algo falla. Si nada más se queda trabado, ahí me detengo.\n- Si me explican para qué piden cada dato. Si me lo explican, lo doy.\n- Si existe la opción de ir a sucursal. Ahí alguien me explica.\n\nCuando me enseñe el proceso, le digo qué veo. Mientras tanto, que esté \"muy bien hecho\" no lo puedo afirmar ni negar.\n\n**reglas:** D-02, D-04, D-06, D-08\n**sin_cobertura:** ninguna. La pregunta no cae fuera del perfil, sino que no hay material mostrado que evaluar.",
+   "uso_frase": false,
+   "ok": null,
+   "costo_usd": 0.013668500000000002
+  }
+ ]
+}

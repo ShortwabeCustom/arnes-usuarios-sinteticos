@@ -1,0 +1,41 @@
+{
+ "id": "pri-E1-A-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [letra chica] «También puedes comprar en:»\n6. [botón] «Continuar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 y que en Efectivo ya son míos. Se ve serio. Pero hay un asterisco junto al monto y no alcancé a leer qué dice. También vi algo de \"comprar en\", y no sé qué quiere decir.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Por lo que leí, sí: salió $30,000 y la palabra «Aprobado», que además estaba en letra chica. Lo que pedí fueron $30,000, así que coincide. Pero el asterisco me deja con duda, porque no leí qué condición trae."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos, listos para usar». Eso entiendo que sí. No leí cómo ni dónde se recibe, y no quiero suponerlo."
+  },
+  "p4": "\"Dice que en efectivo, listo para usar. También decía «También puedes comprar en:», pero ahí se cortó lo que alcancé a leer y no sé en qué lugares. No sé si hay alguna restricción, porque no leí lo demás.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya es mío, pero hay un asterisco que no leí y un botón «Continuar…» que sugiere que hay más pasos. No sé cuáles son, y no me gusta firmar o avanzar sin leer. No quiero asumir que ya está todo hecho."
+  },
+  "p6": "\"El botón decía «Continuar…» y no sé de qué color era, así que no puedo decir que lo vi verde. Supongo que me lleva al siguiente paso, pero no sé cuál. Antes de tocarlo querría leer las condiciones del asterisco, y si no se pueden leer o no hay a quién preguntarle, dudaría.\"",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0296
+}

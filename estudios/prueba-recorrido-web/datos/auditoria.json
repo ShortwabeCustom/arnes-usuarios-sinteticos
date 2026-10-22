@@ -1,0 +1,1680 @@
+{
+ "metodo": "recorrido",
+ "evaluadores": 3,
+ "umbral_consenso": 2,
+ "consolidado": [
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N3",
+   "nombre_criterio": "Control y libertad del usuario",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "No hay botón para volver al paso 1 ni para cancelar. Si la persona quiere cambiar el monto del préstamo, no tiene cómo hacerlo desde aquí.",
+    "No hay botón ni enlace para volver al paso 1. Tampoco hay forma de cancelar. Si la persona quiere cambiar el monto del préstamo, no ve cómo hacerlo.",
+    "No hay botón ni enlace para volver al paso 1 ni para cancelar. Quien se equivocó en el monto no puede corregirlo desde aquí."
+   ],
+   "recomendaciones": [
+    "Agregar un botón o flecha 'Atrás' y un enlace para cancelar.",
+    "Añadir un botón «Atrás» o una flecha de regreso. Añadir también una opción para cancelar.",
+    "Añadir un botón «Atrás» y una opción para cancelar."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N6",
+   "nombre_criterio": "Reconocer antes que recordar",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El resumen es muy pobre. Solo muestra monto y plazo. Faltan el pago semanal, la tasa, el costo total y los datos personales. La persona no puede revisar bien antes de enviar.",
+    "El resumen solo muestra monto y plazo. Faltan tasa, pago por semana, total a pagar y costos. La persona no puede revisar lo importante antes de enviar.",
+    "El resumen solo muestra monto y plazo. Faltan tasa, pago por semana, total a pagar y comisiones. La persona no puede revisar lo importante antes de enviar."
+   ],
+   "recomendaciones": [
+    "Añadir pago por semana, tasa (CAT), total a pagar, fecha del primer pago y los datos capturados.",
+    "Agregar pago semanal, tasa, costo total y fecha del primer pago. Mostrarlos en una lista clara.",
+    "Añadir pago semanal, tasa, costo total y fecha del primer pago. Mostrar también los datos personales capturados."
+   ],
+   "reescrituras": [
+    [
+     "Monto: $30,000 · 52 semanas",
+     "Monto: $30,000 · 52 semanas\nPago semanal: $X · Tasa anual: X% · Total a pagar: $X"
+    ],
+    [
+     "Monto: $30,000 · 52 semanas",
+     "Monto: $30,000\nPlazo: 52 semanas\nPago semanal: $X\nTasa anual: X%\nTotal a pagar: $X"
+    ],
+    [
+     "Monto: $30,000 · 52 semanas",
+     "Monto: $30,000 · Plazo: 52 semanas · Pago semanal: $X · Tasa: X% · Total a pagar: $X"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N5",
+   "nombre_criterio": "Prevención de errores",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La autorización de buró va en letra diminuta y gris, y se da por aceptada al continuar. No hay casilla de consentimiento ni enlace a los términos. Es fácil no verla.",
+    "La autorización de consulta de buró va en texto muy pequeño y gris, y se da por aceptada al continuar. Es fácil no verla y no hay casilla de consentimiento.",
+    "Se envía una solicitud financiera sin ver el costo total ni confirmar. Hay riesgo de aceptar condiciones sin entenderlas."
+   ],
+   "recomendaciones": [
+    "Poner una casilla explícita de autorización, con texto más grande y enlace a términos y aviso de privacidad.",
+    "Hacer el aviso más legible y pedir una casilla de aceptación antes de enviar.",
+    "Mostrar las condiciones completas antes del envío. Usar un texto de botón que indique el compromiso."
+   ],
+   "reescrituras": [
+    [
+     "Al continuar autorizas la consulta de tu historial crediticio.",
+     "Autorizo la consulta de mi historial crediticio. Ver términos y aviso de privacidad."
+    ],
+    [
+     "Al continuar autorizas la consulta de tu historial crediticio.",
+     "Autorizo la consulta de mi historial crediticio. (casilla) Más información"
+    ],
+    [
+     "Enviar solicitud",
+     "Aceptar y enviar solicitud"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N5",
+   "nombre_criterio": "Prevención de errores",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.7,
+   "problemas": [
+    "Invita a solicitar sin mostrar antes requisitos, monto, plazo o pago. El usuario puede avanzar sin entender el costo.",
+    "Se muestra un monto fijo sin elegir cantidad, plazo ni pago. El usuario no ve las condiciones antes de pulsar. El asterisco depende de una nota pequeña. «Hasta» puede confundir a quien quiere justo $30,000.",
+    "El monto aparece fijo como «hasta». No se puede elegir ni confirmar el monto del préstamo, y el botón no aclara qué pasará después. Puede llevar a solicitar sin saber plazo o pago."
+   ],
+   "recomendaciones": [
+    "Muestra plazo y pago estimado antes del botón, o un resumen de condiciones.",
+    "Permitir elegir monto y plazo, y mostrar el pago estimado antes de solicitar.",
+    "Permitir elegir el monto y plazo y mostrar el pago estimado antes de continuar."
+   ],
+   "reescrituras": [
+    [
+     "Te prestamos hasta $30,000*",
+     "Elige tu monto (hasta $30,000) y mira tu pago estimado"
+    ],
+    [
+     "Solicitar ahora",
+     "Continuar con $30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N2",
+   "nombre_criterio": "Correspondencia entre el sistema y el mundo real",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "«CAT promedio 98.5% sin IVA» es jerga financiera. Es muy pequeño y de poco contraste. Un costo tan alto queda casi oculto.",
+    "Choca con «Sujeto a aprobación». La promesa puede confundir y no se aclara si siempre es cierta.",
+    "El CAT es un término técnico que muchas personas no conocen. Un costo anual de 98.5% es muy alto y se muestra en letra gris pequeña, lejos del monto. Puede llevar a decidir sin entender el costo real.",
+    "Es una promesa que contradice «sujeto a aprobación». No aclara condiciones ni plazos reales de depósito.",
+    "«CAT» es jerga financiera y no se explica. El texto es pequeño y gris con poco contraste. El costo real del préstamo queda poco claro.",
+    "Promete dinero inmediato, pero la nota dice que está sujeto a aprobación. Es una promesa que puede confundir."
+   ],
+   "recomendaciones": [
+    "Explica el CAT en lenguaje simple y hazlo más visible, cerca del monto.",
+    "Matiza la promesa con una condición clara.",
+    "Explicar el costo en lenguaje simple y ponerlo más visible, cerca del botón. Indicar el pago aproximado.",
+    "Matizar la promesa o explicar cuándo llega el dinero.",
+    "Explicar CAT en lenguaje simple, mostrar el costo con más peso y mejorar el contraste.",
+    "Condicionar la promesa o ponerla junto a la aclaración."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+     "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5% sin IVA. Verás el costo exacto antes de aceptar."
+    ],
+    [
+     "Recibe tu dinero hoy mismo.",
+     "Si te aprueban, recibe tu dinero hoy mismo."
+    ],
+    [
+     "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+     "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5%, sin IVA. Verás el pago exacto antes de aceptar."
+    ],
+    [
+     "Recibe tu dinero hoy mismo.",
+     "Si te aprueban, recibe tu dinero hoy mismo."
+    ],
+    [
+     "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+     "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5% sin IVA. Ver detalle."
+    ],
+    [
+     "Recibe tu dinero hoy mismo.",
+     "Si te aprueban, recibe tu dinero hoy mismo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "criterio": "N1",
+   "nombre_criterio": "Visibilidad del estado del sistema",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "La confirmación no resume la solicitud: no muestra el monto de $30,000, el plazo ni un número de folio. La persona no puede comprobar que se envió lo que pidió.",
+    "No indica a qué número se enviará el SMS ni qué pasará después. «En las próximas 24 horas» es vago y no dice si habrá aprobación o más pasos.",
+    "La confirmación no resume la solicitud: no muestra monto ($30,000), plazo ni número de folio. La persona no puede verificar que se envió lo correcto.",
+    "El aviso es vago: no dice a qué número llegará el SMS ni qué pasa después. «Próximas 24 horas» no indica si es aprobación o respuesta.",
+    "No resume lo solicitado (monto $30,000, plazo, número de folio). La persona no puede confirmar que se envió lo correcto.",
+    "No indica a qué número llegará el SMS ni qué pasará si no llega. Tampoco dice si la solicitud está aprobada o en revisión."
+   ],
+   "recomendaciones": [
+    "Agregar un resumen con monto, plazo y número de referencia, y un ícono de éxito.",
+    "Mostrar el número enmascarado y explicar los siguientes pasos.",
+    "Añadir un resumen con monto, plazo y folio de la solicitud.",
+    "Indicar el número (parcial) y qué se recibirá.",
+    "Mostrar un resumen con monto, plazo y número de folio de la solicitud.",
+    "Indicar el número (parcialmente oculto) y el estado de la solicitud."
+   ],
+   "reescrituras": [
+    [
+     "Solicitud enviada",
+     "Solicitud enviada: préstamo de $30,000. Folio 12345"
+    ],
+    [
+     "Te avisaremos por SMS en las próximas 24 horas.",
+     "Te enviaremos un SMS al número terminado en 1234 con la respuesta en máximo 24 horas."
+    ],
+    [
+     "Solicitud enviada",
+     "Solicitud de $30,000 enviada. Folio: 123456"
+    ],
+    [
+     "Te avisaremos por SMS en las próximas 24 horas.",
+     "Te enviaremos la respuesta de tu solicitud por SMS al número terminado en 1234, en un máximo de 24 horas."
+    ],
+    [
+     "Solicitud enviada",
+     "Solicitud de $30,000 enviada. Folio: 12345"
+    ],
+    [
+     "Te avisaremos por SMS en las próximas 24 horas.",
+     "Tu solicitud está en revisión. Te avisaremos por SMS al número terminado en 4567 en un máximo de 24 horas."
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "criterio": "N3",
+   "nombre_criterio": "Control y libertad del usuario",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.3,
+   "problemas": [
+    "No hay botón para continuar, volver al inicio ni cancelar o corregir la solicitud. La pantalla es un callejón sin salida.",
+    "No hay ninguna acción: ni volver al inicio, ni ver el estado de la solicitud, ni cancelar o corregir. Es un callejón sin salida.",
+    "No hay botón para volver al inicio, ver el estado de la solicitud o cancelarla. La persona queda sin salida."
+   ],
+   "recomendaciones": [
+    "Añadir un botón «Volver al inicio» y un enlace para ver el estado de la solicitud.",
+    "Agregar un botón principal «Volver al inicio» y un enlace «Ver estado de mi solicitud».",
+    "Añadir un botón principal «Volver al inicio» y un enlace «Ver estado de mi solicitud»."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N4",
+   "nombre_criterio": "Consistencia y estándares",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Son enlaces azules con el estilo por defecto del navegador. No siguen el estilo verde de la pantalla. Están pegados entre sí y son difíciles de tocar.",
+    "Los enlaces usan el azul y el subrayado por defecto del navegador. No siguen el estilo verde de la pantalla. Son muy pequeños y están pegados entre sí.",
+    "Los enlaces usan el azul y subrayado por defecto del navegador. No siguen el estilo verde de la pantalla. Están pegados entre sí y son muy pequeños, lo que parece un descuido."
+   ],
+   "recomendaciones": [
+    "Dales el estilo de la marca, más tamaño y separación.",
+    "Dar a los enlaces el estilo de la marca, más tamaño y separación entre ellos.",
+    "Dar a los enlaces el estilo de la marca, separarlos y aumentar su tamaño y área táctil."
+   ],
+   "reescrituras": [
+    [
+     "Términos Privacidad",
+     "Términos y condiciones · Aviso de privacidad"
+    ],
+    [
+     "Términos Privacidad",
+     "Términos · Privacidad (con color de marca, tamaño legible y separación)"
+    ],
+    [
+     "Términos Privacidad",
+     "Términos · Privacidad"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N10",
+   "nombre_criterio": "Ayuda y documentación",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No hay ayuda, contacto ni preguntas frecuentes. Tampoco hay forma de volver o salir.",
+    "No hay ayuda, contacto ni preguntas frecuentes. El usuario no sabe qué pedirán después.",
+    "No hay ayuda, contacto ni preguntas frecuentes sobre requisitos, costos o tiempos."
+   ],
+   "recomendaciones": [
+    "Añade un enlace de ayuda y una salida visible.",
+    "Agregar un enlace de ayuda y una lista breve de requisitos.",
+    "Añadir un enlace «¿Dudas?» con requisitos y contacto."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N1",
+   "nombre_criterio": "Visibilidad del estado del sistema",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "'Paso 2 de 3' está en texto simple y pequeño. No hay barra de progreso. Tampoco se ve el monto de $30,000 ya elegido.",
+    "El progreso se indica solo con texto pequeño y sin barra. Es fácil pasarlo por alto. Tampoco se sabe qué trae el paso 3.",
+    "«Paso 2 de 3» es solo texto pequeño y ligero. No hay barra de progreso. Tampoco se ve el monto de $30,000 ya elegido."
+   ],
+   "recomendaciones": [
+    "Usar una barra de progreso visual y mostrar un resumen del monto solicitado.",
+    "Añadir una barra de progreso o pasos con nombre. Hacer el texto más visible.",
+    "Añadir una barra de progreso visual y un resumen con el monto solicitado."
+   ],
+   "reescrituras": [
+    [
+     "Paso 2 de 3",
+     "Paso 2 de 3 · Préstamo de $30,000"
+    ],
+    [
+     "Paso 2 de 3",
+     "Paso 2 de 3: Tus datos"
+    ],
+    [
+     "Paso 2 de 3",
+     "Paso 2 de 3 · Préstamo de $30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N5",
+   "nombre_criterio": "Prevención de errores",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No hay formato ni ejemplo para el teléfono. No se indica cuántos dígitos se esperan. Tampoco se ve si el campo es obligatorio.",
+    "No hay formato de ejemplo, máscara ni indicación de cuántos dígitos se esperan. Es fácil escribir un número mal.",
+    "No se indica si los campos son obligatorios. No hay texto de ayuda ni marcadores de ejemplo (placeholders).",
+    "No se indica el formato esperado (10 dígitos) ni hay máscara. Es fácil escribir un número inválido."
+   ],
+   "recomendaciones": [
+    "Agregar un texto de ejemplo, una máscara de 10 dígitos y teclado numérico. Marcar los campos obligatorios.",
+    "Mostrar un ejemplo, limitar el campo a números y dar formato de 10 dígitos. Usar teclado numérico.",
+    "Marcar los campos obligatorios y añadir ejemplos como «Ej. María López Pérez».",
+    "Mostrar un ejemplo o marcador de posición y dar formato automático al número."
+   ],
+   "reescrituras": [
+    [
+     "Teléfono celular",
+     "Teléfono celular (10 dígitos)"
+    ],
+    [
+     "Teléfono celular",
+     "Teléfono celular (10 dígitos)"
+    ],
+    [
+     "Nombre completo",
+     "Nombre completo (como aparece en tu identificación)"
+    ],
+    [
+     "Teléfono celular",
+     "Teléfono celular (10 dígitos), ej. 55 1234 5678"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N10",
+   "nombre_criterio": "Ayuda y documentación",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No explica por qué se piden los datos ni cómo se usarán. No hay ayuda ni contacto para dudas.",
+    "No explica para qué se piden el nombre y el teléfono, ni cómo se protegerán. En una solicitud de crédito esto genera desconfianza. No hay enlace de ayuda.",
+    "No se explica por qué se piden estos datos ni cómo se usarán. Esto puede restar confianza en una solicitud financiera."
+   ],
+   "recomendaciones": [
+    "Agregar una nota breve de privacidad y un enlace de ayuda.",
+    "Añadir una nota corta de privacidad y un enlace de ayuda o contacto.",
+    "Añadir una nota breve de privacidad o un enlace de ayuda."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N10",
+   "nombre_criterio": "Ayuda y documentación",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No hay ayuda ni explicación de términos, ni de lo que pasa después de enviar (tiempos de respuesta, contacto).",
+    "No hay ayuda ni enlace a términos, condiciones o preguntas frecuentes en el paso de confirmación.",
+    "No hay ayuda ni enlace a términos y condiciones o a contacto para dudas antes de enviar."
+   ],
+   "recomendaciones": [
+    "Añadir un enlace de ayuda y una línea sobre los siguientes pasos.",
+    "Agregar enlace a términos y a ayuda.",
+    "Añadir enlaces a términos, aviso de privacidad y ayuda."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "criterio": "N10",
+   "nombre_criterio": "Ayuda y documentación",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No hay contacto ni ayuda por si no llega el SMS o hay dudas sobre la solicitud.",
+    "No hay contacto ni ayuda por si el SMS no llega o hay dudas.",
+    "No hay contacto ni ayuda si la respuesta no llega o hay dudas sobre el préstamo."
+   ],
+   "recomendaciones": [
+    "Incluir un enlace de ayuda o un teléfono de contacto.",
+    "Incluir un enlace o teléfono de soporte.",
+    "Incluir un enlace de ayuda o un teléfono de contacto."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N1",
+   "nombre_criterio": "Visibilidad del estado del sistema",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.7,
+   "problemas": [
+    "No se sabe qué pasos siguen ni cuánto tardará. El monto parece fijo y no está claro si es el que se solicita o solo un máximo.",
+    "Indica el paso, pero no dice qué hará cada paso ni cuánto tardará. Solo es texto, sin barra de progreso.",
+    "Indica que hay 3 pasos pero no dice cuáles son ni cuánto durará. Es texto pequeño sin barra de progreso."
+   ],
+   "recomendaciones": [
+    "Indica los pasos y el tiempo estimado. Aclara que $30,000 es el máximo y permite elegir el monto.",
+    "Añadir una barra de progreso y nombres de pasos o tiempo estimado.",
+    "Añadir una barra de progreso con nombres de los pasos y una estimación de tiempo."
+   ],
+   "reescrituras": [
+    [
+     "Paso 1 de 3",
+     "Paso 1 de 3: elige tu monto (≈5 min)"
+    ],
+    [
+     "Paso 1 de 3",
+     "Paso 1 de 3: Tu solicitud · Toma unos 5 minutos"
+    ],
+    [
+     "Paso 1 de 3",
+     "Paso 1 de 3: Tu solicitud (2 min)"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N6",
+   "nombre_criterio": "Reconocer antes que recordar",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.3,
+   "problemas": [
+    "Los campos están vacíos y sin texto de ayuda. No se aclara si el nombre debe coincidir con la identificación oficial.",
+    "No se ve el monto de $30,000 que se solicitó antes. La persona debe recordarlo y no puede confirmar que sigue vigente.",
+    "No hay marcador de posición ni indicación de si los campos son obligatorios. Falta saber qué nombre se pide (igual que en la identificación)."
+   ],
+   "recomendaciones": [
+    "Agregar un texto de ayuda breve bajo cada campo.",
+    "Mostrar un resumen breve de la solicitud, con el monto y el plazo, arriba del formulario.",
+    "Marcar los campos obligatorios y añadir una pista breve en cada campo."
+   ],
+   "reescrituras": [
+    [
+     "Nombre completo",
+     "Nombre completo (como aparece en tu identificación)"
+    ],
+    [
+     "Nombre completo",
+     "Nombre completo (como aparece en tu identificación)"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "criterio": "N8",
+   "nombre_criterio": "Diseño estético y minimalista",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.3,
+   "problemas": [
+    "La pantalla está casi vacía y el contenido queda pegado arriba. Es limpia, pero poco informativa y sin jerarquía visual.",
+    "Pantalla casi vacía: el contenido queda arriba y el resto en blanco. No hay icono de éxito que refuerce el mensaje. Se ve poco terminada.",
+    "La pantalla está casi vacía. Falta jerarquía visual y un icono de éxito que refuerce la confirmación."
+   ],
+   "recomendaciones": [
+    "Usar el espacio para el resumen y las acciones siguientes, con un ícono de éxito.",
+    "Añadir un icono de éxito y organizar el contenido con resumen y acciones.",
+    "Añadir un icono de éxito y organizar el contenido con un resumen y acciones."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N8",
+   "nombre_criterio": "Diseño estético y minimalista",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Mucho espacio vacío debajo del contenido, mientras la información clave está en letra diminuta.",
+    "Más de la mitad queda vacía, y la información clave está en letra muy pequeña mientras el monto domina.",
+    "Gran parte de la pantalla está vacía y el contenido se agrupa arriba. Falta información útil sobre requisitos o condiciones."
+   ],
+   "recomendaciones": [
+    "Reparte mejor el espacio y usa un tamaño legible para la información de costo.",
+    "Usar el espacio para requisitos y condiciones clave en tamaño legible.",
+    "Usar el espacio para requisitos, plazo y pago estimado de forma breve."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N8",
+   "nombre_criterio": "Diseño estético y minimalista",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El diseño es limpio y simple, pero casi la mitad inferior queda vacía. El título y los campos tienen buena jerarquía.",
+    "El contenido queda arriba y casi la mitad de la pantalla está vacía. El botón verde destaca mucho frente a los campos de borde tenue, que se ven poco.",
+    "Más de la mitad de la pantalla está vacía, y el contenido queda concentrado arriba. Es una inconsistencia visual menor."
+   ],
+   "recomendaciones": [
+    "Aprovechar el espacio con el resumen del préstamo o fijar el botón al pie de la pantalla.",
+    "Dar más contraste al borde de los campos. Distribuir mejor el espacio o fijar el botón al pie.",
+    "Fijar el botón abajo o usar el espacio para el resumen y la ayuda."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N8",
+   "nombre_criterio": "Diseño estético y minimalista",
+   "zona": "",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Más de la mitad de la pantalla está vacía, mientras el contenido clave es escaso y queda apretado arriba.",
+    "Más de la mitad de la pantalla está vacía, mientras el contenido clave es mínimo y la jerarquía es débil. El texto legal es diminuto.",
+    "El contenido ocupa solo la parte superior y deja casi dos tercios vacíos. La jerarquía es débil porque el monto no destaca."
+   ],
+   "recomendaciones": [
+    "Usar el espacio para un resumen más completo y fijar los botones abajo.",
+    "Usar el espacio para un resumen completo y dar más peso visual a las cifras clave.",
+    "Resaltar el monto y agrupar el resumen en una tarjeta con más información útil."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N2",
+   "nombre_criterio": "Correspondencia entre el sistema y el mundo real",
+   "zona": "",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "No queda claro que enviar es un compromiso. Tampoco se dice qué pasa después ni cuándo habrá respuesta.",
+    "El aviso es muy pequeño y de bajo contraste. Usa 'historial crediticio', que es un término técnico. El consentimiento pasa desapercibido."
+   ],
+   "recomendaciones": [
+    "Aclarar la consecuencia y el siguiente paso cerca del botón.",
+    "Aumentar tamaño y contraste. Usar una casilla o texto claro y explicar qué implica la consulta."
+   ],
+   "reescrituras": [
+    [
+     "Enviar solicitud",
+     "Enviar solicitud (te responderemos en X minutos)"
+    ],
+    [
+     "Al continuar autorizas la consulta de tu historial crediticio.",
+     "Al enviar, autorizas que consultemos tu historial de crédito (buró). Esto no afecta tu calificación."
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N4",
+   "nombre_criterio": "Consistencia y estándares",
+   "zona": "",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El aviso dice «al continuar», pero el botón dice «Enviar solicitud». Las palabras no coinciden y no queda claro que enviar es un paso definitivo con consulta de crédito.",
+    "'Corregir datos' es ambiguo. No indica qué datos se corrigen ni a dónde lleva. Tampoco hay flecha de volver."
+   ],
+   "recomendaciones": [
+    "Alinear el texto del aviso con el botón y decir qué pasa al enviar.",
+    "Usar una etiqueta clara y añadir opción de volver al paso anterior."
+   ],
+   "reescrituras": [
+    [
+     "Enviar solicitud",
+     "Enviar solicitud y autorizar consulta"
+    ],
+    [
+     "Corregir datos",
+     "Volver y editar"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N3",
+   "nombre_criterio": "Control y libertad del usuario",
+   "zona": "",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Corregir datos» no dice qué datos ni a dónde lleva. No hay opción clara de cancelar o volver al paso 2.",
+    "«Corregir datos» es ambiguo: no dice qué datos ni a dónde lleva. No hay opción de cancelar. No se sabe si se conserva lo capturado."
+   ],
+   "recomendaciones": [
+    "Aclarar el destino del botón y añadir «Volver» o «Cancelar».",
+    "Usar una etiqueta más precisa y ofrecer volver al paso anterior y cancelar."
+   ],
+   "reescrituras": [
+    [
+     "Corregir datos",
+     "Editar monto y datos"
+    ],
+    [
+     "Corregir datos",
+     "Editar monto y plazo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "criterio": "N3",
+   "nombre_criterio": "Control y libertad del usuario",
+   "zona": "",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.5,
+   "problemas": [
+    "No hay opción para volver, cancelar ni salir del flujo.",
+    "No hay botón para volver, cerrar ni salir. El usuario no ve cómo cancelar el proceso."
+   ],
+   "recomendaciones": [
+    "Añadir un enlace de regreso o cierre visible.",
+    "Agregar un control de salida o regreso visible."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "criterio": "N1",
+   "nombre_criterio": "Visibilidad del estado del sistema",
+   "zona": "",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Paso 3 de 3» es solo texto, sin barra de avance. Es útil pero discreto.",
+    "'Paso 3 de 3' es solo texto. No hay barra de progreso ni se explica qué pasa después de enviar."
+   ],
+   "recomendaciones": [
+    "Añadir una barra de progreso visual.",
+    "Añadir barra de progreso y una nota sobre el siguiente paso, como el tiempo de respuesta."
+   ],
+   "reescrituras": [
+    [
+     "Paso 3 de 3",
+     "Paso 3 de 3 (con barra de progreso)"
+    ],
+    [
+     "Paso 3 de 3",
+     "Paso 3 de 3 · Revisión final"
+    ]
+   ]
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "criterio": "N7",
+   "nombre_criterio": "Flexibilidad y eficiencia de uso",
+   "zona": "",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "No se ve ayuda para llenar más rápido, como autocompletado o teclado adecuado al tipo de dato."
+   ],
+   "recomendaciones": [
+    "Activar el autocompletado del navegador y el teclado numérico para el teléfono."
+   ],
+   "reescrituras": []
+  }
+ ],
+ "positivos": {
+  "localhost:8737/index.html": [
+   "Jerarquía clara: título, monto grande y un solo botón principal.",
+   "El botón verde tiene buen contraste y ocupa todo el ancho, fácil de tocar.",
+   "Texto breve y directo.",
+   "Indicador «Paso 1 de 3» que muestra el progreso.",
+   "La paleta verde es coherente.",
+   "Jerarquía visual clara: el monto en verde grande y un solo botón principal.",
+   "El botón «Solicitar ahora» es grande, con buen contraste y su texto indica la acción.",
+   "Mensaje corto y fácil de entender; el indicador «Paso 1 de 3» orienta.",
+   "Se declara que está sujeto a aprobación y se muestra el CAT.",
+   "Jerarquía visual clara: el monto en verde grande destaca de inmediato.",
+   "El botón «Solicitar ahora» es grande, con buen contraste y ancho completo.",
+   "El título y el mensaje son breves y fáciles de leer.",
+   "El asterisco enlaza el monto con la aclaración legal.",
+   "Se muestra el progreso con «Paso 1 de 3»."
+  ],
+  "localhost:8737/index.html#datos": [
+   "Formulario corto con solo dos campos, fácil de completar.",
+   "Las etiquetas están visibles sobre cada campo, en negrita y con buen contraste.",
+   "El botón 'Continuar' es grande, destaca y tiene una acción clara.",
+   "El título 'Tus datos' es claro y el lenguaje es cercano y sencillo.",
+   "Los campos son amplios y cómodos para usar en móvil.",
+   "El formulario es corto: solo dos campos. Esto reduce el esfuerzo.",
+   "Las etiquetas están sobre cada campo, en negrita y con texto claro y en español.",
+   "El botón «Continuar» es grande, de alto contraste y se identifica como la acción principal.",
+   "El título «Tus datos» y el indicador de paso dan contexto básico.",
+   "El diseño es limpio, con buena jerarquía y espacio entre elementos.",
+   "Formulario corto, con solo dos campos. Reduce el esfuerzo.",
+   "Las etiquetas están arriba de cada campo, en negrita y claras.",
+   "El botón «Continuar» es grande, de alto contraste y evidente como acción principal.",
+   "El título «Tus datos» y el texto del paso son claros y están en lenguaje sencillo.",
+   "Diseño limpio y consistente, con buen espaciado."
+  ],
+  "localhost:8737/index.html#confirmar": [
+   "Indica el progreso: «Paso 3 de 3».",
+   "El título «Revisa tu solicitud» deja claro el propósito de la pantalla.",
+   "El botón principal destaca bien y el secundario tiene un estilo distinto, con jerarquía clara.",
+   "Diseño limpio, con buen contraste y lenguaje sencillo.",
+   "Título claro que explica el propósito de la pantalla: revisar antes de enviar.",
+   "El botón principal destaca bien con color sólido y el secundario con contorno; la jerarquía de acciones es clara.",
+   "El indicador «Paso 3 de 3» ubica a la persona en el flujo.",
+   "Botones grandes, fáciles de tocar en móvil, y buen contraste del texto principal.",
+   "Diseño limpio y consistente en color y tipografía.",
+   "Título claro: 'Revisa tu solicitud' indica el propósito de la pantalla.",
+   "Botón principal lleno y secundario con contorno: la jerarquía de acciones es clara.",
+   "Hay opción de corregir antes de enviar, lo que da control a la persona.",
+   "Indicador de paso y diseño limpio y sin distracciones.",
+   "Buen contraste y tamaño en los botones."
+  ],
+  "localhost:8737/index.html#listo": [
+   "Título claro y con buen tamaño que confirma el envío.",
+   "Texto legible, con buen contraste y lenguaje sencillo.",
+   "Indica el canal (SMS) y un plazo de respuesta.",
+   "Diseño limpio y sin distracciones.",
+   "El título «Solicitud enviada» es claro y confirma el resultado.",
+   "Texto legible, con buen contraste y tamaño adecuado.",
+   "Lenguaje simple y cercano; indica el canal (SMS) y un plazo de 24 horas.",
+   "El título es claro y grande, y confirma de inmediato que la solicitud se envió.",
+   "El texto es corto, en lenguaje sencillo y con buen contraste.",
+   "Se informa un plazo concreto (24 horas) y el canal de respuesta (SMS)."
+  ]
+ },
+ "crudo": [
+  {
+   "pantalla": "localhost:8737/index.html",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N2",
+      "zona": "Nota legal bajo el botón",
+      "problema": "«CAT promedio 98.5% sin IVA» es jerga financiera. Es muy pequeño y de poco contraste. Un costo tan alto queda casi oculto.",
+      "severidad": 3,
+      "recomendacion": "Explica el CAT en lenguaje simple y hazlo más visible, cerca del monto.",
+      "actual": "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+      "recomendado": "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5% sin IVA. Verás el costo exacto antes de aceptar."
+     },
+     {
+      "criterio": "N1",
+      "zona": "Monto $30,000 y «Paso 1 de 3»",
+      "problema": "No se sabe qué pasos siguen ni cuánto tardará. El monto parece fijo y no está claro si es el que se solicita o solo un máximo.",
+      "severidad": 2,
+      "recomendacion": "Indica los pasos y el tiempo estimado. Aclara que $30,000 es el máximo y permite elegir el monto.",
+      "actual": "Paso 1 de 3",
+      "recomendado": "Paso 1 de 3: elige tu monto (≈5 min)"
+     },
+     {
+      "criterio": "N4",
+      "zona": "Enlaces «Términos» y «Privacidad»",
+      "problema": "Son enlaces azules con el estilo por defecto del navegador. No siguen el estilo verde de la pantalla. Están pegados entre sí y son difíciles de tocar.",
+      "severidad": 2,
+      "recomendacion": "Dales el estilo de la marca, más tamaño y separación.",
+      "actual": "Términos Privacidad",
+      "recomendado": "Términos y condiciones · Aviso de privacidad"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Botón «Solicitar ahora»",
+      "problema": "Invita a solicitar sin mostrar antes requisitos, monto, plazo o pago. El usuario puede avanzar sin entender el costo.",
+      "severidad": 3,
+      "recomendacion": "Muestra plazo y pago estimado antes del botón, o un resumen de condiciones.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N2",
+      "zona": "Promesa «Recibe tu dinero hoy mismo»",
+      "problema": "Choca con «Sujeto a aprobación». La promesa puede confundir y no se aclara si siempre es cierta.",
+      "severidad": 2,
+      "recomendacion": "Matiza la promesa con una condición clara.",
+      "actual": "Recibe tu dinero hoy mismo.",
+      "recomendado": "Si te aprueban, recibe tu dinero hoy mismo."
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pantalla completa",
+      "problema": "No hay ayuda, contacto ni preguntas frecuentes. Tampoco hay forma de volver o salir.",
+      "severidad": 2,
+      "recomendacion": "Añade un enlace de ayuda y una salida visible.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "Mucho espacio vacío debajo del contenido, mientras la información clave está en letra diminuta.",
+      "severidad": 1,
+      "recomendacion": "Reparte mejor el espacio y usa un tamaño legible para la información de costo.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Jerarquía clara: título, monto grande y un solo botón principal.",
+     "El botón verde tiene buen contraste y ocupa todo el ancho, fácil de tocar.",
+     "Texto breve y directo.",
+     "Indicador «Paso 1 de 3» que muestra el progreso.",
+     "La paleta verde es coherente."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N4",
+      "zona": "Enlaces «Términos» y «Privacidad» al pie",
+      "problema": "Los enlaces usan el azul y el subrayado por defecto del navegador. No siguen el estilo verde de la pantalla. Son muy pequeños y están pegados entre sí.",
+      "severidad": 2,
+      "recomendacion": "Dar a los enlaces el estilo de la marca, más tamaño y separación entre ellos.",
+      "actual": "Términos Privacidad",
+      "recomendado": "Términos · Privacidad (con color de marca, tamaño legible y separación)"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Nota legal «CAT promedio 98.5% sin IVA»",
+      "problema": "El CAT es un término técnico que muchas personas no conocen. Un costo anual de 98.5% es muy alto y se muestra en letra gris pequeña, lejos del monto. Puede llevar a decidir sin entender el costo real.",
+      "severidad": 3,
+      "recomendacion": "Explicar el costo en lenguaje simple y ponerlo más visible, cerca del botón. Indicar el pago aproximado.",
+      "actual": "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+      "recomendado": "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5%, sin IVA. Verás el pago exacto antes de aceptar."
+     },
+     {
+      "criterio": "N5",
+      "zona": "Monto «$30,000*» y botón «Solicitar ahora»",
+      "problema": "Se muestra un monto fijo sin elegir cantidad, plazo ni pago. El usuario no ve las condiciones antes de pulsar. El asterisco depende de una nota pequeña. «Hasta» puede confundir a quien quiere justo $30,000.",
+      "severidad": 2,
+      "recomendacion": "Permitir elegir monto y plazo, y mostrar el pago estimado antes de solicitar.",
+      "actual": "Te prestamos hasta $30,000*",
+      "recomendado": "Elige tu monto (hasta $30,000) y mira tu pago estimado"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Encabezado «Paso 1 de 3»",
+      "problema": "Indica el paso, pero no dice qué hará cada paso ni cuánto tardará. Solo es texto, sin barra de progreso.",
+      "severidad": 1,
+      "recomendacion": "Añadir una barra de progreso y nombres de pasos o tiempo estimado.",
+      "actual": "Paso 1 de 3",
+      "recomendado": "Paso 1 de 3: Tu solicitud · Toma unos 5 minutos"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Texto «Recibe tu dinero hoy mismo»",
+      "problema": "Es una promesa que contradice «sujeto a aprobación». No aclara condiciones ni plazos reales de depósito.",
+      "severidad": 2,
+      "recomendacion": "Matizar la promesa o explicar cuándo llega el dinero.",
+      "actual": "Recibe tu dinero hoy mismo.",
+      "recomendado": "Si te aprueban, recibe tu dinero hoy mismo."
+     },
+     {
+      "criterio": "N3",
+      "zona": "Pantalla completa",
+      "problema": "No hay opción para volver, cancelar ni salir del flujo.",
+      "severidad": 1,
+      "recomendacion": "Añadir un enlace de regreso o cierre visible.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pie de pantalla",
+      "problema": "No hay ayuda, contacto ni preguntas frecuentes. El usuario no sabe qué pedirán después.",
+      "severidad": 2,
+      "recomendacion": "Agregar un enlace de ayuda y una lista breve de requisitos.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "Más de la mitad queda vacía, y la información clave está en letra muy pequeña mientras el monto domina.",
+      "severidad": 1,
+      "recomendacion": "Usar el espacio para requisitos y condiciones clave en tamaño legible.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Jerarquía visual clara: el monto en verde grande y un solo botón principal.",
+     "El botón «Solicitar ahora» es grande, con buen contraste y su texto indica la acción.",
+     "Mensaje corto y fácil de entender; el indicador «Paso 1 de 3» orienta.",
+     "Se declara que está sujeto a aprobación y se muestra el CAT."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N4",
+      "zona": "Enlaces «Términos» y «Privacidad» al pie",
+      "problema": "Los enlaces usan el azul y subrayado por defecto del navegador. No siguen el estilo verde de la pantalla. Están pegados entre sí y son muy pequeños, lo que parece un descuido.",
+      "severidad": 2,
+      "recomendacion": "Dar a los enlaces el estilo de la marca, separarlos y aumentar su tamaño y área táctil.",
+      "actual": "Términos Privacidad",
+      "recomendado": "Términos · Privacidad"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Nota legal «CAT promedio 98.5% sin IVA»",
+      "problema": "«CAT» es jerga financiera y no se explica. El texto es pequeño y gris con poco contraste. El costo real del préstamo queda poco claro.",
+      "severidad": 3,
+      "recomendacion": "Explicar CAT en lenguaje simple, mostrar el costo con más peso y mejorar el contraste.",
+      "actual": "*Sujeto a aprobación. CAT promedio 98.5% sin IVA.",
+      "recomendado": "*Sujeto a aprobación. Costo anual total (CAT) promedio: 98.5% sin IVA. Ver detalle."
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador «Paso 1 de 3»",
+      "problema": "Indica que hay 3 pasos pero no dice cuáles son ni cuánto durará. Es texto pequeño sin barra de progreso.",
+      "severidad": 2,
+      "recomendacion": "Añadir una barra de progreso con nombres de los pasos y una estimación de tiempo.",
+      "actual": "Paso 1 de 3",
+      "recomendado": "Paso 1 de 3: Tu solicitud (2 min)"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Monto «$30,000*» y botón «Solicitar ahora»",
+      "problema": "El monto aparece fijo como «hasta». No se puede elegir ni confirmar el monto del préstamo, y el botón no aclara qué pasará después. Puede llevar a solicitar sin saber plazo o pago.",
+      "severidad": 3,
+      "recomendacion": "Permitir elegir el monto y plazo y mostrar el pago estimado antes de continuar.",
+      "actual": "Solicitar ahora",
+      "recomendado": "Continuar con $30,000"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Texto «Recibe tu dinero hoy mismo»",
+      "problema": "Promete dinero inmediato, pero la nota dice que está sujeto a aprobación. Es una promesa que puede confundir.",
+      "severidad": 2,
+      "recomendacion": "Condicionar la promesa o ponerla junto a la aclaración.",
+      "actual": "Recibe tu dinero hoy mismo.",
+      "recomendado": "Si te aprueban, recibe tu dinero hoy mismo."
+     },
+     {
+      "criterio": "N3",
+      "zona": "Pantalla completa",
+      "problema": "No hay botón para volver, cerrar ni salir. El usuario no ve cómo cancelar el proceso.",
+      "severidad": 2,
+      "recomendacion": "Agregar un control de salida o regreso visible.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pantalla completa",
+      "problema": "No hay ayuda, contacto ni preguntas frecuentes sobre requisitos, costos o tiempos.",
+      "severidad": 2,
+      "recomendacion": "Añadir un enlace «¿Dudas?» con requisitos y contacto.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "Gran parte de la pantalla está vacía y el contenido se agrupa arriba. Falta información útil sobre requisitos o condiciones.",
+      "severidad": 1,
+      "recomendacion": "Usar el espacio para requisitos, plazo y pago estimado de forma breve.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Jerarquía visual clara: el monto en verde grande destaca de inmediato.",
+     "El botón «Solicitar ahora» es grande, con buen contraste y ancho completo.",
+     "El título y el mensaje son breves y fáciles de leer.",
+     "El asterisco enlaza el monto con la aclaración legal.",
+     "Se muestra el progreso con «Paso 1 de 3»."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N3",
+      "zona": "Parte superior / pie del formulario",
+      "problema": "No hay botón para volver al paso 1 ni para cancelar. Si la persona quiere cambiar el monto del préstamo, no tiene cómo hacerlo desde aquí.",
+      "severidad": 3,
+      "recomendacion": "Agregar un botón o flecha 'Atrás' y un enlace para cancelar.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador de paso",
+      "problema": "'Paso 2 de 3' está en texto simple y pequeño. No hay barra de progreso. Tampoco se ve el monto de $30,000 ya elegido.",
+      "severidad": 2,
+      "recomendacion": "Usar una barra de progreso visual y mostrar un resumen del monto solicitado.",
+      "actual": "Paso 2 de 3",
+      "recomendado": "Paso 2 de 3 · Préstamo de $30,000"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Campo Teléfono celular",
+      "problema": "No hay formato ni ejemplo para el teléfono. No se indica cuántos dígitos se esperan. Tampoco se ve si el campo es obligatorio.",
+      "severidad": 2,
+      "recomendacion": "Agregar un texto de ejemplo, una máscara de 10 dígitos y teclado numérico. Marcar los campos obligatorios.",
+      "actual": "Teléfono celular",
+      "recomendado": "Teléfono celular (10 dígitos)"
+     },
+     {
+      "criterio": "N6",
+      "zona": "Campos de texto",
+      "problema": "Los campos están vacíos y sin texto de ayuda. No se aclara si el nombre debe coincidir con la identificación oficial.",
+      "severidad": 1,
+      "recomendacion": "Agregar un texto de ayuda breve bajo cada campo.",
+      "actual": "Nombre completo",
+      "recomendado": "Nombre completo (como aparece en tu identificación)"
+     },
+     {
+      "criterio": "N10",
+      "zona": "Formulario completo",
+      "problema": "No explica por qué se piden los datos ni cómo se usarán. No hay ayuda ni contacto para dudas.",
+      "severidad": 2,
+      "recomendacion": "Agregar una nota breve de privacidad y un enlace de ayuda.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Pantalla en general",
+      "problema": "El diseño es limpio y simple, pero casi la mitad inferior queda vacía. El título y los campos tienen buena jerarquía.",
+      "severidad": 1,
+      "recomendacion": "Aprovechar el espacio con el resumen del préstamo o fijar el botón al pie de la pantalla.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Formulario corto con solo dos campos, fácil de completar.",
+     "Las etiquetas están visibles sobre cada campo, en negrita y con buen contraste.",
+     "El botón 'Continuar' es grande, destaca y tiene una acción clara.",
+     "El título 'Tus datos' es claro y el lenguaje es cercano y sencillo.",
+     "Los campos son amplios y cómodos para usar en móvil."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N3",
+      "zona": "Parte superior y pie del formulario",
+      "problema": "No hay botón ni enlace para volver al paso 1. Tampoco hay forma de cancelar. Si la persona quiere cambiar el monto del préstamo, no ve cómo hacerlo.",
+      "severidad": 3,
+      "recomendacion": "Añadir un botón «Atrás» o una flecha de regreso. Añadir también una opción para cancelar.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N5",
+      "zona": "Campo Teléfono celular",
+      "problema": "No hay formato de ejemplo, máscara ni indicación de cuántos dígitos se esperan. Es fácil escribir un número mal.",
+      "severidad": 2,
+      "recomendacion": "Mostrar un ejemplo, limitar el campo a números y dar formato de 10 dígitos. Usar teclado numérico.",
+      "actual": "Teléfono celular",
+      "recomendado": "Teléfono celular (10 dígitos)"
+     },
+     {
+      "criterio": "N6",
+      "zona": "Todo el formulario",
+      "problema": "No se ve el monto de $30,000 que se solicitó antes. La persona debe recordarlo y no puede confirmar que sigue vigente.",
+      "severidad": 2,
+      "recomendacion": "Mostrar un resumen breve de la solicitud, con el monto y el plazo, arriba del formulario.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador «Paso 2 de 3»",
+      "problema": "El progreso se indica solo con texto pequeño y sin barra. Es fácil pasarlo por alto. Tampoco se sabe qué trae el paso 3.",
+      "severidad": 2,
+      "recomendacion": "Añadir una barra de progreso o pasos con nombre. Hacer el texto más visible.",
+      "actual": "Paso 2 de 3",
+      "recomendado": "Paso 2 de 3: Tus datos"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Campos de texto",
+      "problema": "No se indica si los campos son obligatorios. No hay texto de ayuda ni marcadores de ejemplo (placeholders).",
+      "severidad": 2,
+      "recomendacion": "Marcar los campos obligatorios y añadir ejemplos como «Ej. María López Pérez».",
+      "actual": "Nombre completo",
+      "recomendado": "Nombre completo (como aparece en tu identificación)"
+     },
+     {
+      "criterio": "N10",
+      "zona": "Formulario",
+      "problema": "No explica para qué se piden el nombre y el teléfono, ni cómo se protegerán. En una solicitud de crédito esto genera desconfianza. No hay enlace de ayuda.",
+      "severidad": 2,
+      "recomendacion": "Añadir una nota corta de privacidad y un enlace de ayuda o contacto.",
+      "actual": "",
+      "recomendado": "Usaremos tu teléfono solo para confirmar tu solicitud."
+     },
+     {
+      "criterio": "N7",
+      "zona": "Campos de texto",
+      "problema": "No se ve ayuda para llenar más rápido, como autocompletado o teclado adecuado al tipo de dato.",
+      "severidad": 1,
+      "recomendacion": "Activar el autocompletado del navegador y el teclado numérico para el teléfono.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "El contenido queda arriba y casi la mitad de la pantalla está vacía. El botón verde destaca mucho frente a los campos de borde tenue, que se ven poco.",
+      "severidad": 1,
+      "recomendacion": "Dar más contraste al borde de los campos. Distribuir mejor el espacio o fijar el botón al pie.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "El formulario es corto: solo dos campos. Esto reduce el esfuerzo.",
+     "Las etiquetas están sobre cada campo, en negrita y con texto claro y en español.",
+     "El botón «Continuar» es grande, de alto contraste y se identifica como la acción principal.",
+     "El título «Tus datos» y el indicador de paso dan contexto básico.",
+     "El diseño es limpio, con buena jerarquía y espacio entre elementos."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N3",
+      "zona": "Parte superior / debajo del botón Continuar",
+      "problema": "No hay botón ni enlace para volver al paso 1 ni para cancelar. Quien se equivocó en el monto no puede corregirlo desde aquí.",
+      "severidad": 3,
+      "recomendacion": "Añadir un botón «Atrás» y una opción para cancelar.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N5",
+      "zona": "Campo Teléfono celular",
+      "problema": "No se indica el formato esperado (10 dígitos) ni hay máscara. Es fácil escribir un número inválido.",
+      "severidad": 2,
+      "recomendacion": "Mostrar un ejemplo o marcador de posición y dar formato automático al número.",
+      "actual": "Teléfono celular",
+      "recomendado": "Teléfono celular (10 dígitos), ej. 55 1234 5678"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador de paso",
+      "problema": "«Paso 2 de 3» es solo texto pequeño y ligero. No hay barra de progreso. Tampoco se ve el monto de $30,000 ya elegido.",
+      "severidad": 2,
+      "recomendacion": "Añadir una barra de progreso visual y un resumen con el monto solicitado.",
+      "actual": "Paso 2 de 3",
+      "recomendado": "Paso 2 de 3 · Préstamo de $30,000"
+     },
+     {
+      "criterio": "N6",
+      "zona": "Formulario",
+      "problema": "No hay marcador de posición ni indicación de si los campos son obligatorios. Falta saber qué nombre se pide (igual que en la identificación).",
+      "severidad": 1,
+      "recomendacion": "Marcar los campos obligatorios y añadir una pista breve en cada campo.",
+      "actual": "Nombre completo",
+      "recomendado": "Nombre completo (como aparece en tu identificación)"
+     },
+     {
+      "criterio": "N10",
+      "zona": "Formulario",
+      "problema": "No se explica por qué se piden estos datos ni cómo se usarán. Esto puede restar confianza en una solicitud financiera.",
+      "severidad": 2,
+      "recomendacion": "Añadir una nota breve de privacidad o un enlace de ayuda.",
+      "actual": "",
+      "recomendado": "Usaremos tu teléfono solo para confirmar tu solicitud."
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "Más de la mitad de la pantalla está vacía, y el contenido queda concentrado arriba. Es una inconsistencia visual menor.",
+      "severidad": 1,
+      "recomendacion": "Fijar el botón abajo o usar el espacio para el resumen y la ayuda.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Formulario corto, con solo dos campos. Reduce el esfuerzo.",
+     "Las etiquetas están arriba de cada campo, en negrita y claras.",
+     "El botón «Continuar» es grande, de alto contraste y evidente como acción principal.",
+     "El título «Tus datos» y el texto del paso son claros y están en lenguaje sencillo.",
+     "Diseño limpio y consistente, con buen espaciado."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N6",
+      "zona": "Resumen de la solicitud (Monto y plazo)",
+      "problema": "El resumen es muy pobre. Solo muestra monto y plazo. Faltan el pago semanal, la tasa, el costo total y los datos personales. La persona no puede revisar bien antes de enviar.",
+      "severidad": 3,
+      "recomendacion": "Añadir pago por semana, tasa (CAT), total a pagar, fecha del primer pago y los datos capturados.",
+      "actual": "Monto: $30,000 · 52 semanas",
+      "recomendado": "Monto: $30,000 · 52 semanas\nPago semanal: $X · Tasa anual: X% · Total a pagar: $X"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Aviso de consulta de historial crediticio",
+      "problema": "La autorización de buró va en letra diminuta y gris, y se da por aceptada al continuar. No hay casilla de consentimiento ni enlace a los términos. Es fácil no verla.",
+      "severidad": 3,
+      "recomendacion": "Poner una casilla explícita de autorización, con texto más grande y enlace a términos y aviso de privacidad.",
+      "actual": "Al continuar autorizas la consulta de tu historial crediticio.",
+      "recomendado": "Autorizo la consulta de mi historial crediticio. Ver términos y aviso de privacidad."
+     },
+     {
+      "criterio": "N8",
+      "zona": "Área inferior de la pantalla",
+      "problema": "Más de la mitad de la pantalla está vacía, mientras el contenido clave es escaso y queda apretado arriba.",
+      "severidad": 1,
+      "recomendacion": "Usar el espacio para un resumen más completo y fijar los botones abajo.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N4",
+      "zona": "Botón «Enviar solicitud» y texto del aviso",
+      "problema": "El aviso dice «al continuar», pero el botón dice «Enviar solicitud». Las palabras no coinciden y no queda claro que enviar es un paso definitivo con consulta de crédito.",
+      "severidad": 2,
+      "recomendacion": "Alinear el texto del aviso con el botón y decir qué pasa al enviar.",
+      "actual": "Enviar solicitud",
+      "recomendado": "Enviar solicitud y autorizar consulta"
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pantalla completa",
+      "problema": "No hay ayuda ni explicación de términos, ni de lo que pasa después de enviar (tiempos de respuesta, contacto).",
+      "severidad": 2,
+      "recomendacion": "Añadir un enlace de ayuda y una línea sobre los siguientes pasos.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N3",
+      "zona": "Botón «Corregir datos»",
+      "problema": "«Corregir datos» no dice qué datos ni a dónde lleva. No hay opción clara de cancelar o volver al paso 2.",
+      "severidad": 2,
+      "recomendacion": "Aclarar el destino del botón y añadir «Volver» o «Cancelar».",
+      "actual": "Corregir datos",
+      "recomendado": "Editar monto y datos"
+     }
+    ],
+    "positivos": [
+     "Indica el progreso: «Paso 3 de 3».",
+     "El título «Revisa tu solicitud» deja claro el propósito de la pantalla.",
+     "El botón principal destaca bien y el secundario tiene un estilo distinto, con jerarquía clara.",
+     "Diseño limpio, con buen contraste y lenguaje sencillo."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N6",
+      "zona": "Resumen del monto",
+      "problema": "El resumen solo muestra monto y plazo. Faltan tasa, pago por semana, total a pagar y costos. La persona no puede revisar lo importante antes de enviar.",
+      "severidad": 3,
+      "recomendacion": "Agregar pago semanal, tasa, costo total y fecha del primer pago. Mostrarlos en una lista clara.",
+      "actual": "Monto: $30,000 · 52 semanas",
+      "recomendado": "Monto: $30,000\nPlazo: 52 semanas\nPago semanal: $X\nTasa anual: X%\nTotal a pagar: $X"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Aviso de consulta de historial",
+      "problema": "La autorización de consulta de buró va en texto muy pequeño y gris, y se da por aceptada al continuar. Es fácil no verla y no hay casilla de consentimiento.",
+      "severidad": 3,
+      "recomendacion": "Hacer el aviso más legible y pedir una casilla de aceptación antes de enviar.",
+      "actual": "Al continuar autorizas la consulta de tu historial crediticio.",
+      "recomendado": "Autorizo la consulta de mi historial crediticio. (casilla) Más información"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Botón «Enviar solicitud»",
+      "problema": "No queda claro que enviar es un compromiso. Tampoco se dice qué pasa después ni cuándo habrá respuesta.",
+      "severidad": 2,
+      "recomendacion": "Aclarar la consecuencia y el siguiente paso cerca del botón.",
+      "actual": "Enviar solicitud",
+      "recomendado": "Enviar solicitud (te responderemos en X minutos)"
+     },
+     {
+      "criterio": "N3",
+      "zona": "Botón «Corregir datos»",
+      "problema": "«Corregir datos» es ambiguo: no dice qué datos ni a dónde lleva. No hay opción de cancelar. No se sabe si se conserva lo capturado.",
+      "severidad": 2,
+      "recomendacion": "Usar una etiqueta más precisa y ofrecer volver al paso anterior y cancelar.",
+      "actual": "Corregir datos",
+      "recomendado": "Editar monto y plazo"
+     },
+     {
+      "criterio": "N8",
+      "zona": "Pantalla completa",
+      "problema": "Más de la mitad de la pantalla está vacía, mientras el contenido clave es mínimo y la jerarquía es débil. El texto legal es diminuto.",
+      "severidad": 1,
+      "recomendacion": "Usar el espacio para un resumen completo y dar más peso visual a las cifras clave.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pantalla completa",
+      "problema": "No hay ayuda ni enlace a términos, condiciones o preguntas frecuentes en el paso de confirmación.",
+      "severidad": 2,
+      "recomendacion": "Agregar enlace a términos y a ayuda.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador de paso",
+      "problema": "«Paso 3 de 3» es solo texto, sin barra de avance. Es útil pero discreto.",
+      "severidad": 1,
+      "recomendacion": "Añadir una barra de progreso visual.",
+      "actual": "Paso 3 de 3",
+      "recomendado": "Paso 3 de 3 (con barra de progreso)"
+     }
+    ],
+    "positivos": [
+     "Título claro que explica el propósito de la pantalla: revisar antes de enviar.",
+     "El botón principal destaca bien con color sólido y el secundario con contorno; la jerarquía de acciones es clara.",
+     "El indicador «Paso 3 de 3» ubica a la persona en el flujo.",
+     "Botones grandes, fáciles de tocar en móvil, y buen contraste del texto principal.",
+     "Diseño limpio y consistente en color y tipografía."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N6",
+      "zona": "Resumen de la solicitud",
+      "problema": "El resumen solo muestra monto y plazo. Faltan tasa, pago por semana, total a pagar y comisiones. La persona no puede revisar lo importante antes de enviar.",
+      "severidad": 3,
+      "recomendacion": "Añadir pago semanal, tasa, costo total y fecha del primer pago. Mostrar también los datos personales capturados.",
+      "actual": "Monto: $30,000 · 52 semanas",
+      "recomendado": "Monto: $30,000 · Plazo: 52 semanas · Pago semanal: $X · Tasa: X% · Total a pagar: $X"
+     },
+     {
+      "criterio": "N5",
+      "zona": "Botón Enviar solicitud",
+      "problema": "Se envía una solicitud financiera sin ver el costo total ni confirmar. Hay riesgo de aceptar condiciones sin entenderlas.",
+      "severidad": 3,
+      "recomendacion": "Mostrar las condiciones completas antes del envío. Usar un texto de botón que indique el compromiso.",
+      "actual": "Enviar solicitud",
+      "recomendado": "Aceptar y enviar solicitud"
+     },
+     {
+      "criterio": "N2",
+      "zona": "Aviso de consulta de historial",
+      "problema": "El aviso es muy pequeño y de bajo contraste. Usa 'historial crediticio', que es un término técnico. El consentimiento pasa desapercibido.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y contraste. Usar una casilla o texto claro y explicar qué implica la consulta.",
+      "actual": "Al continuar autorizas la consulta de tu historial crediticio.",
+      "recomendado": "Al enviar, autorizas que consultemos tu historial de crédito (buró). Esto no afecta tu calificación."
+     },
+     {
+      "criterio": "N4",
+      "zona": "Botón Corregir datos",
+      "problema": "'Corregir datos' es ambiguo. No indica qué datos se corrigen ni a dónde lleva. Tampoco hay flecha de volver.",
+      "severidad": 2,
+      "recomendacion": "Usar una etiqueta clara y añadir opción de volver al paso anterior.",
+      "actual": "Corregir datos",
+      "recomendado": "Volver y editar"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Indicador de paso",
+      "problema": "'Paso 3 de 3' es solo texto. No hay barra de progreso ni se explica qué pasa después de enviar.",
+      "severidad": 1,
+      "recomendacion": "Añadir barra de progreso y una nota sobre el siguiente paso, como el tiempo de respuesta.",
+      "actual": "Paso 3 de 3",
+      "recomendado": "Paso 3 de 3 · Revisión final"
+     },
+     {
+      "criterio": "N8",
+      "zona": "Pantalla completa",
+      "problema": "El contenido ocupa solo la parte superior y deja casi dos tercios vacíos. La jerarquía es débil porque el monto no destaca.",
+      "severidad": 1,
+      "recomendacion": "Resaltar el monto y agrupar el resumen en una tarjeta con más información útil.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pantalla completa",
+      "problema": "No hay ayuda ni enlace a términos y condiciones o a contacto para dudas antes de enviar.",
+      "severidad": 2,
+      "recomendacion": "Añadir enlaces a términos, aviso de privacidad y ayuda.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Título claro: 'Revisa tu solicitud' indica el propósito de la pantalla.",
+     "Botón principal lleno y secundario con contorno: la jerarquía de acciones es clara.",
+     "Hay opción de corregir antes de enviar, lo que da control a la persona.",
+     "Indicador de paso y diseño limpio y sin distracciones.",
+     "Buen contraste y tamaño en los botones."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N1",
+      "zona": "Mensaje de confirmación",
+      "problema": "La confirmación no resume la solicitud: no muestra el monto de $30,000, el plazo ni un número de folio. La persona no puede comprobar que se envió lo que pidió.",
+      "severidad": 3,
+      "recomendacion": "Agregar un resumen con monto, plazo y número de referencia, y un ícono de éxito.",
+      "actual": "Solicitud enviada",
+      "recomendado": "Solicitud enviada: préstamo de $30,000. Folio 12345"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Texto de aviso por SMS",
+      "problema": "No indica a qué número se enviará el SMS ni qué pasará después. «En las próximas 24 horas» es vago y no dice si habrá aprobación o más pasos.",
+      "severidad": 2,
+      "recomendacion": "Mostrar el número enmascarado y explicar los siguientes pasos.",
+      "actual": "Te avisaremos por SMS en las próximas 24 horas.",
+      "recomendado": "Te enviaremos un SMS al número terminado en 1234 con la respuesta en máximo 24 horas."
+     },
+     {
+      "criterio": "N3",
+      "zona": "Toda la pantalla",
+      "problema": "No hay botón para continuar, volver al inicio ni cancelar o corregir la solicitud. La pantalla es un callejón sin salida.",
+      "severidad": 2,
+      "recomendacion": "Añadir un botón «Volver al inicio» y un enlace para ver el estado de la solicitud.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Toda la pantalla",
+      "problema": "No hay contacto ni ayuda por si no llega el SMS o hay dudas sobre la solicitud.",
+      "severidad": 2,
+      "recomendacion": "Incluir un enlace de ayuda o un teléfono de contacto.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "La pantalla está casi vacía y el contenido queda pegado arriba. Es limpia, pero poco informativa y sin jerarquía visual.",
+      "severidad": 1,
+      "recomendacion": "Usar el espacio para el resumen y las acciones siguientes, con un ícono de éxito.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "Título claro y con buen tamaño que confirma el envío.",
+     "Texto legible, con buen contraste y lenguaje sencillo.",
+     "Indica el canal (SMS) y un plazo de respuesta.",
+     "Diseño limpio y sin distracciones."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N1",
+      "zona": "Mensaje de confirmación",
+      "problema": "La confirmación no resume la solicitud: no muestra monto ($30,000), plazo ni número de folio. La persona no puede verificar que se envió lo correcto.",
+      "severidad": 3,
+      "recomendacion": "Añadir un resumen con monto, plazo y folio de la solicitud.",
+      "actual": "Solicitud enviada",
+      "recomendado": "Solicitud de $30,000 enviada. Folio: 123456"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Mensaje de siguiente paso",
+      "problema": "El aviso es vago: no dice a qué número llegará el SMS ni qué pasa después. «Próximas 24 horas» no indica si es aprobación o respuesta.",
+      "severidad": 2,
+      "recomendacion": "Indicar el número (parcial) y qué se recibirá.",
+      "actual": "Te avisaremos por SMS en las próximas 24 horas.",
+      "recomendado": "Te enviaremos la respuesta de tu solicitud por SMS al número terminado en 1234, en un máximo de 24 horas."
+     },
+     {
+      "criterio": "N3",
+      "zona": "Toda la pantalla",
+      "problema": "No hay ninguna acción: ni volver al inicio, ni ver el estado de la solicitud, ni cancelar o corregir. Es un callejón sin salida.",
+      "severidad": 2,
+      "recomendacion": "Agregar un botón principal «Volver al inicio» y un enlace «Ver estado de mi solicitud».",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Diseño general",
+      "problema": "Pantalla casi vacía: el contenido queda arriba y el resto en blanco. No hay icono de éxito que refuerce el mensaje. Se ve poco terminada.",
+      "severidad": 2,
+      "recomendacion": "Añadir un icono de éxito y organizar el contenido con resumen y acciones.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Pie de pantalla",
+      "problema": "No hay contacto ni ayuda por si el SMS no llega o hay dudas.",
+      "severidad": 2,
+      "recomendacion": "Incluir un enlace o teléfono de soporte.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "El título «Solicitud enviada» es claro y confirma el resultado.",
+     "Texto legible, con buen contraste y tamaño adecuado.",
+     "Lenguaje simple y cercano; indica el canal (SMS) y un plazo de 24 horas."
+    ]
+   }
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "N1",
+      "zona": "Mensaje de confirmación",
+      "problema": "No resume lo solicitado (monto $30,000, plazo, número de folio). La persona no puede confirmar que se envió lo correcto.",
+      "severidad": 3,
+      "recomendacion": "Mostrar un resumen con monto, plazo y número de folio de la solicitud.",
+      "actual": "Solicitud enviada",
+      "recomendado": "Solicitud de $30,000 enviada. Folio: 12345"
+     },
+     {
+      "criterio": "N1",
+      "zona": "Texto de aviso por SMS",
+      "problema": "No indica a qué número llegará el SMS ni qué pasará si no llega. Tampoco dice si la solicitud está aprobada o en revisión.",
+      "severidad": 2,
+      "recomendacion": "Indicar el número (parcialmente oculto) y el estado de la solicitud.",
+      "actual": "Te avisaremos por SMS en las próximas 24 horas.",
+      "recomendado": "Tu solicitud está en revisión. Te avisaremos por SMS al número terminado en 4567 en un máximo de 24 horas."
+     },
+     {
+      "criterio": "N3",
+      "zona": "Toda la pantalla",
+      "problema": "No hay botón para volver al inicio, ver el estado de la solicitud o cancelarla. La persona queda sin salida.",
+      "severidad": 3,
+      "recomendacion": "Añadir un botón principal «Volver al inicio» y un enlace «Ver estado de mi solicitud».",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N10",
+      "zona": "Toda la pantalla",
+      "problema": "No hay contacto ni ayuda si la respuesta no llega o hay dudas sobre el préstamo.",
+      "severidad": 2,
+      "recomendacion": "Incluir un enlace de ayuda o un teléfono de contacto.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "N8",
+      "zona": "Mitad inferior de la pantalla",
+      "problema": "La pantalla está casi vacía. Falta jerarquía visual y un icono de éxito que refuerce la confirmación.",
+      "severidad": 1,
+      "recomendacion": "Añadir un icono de éxito y organizar el contenido con un resumen y acciones.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "El título es claro y grande, y confirma de inmediato que la solicitud se envió.",
+     "El texto es corto, en lenguaje sencillo y con buen contraste.",
+     "Se informa un plazo concreto (24 horas) y el canal de respuesta (SMS)."
+    ]
+   }
+  }
+ ],
+ "costo_usd": 0.302
+}

@@ -1,0 +1,47 @@
+{
+ "id": "pri-E2-A-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra chica] «Aprobado en producto»\n6. [letra mediana] «En esta ocasión, tu préstamo…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo que me dicen que tengo $30,000 \"para mis productos favoritos\". Abajo, en letra chica, dice \"Aprobado en producto\", y luego empieza una frase, \"En esta ocasión, tu préstamo…\", y ahí me quedé. No sé cómo termina. Me suena a que me dan algo distinto de lo que pedí, pero no lo puedo asegurar. Además, la letra chica es la que más importa y es la que menos alcanzo a leer.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Pedí $30,000 en efectivo y la pantalla habla de \"productos\" y de \"aprobado en producto\". Eso no suena a efectivo. Pero la frase que sigue de \"En esta ocasión, tu préstamo…\" no la leí, y ahí venía lo importante. No sé si me aprobaron todo, una parte o algo distinto."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Lo que leí no menciona efectivo en ningún lado. Dice \"productos favoritos\", así que me da desconfianza. Pero no leí el resto, así que no puedo decir que sí ni que no."
+  },
+  "p4": "Por lo que leí, en \\\"mis productos favoritos\\\". No me dice cuáles, ni en qué tienda, ni dónde. Tampoco alcancé a leer qué decía el asterisco junto a los $30,000. No sé más que eso.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "Ese asterisco en los $30,000 me hace pensar que hay condiciones, pero no leí cuáles. La pantalla me dice \"tienes $30,000\", pero la frase de \"En esta ocasión…\" quedó cortada. No sé si ya es mío o si me falta algo."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasaría si lo toco. No voy a inventarlo.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer no lo dice. Solo dice \"Aprobado en producto\" y empieza \"En esta ocasión, tu préstamo…\", y ahí me quedé. Si la explicación venía después, no la leí. Y yo necesito que me expliquen el porqué."
+  },
+  "p8": {
+   "opcion": "otro",
+   "texto": "No tocaría nada todavía. Primero quiero leer completo lo que dice, y la letra chica no me deja agrandarla. Si no lo entiendo solo, preferiría preguntarle a alguien en persona, en una sucursal, antes de aceptar algo que no entiendo. Pero esa opción no la vi en la pantalla."
+  },
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-01"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0386
+}

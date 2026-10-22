@@ -1,0 +1,13 @@
+dimension,A_inteligencia_previa,B_ruta_rapida,C_en_formacion,D_verificador
+nombre,Veterano que pide inteligencia previa,Ejecutor de ruta rapida,Gestor en formacion,Verificador que teme el error
+n_participantes,13,13,18,19
+pct_de_clasificados,20.6,20.6,28.6,30.2
+antiguedad_dominante,Más de 3 años,Más de 3 años,3 a 6 meses,Más de 3 años
+duracion_dominante,10 a 15 minutos,15 a 25 minutos,10 a 15 minutos,Más de 25 minutos
+parte_mas_lenta,Reconocimiento facial / huella,Reconocimiento facial / huella,Reconocimiento facial / huella,Llegar al domicilio
+mayor_duda,Si la evidencia que capturé es suficiente,Si tiene capacidad de pago,Si debo recomendar o no recomendar,Si el cliente vive en ese domicilio
+claridad_pax_media,3.54,4.00,4.00,3.68
+utilidad_torre_media,2.15,2.00,3.67,3.26
+torre_califican_1_o_2,7/13,10/13,3/18,5/19
+estilo_dominante,Social y negociador — me adapto al cliente,Rápido y práctico — termino y sigo,Social y negociador — me adapto al cliente,Cuidadoso y detallista — prefiero hacerlo bien
+dispositivo_dominante,PAX A910,PAX A960,PAX A910,PAX A910

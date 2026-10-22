@@ -1,0 +1,85 @@
+# Estudio de recorrido de un flujo interactivo (prototipo Figma o sitio web real).
+# Ejemplo mínimo que corre: estudios/prueba-recorrido-web/estudio.yaml
+id: {{id}}
+titulo: "TÍTULO DEL ESTUDIO"
+metodo: recorrido
+fecha: "{{fecha}}"
+autor: "Alexis Valdez + Claude"
+producto: "Originación Única · PWA"
+marca: {color: "#0B6B4F", nombre: "Banco Azteca"}
+
+# Estándares de UiX (fuentes-equipo/uix/). Con este bloque el reporte se llama proyecto-metodologia-tema_aaaa-mm-dd-vN
+# y el tema lleva «-sintetico» al final, para que no se confunda con un estudio hecho con personas.
+uix:
+  proyecto: {{proyecto}}   # una sola forma por proyecto (oupwa, oupax, pp…); acordarla con CS y PD
+  metodologia: pdu         # código de la guía de naming: pdu (prueba de usabilidad)
+  tema: {{tema}}           # flujo, fase, paso, pantalla o componente; waveN al final si hay dos iguales el mismo día
+  version: 1               # súbela cada vez que se actualiza el entregable
+  # fecha_fin: "aaaa-mm-dd"  # cuándo terminó el estudio; si falta, la fecha en que se genera el reporte
+  cliente: "Originación Única · PWA"
+  autorizacion: ""         # quién aprueba el protocolo (nombre y apellido)
+  alcance: descriptiva     # superficial · descriptiva · profunda · predictiva
+  decision: {impacto: alto, incertidumbre: alta}   # matriz de «Research en tus proyectos»: alto/bajo × alta/baja
+
+guia_estilo: pwa       # guía de voz y estilo del producto: fuentes-producto/pwa (arnes estilo)
+biblioteca: pwa
+panel: ocean8
+modelo: sonnet
+
+# figma: prototipo en canvas; zonas activas por cursor (hotspots), no se cambia el tamaño de ventana.
+# web: sitio real; zonas = elementos interactivos del DOM; viewport fijado al dispositivo.
+material: figma
+url: "https://www.figma.com/proto/…"
+dispositivo: {ancho: 360, alto: 800}   # preset de «Prototype settings» en Figma
+visible: true            # ventana visible: permite ver el recorrido mientras corre
+video: true              # graba datos/videos/<sesión>.webm con el pensamiento del perfil superpuesto
+max_pasos: 25
+corridas: 2              # repeticiones por perfil y tarea: «creer en lo que se repite»
+baseline_url: null       # diseño actual, para comparar; si no hay, explicarlo:
+# sin_baseline_porque: "…"
+max_sin_cambio: 4        # pasos seguidos sin cambio de pantalla antes de dar la sesión por atascada
+reiniciar_entre_tareas: true
+
+# Acciones antes de la primera tarea, p. ej. descartar el banner de cookies de Figma ANTES de medir nada.
+preparacion: []
+#  - {tipo: tocar, x: 1100, y: 980}
+
+# Datos claramente ficticios. Nunca datos personales reales.
+datos_prueba:
+  nombre: Alex García
+  telefono: "55 0000 0000"
+  correo: prueba@example.com
+
+tareas:
+  - id: T1
+    escenario: "Necesitas dinero para … y entraste desde tu celular."
+    instruccion: "Solicita un préstamo de $30,000."
+    exito: "Llega a la pantalla de confirmación final."
+    # Cómo sabe el arnés que se llegó. Una o varias:
+    fin: {node_ids: ["0000-0000"]}       # figma
+    # fin: {url_contiene: "/confirmacion"} # web
+    # fin: {texto_visible: "Solicitud enviada"}
+    max_pasos: 25
+    # Primer toque esperado (first-click testing): por texto del elemento (web) o por caja en px de pantalla
+    primer_toque: {etiqueta_contiene: "Solicitar"}
+    # primer_toque: {caja: [x0, y0, x1, y1]}
+    # Retoma de solicitud: después del paso N sale del proceso y vuelve a entrar; mide si conserva el avance.
+    retoma: {tras_paso: 3, modo: recargar}   # recargar = misma sesión del navegador · reabrir = entra de nuevo por la URL
+
+# Modelo de tiempo [SUPUESTO]: el tiempo humano no se mide en una sesión sintética; se estima y se le suma la espera
+# real del sistema. Se reporta solo para las sesiones que completan.
+# modelo_tiempo: {palabras_por_segundo: 3.5, decision_s: 1.35, toque_s: 0.4, tecla_s: 0.3, relectura: 0.25, velocidades: [2.5, 4.5]}
+
+# Figma no tiene DOM: campos, palabras e indicador de estatus por pantalla se cargan a mano (node-id → datos).
+# pantallas_info:
+#   "123-456": {campos: 3, palabras: 42, progreso_visible: "Paso 2 de 5"}
+
+hipotesis:
+  - {id: H1, texto: "…", se_sostiene_si: "…", se_cae_si: "…"}
+
+# Opcional: modo guion (`arnes recorrido <estudio> <integrante> --guion`), como en entrecalles.
+# guiones:
+#   S01:
+#     T1:
+#       - {pantalla: "Intro", dice: "Verificar domicilio. Va.", etiqueta: "A-05",
+#          acciones: [[tocar, 720, 876, "Continuar"], [observar, 2000]]}

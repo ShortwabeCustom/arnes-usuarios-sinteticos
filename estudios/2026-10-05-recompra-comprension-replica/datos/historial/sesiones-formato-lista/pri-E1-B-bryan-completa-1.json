@@ -1,0 +1,37 @@
+{
+ "id": "pri-E1-B-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Dice \"Aprobado\" y que tengo $30,000 en efectivo, ya míos, listos para usar. Abajo me ofrece comprar en Elektra o Shopinbaz. Y hasta abajo, chiquito, dice \"*Sujeto a aprobación\". O sea, dice aprobado pero también dice que falta aprobación. Se contradice.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Arriba dice \"Aprobado\" y el monto es $30,000, igual a lo que pedí. Pero el asterisco dice \"Sujeto a aprobación\". No me queda claro si ya me aprobaron o si todavía lo están revisando. La pantalla se contradice."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no veo cómo ni dónde me llega el dinero: ni cuenta, ni retiro, ni transferencia. Tampoco veo fecha. Y el \"sujeto a aprobación\" me hace dudar. No puedo asegurar que lo reciba en efectivo."
+  },
+  "p4": "En la pantalla dice \\\"listos para usar\\\" y \\\"También puedes comprar en\\\" Elektra (productos para el hogar) y Shopinbaz (tecnología, hogar, moda y más). No dice si el dinero se puede usar en otro lado, ni si esas tiendas son obligatorias. Eso no lo veo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice que ya es mío, pero el asterisco \"Sujeto a aprobación\" dice que falta una aprobación. Además el botón dice \"Continuar con mi monto\", o sea que todavía hay pasos. No sé cuáles. Tampoco veo el pago semanal ni el costo total. No es claro que ya sea mío."
+  },
+  "p6": "Sí lo vi: \\\"Continuar con mi monto\\\". Supongo que sigo con el trámite para sacar mis $30,000, pero la pantalla no dice qué sigue ni cuántos pasos faltan. No voy a inventar qué pasa. Y me preocupa que sean más pantallas de las que me prometieron.",
+  "reglas": [
+   "A-03",
+   "A-04",
+   "A-06"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0433
+}

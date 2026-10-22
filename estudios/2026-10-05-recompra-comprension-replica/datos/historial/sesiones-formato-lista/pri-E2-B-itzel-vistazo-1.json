@@ -1,0 +1,46 @@
+{
+ "id": "pri-E2-B-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra mediana] «En esta ocasión, tu préstamo es para comprar productos y…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 para \"mis productos favoritos\". Y la última frase empieza con \"para comprar productos y…\" y ahí me quedé. Yo pedí efectivo, así que no me cuadra. No alcancé a leer más, ni cuota, ni total a pagar.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto sí coincide, $30,000. Pero lo que pedí era efectivo y esto habla de productos. No sé si es lo mismo o algo distinto. Además el número trae asterisco y no leí qué aclara."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice que es para comprar productos. Lo que alcancé a leer no dice si puedo sacar efectivo. Por lo que vi, parece que no, pero no lo puedo afirmar."
+  },
+  "p4": "Solo sé lo que leí: en \"productos favoritos\" y comprar productos y… no sé qué más sigue. No vi tiendas ni condiciones, y no voy a suponerlas.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No lo siento mío. Hay un asterisco que no leí y una frase cortada. No vi cuota, total a pagar ni fechas, y sin eso no acepto nada. Qué falta exactamente, no lo sé."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasa. No voy a tocar algo que no sé a qué me compromete.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no explica por qué me dieron productos en vez de efectivo. Solo dice \"en esta ocasión\", y eso no es una razón. Pudo decirlo más abajo, pero no lo leí."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Primero leería completo el asterisco y la frase cortada. Quiero saber cuánto voy a pagar al mes y en total, y por qué no es efectivo. Si algo de eso me saca del celular o no lo explica, me detengo."
+  },
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0164
+}

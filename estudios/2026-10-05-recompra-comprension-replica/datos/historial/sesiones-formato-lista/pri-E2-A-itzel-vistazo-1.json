@@ -1,0 +1,46 @@
+{
+ "id": "pri-E2-A-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra chica] «Aprobado en producto»\n5. [letra mediana] «En esta ocasión, tu préstamo es para…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 aprobados \"para mis productos favoritos\". Pero también dice \"Aprobado en producto\" en letra chica y \"tu préstamo es para…\", y ahí me quedé. Entiendo que no es efectivo, sino para productos. Hay un asterisco en el monto y no alcancé a leer qué dice.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo. El monto coincide, pero la pantalla dice que es aprobado en producto. Entonces el monto sí, la forma no. Y el asterisco en el $30,000 no lo pude leer, así que no sé qué condiciones trae."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "Por lo que leí, no. Dice 'para tus productos favoritos' y 'Aprobado en producto'. Nada de lo que vi habla de recibir efectivo. No leí el resto, pero lo que vi apunta a que no."
+  },
+  "p4": "Según lo que alcancé a leer, en productos. No sé cuáles, en qué tiendas ni si hay categorías. La frase 'tu préstamo es para…' se cortó justo ahí. No voy a inventar el resto.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No lo siento mío todavía. Hay un asterisco que no leí, y no sé cuánto voy a pagar en total, ni la cuota, ni las fechas. Tampoco vi qué sigue para usarlo. No me dijeron el número final, y eso necesito antes de comprometerme."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer. No sé qué pasaría si lo toco.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no. Solo dice que es aprobado en producto y que el préstamo es 'para…', y ahí se corta. No vi ninguna razón de por qué no me dieron efectivo. Si la explican, estaba en lo que no leí."
+  },
+  "p8": {
+   "opcion": "otro",
+   "texto": "Antes de continuar volvería a leer la pantalla completa con calma, sobre todo el asterisco del $30,000 y cómo termina 'tu préstamo es para…'. No tocaría nada hasta saber cuánto pagaría en total y si de verdad no me dan efectivo. Si no queda claro, me detengo."
+  },
+  "reglas": [
+   "B-02",
+   "B-05",
+   "B-08"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0325
+}

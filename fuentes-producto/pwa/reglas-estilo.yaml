@@ -1,0 +1,114 @@
+# Reglas de estilo de la PWA verificables por código, tomadas de los manuales de UX writing del producto
+# (Fundamentos de la PWA · Mini Guía de Estilo · Manual de Voz y Tono). Cada regla cita su sección.
+# nivel: error (la guía lo prohíbe) · aviso (la guía lo desaconseja o pide revisar a mano).
+# Lo que no se puede verificar con un patrón (tono, arquetipo, «cercanía controlada») va como criterio
+# de los evaluadores en `arnes auditar` (clave `criterios` abajo).
+id: pwa
+nombre: Guía de estilo y voz de la Originación Única (PWA)
+
+reglas:
+  - id: E01
+    nombre: "«Crédito» está prohibido: se dice «préstamo»"
+    patron: '\bcr[ée]ditos?\b'
+    nivel: error
+    fuente: "Fundamentos · Glosario «Préstamo»"
+  - id: E02
+    nombre: "Falta el signo de apertura (¡ o ¿)"
+    nivel: error
+    fuente: "Mini Guía 16.4 Ortografía (acentos y signos) · 16.5 Puntuación"
+    especial: apertura
+  - id: E03
+    nombre: "Más de un signo de admiración seguido"
+    patron: '[!¡]{2,}'
+    nivel: aviso
+    fuente: "Mini Guía 16.5: solo uno por frase"
+  - id: E04
+    nombre: "Puntos suspensivos"
+    patron: '\.\.\.|…'
+    nivel: aviso
+    fuente: "Mini Guía 16.5: evitarlos salvo que sea necesario"
+  - id: E05
+    nombre: "Frase en mayúsculas sostenidas"
+    nivel: error
+    fuente: "Mini Guía 16.4: nunca mayúsculas en una oración completa"
+    especial: mayusculas
+  - id: E06
+    nombre: "Voz pasiva (ser + participio)"
+    patron: '\b(es|son|fue|fueron|será|serán|sea|sean|ha sido|han sido)\s+\w+(ado|ada|ados|adas|ido|ida|idos|idas|to|ta|tos|tas|cho|cha)\b'
+    nivel: aviso
+    fuente: "Mini Guía 16.2: siempre voz activa · Fundamentos «Tipo de voz: activa»"
+  - id: E07
+    nombre: "Incertidumbre o condicional"
+    patron: '\b(puede que|probablemente|posiblemente|quiz[áa]s?|tal vez|podr[íi]a[sn]? estar)\b'
+    nivel: aviso
+    fuente: "Voz y Tono 4.1 Confiable · 14 La certeza es muy importante"
+  - id: E08
+    nombre: "Diminutivo"
+    patron: '\b\w{2,}(ito|ita|itos|itas|cito|cita)\b'
+    excepciones: [guardadito, favorito, favorita, favoritos, favoritas, bonito, bonita, requisito, requisitos, depósito, depósitos,
+                  propósito, éxito, tránsito, crédito, créditos, infinito, gratuito, gratuita, cita, visita, visitas, maldito,
+                  circuito, apetito, distrito, delito, escrito, escrita, inscrito, perito, mito, rito, grito, hito, chiquito, chiquita]
+    nivel: aviso
+    fuente: "Fundamentos «Uso de diminutivos: no los usamos» (ojo: Voz y Tono 13.3 permite «lanita extra»)"
+  - id: E09
+    nombre: "Dinero en letra, «pesos mexicanos» o cifra sin $ ni separador de miles"
+    patron: '\b(pesos mexicanos|mil pesos|\d+\s*pesos)\b|\$\s?\d{4,}(?![\d,])|\b(diez|veinte|treinta|cuarenta|cincuenta|cien) mil\b'
+    nivel: aviso
+    fuente: "Mini Guía 16.9 · Fundamentos «Dinero»"
+  - id: E10
+    nombre: "Fecha fuera del formato dd/mm/aaaa"
+    patron: '\b\d{1,2} de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)( de \d{4})?\b|\b\d{1,2}/[A-Za-z]{3}/\d{4}\b'
+    nivel: aviso
+    fuente: "Mini Guía 16.8 Fecha"
+  - id: E11
+    nombre: "Hora fuera del formato de 12 horas con «a.m.» y «p.m.»"
+    patron: '\b(1[3-9]|2[0-3]):[0-5]\d\b|\b\d{1,2}(:\d{2})?\s?(hrs?|horas|AM|PM|am|pm)\b'
+    nivel: aviso
+    fuente: "Mini Guía 16.8 Hora"
+  - id: E12
+    nombre: "Emoji dentro de la PWA"
+    especial: emoji
+    nivel: error
+    fuente: "Fundamentos «Uso de emojis»: en la PWA no usamos emojis (solo en WhatsApp)"
+  - id: E13
+    nombre: "Lenguaje con género marcado donde puede ser neutro"
+    patron: '\b(bienvenid[oa]s?|estimad[oa]s?|querid[oa]s?)\b'   # solo fórmulas dirigidas a la persona
+    nivel: aviso
+    fuente: "Mini Guía 16.3 Lenguaje respetuoso"
+  - id: E14
+    nombre: "Exceso de «tu/tus» en una frase"
+    especial: tu
+    nivel: aviso
+    fuente: "Mini Guía 16.6 Uso de «tu»"
+  - id: E15
+    nombre: "Nombre del cliente repetido en el mismo bloque"
+    especial: nombre
+    nivel: aviso
+    fuente: "Mini Guía 16.7 Uso de «María»"
+  - id: E16
+    nombre: "Posible acento faltante"
+    patron: '\b(mas|esta lista|aqui|tambien|despues|credito|prestamo|numero|telefono|informacion|solicitud aprobada)\b'
+    nivel: aviso
+    fuente: "Mini Guía 16.4: siempre revisamos acentos («Saber mas» → «Saber más»)"
+
+# Criterios para los evaluadores de `arnes auditar` (se suman a W1–W10 o a las heurísticas de Nielsen).
+criterios:
+  G1: "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)"
+  G2: "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)"
+  G3: "Tono: más casual que formal; formal en errores y temas sensibles; nunca culpar, infantilizar ni ironizar (Voz y Tono 11)"
+  G4: "Tratamiento: tú al cliente, nosotros como marca; yo solo si habla un asesor o un bot (Fundamentos, Mini Guía 16.1)"
+  G5: "Lenguaje respetuoso e inclusivo, sin género marcado innecesario (Mini Guía 16.3)"
+  G6: "Formatos: dinero con $ y comas, fecha dd/mm/aaaa, hora 12 h con a.m./p.m. (Mini Guía 16.8, 16.9)"
+  G7: "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)"
+  G8: "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)"
+
+# Contradicciones dentro de los propios manuales: cuando aparecen, se reportan como tensión de la guía,
+# no como error de la pantalla.
+contradicciones:
+  - "Voz y Tono 13.3 permite «lanita extra»; Fundamentos dice que no se usan diminutivos."
+  - "Voz y Tono 5 dice «obtener crédito»; el glosario prohíbe la palabra «crédito»."
+  - "Mini Guía 16.1 da como correcto «¡Bienvenido al chat de Italika!»; 16.3 da «Bienvenido a tu préstamo» como incorrecto por género marcado."
+  - "Mini Guía 16.10 da como correcto «Tu préstamo fue aprobado», que es voz pasiva (16.2 la prohíbe), y «13/Mar/2025», fuera del formato dd/mm/aaaa (16.8)."
+  - "Las listas de emojis no coinciden: 😌 😉 😜 😱 😣 están como recomendados en Fundamentos y como «evitar» en la Mini Guía."
+  - "El glosario solapa rangos de Micronegocio: Bronce 200k–350k y Plata 300k–500k."
+  - "Voz y Tono 7 describe a la persona actual como «mujer joven»; el User Persona OU-PWA (685,243 clientes) observa 46.8% de mujeres en la base y 54% de hombres entre Centennials. «María» es un arquetipo de comunicación, no la población."

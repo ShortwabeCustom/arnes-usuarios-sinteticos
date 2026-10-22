@@ -1,0 +1,42 @@
+indice,columna,clase,n_valido,n_missing,n_valores_unicos,uso_en_el_modelo
+0,Maze ID,identificador,73,0,1,excluida
+1,Tester ID,identificador,73,0,73,excluida
+2,Number,identificador,73,0,73,excluida
+3,Start date,metadata_tecnica,72,1,72,excluida
+4,Study completion,metadata_tecnica,73,0,65,excluida
+5,Study duration (seconds),metadata_tecnica,73,0,65,excluida
+6,Device type,metadata_tecnica,72,1,1,excluida
+7,OS,metadata_tecnica,73,0,3,excluida
+8,Device manufacturer,metadata_tecnica,12,61,2,excluida
+9,Model,metadata_tecnica,71,2,3,excluida
+10,Browser,metadata_tecnica,73,0,7,excluida
+11,Browser version,metadata_tecnica,73,0,13,excluida
+12,Language,metadata_tecnica,73,0,4,excluida
+13,Recruitment method,metadata_tecnica,73,0,1,excluida
+14,[1][multiple_choice] ¿En qué rango de edad te encuentras?,demografica,73,0,3,descriptor
+15,[2][multiple_choice] ¿Con qué género te identificas? 👤,demografica,73,0,2,excluida
+16,[3][multiple_choice] ¿Cuánto tiempo llevas como GIC?,contexto_laboral,71,2,4,segmentacion_nivel_A
+17,[4][open_question] ¿En qué zona o región trabajas principalmente?,contexto_laboral,68,5,50,contexto
+18,[4][open_question] Sentiment,metadata_nlp,35,38,2,excluida
+19,[5][multiple_choice] ¿Qué tipo de investigaciones atiendes con mayor frecuencia?,contexto_laboral,68,5,23,enriquecimiento_nivel_B
+20,[6][multiple_choice] ¿Qué dispositivo usas principalmente para investigar?,contexto_laboral,68,5,10,segmentacion_nivel_A
+21,"[7][multiple_choice] En un día normal, ¿cuántas investigaciones realizas aproximadamente?",comportamiento,67,6,4,descriptor
+22,[8][scale] ¿Con qué frecuencia te pasa esto durante una semana típica?,indeterminada,67,6,5,SUSPENDIDA
+23,[9][scale] ¿Con qué frecuencia te pasa esto durante una semana típica?,indeterminada,67,6,5,SUSPENDIDA
+24,[10][scale] ¿Con qué frecuencia te pasa esto durante una semana típica?,indeterminada,67,6,5,SUSPENDIDA
+25,"[11][multiple_choice] ¿Cuánto tiempo suele durar una investigación completa, de principio a fin?",comportamiento,67,6,4,segmentacion_nivel_A
+26,[12][multiple_choice] ¿Qué parte de la investigación te toma más tiempo?,pain_point,67,6,7,segmentacion_nivel_A
+27,[13][multiple_choice] ¿En qué momento sientes más duda al tomar una decisión?,modelo_decision,67,6,4,segmentacion_nivel_A
+28,[14][multiple_choice] ¿Qué te frustra más durante una investigación?,pain_point,66,7,48,enriquecimiento_nivel_B
+29,[15][open_question] Describe una situación reciente donde PAX no te ayudó como esperabas.,pain_point_cualitativo,66,7,65,codificacion_tematica
+30,[15][open_question] Sentiment,metadata_nlp,65,8,3,senal_complementaria
+31,[16][multiple_choice] ¿Qué te motiva más en tu trabajo diario?,actitud,66,7,46,enriquecimiento_nivel_B
+32,[17][open_question] ¿Qué te haría sentir que PAX realmente te apoya en tu trabajo?,necesidad,66,7,65,codificacion_tematica
+33,[17][open_question] Sentiment,metadata_nlp,66,7,3,senal_complementaria
+34,[18][scale] ¿Qué tan clara es la información que PAX te muestra antes de iniciar una visita?,percepcion,66,7,5,enriquecimiento_nivel_B
+35,[19][multiple_choice] ¿En qué casos necesitas más apoyo de Torre de Control?,necesidad,65,8,37,enriquecimiento_nivel_B
+36,"[20][scale] Cuando pides apoyo a Torre de Control, ¿Qué tan útil ha sido la respuesta?",percepcion,64,9,5,segmentacion_nivel_A
+37,[21][open_question] ¿Qué falló en el apoyo que recibiste?,pain_point_cualitativo,64,9,60,codificacion_tematica
+38,[21][open_question] Sentiment,metadata_nlp,56,17,3,senal_complementaria
+39,[22][multiple_choice] ¿Cuál de estas frases te representa mejor?,autopercepcion,64,9,6,segmentacion_nivel_A
+40,[23][multiple_choice] ¿Cómo describirías tu estilo de trabajo en campo?,autopercepcion,64,9,5,segmentacion_nivel_A

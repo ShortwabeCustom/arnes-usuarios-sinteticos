@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-B-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Se ve seria, con el logo de Banco Azteca y el verde institucional. Dice «Aprobado» y que tengo $30,000 en efectivo, «ya son tuyos, listos para usar». Pero abajo, en letra muy chica, hay un asterisco con «*Sujeto a aprobación». Eso contradice lo de arriba y me hace dudar. También ofrece comprar en Elektra y Shopinbaz. No veo plazos, pagos ni total a pagar, y no veo a quién preguntarle.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Dice «Aprobado» y el monto es justo lo que pedí, $30,000. Pero el asterisco del monto y la leyenda «*Sujeto a aprobación» dicen que todavía no es definitivo. La pantalla se contradice, y esa leyenda mide 12 px, casi no la alcanzo a leer. Por eso no lo tomo como aprobado del todo."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», pero no veo cómo ni cuándo me los dan: ni depósito, ni sucursal, ni fecha. Con el «sujeto a aprobación» no puedo afirmar que los recibo. No voy a suponer lo que la pantalla no muestra."
+  },
+  "p4": "La pantalla dice que son en efectivo y «listos para usar», sin decir dónde o cómo. Aparte ofrece comprar en Elektra y Shopinbaz, productos para el hogar, tecnología y moda. No me queda claro si eso es el mismo dinero o es otra opción. Eso lo tendría que preguntar.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El asterisco y «Sujeto a aprobación» indican una condición pendiente, y no dice cuál. Tampoco veo las condiciones del crédito: plazo, pagos, total a pagar. Antes de seguir quiero leerlas y compararlas con el precio de contado. Y quiero saber con quién hablo si tengo dudas."
+  },
+  "p6": "Sí vi el botón verde, «Continuar con mi monto». No dice qué sigue después. Supongo que me lleva a un siguiente paso del trámite, pero no puedo saber cuál, ni si ahí me muestran las condiciones o me piden algo más. No quisiera tocarlo sin haber leído lo de abajo.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-05",
+   "C-08",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0464
+}

@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-B-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo $30,000 bien grande con un asterisco, una señora sonriendo y que \"tienes... en Efectivo ya son tuyos, listos para usar\". Parece que me aprobaron, pero la palabra \"Aprobado\" salió chiquita y el asterisco me late que esconde algo. No alcancé a leer lo demás, así que no sé las condiciones.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Se ve el $30,000 y dice \"Aprobado\", pero no alcancé a leer si es exactamente lo que pedí. El asterisco me deja con duda. Por lo que vi, parece que sí, pero no lo puedo confirmar."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no vi cómo ni dónde se recibe. No leí si es depósito a cuenta, retiro en tienda o qué. No me lo puedo imaginar sin inventar."
+  },
+  "p4": "\"Listos para usar\" es lo único que vi. No leí dónde ni en qué se puede usar. Supongo que como efectivo en general, pero eso es suposición mía, la pantalla no me lo dijo en lo que alcancé a leer.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "El mensaje dice \"ya son tuyos\", pero el asterisco y el botón de \"Continuar con mi…\" me hacen pensar que falta un paso. No sé cuál, porque no leí el resto. No sé si ya es mío o falta algo."
+  },
+  "p6": "Sí vi el botón, pero solo hasta \"Continuar con mi…\". No sé qué sigue ni qué pasa al tocarlo. Supongo que sigue otro paso, pero no sé cuántos faltan, y eso me molesta.",
+  "reglas": [
+   "A-03",
+   "A-04",
+   "A-06"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.031
+}

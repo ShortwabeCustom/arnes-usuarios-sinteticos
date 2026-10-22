@@ -1,0 +1,52 @@
+{
+ "guia": "pwa",
+ "nombre_guia": "Guía de estilo y voz de la Originación Única (PWA)",
+ "textos": 5,
+ "hallazgos": [
+  {
+   "pantalla": "E2-A",
+   "zona": "saludo",
+   "regla": "E02",
+   "nombre": "Falta el signo de apertura (¡ o ¿)",
+   "nivel": "error",
+   "fuente": "Mini Guía 16.4 Ortografía (acentos y signos) · 16.5 Puntuación",
+   "fragmento": "Aprobado en producto !María, tienes $30,000* para tus productos favoritos!"
+  },
+  {
+   "pantalla": "E2-A",
+   "zona": "saber_mas",
+   "regla": "E16",
+   "nombre": "Posible acento faltante",
+   "nivel": "aviso",
+   "fuente": "Mini Guía 16.4: siempre revisamos acentos («Saber mas» → «Saber más»)",
+   "fragmento": "mas"
+  },
+  {
+   "pantalla": "E2-B",
+   "zona": "saludo",
+   "regla": "E02",
+   "nombre": "Falta el signo de apertura (¡ o ¿)",
+   "nivel": "error",
+   "fuente": "Mini Guía 16.4 Ortografía (acentos y signos) · 16.5 Puntuación",
+   "fragmento": "Aprobado en producto !María, tienes $30,000* para tus productos favoritos!"
+  },
+  {
+   "pantalla": "E2-B",
+   "zona": "saber_mas",
+   "regla": "E16",
+   "nombre": "Posible acento faltante",
+   "nivel": "aviso",
+   "fuente": "Mini Guía 16.4: siempre revisamos acentos («Saber mas» → «Saber más»)",
+   "fragmento": "mas"
+  }
+ ],
+ "contradicciones_guia": [
+  "Voz y Tono 13.3 permite «lanita extra»; Fundamentos dice que no se usan diminutivos.",
+  "Voz y Tono 5 dice «obtener crédito»; el glosario prohíbe la palabra «crédito».",
+  "Mini Guía 16.1 da como correcto «¡Bienvenido al chat de Italika!»; 16.3 da «Bienvenido a tu préstamo» como incorrecto por género marcado.",
+  "Mini Guía 16.10 da como correcto «Tu préstamo fue aprobado», que es voz pasiva (16.2 la prohíbe), y «13/Mar/2025», fuera del formato dd/mm/aaaa (16.8).",
+  "Las listas de emojis no coinciden: 😌 😉 😜 😱 😣 están como recomendados en Fundamentos y como «evitar» en la Mini Guía.",
+  "El glosario solapa rangos de Micronegocio: Bronce 200k–350k y Plata 300k–500k.",
+  "Voz y Tono 7 describe a la persona actual como «mujer joven»; el User Persona OU-PWA (685,243 clientes) observa 46.8% de mujeres en la base y 54% de hombres entre Centennials. «María» es un arquetipo de comunicación, no la población."
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-B-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. [letra mediana] «¡María, tienes»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [botón] «Continuar con mi monto»\n6. [letra chica] «También…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 en Efectivo y que ya son míos. Pero hay un asterisco junto al monto y no alcancé a leer qué dice. No vi cuota, ni total a pagar, ni plazo. Y la pantalla me dice «María», no mi nombre; lo leo como si fuera el mío.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Veo $30,000 y la palabra «Aprobado», que es lo que pedí. Pero el asterisco me hace dudar: puede haber una condición que no leí. Y «Aprobado» está en letra chica, así que no me queda del todo claro."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», pero no vi cómo ni dónde los recibo: si es en mi cuenta, en sucursal o en otro lado. Si me sacan del celular, ya no me convence. No lo puedo asegurar con lo que leí."
+  },
+  "p4": "No lo vi. Solo leí «listos para usar», pero no decía en qué ni dónde. No voy a suponerlo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice que ya son míos, pero el botón dice «Continuar con mi monto». Eso me suena a que falta un paso. Tampoco vi la cuota mensual, el total a pagar ni las fechas. El asterisco puede esconder condiciones. Antes de aceptar necesito el número final y que no cambie."
+  },
+  "p6": "Sí vi el botón, «Continuar con mi monto», pero no sé de qué color era. Supongo que sigo con el proceso, pero no sé a qué paso me lleva ni si me muestra el total a pagar. No sé si me saca del celular. Si me pide algo fuera del celular, me salgo.",
+  "reglas": [
+   "B-01",
+   "B-02",
+   "B-08",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0296
+}

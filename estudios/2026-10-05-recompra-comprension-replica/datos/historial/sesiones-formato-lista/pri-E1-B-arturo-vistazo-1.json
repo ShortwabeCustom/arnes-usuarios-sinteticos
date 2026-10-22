@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-B-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo un numerote, $30,000, con un asterisco, y una señora sonriendo. Dice \"María, tienes\" y algo de \"Efectivo\" que ya son míos, listos para usar. Hay una palabra chiquita, \"Aprobado\", que casi no se ve. Y un botón que dice \"Continuar con mi…\" y ya no alcancé a leer qué. Parece buena noticia, pero lo demás no lo leí y no sé qué aclara el asterisco.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Veo $30,000 con asterisco y la palabra \"Aprobado\" en letra chiquita. Parece que sí, pero no leí qué dice el asterisco y no sé si es todo lo que pedí o si hay condiciones. No quiero afirmarlo sin leerlo."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no sé si eso quiere decir dinero en la mano, en una cuenta o en una sucursal. Eso no lo leí."
+  },
+  "p4": "Dice \"listos para usar\", pero no vi dónde ni en qué. No alcancé a leer nada que lo explique, así que no sé decirle dónde se puede usar ese dinero.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice \"ya son tuyos\", pero hay un botón de \"Continuar con mi…\" y un asterisco que no leí. Eso me hace pensar que quizá falta algún paso, pero no sé cuál. Si hay sucursal, mejor voy para que alguien me lo explique."
+  },
+  "p6": "El botón sí lo vi, pero solo leí \"Continuar con mi…\" y no supe qué seguía. No sé qué pasa si lo toco; puede que siga otro paso, pero no sé cuál. Que no me digan completo a qué voy me da desconfianza.",
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0451
+}

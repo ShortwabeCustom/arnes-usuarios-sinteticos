@@ -1,0 +1,81 @@
+{
+ "id": "pri-E2-B-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Veo el logo de Banco Azteca, se ve serio. Dice que tengo $30,000 \"para mis productos favoritos\", pero que esta vez el préstamo es para comprar productos y no para disponer de efectivo. Abajo hay dos tiendas, shopinbaz e Italika. Hay un asterisco que dice \"Sujeto a aprobación\", y eso me confunde porque arriba dice \"Aprobado en producto\". Pedí efectivo y esto no es lo que pedí.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo y me dan $30,000, pero solo para comprar productos. El monto coincide y la forma no. Además el asterisco dice «Sujeto a aprobación», así que no me queda claro si ya está aprobado o no. Lo dice la pantalla en dos lugares y no se ponen de acuerdo."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que no es para disponer de efectivo."
+  },
+  "p4": "Según la pantalla, en productos: shopinbaz e Italika, que son lo que aparece como «listo para usarse aquí». No dice si hay otras tiendas, ni si puedo usarlo en una sucursal. No lo voy a suponer.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No lo siento mío. El asterisco dice «Sujeto a aprobación», aunque arriba dice «Aprobado en producto». No dice qué falta ni quién lo decide. Tampoco veo las condiciones ni el total a pagar. El texto del asterisco es muy chico, de 12 px, y lo alcanzo a leer con trabajo."
+  },
+  "p6": "Es el botón verde que dice «Continuar comprando». Supongo que me lleva a comprar en las tiendas, pero la pantalla no dice a dónde. No sé si me mandan a otra página que no reconozca. Antes de tocarlo quisiera saber qué voy a firmar.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No. Solo dice «en esta ocasión» y que es para productos. No explica por qué no me dieron efectivo ni si fue por algo que hice yo. Me quedo pensando si hice algo mal, pero la pantalla no lo aclara. Y «Saber mas» no sé si lo explica, porque no lo abrí."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas» antes de continuar, para ver si explica por qué no es efectivo y qué significa «sujeto a aprobación». Es un texto chiquito, de 11 px, y me cuesta leerlo. También buscaría a quién preguntarle, porque en la pantalla no veo a nadie. No daría «Continuar comprando» sin leer las condiciones."
+  },
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me dan el monto de $30,000, pero no en la forma que pedí, que era efectivo. Solo puedo usarlo en productos. El panel no habla del «sujeto a aprobación» de la pantalla anterior, así que eso sigue sin aclararse."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que \"hoy\" puedo usar el préstamo para comprar productos en sus tiendas. No menciona efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí, en parte. Dice que es \"por tu historial crediticio\". No dice qué del historial ni qué estuvo mal. Yo ya tuve un crédito con ellos, y no sé si eso cuenta a favor o en contra. Me queda la duda de si fue algo mío."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice claro. Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a \"nuevas opciones de financiamiento\". No dice que eso sea efectivo, ni cuánto tiempo, ni qué monto. No lo voy a suponer."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me deja con una explicación, que es más de lo que tenía, y el tono es serio. Pero no me dice todo: ni las condiciones, ni el total a pagar, ni a quién preguntar. Antes de seguir quiero leer eso. El botón solo dice \"De acuerdo\" y no sé a qué estaría diciendo que sí."
+   },
+   "reglas": [
+    "C-02",
+    "C-03",
+    "C-08",
+    "C-10",
+    "C-05"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.0754
+}

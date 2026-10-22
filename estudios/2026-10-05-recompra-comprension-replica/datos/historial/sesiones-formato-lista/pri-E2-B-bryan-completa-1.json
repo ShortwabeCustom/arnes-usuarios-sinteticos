@@ -1,0 +1,76 @@
+{
+ "id": "pri-E2-B-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 aprobados, pero no en efectivo: es para comprar productos. Hay dos tiendas, Shopinbaz e Italika. Abajo, en letra chiquita, dice \"sujeto a aprobación\", y eso me confunde.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Me aprobaron el monto de $30,000, pero no como lo pedí, que era en efectivo. Además el asterisco dice «sujeto a aprobación», así que no sé si ya está aprobado del todo o no. La pantalla se contradice: el sello dice «Aprobado» y la letra chica dice lo otro."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice claro que esta vez el préstamo es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Según la pantalla, lo uso en las tiendas que aparecen: Shopinbaz y Italika, y el botón dice «Continuar comprando». Yo vine por efectivo, pero lo de la moto sí me llama la atención. No veo más lugares donde usarlo, y no sé si hay otros.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo, o por lo menos no queda claro. Dice «Ya está listo para usarse aquí», pero el asterisco dice «sujeto a aprobación». No dice qué falta ni cuánto pagaría. Tampoco veo el pago semanal ni el costo total en esta pantalla."
+  },
+  "p6": "Lo vi: «Continuar comprando». Supongo que me lleva a las tiendas para elegir qué comprar con el dinero. La pantalla no dice más, así que no sé si me manda a otra página o si se queda dentro de la app.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No lo dice. Solo dice «en esta ocasión», sin explicar por qué. No sé si fue por mi historial o por otra cosa. Eso me da desconfianza."
+  },
+  "p8": {
+   "opcion": "una_tienda",
+   "texto": "Tocaría Italika, «Estrenar ahora», porque la moto es lo que me interesa. Antes de eso quizá le picaría a «Saber más» para ver por qué no me dieron efectivo, aunque la letra es chiquita (11 px) y no sé si me explique algo. Si la tienda me manda a otro dominio raro, me detengo."
+  },
+  "reglas": [
+   "A-01",
+   "A-04",
+   "A-06",
+   "A-09",
+   "A-05"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me aprobaron el monto, $30,000, pero no en la forma que pedí, que era efectivo. El panel no aclara lo del «sujeto a aprobación» de la pantalla anterior, así que sigo sin saber si ya es definitivo."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy lo puedo usar para comprar productos en sus tiendas. Efectivo no se menciona."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, aunque general: «por tu historial crediticio». No dice qué del historial ni qué faltó. Tengo poco historial, así que me cuadra, pero me gustaría saber más."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice directamente. Solo dice que si uso el préstamo y pago al día, fortalezco mi historial y puedo acceder a «nuevas opciones de financiamiento». No dice que eso sea efectivo, ni cuánto tiempo, ni cuántos pagos. Tendría que suponerlo y no quiero suponer."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me aclara por qué, y que pagando puedo construir historial, que es algo que me sirve. Pero sigo sin efectivo, no hay fecha ni condición, y no veo pago semanal ni costo total. Ni bien ni mal: lo de la moto me late, pero me quedo con dudas."
+   },
+   "reglas": [
+    "A-09",
+    "A-04"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.0714
+}

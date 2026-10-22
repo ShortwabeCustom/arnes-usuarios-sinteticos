@@ -1,0 +1,42 @@
+{
+ "id": "pri-E1-B-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. [letra mediana] «¡María, tienes»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [botón] «Continuar con mi monto»\n6. [letra chica] «También…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me salió algo por $30,000, que dice \"Aprobado\" pero en letra chica, y que en Efectivo ya son míos. Hay un asterisco junto al monto, y no alcancé a leer qué aclara. No vi cuota, ni total a pagar, ni fechas. Me suena bien, pero no me dice el número que necesito.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Vi $30,000 y vi \"Aprobado\", pero no sé si es lo que pedí, porque el monto trae asterisco y no leí qué dice. El botón dice \"Continuar con mi monto\", lo que me hace dudar si es el mismo monto o uno ajustado. No lo puedo afirmar con lo que leí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice \"en Efectivo ya son tuyos\", pero el asterisco y la parte que no leí pueden traer condiciones. No sé cómo ni cuándo me llegaría el dinero, y no voy a suponerlo."
+  },
+  "p4": "Solo vi \\\"en Efectivo ya son tuyos, listos para usar\\\". Dónde sí puedo usarlo no lo sé. Empezaba un \\\"También…\\\" y no llegué a leerlo, así que no voy a inventar más opciones.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya son míos, pero hay un botón de \"Continuar\" y un asterisco sin leer. Eso me dice que aún falta algo. No sé qué es: puede ser aceptar condiciones, autorizar buró o confirmar el monto. Tampoco vi cuota ni total a pagar, y sin eso no acepto nada."
+  },
+  "p6": "Sí vi el botón, \\\"Continuar con mi monto\\\". Supongo que sigue un paso para confirmar, pero no sé cuál. Me preocupa que me pidan autorizar buró con un documento que no abra, o que me saquen del celular. Antes de tocarlo quisiera ver la cuota y el total a pagar.",
+  "reglas": [
+   "B-04",
+   "B-02",
+   "B-08",
+   "B-10",
+   "B-07",
+   "B-06"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0307
+}

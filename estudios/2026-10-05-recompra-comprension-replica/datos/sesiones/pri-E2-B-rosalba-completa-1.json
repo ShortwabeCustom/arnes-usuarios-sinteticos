@@ -1,0 +1,83 @@
+{
+ "id": "pri-E2-B-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000, pero para comprar productos y no para recibirlos en efectivo. Se ve institucional, con el logo de Banco Azteca. Tiene un asterisco de «Sujeto a aprobación» que casi no alcanzo a leer. Eso me confunde, porque arriba dice «Aprobado».",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Me dan los $30,000, pero no en la forma que pedí. Pedí efectivo y esto es para comprar productos. Además dice «Aprobado en producto» y abajo «*Sujeto a aprobación». No sé si ya está aprobado del todo."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que mi préstamo es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Según la pantalla, lo puedo usar «aquí», en las ofertas que se muestran: shopinbaz e ITALIKA, que es para motos. No veo que diga si hay otras tiendas. Parte del texto de shopinbaz se ve cortado, y no lo entiendo completo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No estoy segura de que ya sea mío. Dice «Ya está listo para usarse», pero el asterisco dice «Sujeto a aprobación». Esa letra mide 12 px y apenas se lee. Tampoco sé qué condiciones ni qué costo tiene. No los veo en la pantalla."
+  },
+  "p6": "Supongo que me llevaría a seguir comprando en esas tiendas, porque dice «Continuar comprando». No lo sé, porque la pantalla no lo explica. Antes quisiera saber qué voy a firmar o autorizar.",
+  "p7": {
+   "opcion": "lo_dice",
+   "texto": "Solo en parte. Dice «En esta ocasión, tu préstamo es para comprar productos». Pero no explica por qué no me dieron efectivo, y no sé si fue algo mío. Tal vez el «Saber mas» lo explique, pero no lo he abierto."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas» para ver si explica por qué no es efectivo y qué condiciones tiene. Es un texto muy chico, de 11 px, y me cuesta leerlo. Si no encuentro respuesta, buscaría a quién preguntarle, quizá en sucursal. No le daría continuar sin entender."
+  },
+  "reglas": [
+   "C-02",
+   "C-03",
+   "C-04",
+   "C-05",
+   "C-01",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me dieron el monto de $30,000, pero no en efectivo como lo pedí, sino para comprar productos. El panel no cambia que arriba siga el asterisco de «Sujeto a aprobación», que no se aclara."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy solo puedo usar el préstamo para comprar productos en sus tiendas."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí, aunque en general: «por tu historial crediticio». No dice qué del historial ni si fue algo mío. Me deja la duda de si hice algo mal."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No con claridad. Dice que si lo uso y mantengo mis pagos al día, puedo fortalecer mi historial y acceder a «nuevas opciones de financiamiento». No dice que eso sea efectivo, ni cuándo, ni qué se necesita en concreto."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me queda más claro el motivo, y la letra es legible. Pero no es lo que pedí, no sé si habrá efectivo después, y sigo sin ver costo ni condiciones. Quisiera preguntarle a alguien. Lo de pagar al día no me asusta, porque soy cumplida."
+   },
+   "reglas": [
+    "C-03",
+    "C-05",
+    "C-07",
+    "C-08",
+    "C-10",
+    "C-04"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1067
+}

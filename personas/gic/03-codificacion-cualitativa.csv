@@ -1,0 +1,33 @@
+pregunta,tema,descripcion,n_participantes,n_valido,porcentaje,sentimiento_dominante,parafrasis_representativa
+Q15 PAX no ayudo,Captura biometrica facial,"La foto no detona, no reconoce el rostro, exige gestos exactos",42,65,64.6,Negative,"Cuando tomas la foto y sonrie, la PAX no lo detecta hasta que haga una mueca grande"
+Q15 PAX no ayudo,Inestabilidad y lentitud,"Se reinicia sola, se traba, se sale de la aplicacion",23,65,35.4,Negative,De repente aparece la cuenta regresiva de que se reiniciara
+Q15 PAX no ayudo,Senal / cobertura / datos,Sin cobertura no deja avanzar ni cerrar la validacion,10,65,15.4,Negative,Se fue la senal por cobertura y no me dejo terminar la validacion
+Q15 PAX no ayudo,Exigencia de iluminacion,Pide mas luz incluso a pleno sol,8,65,12.3,Negative,"Aunque pongas al cliente bajo el rayo del sol, dice se necesita mas luz"
+Q15 PAX no ayudo,Navegacion / GPS,"El GPS no funciona, el punto se mueve, no permite abrir mapas",7,65,10.8,Negative,"Voy hacia el domicilio, el GPS no funciona y tengo que adivinar"
+Q15 PAX no ayudo,Lectura de huella,Tarda o no captura la huella,5,65,7.7,Negative,La PAX tarda mucho en capturar la huella
+Q15 PAX no ayudo,Datos y referencias del cliente,"Faltan datos, las referencias no concuerdan",4,65,6.2,Negative,Nunca concuerda con lo que dicen las referencias
+Q15 PAX no ayudo,Perdida de avance,Hay que empezar el flujo desde la foto de fachada,3,65,4.6,Negative,Me saca la PAX y tengo que empezar de nuevo desde la foto de fachada
+Q15 PAX no ayudo,Estados de la solicitud,El estatus cambia solo o no se ve la autorizacion,2,65,3.1,Negative,Di rechazo y en automatico se salio; despues se marco como reencauce
+Q15 PAX no ayudo,Sin contenido codificable,,2,65,3.1,,
+Q17 Que haria que PAX apoye,Velocidad y estabilidad,"Que sea agil, que no se trabe ni se reinicie, equipos mas nuevos",19,63,30.2,Negative,Que ya se actualicen las PAX por un equipo mas nuevo
+Q17 Que haria que PAX apoye,Cobertura y conexion,"Mas recepcion, no perder senal a media gestion",17,63,27.0,Mixto,Que no tuviera falla en la conexion para recargar ruta
+Q17 Que haria que PAX apoye,Ubicacion correcta y ruteo,"Punto GPS bien colocado, ruta como en cobranza, zonificacion correcta",14,63,22.2,Mixto,Generar una ruta como en cobranza para llegar al punto GPS
+Q17 Que haria que PAX apoye,Autonomia para decidir en campo,"Poder rechazar, reagendar, declinar sin depender de Torre",13,63,20.6,Negative,Tomar decisiones al momento de rechazar o reagendar y no depender de Torre de Control
+Q17 Que haria que PAX apoye,Informacion previa verificada,"Direccion confirmada, quien origino la LCR, otros creditos en el domicilio",10,63,15.9,Mixto,Que ya sea confirmada la direccion y que el cliente realmente quiere el credito
+Q17 Que haria que PAX apoye,Datos de contacto utiles,"Numeros actualizados, dejar recado, mensajeria",7,63,11.1,Mixto,Que pudiera agregar apps como WhatsApp para envio de mensajes
+Q17 Que haria que PAX apoye,Filtrado previo de solicitudes inviables,No enviar casos que no califican,1,63,1.6,Negative,Que en las solicitudes no tengan la opcion 4 pasos si no tienen ingreso
+Q17 Que haria que PAX apoye,Sin contenido codificable,,6,63,9.5,,
+Q21 Que fallo en el apoyo,Tiempo de respuesta,"Tardan, no contestan, dejan esperando; hasta 20 y 25 minutos",12,64,18.8,Negative,El tiempo de espera de Torre ha sido de hasta 25 minutos
+Q21 Que fallo en el apoyo,Sin problema / experiencia positiva,"Nada, todo bien, resuelven siempre",11,64,17.2,Positive,Ellos se encargan de contactar al cliente para que no pierdas tiempo
+Q21 Que fallo en el apoyo,No dan solucion,Atienden pero el problema queda igual,9,64,14.1,Negative,Pesima atencion y no solucionan nada
+Q21 Que fallo en el apoyo,Tampoco logran contactar al cliente,El bloqueo persiste despues de la llamada,7,64,10.9,Negative,El cliente no fue contactado porque el numero era invalido
+Q21 Que fallo en el apoyo,Insisten contra la evidencia del gestor,Reprograman aunque el gestor verifico que el domicilio es falso,6,64,9.4,Negative,Se les explica que el domicilio no existe y aun asi insisten
+Q21 Que fallo en el apoyo,Solo levantan ticket o folio,El resultado de la llamada es un numero de folio,3,64,4.7,Negative,"Solo levantan ticket, no se soluciona"
+Q21 Que fallo en el apoyo,Respuesta poco clara,No dan una indicacion accionable,3,64,4.7,Negative,Luego no dar una solucion clara
+Q21 Que fallo en el apoyo,La llamada misma falla,"Se corta por cobertura, se entrelazan llamadas",3,64,4.7,Negative,Por falta de cobertura Torre de Control corto la llamada
+Q21 Que fallo en el apoyo,Torre no aporta valor diferencial,Torre tiene los mismos datos y el mismo resultado,2,64,3.1,Negative,Si el cliente no contesta es porque Torre tampoco lo puede contactar
+Q21 Que fallo en el apoyo,Presion para forzar un resultado,Piden completar o autorizar pese al criterio del gestor,2,64,3.1,Negative,Quieren que se autorice la LCR sin evaluacion del criterio
+Q21 Que fallo en el apoyo,Ubicacion del domicilio,El apoyo falla justo en encontrar la direccion,2,64,3.1,Neutral,En encontrar el domicilio
+Q21 Que fallo en el apoyo,Respuesta fuera de tiempo util,Devuelven la llamada cuando el caso ya se cerro,1,64,1.6,Negative,Llaman despues de que ya se gestiono la validacion
+Q21 Que fallo en el apoyo,No aplica / no lo ha usado,,2,64,3.1,,
+Q21 Que fallo en el apoyo,Sin contenido codificable,,3,64,4.7,,

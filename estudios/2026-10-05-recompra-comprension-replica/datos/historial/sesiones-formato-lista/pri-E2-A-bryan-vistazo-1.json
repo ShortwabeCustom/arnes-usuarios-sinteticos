@@ -1,0 +1,46 @@
+{
+ "id": "pri-E2-A-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra chica] «Aprobado en producto»\n6. [letra mediana] «En esta ocasión, tu préstamo…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 \"para mis productos favoritos\". Pero el asterisco y lo de \"Aprobado en producto\" me suenan a que no es efectivo. Y la frase \"En esta ocasión, tu préstamo…\" no la terminé de leer, y eso suena a que viene un pero. Algo no cuadra con lo que pedí.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo. Veo el mismo monto, pero dice 'Aprobado en producto' y 'productos favoritos'. Creo que me aprobaron el monto, pero no en la forma que pedí. No alcancé a leer el resto de la frase, así que no estoy seguro."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "Por lo que leí, parece que no. Dice 'Aprobado en producto', no en efectivo. No leí nada que diga que me lo depositan. Pero no vi la letra completa, así que es lo que me parece, no algo confirmado."
+  },
+  "p4": "Supongo que en productos, o sea en alguna tienda o catálogo. La pantalla no me dijo cuáles ni dónde. 'Productos favoritos' es muy vago. No voy a inventar la tienda. Tampoco sé si hay una fecha límite o condiciones, porque no las leí.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Me suena a que falta algo. El asterisco dice que hay condiciones que no leí. Y 'En esta ocasión, tu préstamo…' se quedó cortado. Tampoco sé qué tengo que hacer para usarlo. No lo siento mío todavía."
+  },
+  "p6": "No alcancé a ver el botón verde. No sé qué dice ni qué hace, así que no puedo decir qué pasaría. Lo demás de la pantalla no lo leí.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no. Lo único que vi fue 'En esta ocasión, tu préstamo…' y ahí me quedé. Puede que lo explique más abajo, pero yo no lo vi. Y me choca que se vea todo bonito y grande con el monto, y la razón, si la hay, quede escondida."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de seguir buscaría leer el resto, lo del asterisco y la frase cortada, para saber si es efectivo o producto y qué condiciones tiene. Yo pedí efectivo y no quiero darle a algo sin saber qué estoy aceptando. Si no hay forma clara de leerlo dentro de la app, me frustro."
+  },
+  "reglas": [
+   "A-04",
+   "A-06",
+   "A-03"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0387
+}

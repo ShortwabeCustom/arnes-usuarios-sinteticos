@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-B-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Dice «Aprobado» y que tengo $30,000 en efectivo, listos para usar. Pero abajo, chiquito, trae un asterisco: «Sujeto a aprobación». Se contradice: ¿ya está aprobado o todavía no? Y no veo cuota, plazo ni total a pagar. Me dan un solo número, el grande.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto coincide con lo que pedí, $30,000, y dice «Aprobado». Pero el asterisco dice «Sujeto a aprobación», así que no me queda claro si ya me aprobaron o no. Es ambiguo y lo digo así."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», pero no veo cómo ni cuándo me los dan, ni a dónde llegan. Y el asterisco lo condiciona. No puedo asegurar que los recibo en efectivo."
+  },
+  "p4": "\"Dice que en Efectivo, «listos para usar», sin decir dónde. Además me sugieren comprar en Elektra («renovar tu hogar») y Shopinbaz («tecnología, hogar, moda y más»). No me aclaran si el dinero se usa ahí o si es otra cosa.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El asterisco «Sujeto a aprobación» lo deja condicionado. Tampoco veo cuánto pagaría al mes, el total, las fechas ni qué pasa si me atraso. Y no sé quién lo confirma ni cuándo."
+  },
+  "p6": "Veo el botón verde «Continuar con mi monto». No dice qué sigue. Supongo que me lleva al siguiente paso, pero no sé si es elegir plazo, autorizar buró o salirme del celular. Antes de tocarlo quisiera ver el costo total. Si el siguiente paso me saca del celular, ahí lo dejo.",
+  "reglas": [
+   "B-05",
+   "B-08",
+   "B-10",
+   "B-02",
+   "B-07"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0209
+}

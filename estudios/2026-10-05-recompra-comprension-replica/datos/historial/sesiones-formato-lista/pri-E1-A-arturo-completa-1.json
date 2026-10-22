@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-A-arturo-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Pues la pantalla dice que estoy aprobado y que tengo $30,000 en efectivo, listos para usar. Me dice también que puedo comprar en Elektra o en Shopinbaz. Abajo hay un botón verde que dice «Continuar con mi monto». Pero abajito, con letra muy chiquita, dice «Sujeto a aprobación», y eso no lo entiendo bien, porque arriba dice «Aprobado». Se contradice, y esa letra está muy chiquita.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Arriba dice «Aprobado» y que son $30,000, que es lo que pedí. Pero abajo dice con letra chiquita «Sujeto a aprobación». Entonces no sé si ya me aprobaron o si todavía falta. La pantalla dice las dos cosas y no me aclara cuál es la buena. También me llaman «María» y yo no me llamo así, pero lo leo como si dijera mi nombre."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos, listos para usar», así que parece que sí. Pero no me dice cómo ni dónde me lo dan: si me lo depositan, si lo recojo en una sucursal. Eso no aparece, y con lo de «sujeto a aprobación» no estoy seguro."
+  },
+  "p4": "La pantalla dice que son «listos para usar» y que también puedo comprar en Elektra, para renovar el hogar, y en Shopinbaz, para tecnología, hogar, moda y más. En qué más se puede usar el efectivo, no lo dice. Y la letra de esas tarjetas es muy chiquita para mí.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice que ya son míos, pero el asterisco y el «Sujeto a aprobación» me hacen pensar que falta algo. No dice qué es lo que falta. Y el botón dice «Continuar con mi monto», o sea que hay más pasos. No sé cuáles, y eso me preocupa, porque no quiero quedarme trabado sin nadie a quién preguntarle."
+  },
+  "p6": "Sí lo vi, es el botón verde grande de abajo, «Continuar con mi monto». Supongo que sigue otro paso del trámite, pero la pantalla no me dice cuál. No sé si me piden datos, o la cámara, o si ya me dan el dinero. Si me van a pedir la cámara, ahí sí me da miedo fallar sin saber por qué. Me gustaría que dijera qué sigue, o que hubiera una sucursal donde me lo expliquen.",
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-06",
+   "D-08",
+   "D-09",
+   "D-01"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.037
+}

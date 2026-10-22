@@ -1,0 +1,37 @@
+{
+ "id": "pri-E1-A-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra muy grande] «$30,000*»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [letra chica] «También puedes comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron los $30,000 y que en Efectivo ya son míos, listos para usar. Pero el asterisco junto al monto me late que hay letra chica que no alcancé a leer. Y abajo dice «También puedes comprar…», o sea que me quieren ofrecer algo más. Ah, y dice María, pero yo soy Bryan; lo leo como si fuera mi nombre.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Sí, vi «Aprobado» y los $30,000, que es lo que pedí. Pero «Aprobado» salió en letra chica y el monto lleva asterisco, así que no sé qué condiciones tiene. No vi nada que diga que me dieron menos."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "Leí «en Efectivo ya son tuyos, listos para usar», así que entiendo que sí. No alcancé a ver cómo ni cuándo me llegan, ni a qué cuenta o tarjeta. Eso no lo vi."
+  },
+  "p4": "\"En efectivo, para lo que quiera, según lo que leí. También dice «También puedes comprar…», pero ahí me quedé y no sé qué se puede comprar ni dónde. No voy a inventarlo.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya es mío, pero el asterisco me dice que hay condiciones que no leí. Tampoco vi cómo lo recibo. No sé qué falta exactamente, solo que algo hay y no lo alcancé a ver. Si de repente me manda a sucursal o a otra página, ahí sí me cae mal."
+  },
+  "p6": "\"No vi ningún botón verde, así que no sé qué pasa si lo toco. Solo llegué hasta «También puedes comprar…».\"",
+  "reglas": [
+   "A-04",
+   "A-06"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0341
+}

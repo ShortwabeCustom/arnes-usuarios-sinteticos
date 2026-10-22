@@ -1,0 +1,41 @@
+{
+ "id": "pri-E1-B-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. [letra mediana] «¡María, tienes»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [botón] «Continuar con mi monto»\n6. [letra chica] «También…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo «$30,000*» bien grande y que me dicen que tengo «Aprobado» y que en Efectivo ya son míos. Pero ese asterisco me preocupa: algo debe venir aclarado y no lo alcancé a leer. «Aprobado» está en letra chica y la frase de «también…» se quedó cortada. Se ve institucional y me da confianza, pero quiero leer las condiciones antes de darle continuar.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo $30,000 y la palabra Aprobado, que coincide con lo que pedí. Pero el asterisco indica que hay una condición que no leí, y no sé si es el monto completo o con alguna salvedad. Prefiero no darlo por hecho."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos», pero no alcancé a leer cómo ni dónde se recibe, ni qué dice el asterisco. No puedo asegurarlo."
+  },
+  "p4": "En lo que alcancé a leer solo dice «listos para usar» y «en Efectivo». No leí dónde o en qué se puede usar, ni si hay restricciones. No lo voy a suponer. Lo que sigue después de «También…» pudo aclararlo, pero no lo leí.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "El texto dice «ya son tuyos», pero hay un asterisco sin leer y un botón que dice «Continuar con mi monto», o sea que parece faltar un paso. No sé cuál es, ni qué condiciones tiene el asterisco. Si algo no sale, pensaría que me faltó a mí leer bien."
+  },
+  "p6": "Sí vi el botón: «Continuar con mi monto». No sé qué pasa al tocarlo porque no leí lo demás. Supongo que sigue otro paso para recibir el dinero, pero es suposición. Antes de darle quiero leer las condiciones, y si no las puedo leer, querría saber con quién preguntar.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-05",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0303
+}

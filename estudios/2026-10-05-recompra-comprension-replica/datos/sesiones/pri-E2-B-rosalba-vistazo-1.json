@@ -1,0 +1,49 @@
+{
+ "id": "pri-E2-B-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra mediana] «En esta ocasión, tu préstamo es para comprar productos y…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo que me dicen que tengo $30,000 \"para mis productos favoritos\". Se ve institucional y el monto coincide con lo que pedí. Pero la frase siguiente dice que \"en esta ocasión\" el préstamo es para comprar productos y se corta ahí. No alcancé a leer el resto, así que no sé bien qué significa ni qué condiciones tiene. Además hay un asterisco junto al monto y no vi qué aclara.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Aparece el monto de $30,000, que es lo que pedí, así que algo me autorizaron. Pero dice «en esta ocasión» y «para productos», que no es lo mismo que el efectivo que solicité. Y el asterisco me hace pensar que hay condiciones que no leí. No puedo decir que me aprobaron lo que pedí."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "Por lo que alcancé a leer, no. Dice que es para comprar productos. No vi nada que hable de recibir efectivo. Tampoco leí el resto del texto, así que no tengo la certeza completa."
+  },
+  "p4": "\"En productos, según la pantalla. No alcancé a leer dónde, si en tiendas específicas o en cualquier lado, ni si hay otras restricciones. Esa parte quedó cortada y no la voy a suponer.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Siento que falta algo. No sé qué, porque no leí el resto. El asterisco indica condiciones que no vi, y no sé si hay que aceptar algo, firmar o ir a una tienda. No lo sentiría mío todavía."
+  },
+  "p6": "No vi el botón verde, así que no sé qué pasa si lo toco. Por lo que sí leí, no me atrevería a tocarlo sin saber si estoy aceptando algo distinto de lo que pedí.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no lo dice. Solo dice «en esta ocasión, tu préstamo es para comprar productos y…» y se corta. Puede que el motivo esté más abajo, pero yo no lo vi. Y si fue algo que hice yo, tampoco me lo explican."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de continuar buscaría el texto completo, o alguien a quién preguntarle, para leer lo que dice el asterisco y el resto de la frase. Me da confianza que se vea formal, pero no voy a continuar sin leer las condiciones. Si no hay a quién preguntar, me preocuparía más."
+  },
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-05",
+   "C-08",
+   "C-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0188
+}

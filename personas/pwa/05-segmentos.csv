@@ -1,0 +1,28 @@
+dimension,A_centennials,B_millennials,C_genx,D_boomers,nivel_evidencia
+nombre,Centennials (Z),Millennials (Y),Gen X,Boomers,OBSERVADO
+rango_edad,18-30,31-45,46-60,61-80,OBSERVADO
+n_clientes,301000,229000,119000,37000,OBSERVADO
+pct_de_la_base,43.9,33.4,17.3,5.4,OBSERVADO
+rango_orden_por_tamanio,1,2,3,4,OBSERVADO
+hombres_pct,54.0,52.0,54.0,57.0,OBSERVADO
+mujeres_pct,46.0,48.0,46.0,43.0,OBSERVADO
+producto_efectivo_pct,48.7,55.9,60.4,62.4,DERIVADO de laminas 9 y 10 ponderado por n
+producto_movilidad_pct,28.0,22.6,17.2,14.8,DERIVADO de laminas 9 y 10 ponderado por n
+producto_hogar_pct,12.4,13.5,13.9,15.2,DERIVADO de laminas 9 y 10 ponderado por n
+producto_telefonia_pct,10.9,8.0,7.5,7.0,DERIVADO de laminas 9 y 10 ponderado por n
+producto_autos_pct,0.13,0.23,0.22,0.15,DERIVADO de laminas 9 y 10 ponderado por n
+producto_dominante,Efectivo con Movilidad fuerte,Efectivo,Efectivo,Efectivo,OBSERVADO
+perdida_observada_aprox,14.6,13.8,11.6,11.4,APROXIMACION - los rangos de la lamina 16 no coinciden con los generacionales
+perdida_advertencia,"Promedio de <=21 (21-25] y (25-30]","(30-40] y parte de (40-50]","parte de (40-50] y >50",">50 unicamente",LIMITACION
+experiencia_ui_preferida,C y B en 25%,B en 50%,A,C,OBSERVADO
+razon_de_preferencia,Legibilidad e ilustraciones representativas y asociaciones a fintechs,Clara y persuasiva,Imagen institucional formalidad seriedad y profesionalismo,Textos mas legibles,OBSERVADO
+estado_civil_declarado,Solteros,Casados,Casados,no reportado,OBSERVADO lamina 12
+marcas_bancarias,"Nu Stori Klar Uala Santander HSBC Banorte","Nu BBVA Santander Mercado Pago Banorte","BBVA Banorte HSBC Banamex",no reportado,OBSERVADO lamina 12
+apps_mas_usadas,"TikTok Instagram WhatsApp YouTube Spotify Rappi","Instagram TikTok WhatsApp YouTube Uber Eats Amazon","Facebook WhatsApp YouTube Mercado Libre",no reportado,OBSERVADO lamina 12
+habitos_de_consumo,Compran por influencia de creadores y valores de marca; cuidadosos con sus finanzas,Presencial y digital; fidelidad a marcas con valores claros y uso de fintechs,Prefieren lo presencial; valoran promociones servicio al cliente y seguridad,Entornos analogicos y uso funcional de la tecnologia,OBSERVADO laminas 12 y 24
+relacion_con_tecnologia,98.9% con smartphone; 9 de cada 10 con streaming; nativo digital,83.1% usuarios de streaming; invierten en gama media y alta,72.6% usan streaming; 4 de cada 10 videojuegos; transicion fluida,Consumo de datos limitado; juegos offline; uso funcional,OBSERVADO laminas 17 a 25
+tolerancia_a_la_friccion,Baja - 'poco tolerante a la frustracion' es rasgo declarado,Media,Media-alta,Alta pero con brecha tecnologica,OBSERVADO lamina 17 y 24
+rol_en_el_negocio,Ahora en la OU - es el cliente que ya llega,Mitad del Cliente Ideal declarado,Antes de la OU y mitad del Cliente Ideal declarado,No mencionado en el encuadre del negocio,OBSERVADO lamina 12
+arquetipo_cualitativo_asociado,Maria PA 24 anios soltera $8364/mes,Maria PO 34 anios casada $15104/mes,sin arquetipo cualitativo,sin arquetipo cualitativo,LIMITACION
+hallazgo_de_producto_que_mas_le_pega,H07 dominios ajenos y H09 promesa de 4 pasos,H01 costo total ausente y H02 plazo mas caro,H08 zoom desactivado y H03 documentos ilegibles,H08 zoom desactivado y H16 sucursal fisica,INTERPRETACION
+cobertura_en_el_user_person_v2,Mencionado como 'publico actual con mayor perdida',Nucleo del arquetipo Maria,Nucleo del arquetipo Maria,Mencionado solo en preferencia de UI,LIMITACION

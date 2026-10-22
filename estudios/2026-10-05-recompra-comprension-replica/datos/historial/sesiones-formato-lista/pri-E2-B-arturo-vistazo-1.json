@@ -1,0 +1,47 @@
+{
+ "id": "pri-E2-B-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra mediana] «En esta ocasión, tu préstamo es para comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Pues veo que me dicen \"María, tienes $30,000 para tus productos favoritos\". Yo no me llamo María, pero lo leo como si fuera mi nombre. Entiendo que hay un dinero para mí, pero dice \"productos favoritos\" y no \"efectivo\". Y luego dice \"tu préstamo es para comprar…\" y ahí se me acabó el tiempo. No alcancé a leer lo demás. Hay un asterisco junto a los $30,000 y no vi qué explica.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "No sé. Salen los $30,000, que es lo que pedí, pero dice que es para productos y yo pedí efectivo. No alcancé a leer lo demás, y el asterisco no sé qué aclara. No puedo decir si me aprobaron lo que pedí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo sé. Lo que leí habla de comprar productos, no de efectivo. Pero no leí el resto de la pantalla, así que no puedo asegurar que no me den el efectivo."
+  },
+  "p4": "Por lo que alcancé a leer, en \"productos favoritos\", o sea, para comprar algo. No sé dónde ni en qué tiendas, porque ahí me quedé. Si hubiera sucursal, iría a preguntar.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "No sé. Dice que tengo el dinero, pero hay un asterisco y la frase quedó cortada en 'para comprar…'. Puede faltar algo, pero no lo leí y no quiero inventarlo."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasa si lo toco.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer no lo dice. Solo dice 'en esta ocasión' mi préstamo es para comprar…, y ahí se corta. Si hay una razón, estará en lo que no leí."
+  },
+  "p8": {
+   "opcion": "otro",
+   "texto": "No tocaría nada todavía. Primero querría leer con calma el resto, sobre todo el asterisco y lo que sigue de 'para comprar…', pero si la letra es chica y no la puedo agrandar, mejor iría a una sucursal para que me expliquen. No quiero apretar algo sin entender."
+  },
+  "reglas": [
+   "D-01",
+   "D-02",
+   "D-04",
+   "D-08"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0175
+}

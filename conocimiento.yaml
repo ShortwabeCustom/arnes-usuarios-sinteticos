@@ -1,0 +1,65 @@
+# Base de conocimiento metodológico: el vault de Obsidian «vault-equipo» (wiki vivo, mantenido aparte).
+# El arnés lo LEE en su ruta (no lo copia) y ESCRIBE solo en 03-Sintesis/ más las entradas de índice y log.
+# Ruta con comodín para no guardar el correo de la cuenta en el repositorio; ARNES_VAULT la reemplaza.
+vault: "~/Library/CloudStorage/GoogleDrive-*/Mi unidad/Obsidian/vault-equipo"
+sintesis: 03-Sintesis
+indice: 00-Indice/index.md
+log: 00-Indice/log.md
+
+# Notas que se leen al diseñar el protocolo de cada método (rutas relativas a 02-Conceptos/).
+comun:
+  - IA-en-UX/investigacion-con-usuarios-sinteticos.md
+  - Metodos-de-Investigacion/marco-de-metodos-de-investigacion-ux.md
+  - Metodos-de-Investigacion/preguntas-sugestivas.md
+  - Diseno-de-Interaccion-y-UI/sesgos-cognitivos-en-diseno-y-research.md
+  - Metodos-de-Investigacion/saturacion-de-muestra.md
+metodos:
+  persona:
+    - Metodos-de-Investigacion/personas-y-arquetipos.md
+    - Metodos-de-Investigacion/jobs-to-be-done.md
+    - Metodos-de-Investigacion/encuestas-ux.md
+    - Metodos-de-Investigacion/grounded-theory-y-codificacion.md
+    - Metodos-de-Investigacion/empathy-mapping.md
+  comprension:
+    - Metodos-de-Investigacion/five-second-testing.md
+    - Metodos-de-Investigacion/preference-testing.md
+    - Metodos-de-Investigacion/ab-testing-y-split-testing.md
+    - Metodos-de-Investigacion/eye-tracking.md
+    - Copywriting-y-Microcopy/ux-writing.md
+    - Copywriting-y-Microcopy/microcopy.md
+    - Copywriting-y-Microcopy/errores-alertas-y-estados-vacios.md
+    - Copywriting-y-Microcopy/diseno-de-contenido-para-momentos-sensibles.md
+    - Copywriting-y-Microcopy/escritura-accesible-e-inclusiva.md
+    - Diseno-de-Interaccion-y-UI/jerarquia-visual-y-patrones-de-escaneo.md
+    - Usabilidad-y-Heuristicas/carga-cognitiva.md
+  recorrido:
+    - Usabilidad-y-Heuristicas/cognitive-walkthrough.md
+    - Usabilidad-y-Heuristicas/diez-heuristicas-de-nielsen.md
+    - Usabilidad-y-Heuristicas/evaluacion-heuristica.md
+    - Metodos-de-Investigacion/think-aloud-protocol.md
+    - Metodos-de-Investigacion/first-click-testing.md
+    - Metodos-de-Investigacion/moderado-vs-no-moderado.md
+    - Usabilidad-y-Heuristicas/prevencion-de-errores-slips-vs-mistakes.md
+    - Accesibilidad/wcag-22-criterios-nuevos.md
+    - Accesibilidad/accesibilidad-cognitiva.md
+    - Diseno-de-Interaccion-y-UI/flujo-de-checkout-y-conversion.md
+    - Copywriting-y-Microcopy/formularios-copy-y-validacion.md
+
+# Estándares del equipo UiX (rutas relativas al vault). Se leen en todo estudio.
+equipo:
+  fuentes_crudas: fuentes-equipo/uix               # en este repositorio: las guías tal como las entregó UiX
+  notas: [01-Fuentes/estandares-uix.md, 03-Sintesis/estandares-uix-en-investigacion-sintetica.md]
+
+# Notas del vault sobre un producto (rutas relativas al vault). Se leen cuando el estudio declara `guia_estilo`.
+productos:
+  pwa:
+    fuentes_crudas: fuentes-producto/pwa          # en este repositorio: los manuales tal como los entregó UX writing
+    notas: [01-Fuentes/manuales-ux-writing-pwa.md, 03-Sintesis/voz-y-tono-de-la-originacion-unica.md]
+    enlaces: [manuales-ux-writing-pwa, voz-y-tono-de-la-originacion-unica]
+
+# Notas de concepto que una síntesis de estudio enlaza siempre (wikilinks).
+enlaces_sintesis:
+  comun: [investigacion-con-usuarios-sinteticos, marco-de-metodos-de-investigacion-ux, estandares-uix-en-investigacion-sintetica]
+  persona: [personas-y-arquetipos]
+  comprension: [five-second-testing, ux-writing, preguntas-sugestivas]
+  recorrido: [cognitive-walkthrough, diez-heuristicas-de-nielsen, first-click-testing]

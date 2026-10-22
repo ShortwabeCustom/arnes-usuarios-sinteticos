@@ -1,0 +1,736 @@
+{
+ "id": "T1-bryan",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": {
+  "O": 72,
+  "C": 68,
+  "E": 74,
+  "A": 65,
+  "N": 62
+ },
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-20T17:09:11",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "localhost:8737/index.html",
+   "url": "http://localhost:8737/index.html",
+   "captura": "datos/capturas/T1-bryan/p01.png",
+   "marcas": "datos/capturas/T1-bryan/p01-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y directa, sin rodeos, aunque medio simple y sin ilustraciones.",
+    "que_miras_primero": "El $30,000 en verde grande, y luego el botón de Solicitar ahora.",
+    "interpretacion": "Es el inicio del trámite. Me ofrecen hasta $30,000 y dice que es el paso 1 de 3. Está sujeto a aprobación y el CAT promedio es 98.5%.",
+    "pensamiento": "Va, son tres pasos y justo es lo que necesito. Ojalá sean tres de verdad y no se hagan nueve. El CAT se ve alto, pero ni modo, le entro y veo qué sigue.",
+    "intencion": "Quiero darle a Solicitar ahora para empezar el trámite y ver si de verdad es rápido y todo desde el cel.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el botón grande de Solicitar ahora porque es lo que me lleva a pedir los $30,000. No me detengo en la letra chiquita, y el dato del CAT lo veo pero no lo investigo."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Dice paso 1 de 3, así que sé que son pocos pasos. No sé cuánto tiempo ni qué datos me van a pedir."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "A-04",
+     "A-06",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 247,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Solicitar ahora"
+    },
+    {
+     "x": 20,
+     "y": 332,
+     "w": 42,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Términos"
+    },
+    {
+     "x": 64,
+     "y": 332,
+     "w": 47,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Privacidad"
+    }
+   ],
+   "texto_pantalla": "Paso 1 de 3\n\nTe prestamos hasta\n$30,000*\n\nRecibe tu dinero hoy mismo.\n\nSolicitar ahora\n\n*Sujeto a aprobación. CAT promedio 98.5% sin IVA.\n\nTérminosPrivacidad",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 0,
+   "progreso_visible": "Paso 1 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 24,
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 270
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 247,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Solicitar ahora"
+   },
+   "espera_ms": 1291,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 2,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan/p02.png",
+   "marcas": "datos/capturas/T1-bryan/p02-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Formulario cortito y claro, sin estorbos.",
+    "que_miras_primero": "Los dos campos en blanco y el título Tus datos.",
+    "interpretacion": "Me piden mi nombre y mi celular. Es el paso 2 de 3, así que ya casi.",
+    "pensamiento": "Solo dos datos, está fácil. Va conforme a los tres pasos que dijeron, ojalá siga así.",
+    "intencion": "Quiero llenar mi nombre primero y luego el teléfono, y darle Continuar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Empiezo por el campo de nombre completo con los datos de prueba. Después lleno el teléfono y continúo."
+    },
+    "marca": 2,
+    "escribir": "Alex García",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Dice paso 2 de 3, entonces me falta uno solo después de este."
+    },
+    "confianza": 64,
+    "friccion": 1,
+    "reglas": [
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Paso 2 de 3\n\nTus datos\nNombre completo\nTeléfono celular\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 2,
+   "progreso_visible": "Paso 2 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 179,
+    "texto": "Alex García"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 157,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "espera_ms": 1292,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 3,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan/p03.png",
+   "marcas": "datos/capturas/T1-bryan/p03-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Otra vez la pantalla del inicio, como si no hubiera avanzado nada.",
+    "que_miras_primero": "El Paso 1 de 3 arriba y el $30,000 grande; me doy cuenta de que regresé al principio.",
+    "interpretacion": "Se perdió lo que ya había puesto y me toca empezar de nuevo desde el paso 1. No me guardó nada.",
+    "pensamiento": "Ah, qué flojera, otra vez desde cero. Ni me recordó ni me guardó mi nombre. Bueno, son pocos pasos, lo repito rápido.",
+    "intencion": "Quiero volver a darle a Solicitar ahora y llenar mis datos otra vez, sin perder más tiempo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Solicitar ahora para rehacer el trámite. Me molesta haber perdido el avance, pero son solo dos datos y sigo queriendo el dinero."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que son 3 pasos, pero no sé por qué me regresó al 1 ni si algo de lo que puse quedó guardado."
+    },
+    "confianza": 50,
+    "friccion": 3,
+    "reglas": [
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 247,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Solicitar ahora"
+    },
+    {
+     "x": 20,
+     "y": 332,
+     "w": 42,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Términos"
+    },
+    {
+     "x": 64,
+     "y": 332,
+     "w": 47,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Privacidad"
+    }
+   ],
+   "texto_pantalla": "Paso 1 de 3\n\nTe prestamos hasta\n$30,000*\n\nRecibe tu dinero hoy mismo.\n\nSolicitar ahora\n\n*Sujeto a aprobación. CAT promedio 98.5% sin IVA.\n\nTérminosPrivacidad",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 0,
+   "progreso_visible": "Paso 1 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 24,
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 270
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 247,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Solicitar ahora"
+   },
+   "espera_ms": 1258,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 4,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan/p04.png",
+   "marcas": "datos/capturas/T1-bryan/p04-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Es el mismo formulario de antes, vacío otra vez.",
+    "que_miras_primero": "Los campos en blanco: confirmo que no guardó nada de lo que escribí.",
+    "interpretacion": "Me vuelven a pedir nombre y celular, paso 2 de 3. Tengo que capturarlos de nuevo.",
+    "pensamiento": "Ni modo, lo repito. Son solo dos datos, pero ya van dos veces. Que esta sí avance.",
+    "intencion": "Quiero escribir mi nombre, luego el teléfono, y darle Continuar para llegar al paso 3.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Empiezo otra vez por el nombre con los datos de prueba; luego sigo con el teléfono."
+    },
+    "marca": 2,
+    "escribir": "Alex García",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Paso 2 de 3, me falta uno después de este, aunque ya perdí un intento."
+    },
+    "confianza": 48,
+    "friccion": 2,
+    "reglas": [
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Paso 2 de 3\n\nTus datos\nNombre completo\nTeléfono celular\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 2,
+   "progreso_visible": "Paso 2 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 179,
+    "texto": "Alex García"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 157,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "espera_ms": 1252,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 5,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan/p05.png",
+   "marcas": "datos/capturas/T1-bryan/p05-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya está mi nombre puesto, falta el teléfono.",
+    "que_miras_primero": "Mi nombre en el primer campo con el borde azul, y el campo de teléfono vacío abajo.",
+    "interpretacion": "El nombre quedó capturado. Ahora me toca poner el celular y darle Continuar.",
+    "pensamiento": "Listo el nombre. Ahora el teléfono y a ver si ya pasa al último paso.",
+    "intencion": "Quiero escribir mi teléfono en el campo de abajo y luego darle Continuar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el teléfono de prueba en el campo de Teléfono celular."
+    },
+    "marca": 4,
+    "escribir": "55 0000 0000",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Voy en el paso 2 de 3; con el teléfono y Continuar paso al último."
+    },
+    "confianza": 50,
+    "friccion": 1,
+    "reglas": [
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Paso 2 de 3\n\nTus datos\nNombre completo\nTeléfono celular\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 2,
+   "progreso_visible": "Paso 2 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 266,
+    "texto": "55 0000 0000"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 244,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "espera_ms": 1264,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 6,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan/p06.png",
+   "marcas": "datos/capturas/T1-bryan/p06-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya está todo lleno, listo para seguir.",
+    "que_miras_primero": "Mi nombre y mi teléfono ya puestos, y el botón verde de Continuar justo debajo.",
+    "interpretacion": "Ya capturé los dos datos que piden. Solo falta darle Continuar para pasar al paso 3.",
+    "pensamiento": "Ahora sí, a darle Continuar. Ojalá el siguiente paso sea el último y no me salgan más pantallas.",
+    "intencion": "Quiero darle Continuar para avanzar al paso 3 y terminar la solicitud.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque ya llené los dos campos y quiero avanzar al último paso."
+    },
+    "marca": 5,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Voy en el paso 2 de 3, me falta uno solo después de este."
+    },
+    "confianza": 52,
+    "friccion": 1,
+    "reglas": [
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "55 0000 0000"
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Paso 2 de 3\n\nTus datos\nNombre completo\nTeléfono celular\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 2,
+   "progreso_visible": "Paso 2 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 329
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 306,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 1265,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#confirmar"
+  },
+  {
+   "n": 7,
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "url": "http://localhost:8737/index.html#confirmar",
+   "captura": "datos/capturas/T1-bryan/p07.png",
+   "marcas": "datos/capturas/T1-bryan/p07-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Por fin el último paso, y sí fueron tres como decían, aunque tuve que repetir uno.",
+    "que_miras_primero": "El monto de $30,000 a 52 semanas y los dos botones, el verde de Enviar solicitud.",
+    "interpretacion": "Es el resumen: $30,000 a 52 semanas. Si le doy Enviar, autorizo que consulten mi historial crediticio. No veo cuánto pago por semana ni cuánto me sale en total.",
+    "pensamiento": "Ya es el último, le entro. No sé cuánto sería el pago semanal, pero ya llevo rato y quiero terminar. La letra de buró está chiquita, ni modo.",
+    "intencion": "Quiero darle Enviar solicitud para terminar y ver si me aprueban hoy mismo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Enviar solicitud porque los datos están bien y ya es el paso 3 de 3. Quiero cerrar el trámite de una vez."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Paso 3 de 3, es el último. Lo que no sé es qué pasa después de enviar."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "A-04",
+     "A-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 203,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Enviar solicitud"
+    },
+    {
+     "x": 20,
+     "y": 267,
+     "w": 320,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Corregir datos"
+    }
+   ],
+   "texto_pantalla": "Paso 3 de 3\n\nRevisa tu solicitud\n\nMonto: $30,000 · 52 semanas\n\nAl continuar autorizas la consulta de tu historial crediticio.\n\nEnviar solicitud\nCorregir datos\n\n¿Dudas? Llámanos al 55 0000 0000 o visita tu sucursal.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "campos": 0,
+   "progreso_visible": "Paso 3 de 3",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "localhost:8737",
+   "paginas": 1,
+   "palabras": 35,
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 226
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 203,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Enviar solicitud"
+   },
+   "espera_ms": 1273,
+   "host_despues": "localhost:8737",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#listo"
+  },
+  {
+   "n": 8,
+   "pantalla": "localhost:8737/index.html#listo",
+   "url": "http://localhost:8737/index.html#listo",
+   "captura": "datos/capturas/T1-bryan/p08.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.9561,
+ "retoma": {
+  "tras_paso": 2,
+  "modo": "recargar",
+  "pantalla_antes": "localhost:8737/index.html#datos",
+  "pantalla_despues": "localhost:8737/index.html#datos",
+  "resultado": "vuelve_al_inicio"
+ },
+ "resultado": "exito_con_friccion",
+ "ces": {
+  "ces": 5,
+  "texto": "Fue bastante fácil: tres pasos cortos y todo en el celular, pero me molestó que se perdió mi avance y tuve que repetir los datos, y nunca vi el pago semanal ni el costo total."
+ },
+ "video": "datos/videos/T1-bryan.webm",
+ "fin": "2026-10-20T17:11:12"
+}

@@ -1,0 +1,127 @@
+pregunta,tipo,opcion,frecuencia_absoluta,porcentaje,n_valido,n_missing
+Q1 Rango de edad,opcion_unica,18-30 años,37,50.7,73,0
+Q1 Rango de edad,opcion_unica,31-45 años,26,35.6,73,0
+Q1 Rango de edad,opcion_unica,46-60 años,10,13.7,73,0
+Q2 Genero,opcion_unica,Hombre,71,97.3,73,0
+Q2 Genero,opcion_unica,Mujer,2,2.7,73,0
+Q3 Antiguedad como GIC,opcion_unica,Más de 3 años,31,43.7,71,2
+Q3 Antiguedad como GIC,opcion_unica,1 a 3 años,22,31.0,71,2
+Q3 Antiguedad como GIC,opcion_unica,3 a 6 meses,14,19.7,71,2
+Q3 Antiguedad como GIC,opcion_unica,Menos de 3 meses,4,5.6,71,2
+Q5 Tipo de investigaciones,multi_select,Contactabilidad cliente,62,91.2,68,5
+Q5 Tipo de investigaciones,multi_select,Contactabilidad laboral,50,73.5,68,5
+Q5 Tipo de investigaciones,multi_select,Red de contactos ampliada,36,52.9,68,5
+Q5 Tipo de investigaciones,multi_select,Cambio de domicilio,31,45.6,68,5
+Q5 Tipo de investigaciones,multi_select,Reactivación PCJ / RMD,9,13.2,68,5
+Q5 Tipo de investigaciones,multi_select,Micronegocio / Changarros,2,2.9,68,5
+Q6 Dispositivo,opcion_unica,PAX A910,34,50.0,68,5
+Q6 Dispositivo,opcion_unica,Other: A960,18,26.5,68,5
+Q6 Dispositivo,opcion_unica,Other: Pax A960,5,7.4,68,5
+Q6 Dispositivo,opcion_unica,PAX A920,4,5.9,68,5
+Q6 Dispositivo,opcion_unica,Other: A 960,2,2.9,68,5
+Q6 Dispositivo,opcion_unica,Other: 960,1,1.5,68,5
+Q6 Dispositivo,opcion_unica,Other: Pax a960,1,1.5,68,5
+Q6 Dispositivo,opcion_unica,Other: Pax de las viejitas,1,1.5,68,5
+Q6 Dispositivo,opcion_unica,Other: PAX A960,1,1.5,68,5
+Q6 Dispositivo,opcion_unica,Other: PAX A60,1,1.5,68,5
+Q7 Investigaciones por dia,opcion_unica,1 a 3,58,86.6,67,6
+Q7 Investigaciones por dia,opcion_unica,4 a 6,5,7.5,67,6
+Q7 Investigaciones por dia,opcion_unica,Más de 10,3,4.5,67,6
+Q7 Investigaciones por dia,opcion_unica,"Other: Depende de la cantidad de solicitudes generadas en sucursal, la zona y cuántos integrantes estemos laborando",1,1.5,67,6
+Q11 Duracion de la investigacion,opcion_unica,Más de 25 minutos,25,37.3,67,6
+Q11 Duracion de la investigacion,opcion_unica,10 a 15 minutos,21,31.3,67,6
+Q11 Duracion de la investigacion,opcion_unica,15 a 25 minutos,19,28.4,67,6
+Q11 Duracion de la investigacion,opcion_unica,Menos de 10 minutos,2,3.0,67,6
+Q12 Parte mas lenta,opcion_unica,Reconocimiento facial / huella,33,49.3,67,6
+Q12 Parte mas lenta,opcion_unica,Llegar al domicilio,20,29.9,67,6
+Q12 Parte mas lenta,opcion_unica,Referencias,9,13.4,67,6
+Q12 Parte mas lenta,opcion_unica,Verificación de datos e INE,2,3.0,67,6
+Q12 Parte mas lenta,opcion_unica,Other: En el estudio socio económico y la verificación de datos en un mejor término la entrevista al cliente,1,1.5,67,6
+Q12 Parte mas lenta,opcion_unica,Video testimonial,1,1.5,67,6
+Q12 Parte mas lenta,opcion_unica,Other: Datos del cliente y referencias,1,1.5,67,6
+Q13 Momento de mayor duda,opcion_unica,Si tiene capacidad de pago,22,32.8,67,6
+Q13 Momento de mayor duda,opcion_unica,Si la evidencia que capturé es suficiente,16,23.9,67,6
+Q13 Momento de mayor duda,opcion_unica,Si debo recomendar o no recomendar,15,22.4,67,6
+Q13 Momento de mayor duda,opcion_unica,Si el cliente vive en ese domicilio,14,20.9,67,6
+Q14 Frustraciones,multi_select,Falta de señal o conexión,47,71.2,66,7
+Q14 Frustraciones,multi_select,PAX lenta o con errores,39,59.1,66,7
+Q14 Frustraciones,multi_select,Información incompleta o incorrecta del cliente,30,45.5,66,7
+Q14 Frustraciones,multi_select,Dirección incorrecta o difícil de encontrar,28,42.4,66,7
+Q14 Frustraciones,multi_select,Cliente no localizado o ausente,27,40.9,66,7
+Q14 Frustraciones,multi_select,Tener que repetir pasos,8,12.1,66,7
+Q14 Frustraciones,multi_select,Riesgo o inseguridad en campo,7,10.6,66,7
+Q14 Frustraciones,multi_select,Falta de apoyo oportuno de Torre de Control,5,7.6,66,7
+Q14 Frustraciones,multi_select,Instrucciones poco claras,3,4.5,66,7
+Q16 Motivacion,multi_select,Ganar comisión,55,83.3,66,7
+Q16 Motivacion,multi_select,Cumplir mi meta,44,66.7,66,7
+Q16 Motivacion,multi_select,Tener control de mi tiempo y ruta,23,34.8,66,7
+Q16 Motivacion,multi_select,Ser reconocido por mi desempeño,20,30.3,66,7
+Q16 Motivacion,multi_select,Aprender y mejorar mi criterio,19,28.8,66,7
+Q16 Motivacion,multi_select,Ayudar al cliente a obtener su crédito,15,22.7,66,7
+Q16 Motivacion,multi_select,Resolver rápido y avanzar en la ruta,14,21.2,66,7
+Q16 Motivacion,multi_select,Competencia sana con otros gestores,13,19.7,66,7
+Q19 Casos que requieren Torre,multi_select,El cliente no está o no contesta,40,61.5,65,8
+Q19 Casos que requieren Torre,multi_select,No encuentro el domicilio,38,58.5,65,8
+Q19 Casos que requieren Torre,multi_select,Hay riesgo o inseguridad en campo,17,26.2,65,8
+Q19 Casos que requieren Torre,multi_select,Las referencias no contestan,14,21.5,65,8
+Q19 Casos que requieren Torre,multi_select,El cliente no tiene documentos,13,20.0,65,8
+Q19 Casos que requieren Torre,multi_select,Tengo dudas del proceso,4,6.2,65,8
+Q19 Casos que requieren Torre,multi_select,El cliente no quiere grabar el video,3,4.6,65,8
+Q19 Casos que requieren Torre,multi_select,Other: solicitudes de 4 pasos donde el cliente no es apto y deben ser rechazadas,1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,Other: Cliente falsear información o no apto para credito,1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,Other: El cliente ya no quiere el crédito,1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,Other: Rechazo directo cuando no vive en domicilio,1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,Other: Cuando solicitan reagendar,1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,"Other: No depender de torre de control te ayuda a potencializar tu eficacia en la toma de desiciones, el gestor hace lo mismo que torre de control, reprogramar la visita en horario real y marcar al cliente",1,1.5,65,8
+Q19 Casos que requieren Torre,multi_select,Other: Mal punteadas no vive en el domicilio correcto o no vive en el domicilio,1,1.5,65,8
+Q22 Frase que lo representa,opcion_unica,"""Quiero asegurarme de no cometer errores antes de avanzar""",19,29.7,64,9
+Q22 Frase que lo representa,opcion_unica,"""Quiero resolver rápido y seguir con mi ruta""",18,28.1,64,9
+Q22 Frase que lo representa,opcion_unica,"""Quiero más información del cliente antes de llegar""",16,25.0,64,9
+Q22 Frase que lo representa,opcion_unica,"""Quiero que PAX me guíe paso a paso durante la visita""",6,9.4,64,9
+Q22 Frase que lo representa,opcion_unica,"""Quiero tener más apoyo cuando algo se complica""",4,6.2,64,9
+Q22 Frase que lo representa,opcion_unica,Other: Quisiera poder ver quien originó la lcr y cuando hay planes en atraso poder visualizar y reprimir calendarios de pago,1,1.6,64,9
+Q23 Estilo de trabajo,opcion_unica,Social y negociador — me adapto al cliente,24,37.5,64,9
+Q23 Estilo de trabajo,opcion_unica,Cuidadoso y detallista — prefiero hacerlo bien,21,32.8,64,9
+Q23 Estilo de trabajo,opcion_unica,Rápido y práctico — termino y sigo,12,18.8,64,9
+Q23 Estilo de trabajo,opcion_unica,Resolutivo bajo presión — funciono mejor cuando el caso es complicado,6,9.4,64,9
+Q23 Estilo de trabajo,opcion_unica,Dependiente del proceso — necesito que el sistema me indique cada paso,1,1.6,64,9
+Q18 Claridad de PAX,escala_1_5,1,2,3.0,66,7
+Q18 Claridad de PAX,escala_1_5,2,6,9.1,66,7
+Q18 Claridad de PAX,escala_1_5,3,18,27.3,66,7
+Q18 Claridad de PAX,escala_1_5,4,18,27.3,66,7
+Q18 Claridad de PAX,escala_1_5,5,22,33.3,66,7
+Q18 Claridad de PAX,escala_1_5,MEDIA,3.79,,66,7
+Q18 Claridad de PAX,escala_1_5,MEDIANA,4.0,,66,7
+Q18 Claridad de PAX,escala_1_5,SD,1.09,,66,7
+Q20 Utilidad de Torre,escala_1_5,1,17,26.6,64,9
+Q20 Utilidad de Torre,escala_1_5,2,8,12.5,64,9
+Q20 Utilidad de Torre,escala_1_5,3,13,20.3,64,9
+Q20 Utilidad de Torre,escala_1_5,4,16,25.0,64,9
+Q20 Utilidad de Torre,escala_1_5,5,10,15.6,64,9
+Q20 Utilidad de Torre,escala_1_5,MEDIA,2.91,,64,9
+Q20 Utilidad de Torre,escala_1_5,MEDIANA,3.0,,64,9
+Q20 Utilidad de Torre,escala_1_5,SD,1.43,,64,9
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,1,23,34.3,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,2,17,25.4,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,3,15,22.4,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,4,6,9.0,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,5,6,9.0,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,MEDIA,2.33,,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,MEDIANA,2,,67,6
+Q8 Frecuencia situacion A (SUSPENDIDA),escala_1_5,SD,1.27,,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,1,5,7.5,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,2,11,16.4,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,3,17,25.4,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,4,22,32.8,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,5,12,17.9,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,MEDIA,3.37,,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,MEDIANA,4,,67,6
+Q9 Frecuencia situacion B (SUSPENDIDA),escala_1_5,SD,1.17,,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,1,12,17.9,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,2,13,19.4,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,3,20,29.9,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,4,13,19.4,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,5,9,13.4,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,MEDIA,2.91,,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,MEDIANA,3,,67,6
+Q10 Frecuencia situacion C (SUSPENDIDA),escala_1_5,SD,1.28,,67,6

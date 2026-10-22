@@ -1,0 +1,453 @@
+{
+ "id": "T1-arturo-1",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "arturo",
+ "nombre": "Arturo Belmont",
+ "perfil": "D",
+ "segmento": "Boomer · 5.4%",
+ "ocean": {
+  "O": 42,
+  "C": 79,
+  "E": 38,
+  "A": 68,
+  "N": 67
+ },
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-20T16:20:22",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "localhost:8737/index.html",
+   "url": "http://localhost:8737/index.html",
+   "captura": "datos/capturas/T1-arturo-1/p01.png",
+   "marcas": "datos/capturas/T1-arturo-1/p01-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve sencilla y los números grandes sí se leen, pero la letra de abajo está muy chiquita.",
+    "que_miras_primero": "Lo grande: «Te prestamos hasta $30,000*» y luego el botón verde.",
+    "interpretacion": "Me ofrecen hasta $30,000 y dicen que son tres pasos. El asterisco dice que depende de que me aprueben y habla de un CAT de 98.5%, que no sé bien qué tanto es.",
+    "pensamiento": "Esa letra de abajo no la alcanzo a leer bien. ¿Qué será el CAT? Dice «hasta», o sea que a lo mejor no me dan los treinta mil.",
+    "intencion": "Quiero seguir con la solicitud, pero antes me gustaría entender lo del asterisco. Como sí sé que son tres pasos, voy a darle al botón grande y ver qué me piden.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Solicitar ahora» porque necesito el dinero para la reparación y el botón se lee claro. Voy atento a que me expliquen para qué es cada dato que me pidan."
+    },
+    "marca": 1,
+    "escribir": "",
+    "confianza": 50,
+    "friccion": 2,
+    "reglas": [
+     "D-01",
+     "D-02",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 247,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Solicitar ahora"
+    },
+    {
+     "x": 20,
+     "y": 332,
+     "w": 42,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Términos"
+    },
+    {
+     "x": 64,
+     "y": 332,
+     "w": 47,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Privacidad"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 270
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 247,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Solicitar ahora"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 2,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-arturo-1/p02.png",
+   "marcas": "datos/capturas/T1-arturo-1/p02-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y clara, con letra legible y solo dos datos.",
+    "que_miras_primero": "El título «Tus datos» y las dos casillas vacías.",
+    "interpretacion": "Me piden mi nombre y mi número de celular para seguir con la solicitud. Es el paso 2 de 3.",
+    "pensamiento": "Nombre y teléfono, eso es poco. No dice para qué quieren el teléfono, pero se entiende que es para contactarme.",
+    "intencion": "Voy a llenar primero el nombre en la primera casilla y luego el teléfono.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo mi nombre en la primera casilla, usando el dato de prueba. Luego sigo con el teléfono."
+    },
+    "marca": 2,
+    "escribir": "Alex García",
+    "confianza": 55,
+    "friccion": 1,
+    "reglas": [
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 179,
+    "texto": "Alex García"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 157,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 3,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-arturo-1/p03.png",
+   "marcas": "datos/capturas/T1-arturo-1/p03-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya se ve mi nombre bien puesto y falta el teléfono.",
+    "que_miras_primero": "Mi nombre ya escrito en la primera casilla y la segunda casilla vacía.",
+    "interpretacion": "El nombre quedó registrado. Ahora toca poner el número de celular antes de darle a Continuar.",
+    "pensamiento": "Bien, el nombre quedó. Ahora el teléfono, y ya luego Continuar.",
+    "intencion": "Voy a escribir el número de teléfono en la casilla de abajo.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el teléfono de prueba en la segunda casilla, que es la que sigue."
+    },
+    "marca": 4,
+    "escribir": "55 0000 0000",
+    "confianza": 55,
+    "friccion": 1,
+    "reglas": [
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 266,
+    "texto": "55 0000 0000"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 244,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 4,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-arturo-1/p04.png",
+   "marcas": "datos/capturas/T1-arturo-1/p04-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya están los dos datos llenos y se leen bien.",
+    "que_miras_primero": "Mi nombre y mi teléfono ya escritos, y el botón verde de Continuar.",
+    "interpretacion": "Ya di lo que me pedían en este paso. Sigue darle a Continuar para pasar al paso 3.",
+    "pensamiento": "Todo está en su lugar. Le doy a Continuar y a ver qué sigue, ojalá me expliquen lo que me pidan.",
+    "intencion": "Quiero darle al botón de Continuar para avanzar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque ya llené nombre y teléfono y el botón se ve claro."
+    },
+    "marca": 5,
+    "escribir": "",
+    "confianza": 55,
+    "friccion": 1,
+    "reglas": [
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "55 0000 0000"
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 329
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 306,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#confirmar"
+  },
+  {
+   "n": 5,
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "url": "http://localhost:8737/index.html#confirmar",
+   "captura": "datos/capturas/T1-arturo-1/p05.png",
+   "marcas": "datos/capturas/T1-arturo-1/p05-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Es clara en lo principal, pero la letra de en medio está muy chiquita y no la puedo agrandar.",
+    "que_miras_primero": "«Monto: $30,000 · 52 semanas» y después la letra chiquita de abajo.",
+    "interpretacion": "Es el último paso. Me piden revisar el monto y el plazo, que son 52 semanas, o sea un año. La letra chica dice que, al continuar, autorizo que consulten mi historial crediticio.",
+    "pensamiento": "Esa letra apenas la alcanzo a leer. Dice que van a ver mi historial de crédito, y me explican para qué, pero no me dicen cuánto voy a pagar cada semana. Eso me preocupa.",
+    "intencion": "Quiero mandar la solicitud para terminar de una vez. Me da desconfianza que no digan el pago semanal, pero sí me explicaron lo del historial. Voy a darle a enviar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Enviar solicitud» porque necesito el dinero y quiero completarlo solo. Me explicaron para qué es la consulta, aunque la letra esté chica y falte saber el pago semanal."
+    },
+    "marca": 1,
+    "escribir": "",
+    "confianza": 42,
+    "friccion": 3,
+    "reglas": [
+     "D-02",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 203,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Enviar solicitud"
+    },
+    {
+     "x": 20,
+     "y": 267,
+     "w": 320,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Corregir datos"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 226
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 203,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Enviar solicitud"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#listo"
+  },
+  {
+   "n": 6,
+   "pantalla": "localhost:8737/index.html#listo",
+   "url": "http://localhost:8737/index.html#listo",
+   "captura": "datos/capturas/T1-arturo-1/p06.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.3336,
+ "resultado": "exito_con_friccion",
+ "video": "datos/videos/T1-arturo-1.webm",
+ "fin": "2026-10-20T16:21:44"
+}

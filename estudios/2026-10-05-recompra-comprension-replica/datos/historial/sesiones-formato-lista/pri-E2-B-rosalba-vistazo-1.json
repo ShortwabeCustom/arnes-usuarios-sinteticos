@@ -1,0 +1,49 @@
+{
+ "id": "pri-E2-B-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra mediana] «para tus productos favoritos!»\n4. [letra mediana] «En esta ocasión, tu préstamo es para comprar productos y…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 para mis productos favoritos. Hay un asterisco junto a la cantidad, y eso me hace pensar que hay condiciones que no alcancé a leer. La última frase empieza a decir que mi préstamo es para comprar productos y se corta ahí. No sé qué más dice.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Yo pedí $30,000 en efectivo y la pantalla me muestra $30,000, pero «para tus productos favoritos». No alcancé a leer si es lo mismo que pedí. El asterisco me hace dudar, y no quiero asumir que sí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Lo que leí habla de productos, no de efectivo. Parece que no, pero no vi nada que lo diga claramente. Lo que sigue después de «comprar productos y…» no lo leí."
+  },
+  "p4": "«Para tus productos favoritos», «comprar productos y…». No sé dónde ni en qué tiendas, porque no alcancé a leerlo. No voy a suponerlo.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Creo que falta algo. El asterisco apunta a condiciones que no leí, y la frase se cortó en «y…». No sé qué falta ni cuánto me costaría. Antes de decir que es mío quiero leer eso."
+  },
+  "p6": "No lo vi, no puedo decir qué pasa. No quiero tocar algo que no alcanzo a leer, porque no sé qué estaría autorizando.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer no lo dice. Dice «En esta ocasión, tu préstamo es para comprar productos y…» y ahí me quedé. Puede que la explicación venga después, pero yo no la vi."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de continuar buscaría leer completo el texto, sobre todo lo del asterisco y lo que sigue de «productos y…». Si no se puede agrandar o no abre, preguntaría con alguien a quién hablarle. Una pantalla con esta imagen se ve seria, pero no firmo sin leer las condiciones."
+  },
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-08",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.017
+}

@@ -1,0 +1,47 @@
+# Biblioteca de usuarios sintéticos · GIC (gestores de investigación de campo)
+# Copia versionada de «GIC-User Person/outputs» más el CSV de respuestas original.
+id: gic
+nombre: User Persona GIC
+version: "1.0"
+origen:
+  carpeta: /Users/alexisvaldez/Documents/claude/GIC-User Person
+  copiado: "2026-10-20"
+base: "73 respuestas (64 completas), 41 columnas, 23 preguntas · Región Pachuca y zonas colindantes"
+regla_de_fidelidad: "fidelidad a los datos > consistencia conductual > completitud narrativa"
+frase_sin_cobertura: "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+reglas: 07-reglas-conductuales.csv
+usuarios: 06-usuarios-sinteticos.json
+leer_antes: [README.md]
+guia_editorial: 10-guia-editorial.md
+
+# demograficos: los 4 datos de UiX. Producto para usuarios específicos: la ocupación es el rol (GIC).
+perfiles:
+  A: {nombre: Rubén Ortega, corto: ruben, prompt: system-prompts/A-ruben.md, segmento: "Veterano que necesita contexto · n=13", edad: "31-45", genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO, detalle: "31-45"}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: OBSERVADO, detalle: "Región Pachuca; zona Pachuca 2 (Tizayuca / Reyes Acozac) es HIPÓTESIS"},
+                     ocupacion: {valor: Gestor de Investigación de Campo, evidencia: OBSERVADO}}}
+  B: {nombre: Diego Salgado, corto: diego, prompt: system-prompts/B-diego.md, segmento: "Gestor orientado a velocidad · n=13", edad: "18-30", genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO, detalle: "18-30 o 31-45"}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: OBSERVADO, detalle: "Región Pachuca; zona Zumpango es HIPÓTESIS"},
+                     ocupacion: {valor: Gestor de Investigación de Campo, evidencia: OBSERVADO}}}
+  C: {nombre: Emilio Rentería, corto: emilio, prompt: system-prompts/C-emilio.md, segmento: "Gestor en formación · n=18", edad: "18-30", genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO, detalle: "18-30"}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: OBSERVADO, detalle: "Región Pachuca; zona Temascalapa es HIPÓTESIS"},
+                     ocupacion: {valor: Gestor de Investigación de Campo, evidencia: OBSERVADO}}}
+  D: {nombre: Fernando Aguilar, corto: fernando, prompt: system-prompts/D-fernando.md, segmento: "Verificador cuidadoso · n=19", edad: "31-45", genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO, detalle: "31-45, con presencia de 46-60"}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: OBSERVADO, detalle: "Región Pachuca; zona Región Pachuca 4 es HIPÓTESIS"},
+                     ocupacion: {valor: Gestor de Investigación de Campo, evidencia: OBSERVADO}}}
+
+no_perfiles: []
+
+paneles:
+  base4:
+    descripcion: "Los cuatro perfiles del User Persona GIC. Género no modelable (71 hombres, 2 mujeres)."
+    integrantes:
+      ruben: {perfil: A}
+      diego: {perfil: B}
+      emilio: {perfil: C}
+      fernando: {perfil: D}
+
+lectura: {}

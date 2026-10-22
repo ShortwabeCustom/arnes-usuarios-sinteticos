@@ -1,0 +1,78 @@
+{
+ "id": "pri-E2-B-arturo-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Veo que me dicen que tengo $30,000 para mis productos favoritos. Luego dice que esta vez el préstamo es para comprar productos y no para efectivo. Hay dos tiendas, Shopinbaz e Italika, y un botón verde que dice «Continuar comprando». Abajo, en letra chiquita, dice «Sujeto a aprobación». Ese letrero me confunde, porque arriba dice «Aprobado».",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo. La pantalla dice «Aprobado en producto», pero abajo trae «*Sujeto a aprobación». Me parece que me aprobaron el monto pero no en efectivo, y no me queda claro si ya está aprobado del todo. Se contradice."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que esta vez el préstamo es para comprar productos y no para disponer de efectivo. Yo pedí efectivo."
+  },
+  "p4": "Según la pantalla, lo puedo usar aquí mismo, en las tiendas que salen: Shopinbaz e Italika, que parece ser de motos. No sé si hay otras tiendas ni si sirve en otro lado. No veo que diga nada más.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "No sé si ya es mío. Arriba dice «Aprobado», pero el asterisco dice «Sujeto a aprobación». No dice qué falta ni quién lo decide. Me haría falta que alguien me lo explique."
+  },
+  "p6": "Sí vi el botón verde, «Continuar comprando». Supongo que me lleva a comprar en las tiendas, pero no lo sé con seguridad porque no dice adónde. Yo no quería comprar, quería efectivo. Antes de tocarlo preferiría saber qué sigue.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "La pantalla dice que «en esta ocasión» es para productos, pero no dice por qué. Hay un enlace «Saber mas» que no toqué, así que no sé si ahí lo explican. La letra de ese enlace es muy chiquita y casi no la alcanzo a leer."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas», para ver si explican por qué no me dan efectivo. Si ahí no hay una explicación clara, mejor iría a una sucursal para que alguien me la dé. Esa letra está muy chiquita y no sé si la puedo agrandar."
+  },
+  "reglas": [
+   "D-01",
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-09"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Pedí efectivo y me dan el monto, pero solo para comprar productos en sus tiendas. El panel no aclara el asterisco de «Sujeto a aprobación», así que sigo sin saber si ya está todo aprobado."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy puedo usar el préstamo para comprar productos en sus tiendas. No habla de efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Dice que es «por tu historial crediticio». No explica qué del historial ni qué tendría que ser distinto. Pero sí da una razón, y la letra se alcanza a leer mejor que en la otra pantalla."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a «nuevas opciones de financiamiento». No dice que una de esas opciones sea efectivo, ni cuándo, ni cuánto tiempo tendría que pasar. Yo no sé qué es lo que sigue."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Ya entiendo por qué, y eso se agradece. Pero no me dan efectivo, que era lo que pedí, y no me prometen nada concreto. Si hay sucursal, iría a preguntar ahí. Solo veo el botón «De acuerdo» y no sé a qué estoy diciendo que sí."
+   },
+   "reglas": [
+    "D-01",
+    "D-04",
+    "D-08"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1623
+}

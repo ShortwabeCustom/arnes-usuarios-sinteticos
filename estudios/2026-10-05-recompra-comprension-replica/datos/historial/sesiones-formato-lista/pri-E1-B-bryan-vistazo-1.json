@@ -1,0 +1,41 @@
+{
+ "id": "pri-E1-B-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me están diciendo que ya tengo $30,000 en Efectivo, listos para usar. Eso fue lo que vi grande. Lo de \"Aprobado\" salió en letra chica y no lo leí bien. Hay un asterisco junto al monto y no alcancé a ver qué dice. Se ve como que me aprobaron, pero no vi las condiciones.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Vi $30,000 con asterisco y la palabra «Aprobado» chiquita. Parece que sí, pero el asterisco puede cambiar el monto o las condiciones y no lo alcancé a leer. No puedo asegurar que sea todo lo que pedí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», pero no vi cómo los recibo: si es en la app, en una cuenta o en sucursal. «Efectivo» puede ser el nombre del producto. Eso no me lo dijeron en lo que alcancé a leer."
+  },
+  "p4": "Lo que leí dice «listos para usar», pero no vi dónde ni en qué. No sé si es en una tarjeta, en una cuenta o retirando. No voy a inventarlo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Me suena a que ya es mío, pero el asterisco y el botón «Continuar con mi…» me dicen que falta un paso. No vi qué es: puede ser firmar, aceptar algo o elegir cómo lo recibo. Si hay otro paso, no está tan listo como dice."
+  },
+  "p6": "Sí vi el botón, pero solo hasta «Continuar con mi…». No sé con qué sigue. Supongo que me lleva al siguiente paso del trámite, pero no sé cuál ni si me saca de la app. Si me manda a otra página o a sucursal, me voy.",
+  "reglas": [
+   "A-03",
+   "A-04",
+   "A-06",
+   "A-08",
+   "A-02"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0118
+}

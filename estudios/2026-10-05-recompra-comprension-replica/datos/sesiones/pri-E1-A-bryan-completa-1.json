@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-A-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que ya me aprobaron los $30,000 en efectivo y que ya son míos. Pero abajo, en letra chiquita, dice «*Sujeto a aprobación». Eso se contradice: ¿ya estoy aprobado o no? Además ofrece comprar en Elektra y Shopinbaz. No veo nada de moto ni de teléfono, ni cuánto voy a pagar por semana ni el costo total.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Dice «Aprobado» y $30,000, que es lo que pedí. Pero el asterisco y el «Sujeto a aprobación» lo dejan en duda. No sé si es una aprobación firme o una preaprobación. La pantalla no lo aclara."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos, listos para usar». Pero no veo cómo me llega el dinero, ni a qué cuenta o tarjeta, ni cuándo. Tampoco veo ningún paso de retiro. Y el asterisco contradice el «ya son tuyos». No lo puedo confirmar con lo que veo."
+  },
+  "p4": "Dice que el efectivo está «listo para usar», pero no dice dónde. Aparte, la pantalla ofrece comprar en Elektra (productos para el hogar) y en Shopinbaz (tecnología, hogar, moda y más). No queda claro si ese dinero se usa ahí o si son otra opción. Eso no lo explica.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El botón dice «Continuar con mi monto», así que todavía hay más pasos. Y el «*Sujeto a aprobación» dice que la aprobación no está cerrada. No sé qué falta exactamente: la pantalla no lo dice."
+  },
+  "p6": "Sí lo vi: el botón verde grande dice «Continuar con mi monto». Supongo que sigo con el trámite para recibir el dinero. No sé cuántas pantallas faltan ni si me va a mandar a otra página o a una sucursal. Eso no lo dice y me da desconfianza.",
+  "reglas": [
+   "A-03",
+   "A-04",
+   "A-05",
+   "A-08",
+   "A-11"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0581
+}

@@ -1,0 +1,42 @@
+{
+ "id": "pri-E1-A-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra muy grande] «$30,000*»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [letra chica] «También puedes comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 y que en Efectivo ya son míos. Pero hay un asterisco junto a la cantidad que no alcancé a leer, y la palabra «Aprobado» venía en letra chica. Lo demás de la pantalla no lo alcancé a leer.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Parece que sí, porque veo $30,000 y «Aprobado». Pero el número tiene un asterisco y no leí qué dice. No sé si es todo lo que pedí o si hay condiciones. Por eso digo que en parte."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "Leí «en Efectivo ya son tuyos, listos para usar», así que entiendo que sí. No leí cómo ni dónde se recoge, y yo preferiría ir a sucursal para que alguien me lo explique."
+  },
+  "p4": "\"Dice «listos para usar», pero no leí dónde. Se corta en «También puedes comprar…» y ya no llegué a leer lo demás. No me atrevo a decir en qué más se puede usar. Si me dicen en qué, lo sabré.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice que ya son míos, pero el asterisco me deja con duda. No sé qué falta, porque no alcancé a leer esa parte. Prefiero confirmarlo con alguien en sucursal."
+  },
+  "p6": "No vi ningún botón verde. Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+  "reglas": [
+   "D-01",
+   "D-04",
+   "D-02",
+   "D-08"
+  ],
+  "sin_cobertura": [
+   "p6"
+  ]
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0285
+}

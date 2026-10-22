@@ -1,0 +1,131 @@
+dimension,categoria,producto,metrica,valor,fuente
+Edad,<=21 anios,Efectivo,pct_colocacion,8.7,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Efectivo,pct_colocacion,12.0,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Efectivo,pct_colocacion,14.5,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Efectivo,pct_colocacion,25.6,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Efectivo,pct_colocacion,19.0,buyer-persona-9junio lamina 16
+Edad,>50 anios,Efectivo,pct_colocacion,20.2,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Movilidad,pct_colocacion,12.8,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Movilidad,pct_colocacion,16.6,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Movilidad,pct_colocacion,16.3,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Movilidad,pct_colocacion,25.5,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Movilidad,pct_colocacion,16.4,buyer-persona-9junio lamina 16
+Edad,>50 anios,Movilidad,pct_colocacion,12.3,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Hogar,pct_colocacion,9.9,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Hogar,pct_colocacion,12.0,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Hogar,pct_colocacion,14.2,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Hogar,pct_colocacion,24.7,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Hogar,pct_colocacion,19.2,buyer-persona-9junio lamina 16
+Edad,>50 anios,Hogar,pct_colocacion,20.0,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Conectividad,pct_colocacion,17.9,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Conectividad,pct_colocacion,16.6,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Conectividad,pct_colocacion,13.6,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Conectividad,pct_colocacion,22.0,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Conectividad,pct_colocacion,16.4,buyer-persona-9junio lamina 16
+Edad,>50 anios,Conectividad,pct_colocacion,13.5,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Total,pct_colocacion,11.8,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Total,pct_colocacion,14.6,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Total,pct_colocacion,15.1,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Total,pct_colocacion,25.0,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Total,pct_colocacion,17.6,buyer-persona-9junio lamina 16
+Edad,>50 anios,Total,pct_colocacion,15.9,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Efectivo,perdida_observada,26.2,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Efectivo,perdida_observada,24.1,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Efectivo,perdida_observada,23.9,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Efectivo,perdida_observada,23.7,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Efectivo,perdida_observada,21.0,buyer-persona-9junio lamina 16
+Edad,>50 anios,Efectivo,perdida_observada,17.4,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Movilidad,perdida_observada,8.3,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Movilidad,perdida_observada,8.4,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Movilidad,perdida_observada,8.7,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Movilidad,perdida_observada,7.6,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Movilidad,perdida_observada,6.2,buyer-persona-9junio lamina 16
+Edad,>50 anios,Movilidad,perdida_observada,5.6,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Hogar,perdida_observada,12.3,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Hogar,perdida_observada,14.0,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Hogar,perdida_observada,13.5,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Hogar,perdida_observada,12.6,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Hogar,perdida_observada,9.6,buyer-persona-9junio lamina 16
+Edad,>50 anios,Hogar,perdida_observada,6.9,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Conectividad,perdida_observada,15.1,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Conectividad,perdida_observada,16.8,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Conectividad,perdida_observada,18.8,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Conectividad,perdida_observada,16.9,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Conectividad,perdida_observada,13.4,buyer-persona-9junio lamina 16
+Edad,>50 anios,Conectividad,perdida_observada,13.0,buyer-persona-9junio lamina 16
+Edad,<=21 anios,Total,perdida_observada,14.3,buyer-persona-9junio lamina 16
+Edad,(21-25] anios,Total,perdida_observada,14.4,buyer-persona-9junio lamina 16
+Edad,(25-30] anios,Total,perdida_observada,15.1,buyer-persona-9junio lamina 16
+Edad,(30-40] anios,Total,perdida_observada,14.5,buyer-persona-9junio lamina 16
+Edad,(40-50] anios,Total,perdida_observada,12.3,buyer-persona-9junio lamina 16
+Edad,>50 anios,Total,perdida_observada,11.4,buyer-persona-9junio lamina 16
+Genero,Femenino,Efectivo,pct_colocacion,54.6,buyer-persona-9junio lamina 16
+Genero,Masculino,Efectivo,pct_colocacion,45.4,buyer-persona-9junio lamina 16
+Genero,Femenino,Movilidad,pct_colocacion,41.0,buyer-persona-9junio lamina 16
+Genero,Masculino,Movilidad,pct_colocacion,59.0,buyer-persona-9junio lamina 16
+Genero,Femenino,Hogar,pct_colocacion,55.2,buyer-persona-9junio lamina 16
+Genero,Masculino,Hogar,pct_colocacion,44.8,buyer-persona-9junio lamina 16
+Genero,Femenino,Conectividad,pct_colocacion,56.4,buyer-persona-9junio lamina 16
+Genero,Masculino,Conectividad,pct_colocacion,43.6,buyer-persona-9junio lamina 16
+Genero,Femenino,Total,pct_colocacion,49.0,buyer-persona-9junio lamina 16
+Genero,Masculino,Total,pct_colocacion,51.0,buyer-persona-9junio lamina 16
+Genero,Femenino,Efectivo,perdida_observada,20.9,buyer-persona-9junio lamina 16
+Genero,Masculino,Efectivo,perdida_observada,23.8,buyer-persona-9junio lamina 16
+Genero,Femenino,Movilidad,perdida_observada,6.5,buyer-persona-9junio lamina 16
+Genero,Masculino,Movilidad,perdida_observada,8.3,buyer-persona-9junio lamina 16
+Genero,Femenino,Hogar,perdida_observada,10.3,buyer-persona-9junio lamina 16
+Genero,Masculino,Hogar,perdida_observada,12.3,buyer-persona-9junio lamina 16
+Genero,Femenino,Conectividad,perdida_observada,14.7,buyer-persona-9junio lamina 16
+Genero,Masculino,Conectividad,perdida_observada,17.1,buyer-persona-9junio lamina 16
+Genero,Femenino,Total,perdida_observada,13.4,buyer-persona-9junio lamina 16
+Genero,Masculino,Total,perdida_observada,14.1,buyer-persona-9junio lamina 16
+Estado civil,Casado,Efectivo,pct_colocacion,27.7,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Efectivo,pct_colocacion,2.0,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Efectivo,pct_colocacion,41.7,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Efectivo,pct_colocacion,8.6,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Efectivo,pct_colocacion,20.1,buyer-persona-9junio lamina 16
+Estado civil,Casado,Movilidad,pct_colocacion,25.3,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Movilidad,pct_colocacion,1.5,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Movilidad,pct_colocacion,42.8,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Movilidad,pct_colocacion,7.4,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Movilidad,pct_colocacion,23.0,buyer-persona-9junio lamina 16
+Estado civil,Casado,Hogar,pct_colocacion,26.9,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Hogar,pct_colocacion,2.3,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Hogar,pct_colocacion,39.3,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Hogar,pct_colocacion,8.1,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Hogar,pct_colocacion,23.4,buyer-persona-9junio lamina 16
+Estado civil,Casado,Conectividad,pct_colocacion,21.8,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Conectividad,pct_colocacion,1.7,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Conectividad,pct_colocacion,46.5,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Conectividad,pct_colocacion,9.0,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Conectividad,pct_colocacion,21.0,buyer-persona-9junio lamina 16
+Estado civil,Casado,Total,pct_colocacion,25.8,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Total,pct_colocacion,1.8,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Total,pct_colocacion,42.5,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Total,pct_colocacion,8.1,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Total,pct_colocacion,21.8,buyer-persona-9junio lamina 16
+Estado civil,Casado,Efectivo,perdida_observada,19.5,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Efectivo,perdida_observada,23.1,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Efectivo,perdida_observada,22.4,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Efectivo,perdida_observada,21.3,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Efectivo,perdida_observada,25.7,buyer-persona-9junio lamina 16
+Estado civil,Casado,Movilidad,perdida_observada,6.1,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Movilidad,perdida_observada,8.1,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Movilidad,perdida_observada,7.4,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Movilidad,perdida_observada,8.8,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Movilidad,perdida_observada,8.8,buyer-persona-9junio lamina 16
+Estado civil,Casado,Hogar,perdida_observada,9.4,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Hogar,perdida_observada,10.0,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Hogar,perdida_observada,10.8,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Hogar,perdida_observada,11.4,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Hogar,perdida_observada,13.7,buyer-persona-9junio lamina 16
+Estado civil,Casado,Conectividad,perdida_observada,13.7,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Conectividad,perdida_observada,20.0,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Conectividad,perdida_observada,15.2,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Conectividad,perdida_observada,15.5,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Conectividad,perdida_observada,18.8,buyer-persona-9junio lamina 16
+Estado civil,Casado,Total,perdida_observada,12.0,buyer-persona-9junio lamina 16
+Estado civil,Viudo,Total,perdida_observada,15.3,buyer-persona-9junio lamina 16
+Estado civil,Soltero,Total,perdida_observada,13.6,buyer-persona-9junio lamina 16
+Estado civil,Union Libre,Total,perdida_observada,14.4,buyer-persona-9junio lamina 16
+Estado civil,Divorciado,Total,perdida_observada,15.7,buyer-persona-9junio lamina 16

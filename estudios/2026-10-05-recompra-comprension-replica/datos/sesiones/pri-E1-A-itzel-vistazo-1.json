@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-A-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [letra chica] «También puedes comprar en:»\n6. [botón] «Continuar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 y que en Efectivo ya son míos. Pero hay un asterisco junto al monto y no alcancé a leer qué dice. Tampoco vi cuota, total a pagar ni fechas.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo «$30,000*» y «Aprobado», que coincide con lo que pedí. Pero el asterisco me hace dudar: no sé qué condición lleva. Y «Aprobado» salió en letra chica. No me alcanza para decir que sí a todo."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos», pero no leí cómo ni cuándo me llegan, ni si hay condiciones. El asterisco queda sin explicar. No puedo asegurarlo."
+  },
+  "p4": "\"Solo leí que en Efectivo puedo usarlos. También decía «También puedes comprar en:», pero se cortó y no vi dónde. No sé más allá de eso.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice «ya son tuyos», pero falta lo que no leí: el asterisco, la cuota mensual, el total a pagar y las fechas. Sin ese número final no me siento comprometida ni tranquila."
+  },
+  "p6": "\"El botón decía «Continuar…» y ahí se me acabó lo que leí. No sé qué sigue. Me preocupa que me saque del celular o me muestre términos nuevos. No lo tocaría sin ver antes el costo total.\"",
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0293
+}

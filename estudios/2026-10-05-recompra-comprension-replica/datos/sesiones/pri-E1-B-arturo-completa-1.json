@@ -1,0 +1,41 @@
+{
+ "id": "pri-E1-B-arturo-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "La pantalla dice que estoy aprobado y que tengo $30,000 en efectivo listos para usar. Pero abajo, en letra muy chiquita, dice «Sujeto a aprobación». Eso no me cuadra: o ya me aprobaron o todavía no. También me ofrecen comprar en Elektra y Shopinbaz. Esa letra de abajo casi no la alcanzo a leer.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Arriba dice «Aprobado» y pone $30,000, que es lo que pedí. Pero el asterisco y el «Sujeto a aprobación» de abajo dicen otra cosa. Se contradice, y no sé cuál de las dos cosas vale."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos, listos para usar». Pero no dice cómo ni dónde los recibo, ni si me los depositan o los recojo. Y la letra chiquita dice que está sujeto a aprobación. No puedo asegurar que me los den."
+  },
+  "p4": "Dice «en Efectivo», así que entiendo que para lo que yo quiera. También dice que puedo comprar en Elektra y en Shopinbaz, con productos para el hogar, tecnología y otras cosas. Más que eso no dice la pantalla y no lo voy a inventar.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. Dice «Sujeto a aprobación» y el botón dice «Continuar con mi monto», o sea que hay más pasos. No me dicen cuáles son. Yo quisiera saber qué sigue y cómo termina todo, y si puedo ir a una sucursal."
+  },
+  "p6": "Veo el botón verde que dice «Continuar con mi monto». Supongo que me lleva al siguiente paso, pero no sé cuál es. Si me piden la cámara y no me explican por qué, ahí me trabo. No dice si hay otra vía, como ir a sucursal.",
+  "reglas": [
+   "D-01",
+   "D-02",
+   "D-04",
+   "D-06",
+   "D-08",
+   "D-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.032
+}

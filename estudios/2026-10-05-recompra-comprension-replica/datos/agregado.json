@@ -1,0 +1,1041 @@
+{
+ "n_sesiones": 32,
+ "n_por_bloque": {
+  "principal": 32
+ },
+ "agregado": {
+  "principal|E1|A|arturo|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|arturo|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|A|arturo|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|arturo|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|arturo|vistazo|antes|p3": [
+   "si"
+  ],
+  "principal|E1|A|arturo|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|bryan|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|bryan|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|A|bryan|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|bryan|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|bryan|vistazo|antes|p3": [
+   "si"
+  ],
+  "principal|E1|A|bryan|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|itzel|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|itzel|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|A|itzel|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|itzel|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|itzel|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|A|itzel|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|rosalba|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|A|rosalba|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|A|rosalba|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|A|rosalba|vistazo|antes|p2": [
+   "si"
+  ],
+  "principal|E1|A|rosalba|vistazo|antes|p3": [
+   "si"
+  ],
+  "principal|E1|A|rosalba|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|arturo|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|arturo|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|arturo|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|arturo|vistazo|antes|p2": [
+   "no_se"
+  ],
+  "principal|E1|B|arturo|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|arturo|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|bryan|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|bryan|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|bryan|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|bryan|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|bryan|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|bryan|vistazo|antes|p5": [
+   "no_se"
+  ],
+  "principal|E1|B|itzel|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|itzel|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|itzel|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|itzel|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|itzel|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|itzel|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|rosalba|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|rosalba|completa|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|rosalba|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E1|B|rosalba|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E1|B|rosalba|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E1|B|rosalba|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|arturo|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|arturo|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|A|arturo|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|arturo|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|arturo|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|arturo|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|arturo|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|A|arturo|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|A|arturo|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|arturo|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|A|arturo|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|arturo|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|A|arturo|vistazo|antes|p5": [
+   "no_se"
+  ],
+  "principal|E2|A|arturo|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|arturo|vistazo|antes|p8": [
+   "otro"
+  ],
+  "principal|E2|A|bryan|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|bryan|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|A|bryan|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|bryan|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|bryan|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|bryan|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|bryan|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|A|bryan|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|A|bryan|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|bryan|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|A|bryan|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|bryan|vistazo|antes|p3": [
+   "no"
+  ],
+  "principal|E2|A|bryan|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|bryan|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|bryan|vistazo|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|itzel|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|itzel|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|A|itzel|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|itzel|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|itzel|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|itzel|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|itzel|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|A|itzel|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|A|itzel|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|itzel|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|A|itzel|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|itzel|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|A|itzel|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|itzel|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|itzel|vistazo|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|rosalba|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|rosalba|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|A|rosalba|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|rosalba|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|rosalba|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|A|rosalba|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|rosalba|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|A|rosalba|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|A|rosalba|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|rosalba|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|A|rosalba|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|A|rosalba|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|A|rosalba|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|A|rosalba|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|A|rosalba|vistazo|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|arturo|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|arturo|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|B|arturo|completa|antes|p5": [
+   "no_se"
+  ],
+  "principal|E2|B|arturo|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|arturo|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|arturo|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|arturo|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|B|arturo|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|B|arturo|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|arturo|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|B|arturo|vistazo|antes|p2": [
+   "no_se"
+  ],
+  "principal|E2|B|arturo|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|B|arturo|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|arturo|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|arturo|vistazo|antes|p8": [
+   "otro"
+  ],
+  "principal|E2|B|bryan|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|bryan|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|B|bryan|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|bryan|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|bryan|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|bryan|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|bryan|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|B|bryan|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|B|bryan|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|bryan|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|B|bryan|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|bryan|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|B|bryan|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|bryan|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|bryan|vistazo|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|itzel|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|itzel|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|B|itzel|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|itzel|completa|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|itzel|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|itzel|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|itzel|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|B|itzel|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|B|itzel|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|itzel|completa|sheet|p10": [
+   "negativa"
+  ],
+  "principal|E2|B|itzel|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|itzel|vistazo|antes|p3": [
+   "no_se"
+  ],
+  "principal|E2|B|itzel|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|itzel|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|itzel|vistazo|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|rosalba|completa|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|rosalba|completa|antes|p3": [
+   "no"
+  ],
+  "principal|E2|B|rosalba|completa|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|rosalba|completa|antes|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|B|rosalba|completa|antes|p8": [
+   "saber_mas"
+  ],
+  "principal|E2|B|rosalba|completa|sheet|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|rosalba|completa|sheet|p3": [
+   "no"
+  ],
+  "principal|E2|B|rosalba|completa|sheet|p7": [
+   "lo_dice"
+  ],
+  "principal|E2|B|rosalba|completa|sheet|p9": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|rosalba|completa|sheet|p10": [
+   "neutra"
+  ],
+  "principal|E2|B|rosalba|vistazo|antes|p2": [
+   "en_parte"
+  ],
+  "principal|E2|B|rosalba|vistazo|antes|p3": [
+   "no"
+  ],
+  "principal|E2|B|rosalba|vistazo|antes|p5": [
+   "falta_algo"
+  ],
+  "principal|E2|B|rosalba|vistazo|antes|p7": [
+   "no_lo_dice"
+  ],
+  "principal|E2|B|rosalba|vistazo|antes|p8": [
+   "saber_mas"
+  ]
+ },
+ "aciertos": {
+  "principal|E1|A|completa|antes|p2": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E1|A|completa|antes|p3": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E1|A|vistazo|antes|p2": {
+   "aciertos": 1,
+   "total": 4
+  },
+  "principal|E1|A|vistazo|antes|p3": {
+   "aciertos": 3,
+   "total": 4
+  },
+  "principal|E1|B|completa|antes|p2": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E1|B|completa|antes|p3": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E1|B|vistazo|antes|p2": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E1|B|vistazo|antes|p3": {
+   "aciertos": 0,
+   "total": 4
+  },
+  "principal|E2|A|completa|antes|p2": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|antes|p3": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|antes|p7": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|sheet|p2": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|sheet|p3": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|sheet|p7": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|completa|sheet|p9": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|vistazo|antes|p2": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|A|vistazo|antes|p3": {
+   "aciertos": 1,
+   "total": 4
+  },
+  "principal|E2|A|vistazo|antes|p7": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|antes|p2": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|antes|p3": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|antes|p7": {
+   "aciertos": 3,
+   "total": 4
+  },
+  "principal|E2|B|completa|sheet|p2": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|sheet|p3": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|sheet|p7": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|completa|sheet|p9": {
+   "aciertos": 4,
+   "total": 4
+  },
+  "principal|E2|B|vistazo|antes|p2": {
+   "aciertos": 3,
+   "total": 4
+  },
+  "principal|E2|B|vistazo|antes|p3": {
+   "aciertos": 1,
+   "total": 4
+  },
+  "principal|E2|B|vistazo|antes|p7": {
+   "aciertos": 4,
+   "total": 4
+  }
+ },
+ "sin_cobertura": [
+  {
+   "integrante": "arturo",
+   "pregunta": "p6",
+   "n": 3
+  },
+  {
+   "integrante": "arturo",
+   "pregunta": "p4",
+   "n": 1
+  }
+ ],
+ "reglas": [
+  {
+   "integrante": "arturo",
+   "regla": "D-04",
+   "n": 10
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-08",
+   "n": 10
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-04",
+   "n": 10
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-02",
+   "n": 10
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-05",
+   "n": 10
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-08",
+   "n": 9
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-02",
+   "n": 9
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-01",
+   "n": 8
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-02",
+   "n": 8
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-10",
+   "n": 8
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-01",
+   "n": 8
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-08",
+   "n": 8
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-03",
+   "n": 7
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-12",
+   "n": 7
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-10",
+   "n": 7
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-05",
+   "n": 6
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-06",
+   "n": 6
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-03",
+   "n": 5
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-06",
+   "n": 5
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-09",
+   "n": 5
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-05",
+   "n": 4
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-06",
+   "n": 3
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-10",
+   "n": 3
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-08",
+   "n": 3
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-04",
+   "n": 3
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-07",
+   "n": 2
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-11",
+   "n": 1
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-03",
+   "n": 1
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-07",
+   "n": 1
+  },
+  {
+   "integrante": "arturo",
+   "regla": "D-09",
+   "n": 1
+  },
+  {
+   "integrante": "bryan",
+   "regla": "A-01",
+   "n": 1
+  },
+  {
+   "integrante": "itzel",
+   "regla": "B-11",
+   "n": 1
+  },
+  {
+   "integrante": "rosalba",
+   "regla": "C-07",
+   "n": 1
+  }
+ ],
+ "estabilidad": {
+  "global_": null,
+  "celdas": {},
+  "inestables": []
+ },
+ "comparaciones": [
+  {
+   "a": "principal|E1|A|completa|antes|p2",
+   "b": "principal|E1|B|completa|antes|p2",
+   "pa": 0.0,
+   "pb": 0.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.0,
+    0.49
+   ],
+   "ic_b": [
+    0.0,
+    0.49
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E1|A|completa|antes|p3",
+   "b": "principal|E1|B|completa|antes|p3",
+   "pa": 0.0,
+   "pb": 0.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.0,
+    0.49
+   ],
+   "ic_b": [
+    0.0,
+    0.49
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E1|A|vistazo|antes|p2",
+   "b": "principal|E1|B|vistazo|antes|p2",
+   "pa": 0.25,
+   "pb": 0.0,
+   "brecha": 0.25,
+   "ic_a": [
+    0.05,
+    0.7
+   ],
+   "ic_b": [
+    0.0,
+    0.49
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E1|A|vistazo|antes|p3",
+   "b": "principal|E1|B|vistazo|antes|p3",
+   "pa": 0.75,
+   "pb": 0.0,
+   "brecha": 0.75,
+   "ic_a": [
+    0.3,
+    0.95
+   ],
+   "ic_b": [
+    0.0,
+    0.49
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|antes|p2",
+   "b": "principal|E2|B|completa|antes|p2",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|antes|p3",
+   "b": "principal|E2|B|completa|antes|p3",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|antes|p7",
+   "b": "principal|E2|B|completa|antes|p7",
+   "pa": 1.0,
+   "pb": 0.75,
+   "brecha": 0.25,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.3,
+    0.95
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|sheet|p2",
+   "b": "principal|E2|B|completa|sheet|p2",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|sheet|p3",
+   "b": "principal|E2|B|completa|sheet|p3",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|sheet|p7",
+   "b": "principal|E2|B|completa|sheet|p7",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|completa|sheet|p9",
+   "b": "principal|E2|B|completa|sheet|p9",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|vistazo|antes|p2",
+   "b": "principal|E2|B|vistazo|antes|p2",
+   "pa": 1.0,
+   "pb": 0.75,
+   "brecha": 0.25,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.3,
+    0.95
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|vistazo|antes|p3",
+   "b": "principal|E2|B|vistazo|antes|p3",
+   "pa": 0.25,
+   "pb": 0.25,
+   "brecha": 0.0,
+   "ic_a": [
+    0.05,
+    0.7
+   ],
+   "ic_b": [
+    0.05,
+    0.7
+   ],
+   "clara": false
+  },
+  {
+   "a": "principal|E2|A|vistazo|antes|p7",
+   "b": "principal|E2|B|vistazo|antes|p7",
+   "pa": 1.0,
+   "pb": 1.0,
+   "brecha": 0.0,
+   "ic_a": [
+    0.51,
+    1.0
+   ],
+   "ic_b": [
+    0.51,
+    1.0
+   ],
+   "clara": false
+  }
+ ],
+ "homogeneidad": {
+  "celdas_homogeneas": 0.69,
+  "parecido_abiertas": 0.25,
+  "alertas": []
+ }
+}

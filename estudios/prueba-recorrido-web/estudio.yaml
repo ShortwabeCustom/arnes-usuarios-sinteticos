@@ -1,0 +1,39 @@
+# Estudio de humo para el método de recorrido: un flujo web local de 3 pasos (tests/fixtures/flujo-web).
+id: prueba-recorrido-web
+titulo: "Prueba del arnés · recorrido sobre flujo web local"
+metodo: recorrido
+fecha: "2026-10-20"
+uix:                     # estándares de UiX: naming del reporte. Estudio de humo sobre un flujo de prueba local
+  proyecto: arnes
+  metodologia: pdu
+  tema: flujo-web-prueba
+  version: 1
+  fecha_fin: "2026-10-20"
+biblioteca: pwa
+panel: base4-ocean
+integrantes: [arturo, bryan]
+modelo: sonnet
+
+material: web
+guia_estilo: pwa
+url: "http://localhost:8737/index.html"
+dispositivo: {ancho: 360, alto: 800}
+visible: false
+video: true
+max_pasos: 10
+max_sin_cambio: 3
+corridas: 2
+sin_baseline_porque: "material de prueba del arnés, no hay diseño actual"
+
+datos_prueba:
+  nombre: Alex García
+  telefono: "55 0000 0000"
+
+tareas:
+  - id: T1
+    escenario: "Necesitas dinero para una reparación en casa y entraste al sitio de préstamos desde tu celular."
+    instruccion: "Solicita un préstamo de $30,000."
+    exito: "Llega a la pantalla «Solicitud enviada»."
+    fin: {texto_visible: "Solicitud enviada"}
+    primer_toque: {etiqueta_contiene: "Solicitar"}
+    retoma: {tras_paso: 2, modo: recargar}   # sale del proceso después del paso 2 y vuelve a entrar

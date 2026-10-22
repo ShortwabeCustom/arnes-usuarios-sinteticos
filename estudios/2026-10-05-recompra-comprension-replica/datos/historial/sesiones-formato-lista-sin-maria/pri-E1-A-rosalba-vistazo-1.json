@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-A-rosalba-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [letra chica] «También puedes comprar en:»\n6. [botón] «Continuar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 y que en Efectivo ya son míos, listos para usar. Pero el número trae un asterisco y la palabra «Aprobado» salió muy chiquita. Dice «María» y yo no me llamo así, lo leo como si fuera mi nombre. También dice «También puedes comprar en:» y no alcancé a leer qué sigue. Se ve serio, pero hay cosas que no alcancé a leer.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Por lo que alcancé a leer, sí: aparece «$30,000*» y «Aprobado», y yo pedí $30,000. Pero el asterisco indica que hay una condición que no leí, y no vi que ahí diga algo más. Entiendo que sí, pero con esa reserva."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos, listos para usar», así que entiendo que sí. Pero no leí cómo ni dónde los recibo, ni si hay algún paso o costo. Eso no lo vi."
+  },
+  "p4": "En efectivo, para lo que necesite. Y vi que dice «También puedes comprar en:», pero no alcancé a leer en dónde. No sé qué tiendas o lugares son, ni si hay alguna condición.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya son míos, pero el asterisco me dice que hay algo escrito que no leí, y el botón dice «Continuar…», o sea que hay más pasos. No sé cuáles son. Antes de darle continuar quiero leer las condiciones, y no vi dónde hacerlo. Si no lo entiendo, preferiría preguntarle a alguien."
+  },
+  "p6": "Solo alcancé a leer «Continuar…» y de ahí no pasé. No sé qué pasa si lo toco. Supongo que sigue otro paso, pero no sé cuál ni si me compromete a algo. No lo tocaría sin leer el resto.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-08",
+   "C-10"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.03
+}

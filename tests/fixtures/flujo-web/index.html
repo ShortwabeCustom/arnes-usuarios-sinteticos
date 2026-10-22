@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Préstamo de prueba</title>
+<style>
+  body { font: 16px/1.45 -apple-system, "Segoe UI", sans-serif; margin: 0; background: #f4f6f5; color: #1b2a24; }
+  main { padding: 24px 20px; }
+  h1 { font-size: 24px; margin: 8px 0 12px; }
+  .monto { font-size: 44px; font-weight: 800; color: #0b6b4f; }
+  .chica { font-size: 11px; color: #6b7a74; }
+  button { display: block; width: 100%; padding: 14px; margin-top: 18px; border: 0; border-radius: 24px;
+           background: #0b6b4f; color: #fff; font-size: 16px; font-weight: 700; }
+  button.sec { background: transparent; color: #0b6b4f; border: 1px solid #0b6b4f; }
+  label { display: block; margin-top: 14px; font-weight: 600; }
+  input { width: 100%; box-sizing: border-box; padding: 12px; margin-top: 6px; border: 1px solid #b9c5c0; border-radius: 10px; font-size: 16px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <section id="inicio">
+    <p>Paso 1 de 3</p>
+    <h1>Te prestamos hasta</h1>
+    <div class="monto">$30,000*</div>
+    <p>Recibe tu dinero hoy mismo.</p>
+    <button onclick="ir('datos')">Solicitar ahora</button>
+    <p class="chica">*Sujeto a aprobación. CAT promedio 98.5% sin IVA.</p>
+    <p class="chica"><a href="#" onclick="return false" style="font-size:10px">Términos</a><a href="#" onclick="return false" style="font-size:10px;margin-left:2px">Privacidad</a></p>
+  </section>
+  <section id="datos" hidden>
+    <p>Paso 2 de 3</p>
+    <h1>Tus datos</h1>
+    <label for="nombre">Nombre completo</label>
+    <input id="nombre" autocomplete="off">
+    <label for="tel">Teléfono celular</label>
+    <input id="tel" inputmode="tel" autocomplete="off">
+    <p id="error" role="alert" class="chica" style="color:#b3261e" hidden>Completa tu nombre y tu teléfono.</p>
+    <button onclick="validar()">Continuar</button>
+  </section>
+  <section id="confirmar" hidden>
+    <p>Paso 3 de 3</p>
+    <h1>Revisa tu solicitud</h1>
+    <p>Monto: $30,000 · 52 semanas</p>
+    <p class="chica">Al continuar autorizas la consulta de tu historial crediticio.</p>
+    <button onclick="ir('listo')">Enviar solicitud</button>
+    <button class="sec" onclick="ir('datos')">Corregir datos</button>
+    <p class="chica">¿Dudas? Llámanos al 55 0000 0000 o visita tu sucursal.</p>
+  </section>
+  <section id="listo" hidden>
+    <h1>Solicitud enviada</h1>
+    <p>Te avisaremos por SMS en las próximas 24 horas.</p>
+  </section>
+</main>
+<script>
+  function ir(id) {
+    document.querySelectorAll('section').forEach(s => s.hidden = s.id !== id);
+    location.hash = id;
+  }
+  function validar() {
+    const ok = document.getElementById('nombre').value.trim() && document.getElementById('tel').value.trim();
+    document.getElementById('error').hidden = !!ok;
+    if (ok) ir('confirmar');
+  }
+</script>
+</body>
+</html>

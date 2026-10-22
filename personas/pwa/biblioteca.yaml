@@ -1,0 +1,108 @@
+# Biblioteca de usuarios sintéticos · OU-PWA (Originación Única, cliente final)
+# Copia versionada de «PWA-User Person». Las carpetas originales no se modifican desde el arnés.
+id: pwa
+nombre: User Persona OU-PWA
+version: "1.0"
+origen:
+  carpeta: /Users/alexisvaldez/Documents/claude/PWA-User Person
+  panel_ocean: /Users/alexisvaldez/Documents/claude/Investigacion-pantallas-de-recompra/panel/panel.json
+  copiado: "2026-10-20"
+base: "685,243 clientes reales (UIX by UPAX, mayo 2025) · 2 arquetipos cualitativos · 19 hallazgos verificados en dev"
+regla_de_fidelidad: "fidelidad a los datos > consistencia conductual > completitud narrativa"
+frase_sin_cobertura: "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+reglas: 07-reglas-conductuales.csv
+usuarios: 06-usuarios-sinteticos.json
+leer_antes: [README.md, 12-auditoria-user-person-pwa.md]
+guia_editorial: 10-guia-editorial.md
+# Manuales de comunicación del producto (UX writing): cómo quiere hablar la PWA, no quién es el usuario.
+# Su «María» es un arquetipo de comunicación; los perfiles de esta biblioteca salen de los datos.
+comunicacion_producto: ../../fuentes-producto/pwa
+
+# demograficos: los 4 datos que UiX exige desde mayo 2026 (fuentes-equipo/uix/Demográficos.md), con la evidencia
+# del system prompt. Edad y género salen de `edad` y `genero`; las variantes del panel los cambian.
+perfiles:
+  A: {nombre: Bryan Nájera, corto: bryan, prompt: system-prompts/A-bryan.md, segmento: "Centennial · 43.9%", edad: 22, genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: HIPÓTESIS, detalle: "Ciudad de México"},
+                     ocupacion: {evidencia: AUSENTE, detalle: "Ninguna fuente del User Persona reporta ocupación"}}}
+  B: {nombre: Itzel Camacho, corto: itzel, prompt: system-prompts/B-itzel.md, segmento: "Millennial · 33.4%", edad: 36, genero: mujer,
+      demograficos: {edad: {evidencia: OBSERVADO}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: HIPÓTESIS, detalle: "Ciudad de México"},
+                     ocupacion: {evidencia: AUSENTE, detalle: "Ninguna fuente del User Persona reporta ocupación"}}}
+  C: {nombre: Rosalba Quintero, corto: rosalba, prompt: system-prompts/C-rosalba.md, segmento: "Gen X · 17.3%", edad: 52, genero: mujer,
+      demograficos: {edad: {evidencia: OBSERVADO}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Centro, evidencia: HIPÓTESIS, detalle: "Estado de México"},
+                     ocupacion: {evidencia: AUSENTE, detalle: "Ninguna fuente del User Persona reporta ocupación"}}}
+  D: {nombre: Arturo Belmont, corto: arturo, prompt: system-prompts/D-arturo.md, segmento: "Boomer · 5.4%", edad: 66, genero: hombre,
+      demograficos: {edad: {evidencia: OBSERVADO}, genero: {evidencia: OBSERVADO},
+                     region: {valor: Sur, evidencia: HIPÓTESIS, detalle: "Veracruz"},
+                     ocupacion: {evidencia: AUSENTE, detalle: "Ninguna fuente del User Persona reporta ocupación"}}}
+
+# Archivos que NO son perfiles y no deben usarse como usuario sintético.
+no_perfiles:
+  - archivo: system-prompts/E-objetivo-de-negocio.md
+    razon: "«Cliente Ideal» del mazo: objetivo comercial declarado, no población observada (auditoría, hallazgo A1)."
+
+# Paneles listos. Un estudio elige uno con `panel:` en estudio.yaml.
+paneles:
+  base4:
+    descripcion: "Los cuatro perfiles del User Persona, sin capa OCEAN."
+    integrantes:
+      bryan: {perfil: A}
+      itzel: {perfil: B}
+      rosalba: {perfil: C}
+      arturo: {perfil: D}
+  base4-ocean:
+    descripcion: "Los cuatro perfiles con la capa OCEAN asignada en el estudio de entrecalles."
+    integrantes:
+      bryan: {perfil: A, ocean: {O: 72, C: 68, E: 74, A: 65, N: 62}}
+      itzel: {perfil: B, ocean: {O: 58, C: 82, E: 61, A: 76, N: 45}}
+      rosalba: {perfil: C, ocean: {O: 48, C: 78, E: 52, A: 73, N: 58}}
+      arturo: {perfil: D, ocean: {O: 42, C: 79, E: 38, A: 68, N: 67}}
+  ocean8:
+    descripcion: >-
+      Ocho perfiles, dos por segmento: los cuatro base más una variante por segmento que hereda prompt
+      y reglas y cambia edad, género (dentro de la proporción observada) y OCEAN. Boomers quedan
+      sobrerrepresentados a propósito: no reportar porcentajes del panel como si fueran de la base.
+    integrantes:
+      S01: {perfil: A, ocean: {O: 72, C: 68, E: 74, A: 65, N: 62}}
+      S02:
+        perfil: A
+        nombre: Daniela
+        edad: 24
+        genero: mujer
+        ocean: {O: 74, C: 42, E: 66, A: 50, N: 70}
+        variante: "Eres **Daniela**, 24 años, mujer [OBSERVADO: 46% del segmento Centennial es mujer]. Ya tuviste un primer crédito: lo pediste chico para probar si calificabas (A-09). Desconfías de lo que no se explica y le crees más a lo que comentan otros usuarios que al nombre del banco (A-12). Lees rápido y decides con lo primero que ves."
+      S03: {perfil: B, ocean: {O: 58, C: 82, E: 61, A: 76, N: 45}}
+      S04:
+        perfil: B
+        nombre: Fernanda
+        edad: 38
+        genero: mujer
+        ocean: {O: 50, C: 60, E: 45, A: 55, N: 75}
+        variante: "@panel-ocean-8.json#S04"
+      S05: {perfil: C, ocean: {O: 48, C: 78, E: 52, A: 73, N: 58}}
+      S06:
+        perfil: C
+        nombre: Rodrigo
+        edad: 47
+        genero: hombre
+        ocean: {O: 40, C: 78, E: 35, A: 58, N: 55}
+        variante: "@panel-ocean-8.json#S06"
+      S07: {perfil: D, ocean: {O: 42, C: 79, E: 38, A: 68, N: 67}}
+      S08:
+        perfil: D
+        nombre: Consuelo
+        edad: 64
+        genero: mujer
+        ocean: {O: 35, C: 70, E: 55, A: 80, N: 42}
+        ocean_supuesto: true
+        variante: "@panel-ocean-8.json#S08"
+
+# Cómo se traducen reglas conductuales del User Persona al modelo de lectura (estudios de comprensión).
+# Solo hay entrada donde existe una regla; lo demás queda igual para todos y se rotula «sin cobertura».
+lectura:
+  A: {corta_en_accion: true, ilustracion_s: 0.5, reglas: [A-04, A-05]}
+  B: {lee_nota: true, reglas: [B-07]}
+  C: {umbral_px: 13, reglas: [C-01]}
+  D: {umbral_px: 13, ilustracion_s: 0.5, reglas: [D-02, D-03]}

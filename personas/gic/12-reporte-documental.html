@@ -1,0 +1,1564 @@
+<title>Gestores Sintéticos GIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#EDEFEA; --surface:#F8F9F6; --surface-2:#E4E8E0;
+  --ink:#151C1A; --ink-soft:#33403C; --muted:#55635D; --rule:#D2D8CE; --rule-hard:#B7C0B3;
+  --teal:#1D5A54; --teal-soft:#DCE8E4;
+  --fric:#B24A25; --fric-soft:#F2DFD5;
+  --olive:#3F6229; --olive-soft:#E0E9D6;
+  --amber:#6E5610; --amber-soft:#EFE7CD;
+  --sans:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#111614; --surface:#19201E; --surface-2:#232B29;
+    --ink:#E7EBE6; --ink-soft:#C4CCC7; --muted:#94A29C; --rule:#2B3532; --rule-hard:#3C4744;
+    --teal:#61B6A8; --teal-soft:#183330;
+    --fric:#E2805A; --fric-soft:#3A2419;
+    --olive:#93C070; --olive-soft:#1E2B18;
+    --amber:#D3B458; --amber-soft:#2E2712;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111614; --surface:#19201E; --surface-2:#232B29;
+  --ink:#E7EBE6; --ink-soft:#C4CCC7; --muted:#94A29C; --rule:#2B3532; --rule-hard:#3C4744;
+  --teal:#61B6A8; --teal-soft:#183330;
+  --fric:#E2805A; --fric-soft:#3A2419;
+  --olive:#93C070; --olive-soft:#1E2B18;
+  --amber:#D3B458; --amber-soft:#2E2712;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.62;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px 96px}
+a{color:var(--teal)}
+h1,h2,h3,h4{font-family:var(--sans);text-wrap:balance;margin:0;line-height:1.14;letter-spacing:-.01em}
+p{margin:0 0 .9em}
+.measure{max-width:68ch}
+
+/* ---------- masthead ---------- */
+.mast{border-bottom:2px solid var(--ink);padding:44px 0 18px;margin-bottom:0}
+.kicker{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--fric);margin:0 0 14px}
+.mast h1{font-size:clamp(38px,6.2vw,68px);font-weight:700;letter-spacing:-.025em}
+.mast .dek{font-size:19px;color:var(--ink-soft);max-width:58ch;margin:16px 0 26px}
+.mast .dek em{font-style:italic;color:var(--muted)}
+.factstrip{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule)}
+.fact{flex:1 1 130px;padding:12px 16px 12px 0;border-right:1px solid var(--rule)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:var(--mono);font-size:22px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fact span{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+
+/* ---------- layout ---------- */
+.cols{display:block}
+@media(min-width:1080px){
+  .cols{display:grid;grid-template-columns:212px minmax(0,1fr);gap:56px;align-items:start}
+  .rail{position:sticky;top:24px;max-height:calc(100vh - 48px);overflow:auto;padding-top:40px}
+}
+.rail{font-family:var(--sans);font-size:13.5px}
+.rail .rl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--rule);margin-bottom:10px}
+.rail ol{list-style:none;margin:0;padding:0;counter-reset:r}
+.rail li{counter-increment:r;margin:0 0 2px}
+.rail a{display:flex;gap:9px;text-decoration:none;color:var(--ink-soft);padding:4px 6px 4px 0;border-radius:2px}
+.rail a::before{content:counter(r,decimal-leading-zero);font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-top:3px}
+.rail a:hover{color:var(--teal)}
+.rail a:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+/* ---------- sections ---------- */
+section{padding-top:52px;scroll-margin-top:20px}
+.shead{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--ink);padding-bottom:9px;margin-bottom:24px}
+.shead .n{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--fric);letter-spacing:.08em;padding-top:2px}
+.shead h2{font-size:clamp(23px,3vw,31px);font-weight:600;flex:1}
+.shead .tag{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+h3{font-size:19px;font-weight:600;margin:34px 0 12px}
+h4{font-family:var(--sans);font-size:14.5px;font-weight:600;letter-spacing:.02em;margin:22px 0 8px;color:var(--ink)}
+.lede{font-size:17.5px;color:var(--ink-soft);max-width:64ch}
+
+/* ---------- evidence chips ---------- */
+.ev{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:2px 5px;border-radius:2px;vertical-align:.12em;white-space:nowrap}
+.ev-o{background:var(--teal-soft);color:var(--teal)}
+.ev-i{background:var(--amber-soft);color:var(--amber)}
+.ev-h{background:transparent;color:var(--muted);border:1px solid var(--rule-hard)}
+.ev-x{background:var(--fric-soft);color:var(--fric)}
+
+/* ---------- findings ---------- */
+.finds{list-style:none;margin:0;padding:0;counter-reset:f;display:grid;gap:0;border-top:1px solid var(--rule)}
+.finds li{counter-increment:f;display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.finds li > *{grid-column:2;min-width:0}
+.finds li::before{content:counter(f,decimal-leading-zero);font-family:var(--mono);font-size:12px;font-weight:600;color:var(--fric);padding-top:4px}
+.finds h4{margin:0 0 4px;font-size:16.5px}
+.finds p{margin:0;color:var(--ink-soft);font-size:15px}
+.finds .fig{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--surface-2);padding:0 4px;border-radius:2px}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:18px 0 6px;border-top:1px solid var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-family:var(--sans)}
+th{text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:9px 12px 9px 0;border-bottom:1px solid var(--rule-hard);vertical-align:bottom;white-space:nowrap}
+td{padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+td:first-child,th:first-child{padding-left:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;color:var(--ink)}
+tbody tr:hover td{background:var(--surface)}
+.cap{font-family:var(--mono);font-size:11px;color:var(--muted);margin:8px 0 0}
+
+/* ---------- bar rows ---------- */
+.bars{display:grid;gap:0;margin:16px 0 4px;border-top:1px solid var(--rule)}
+.bar{display:grid;grid-template-columns:minmax(140px,1.35fr) minmax(80px,3fr) 96px;gap:14px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}
+.bar .lb{font-family:var(--sans);font-size:14px;color:var(--ink-soft)}
+.bar .tr{background:var(--surface-2);height:12px;border-radius:1px;overflow:hidden}
+.bar .fl{height:100%;width:var(--w);background:var(--teal);border-radius:1px}
+.bar.f .fl{background:var(--fric)}
+.bar.g .fl{background:var(--olive)}
+.bar .vv{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink)}
+.bar .vv i{font-style:normal;color:var(--muted)}
+
+
+/* ---------- svg chart ---------- */
+.chartbox{margin:18px 0 4px;overflow-x:auto}
+.chartbox svg{width:100%;min-width:520px;height:auto;display:block}
+.cg line{stroke:var(--rule);stroke-width:1}
+.ct text,.cx text{font-family:var(--mono);font-size:10.5px;fill:var(--muted)}
+.cval text{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.cline{fill:none;stroke:var(--fric);stroke-width:2.5;stroke-linejoin:round}
+.cdot circle{fill:var(--ground);stroke:var(--fric);stroke-width:2.5}
+
+
+/* ---------- segment blocks ---------- */
+.seg{margin:30px 0 0;border-top:2px solid var(--ink)}
+.seghd{display:flex;align-items:flex-start;gap:16px;padding:14px 0 16px;flex-wrap:wrap}
+.segcode{font-family:var(--sans);font-size:26px;font-weight:700;line-height:1;color:var(--ground);background:var(--teal);width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:2px;flex:none}
+.segcode.b{background:var(--fric)}
+.segcode.c{background:var(--olive)}
+.segcode.d{background:var(--amber)}
+.segname{flex:1 1 260px}
+.segname h3{margin:0;font-size:22px;font-weight:600}
+.segname p{margin:4px 0 0;color:var(--muted);font-size:15px;font-style:italic}
+.segn{text-align:right;flex:none}
+.segn b{display:block;font-family:var(--mono);font-size:26px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.segn span{font-family:var(--sans);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.segbody{display:grid;gap:0;border-top:1px solid var(--rule)}
+@media(min-width:760px){.segbody{grid-template-columns:1fr 1fr;column-gap:36px}}
+.fld{padding:11px 0;border-bottom:1px solid var(--rule)}
+.fld p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.fl-l{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.ev-row{grid-column:1/-1;background:var(--surface);padding:11px 14px;border-bottom:0}
+
+
+/* ---------- personas ---------- */
+.per{margin:38px 0 0;border:1px solid var(--rule-hard);border-top:3px solid var(--ink);background:var(--surface)}
+.perhd{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding:18px 20px;border-bottom:1px solid var(--rule)}
+.pertop{display:flex;gap:14px;align-items:center}
+.pertop h3{margin:0;font-size:24px;font-weight:700;letter-spacing:-.015em}
+.perarq{margin:2px 0 0;font-size:14.5px;color:var(--muted);font-style:italic}
+.permeta{display:flex;gap:26px;margin:0;flex-wrap:wrap}
+.permeta div{min-width:0}
+.permeta dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.permeta dd{margin:2px 0 0;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--ink)}
+.perbody{padding:4px 20px 22px}
+@media(min-width:860px){.perbody{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}}
+.pcol{min-width:0}
+.pfull{grid-column:1/-1;min-width:0}
+.per h4{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--fric);margin:22px 0 6px;padding-bottom:5px;border-bottom:1px solid var(--rule)}
+.kv{margin:0}
+.kv div{display:grid;grid-template-columns:minmax(96px,116px) minmax(0,1fr);gap:12px;padding:5px 0;border-bottom:1px solid var(--rule)}
+.kv dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.kv dd{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.dec,.needs{display:grid;gap:18px;margin:12px 0 0}
+@media(min-width:700px){.dec{grid-template-columns:repeat(3,1fr)}.needs{grid-template-columns:repeat(2,1fr)}}
+.dec ol,.dec ul{margin:6px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft)}
+.dec li{margin-bottom:4px}
+.needs p{margin:5px 0 0;font-size:14.5px;color:var(--ink-soft)}
+.synth{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;text-transform:none;color:var(--muted);font-weight:400;margin-left:8px}
+.quotes{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.quotes li{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink);border-left:2px solid var(--teal);padding:2px 0 2px 14px}
+.contr{margin:10px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-soft)}
+.contr li{margin-bottom:7px}
+
+
+/* ---------- behavioral rules ---------- */
+.rcode{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:2px;background:var(--teal);color:var(--ground);font-size:15px;font-weight:700;margin-right:9px;vertical-align:-3px}
+.rcode.b{background:var(--fric)} .rcode.c{background:var(--olive)} .rcode.d{background:var(--amber)}
+.rules{display:grid;gap:0;border-top:1px solid var(--rule)}
+@media(min-width:900px){.rules{grid-template-columns:1fr 1fr;column-gap:32px}}
+.rule{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid var(--rule)}
+.rid{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.04em;padding-top:3px}
+.rb{min-width:0}
+.rb p{margin:0 0 3px;font-size:14px;color:var(--ink-soft);line-height:1.5}
+.rb p:last-child{margin-bottom:0}
+.rb b{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.rb .rt{color:var(--ink);font-weight:400}
+.rb .rt b{color:var(--teal)}
+.rb .rw{font-size:13px;color:var(--muted)}
+.rp{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap;margin-top:2px}
+.rp.alta{background:var(--teal-soft);color:var(--teal)}
+.rp.media{background:var(--amber-soft);color:var(--amber)}
+.rp.baja{background:transparent;color:var(--muted);border:1px solid var(--rule-hard)}
+
+
+/* ---------- gaps + footer ---------- */
+.gaps{list-style:none;margin:18px 0 0;padding:0;counter-reset:g;border-top:1px solid var(--rule)}
+.gaps li{counter-increment:g;display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.gaps li > *{grid-column:2;min-width:0}
+.gaps li::before{content:counter(g,decimal-leading-zero);font-family:var(--mono);font-size:12px;font-weight:600;color:var(--fric);padding-top:3px}
+.gaps h4{margin:0 0 3px;font-size:16px}
+.gaps p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.foot{margin-top:66px;padding-top:20px;border-top:2px solid var(--ink);display:grid;gap:26px}
+@media(min-width:760px){.foot{grid-template-columns:repeat(3,1fr)}}
+.foot p{font-size:13.5px;color:var(--muted);margin:0}
+.fkick{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--fric);margin-bottom:5px !important}
+.foot code{font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+
+/* ---------- a11y: focus, skip link, touch targets ---------- */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;font-family:var(--sans);font-size:14px;font-weight:600;background:var(--teal);color:var(--ground);padding:12px 18px;border-radius:0 0 3px 0;z-index:50}
+.skip:focus{left:0;position:fixed}
+@media(max-width:1079px){
+  .rail a{min-height:44px;align-items:center}
+  .rail a::before{padding-top:0}
+}
+@media(max-width:640px){
+  .rb p,.kv dd,.fld p,.needs p,.dec ol,.dec ul,.gaps p,.finds p{font-size:15.5px}
+  .lede{font-size:17px}
+}
+tbody tr td{transition:background-color 200ms ease}
+
+/* ---------- callout ---------- */
+.call{background:var(--surface);border-left:3px solid var(--fric);padding:16px 18px;margin:22px 0;font-size:15px}
+.call.t{border-left-color:var(--teal)}
+.call.g{border-left-color:var(--olive)}
+.call h4{margin:0 0 6px}
+.call p:last-child{margin-bottom:0}
+.call code{font-family:var(--mono);font-size:12.5px;background:var(--surface-2);padding:1px 4px;border-radius:2px}
+
+/* ---------- scale strip ---------- */
+.scale{display:flex;gap:3px;align-items:flex-end;height:56px;margin:10px 0 4px}
+.scale div{flex:1;background:var(--teal-soft);border-top:2px solid var(--teal);position:relative;display:flex;align-items:flex-start;justify-content:center}
+.scale div span{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:-15px}
+.scale-x{display:flex;gap:3px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.scale-x div{flex:1;text-align:center}
+</style>
+
+<a class="skip" href="#s1">Saltar al contenido</a>
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">Investigación de usuarios · PAX &amp; Torre de Control</p>
+  <h1>Gestores Sintéticos GIC</h1>
+  <p class="dek">Auditoría del estudio de campo con 73 GIC, segmentación conductual y cuatro usuarios sintéticos con reglas de simulación. <em>Fidelidad a los datos por encima de completitud narrativa.</em></p>
+  <div class="factstrip">
+    <div class="fact"><b>73</b><span>Respuestas</span></div>
+    <div class="fact"><b>64</b><span>Completas</span></div>
+    <div class="fact"><b>41</b><span>Columnas</span></div>
+    <div class="fact"><b>23</b><span>Preguntas</span></div>
+    <div class="fact"><b>4</b><span>Segmentos</span></div>
+    <div class="fact"><b>48</b><span>Reglas</span></div>
+  </div>
+</header>
+
+<div class="cols">
+<nav class="rail" aria-label="Índice del reporte">
+  <p class="rl">Índice</p>
+  <ol>
+    <li><a href="#s1">Resumen ejecutivo</a></li>
+    <li><a href="#s2">Calidad del dataset</a></li>
+    <li><a href="#s3">Diccionario de variables</a></li>
+    <li><a href="#s4">Frecuencias</a></li>
+    <li><a href="#s5">Hallazgos cualitativos</a></li>
+    <li><a href="#s6">Relaciones</a></li>
+    <li><a href="#s7">Segmentos</a></li>
+    <li><a href="#s8">Comparativa</a></li>
+    <li><a href="#s9">Usuarios sintéticos</a></li>
+    <li><a href="#s10">Reglas conductuales</a></li>
+    <li><a href="#s11">Evidencia y confianza</a></li>
+    <li><a href="#s12">Gaps de investigación</a></li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<!-- ============ 1 ============ -->
+<section id="s1">
+  <div class="shead"><span class="n">01</span><h2>Resumen ejecutivo</h2><span class="tag">10 hallazgos</span></div>
+  <p class="lede measure">Diez hallazgos que sobreviven a la verificación. Cada cifra reporta su N válido, porque el abandono progresivo del cuestionario cambia la base de cálculo pregunta por pregunta.</p>
+
+  <ol class="finds">
+    <li>
+      <h4>El parque de dispositivos parte la muestra en dos experiencias distintas</h4>
+      <p>Quienes usan <span class="fig">PAX A910</span> reportan <span class="fig">76%</span> de frustración por «PAX lenta o con errores»; quienes usan <span class="fig">A960</span>, <span class="fig">39%</span>. La claridad percibida de PAX pasa de <span class="fig">3.30</span> a <span class="fig">4.29</span> sobre 5. La antigüedad está repartida de forma pareja entre ambos equipos, así que no es un efecto de veteranía. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>Pero el problema biométrico <em>no</em> es del hardware</h4>
+      <p>La captura facial aparece en <span class="fig">64%</span> de los relatos de fallo en ambos equipos por igual, y la falta de señal en <span class="fig">70%</span> y <span class="fig">71%</span>. Renovar terminales arreglaría la velocidad percibida; no arreglaría ni la biometría ni la cobertura. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>La captura facial es el cuello de botella número uno de la operación</h4>
+      <p>Es la parte más lenta de la investigación para <span class="fig">49.3%</span> (33/67) y aparece en <span class="fig">64.6%</span> de los relatos abiertos de fallo (42/65): gestos que no detona, exigencia de más luz bajo el sol, rostros que el sistema no reconoce. Un participante cuantifica <span class="fig">10–15 min</span> perdidos por caso. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>La confianza en Torre de Control se erosiona con la antigüedad</h4>
+      <p>Utilidad percibida: <span class="fig">4.25</span> con menos de 3 meses, <span class="fig">3.50</span> a los 3–6 meses, <span class="fig">2.75</span> entre 1 y 3 años, <span class="fig">2.53</span> con más de 3 años. Es el gradiente más limpio del estudio y es monótono. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>Torre de Control es el servicio más polarizado del ecosistema</h4>
+      <p>Media <span class="fig">2.91</span> con desviación <span class="fig">1.43</span>: <span class="fig">17</span> personas la califican en «1» y <span class="fig">10</span> en «5» sobre 64. No hay una opinión promedio que representar; hay dos poblaciones. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>La queja de fondo no es la demora: es que Torre insiste contra la evidencia del gestor</h4>
+      <p><span class="fig">18.8%</span> se queja del tiempo de respuesta y <span class="fig">14.1%</span> de que no dan solución, pero <span class="fig">9.4%</span> describe algo más grave: reprograman o reencauzan visitas cuando el gestor ya verificó en sitio que el cliente no vive ahí. Ese subgrupo concentra las calificaciones «1». <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>Lo que piden a PAX es autonomía, no más guía</h4>
+      <p><span class="fig">20.6%</span> de las respuestas abiertas pide poder rechazar, reagendar o declinar desde campo sin depender de Torre. Solo <span class="fig">9.4%</span> elige «quiero que PAX me guíe paso a paso» y un único participante de 64 se describe como dependiente del proceso. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>Este no es un perfil de alto volumen: son pocas visitas y largas</h4>
+      <p><span class="fig">86.6%</span> hace 1 a 3 investigaciones por día, y <span class="fig">37.3%</span> declara que una investigación completa dura más de 25 minutos. El diseño debe optimizar la duración del caso, no el conteo diario. <span class="ev ev-o">Observado</span></p>
+    </li>
+    <li>
+      <h4>Quien pierde tiempo en referencias duda en recomendar</h4>
+      <p>De los 9 que señalan «Referencias» como la parte más lenta, <span class="fig">8</span> ubican su mayor duda en «si debo recomendar o no recomendar» — contra <span class="fig">12–15%</span> en el resto de la muestra. Es la dependencia más fuerte entre dos variables del estudio, aunque sobre pocos casos. <span class="ev ev-o">Observado</span> <span class="ev ev-h">n=9</span></p>
+    </li>
+    <li>
+      <h4>La motivación económica es universal; el control del tiempo es lo que separa a los veteranos</h4>
+      <p>Comisión <span class="fig">83.3%</span> y meta <span class="fig">66.7%</span> son transversales. «Tener control de mi tiempo y ruta» sube a <span class="fig">53%</span> con más de 3 años y cae a <span class="fig">14%</span> a los 3–6 meses; «aprender» y «ser reconocido» hacen el camino inverso. <span class="ev ev-o">Observado</span></p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 2 ============ -->
+<section id="s2">
+  <div class="shead"><span class="n">02</span><h2>Calidad y limitaciones del dataset</h2><span class="tag">Fase 1</span></div>
+
+  <h3>Universo real</h3>
+  <p class="measure">El archivo contiene <b>73 registros</b>, no 84. El conteo de 84 proviene de contar líneas del CSV: los textos abiertos incluyen saltos de línea embebidos. La numeración interna va de 0 a 76 con cuatro huecos (8, 15, 54, 69), lo que indica que el export ya llega filtrado.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Estado</th><th class="num">N</th><th class="num">%</th><th>Consecuencia analítica</th></tr></thead>
+    <tbody>
+      <tr><td>Completaron el estudio</td><td class="num">64</td><td class="num">87.7%</td><td>Base para segmentación (Q22/Q23 respondidas)</td></tr>
+      <tr><td><code>Not finished</code></td><td class="num">9</td><td class="num">12.3%</td><td>Missing en cascada; 4 cortan antes de la pregunta 7</td></tr>
+      <tr><td><b>Total en archivo</b></td><td class="num">73</td><td class="num">100%</td><td>Universo declarado en todo el reporte</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Duración de sesión: mediana 432 s (7.2 min) · rango 196–1932 s · n=64.</p>
+
+  <div class="call">
+    <h4>Preguntas 8, 9 y 10 — suspendidas</h4>
+    <p>Los tres encabezados son idénticos byte a byte salvo el número: <code>[8][scale] ¿Con qué frecuencia te pasa esto durante una semana típica?</code>. El enunciado del «esto» no viaja en el export y no existe subencabezado ni columna acompañante que lo nombre.</p>
+    <p>Las tres distribuciones son claramente distintas — medias <b>2.33</b>, <b>3.37</b> y <b>2.91</b> — con correlaciones internas bajas (r = +0.23 a +0.35) y nulas contra claridad de PAX y utilidad de Torre. Miden tres cosas diferentes, pero <b>no hay evidencia para nombrarlas</b>. Quedan fuera de la segmentación y se etiquetan Situación A / B / C. Recuperarlas requiere el enunciado de cada ítem desde el estudio de Maze.</p>
+  </div>
+
+  <h3>Problemas encontrados</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Problema</th><th>Detalle</th><th>Tratamiento aplicado</th></tr></thead>
+    <tbody>
+      <tr><td><b>Missing no aleatorio</b></td><td>El N válido cae de forma monótona con la posición de la pregunta: 73 en Q1 → 64 en Q22/Q23. Es abandono progresivo, no omisión al azar.</td><td>N válido reportado en cada cifra; nunca se imputa</td></tr>
+      <tr><td><b>Multi-select como texto</b></td><td>Q5, Q14, Q16 y Q19 guardan varias opciones separadas por comas. 50/68, 58/66, 56/66 y 41/65 respuestas son múltiples.</td><td>Explotadas por opción; % sobre respondientes, no sobre menciones</td></tr>
+      <tr><td><b><code>Other:</code> con comas internas</b></td><td>Rompe el parseo por comas en Q7, Q12, Q19 y Q22.</td><td>Prefijo separado antes de dividir</td></tr>
+      <tr><td><b>Categorías sucias</b></td><td>El A960 aparece en 6 grafías dentro de <code>Other:</code>. Sin normalizar, el A910 parecía dominar el parque.</td><td>Normalizado: A910 34 · A960 29 · A920 4 · otro 1</td></tr>
+      <tr><td><b>Región en texto libre</b></td><td>50 grafías distintas para ~8 zonas.</td><td>Normalizada a 8 agrupaciones (ver §4)</td></tr>
+      <tr><td><b>Varianza cero</b></td><td><code>Maze ID</code>, <code>Device type</code> (100% mobile) y <code>Recruitment method</code> (100% link) tienen un solo valor. <code>Device manufacturer</code> tiene 83% de missing.</td><td>Excluidas</td></tr>
+      <tr><td><b>Género inutilizable</b></td><td>71 hombres y 2 mujeres (97.3%).</td><td>Excluido de toda inferencia conductual</td></tr>
+      <tr><td><b>Edad confundida con antigüedad</b></td><td>16 de los 18 GIC con ≤6 meses tienen 18–30 años. No se puede separar un efecto del otro.</td><td>Se modela antigüedad; la edad queda como descriptor</td></tr>
+      <tr><td><b>Sentimiento saturado</b></td><td>Q15 marca <code>Negative</code> en 61 de 65 respuestas: la pregunta pide una queja, así que la etiqueta no discrimina. Q4 calcula sentimiento sobre topónimos.</td><td>Q4-Sentiment descartada; el resto degradado a señal complementaria</td></tr>
+      <tr><td><b>Respuestas no informativas</b></td><td>~8 textos del tipo «No», «La», «Nada», «Sin comentarios».</td><td>Excluidas del denominador cualitativo, no forzadas a una categoría</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Límites de lectura de este reporte</h3>
+  <p class="measure">La muestra es <b>censal de un territorio</b>, no representativa de todos los GIC: el 100% de los participantes trabaja en Región Pachuca y zonas colindantes del Estado de México e Hidalgo. Los hallazgos describen esa operación. Ninguna cifra de este documento implica causalidad: las relaciones de §6 son asociaciones observadas, y varias descansan sobre celdas pequeñas que se marcan explícitamente.</p>
+</section>
+<!-- ============ 3 ============ -->
+<section id="s3">
+  <div class="shead"><span class="n">03</span><h2>Diccionario de variables</h2><span class="tag">41 columnas</span></div>
+  <p class="lede measure">Inventario completo. La columna «Uso» declara qué papel juega cada variable en la construcción de los usuarios sintéticos.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>#</th><th>Columna</th><th>Tipo</th><th>Clase</th><th class="num">N</th><th>Uso</th></tr></thead>
+    <tbody>
+      <tr><td class="num">0</td><td>Maze ID</td><td>Constante</td><td>Identificador</td><td class="num">73</td><td>Excluida — 1 valor</td></tr>
+      <tr><td class="num">1</td><td>Tester ID</td><td>ID único</td><td>Identificador</td><td class="num">73</td><td>Excluida — prohibida</td></tr>
+      <tr><td class="num">2</td><td>Number</td><td>ID único</td><td>Identificador</td><td class="num">73</td><td>Solo trazabilidad</td></tr>
+      <tr><td class="num">3</td><td>Start date</td><td>Fecha</td><td>Metadata técnica</td><td class="num">72</td><td>Control de calidad</td></tr>
+      <tr><td class="num">4</td><td>Study completion</td><td>Fecha / <code>Not finished</code></td><td>Metadata técnica</td><td class="num">73</td><td>Detección de abandono</td></tr>
+      <tr><td class="num">5</td><td>Study duration (s)</td><td>Numérica</td><td>Metadata técnica</td><td class="num">64</td><td>Control de calidad</td></tr>
+      <tr><td class="num">6</td><td>Device type</td><td>Constante <code>mobile</code></td><td>Metadata técnica</td><td class="num">72</td><td>Excluida — varianza cero</td></tr>
+      <tr><td class="num">7</td><td>OS</td><td>Categórica (3)</td><td>Metadata técnica</td><td class="num">73</td><td>Excluida</td></tr>
+      <tr><td class="num">8</td><td>Device manufacturer</td><td>Categórica (2)</td><td>Metadata técnica</td><td class="num">12</td><td>Excluida — 83% missing</td></tr>
+      <tr><td class="num">9</td><td>Model</td><td>Categórica sucia</td><td>Metadata técnica</td><td class="num">71</td><td>Excluida — valores basura</td></tr>
+      <tr><td class="num">10</td><td>Browser</td><td>Categórica (7)</td><td>Metadata técnica</td><td class="num">73</td><td>Excluida</td></tr>
+      <tr><td class="num">11</td><td>Browser version</td><td>Categórica (13)</td><td>Metadata técnica</td><td class="num">73</td><td>Excluida</td></tr>
+      <tr><td class="num">12</td><td>Language</td><td>Categórica (4)</td><td>Metadata técnica</td><td class="num">73</td><td>Excluida</td></tr>
+      <tr><td class="num">13</td><td>Recruitment method</td><td>Constante <code>link</code></td><td>Metadata técnica</td><td class="num">73</td><td>Excluida — varianza cero</td></tr>
+      <tr><td class="num">14</td><td><b>Q1</b> Rango de edad</td><td>Ordinal (3)</td><td>Demográfica</td><td class="num">73</td><td>Descriptor — confundida con Q3</td></tr>
+      <tr><td class="num">15</td><td><b>Q2</b> Género</td><td>Binaria</td><td>Demográfica</td><td class="num">73</td><td>Excluida — 97.3% hombres</td></tr>
+      <tr><td class="num">16</td><td><b>Q3</b> Antigüedad como GIC</td><td>Ordinal (4)</td><td>Contexto laboral</td><td class="num">71</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">17</td><td><b>Q4</b> Zona / región</td><td>Texto abierto</td><td>Contexto laboral</td><td class="num">68</td><td>Contexto — normalizada</td></tr>
+      <tr><td class="num">18</td><td>Q4 Sentiment</td><td>Categórica</td><td>Metadata NLP</td><td class="num">35</td><td>Excluida — ruido</td></tr>
+      <tr><td class="num">19</td><td><b>Q5</b> Tipo de investigaciones</td><td>Multi-select (6)</td><td>Contexto laboral</td><td class="num">68</td><td>Enriquecimiento · Nivel B</td></tr>
+      <tr><td class="num">20</td><td><b>Q6</b> Dispositivo</td><td>Categórica sucia</td><td>Contexto laboral</td><td class="num">68</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">21</td><td><b>Q7</b> Investigaciones por día</td><td>Ordinal (4)</td><td>Comportamiento</td><td class="num">67</td><td>Descriptor — 86.6% en 1 nivel</td></tr>
+      <tr><td class="num">22</td><td><b>Q8</b> Frecuencia — situación A</td><td>Escala 1–5</td><td>Indeterminada <span class="ev ev-x">sin enunciado</span></td><td class="num">67</td><td><b>Suspendida</b></td></tr>
+      <tr><td class="num">23</td><td><b>Q9</b> Frecuencia — situación B</td><td>Escala 1–5</td><td>Indeterminada <span class="ev ev-x">sin enunciado</span></td><td class="num">67</td><td><b>Suspendida</b></td></tr>
+      <tr><td class="num">24</td><td><b>Q10</b> Frecuencia — situación C</td><td>Escala 1–5</td><td>Indeterminada <span class="ev ev-x">sin enunciado</span></td><td class="num">67</td><td><b>Suspendida</b></td></tr>
+      <tr><td class="num">25</td><td><b>Q11</b> Duración de la investigación</td><td>Ordinal (4)</td><td>Comportamiento</td><td class="num">67</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">26</td><td><b>Q12</b> Parte más lenta</td><td>Categórica (+Other)</td><td>Pain point</td><td class="num">67</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">27</td><td><b>Q13</b> Momento de mayor duda</td><td>Categórica (4)</td><td>Modelo de decisión</td><td class="num">67</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">28</td><td><b>Q14</b> Frustraciones</td><td>Multi-select (9)</td><td>Pain point</td><td class="num">66</td><td>Enriquecimiento · Nivel B</td></tr>
+      <tr><td class="num">29</td><td><b>Q15</b> PAX no ayudó</td><td>Texto abierto</td><td>Pain point cualitativo</td><td class="num">66</td><td><b>Codificación temática</b></td></tr>
+      <tr><td class="num">30</td><td>Q15 Sentiment</td><td>Categórica</td><td>Metadata NLP</td><td class="num">65</td><td>Degradada — 94% negativo</td></tr>
+      <tr><td class="num">31</td><td><b>Q16</b> Motivación</td><td>Multi-select (8)</td><td>Actitud</td><td class="num">66</td><td>Enriquecimiento · Nivel B</td></tr>
+      <tr><td class="num">32</td><td><b>Q17</b> Qué haría que PAX apoye</td><td>Texto abierto</td><td>Necesidad</td><td class="num">66</td><td><b>Codificación temática</b></td></tr>
+      <tr><td class="num">33</td><td>Q17 Sentiment</td><td>Categórica</td><td>Metadata NLP</td><td class="num">66</td><td>Señal complementaria</td></tr>
+      <tr><td class="num">34</td><td><b>Q18</b> Claridad de PAX</td><td>Escala 1–5</td><td>Percepción</td><td class="num">66</td><td>Enriquecimiento · Nivel B</td></tr>
+      <tr><td class="num">35</td><td><b>Q19</b> Casos que requieren Torre</td><td>Multi-select (7+Other)</td><td>Necesidad</td><td class="num">65</td><td>Enriquecimiento · Nivel B</td></tr>
+      <tr><td class="num">36</td><td><b>Q20</b> Utilidad de Torre</td><td>Escala 1–5</td><td>Percepción</td><td class="num">64</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">37</td><td><b>Q21</b> Qué falló en el apoyo</td><td>Texto abierto</td><td>Pain point cualitativo</td><td class="num">64</td><td><b>Codificación temática</b></td></tr>
+      <tr><td class="num">38</td><td>Q21 Sentiment</td><td>Categórica</td><td>Metadata NLP</td><td class="num">56</td><td>Señal complementaria</td></tr>
+      <tr><td class="num">39</td><td><b>Q22</b> Frase que lo representa</td><td>Categórica (5+Other)</td><td>Autopercepción / necesidad</td><td class="num">64</td><td><b>Segmentación · Nivel A</b></td></tr>
+      <tr><td class="num">40</td><td><b>Q23</b> Estilo de trabajo</td><td>Categórica (5)</td><td>Autopercepción</td><td class="num">64</td><td><b>Segmentación · Nivel A</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Poder explicativo — Fase 4</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Nivel</th><th>Variables</th><th>Por qué</th></tr></thead>
+    <tbody>
+      <tr><td><b>A — Muy discriminatorias</b></td><td>Q3 antigüedad · Q6 dispositivo · Q20 utilidad de Torre · Q22 frase · Q23 estilo · Q11 duración · Q12 parte lenta · Q13 duda</td><td>Producen diferencias monótonas o de gran magnitud en comportamiento, percepción y necesidad (§6)</td></tr>
+      <tr><td><b>B — Moderadas</b></td><td>Q14 frustraciones · Q16 motivación · Q19 casos de Torre · Q18 claridad de PAX · Q5 tipo de investigación · textos Q15/Q17/Q21</td><td>Enriquecen el perfil y aportan el detalle accionable, pero separan menos entre grupos</td></tr>
+      <tr><td><b>C — Poco discriminatorias</b></td><td>Q1 edad · Q7 investigaciones/día · Q4 región</td><td>Describen la muestra sin explicar comportamiento; Q7 tiene 86.6% en un nivel y las celdas de región quedan en n=4–20</td></tr>
+      <tr><td><b>Excluidas</b></td><td>Q2 género · Q8/Q9/Q10 · toda la metadata técnica · identificadores · Q4-Sentiment</td><td>Varianza nula, enunciado indeterminado, o sin relación con el trabajo de campo</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section id="s4">
+  <div class="shead"><span class="n">04</span><h2>Frecuencias principales</h2><span class="tag">Fase 2</span></div>
+
+  <h3>Perfil</h3>
+  <div class="bars">
+    <div class="bar"><span class="lb">18–30 años</span><span class="tr"><span class="fl" style="--w:50.7%"></span></span><span class="vv">37 <i>· 50.7%</i></span></div>
+    <div class="bar"><span class="lb">31–45 años</span><span class="tr"><span class="fl" style="--w:35.6%"></span></span><span class="vv">26 <i>· 35.6%</i></span></div>
+    <div class="bar"><span class="lb">46–60 años</span><span class="tr"><span class="fl" style="--w:13.7%"></span></span><span class="vv">10 <i>· 13.7%</i></span></div>
+  </div>
+  <p class="cap">Q1 Rango de edad · N=73 · sin missing.</p>
+
+  <div class="bars">
+    <div class="bar"><span class="lb">Más de 3 años</span><span class="tr"><span class="fl" style="--w:43.7%"></span></span><span class="vv">31 <i>· 43.7%</i></span></div>
+    <div class="bar"><span class="lb">1 a 3 años</span><span class="tr"><span class="fl" style="--w:31.0%"></span></span><span class="vv">22 <i>· 31.0%</i></span></div>
+    <div class="bar"><span class="lb">3 a 6 meses</span><span class="tr"><span class="fl" style="--w:19.7%"></span></span><span class="vv">14 <i>· 19.7%</i></span></div>
+    <div class="bar"><span class="lb">Menos de 3 meses</span><span class="tr"><span class="fl" style="--w:5.6%"></span></span><span class="vv">4 <i>· 5.6%</i></span></div>
+  </div>
+  <p class="cap">Q3 Antigüedad como GIC · N=71 · missing 2. Género (Q2): 71 hombres, 2 mujeres.</p>
+
+  <h3>Territorio y equipo</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Zona normalizada (Q4)</th><th class="num">N</th><th class="num">%</th><th>Dispositivo (Q6)</th><th class="num">N</th><th class="num">%</th></tr></thead>
+    <tbody>
+      <tr><td>Pachuca 2 · Reyes Acozac · Tizayuca · Tequixquiac</td><td class="num">20</td><td class="num">29.4%</td><td>PAX A910</td><td class="num">34</td><td class="num">50.0%</td></tr>
+      <tr><td>Región Pachuca (genérica, 1, 3, 4)</td><td class="num">18</td><td class="num">26.5%</td><td>PAX A960</td><td class="num">29</td><td class="num">42.6%</td></tr>
+      <tr><td>Zumpango</td><td class="num">7</td><td class="num">10.3%</td><td>PAX A920</td><td class="num">4</td><td class="num">5.9%</td></tr>
+      <tr><td>Temascalapa</td><td class="num">6</td><td class="num">8.8%</td><td>«Pax de las viejitas»</td><td class="num">1</td><td class="num">1.5%</td></tr>
+      <tr><td>Sierra — Cardonal · Ixmiquilpan · Atotonilco</td><td class="num">5</td><td class="num">7.4%</td><td></td><td class="num"></td><td class="num"></td></tr>
+      <tr><td>Jilotepec · Chapa de Mota</td><td class="num">4</td><td class="num">5.9%</td><td></td><td class="num"></td><td class="num"></td></tr>
+      <tr><td>Tepeji del Río</td><td class="num">4</td><td class="num">5.9%</td><td></td><td class="num"></td><td class="num"></td></tr>
+      <tr><td>No clasificable</td><td class="num">4</td><td class="num">5.9%</td><td></td><td class="num"></td><td class="num"></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Ambas N=68. La región no se usa para segmentar: las celdas quedan entre n=4 y n=20 y no producen diferencias estables.</p>
+
+  <h3>Carga de trabajo</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Q7 · Investigaciones por día</th><th class="num">N</th><th class="num">%</th><th>Q11 · Duración de una investigación</th><th class="num">N</th><th class="num">%</th></tr></thead>
+    <tbody>
+      <tr><td>1 a 3</td><td class="num">58</td><td class="num">86.6%</td><td>Más de 25 minutos</td><td class="num">25</td><td class="num">37.3%</td></tr>
+      <tr><td>4 a 6</td><td class="num">5</td><td class="num">7.5%</td><td>10 a 15 minutos</td><td class="num">21</td><td class="num">31.3%</td></tr>
+      <tr><td>Más de 10</td><td class="num">3</td><td class="num">4.5%</td><td>15 a 25 minutos</td><td class="num">19</td><td class="num">28.4%</td></tr>
+      <tr><td><code>Other</code> — depende de la sucursal y la zona</td><td class="num">1</td><td class="num">1.5%</td><td>Menos de 10 minutos</td><td class="num">2</td><td class="num">3.0%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Ambas N=67 · missing 6.</p>
+
+  <h3>Tipo de investigación · multi-respuesta</h3>
+  <div class="bars">
+    <div class="bar"><span class="lb">Contactabilidad cliente</span><span class="tr"><span class="fl" style="--w:91.2%"></span></span><span class="vv">62 <i>· 91.2%</i></span></div>
+    <div class="bar"><span class="lb">Contactabilidad laboral</span><span class="tr"><span class="fl" style="--w:73.5%"></span></span><span class="vv">50 <i>· 73.5%</i></span></div>
+    <div class="bar"><span class="lb">Red de contactos ampliada</span><span class="tr"><span class="fl" style="--w:52.9%"></span></span><span class="vv">36 <i>· 52.9%</i></span></div>
+    <div class="bar"><span class="lb">Cambio de domicilio</span><span class="tr"><span class="fl" style="--w:45.6%"></span></span><span class="vv">31 <i>· 45.6%</i></span></div>
+    <div class="bar"><span class="lb">Reactivación PCJ / RMD</span><span class="tr"><span class="fl" style="--w:13.2%"></span></span><span class="vv">9 <i>· 13.2%</i></span></div>
+    <div class="bar"><span class="lb">Micronegocio / Changarros</span><span class="tr"><span class="fl" style="--w:2.9%"></span></span><span class="vv">2 <i>· 2.9%</i></span></div>
+  </div>
+  <p class="cap">Q5 · N=68 respondientes · 50 dieron respuesta múltiple. Porcentaje sobre respondientes, no sobre menciones.</p>
+
+  <h3>Fricción</h3>
+  <div class="bars">
+    <div class="bar f"><span class="lb">Reconocimiento facial / huella</span><span class="tr"><span class="fl" style="--w:49.3%"></span></span><span class="vv">33 <i>· 49.3%</i></span></div>
+    <div class="bar f"><span class="lb">Llegar al domicilio</span><span class="tr"><span class="fl" style="--w:29.9%"></span></span><span class="vv">20 <i>· 29.9%</i></span></div>
+    <div class="bar f"><span class="lb">Referencias</span><span class="tr"><span class="fl" style="--w:13.4%"></span></span><span class="vv">9 <i>· 13.4%</i></span></div>
+    <div class="bar f"><span class="lb">Verificación de datos e INE</span><span class="tr"><span class="fl" style="--w:3.0%"></span></span><span class="vv">2 <i>· 3.0%</i></span></div>
+    <div class="bar f"><span class="lb">Video testimonial</span><span class="tr"><span class="fl" style="--w:1.5%"></span></span><span class="vv">1 <i>· 1.5%</i></span></div>
+    <div class="bar f"><span class="lb"><code>Other</code></span><span class="tr"><span class="fl" style="--w:3.0%"></span></span><span class="vv">2 <i>· 3.0%</i></span></div>
+  </div>
+  <p class="cap">Q12 Parte que toma más tiempo · N=67.</p>
+
+  <div class="bars">
+    <div class="bar f"><span class="lb">Falta de señal o conexión</span><span class="tr"><span class="fl" style="--w:71.2%"></span></span><span class="vv">47 <i>· 71.2%</i></span></div>
+    <div class="bar f"><span class="lb">PAX lenta o con errores</span><span class="tr"><span class="fl" style="--w:59.1%"></span></span><span class="vv">39 <i>· 59.1%</i></span></div>
+    <div class="bar f"><span class="lb">Información incompleta del cliente</span><span class="tr"><span class="fl" style="--w:45.5%"></span></span><span class="vv">30 <i>· 45.5%</i></span></div>
+    <div class="bar f"><span class="lb">Dirección incorrecta o difícil</span><span class="tr"><span class="fl" style="--w:42.4%"></span></span><span class="vv">28 <i>· 42.4%</i></span></div>
+    <div class="bar f"><span class="lb">Cliente no localizado o ausente</span><span class="tr"><span class="fl" style="--w:40.9%"></span></span><span class="vv">27 <i>· 40.9%</i></span></div>
+    <div class="bar f"><span class="lb">Tener que repetir pasos</span><span class="tr"><span class="fl" style="--w:12.1%"></span></span><span class="vv">8 <i>· 12.1%</i></span></div>
+    <div class="bar f"><span class="lb">Riesgo o inseguridad en campo</span><span class="tr"><span class="fl" style="--w:10.6%"></span></span><span class="vv">7 <i>· 10.6%</i></span></div>
+    <div class="bar f"><span class="lb">Falta de apoyo de Torre</span><span class="tr"><span class="fl" style="--w:7.6%"></span></span><span class="vv">5 <i>· 7.6%</i></span></div>
+    <div class="bar f"><span class="lb">Instrucciones poco claras</span><span class="tr"><span class="fl" style="--w:4.5%"></span></span><span class="vv">3 <i>· 4.5%</i></span></div>
+  </div>
+  <p class="cap">Q14 Frustraciones · N=66 · 58 con respuesta múltiple.</p>
+
+  <h3>Decisión y motivación</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Q13 · Momento de mayor duda</th><th class="num">N</th><th class="num">%</th><th>Q16 · Motivación (multi)</th><th class="num">N</th><th class="num">%</th></tr></thead>
+    <tbody>
+      <tr><td>Si tiene capacidad de pago</td><td class="num">22</td><td class="num">32.8%</td><td>Ganar comisión</td><td class="num">55</td><td class="num">83.3%</td></tr>
+      <tr><td>Si la evidencia que capturé es suficiente</td><td class="num">16</td><td class="num">23.9%</td><td>Cumplir mi meta</td><td class="num">44</td><td class="num">66.7%</td></tr>
+      <tr><td>Si debo recomendar o no recomendar</td><td class="num">15</td><td class="num">22.4%</td><td>Tener control de mi tiempo y ruta</td><td class="num">23</td><td class="num">34.8%</td></tr>
+      <tr><td>Si el cliente vive en ese domicilio</td><td class="num">14</td><td class="num">20.9%</td><td>Ser reconocido por mi desempeño</td><td class="num">20</td><td class="num">30.3%</td></tr>
+      <tr><td></td><td class="num"></td><td class="num"></td><td>Aprender y mejorar mi criterio</td><td class="num">19</td><td class="num">28.8%</td></tr>
+      <tr><td></td><td class="num"></td><td class="num"></td><td>Ayudar al cliente a obtener su crédito</td><td class="num">15</td><td class="num">22.7%</td></tr>
+      <tr><td></td><td class="num"></td><td class="num"></td><td>Resolver rápido y avanzar en la ruta</td><td class="num">14</td><td class="num">21.2%</td></tr>
+      <tr><td></td><td class="num"></td><td class="num"></td><td>Competencia sana con otros gestores</td><td class="num">13</td><td class="num">19.7%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Q13 N=67 · Q16 N=66.</p>
+
+  <h3>Autopercepción</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Q22 · Frase que lo representa</th><th class="num">N</th><th class="num">%</th><th>Q23 · Estilo de trabajo</th><th class="num">N</th><th class="num">%</th></tr></thead>
+    <tbody>
+      <tr><td>«Quiero asegurarme de no cometer errores antes de avanzar»</td><td class="num">19</td><td class="num">29.7%</td><td>Social y negociador</td><td class="num">24</td><td class="num">37.5%</td></tr>
+      <tr><td>«Quiero resolver rápido y seguir con mi ruta»</td><td class="num">18</td><td class="num">28.1%</td><td>Cuidadoso y detallista</td><td class="num">21</td><td class="num">32.8%</td></tr>
+      <tr><td>«Quiero más información del cliente antes de llegar»</td><td class="num">16</td><td class="num">25.0%</td><td>Rápido y práctico</td><td class="num">12</td><td class="num">18.8%</td></tr>
+      <tr><td>«Quiero que PAX me guíe paso a paso»</td><td class="num">6</td><td class="num">9.4%</td><td>Resolutivo bajo presión</td><td class="num">6</td><td class="num">9.4%</td></tr>
+      <tr><td>«Quiero tener más apoyo cuando algo se complica»</td><td class="num">4</td><td class="num">6.2%</td><td>Dependiente del proceso</td><td class="num">1</td><td class="num">1.6%</td></tr>
+      <tr><td><code>Other</code> — ver quién originó la LCR y los calendarios de pago</td><td class="num">1</td><td class="num">1.6%</td><td></td><td class="num"></td><td class="num"></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Ambas N=64 · missing 9 (los abandonos).</p>
+
+  <h3>Escalas</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Escala 1–5</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">Media</th><th class="num">Mediana</th><th class="num">SD</th><th class="num">N</th></tr></thead>
+    <tbody>
+      <tr><td><b>Q18</b> Claridad de PAX antes de la visita</td><td class="num">2</td><td class="num">6</td><td class="num">18</td><td class="num">18</td><td class="num">22</td><td class="num">3.79</td><td class="num">4</td><td class="num">1.09</td><td class="num">66</td></tr>
+      <tr><td><b>Q20</b> Utilidad de Torre de Control</td><td class="num">17</td><td class="num">8</td><td class="num">13</td><td class="num">16</td><td class="num">10</td><td class="num">2.91</td><td class="num">3</td><td class="num">1.43</td><td class="num">64</td></tr>
+      <tr><td><b>Q8</b> Frecuencia — situación A <span class="ev ev-x">sin enunciado</span></td><td class="num">23</td><td class="num">17</td><td class="num">15</td><td class="num">6</td><td class="num">6</td><td class="num">2.33</td><td class="num">2</td><td class="num">1.27</td><td class="num">67</td></tr>
+      <tr><td><b>Q9</b> Frecuencia — situación B <span class="ev ev-x">sin enunciado</span></td><td class="num">5</td><td class="num">11</td><td class="num">17</td><td class="num">22</td><td class="num">12</td><td class="num">3.37</td><td class="num">4</td><td class="num">1.17</td><td class="num">67</td></tr>
+      <tr><td><b>Q10</b> Frecuencia — situación C <span class="ev ev-x">sin enunciado</span></td><td class="num">12</td><td class="num">13</td><td class="num">20</td><td class="num">13</td><td class="num">9</td><td class="num">2.91</td><td class="num">3</td><td class="num">1.28</td><td class="num">67</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Q8–Q10 con enunciado indeterminado: se reportan por completitud, no se interpretan. Q20 es la distribución más polarizada del estudio (bimodal en los extremos).</p>
+
+  <h3>Casos que requieren Torre de Control</h3>
+  <div class="bars">
+    <div class="bar"><span class="lb">El cliente no está o no contesta</span><span class="tr"><span class="fl" style="--w:61.5%"></span></span><span class="vv">40 <i>· 61.5%</i></span></div>
+    <div class="bar"><span class="lb">No encuentro el domicilio</span><span class="tr"><span class="fl" style="--w:58.5%"></span></span><span class="vv">38 <i>· 58.5%</i></span></div>
+    <div class="bar"><span class="lb">Hay riesgo o inseguridad en campo</span><span class="tr"><span class="fl" style="--w:26.2%"></span></span><span class="vv">17 <i>· 26.2%</i></span></div>
+    <div class="bar"><span class="lb">Las referencias no contestan</span><span class="tr"><span class="fl" style="--w:21.5%"></span></span><span class="vv">14 <i>· 21.5%</i></span></div>
+    <div class="bar"><span class="lb">El cliente no tiene documentos</span><span class="tr"><span class="fl" style="--w:20.0%"></span></span><span class="vv">13 <i>· 20.0%</i></span></div>
+    <div class="bar"><span class="lb">Tengo dudas del proceso</span><span class="tr"><span class="fl" style="--w:6.2%"></span></span><span class="vv">4 <i>· 6.2%</i></span></div>
+    <div class="bar"><span class="lb">El cliente no quiere grabar el video</span><span class="tr"><span class="fl" style="--w:4.6%"></span></span><span class="vv">3 <i>· 4.6%</i></span></div>
+    <div class="bar"><span class="lb"><code>Other</code> — 7 respuestas únicas</span><span class="tr"><span class="fl" style="--w:10.8%"></span></span><span class="vv">7 <i>· 10.8%</i></span></div>
+  </div>
+  <p class="cap">Q19 · N=65 · 41 con respuesta múltiple. Solo 6.2% acude a Torre por dudas de proceso: el soporte se usa para bloqueos externos, no para aprender el flujo.</p>
+</section>
+
+<!-- ============ 5 ============ -->
+<section id="s5">
+  <div class="shead"><span class="n">05</span><h2>Hallazgos cualitativos</h2><span class="tag">Fase 3 · codificación temática</span></div>
+  <p class="lede measure">Las tres preguntas abiertas sobre PAX y Torre se leyeron una por una y se codificaron por contenido. Una respuesta puede llevar más de un código; los porcentajes son sobre respondientes con contenido codificable.</p>
+
+  <h3>Q15 · «Describe una situación reciente donde PAX no te ayudó como esperabas»</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Tema</th><th>Qué describe</th><th class="num">N</th><th class="num">%</th><th>Paráfrasis representativa</th></tr></thead>
+    <tbody>
+      <tr><td><b>Captura biométrica facial</b></td><td>La foto no detona, no reconoce el rostro, exige gestos exactos (sonrisa / cara seria), rechaza al cliente correcto</td><td class="num">42</td><td class="num">64.6%</td><td>«Cuando tomas la foto y sonríe, la PAX no lo detecta hasta que haga una mueca grande»</td></tr>
+      <tr><td><b>Inestabilidad y lentitud</b></td><td>Se reinicia sola, se traba, se sale de la aplicación, tarda en cargar ruta o actualizar</td><td class="num">23</td><td class="num">35.4%</td><td>«Iba avanzando todo bien y de repente aparece la cuenta regresiva de que se reiniciará»</td></tr>
+      <tr><td><b>Señal / cobertura / datos</b></td><td>Sin cobertura no deja avanzar ni cerrar la validación</td><td class="num">10</td><td class="num">15.4%</td><td>«Se fue la señal por cobertura y no me dejó terminar la validación»</td></tr>
+      <tr><td><b>Exigencia de iluminación</b></td><td>Pide más luz incluso a pleno sol o con buena iluminación</td><td class="num">8</td><td class="num">12.3%</td><td>«Aunque pongas al cliente bajo el rayo del sol, dice “se necesita más luz”»</td></tr>
+      <tr><td><b>Navegación / GPS</b></td><td>El GPS no funciona, el punto se mueve, no permite abrir mapas</td><td class="num">7</td><td class="num">10.8%</td><td>«Voy hacia el domicilio, el GPS no funciona y tengo que adivinar»</td></tr>
+      <tr><td><b>Lectura de huella</b></td><td>Tarda o no captura la huella</td><td class="num">5</td><td class="num">7.7%</td><td>«La PAX tarda mucho en capturar la huella»</td></tr>
+      <tr><td><b>Datos y referencias del cliente</b></td><td>Faltan datos, las referencias no concuerdan con la entrevista</td><td class="num">4</td><td class="num">6.2%</td><td>«Nunca concuerda con lo que dicen las referencias»</td></tr>
+      <tr><td><b>Pérdida de avance</b></td><td>Hay que empezar el flujo desde la foto de fachada</td><td class="num">3</td><td class="num">4.6%</td><td>«Me saca la PAX y tengo que empezar de nuevo desde la foto de fachada»</td></tr>
+      <tr><td><b>Estados de la solicitud</b></td><td>El estatus cambia solo o no se ve la autorización</td><td class="num">2</td><td class="num">3.1%</td><td>«Di rechazo y en automático se salió; después se marcó como reencauce»</td></tr>
+      <tr><td>Sin contenido codificable</td><td>—</td><td class="num">2</td><td class="num">3.1%</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">N=65 con contenido · sentimiento dominante: Negative en 61 de 65 (93.8%). La etiqueta está saturada y no discrimina: la pregunta pide explícitamente una queja.</p>
+
+  <div class="call">
+    <h4>El caso de la parálisis facial</h4>
+    <p>Un participante reporta: <em>«Señora con parálisis en el rostro y no detectaba el reconocimiento facial»</em>. Es un solo caso y no puede generalizarse, pero señala una clase de fallo que ninguna métrica agregada captura: el gate biométrico basado en gestos excluye a clientes que no pueden producirlos. <span class="ev ev-x">n=1 · señal</span></p>
+  </div>
+
+  <h3>Q17 · «¿Qué te haría sentir que PAX realmente te apoya?»</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Tema</th><th>Qué pide</th><th class="num">N</th><th class="num">%</th><th>Paráfrasis representativa</th></tr></thead>
+    <tbody>
+      <tr><td><b>Velocidad y estabilidad</b></td><td>Que sea ágil, que no se trabe ni se reinicie, equipos más nuevos</td><td class="num">19</td><td class="num">30.2%</td><td>«Que ya se actualicen las PAX por un equipo más nuevo para evitar fallas»</td></tr>
+      <tr><td><b>Cobertura y conexión</b></td><td>Más recepción, no perder señal a media gestión</td><td class="num">17</td><td class="num">27.0%</td><td>«Que no tuviera falla en la conexión para recargar ruta y hacer solicitudes»</td></tr>
+      <tr><td><b>Ubicación correcta y ruteo</b></td><td>Punto GPS bien colocado, ruta como en cobranza, zonificación correcta</td><td class="num">14</td><td class="num">22.2%</td><td>«Generar una ruta como en cobranza para llegar al punto GPS»</td></tr>
+      <tr><td><b>Autonomía para decidir en campo</b></td><td>Poder rechazar, reagendar, declinar o reencauzar sin depender de Torre</td><td class="num">13</td><td class="num">20.6%</td><td>«Tomar decisiones al momento de rechazar o reagendar y no depender de Torre de Control»</td></tr>
+      <tr><td><b>Información previa verificada</b></td><td>Que la dirección esté confirmada, saber quién originó la LCR, ver otros créditos en el domicilio</td><td class="num">10</td><td class="num">15.9%</td><td>«Que ya sea confirmada la dirección y que el cliente realmente quiere el crédito»</td></tr>
+      <tr><td><b>Datos de contacto útiles</b></td><td>Números actualizados, dejar recado, mensajería</td><td class="num">7</td><td class="num">11.1%</td><td>«Que pudiera agregar apps como WhatsApp para envío de mensajes»</td></tr>
+      <tr><td><b>Filtrado previo de solicitudes inviables</b></td><td>No enviar casos que no califican</td><td class="num">1</td><td class="num">1.6%</td><td>«Que en las solicitudes no tengan la opción 4 pasos si no tienen ingreso»</td></tr>
+      <tr><td>Sin contenido codificable</td><td>—</td><td class="num">6</td><td class="num">9.5%</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">N=63 con contenido · sentimiento: 34 Negative / 16 Neutral / 16 Positive sobre N=66. Aquí el sentimiento sí varía y acompaña al contenido: los temas de autonomía concentran las respuestas negativas.</p>
+
+  <div class="call t">
+    <h4>Lectura de producto</h4>
+    <p>Sumados, <b>velocidad + cobertura</b> (57.2%) son una demanda de infraestructura. Pero <b>autonomía + información previa verificada</b> (36.5%) son una demanda de <em>diseño de producto</em>: no piden que PAX les diga qué hacer, piden que les permita hacerlo. Solo <b>1.6%</b> de los temas pide instrucciones más precisas.</p>
+  </div>
+
+  <h3>Q21 · «¿Qué falló en el apoyo que recibiste?»</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Tema</th><th>Qué describe</th><th class="num">N</th><th class="num">%</th><th>Paráfrasis representativa</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tiempo de respuesta</b></td><td>Tardan, no contestan, dejan esperando; se citan esperas de 20 y 25 minutos</td><td class="num">12</td><td class="num">18.8%</td><td>«El tiempo de espera de Torre ha sido de hasta 25 minutos»</td></tr>
+      <tr><td><b>Sin problema / experiencia positiva</b></td><td>«Nada», «todo bien», resuelven siempre</td><td class="num">11</td><td class="num">17.2%</td><td>«Cuando se pide apoyo ellos se encargan de contactar al cliente para que no pierdas tiempo»</td></tr>
+      <tr><td><b>No dan solución</b></td><td>Atienden pero el problema queda igual</td><td class="num">9</td><td class="num">14.1%</td><td>«Pésima atención y no solucionan nada»</td></tr>
+      <tr><td><b>Tampoco logran contactar al cliente</b></td><td>El bloqueo que motivó la llamada persiste después de la llamada</td><td class="num">7</td><td class="num">10.9%</td><td>«El cliente no fue contactado porque el número que proporcionó era inválido»</td></tr>
+      <tr><td><b>Insisten contra la evidencia del gestor</b></td><td>Reprograman o reencauzan aunque el gestor verificó en sitio que el domicilio es falso</td><td class="num">6</td><td class="num">9.4%</td><td>«Se les explica que el domicilio no existe y aun así insisten en que se debe llevar a cabo»</td></tr>
+      <tr><td><b>Solo levantan ticket o folio</b></td><td>El resultado de la llamada es un número de folio</td><td class="num">3</td><td class="num">4.7%</td><td>«Solo levantan ticket, no se soluciona»</td></tr>
+      <tr><td><b>Respuesta poco clara</b></td><td>No dan una indicación accionable</td><td class="num">3</td><td class="num">4.7%</td><td>«Luego no dar una solución clara»</td></tr>
+      <tr><td><b>La llamada misma falla</b></td><td>Se corta por cobertura, se entrelazan llamadas</td><td class="num">3</td><td class="num">4.7%</td><td>«Por falta de cobertura Torre de Control cortó la llamada»</td></tr>
+      <tr><td><b>Torre no aporta valor diferencial</b></td><td>Torre tiene los mismos datos y el mismo resultado que el gestor</td><td class="num">2</td><td class="num">3.1%</td><td>«Si el cliente no contesta es porque Torre tampoco lo puede contactar»</td></tr>
+      <tr><td><b>Presión para forzar un resultado</b></td><td>Piden completar o autorizar pese al criterio del gestor</td><td class="num">2</td><td class="num">3.1%</td><td>«Quieren que se autorice la LCR sin evaluación del criterio de autorización»</td></tr>
+      <tr><td><b>Ubicación del domicilio</b></td><td>El apoyo falla justo en encontrar la dirección</td><td class="num">2</td><td class="num">3.1%</td><td>«En encontrar el domicilio»</td></tr>
+      <tr><td><b>Respuesta fuera de tiempo útil</b></td><td>Devuelven la llamada cuando el caso ya se cerró</td><td class="num">1</td><td class="num">1.6%</td><td>«Llaman después de que ya se gestionó la validación y me dirijo a otra tarea»</td></tr>
+      <tr><td>No aplica / no lo ha usado</td><td>—</td><td class="num">2</td><td class="num">3.1%</td><td>—</td></tr>
+      <tr><td>Sin contenido codificable</td><td>—</td><td class="num">3</td><td class="num">4.7%</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">N=64 · algunas respuestas llevan dos códigos. Sentimiento: 43 Negative / 8 Positive / 5 Neutral sobre N=56.</p>
+
+  <div class="call">
+    <h4>Dos quejas de distinta naturaleza</h4>
+    <p>Las quejas de <b>tiempo</b> (18.8%) y de <b>no resolver</b> (14.1%) son problemas de servicio: se atacan con SLA y capacidad. Las de <b>insistir contra la evidencia</b> (9.4%) y <b>presionar por un resultado</b> (3.1%) son problemas de <b>autoridad</b>: describen a un actor remoto sobreescribiendo la observación de quien está frente al cliente. Ese subgrupo es el que concentra las calificaciones de utilidad en «1», y es el mismo que en Q17 pide autonomía para decidir en campo.</p>
+  </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section id="s6">
+  <div class="shead"><span class="n">06</span><h2>Relaciones entre variables</h2><span class="tag">Fase 6</span></div>
+  <p class="lede measure">Asociaciones observadas, no causas. Cada fila declara su N y su nivel de confianza; las relaciones débiles se marcan como tales en vez de omitirse.</p>
+
+  <h3>La erosión de Torre de Control</h3>
+  <div class="chartbox">
+    <svg viewBox="0 0 620 240" role="img" aria-label="Utilidad percibida de Torre de Control por antigüedad: 4.25 con menos de 3 meses, 3.50 a los 3-6 meses, 2.75 entre 1 y 3 años, 2.53 con más de 3 años">
+      <g class="cg">
+        <line x1="86" y1="30" x2="600" y2="30"></line>
+        <line x1="86" y1="72" x2="600" y2="72"></line>
+        <line x1="86" y1="114" x2="600" y2="114"></line>
+        <line x1="86" y1="156" x2="600" y2="156"></line>
+        <line x1="86" y1="198" x2="600" y2="198"></line>
+      </g>
+      <g class="ct" text-anchor="end">
+        <text x="76" y="34">5.0</text>
+        <text x="76" y="76">4.0</text>
+        <text x="76" y="118">3.0</text>
+        <text x="76" y="160">2.0</text>
+        <text x="76" y="202">1.0</text>
+      </g>
+      <polyline class="cline" points="150,61.5 300,93 450,124.5 570,133.7"></polyline>
+      <g class="cdot">
+        <circle cx="150" cy="61.5" r="5"></circle>
+        <circle cx="300" cy="93" r="5"></circle>
+        <circle cx="450" cy="124.5" r="5"></circle>
+        <circle cx="570" cy="133.7" r="5"></circle>
+      </g>
+      <g class="cval" text-anchor="middle">
+        <text x="150" y="49">4.25</text>
+        <text x="300" y="80">3.50</text>
+        <text x="450" y="112">2.75</text>
+        <text x="570" y="121">2.53</text>
+      </g>
+      <g class="cx" text-anchor="middle">
+        <text x="150" y="222">&lt; 3 meses</text><text x="150" y="234">n=4</text>
+        <text x="300" y="222">3–6 meses</text><text x="300" y="234">n=14</text>
+        <text x="450" y="222">1–3 años</text><text x="450" y="234">n=16</text>
+        <text x="570" y="222">+3 años</text><text x="570" y="234">n=30</text>
+      </g>
+    </svg>
+  </div>
+  <p class="cap">Q20 utilidad percibida de Torre de Control (media 1–5) por Q3 antigüedad. Descenso monótono. La celda de &lt;3 meses es pequeña (n=4) pero el resto del gradiente se sostiene sobre n=14, 16 y 30.</p>
+
+  <h3>El corte por dispositivo</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Indicador</th><th class="num">PAX A910</th><th class="num">PAX A960</th><th class="num">Brecha</th><th>Lectura</th></tr></thead>
+    <tbody>
+      <tr><td>Claridad de PAX antes de la visita (Q18, media)</td><td class="num">3.30</td><td class="num">4.29</td><td class="num">+0.99</td><td>Diferencia grande</td></tr>
+      <tr><td>«PAX lenta o con errores» (Q14)</td><td class="num">76%</td><td class="num">39%</td><td class="num">+37 pp</td><td>Diferencia grande</td></tr>
+      <tr><td>Utilidad de Torre (Q20, media)</td><td class="num">2.50</td><td class="num">3.26</td><td class="num">+0.76</td><td>Probable arrastre del anterior</td></tr>
+      <tr><td><b>«Falta de señal o conexión» (Q14)</b></td><td class="num">70%</td><td class="num">71%</td><td class="num">−1 pp</td><td><b>Sin diferencia — control</b></td></tr>
+      <tr><td><b>Menciona captura facial en Q15</b></td><td class="num">64%</td><td class="num">64%</td><td class="num">0 pp</td><td><b>Sin diferencia — control</b></td></tr>
+      <tr><td>«Tener que repetir pasos» (Q14)</td><td class="num">12%</td><td class="num">14%</td><td class="num">−2 pp</td><td>Sin diferencia</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">n=33 (A910) y n=28 (A960) con respuesta en Q14. La antigüedad está repartida de forma pareja entre ambos equipos (A910: 15 veteranos / 19 no veteranos; A960: 14 / 15), así que la brecha no se explica por veteranía.</p>
+
+  <div class="call t">
+    <h4>Por qué los dos controles importan más que la brecha</h4>
+    <p>Que señal (70/71%) y captura facial (64/64%) no se muevan entre equipos es lo que convierte este cruce en accionable: <b>el equipo explica la lentitud percibida, no la conectividad ni el fallo biométrico</b>. Renovar el parque de A910 mejoraría la percepción de PAX; dejaría intactos los dos problemas que más tiempo consumen en campo.</p>
+  </div>
+
+  <h3>Matriz de relaciones</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Variable A</th><th>Variable B</th><th>Patrón observado</th><th class="num">Fuerza</th><th class="num">N</th><th>Interpretación</th></tr></thead>
+    <tbody>
+      <tr><td>Q3 Antigüedad</td><td>Q20 Utilidad de Torre</td><td>4.25 → 3.50 → 2.75 → 2.53, monótono</td><td class="num">Alta</td><td class="num">64</td><td>La dependencia del soporte se sustituye por criterio propio, o el soporte deja de agregar valor a quien ya sabe. Ambas lecturas caben.</td></tr>
+      <tr><td>Q6 Dispositivo</td><td>Q18 Claridad + Q14 «PAX lenta»</td><td>A910 peor en ambos; controles sin diferencia</td><td class="num">Alta</td><td class="num">61</td><td>El hardware condiciona la percepción del software.</td></tr>
+      <tr><td>Q12 = «Referencias»</td><td>Q13 Mayor duda</td><td>8 de 9 dudan en «recomendar o no» vs 12–15% del resto</td><td class="num">Alta</td><td class="num">9</td><td>Las referencias no son un trámite: son el insumo con el que se construye la recomendación. <span class="ev ev-h">celda pequeña</span></td></tr>
+      <tr><td>Q22 Frase</td><td>Q20 Utilidad de Torre</td><td>«Guíe paso a paso» 4.33 · «No cometer errores» 3.37 · «Resolver rápido» 2.44 · «Más info» 2.44</td><td class="num">Alta</td><td class="num">64</td><td>Quien quiere autonomía informativa no valora un soporte que decide por él.</td></tr>
+      <tr><td>Q18 Claridad de PAX</td><td>Q20 Utilidad de Torre</td><td>r = +0.47</td><td class="num">Moderada</td><td class="num">64</td><td>Se evalúan como un mismo sistema de apoyo, no como servicios separados.</td></tr>
+      <tr><td>Q3 Antigüedad</td><td>Q16 «Control de mi tiempo y ruta»</td><td>0% → 14% → 28% → 53%</td><td class="num">Moderada</td><td class="num">66</td><td>La autonomía sobre la agenda es una recompensa que se gana con los años.</td></tr>
+      <tr><td>Q3 Antigüedad</td><td>Q16 «Aprender» y «Ser reconocido»</td><td>39–43% en novatos vs 20% en veteranos</td><td class="num">Moderada</td><td class="num">66</td><td>Movimiento inverso al anterior: el motivador cambia de forma, no de intensidad.</td></tr>
+      <tr><td>Q11 Duración</td><td>Q18 Claridad de PAX</td><td>10–15 min → 4.14 · más de 25 min → 3.56</td><td class="num">Moderada-baja</td><td class="num">66</td><td>Compatible con dos direcciones: información pobre alarga la visita, o visitas difíciles hacen ver pobre a la información.</td></tr>
+      <tr><td>Q18 baja (1–2)</td><td>Q14 «PAX lenta»</td><td>88% vs 48% entre quienes puntúan 4–5</td><td class="num">Moderada</td><td class="num">48</td><td>«Poco clara» y «lenta» se reportan juntas: probablemente sea una sola experiencia. <span class="ev ev-h">n=8 en el extremo bajo</span></td></tr>
+      <tr><td>Q23 Estilo</td><td>Q20 Utilidad de Torre</td><td>Cuidadoso 3.14 · Resolutivo 3.00 · Social 2.83 · Rápido 2.50</td><td class="num">Baja</td><td class="num">64</td><td>Ordena en la dirección esperada pero el rango es estrecho. <span class="ev ev-h">débil</span></td></tr>
+      <tr><td>Q1 Edad</td><td>Q3 Antigüedad</td><td>16 de 18 novatos tienen 18–30 años</td><td class="num">Alta</td><td class="num">71</td><td><b>Confusión, no hallazgo.</b> Impide atribuir a la edad cualquier efecto de antigüedad.</td></tr>
+      <tr><td>Q4 Región</td><td>Q11 · Q12</td><td>Celdas de n=4 a n=20, sin patrón estable</td><td class="num">No concluyente</td><td class="num">68</td><td>Insuficiente para modelar territorio. <span class="ev ev-h">no usar</span></td></tr>
+      <tr><td>Q8 · Q9 · Q10</td><td>Entre sí y con Q18/Q20</td><td>r = +0.23 a +0.35 entre sí; ≈0 contra Q18 y Q20</td><td class="num">No interpretable</td><td class="num">67</td><td>Confirma que son tres ítems distintos, pero sin enunciado no se pueden nombrar.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call">
+    <h4>Lo que no se encontró</h4>
+    <p>No hay asociación utilizable entre <b>género</b> y nada (n=2 mujeres). No hay diferencia clara por <b>edad</b> una vez que se controla antigüedad, hasta donde permite ver una muestra de 73. No hay relación entre las escalas de frecuencia semanal y la percepción de PAX o Torre. Y <b>Q7 investigaciones por día</b> no separa a nadie: 86.6% cae en el mismo nivel.</p>
+  </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section id="s7">
+  <div class="shead"><span class="n">07</span><h2>Segmentos identificados</h2><span class="tag">Fase 5 · 4 grupos</span></div>
+  <p class="lede measure">No se fijó de antemano cuántos segmentos debían existir. Se buscó el número mínimo capaz de explicar diferencias reales en duración de la visita, momento de duda, dependencia de Torre y qué le piden a PAX. Cuatro grupos cubren 63 de los 64 respondientes válidos.</p>
+
+  <div class="call">
+    <h4>Cómo se asignó cada participante</h4>
+    <p>Reglas en orden de prioridad, sobre variables de Nivel A: <b>(1)</b> antigüedad ≤ 6 meses → <b>Segmento C</b>, porque la etapa de aprendizaje domina cualquier otro rasgo y produce el gradiente más fuerte del estudio; <b>(2)</b> «resolver rápido» en Q22 o «rápido y práctico» en Q23 → <b>B</b>; <b>(3)</b> «no cometer errores», «guíe paso a paso» o «más apoyo cuando algo se complica» → <b>D</b>; <b>(4)</b> «más información del cliente antes de llegar» → <b>A</b>. Quedan fuera 10 casos: los 9 abandonos y 1 respuesta <code>Other</code>.</p>
+  </div>
+
+  <!-- SEG A -->
+  <article class="seg">
+    <header class="seghd">
+      <span class="segcode">A</span>
+      <div class="segname"><h3>Veterano que pide inteligencia previa</h3><p>Confía en su criterio; lo que le falta es contexto antes de tocar la puerta</p></div>
+      <div class="segn"><b>13</b><span>20.6% de los clasificados</span></div>
+    </header>
+    <div class="segbody">
+      <div class="fld"><span class="fl-l">Variables que lo definen</span><p>Q22 = «Quiero más información del cliente antes de llegar» en <b>13/13</b>. Antigüedad: más de 3 años en 9, 1–3 años en 4 — <b>ningún novato</b>. Utilidad de Torre <b>2.15</b>, la más baja de los cuatro; 6 de 13 la califican «1».</p></div>
+      <div class="fld"><span class="fl-l">Variables secundarias</span><p>Estilo social y negociador (7) o cuidadoso (4). Claridad de PAX 3.54. Dispositivo A910 en 9 de 13. Edad concentrada en 31–45 (7).</p></div>
+      <div class="fld"><span class="fl-l">Comportamientos</span><p>Trabaja 1–3 investigaciones al día (9/13) con duración repartida: 5 las cierra en 10–15 min y 4 pasan de 25. La parte más lenta es el reconocimiento facial (8/13). Resuelve en campo antes que escalar.</p></div>
+      <div class="fld"><span class="fl-l">Fricciones</span><p>PAX lenta o con errores <b>69%</b> · dirección incorrecta o difícil <b>62%</b> · falta de señal <b>62%</b> · información incompleta del cliente <b>46%</b>. Es el único segmento donde la dirección empata con la señal.</p></div>
+      <div class="fld"><span class="fl-l">Necesidades</span><p>Datos verificados del cliente antes de salir: dirección confirmada, referencias que sirvan, historial en el domicilio, origen de la LCR. Motivación: comisión 77%, meta 62% y <b>control de mi tiempo y ruta 62%</b> — el valor más alto de los cuatro segmentos.</p></div>
+      <div class="fld"><span class="fl-l">Relación con PAX</span><p>La ve como un ejecutor lento, no como un asesor. No quiere que le diga qué hacer; quiere que le entregue mejor materia prima. Rechaza cualquier paso adicional.</p></div>
+      <div class="fld"><span class="fl-l">Relación con Torre</span><p>La usa cuando no encuentra el domicilio (54%) o el cliente no está (54%), pero con expectativa baja. Es el segmento que verbaliza la objeción de autoridad: depender de quien no está frente al cliente «le resta autoridad» al gestor.</p></div>
+      <div class="fld"><span class="fl-l">Qué lo separa</span><p>De <b>B</b>: no optimiza velocidad, optimiza acierto informado. De <b>D</b>: no teme equivocarse, le molesta trabajar a ciegas. De <b>C</b>: no busca aprender, busca insumos.</p></div>
+      <div class="fld ev-row"><span class="fl-l">Evidencia y confianza</span><p><span class="ev ev-o">Observado</span> las cuatro variables definitorias y las frecuencias. <span class="ev ev-i">Inferido</span> la lectura de «ejecutor lento» a partir de Q17 + Q14. <b>Confianza: alta</b> — n=13 con una variable definitoria al 100%.</p></div>
+    </div>
+  </article>
+
+  <!-- SEG B -->
+  <article class="seg">
+    <header class="seghd">
+      <span class="segcode b">B</span>
+      <div class="segname"><h3>Ejecutor de ruta rápida</h3><p>Su unidad de medida es el caso cerrado; el soporte es un costo de tiempo</p></div>
+      <div class="segn"><b>13</b><span>20.6% de los clasificados</span></div>
+    </header>
+    <div class="segbody">
+      <div class="fld"><span class="fl-l">Variables que lo definen</span><p>Q22 = «Quiero resolver rápido y seguir con mi ruta» en 10/13; estilo «rápido y práctico» en 7/13. Utilidad de Torre <b>2.00</b> con <b>10 de 13</b> calificando 1 o 2: el rechazo más concentrado del estudio.</p></div>
+      <div class="fld"><span class="fl-l">Variables secundarias</span><p>Claridad de PAX <b>4.00</b> — alta. Duración 15–25 min (7/13), casi nadie pasa de 25. Antigüedad: 8 con más de 3 años, 5 entre 1 y 3. Dispositivo <b>A960 en 10 de 13</b>.</p></div>
+      <div class="fld"><span class="fl-l">Comportamientos</span><p>Todos hacen 1–3 investigaciones diarias. 100% atiende contactabilidad cliente y 62% cambio de domicilio — la mezcla más amplia de tipos. Duda sobre todo en capacidad de pago (6/13).</p></div>
+      <div class="fld"><span class="fl-l">Fricciones</span><p>PAX lenta <b>69%</b> y falta de señal <b>69%</b>, empatadas. Cualquier cosa que detenga el flujo pesa más que en los demás segmentos, porque su métrica interna es el avance.</p></div>
+      <div class="fld"><span class="fl-l">Necesidades</span><p>Que nada interrumpa. Motivación: comisión 77%, control de tiempo y ruta 54%, resolver rápido 54% y — dato que contradice el estereotipo — <b>aprender y mejorar mi criterio 46%</b>, el segundo valor más alto de la muestra.</p></div>
+      <div class="fld"><span class="fl-l">Relación con PAX</span><p>La mejor de los cuatro segmentos (claridad 4.00), probablemente ayudada por el equipo más nuevo. Su queja no es que PAX informe mal, sino que se detenga.</p></div>
+      <div class="fld"><span class="fl-l">Relación con Torre</span><p>Prácticamente rota. Llama cuando el cliente no está (62%) o no encuentra el domicilio (54%), pero califica el resultado en 1 o 2 tres de cada cuatro veces. Una llamada es tiempo perdido de ruta.</p></div>
+      <div class="fld"><span class="fl-l">Qué lo separa</span><p>De <b>A</b>: le basta la información que hay, quiere que el flujo no se trabe. De <b>D</b>: tolera cerrar con evidencia suficiente en vez de perfecta. De <b>C</b>: comparte la prisa pero no la necesidad de validación externa.</p></div>
+      <div class="fld ev-row"><span class="fl-l">Evidencia y confianza</span><p><span class="ev ev-o">Observado</span> frase, estilo, utilidad de Torre, dispositivo. <span class="ev ev-h">Hipótesis</span> que la claridad alta se deba al A960: la asociación existe en toda la muestra pero aquí descansa sobre n=13. <b>Confianza: alta</b> para el perfil, <b>media</b> para la atribución al equipo.</p></div>
+    </div>
+  </article>
+
+  <!-- SEG C -->
+  <article class="seg">
+    <header class="seghd">
+      <span class="segcode c">C</span>
+      <div class="segname"><h3>Gestor en formación</h3><p>Todavía calibra su criterio, y por eso el soporte le sirve</p></div>
+      <div class="segn"><b>18</b><span>28.6% de los clasificados</span></div>
+    </header>
+    <div class="segbody">
+      <div class="fld"><span class="fl-l">Variables que lo definen</span><p>Antigüedad ≤ 6 meses: 14 con 3–6 meses y 4 con menos de 3. Utilidad de Torre <b>3.67</b> (mediana 4), la más alta; solo 3 de 18 la califican ≤2. Claridad de PAX <b>4.00</b> con mediana 4.5.</p></div>
+      <div class="fld"><span class="fl-l">Variables secundarias</span><p>Edad 18–30 en 16 de 18 <span class="ev ev-x">confundida</span>. Estilo repartido: social 6, cuidadoso 5, rápido 5. Q22 heterogénea: 8 eligen «resolver rápido» y 5 «no cometer errores».</p></div>
+      <div class="fld"><span class="fl-l">Comportamientos</span><p>Duración polarizada: 8 cierran en 10–15 min y 8 pasan de 25 — la dispersión propia de quien todavía no estandariza su método. Parte más lenta: reconocimiento facial (10/18).</p></div>
+      <div class="fld"><span class="fl-l">Fricciones</span><p>Falta de señal <b>67%</b> · dirección incorrecta <b>50%</b> · información incompleta <b>44%</b> · PAX lenta <b>44%</b>. Es el único segmento donde «PAX lenta» no está entre las dos primeras: aún no acumula el desgaste de los veteranos.</p></div>
+      <div class="fld"><span class="fl-l">Necesidades</span><p>Confirmación. Su duda principal es «si debo recomendar o no» (6/18), empatada con capacidad de pago. Motivación: comisión 78%, meta 72%, y <b>aprender 39%</b> y <b>ser reconocido 39%</b> — los valores más altos de la muestra en ambos.</p></div>
+      <div class="fld"><span class="fl-l">Relación con PAX</span><p>La juzga bien porque no tiene con qué compararla. Su riesgo no es la insatisfacción: es adoptar como normal un flujo que los veteranos ya identificaron como roto.</p></div>
+      <div class="fld"><span class="fl-l">Relación con Torre</span><p>Funcional. Es el único segmento que la usa con expectativa de resolución, y el que más la llama por riesgo en campo (33%) y por referencias que no contestan (22%).</p></div>
+      <div class="fld"><span class="fl-l">Qué lo separa</span><p>De todos: es el único donde el soporte remoto tiene valor positivo neto. Es un <b>estado transitorio</b>, no un tipo de persona — la evidencia sugiere que migra hacia A, B o D con los años.</p></div>
+      <div class="fld ev-row"><span class="fl-l">Evidencia y confianza</span><p><span class="ev ev-o">Observado</span> antigüedad, Torre, claridad, motivación. <span class="ev ev-i">Inferido</span> el carácter transitorio, a partir del gradiente de §6 leído de forma transversal. <span class="ev ev-x">Cuidado</span> edad y antigüedad no son separables aquí. <b>Confianza: alta</b> para el perfil, <b>media</b> para la trayectoria.</p></div>
+    </div>
+  </article>
+
+  <!-- SEG D -->
+  <article class="seg">
+    <header class="seghd">
+      <span class="segcode d">D</span>
+      <div class="segname"><h3>Verificador que teme el error</h3><p>Invierte tiempo en no equivocarse, y paga con visitas largas</p></div>
+      <div class="segn"><b>19</b><span>30.2% de los clasificados</span></div>
+    </header>
+    <div class="segbody">
+      <div class="fld"><span class="fl-l">Variables que lo definen</span><p>Q22 = «no cometer errores» en 13, «guíe paso a paso» en 4, «más apoyo» en 2. Estilo cuidadoso y detallista en 10/19. <b>10 de 19 declaran visitas de más de 25 minutos</b> — la duración más larga de los cuatro.</p></div>
+      <div class="fld"><span class="fl-l">Variables secundarias</span><p>Antigüedad alta: 12 con más de 3 años. Utilidad de Torre 3.26 y claridad de PAX 3.68, ambas intermedias. Es el segmento con más «red de contactos ampliada» (68%).</p></div>
+      <div class="fld"><span class="fl-l">Comportamientos</span><p>Único segmento donde <b>«llegar al domicilio» supera al reconocimiento facial</b> como parte más lenta (8 vs 7). Su duda principal es si el cliente vive realmente en ese domicilio (6/19).</p></div>
+      <div class="fld"><span class="fl-l">Fricciones</span><p>Falta de señal <b>79%</b> — el valor más alto de la muestra · PAX lenta 58% · cliente ausente 47% · información incompleta 42%. Todo lo que le impide verificar lo bloquea.</p></div>
+      <div class="fld"><span class="fl-l">Necesidades</span><p>Evidencia suficiente y defendible. Motivación: <b>comisión en 19 de 19</b> (100%) y meta 79%; después, ser reconocido 32% y ayudar al cliente 32%. Lo económico y lo escrupuloso conviven sin conflicto aparente.</p></div>
+      <div class="fld"><span class="fl-l">Relación con PAX</span><p>Ambivalente. Le pide claridad sobre qué evidencia basta, no más pasos. Los 4 que eligen «guíe paso a paso» viven aquí: es el único segmento con demanda real de guía.</p></div>
+      <div class="fld"><span class="fl-l">Relación con Torre</span><p>La consulta más que A y B — cliente ausente 68%, domicilio no encontrado 63%, sin documentos 26% — y la califica mejor (3.26). Pero es también donde aparece con más fuerza la queja de que Torre reprograma contra su verificación en sitio.</p></div>
+      <div class="fld"><span class="fl-l">Qué lo separa</span><p>De <b>A</b>: no le falta información previa, le falta un umbral claro de suficiencia. De <b>B</b>: acepta pagar tiempo por certeza. De <b>C</b>: no es inexperiencia — son veteranos que eligieron ser exhaustivos.</p></div>
+      <div class="fld ev-row"><span class="fl-l">Evidencia y confianza</span><p><span class="ev ev-o">Observado</span> frase, estilo, duración, fricciones, motivación. <span class="ev ev-i">Inferido</span> que la duración larga es consecuencia de la exhaustividad y no de la zona: la región no discrimina (§6). <b>Confianza: alta</b> — n=19, el segmento más grande.</p></div>
+    </div>
+  </article>
+
+  <div class="call">
+    <h4>Los 10 casos sin clasificar</h4>
+    <p>Nueve son abandonos que no llegaron a Q22/Q23. El décimo completó el estudio y eligió <code>Other</code>: <em>«Quisiera poder ver quién originó la LCR y, cuando hay planes en atraso, poder visualizar y reprimir calendarios de pago»</em>. No se fuerza dentro de ningún segmento — pide una capacidad que ninguna opción cerrada ofrecía, y coincide con el tema «información previa verificada» de Q17.</p>
+  </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section id="s8">
+  <div class="shead"><span class="n">08</span><h2>Comparativa de segmentos</h2><span class="tag">Fase 5</span></div>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Dimensión</th><th>A · Inteligencia previa</th><th>B · Ruta rápida</th><th>C · En formación</th><th>D · Verificador</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tamaño</b></td><td class="num">13 · 20.6%</td><td class="num">13 · 20.6%</td><td class="num">18 · 28.6%</td><td class="num">19 · 30.2%</td></tr>
+      <tr><td><b>Antigüedad dominante</b></td><td>+3 años (9)</td><td>+3 años (8)</td><td>3–6 meses (14)</td><td>+3 años (12)</td></tr>
+      <tr><td><b>Duración típica</b></td><td>Repartida</td><td>15–25 min</td><td>Polarizada</td><td>Más de 25 min</td></tr>
+      <tr><td><b>Parte más lenta</b></td><td>Facial (8)</td><td>Facial (6)</td><td>Facial (10)</td><td><b>Llegar al domicilio (8)</b></td></tr>
+      <tr><td><b>Mayor duda</b></td><td>Evidencia / capacidad de pago</td><td>Capacidad de pago</td><td>Recomendar o no</td><td>Si vive en el domicilio</td></tr>
+      <tr><td><b>Claridad de PAX</b></td><td class="num">3.54</td><td class="num">4.00</td><td class="num">4.00</td><td class="num">3.68</td></tr>
+      <tr><td><b>Utilidad de Torre</b></td><td class="num">2.15</td><td class="num">2.00</td><td class="num">3.67</td><td class="num">3.26</td></tr>
+      <tr><td><b>Califican Torre ≤2</b></td><td class="num">7 / 13</td><td class="num">10 / 13</td><td class="num">3 / 18</td><td class="num">5 / 19</td></tr>
+      <tr><td><b>Frustración #1</b></td><td>PAX lenta 69%</td><td>PAX lenta / señal 69%</td><td>Señal 67%</td><td>Señal 79%</td></tr>
+      <tr><td><b>Motivador distintivo</b></td><td>Control de tiempo 62%</td><td>Resolver rápido 54%</td><td>Aprender / reconocimiento 39%</td><td>Comisión 100%</td></tr>
+      <tr><td><b>Dispositivo dominante</b></td><td>A910 (9/13)</td><td><b>A960 (10/13)</b></td><td>A910 (10/18)</td><td>A910 (11/19)</td></tr>
+      <tr><td><b>Qué le pide a PAX</b></td><td>Mejor información previa</td><td>Que no se detenga</td><td>Confirmación de criterio</td><td>Umbral claro de evidencia</td></tr>
+      <tr><td><b>Riesgo de producto</b></td><td>Ignora guías nuevas</td><td>Omite pasos por velocidad</td><td>Normaliza flujos rotos</td><td>Alarga la visita por dudar</td></tr>
+      <tr><td><b>Confianza del perfil</b></td><td>Alta</td><td>Alta</td><td>Alta</td><td>Alta</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap">Porcentajes sobre 63 clasificados. Las medias de escala usan el n de cada segmento con respuesta válida.</p>
+</section>
+
+<!-- ============ 9 ============ -->
+<section id="s9">
+  <div class="shead"><span class="n">09</span><h2>Usuarios sintéticos</h2><span class="tag">Fase 7 · 4 perfiles</span></div>
+  <p class="lede measure">Un usuario por segmento. Cada uno es una combinación plausible <em>dentro</em> de su segmento, no la suma de las modas de la muestra ni la copia de un participante real. Cuando el dataset no permite determinar un atributo, dice <span class="ev ev-h">no modelado</span> en vez de inventarlo.</p>
+
+  <div class="call">
+    <h4>Dos advertencias de uso</h4>
+    <p><b>Género.</b> Los cuatro perfiles son hombres porque el 97.3% de la muestra lo es. Eso refleja el reclutamiento, no una característica del rol: con 2 mujeres en 73 respuestas, este estudio no permite modelar la experiencia de una GIC mujer y no debe usarse para simularla.</p>
+      <p><b>Región.</b> La zona asignada a cada perfil es contextual <span class="ev ev-h">hipótesis</span>: las celdas de región quedan entre n=4 y n=20 y no producen diferencias estables. Sirve para dar textura al escenario, no para predecir comportamiento.</p>
+  </div>
+
+  <!-- ===== PERSONA A ===== -->
+  <article class="per">
+    <header class="perhd">
+      <div class="pertop"><span class="segcode">A</span>
+        <div><h3>Rubén Ortega</h3><p class="perarq">El veterano que trabaja a ciegas</p></div>
+      </div>
+      <dl class="permeta">
+        <div><dt>Segmento</dt><dd>Inteligencia previa</dd></div>
+        <div><dt>Representatividad</dt><dd>13 de 63 · 20.6%</dd></div>
+        <div><dt>Confianza del perfil</dt><dd>Alta</dd></div>
+      </dl>
+    </header>
+
+    <div class="perbody">
+      <div class="pcol">
+        <h4>Perfil</h4>
+        <dl class="kv">
+          <div><dt>Edad</dt><dd>31–45 años <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Antigüedad</dt><dd>Más de 3 años como GIC <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Región</dt><dd>Pachuca 2 — Tizayuca / Reyes Acozac <span class="ev ev-h">hip</span></dd></div>
+          <div><dt>Investigaciones</dt><dd>Contactabilidad cliente y laboral; poco cambio de domicilio <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Dispositivo</dt><dd>PAX A910 <span class="ev ev-o">obs</span></dd></div>
+        </dl>
+
+        <h4>Contexto de trabajo</h4>
+        <dl class="kv">
+          <div><dt>Volumen</dt><dd>1 a 3 investigaciones por día</dd></div>
+          <div><dt>Duración</dt><dd>Variable: cierra en 10–15 min cuando la dirección es buena; pasa de 25 cuando no</dd></div>
+          <div><dt>Ritmo</dt><dd>Autogestiona su ruta y su orden de visitas</dd></div>
+          <div><dt>Situaciones recurrentes</dt><dd>Direcciones mal punteadas, reconocimiento facial que no detona, equipo lento</dd></div>
+          <div><dt>Presión operativa</dt><dd>Media — la presión viene del ingreso variable, no del conteo diario</dd></div>
+        </dl>
+
+        <h4>Objetivos</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Llegar al domicilio correcto a la primera y cerrar la validación sin repetir pasos</dd></div>
+          <div><dt>Secundarios</dt><dd>Sostener su volumen semanal de comisión; conservar el control de su ruta</dd></div>
+          <div><dt>Investigación exitosa</dt><dd>Aquella donde la información que traía coincidió con lo que encontró en campo</dd></div>
+        </dl>
+
+        <h4>Motivaciones</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Comisión <span class="ev ev-o">obs 77%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Cumplir meta (62%) y control de su tiempo y ruta (62%)</dd></div>
+          <div><dt>Qué optimiza</dt><dd>Minutos por caso y aciertos por salida, no casos por día</dd></div>
+        </dl>
+      </div>
+
+      <div class="pcol">
+        <h4>Comportamiento</h4>
+        <dl class="kv">
+          <div><dt>Forma de trabajar</dt><dd>Social y negociador: obtiene en la conversación lo que el sistema no le dio</dd></div>
+          <div><dt>Inicia</dt><dd>Revisando la dirección y el punto GPS antes de salir; si el punto es dudoso, arma él mismo la ruta</dd></div>
+          <div><dt>Busca información</dt><dd>Preguntando a vecinos y referencias en sitio; recurre a mapas externos cuando puede</dd></div>
+          <div><dt>Verifica</dt><dd>Contrastando lo que dice el cliente con lo que dicen las referencias</dd></div>
+          <div><dt>Decide</dt><dd>Con criterio propio; la evidencia capturada y la capacidad de pago son sus dos anclas</dd></div>
+          <div><dt>Ante la duda</dt><dd>Insiste en campo antes que escalar</dd></div>
+          <div><dt>Escala</dt><dd>Tarde y con expectativa baja: cuando el domicilio no aparece o el cliente no está</dd></div>
+          <div><dt>Bajo presión</dt><dd>Reordena la ruta y deja el caso trabado para el final</dd></div>
+        </dl>
+
+        <h4>Pain points</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>PAX lenta o con errores <span class="ev ev-o">obs 69%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Dirección difícil (62%), señal (62%), información incompleta del cliente (46%)</dd></div>
+          <div><dt>Más tiempo</dt><dd>Reconocimiento facial y huella</dd></div>
+          <div><dt>Mayor incertidumbre</dt><dd>Si la evidencia alcanza y si el cliente tiene capacidad de pago</dd></div>
+          <div><dt>Le frustra</dt><dd>Salir sin saber lo que la empresa ya sabe del cliente</dd></div>
+        </dl>
+
+        <h4>Relación con PAX</h4>
+        <dl class="kv">
+          <div><dt>Expectativa</dt><dd>Que le entregue mejor materia prima, no que lo guíe</dd></div>
+          <div><dt>Confianza</dt><dd>Media-baja — claridad 3.54 de 5</dd></div>
+          <div><dt>Necesita antes de la visita</dt><dd>Dirección confirmada, referencias que contesten, otros créditos en el domicilio, quién originó la LCR</dd></div>
+          <div><dt>Insuficiente</dt><dd>Un punto GPS impreciso y referencias «muy sencillas» sin punto de referencia extenso</dd></div>
+          <div><dt>Dónde no resuelve</dt><dd>Cuando el punto se mueve, cuando no permite abrir mapas, cuando se traba a media captura</dd></div>
+        </dl>
+
+        <h4>Relación con Torre de Control</h4>
+        <dl class="kv">
+          <div><dt>Cuándo consulta</dt><dd>Domicilio no encontrado (54%) o cliente ausente (54%)</dd></div>
+          <div><dt>Qué espera</dt><dd>Un dato nuevo — otro teléfono, otra dirección — no una instrucción</dd></div>
+          <div><dt>Respuesta útil</dt><dd>La que cambia el estado del caso en la misma llamada</dd></div>
+          <div><dt>Le frustra</dt><dd>Que le pidan repetir procesos de PAX que ya conoce y que la llamada termine en un folio</dd></div>
+          <div><dt>Deja de confiar</dt><dd>Cuando Torre decide sobre un domicilio que él ya verificó en sitio</dd></div>
+        </dl>
+      </div>
+
+      <div class="pfull">
+        <h4>Modelo de decisión</h4>
+        <div class="dec">
+          <div><span class="fl-l">Prioriza</span><ol><li>Que la evidencia capturada sostenga la recomendación</li><li>Que el caso no lo obligue a volver</li><li>Que la visita no le rompa la ruta del día</li></ol></div>
+          <div><span class="fl-l">Antes de actuar confirma</span><ol><li>Que la persona que abre es quien dice ser</li><li>Que efectivamente vive ahí</li><li>Que las referencias coinciden con la entrevista</li></ol></div>
+          <div><span class="fl-l">Triggers</span><ul><li><b>Duda:</b> referencias que contradicen al cliente; capacidad de pago poco clara</li><li><b>Escalamiento:</b> domicilio inexistente tras agotar la búsqueda en sitio</li><li><b>Frustración:</b> el equipo se reinicia o se traba a media captura</li></ul></div>
+        </div>
+
+        <h4>Necesidades</h4>
+        <div class="needs">
+          <div><span class="fl-l">Funcionales</span><p>Punto GPS confiable y ruta navegable; captura facial que no exija gestos imposibles; no perder el avance del flujo.</p></div>
+          <div><span class="fl-l">Informacionales</span><p>Dirección validada antes de salir, teléfonos que funcionen, historial del domicilio, origen de la solicitud.</p></div>
+          <div><span class="fl-l">Operativas</span><p>Poder reordenar su ruta y cerrar el caso desde campo sin llamada intermedia.</p></div>
+          <div><span class="fl-l">Emocionales</span><p>Que su lectura de campo cuente como evidencia frente a quien decide a distancia.</p></div>
+        </div>
+
+        <h4>Frases representativas <span class="synth">frases sintéticas construidas sobre patrones del segmento — no son citas textuales</span></h4>
+        <ul class="quotes">
+          <li>«Yo ya sé cómo entrarle al cliente; lo que no sé es a qué domicilio me están mandando.»</li>
+          <li>«Si el punto está mal, ahí se me van veinte minutos y eso no lo recupero en todo el día.»</li>
+          <li>«Le hablo a Torre porque hay que hablarle, no porque espere que me resuelvan.»</li>
+          <li>«Prefiero preguntarle al vecino que esperar a que el sistema me diga algo que ya averigüé.»</li>
+        </ul>
+
+        <h4>Contradicciones internas</h4>
+        <ul class="contr">
+          <li>Pide <b>más información previa</b>, pero rechaza cualquier paso adicional en PAX: la información tendría que llegarle sin costarle tiempo de flujo.</li>
+          <li>Valora el <b>control de su ruta</b> (62%) y a la vez señala la <b>dirección incorrecta</b> como fricción mayor: su autonomía depende de un dato que no controla.</li>
+          <li>Califica a Torre en 2.15 pero la sigue llamando en más de la mitad de los bloqueos: <b>usa un canal en el que no confía</b> porque no tiene otro.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== PERSONA B ===== -->
+  <article class="per">
+    <header class="perhd">
+      <div class="pertop"><span class="segcode b">B</span>
+        <div><h3>Diego Salgado</h3><p class="perarq">El que mide su día en casos cerrados</p></div>
+      </div>
+      <dl class="permeta">
+        <div><dt>Segmento</dt><dd>Ruta rápida</dd></div>
+        <div><dt>Representatividad</dt><dd>13 de 63 · 20.6%</dd></div>
+        <div><dt>Confianza del perfil</dt><dd>Alta</dd></div>
+      </dl>
+    </header>
+
+    <div class="perbody">
+      <div class="pcol">
+        <h4>Perfil</h4>
+        <dl class="kv">
+          <div><dt>Edad</dt><dd>18–30 o 31–45 — repartido en partes iguales <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Antigüedad</dt><dd>Más de 3 años <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Región</dt><dd>Zumpango <span class="ev ev-h">hip</span></dd></div>
+          <div><dt>Investigaciones</dt><dd>La mezcla más amplia: contactabilidad cliente (100%), laboral (69%), cambio de domicilio (62%) <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Dispositivo</dt><dd>PAX A960 <span class="ev ev-o">obs 10/13</span></dd></div>
+        </dl>
+
+        <h4>Contexto de trabajo</h4>
+        <dl class="kv">
+          <div><dt>Volumen</dt><dd>1 a 3 investigaciones por día — todos los del segmento</dd></div>
+          <div><dt>Duración</dt><dd>15 a 25 minutos; rara vez pasa de 25</dd></div>
+          <div><dt>Ritmo</dt><dd>Encadenado: cierra y avanza al siguiente punto</dd></div>
+          <div><dt>Situaciones recurrentes</dt><dd>Interrupciones del flujo por señal o por el equipo</dd></div>
+          <div><dt>Presión operativa</dt><dd>Autoimpuesta: su métrica interna es el avance</dd></div>
+        </dl>
+
+        <h4>Objetivos</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Cerrar cada caso en una sola pasada, sin reintentos</dd></div>
+          <div><dt>Secundarios</dt><dd>Maximizar comisión; terminar la ruta con margen de día</dd></div>
+          <div><dt>Investigación exitosa</dt><dd>La que se completó sin que nada lo obligara a detenerse</dd></div>
+        </dl>
+
+        <h4>Motivaciones</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Comisión <span class="ev ev-o">obs 77%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Control de tiempo y ruta (54%), resolver rápido (54%), <b>aprender y mejorar criterio (46%)</b></dd></div>
+          <div><dt>Qué optimiza</dt><dd>Tiempo de ciclo por caso</dd></div>
+        </dl>
+      </div>
+
+      <div class="pcol">
+        <h4>Comportamiento</h4>
+        <dl class="kv">
+          <div><dt>Forma de trabajar</dt><dd>Rápido y práctico; en algunos casos con registro social para acelerar la entrevista</dd></div>
+          <div><dt>Inicia</dt><dd>Con la ruta cargada de antemano y el orden ya decidido</dd></div>
+          <div><dt>Busca información</dt><dd>Lo mínimo suficiente; no investiga más allá de lo que el caso exige</dd></div>
+          <div><dt>Verifica</dt><dd>Con los datos a la mano; no contrasta de más si nada le llama la atención</dd></div>
+          <div><dt>Decide</dt><dd>Rápido, apoyándose en capacidad de pago como criterio principal</dd></div>
+          <div><dt>Ante la duda</dt><dd>Resuelve en el momento y sigue; evita cualquier espera</dd></div>
+          <div><dt>Escala</dt><dd>Lo más tarde posible y solo ante bloqueos externos: cliente ausente (62%), domicilio no encontrado (54%)</dd></div>
+          <div><dt>Bajo presión</dt><dd>Acelera y busca la salida más corta del flujo</dd></div>
+        </dl>
+
+        <h4>Pain points</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Empate entre PAX lenta y falta de señal <span class="ev ev-o">obs 69% / 69%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Dirección difícil (46%), información incompleta (46%)</dd></div>
+          <div><dt>Más tiempo</dt><dd>Reconocimiento facial y huella</dd></div>
+          <div><dt>Mayor incertidumbre</dt><dd>Si el cliente tiene capacidad de pago</dd></div>
+          <div><dt>Le frustra</dt><dd>Toda espera que no produce avance — incluida la llamada a Torre</dd></div>
+        </dl>
+
+        <h4>Relación con PAX</h4>
+        <dl class="kv">
+          <div><dt>Expectativa</dt><dd>Que no se detenga. La información le parece suficiente</dd></div>
+          <div><dt>Confianza</dt><dd>Alta en el contenido — claridad 4.00 —, baja en la continuidad</dd></div>
+          <div><dt>Necesita antes de la visita</dt><dd>Ruta cargada y punto ubicable; poco más</dd></div>
+          <div><dt>Insuficiente</dt><dd>Cualquier paso que se pueda reintentar dos veces</dd></div>
+          <div><dt>Dónde no resuelve</dt><dd>Captura facial que exige varios intentos; recargas de ruta lentas</dd></div>
+        </dl>
+
+        <h4>Relación con Torre de Control</h4>
+        <dl class="kv">
+          <div><dt>Cuándo consulta</dt><dd>Solo cuando el caso está bloqueado y no puede cerrarlo solo</dd></div>
+          <div><dt>Qué espera</dt><dd>Una resolución inmediata que le permita seguir</dd></div>
+          <div><dt>Respuesta útil</dt><dd>La que llega en minutos y desbloquea</dd></div>
+          <div><dt>Le frustra</dt><dd>Esperas de 20 o 25 minutos; que el resultado sea el mismo al que él ya había llegado</dd></div>
+          <div><dt>Deja de confiar</dt><dd>Ya dejó de confiar: 10 de 13 en su segmento califican 1 o 2</dd></div>
+        </dl>
+      </div>
+
+      <div class="pfull">
+        <h4>Modelo de decisión</h4>
+        <div class="dec">
+          <div><span class="fl-l">Prioriza</span><ol><li>Cerrar el caso en esta visita</li><li>No detener el flujo</li><li>Que la decisión sea defendible con lo mínimo necesario</li></ol></div>
+          <div><span class="fl-l">Antes de actuar confirma</span><ol><li>Que el domicilio corresponde</li><li>Que hay con quién completar la entrevista</li><li>Que la capacidad de pago es plausible</li></ol></div>
+          <div><span class="fl-l">Triggers</span><ul><li><b>Duda:</b> ingresos declarados que no cuadran</li><li><b>Escalamiento:</b> bloqueo duro que impide cerrar — nunca por duda de criterio</li><li><b>Frustración:</b> reintento del mismo paso; espera telefónica</li></ul></div>
+        </div>
+
+        <h4>Necesidades</h4>
+        <div class="needs">
+          <div><span class="fl-l">Funcionales</span><p>Continuidad del flujo: reanudar donde se cortó, captura biométrica al primer intento, recarga de ruta rápida.</p></div>
+          <div><span class="fl-l">Informacionales</span><p>Lo justo: punto ubicable y teléfono vigente. No pide contexto adicional.</p></div>
+          <div><span class="fl-l">Operativas</span><p>Cerrar, rechazar o reagendar desde campo sin llamada intermedia.</p></div>
+          <div><span class="fl-l">Emocionales</span><p>Sentir que el sistema va a su ritmo y no al revés.</p></div>
+        </div>
+
+        <h4>Frases representativas <span class="synth">frases sintéticas construidas sobre patrones del segmento — no son citas textuales</span></h4>
+        <ul class="quotes">
+          <li>«Si tengo que repetir la foto tres veces, ahí perdí la visita siguiente.»</li>
+          <li>«Prefiero cerrar con lo que tengo que quedarme parado esperando una llamada.»</li>
+          <li>«Torre me va a decir lo mismo que yo ya vi, pero veinte minutos después.»</li>
+          <li>«El equipo nuevo sí jala; el problema es dónde no hay señal.»</li>
+        </ul>
+
+        <h4>Contradicciones internas</h4>
+        <ul class="contr">
+          <li>Se define por la velocidad, pero <b>46% de su segmento quiere aprender y mejorar su criterio</b>: la prisa es una estrategia de ingreso, no desinterés por hacerlo bien.</li>
+          <li>Es el que <b>menos valora a Torre</b> y a la vez uno de los que más motivos de bloqueo externo declara: necesita el canal justo donde ya no cree en él.</li>
+          <li>Puntúa la claridad de PAX en 4.00 pero sigue reportando <b>69% de frustración por PAX lenta</b>: separa nítidamente qué le dice el sistema de cómo se comporta.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== PERSONA C ===== -->
+  <article class="per">
+    <header class="perhd">
+      <div class="pertop"><span class="segcode c">C</span>
+        <div><h3>Emilio Rentería</h3><p class="perarq">El que todavía no sabe qué es normal</p></div>
+      </div>
+      <dl class="permeta">
+        <div><dt>Segmento</dt><dd>En formación</dd></div>
+        <div><dt>Representatividad</dt><dd>18 de 63 · 28.6%</dd></div>
+        <div><dt>Confianza del perfil</dt><dd>Alta</dd></div>
+      </dl>
+    </header>
+
+    <div class="perbody">
+      <div class="pcol">
+        <h4>Perfil</h4>
+        <dl class="kv">
+          <div><dt>Edad</dt><dd>18–30 años <span class="ev ev-o">obs 16/18</span> <span class="ev ev-x">confundida con antigüedad</span></dd></div>
+          <div><dt>Antigüedad</dt><dd>3 a 6 meses como GIC <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Región</dt><dd>Temascalapa <span class="ev ev-h">hip</span></dd></div>
+          <div><dt>Investigaciones</dt><dd>Contactabilidad cliente (89%) y laboral (83%); cambio de domicilio (61%) <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Dispositivo</dt><dd>PAX A910 <span class="ev ev-o">obs</span></dd></div>
+        </dl>
+
+        <h4>Contexto de trabajo</h4>
+        <dl class="kv">
+          <div><dt>Volumen</dt><dd>1 a 3 por día</dd></div>
+          <div><dt>Duración</dt><dd>Polarizada: la mitad cierra en 10–15 min, la otra mitad pasa de 25</dd></div>
+          <div><dt>Ritmo</dt><dd>Irregular — todavía no estandariza su método</dd></div>
+          <div><dt>Situaciones recurrentes</dt><dd>Casos que se le alargan sin saber exactamente por qué</dd></div>
+          <div><dt>Presión operativa</dt><dd>Alta en lo subjetivo: teme equivocarse en la recomendación</dd></div>
+        </dl>
+
+        <h4>Objetivos</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Completar la investigación sin cometer un error que le regresen</dd></div>
+          <div><dt>Secundarios</dt><dd>Alcanzar la meta; que su desempeño se note</dd></div>
+          <div><dt>Investigación exitosa</dt><dd>La que alguien con más experiencia habría resuelto igual</dd></div>
+        </dl>
+
+        <h4>Motivaciones</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Comisión <span class="ev ev-o">obs 78%</span> y cumplir meta (72%)</dd></div>
+          <div><dt>Secundarias</dt><dd><b>Aprender y mejorar criterio (39%)</b> y <b>ser reconocido (39%)</b> — los valores más altos de la muestra</dd></div>
+          <div><dt>Qué optimiza</dt><dd>Corrección: prefiere tardar a fallar</dd></div>
+        </dl>
+      </div>
+
+      <div class="pcol">
+        <h4>Comportamiento</h4>
+        <dl class="kv">
+          <div><dt>Forma de trabajar</dt><dd>Sin estilo consolidado: alterna entre social, cuidadoso y rápido según el caso</dd></div>
+          <div><dt>Inicia</dt><dd>Siguiendo el flujo de PAX tal como viene, sin atajos</dd></div>
+          <div><dt>Busca información</dt><dd>Dentro del sistema primero; pregunta en campo cuando el sistema no responde</dd></div>
+          <div><dt>Verifica</dt><dd>De más — recaptura y reconfirma por seguridad</dd></div>
+          <div><dt>Decide</dt><dd>Buscando respaldo: quiere que alguien o algo confirme su lectura</dd></div>
+          <div><dt>Ante la duda</dt><dd>Consulta. Es el único perfil que escala esperando resolución real</dd></div>
+          <div><dt>Escala</dt><dd>Temprano y con frecuencia: cliente ausente (61%), domicilio (61%), <b>riesgo en campo (33%)</b>, referencias que no contestan (22%)</dd></div>
+          <div><dt>Bajo presión</dt><dd>Se detiene y pide indicación antes de avanzar</dd></div>
+        </dl>
+
+        <h4>Pain points</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Falta de señal <span class="ev ev-o">obs 67%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Dirección difícil (50%), información incompleta (44%), PAX lenta (44%)</dd></div>
+          <div><dt>Más tiempo</dt><dd>Reconocimiento facial y huella (10/18)</dd></div>
+          <div><dt>Mayor incertidumbre</dt><dd><b>Si debe recomendar o no recomendar</b></dd></div>
+          <div><dt>Le frustra</dt><dd>No tener una referencia clara de qué es suficiente</dd></div>
+        </dl>
+
+        <h4>Relación con PAX</h4>
+        <dl class="kv">
+          <div><dt>Expectativa</dt><dd>Que le diga si va bien</dd></div>
+          <div><dt>Confianza</dt><dd>Alta — claridad 4.00, mediana 4.5. La más alta junto con B</dd></div>
+          <div><dt>Necesita antes de la visita</dt><dd>Qué pide exactamente cada tipo de investigación y qué evidencia se considera completa</dd></div>
+          <div><dt>Insuficiente</dt><dd>Instrucciones que asumen criterio ya formado</dd></div>
+          <div><dt>Dónde no resuelve</dt><dd>Cuando el fallo es ambiguo y no puede distinguir si es del equipo o suyo</dd></div>
+        </dl>
+
+        <h4>Relación con Torre de Control</h4>
+        <dl class="kv">
+          <div><dt>Cuándo consulta</dt><dd>Ante cualquier bloqueo, y también ante riesgo personal</dd></div>
+          <div><dt>Qué espera</dt><dd>Instrucción concreta y respaldo de la decisión</dd></div>
+          <div><dt>Respuesta útil</dt><dd>La que le dice qué hacer y por qué</dd></div>
+          <div><dt>Le frustra</dt><dd>Que tarden — pero lo tolera más que cualquier otro perfil</dd></div>
+          <div><dt>Deja de confiar</dt><dd>Todavía no. Utilidad 3.67, mediana 4: solo 3 de 18 la califican ≤2</dd></div>
+        </dl>
+      </div>
+
+      <div class="pfull">
+        <h4>Modelo de decisión</h4>
+        <div class="dec">
+          <div><span class="fl-l">Prioriza</span><ol><li>No cometer un error que le regresen</li><li>Cumplir el procedimiento completo</li><li>Cerrar el caso el mismo día</li></ol></div>
+          <div><span class="fl-l">Antes de actuar confirma</span><ol><li>Que capturó todo lo que el flujo pide</li><li>Que su lectura del cliente coincide con la de alguien con más experiencia</li><li>Que el caso no tiene una señal de alarma que no supo ver</li></ol></div>
+          <div><span class="fl-l">Triggers</span><ul><li><b>Duda:</b> tener que recomendar sin precedente comparable</li><li><b>Escalamiento:</b> casi cualquier bloqueo, y el riesgo en campo</li><li><b>Frustración:</b> quedarse sin nadie a quien preguntar</li></ul></div>
+        </div>
+
+        <h4>Necesidades</h4>
+        <div class="needs">
+          <div><span class="fl-l">Funcionales</span><p>Un flujo que tolere el reintento sin castigo y le muestre en qué paso va.</p></div>
+          <div><span class="fl-l">Informacionales</span><p>Criterios explícitos de suficiencia de evidencia y ejemplos de casos resueltos.</p></div>
+          <div><span class="fl-l">Operativas</span><p>Un canal de consulta que responda rápido mientras construye criterio propio.</p></div>
+          <div><span class="fl-l">Emocionales</span><p>Confirmación de que lo está haciendo bien, y reconocimiento cuando así es.</p></div>
+        </div>
+
+        <h4>Frases representativas <span class="synth">frases sintéticas construidas sobre patrones del segmento — no son citas textuales</span></h4>
+        <ul class="quotes">
+          <li>«No sé si esto ya es suficiente para recomendarlo o me falta algo.»</li>
+          <li>«Le hablo a Torre para que me digan qué hago, no nada más para reportar.»</li>
+          <li>«A veces se tarda la foto y no sé si es la PAX o soy yo que la estoy tomando mal.»</li>
+          <li>«Quiero que se note que estoy haciendo bien mi trabajo.»</li>
+        </ul>
+
+        <h4>Contradicciones internas</h4>
+        <ul class="contr">
+          <li>Es el que <b>mejor califica a PAX</b> (4.00) y el que <b>más se traba</b>: la mitad de su segmento pasa de 25 minutos por visita. Su satisfacción mide falta de comparación, no calidad del flujo.</li>
+          <li>Elige «resolver rápido» tanto como «no cometer errores» — <b>quiere las dos cosas</b> y todavía no negoció el intercambio.</li>
+          <li>Es el que más valora aprender y también el que más escala: <b>aprende delegando</b>, lo que puede retrasar la formación del criterio que dice querer.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== PERSONA D ===== -->
+  <article class="per">
+    <header class="perhd">
+      <div class="pertop"><span class="segcode d">D</span>
+        <div><h3>Fernando Aguilar</h3><p class="perarq">El que prefiere tardar antes que equivocarse</p></div>
+      </div>
+      <dl class="permeta">
+        <div><dt>Segmento</dt><dd>Verificador</dd></div>
+        <div><dt>Representatividad</dt><dd>19 de 63 · 30.2%</dd></div>
+        <div><dt>Confianza del perfil</dt><dd>Alta</dd></div>
+      </dl>
+    </header>
+
+    <div class="perbody">
+      <div class="pcol">
+        <h4>Perfil</h4>
+        <dl class="kv">
+          <div><dt>Edad</dt><dd>31–45 años, con presencia real de 46–60 <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Antigüedad</dt><dd>Más de 3 años <span class="ev ev-o">obs 12/19</span></dd></div>
+          <div><dt>Región</dt><dd>Región Pachuca 4 <span class="ev ev-h">hip</span></dd></div>
+          <div><dt>Investigaciones</dt><dd>El perfil con más <b>red de contactos ampliada</b> (68%), además de contactabilidad cliente (89%) <span class="ev ev-o">obs</span></dd></div>
+          <div><dt>Dispositivo</dt><dd>PAX A910 <span class="ev ev-o">obs</span></dd></div>
+        </dl>
+
+        <h4>Contexto de trabajo</h4>
+        <dl class="kv">
+          <div><dt>Volumen</dt><dd>1 a 3 por día</dd></div>
+          <div><dt>Duración</dt><dd><b>Más de 25 minutos</b> en 10 de 19 — la más larga de los cuatro perfiles</dd></div>
+          <div><dt>Ritmo</dt><dd>Deliberado; no encadena visitas</dd></div>
+          <div><dt>Situaciones recurrentes</dt><dd>Domicilios que cuesta localizar y clientes que no están</dd></div>
+          <div><dt>Presión operativa</dt><dd>Alta y sostenida: cada caso carga con la posibilidad de un error costoso</dd></div>
+        </dl>
+
+        <h4>Objetivos</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Que su recomendación resista cualquier revisión posterior</dd></div>
+          <div><dt>Secundarios</dt><dd>Comisión; que el crédito llegue a quien sí califica</dd></div>
+          <div><dt>Investigación exitosa</dt><dd>Aquella donde la evidencia habla por sí sola</dd></div>
+        </dl>
+
+        <h4>Motivaciones</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Comisión — <b>19 de 19</b> <span class="ev ev-o">obs 100%</span></dd></div>
+          <div><dt>Secundarias</dt><dd>Cumplir meta (79%), ser reconocido (32%), ayudar al cliente (32%)</dd></div>
+          <div><dt>Qué optimiza</dt><dd>Certeza por caso, aun a costa de tiempo</dd></div>
+        </dl>
+      </div>
+
+      <div class="pcol">
+        <h4>Comportamiento</h4>
+        <dl class="kv">
+          <div><dt>Forma de trabajar</dt><dd>Cuidadoso y detallista; documenta más de lo que le piden</dd></div>
+          <div><dt>Inicia</dt><dd>Revisando el caso completo antes de salir</dd></div>
+          <div><dt>Busca información</dt><dd>En varias fuentes: cliente, referencias, vecinos, red ampliada</dd></div>
+          <div><dt>Verifica</dt><dd>Cruzando todo lo que puede antes de dar por buena la dirección</dd></div>
+          <div><dt>Decide</dt><dd>Cuando la evidencia converge; si no converge, no cierra</dd></div>
+          <div><dt>Ante la duda</dt><dd>Amplía la búsqueda antes de escalar</dd></div>
+          <div><dt>Escala</dt><dd>Con criterio: cliente ausente (68%), domicilio (63%), sin documentos (26%), riesgo (26%)</dd></div>
+          <div><dt>Bajo presión</dt><dd>Se vuelve más minucioso, no más rápido</dd></div>
+        </dl>
+
+        <h4>Pain points</h4>
+        <dl class="kv">
+          <div><dt>Principal</dt><dd>Falta de señal <span class="ev ev-o">obs 79% — el más alto de la muestra</span></dd></div>
+          <div><dt>Secundarias</dt><dd>PAX lenta (58%), cliente ausente (47%), información incompleta (42%)</dd></div>
+          <div><dt>Más tiempo</dt><dd><b>Llegar al domicilio</b> — único perfil donde supera a la biometría</dd></div>
+          <div><dt>Mayor incertidumbre</dt><dd>Si el cliente vive realmente en ese domicilio</dd></div>
+          <div><dt>Le frustra</dt><dd>Que su verificación en sitio no cuente en la decisión final</dd></div>
+        </dl>
+
+        <h4>Relación con PAX</h4>
+        <dl class="kv">
+          <div><dt>Expectativa</dt><dd>Que le diga cuándo la evidencia ya es suficiente</dd></div>
+          <div><dt>Confianza</dt><dd>Media — claridad 3.68</dd></div>
+          <div><dt>Necesita antes de la visita</dt><dd>Dirección verificada, historial del domicilio, confirmación de que el cliente espera la visita</dd></div>
+          <div><dt>Insuficiente</dt><dd>Un flujo que no distingue entre evidencia mínima y evidencia sólida</dd></div>
+          <div><dt>Dónde no resuelve</dt><dd>Cuando la señal se cae justo al cerrar y pierde lo capturado</dd></div>
+        </dl>
+
+        <h4>Relación con Torre de Control</h4>
+        <dl class="kv">
+          <div><dt>Cuándo consulta</dt><dd>Es el veterano que más la usa — ante ausencia, domicilio o falta de documentos</dd></div>
+          <div><dt>Qué espera</dt><dd>Que registren y respeten lo que él verificó</dd></div>
+          <div><dt>Respuesta útil</dt><dd>La que cierra el caso conforme a la evidencia de campo</dd></div>
+          <div><dt>Le frustra</dt><dd><b>Que reprogramen una visita a un domicilio donde ya comprobó que el cliente no vive</b></dd></div>
+          <div><dt>Deja de confiar</dt><dd>Cuando Torre insiste contra su verificación: ahí es donde aparecen los «1» de su segmento</dd></div>
+        </dl>
+      </div>
+
+      <div class="pfull">
+        <h4>Modelo de decisión</h4>
+        <div class="dec">
+          <div><span class="fl-l">Prioriza</span><ol><li>Que la evidencia sea defendible ante una revisión</li><li>Que la decisión sea justa para el cliente</li><li>Que el caso quede cerrado y no regrese</li></ol></div>
+          <div><span class="fl-l">Antes de actuar confirma</span><ol><li>Que el domicilio es el del cliente y no uno homónimo o antiguo</li><li>Que las referencias sostienen lo que dijo el cliente</li><li>Que capturó evidencia suficiente para sostener su recomendación</li></ol></div>
+          <div><span class="fl-l">Triggers</span><ul><li><b>Duda:</b> indicios de que el cliente no vive en el domicilio</li><li><b>Escalamiento:</b> imposibilidad de verificar por causas ajenas</li><li><b>Frustración:</b> que se reprograme contra su hallazgo; perder captura por señal</li></ul></div>
+        </div>
+
+        <h4>Necesidades</h4>
+        <div class="needs">
+          <div><span class="fl-l">Funcionales</span><p>Captura que sobreviva a la caída de señal; navegación confiable hacia domicilios dispersos.</p></div>
+          <div><span class="fl-l">Informacionales</span><p>Un umbral explícito de evidencia suficiente por tipo de investigación, y el historial del domicilio.</p></div>
+          <div><span class="fl-l">Operativas</span><p>Poder registrar un rechazo por domicilio inexistente que sea vinculante y no se revierta a distancia.</p></div>
+          <div><span class="fl-l">Emocionales</span><p>Que su palabra en campo tenga peso institucional.</p></div>
+        </div>
+
+        <h4>Frases representativas <span class="synth">frases sintéticas construidas sobre patrones del segmento — no son citas textuales</span></h4>
+        <ul class="quotes">
+          <li>«Yo ya fui, ya pregunté, ya comprobé que ahí no vive — y aun así la vuelven a mandar.»</li>
+          <li>«Prefiero que me tome media hora a que me la regresen mal hecha.»</li>
+          <li>«Necesito saber hasta dónde tengo que documentar para que nadie me la discuta.»</li>
+          <li>«Si se cae la señal cuando estoy cerrando, todo lo que junté se queda en el aire.»</li>
+        </ul>
+
+        <h4>Contradicciones internas</h4>
+        <ul class="contr">
+          <li><b>Comisión al 100% y exhaustividad al mismo tiempo:</b> su método le cuesta ingreso — visitas de más de 25 minutos con el mismo pago por caso — y sin embargo lo sostiene.</li>
+          <li>Es <b>veterano y a la vez el que más consulta a Torre</b> entre los veteranos: no consulta por inseguridad, consulta para dejar constancia.</li>
+          <li>Pide <b>autonomía para rechazar</b> y a la vez <b>quiere un umbral externo</b> que le diga cuándo la evidencia basta: quiere decidir, pero con una regla clara detrás.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="s10">
+  <div class="shead"><span class="n">10</span><h2>Reglas conductuales</h2><span class="tag">Fase 8 · 48 reglas</span></div>
+  <p class="lede measure">El motor de simulación. Cada regla declara la condición, el comportamiento probable, la evidencia que lo sostiene y su probabilidad. Doce por perfil. Cuando una regla se apoya en inferencia y no en dato directo, lo dice.</p>
+
+  <h3><span class="rcode">A</span> Rubén Ortega — Inteligencia previa</h3>
+  <div class="rules">
+    <div class="rule"><span class="rid">A-01</span><div class="rb"><p><b>SI</b> la solicitud llega con punto GPS impreciso <b>Y</b> la zona es de conjuntos habitacionales o ruta foránea</p><p class="rt"><b>ENTONCES</b> sale igual y resuelve preguntando en sitio, sin llamar a Torre</p><p class="rw"><b>PORQUE</b> la dirección difícil es su fricción #2 (62%) y califica a Torre en 2.15</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-02</span><div class="rb"><p><b>SI</b> PAX rechaza la foto tras dos o tres intentos <b>Y</b> la iluminación es adecuada</p><p class="rt"><b>ENTONCES</b> reposiciona al cliente y reintenta hasta lograrlo</p><p class="rw"><b>PORQUE</b> la biometría es su parte más lenta (8/13) y no existe ruta de escalamiento para ese fallo</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-03</span><div class="rb"><p><b>SI</b> el cliente no está <b>Y</b> quedan visitas pendientes en la ruta</p><p class="rt"><b>ENTONCES</b> deja el caso para el final y avanza</p><p class="rw"><b>PORQUE</b> «control de mi tiempo y ruta» motiva al 62% de su segmento</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-04</span><div class="rb"><p><b>SI</b> se le ofrece un dato previo verificado — dirección confirmada, otros créditos en el domicilio, origen de la LCR</p><p class="rt"><b>ENTONCES</b> lo adopta de inmediato y lo incorpora a su preparación</p><p class="rw"><b>PORQUE</b> el 100% del segmento eligió «quiero más información del cliente antes de llegar»</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-05</span><div class="rb"><p><b>SI</b> una función nueva agrega pasos al flujo <b>Y</b> no reduce visitas fallidas</p><p class="rt"><b>ENTONCES</b> la evita o la ejecuta al mínimo</p><p class="rw"><b>PORQUE</b> «PAX lenta o con errores» es su frustración principal (69%)</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-06</span><div class="rb"><p><b>SI</b> llama a Torre <b>Y</b> la respuesta es un folio sin cambio de estado del caso</p><p class="rt"><b>ENTONCES</b> deja de llamar por ese motivo en adelante</p><p class="rw"><b>PORQUE</b> 6 de 13 ya califican la utilidad en «1» <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">A-07</span><div class="rb"><p><b>SI</b> las referencias contradicen lo que dijo el cliente</p><p class="rt"><b>ENTONCES</b> prolonga la entrevista antes de decidir</p><p class="rw"><b>PORQUE</b> su duda se reparte entre suficiencia de evidencia y capacidad de pago (5 y 5)</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">A-08</span><div class="rb"><p><b>SI</b> PAX se reinicia a media captura</p><p class="rt"><b>ENTONCES</b> rehace el flujo con molestia, pero no abandona el caso</p><p class="rw"><b>PORQUE</b> su ingreso depende del caso cerrado (comisión 77%)</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-09</span><div class="rb"><p><b>SI</b> se le propone que PAX lo guíe paso a paso durante la visita</p><p class="rt"><b>ENTONCES</b> rechaza la propuesta</p><p class="rw"><b>PORQUE</b> ningún miembro del segmento eligió esa frase; todos eligieron la de información previa</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">A-10</span><div class="rb"><p><b>SI</b> percibe riesgo o inseguridad en la zona</p><p class="rt"><b>ENTONCES</b> evalúa y en la mayoría de los casos resuelve solo</p><p class="rw"><b>PORQUE</b> solo el 23% de su segmento escala por riesgo</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">A-11</span><div class="rb"><p><b>SI</b> Torre reprograma un domicilio que él ya verificó en sitio</p><p class="rt"><b>ENTONCES</b> lo lee como pérdida de autoridad y reduce aún más su uso del canal</p><p class="rw"><b>PORQUE</b> es el segmento que verbaliza esa objeción en Q17 <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">A-12</span><div class="rb"><p><b>SI</b> le preguntan qué mejoraría primero en PAX</p><p class="rt"><b>ENTONCES</b> responde velocidad, cobertura o información previa — nunca más guía</p><p class="rw"><b>PORQUE</b> los temas de Q17 del segmento se concentran ahí</p></div><span class="rp alta">Alta</span></div>
+  </div>
+
+  <h3><span class="rcode b">B</span> Diego Salgado — Ruta rápida</h3>
+  <div class="rules">
+    <div class="rule"><span class="rid">B-01</span><div class="rb"><p><b>SI</b> un paso del flujo requiere un tercer intento</p><p class="rt"><b>ENTONCES</b> busca la salida más corta o reinicia el paso completo</p><p class="rw"><b>PORQUE</b> su métrica interna es el avance y «PAX lenta» lo frustra al 69%</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-02</span><div class="rb"><p><b>SI</b> el cliente no está <b>Y</b> hay otra visita cercana</p><p class="rt"><b>ENTONCES</b> avanza sin llamar a Torre</p><p class="rw"><b>PORQUE</b> 10 de 13 califican la utilidad de Torre en 1 o 2</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-03</span><div class="rb"><p><b>SI</b> está bloqueado y debe llamar a Torre <b>Y</b> la espera se prolonga</p><p class="rt"><b>ENTONCES</b> corta y resuelve por su cuenta</p><p class="rw"><b>PORQUE</b> se reportan esperas de 20 y 25 minutos y su umbral de tolerancia es el más bajo <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">B-04</span><div class="rb"><p><b>SI</b> se le ofrece cerrar, rechazar o reagendar desde campo</p><p class="rt"><b>ENTONCES</b> lo adopta de inmediato</p><p class="rw"><b>PORQUE</b> la autonomía en campo es el tema #4 de Q17 y elimina su mayor costo de tiempo</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-05</span><div class="rb"><p><b>SI</b> PAX pide un dato adicional no obligatorio</p><p class="rt"><b>ENTONCES</b> lo omite si el flujo se lo permite</p><p class="rw"><b>PORQUE</b> optimiza tiempo de ciclo — <b>riesgo de producto documentado</b> <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">B-06</span><div class="rb"><p><b>SI</b> la señal se cae a media gestión</p><p class="rt"><b>ENTONCES</b> reintenta brevemente y, si persiste, deja el caso para más tarde</p><p class="rw"><b>PORQUE</b> la señal lo frustra al 69% y no espera de pie</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-07</span><div class="rb"><p><b>SI</b> le preguntan por la <em>información</em> que PAX le muestra</p><p class="rt"><b>ENTONCES</b> la evalúa bien</p><p class="rw"><b>PORQUE</b> su claridad percibida es 4.00, la más alta junto con C</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-08</span><div class="rb"><p><b>SI</b> le preguntan por la <em>velocidad</em> de PAX</p><p class="rt"><b>ENTONCES</b> la evalúa mal, sin contradecirse con la regla anterior</p><p class="rw"><b>PORQUE</b> separa nítidamente contenido de comportamiento del sistema</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-09</span><div class="rb"><p><b>SI</b> se le ofrece material o capacitación para mejorar su criterio</p><p class="rt"><b>ENTONCES</b> muestra interés real, no de compromiso</p><p class="rw"><b>PORQUE</b> «aprender y mejorar mi criterio» motiva al 46% de su segmento</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">B-10</span><div class="rb"><p><b>SI</b> la capacidad de pago del cliente es dudosa</p><p class="rt"><b>ENTONCES</b> decide con lo que tiene y no escala</p><p class="rw"><b>PORQUE</b> es su duda principal (6/13) y su patrón es resolver en el momento</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">B-11</span><div class="rb"><p><b>SI</b> compara una mejora de captura biométrica contra una mejora informativa</p><p class="rt"><b>ENTONCES</b> prefiere la de captura</p><p class="rw"><b>PORQUE</b> la biometría es su parte más lenta y ya considera suficiente la información</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">B-12</span><div class="rb"><p><b>SI</b> el protocolo lo obliga a llamar a Torre antes de rechazar</p><p class="rt"><b>ENTONCES</b> cumple, pero lo describe como pérdida de tiempo</p><p class="rw"><b>PORQUE</b> aparece literalmente en Q21 del segmento: llamar «solo para obtener un folio» <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+  </div>
+
+  <h3><span class="rcode c">C</span> Emilio Rentería — En formación</h3>
+  <div class="rules">
+    <div class="rule"><span class="rid">C-01</span><div class="rb"><p><b>SI</b> enfrenta un caso sin precedente comparable <b>Y</b> debe emitir una recomendación</p><p class="rt"><b>ENTONCES</b> consulta antes de decidir</p><p class="rw"><b>PORQUE</b> «si debo recomendar o no» es su duda principal (6/18) y valora a Torre en 3.67</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">C-02</span><div class="rb"><p><b>SI</b> percibe riesgo o inseguridad en campo</p><p class="rt"><b>ENTONCES</b> escala de inmediato</p><p class="rw"><b>PORQUE</b> el 33% de su segmento pide apoyo por riesgo — el valor más alto de la muestra</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">C-03</span><div class="rb"><p><b>SI</b> PAX falla <b>Y</b> no puede distinguir si el error es del equipo o suyo</p><p class="rt"><b>ENTONCES</b> reintenta varias veces antes de reportarlo</p><p class="rw"><b>PORQUE</b> aún no tiene referencia de qué comportamiento del sistema es anormal</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">C-04</span><div class="rb"><p><b>SI</b> Torre tarda en contestar</p><p class="rt"><b>ENTONCES</b> espera más que cualquier otro perfil antes de resolver solo</p><p class="rw"><b>PORQUE</b> solo 3 de 18 la califican ≤2: para él la espera todavía rinde</p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">C-05</span><div class="rb"><p><b>SI</b> se le pregunta por PAX en abstracto</p><p class="rt"><b>ENTONCES</b> la evalúa bien, aunque la mitad de sus visitas pase de 25 minutos</p><p class="rw"><b>PORQUE</b> claridad 4.00 con mediana 4.5 y sin marco de comparación</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">C-06</span><div class="rb"><p><b>SI</b> recibe un criterio explícito de evidencia suficiente por tipo de investigación</p><p class="rt"><b>ENTONCES</b> lo adopta y reduce el tiempo de sus visitas largas</p><p class="rw"><b>PORQUE</b> su duración polarizada sugiere ausencia de umbral, no falta de capacidad <span class="ev ev-h">hipótesis</span></p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">C-07</span><div class="rb"><p><b>SI</b> recibe reconocimiento explícito por un caso bien resuelto</p><p class="rt"><b>ENTONCES</b> repite el comportamiento reconocido</p><p class="rw"><b>PORQUE</b> «ser reconocido por mi desempeño» motiva al 39% de su segmento</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">C-08</span><div class="rb"><p><b>SI</b> las referencias no contestan</p><p class="rt"><b>ENTONCES</b> escala en vez de resolver en campo</p><p class="rw"><b>PORQUE</b> el 22% de su segmento pide apoyo por esa causa, contra 11% en el perfil rápido</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">C-09</span><div class="rb"><p><b>SI</b> un compañero con más experiencia le enseña un atajo del flujo</p><p class="rt"><b>ENTONCES</b> lo adopta sin cuestionarlo</p><p class="rw"><b>PORQUE</b> el dataset no mide transmisión entre pares — extrapolado de su falta de criterio propio <span class="ev ev-h">hipótesis</span></p></div><span class="rp baja">Baja</span></div>
+    <div class="rule"><span class="rid">C-10</span><div class="rb"><p><b>SI</b> se le pregunta si PAX debería guiarlo paso a paso</p><p class="rt"><b>ENTONCES</b> responde que sí con más frecuencia que cualquier veterano</p><p class="rw"><b>PORQUE</b> 2 de los 6 que eligieron esa frase están en su segmento, siendo el 28% de la muestra</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">C-11</span><div class="rb"><p><b>SI</b> una visita se le alarga más de 25 minutos</p><p class="rt"><b>ENTONCES</b> no logra atribuir la causa a un paso concreto</p><p class="rw"><b>PORQUE</b> su duración es polarizada sin un cuello de botella declarado distinto del de los demás <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">C-12</span><div class="rb"><p><b>SI</b> se le pide comparar el flujo actual con una alternativa mejor</p><p class="rt"><b>ENTONCES</b> subestima la fricción del flujo actual</p><p class="rw"><b>PORQUE</b> califica mejor a PAX que quienes llevan años usándola — <b>sesgo a considerar al testear con novatos</b></p></div><span class="rp alta">Alta</span></div>
+  </div>
+
+  <h3><span class="rcode d">D</span> Fernando Aguilar — Verificador</h3>
+  <div class="rules">
+    <div class="rule"><span class="rid">D-01</span><div class="rb"><p><b>SI</b> aparecen indicios de que el cliente no vive en el domicilio</p><p class="rt"><b>ENTONCES</b> amplía la verificación con vecinos y red de contactos antes de concluir</p><p class="rw"><b>PORQUE</b> es su duda principal (6/19) y el 68% atiende red de contactos ampliada</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-02</span><div class="rb"><p><b>SI</b> verificó que el domicilio es falso <b>Y</b> Torre reprograma la visita igual</p><p class="rt"><b>ENTONCES</b> pierde confianza en el canal y lo declara abiertamente</p><p class="rw"><b>PORQUE</b> «insisten contra la evidencia del gestor» es el 9.4% de Q21 y concentra las calificaciones «1»</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-03</span><div class="rb"><p><b>SI</b> la señal se cae mientras cierra la validación</p><p class="rt"><b>ENTONCES</b> teme haber perdido la evidencia y rehace la captura</p><p class="rw"><b>PORQUE</b> la falta de señal lo frustra al 79%, el valor más alto del estudio</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-04</span><div class="rb"><p><b>SI</b> el flujo no distingue entre evidencia mínima y evidencia sólida</p><p class="rt"><b>ENTONCES</b> captura de más «por si acaso»</p><p class="rw"><b>PORQUE</b> su frase definitoria es no cometer errores y su duración supera los 25 minutos en 10 de 19</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-05</span><div class="rb"><p><b>SI</b> se le ofrece registrar un rechazo vinculante por domicilio inexistente</p><p class="rt"><b>ENTONCES</b> lo adopta de inmediato y con alivio explícito</p><p class="rw"><b>PORQUE</b> resuelve la queja de autoridad que su segmento reporta en Q21</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-06</span><div class="rb"><p><b>SI</b> el cliente no tiene documentos</p><p class="rt"><b>ENTONCES</b> escala en vez de improvisar una salida</p><p class="rw"><b>PORQUE</b> el 26% de su segmento pide apoyo por esa causa, contra 6% en el perfil rápido</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">D-07</span><div class="rb"><p><b>SI</b> se le presiona por cerrar más rápido</p><p class="rt"><b>ENTONCES</b> no acelera: se vuelve más minucioso</p><p class="rw"><b>PORQUE</b> su estilo declarado es cuidadoso y detallista en 10 de 19 <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">D-08</span><div class="rb"><p><b>SI</b> recibe un umbral explícito de suficiencia por tipo de investigación</p><p class="rt"><b>ENTONCES</b> reduce el tiempo de visita sin bajar la calidad de la evidencia</p><p class="rw"><b>PORQUE</b> su exceso parece nacer de la ambigüedad del criterio, no del gusto por documentar <span class="ev ev-h">hipótesis</span></p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">D-09</span><div class="rb"><p><b>SI</b> el domicilio es difícil de localizar</p><p class="rt"><b>ENTONCES</b> invierte tiempo buscando antes de pedir ayuda</p><p class="rw"><b>PORQUE</b> es el único perfil donde «llegar al domicilio» supera a la biometría como parte más lenta</p></div><span class="rp alta">Alta</span></div>
+    <div class="rule"><span class="rid">D-10</span><div class="rb"><p><b>SI</b> su recomendación va a ser negativa</p><p class="rt"><b>ENTONCES</b> documenta más de lo requerido antes de registrarla</p><p class="rw"><b>PORQUE</b> anticipa que la decisión será revisada o revertida a distancia <span class="ev ev-i">inferido</span></p></div><span class="rp media">Media-alta</span></div>
+    <div class="rule"><span class="rid">D-11</span><div class="rb"><p><b>SI</b> se le ofrece una guía paso a paso</p><p class="rt"><b>ENTONCES</b> la acepta más que cualquier otro perfil, pero solo si no agrega pasos al flujo</p><p class="rw"><b>PORQUE</b> los 4 que eligieron «guíe paso a paso» están en su segmento, y aun así «PAX lenta» lo frustra al 58%</p></div><span class="rp media">Media</span></div>
+    <div class="rule"><span class="rid">D-12</span><div class="rb"><p><b>SI</b> se le pregunta por su motivación principal</p><p class="rt"><b>ENTONCES</b> responde comisión, sin percibir conflicto con su método exhaustivo</p><p class="rw"><b>PORQUE</b> los 19 de 19 marcaron comisión junto con su perfil detallista</p></div><span class="rp alta">Alta</span></div>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="s11">
+  <div class="shead"><span class="n">11</span><h2>Evidencia y confianza</h2><span class="tag">Fases 9 y 10</span></div>
+
+  <h3>Qué se puede simular y qué no</h3>
+  <p class="measure">Aplica a los cuatro perfiles. Un usuario sintético no debe producir una opinión solo porque se le formuló una pregunta: ante un tema sin evidencia debe responder <em>«los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil»</em>.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Nivel</th><th>Temas</th><th>Base</th></tr></thead>
+    <tbody>
+      <tr><td><b>Con confianza</b><br><span class="ev ev-o">observado</span></td><td>Reacción ante fallos de captura biométrica, señal y lentitud del equipo · duración y ritmo de la visita · momento y contenido de la duda al decidir · uso y valoración de Torre de Control · motivadores declarados · qué le piden a PAX · disposición a escalar</td><td>Preguntas cerradas con N entre 64 y 73, más tres preguntas abiertas codificadas</td></tr>
+      <tr><td><b>Parcialmente</b><br><span class="ev ev-i">inferido</span></td><td>Reacción ante funciones nuevas · adopción de autonomía en campo · efecto de un umbral explícito de evidencia · comportamiento bajo presión de tiempo · trayectoria del novato hacia otro segmento · atribución de la claridad al modelo de terminal</td><td>Inferencias sobre patrones consistentes, sin medición directa. Úsense como escenarios a validar, no como predicciones</td></tr>
+      <tr><td><b>No se puede simular</b><br><span class="ev ev-h">sin evidencia</span></td><td>Experiencia de una GIC mujer · diferencias reales por región · efecto de la edad separado de la antigüedad · relación con supervisores y compañeros · negociación con el cliente durante la entrevista · reacción ante cambios de esquema de comisión · uso de herramientas fuera de PAX · las tres frecuencias semanales de Q8–Q10</td><td>Sin datos, con n insuficiente, o con variables confundidas entre sí</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Validación de los perfiles — Fase 10</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Comprobación</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>¿Cada característica tiene respaldo en los datos?</td><td>Sí. Los atributos sin respaldo aparecen marcados <span class="ev ev-h">hip</span> o declarados como no modelados.</td></tr>
+      <tr><td>¿Las combinaciones son plausibles?</td><td>Sí. Cada perfil se construyó dentro de su segmento, no cruzando segmentos.</td></tr>
+      <tr><td>¿Se conservaron las relaciones observadas?</td><td>Sí. Antigüedad↔Torre, dispositivo↔claridad, duración↔exhaustividad y frase↔valoración del soporte se mantienen en los cuatro perfiles.</td></tr>
+      <tr><td>¿Algún perfil es la combinación de las modas?</td><td>No. La moda de la muestra sería un veterano, social, con A910, que duda de la capacidad de pago y valora a Torre en 3 — un perfil que no describe a nadie. Ningún usuario sintético reproduce ese conjunto.</td></tr>
+      <tr><td>¿Hay contradicciones artificiales?</td><td>No. Las tensiones declaradas se derivan de cruces reales: comisión al 100% con duración de más de 25 minutos en D; velocidad con 46% de motivación por aprender en B.</td></tr>
+      <tr><td>¿Se exagera alguna minoría?</td><td>Riesgo controlado. «Guíe paso a paso» (9.4%) y «más apoyo» (6.2%) se absorbieron dentro de D en lugar de convertirse en segmentos propios.</td></tr>
+      <tr><td>¿Se ocultan patrones minoritarios relevantes?</td><td>No. Se reportan aunque no sostengan un segmento: el caso de parálisis facial, la queja de autoridad, el <code>Other</code> sobre el origen de la LCR, y el 13.4% que pierde tiempo en referencias.</td></tr>
+      <tr><td>¿Los perfiles difieren en comportamiento?</td><td>Sí. Difieren en cuándo escalan, cuánto dura su visita, dónde ubican su duda y qué le piden a PAX.</td></tr>
+      <tr><td>¿Predicen respuestas distintas ante un mismo escenario?</td><td>Sí. Ver la prueba de contraste abajo.</td></tr>
+      <tr><td>¿Se distingue dato, inferencia e hipótesis?</td><td>Sí, con marcas explícitas en perfiles y reglas.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Prueba de contraste — un mismo escenario, cuatro respuestas</h4>
+  <p class="measure"><b>Escenario:</b> el gestor llega al domicilio, un vecino le dice que el cliente se mudó hace meses, y PAX no ofrece una salida para rechazar el caso desde campo.</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Perfil</th><th>Conducta prevista</th><th>Reglas</th></tr></thead>
+    <tbody>
+      <tr><td><b>A</b> Rubén</td><td>Pregunta a otros vecinos para confirmar, no llama a Torre, registra lo que el flujo permita y sigue su ruta. Se queja de haber salido sin saberlo de antemano.</td><td class="num">A-01 · A-03 · A-11</td></tr>
+      <tr><td><b>B</b> Diego</td><td>Da el caso por perdido en minutos y avanza a la siguiente visita. No invierte en verificar de más.</td><td class="num">B-02 · B-04</td></tr>
+      <tr><td><b>C</b> Emilio</td><td>Llama a Torre para preguntar qué procede y espera indicación antes de moverse.</td><td class="num">C-01 · C-04</td></tr>
+      <tr><td><b>D</b> Fernando</td><td>Verifica con dos o tres fuentes más, documenta todo, y si Torre reprograma la visita lo vive como un desautorización.</td><td class="num">D-01 · D-02 · D-10</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="s12">
+  <div class="shead"><span class="n">12</span><h2>Gaps de investigación</h2><span class="tag">Fase 12</span></div>
+  <p class="lede measure">Qué habría que investigar con usuarios reales para mejorar la fidelidad del modelo, en orden de impacto sobre los perfiles.</p>
+
+  <ol class="gaps">
+    <li><h4>Recuperar el enunciado de las preguntas 8, 9 y 10</h4><p>Tres variables de frecuencia semanal — el mejor tipo de dato para describir carga operativa — están inutilizadas por un problema de export, no de diseño. Es el arreglo más barato y de mayor retorno: basta con abrir el estudio en Maze.</p></li>
+    <li><h4>Aclarar los 11 participantes de diferencia</h4><p>El brief habla de 84 y el archivo tiene 73. Si existe un export completo, todo el análisis debería rehacerse sobre él antes de tomar decisiones de producto.</p></li>
+    <li><h4>Observación en campo de la captura biométrica</h4><p>Es el cuello de botella #1 y solo se conoce por autorreporte. Hacen falta mediciones reales: cuántos intentos por caso, cuántos segundos, bajo qué condiciones de luz, y qué proporción de clientes no puede producir el gesto que el sistema exige.</p></li>
+    <li><h4>Probar causalidad del dispositivo</h4><p>La brecha A910 vs A960 es fuerte y está bien controlada, pero es observacional. Un piloto de reemplazo en un grupo de gestores confirmaría si mejora la percepción y, sobre todo, si mueve la duración real de la visita.</p></li>
+    <li><h4>Entender la escalada de autoridad con Torre de Control</h4><p>La queja de que Torre reprograma contra la verificación del gestor aparece en 9.4% de las respuestas pero concentra las calificaciones más bajas. Hacen falta entrevistas en ambos lados —gestores y operadores de Torre— para saber si es un problema de proceso, de información o de facultades.</p></li>
+    <li><h4>Definir y testear el umbral de evidencia suficiente</h4><p>Las dudas sobre suficiencia (23.9%) y sobre recomendar (22.4%) suman casi la mitad de la muestra. Un test de concepto con criterios explícitos por tipo de investigación mediría si reduce la duración de D y la polarización de C.</p></li>
+    <li><h4>Investigar el subgrupo de referencias</h4><p>Los 9 que pierden tiempo en referencias son también los que dudan al recomendar. Es la relación más fuerte del estudio sobre la celda más pequeña: merece una indagación dedicada.</p></li>
+    <li><h4>Muestrear mujeres GIC</h4><p>Con 2 respuestas en 73 no hay nada que modelar. Si hay más mujeres en la operación, el reclutamiento las está perdiendo; si no las hay, es un hallazgo organizacional por derecho propio.</p></li>
+    <li><h4>Separar edad de antigüedad</h4><p>Requiere reclutar veteranos jóvenes y novatos mayores. Sin eso, ninguna afirmación sobre generaciones es defendible.</p></li>
+    <li><h4>Medir la operación con datos de sistema</h4><p>Todo este estudio es autorreporte. Los logs de PAX — tiempos por paso, reintentos de captura, reinicios, pérdidas de sesión por cobertura — permitirían contrastar la percepción con lo ocurrido y calibrar los perfiles con números duros.</p></li>
+  </ol>
+
+  <div class="call t">
+    <h4>Cómo usar estos perfiles</h4>
+    <p>Sirven para <b>ensayar decisiones</b>: anticipar cómo caería una función nueva, preparar guiones de entrevista, priorizar un backlog, o detectar que una propuesta solo le sirve a uno de los cuatro. No sustituyen la investigación con personas reales, y no deben usarse para validar una decisión ya tomada. Cada vez que un perfil responda algo que no esté respaldado por §11, esa respuesta es una hipótesis a testear, no un dato.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div>
+    <p class="fkick">Fuente</p>
+    <p><code>actualizacion-user-persona-gic_responses.csv</code> — export de Maze, 73 respuestas, 41 columnas, recolección del 15 y 16 de mayo.</p>
+  </div>
+  <div>
+    <p class="fkick">Método</p>
+    <p>Auditoría de calidad, frecuencias con N válido por pregunta, codificación temática manual de 4 preguntas abiertas, cruces bivariados y segmentación por reglas sobre variables de Nivel A.</p>
+  </div>
+  <div>
+    <p class="fkick">Regla de fidelidad</p>
+    <p>Fidelidad a los datos &gt; consistencia conductual &gt; completitud narrativa. Preferible dejar una característica como desconocida antes que inventarla.</p>
+  </div>
+</footer>
+
+</main>
+</div>
+</div>

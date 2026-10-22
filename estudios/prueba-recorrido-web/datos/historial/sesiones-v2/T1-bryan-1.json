@@ -1,0 +1,457 @@
+{
+ "id": "T1-bryan-1",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": {
+  "O": 72,
+  "C": 68,
+  "E": 74,
+  "A": 65,
+  "N": 62
+ },
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-20T16:17:44",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "localhost:8737/index.html",
+   "url": "http://localhost:8737/index.html",
+   "captura": "datos/capturas/T1-bryan-1/p01.png",
+   "marcas": "datos/capturas/T1-bryan-1/p01-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y directa, con el monto grande y un botón claro, aunque es muy simple.",
+    "que_miras_primero": "El $30,000 en verde, bien grande, y luego el botón de Solicitar ahora.",
+    "interpretacion": "Es el paso 1 de 3. Me ofrecen hasta $30,000 el mismo día, sujeto a aprobación. Abajo, en letra chiquita, dice un CAT promedio de 98.5% sin IVA.",
+    "pensamiento": "Qué bueno que son 3 pasos y es rápido, pero a ver si de verdad son 3. El CAT de 98.5% está en letra chiquita, pero igual lo quiero hoy.",
+    "intencion": "Quiero darle a Solicitar ahora para empezar el trámite y ver qué me piden. No me voy a poner a leer los términos todavía.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Solicitar ahora porque es lo que me lleva al trámite, y quiero resolverlo rápido desde el celular."
+    },
+    "marca": 1,
+    "escribir": "",
+    "confianza": 55,
+    "friccion": 1,
+    "reglas": [
+     "A-03",
+     "A-04",
+     "A-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 247,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Solicitar ahora"
+    },
+    {
+     "x": 20,
+     "y": 332,
+     "w": 42,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Términos"
+    },
+    {
+     "x": 64,
+     "y": 332,
+     "w": 47,
+     "h": 12,
+     "tipo": "a",
+     "etiqueta": "Privacidad"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 270
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 247,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Solicitar ahora"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 2,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan-1/p02.png",
+   "marcas": "datos/capturas/T1-bryan-1/p02-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Pantalla sencilla y legible, solo dos campos y un botón; va rápido.",
+    "que_miras_primero": "El título \"Tus datos\" y los dos campos vacíos.",
+    "interpretacion": "Es el paso 2 de 3. Me piden mi nombre completo y mi celular para seguir con la solicitud.",
+    "pensamiento": "Va bien, sigue siendo paso 2 de 3. Pongo mis datos y a ver si no me salen más pantallas.",
+    "intencion": "Quiero llenar mi nombre primero, luego el teléfono y darle continuar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Empiezo por el nombre completo con los datos de prueba, y después sigo con el teléfono."
+    },
+    "marca": 2,
+    "escribir": "Alex García",
+    "confianza": 58,
+    "friccion": 1,
+    "reglas": [
+     "A-03",
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 179,
+    "texto": "Alex García"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 157,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 3,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan-1/p03.png",
+   "marcas": "datos/capturas/T1-bryan-1/p03-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya quedó mi nombre, falta el teléfono; todo sigue claro y rápido.",
+    "que_miras_primero": "El campo de nombre con \"Alex García\" ya escrito y el campo de teléfono vacío abajo.",
+    "interpretacion": "Sigo en el paso 2 de 3. Mi nombre ya se capturó y ahora me falta el celular antes de darle Continuar.",
+    "pensamiento": "Listo el nombre. Ahora el teléfono y seguimos, ojalá no se alargue.",
+    "intencion": "Quiero poner mi número de celular en el segundo campo y luego darle Continuar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el teléfono de prueba en el campo de celular para poder continuar."
+    },
+    "marca": 4,
+    "escribir": "55 0000 0000",
+    "confianza": 58,
+    "friccion": 1,
+    "reglas": [
+     "A-03",
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": ""
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "escribir",
+    "x": 180,
+    "y": 266,
+    "texto": "55 0000 0000"
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 244,
+    "w": 320,
+    "h": 44,
+    "tipo": "input",
+    "etiqueta": ""
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#datos"
+  },
+  {
+   "n": 4,
+   "pantalla": "localhost:8737/index.html#datos",
+   "url": "http://localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-bryan-1/p04.png",
+   "marcas": "datos/capturas/T1-bryan-1/p04-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Ya está todo lleno, solo falta darle Continuar.",
+    "que_miras_primero": "El botón verde de Continuar, ya con mis dos datos puestos.",
+    "interpretacion": "Es el paso 2 de 3 con nombre y teléfono capturados. Me falta confirmar para avanzar al paso 3.",
+    "pensamiento": "Todo listo. Le doy Continuar y ojalá ya sea el último paso y no me salgan más pantallas.",
+    "intencion": "Quiero darle Continuar para pasar al siguiente paso.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque ya llené los dos campos y quiero avanzar rápido."
+    },
+    "marca": 5,
+    "escribir": "",
+    "confianza": 58,
+    "friccion": 1,
+    "reglas": [
+     "A-03",
+     "A-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 128,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Nombre completo"
+    },
+    {
+     "x": 20,
+     "y": 157,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Alex García"
+    },
+    {
+     "x": 20,
+     "y": 215,
+     "w": 320,
+     "h": 23,
+     "tipo": "label",
+     "etiqueta": "Teléfono celular"
+    },
+    {
+     "x": 20,
+     "y": 244,
+     "w": 320,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "55 0000 0000"
+    },
+    {
+     "x": 20,
+     "y": 306,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 329
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 306,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#confirmar"
+  },
+  {
+   "n": 5,
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "url": "http://localhost:8737/index.html#confirmar",
+   "captura": "datos/capturas/T1-bryan-1/p05.png",
+   "marcas": "datos/capturas/T1-bryan-1/p05-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Va rápido y sí son 3 pasos, pero me muestra muy poca información para decidir.",
+    "que_miras_primero": "\"Monto: $30,000 · 52 semanas\" y el botón verde de Enviar solicitud.",
+    "interpretacion": "Es el paso 3 de 3, la revisión final. Dice el monto y el plazo, y que al continuar autorizo que consulten mi historial crediticio. No veo cuánto pagaría por semana ni cuánto es el total.",
+    "pensamiento": "Ok, sí fueron tres pasos, eso sí. No sé cuánto es el pago semanal ni el total, pero lo quiero hoy y la letra chiquita de buró ni la peleo. Le doy enviar.",
+    "intencion": "Quiero enviar la solicitud ya para que me aprueben hoy mismo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Enviar solicitud porque se cumplieron los 3 pasos y quiero cerrar el trámite rápido; la autorización de buró la acepto sin detenerme."
+    },
+    "marca": 1,
+    "escribir": "",
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "A-03",
+     "A-04",
+     "A-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 20,
+     "y": 203,
+     "w": 320,
+     "h": 46,
+     "tipo": "button",
+     "etiqueta": "Enviar solicitud"
+    },
+    {
+     "x": 20,
+     "y": 267,
+     "w": 320,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Corregir datos"
+    }
+   ],
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 360,
+    "h": 800
+   },
+   "accion": {
+    "tipo": "tocar",
+    "x": 180,
+    "y": 226
+   },
+   "zona_tocada": {
+    "x": 20,
+    "y": 203,
+    "w": 320,
+    "h": 46,
+    "tipo": "button",
+    "etiqueta": "Enviar solicitud"
+   },
+   "respuesta": "si",
+   "pantalla_despues": "localhost:8737/index.html#listo"
+  },
+  {
+   "n": 6,
+   "pantalla": "localhost:8737/index.html#listo",
+   "url": "http://localhost:8737/index.html#listo",
+   "captura": "datos/capturas/T1-bryan-1/p06.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.4044,
+ "resultado": "exito",
+ "video": "datos/videos/T1-bryan-1.webm",
+ "fin": "2026-10-20T16:19:02"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "pri-E2-A-arturo-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Dice \"Aprobado en producto\" y que tengo $30,000 para mis productos favoritos. Pero más abajo dice que esta vez el préstamo es para comprar productos y no para sacar efectivo. O sea, no es lo que pedí. Hay un asterisco que dice \"sujeto a aprobación\" y eso me confunde: si ya está aprobado, ¿qué falta aprobar? La letra de \"Saber mas\" y la del asterisco está muy chiquita. Y dice \"María\"; lo leo como si dijera mi nombre.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo y me muestran $30,000, pero solo para comprar productos. El monto coincide, la forma no. Y el asterisco 'sujeto a aprobación' contradice el 'Aprobado', así que no me queda claro qué tan firme es."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Dice \"aquí\" y muestra dos tarjetas: Elektra (\"Renueva tu casa hoy y paga después\") y shopinbaz (\"Ofertas que solo tú tienes\"). Entiendo que en esas tiendas. Si hay más lugares, no lo dice. Lo de la casa me sirve, porque es un gasto de hogar.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No estoy seguro de que ya sea mío. Dice 'Ya está listo para usarse', pero también 'sujeto a aprobación' con asterisco, y no explica qué condición falta ni quién la revisa. Eso tendría que preguntarlo a alguien."
+  },
+  "p6": "Lo vi: el botón verde dice \"Continuar comprando\". Supongo que me lleva a comprar en las tiendas, pero la pantalla no dice a dónde va ni si me pide algo más. No lo sé con certeza.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "Solo dice 'en esta ocasión' mi préstamo es para productos, pero no dice por qué. Existe el 'Saber mas', quizá ahí lo explican, pero no sé. Si me dicen para qué o por qué, lo entiendo mejor."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría 'Saber mas' para ver si explican por qué no es efectivo y qué significa el asterisco. Pero la letra es muy chiquita y no sé si la alcanzo a leer o agrandar. Si hubiera una sucursal o a quién preguntar, preferiría ir y que me lo expliquen."
+  },
+  "reglas": [
+   "D-01",
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-10"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me dieron el monto de $30,000, pero no como lo pedí: solo para comprar productos en sus tiendas, no en efectivo. El panel no aclara lo del asterisco 'sujeto a aprobación', así que eso sigue sin quedarme claro."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy puedo usar mi préstamo para comprar productos en sus tiendas. No menciona efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, aunque en general: 'por tu historial crediticio, hoy puedes usar tu préstamo para comprar productos'. No explica qué del historial ni qué le faltó. Es una razón, pero vaga."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice claro. Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a 'nuevas opciones de financiamiento'. No dice que eso sea efectivo, ni cuánto tiempo, ni qué tengo que cumplir exactamente. Lo del efectivo no me lo prometen."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me quedo tranquilo de que me explican algo y de que la letra se lee mejor que la de la pantalla anterior, y el botón 'De acuerdo' es claro. Pero no me dan efectivo ni me dicen cómo conseguirlo, y sigo sin saber a quién preguntar. Ni bien ni mal."
+   },
+   "reglas": [
+    "D-08",
+    "D-04",
+    "D-09"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1521
+}

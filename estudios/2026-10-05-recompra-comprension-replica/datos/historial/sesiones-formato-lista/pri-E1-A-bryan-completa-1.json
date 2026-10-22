@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-A-bryan-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que estoy aprobado por $30,000 en efectivo y que ya son míos. Pero abajito, en letra chiquita, dice «Sujeto a aprobación». O sea, dice \"aprobado\" y a la vez \"sujeto a aprobación\". Se contradice. También me ofrece comprar en Elektra y Shop in Baz.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "El letrero dice «Aprobado» y «$30,000», que es lo que pedí. Pero el asterisco dice «Sujeto a aprobación», en letra de 12 px. Entonces no sé si de verdad me aprobaron o si todavía falta. La pantalla se contradice y no me aclara."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos, listos para usar», pero no veo cómo ni dónde me los depositan. No muestra cuenta, tarjeta ni fecha. Y el asterisco lo deja condicionado. No puedo asegurar que los reciba en efectivo."
+  },
+  "p4": "Dice que son en efectivo, listos para usar, pero no dice dónde. Lo único concreto es «También puedes comprar en» Elektra (productos para el hogar) y Shop in Baz (tecnología, hogar, moda). No sé si es obligatorio usarlo ahí o si es solo una sugerencia. Eso no lo aclara.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El texto grande dice que ya es mío, pero el «*Sujeto a aprobación» dice que todavía depende de algo. No dice qué falta. Tampoco veo pago semanal ni costo total. Con tanta letra chiquita me da desconfianza."
+  },
+  "p6": "Sí lo vi, el verde que dice «Continuar con mi monto». Supongo que sigue el trámite con los $30,000, pero la pantalla no dice qué sigue ni cuántos pasos faltan. No lo sé. Lo toco, pero con duda: si me manda a otro dominio raro o a sucursal, me salgo.",
+  "reglas": [
+   "A-03",
+   "A-06",
+   "A-04",
+   "A-08",
+   "A-02"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0429
+}

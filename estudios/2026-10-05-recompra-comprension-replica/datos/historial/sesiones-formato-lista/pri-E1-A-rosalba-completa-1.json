@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-A-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Se ve seria, con el logo de Banco Azteca y un letrero de «Aprobado». Dice que tengo $30,000 en efectivo, ya míos y listos para usar. Pero abajo, bien chiquito, dice «*Sujeto a aprobación», y eso no me cuadra con «Aprobado». También me ofrecen comprar en Elektra y Shopinbaz. Dice «María», no mi nombre, pero lo leo como si fuera el mío.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "La pantalla dice «Aprobado» y me muestra $30,000, que es lo que pedí. Pero el asterisco y la letra pequeña de abajo dicen «sujeto a aprobación». Entonces no sé si ya me aprobaron o si todavía falta. Se contradice y no lo puedo asegurar."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», así que parece que sí. Pero no veo cómo ni dónde me los dan: no hay cuenta, ni sucursal, ni transferencia. Y el asterisco me hace dudar. No lo puedo afirmar con lo que veo."
+  },
+  "p4": "En la pantalla dice que están «listos para usar», pero no dice en qué. Lo único que se menciona son Elektra y Shopinbaz, como lugares para comprar: productos para el hogar, tecnología, moda. No veo que diga si el efectivo lo puedo gastar en otro lado.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Creo que falta algo. El texto grande dice que ya es mío, pero el «*Sujeto a aprobación» dice lo contrario. Además hay un botón de «Continuar con mi monto», así que todavía hay pasos. No sé cuáles son, porque no los dice. Antes de seguir quisiera leer las condiciones, y esa letra la apenas alcanzo a leer. ¿Y si tengo una duda, con quién hablo? No veo a quién."
+  },
+  "p6": "Sí lo vi: es el botón verde grande, «Continuar con mi monto». No sé qué pasa si lo toco, porque la pantalla no lo dice. Supongo que sigue otro paso para completar el trámite, pero no sé si me piden documentos, si me llevan a otra página o si ahí ya firmo. Quisiera leer las condiciones antes de darle continuar.",
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0357
+}

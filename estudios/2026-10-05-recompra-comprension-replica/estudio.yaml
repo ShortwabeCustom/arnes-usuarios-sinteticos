@@ -1,0 +1,120 @@
+# Réplica dentro del arnés de «Investigacion comprension de pantallas en recompra» (5 de octubre de 2026).
+# Sirve para validar el arnés: mismas pantallas, zonas, panel, consigna y preguntas que el estudio original.
+id: 2026-10-05-recompra-comprension-replica
+titulo: "Comprensión de pantallas de resultado en recompra (OU-PWA) · réplica"
+metodo: comprension
+fecha: "2026-10-20"
+autor: "Alexis Valdez + Claude"
+producto: "Originación Única · PWA"
+marca: {color: "#0B6B4F", nombre: "Banco Azteca"}
+uix:                     # estándares de UiX (fuentes-equipo/uix/): naming del reporte
+  proyecto: oupwa
+  metodologia: abtesting   # compara variantes A/B de las pantallas de resultado
+  tema: recompra-resultado-replica
+  version: 1
+  fecha_fin: "2026-10-20"
+  cliente: "Originación Única · PWA"
+  alcance: descriptiva
+
+biblioteca: pwa
+panel: base4          # el estudio original usó los cuatro perfiles sin capa OCEAN
+modelo: sonnet
+corridas: 3
+paralelo: 6
+
+pregunta_principal: "¿Se entiende que el efectivo está aprobado (E1) y que no hay efectivo pero sí crédito para tiendas (E2)?"
+hipotesis:
+  - {id: H1.2, texto: "«Aprobado» + «ya son tuyos» y «*Sujeto a aprobación» se contradicen.", se_sostiene_si: "Quien alcanza la nota responde distinto a «¿ya es tuyo?»", se_cae_si: "Todos responden igual"}
+  - {id: H2.1, texto: "En vistazo, el número grande + «tienes» + «Aprobado» instalan «tengo $30,000 en efectivo».", se_sostiene_si: "Alguna corrida de vistazo responde «sí» a P3", se_cae_si: "Ninguna"}
+  - {id: H2.3, texto: "«Saber mas» pasa inadvertido.", se_sostiene_si: "Queda fuera del vistazo y su atención predicha es baja", se_cae_si: "Entra"}
+  - {id: H2.5, texto: "El bottom sheet no dice qué hacer para tener efectivo.", se_sostiene_si: "Tras leerlo, P9 sigue sin respuesta", se_cae_si: "Se responde"}
+
+consigna: >-
+  Ya tuviste un crédito con Banco Azteca. Hoy pediste desde la aplicación web un préstamo de $30,000 en
+  efectivo. Después de enviar la solicitud te aparece una pantalla.
+
+nombre_de_ejemplo: María
+guia_estilo: pwa              # fuentes-producto/pwa/reglas-estilo.yaml
+modos: [vistazo, completa]
+velocidad_base: 3.5
+velocidad_vistazo: 3.5
+velocidades: [2.5, 3.5, 4.5]
+pliegues: [640, 800]
+orden_por_pliegue: false   # el estudio original no corregía por pliegue
+
+pantallas:
+  E1-A: {imagen: material/E1-A.jpg, grupo: E1, variante: A, recorte_superior: 86}
+  E1-B: {imagen: material/E1-B.jpg, grupo: E1, variante: B, recorte_superior: 86}
+  E2-A: {imagen: material/E2-A.jpg, grupo: E2, variante: A, recorte_superior: 86}
+  E2-B: {imagen: material/E2-B.jpg, grupo: E2, variante: B, recorte_superior: 86}
+
+# Zonas de lectura en px de la imagen (360 de ancho). Roles: titular, monto, accion, enlace, nota,
+# ilustracion, cuerpo, tarjeta, estado, otro. Las reglas del persona y OCEAN operan sobre el rol.
+zonas:
+  E1-A:
+    chip: {caja: [117, 158, 243, 197], rol: estado, texto: "Aprobado", nombre: "Chip de estado", alto_px: 13}
+    ilustracion: {caja: [60, 205, 300, 468], rol: ilustracion, descripcion: "el dibujo de una mujer sonriendo"}
+    saludo: {caja: [119, 507, 240, 524], rol: titular, texto: "¡María, tienes", nombre: "«María, tienes»"}
+    monto: {caja: [53, 533, 307, 588], rol: monto, texto: "$30,000*"}
+    titular: {caja: [62, 604, 297, 649], rol: titular, texto: "en Efectivo ya son tuyos, listos para usar!", nombre: "Resto del titular"}
+    tiendas_titulo: {caja: [16, 686, 237, 700], rol: cuerpo, texto: "También puedes comprar en:", nombre: "Título de tiendas"}
+    tarjetas: {caja: [16, 718, 359, 868], rol: tarjeta, nombre: "Tarjetas de tienda", texto: "elektra Encuentra productos para renovar tu hogar. Estrenar ahora shopinbaz Tecnología, hogar, moda y más. Estrenar ahora"}
+    boton: {caja: [16, 904, 344, 952], rol: accion, texto: "Continuar con mi monto", nombre: "Botón principal"}
+    nota: {caja: [122, 971, 237, 982], rol: nota, texto: "*Sujeto a aprobación", nombre: "«*Sujeto a aprobación»"}
+  E1-B:
+    chip: {caja: [118, 502, 242, 538], rol: estado, texto: "Aprobado", nombre: "Chip de estado", alto_px: 13}
+    ilustracion: {caja: [65, 172, 300, 431], rol: ilustracion, descripcion: "el dibujo de una mujer sonriendo"}
+    saludo: {caja: [119, 571, 240, 588], rol: titular, texto: "¡María, tienes", nombre: "«María, tienes»"}
+    monto: {caja: [53, 597, 307, 652], rol: monto, texto: "$30,000*"}
+    titular: {caja: [62, 668, 297, 713], rol: titular, texto: "en Efectivo ya son tuyos, listos para usar!", nombre: "Resto del titular"}
+    tiendas_titulo: {caja: [16, 750, 237, 764], rol: cuerpo, texto: "También puedes comprar en:", nombre: "Título de tiendas"}
+    tarjetas: {caja: [16, 782, 359, 932], rol: tarjeta, nombre: "Tarjetas de tienda", texto: "elektra Encuentra productos para renovar tu hogar. Estrenar ahora shopinbaz Tecnología, hogar, moda y más. Estrenar ahora"}
+    boton: {caja: [16, 968, 344, 1016], rol: accion, texto: "Continuar con mi monto", nombre: "Botón principal"}
+    nota: {caja: [122, 1035, 237, 1046], rol: nota, texto: "*Sujeto a aprobación", nombre: "«*Sujeto a aprobación»"}
+  E2-A:
+    chip: {caja: [77, 158, 283, 197], rol: estado, texto: "Aprobado en producto", nombre: "Chip de estado", alto_px: 13}
+    ilustracion: {caja: [61, 234, 298, 439], rol: ilustracion, descripcion: "el dibujo de una mujer con una laptop y un celular"}
+    saludo: {caja: [119, 507, 240, 523], rol: titular, texto: "!María, tienes", nombre: "«María, tienes»"}
+    monto: {caja: [53, 533, 307, 588], rol: monto, texto: "$30,000*"}
+    titular: {caja: [42, 604, 321, 621], rol: titular, texto: "para tus productos favoritos!", nombre: "Resto del titular"}
+    aclaracion: {caja: [30, 645, 329, 695], rol: cuerpo, texto: "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.", nombre: "Aclaración (no efectivo)"}
+    saber_mas: {caja: [151, 708, 208, 721], rol: enlace, texto: "Saber mas", nombre: "«Saber mas»"}
+    tiendas_titulo: {caja: [24, 753, 243, 768], rol: cuerpo, texto: "Ya está listo para usarse aquí", nombre: "Título de tiendas"}
+    tarjetas: {caja: [0, 786, 359, 936], rol: tarjeta, nombre: "Tarjetas de tienda", texto: "elektra Renueva tu casa hoy y paga después Estrenar ahora shopinbaz Ofertas que solo tú tienes Estrenar ahora"}
+    boton: {caja: [24, 972, 336, 1020], rol: accion, texto: "Continuar comprando", nombre: "Botón principal"}
+    nota: {caja: [130, 1039, 245, 1050], rol: nota, texto: "*Sujeto a aprobación", nombre: "«*Sujeto a aprobación»"}
+  E2-B:
+    chip: {caja: [78, 502, 282, 538], rol: estado, texto: "Aprobado en producto", nombre: "Chip de estado", alto_px: 13}
+    ilustracion: {caja: [61, 172, 298, 403], rol: ilustracion, descripcion: "el dibujo de una mujer con una laptop y un celular"}
+    saludo: {caja: [119, 571, 240, 587], rol: titular, texto: "!María, tienes", nombre: "«María, tienes»"}
+    monto: {caja: [53, 597, 307, 652], rol: monto, texto: "$30,000*"}
+    titular: {caja: [42, 668, 321, 685], rol: titular, texto: "para tus productos favoritos!", nombre: "Resto del titular"}
+    aclaracion: {caja: [30, 709, 329, 759], rol: cuerpo, texto: "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.", nombre: "Aclaración (no efectivo)"}
+    saber_mas: {caja: [151, 772, 208, 785], rol: enlace, texto: "Saber mas", nombre: "«Saber mas»"}
+    tiendas_titulo: {caja: [24, 817, 243, 832], rol: cuerpo, texto: "Ya está listo para usarse aquí", nombre: "Título de tiendas"}
+    tarjetas: {caja: [0, 850, 359, 1000], rol: tarjeta, nombre: "Tarjetas de tienda", texto: "shopinbaz Ofertas que solo tú tienes Estrenar ahora ITALIKA Estrena moto y muévete ya Estrenar ahora"}
+    boton: {caja: [24, 1036, 336, 1084], rol: accion, texto: "Continuar comprando", nombre: "Botón principal"}
+    nota: {caja: [130, 1103, 245, 1114], rol: nota, texto: "*Sujeto a aprobación", nombre: "«*Sujeto a aprobación»"}
+
+# Primero la abierta, después las cerradas, para no sembrar la respuesta.
+# `correcta` por grupo; puede ser lista (varias válidas) o variar por momento (antes / id de continuación).
+preguntas:
+  - {id: p1, texto: "Con tus palabras, ¿qué te está diciendo esta pantalla?"}
+  - {id: p2, texto: "¿Te aprobaron lo que pediste?", opciones: [si, no, en_parte, no_se], correcta: {E1: si, E2: [no, en_parte]}}
+  - {id: p3, texto: "¿Puedes recibir los $30,000 en efectivo?", opciones: [si, no, no_se], correcta: {E1: si, E2: "no"}}
+  - {id: p4, texto: "¿En qué o dónde puedes usar ese dinero?"}
+  - {id: p5, texto: "¿Ya es tuyo o falta algo? ¿Qué?", opciones: [ya_es_mio, falta_algo, no_se]}
+  - {id: p6, texto: "¿Qué pasa si tocas el botón verde? (si no lo viste, dilo)"}
+  - {id: p7, texto: "¿Por qué te dieron esto y no efectivo? ¿La pantalla lo dice?", opciones: [lo_dice, no_lo_dice], solo: [E2], correcta: {E2: {antes: no_lo_dice, sheet: lo_dice}}}
+  - {id: p8, texto: "¿Tocarías algo antes de continuar? ¿Qué y por qué?", opciones: [nada, saber_mas, una_tienda, boton_verde, otro], solo: [E2]}
+  - {id: p9, texto: "¿Qué tendrías que hacer para tener efectivo más adelante? ¿El panel lo dice?", opciones: [lo_dice, no_lo_dice], solo: [E2], solo_continuacion: true, correcta: {E2: no_lo_dice}}
+  - {id: p10, texto: "¿Cómo te deja lo que acabas de leer?", opciones: [positiva, neutra, negativa], solo: [E2], solo_continuacion: true}
+
+continuaciones:
+  - id: sheet
+    tras: [completa]
+    solo: [E2]
+    imagen: material/sheet.png
+    consigna: "Ahora tocaste «Saber mas» y se abrió un panel desde abajo."
+    preguntas: [p2, p3, p7, p9, p10]
+    texto: "¿Por qué puedo usarlo sólo en productos? Por tu historial crediticio, hoy puedes usar tu préstamo para comprar productos en nuestras tiendas. Al usarla y mantener tus pagos al día, puedes fortalecer tu historial crediticio y acceder a nuevas opciones de financiamiento. De acuerdo"

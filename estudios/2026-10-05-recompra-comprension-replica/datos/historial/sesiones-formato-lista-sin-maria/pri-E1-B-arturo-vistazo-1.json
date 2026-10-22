@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-B-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Pues veo que dice $30,000 con letra bien grande, y que \"tienes... aprobado... en Efectivo ya son tuyos, listos para usar\". Entiendo que me dicen que sí me dieron el crédito. Pero la letra de \"Aprobado\" estaba chiquita y no alcancé a leer lo demás. Hay un asterisco junto al monto y no sé qué dice. También me sale el nombre de María y no es el mío, eso me confunde.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Parece que sí, porque dice $30,000 y \"Aprobado\". Pero el monto trae un asterisco y no alcancé a leer qué aclara. Tampoco sé si es exactamente lo que pedí. Y el nombre de María no es el mío. No me atrevo a decir que sí."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no leí cómo ni dónde los recibo, ni si hay que ir a sucursal. Lo demás no lo alcancé a leer. Si hay sucursal, mejor voy y ahí me explican."
+  },
+  "p4": "Dice \\\"listos para usar\\\", pero no vi dónde ni en qué. Yo lo quiero para un gasto de la casa, pero la pantalla no me lo aclaró en lo que alcancé a leer.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "Dice \"ya son tuyos\", pero el asterisco me hace pensar que hay una condición que no leí. El botón decía \"Continuar con mi…\" y ahí me quedé, así que quizá falta un paso. No sé cuál."
+  },
+  "p6": "Sí vi el botón, pero solo alcancé a leer \\\"Continuar con mi…\\\". No sé con mi qué. No puedo decir qué pasa si lo toco. Que sea verde no lo tengo claro. Me imagino que sigue otro paso, pero no sé cuál, y no me gusta tocar sin saber.",
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-01"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0154
+}

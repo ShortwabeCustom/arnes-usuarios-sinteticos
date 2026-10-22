@@ -1,0 +1,40 @@
+{
+ "id": "pri-E1-A-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "La pantalla dice «Aprobado» y que tengo $30,000 en efectivo, ya míos y listos para usar. Abajo, en letra chiquita, dice «*Sujeto a aprobación». Eso se contradice con «Aprobado». No me dice cuota, plazo ni total a pagar. Tampoco me dice quién me va a prestar ni cuándo me lo depositan.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "El monto coincide con lo que pedí, $30,000. Pero la pantalla dice «Aprobado» y también «Sujeto a aprobación». No sé si ya es definitivo. Además dice «tienes $30,000» pero no dice con qué condiciones."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice «en Efectivo ya son tuyos», pero no explica cómo ni cuándo los recibo, ni si es depósito o retiro. El asterisco con «sujeto a aprobación» me deja con duda. No voy a suponer un paso que no veo."
+  },
+  "p4": "Dice «en Efectivo… listos para usar», pero no dice dónde. También sugiere comprar en Elektra y Shopinbaz, con «Estrenar ahora». No me queda claro si el efectivo se usa ahí o si son ofertas aparte. Tampoco sé si hay restricciones.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El asterisco «sujeto a aprobación» dice que aún no es definitivo. Y falta lo que más me importa: cuánto voy a pagar al mes, el total, las fechas y qué pasa si me atraso. Sin ese número no me comprometo."
+  },
+  "p6": "Sí vi el botón verde «Continuar con mi monto». No sé qué sigue al tocarlo. Supongo que me llevaría a otro paso, pero no lo sé. Me preocupa que me pidan autorizar buró, cambien los términos o me saquen del celular. Antes de tocarlo quisiera ver cuota y total.",
+  "reglas": [
+   "B-02",
+   "B-05",
+   "B-06",
+   "B-08",
+   "B-10"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0473
+}

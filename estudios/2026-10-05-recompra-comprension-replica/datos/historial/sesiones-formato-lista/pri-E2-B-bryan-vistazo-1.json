@@ -1,0 +1,46 @@
+{
+ "id": "pri-E2-B-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra mediana] «En esta ocasión, tu préstamo es para comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 para mis productos favoritos. Sale un asterisco y una frase que se cortó: \"tu préstamo es para comprar…\". Parece que no es efectivo, sino para comprar algo. Y me dice María, ese no es mi nombre, pero lo leo como si fuera el mío.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo y la pantalla muestra $30,000, pero para 'productos favoritos' y no dice 'efectivo'. El monto coincide, la forma no. Además hay un asterisco que no leí. No sé si es una aprobación completa."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "Por lo que leí, no. Dice 'para tus productos favoritos' y 'tu préstamo es para comprar…'. No vi nada de efectivo. Lo demás no alcancé a leerlo, así que no sé si hay alguna opción."
+  },
+  "p4": "Para comprar productos, pero no sé cuáles ni dónde. La frase se cortó en 'para comprar…'. No sé si es una tienda en específico, la app o varias. No vi ninguna lista y no voy a inventarla.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "No lo siento mío todavía. Hay un asterisco con letra que no leí, y la frase de 'para comprar…' quedó incompleta. Seguro hay condiciones o un paso más, pero no sé cuáles porque la pantalla no me lo mostró en lo que alcancé a ver."
+  },
+  "p6": "No vi el botón verde, así que no sé qué hace. Solo alcancé a leer esas cinco cosas. Si me preguntas qué esperaría, sería seguir adelante, pero eso es suposición mía, no algo que me dijera la pantalla.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no. Solo dice 'En esta ocasión, tu préstamo es para comprar…' y ahí se corta. No explica por qué no me dieron efectivo. Y si pedí efectivo y me sale otra cosa, me late raro y quiero saber por qué."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de seguir buscaría qué dice el asterisco y cómo termina la frase de 'para comprar…'. Pedí efectivo y esto parece otra cosa, y no voy a darle al botón verde sin saber en qué me estoy metiendo. Si no encuentro eso rápido, me frustro."
+  },
+  "reglas": [
+   "A-01",
+   "A-03",
+   "A-09"
+  ],
+  "sin_cobertura": []
+ },
+ "costo_usd": 0.0181
+}

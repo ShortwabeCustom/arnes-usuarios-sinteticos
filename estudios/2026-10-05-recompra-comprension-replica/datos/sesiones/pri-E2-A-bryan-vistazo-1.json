@@ -1,0 +1,50 @@
+{
+ "id": "pri-E2-A-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra chica] «Aprobado en producto»\n6. [letra mediana] «En esta ocasión, tu préstamo…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me dieron $30,000 para mis \"productos favoritos\". Pero hay un asterisco y dice \"Aprobado en producto\", y empieza un \"En esta ocasión, tu préstamo…\" que no alcancé a leer. Suena a que me aprobaron, pero no en efectivo. No me queda claro.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo el monto de $30,000, pero dice 'Aprobado en producto' y no 'en efectivo'. Pedí efectivo. Me aprobaron algo, pero no sé si es lo que pedí. Lo que sigue de 'En esta ocasión, tu préstamo…' no lo leí."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "Por lo que vi, no. Dice 'aprobado en producto', así que parece que no es efectivo. No vi nada que diga que me lo dan en efectivo. Pero no leí la frase completa."
+  },
+  "p4": "\"Para tus productos favoritos\" y \"aprobado en producto\". Entiendo que es para comprar cosas, quizá en una tienda. No vi cuál tienda ni qué productos. No lo sé con certeza.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. Hay un asterisco en el monto, así que hay condiciones que no leí. Y la frase 'En esta ocasión, tu préstamo…' se quedó cortada. No sé qué sigue. Tampoco vi el costo total ni el pago."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer. No puedo decir qué pasa si lo toco.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no. Solo dice 'En esta ocasión, tu préstamo…' y ahí me quedé. Si la razón está más abajo, no la vi. Pedí efectivo y me salen con otra cosa sin explicarme."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Primero buscaría leer el resto, sobre todo lo que sigue de 'En esta ocasión…' y lo del asterisco. No quiero darle continuar a ciegas. Si no encuentro cómo ver eso rápido en la app, o me manda a otra página o a sucursal, me salgo. Si una amiga ya lo usó y le funcionó, le entro más tranquilo."
+  },
+  "reglas": [
+   "A-03",
+   "A-04",
+   "A-05",
+   "A-07",
+   "A-08",
+   "A-09"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0342
+}

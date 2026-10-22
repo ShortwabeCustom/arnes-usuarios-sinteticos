@@ -1,0 +1,42 @@
+{
+ "id": "pri-E1-B-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "B",
+ "pantalla": "E1-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra muy grande] «$30,000*»\n2. (miraste el dibujo de una mujer sonriendo)\n3. [letra mediana] «¡María, tienes»\n4. [letra chica] «Aprobado»\n5. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n6. [botón] «Continuar con mi…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo un número grande, $30,000, con un asterisco. Dice que tengo algo \"Aprobado\" y que en Efectivo ya son míos. Pero \"Aprobado\" salió en letra chiquita y el asterisco me hace pensar que hay algo que no alcancé a leer. Hay un botón que dice \"Continuar con mi…\" y no sé qué sigue. Me parece buena noticia, pero no me queda claro si ya terminé o si falta algo.",
+  "p2": {
+   "opcion": "no_se",
+   "texto": "Sale $30,000, que es lo que pedí, pero tiene asterisco y la palabra \"Aprobado\" estaba en letra chiquita. No sé si es exactamente lo que pedí o si hay condiciones que no alcancé a leer."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "Dice \"en Efectivo ya son tuyos\", pero no vi cómo ni dónde los recibo: si en sucursal, en una tarjeta o en una cuenta. No quiero suponerlo."
+  },
+  "p4": "Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "El botón dice \"Continuar con mi…\", así que todavía hay un paso más. Además el asterisco avisa que hay algo que no leí. No sé qué falta; solo sé que la pantalla no es el final."
+  },
+  "p6": "Sí lo vi, pero solo hasta \"Continuar con mi…\". No sé a qué me lleva. Supongo que sigue otro paso del trámite, pero no sé cuál. Si es uno de cámara o algo que no entienda, me preocupa quedarme trabado sin nadie a quién preguntarle.",
+  "reglas": [
+   "D-02",
+   "D-08",
+   "D-06",
+   "D-04"
+  ],
+  "sin_cobertura": [
+   "p4"
+  ]
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0293
+}

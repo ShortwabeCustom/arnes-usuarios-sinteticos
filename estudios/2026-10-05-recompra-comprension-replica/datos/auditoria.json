@@ -1,0 +1,4497 @@
+{
+ "metodo": "comprension",
+ "evaluadores": 3,
+ "umbral_consenso": 2,
+ "consolidado": [
+  {
+   "pantalla": "E1-A",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 4.0,
+   "problemas": [
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a lo anterior: no queda claro si el dinero ya está aprobado.",
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los demás textos.",
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente lo anterior."
+   ],
+   "recomendaciones": [
+    "Quita la condición si ya está aprobado. Si hay un paso pendiente, dilo claro y quita «ya son tuyos».",
+    "Quitar la condición si ya está aprobado. Si hay un paso pendiente, decir cuál es y quitar «ya son tuyos».",
+    "Quitar la condición si ya está aprobado. Si hay un paso pendiente, decir cuál es, con claridad."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Sin nota. Si hay condición: *Tu dinero se libera al confirmar tus datos."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Tu préstamo ya está aprobado. Falta que confirmes tus datos para recibirlo."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "*Monto aprobado. Para recibirlo, termina tu contratación."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 4.0,
+   "problemas": [
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los otros textos: no queda claro si el dinero ya es de la persona.",
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente lo anterior.",
+    "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los demás textos."
+   ],
+   "recomendaciones": [
+    "Quitar el asterisco y la nota si ya está aprobado. Si hay condiciones reales, decirlas con claridad y no llamar «Aprobado» a lo que no lo es.",
+    "Quita la condición si ya está aprobado. Si hay un paso pendiente, dilo claro y cambia el chip.",
+    "Quita la nota si ya está aprobado. Si hay una condición real, dila con claridad y quita «ya son tuyos»."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Quita la nota. Si hay una condición real: «Tu préstamo está aprobado. Recibes el dinero al firmar tu contrato»."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Tu préstamo ya está aprobado. El desembolso depende de que firmes tu contrato."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Si hay condición real: «*Tu préstamo está aprobado. Para recibirlo, confirma tus datos.»"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La condición que cambia la decisión está en letra muy pequeña y gris, al final de la pantalla. Casi no se lee.",
+    "La condición que cambia la decisión está en letra muy pequeña y gris, al final de la pantalla.",
+    "La condición que cambia la decisión está en letra muy pequeña y gris claro, al final. El asterisco junto al monto es diminuto."
+   ],
+   "recomendaciones": [
+    "Si la condición se mantiene, dale mayor tamaño y contraste, cerca del monto.",
+    "Subir tamaño y contraste de la condición, o resolverla en el texto principal.",
+    "Subir tamaño y contraste de la nota. Ponerla cerca del monto."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Condición visible junto al monto, en tamaño de cuerpo."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Condición visible junto al monto, en tamaño de cuerpo."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Condición visible, en un tamaño legible y con buen contraste."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La condición que cambia la decisión está en letra muy pequeña y gris claro, al final y debajo del botón. Casi no se alcanza a leer.",
+    "La condición que cambia la decisión está en letra muy pequeña y gris, bajo el botón. Casi no se lee.",
+    "La condición que cambia la decisión está en letra muy pequeña y gris claro, casi ilegible. El monto tiene el mayor tamaño."
+   ],
+   "recomendaciones": [
+    "Si existe una condición real, ponerla cerca del monto con tamaño y contraste legibles.",
+    "Sube tamaño y contraste, o ponla cerca del monto.",
+    "Sube tamaño y contraste de la nota, o quítala si no aplica."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Condición visible junto al monto, con tamaño de cuerpo."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Condición visible junto al monto, en tamaño de cuerpo."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Nota con tamaño legible y contraste alto, junto al monto."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "saludo",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El signo de apertura está al revés: «!» en lugar de «¡». Se ve descuidado.",
+    "Signo de apertura incorrecto: «!» al inicio en lugar de «¡». Se ve como error de calidad.",
+    "Signo de exclamación de apertura incorrecto: '!' en vez de '¡'. El titular tiene cierre sin apertura."
+   ],
+   "recomendaciones": [
+    "Usar «¡» al abrir la exclamación.",
+    "Usar «¡» al abrir la exclamación.",
+    "Usar ¡ al abrir."
+   ],
+   "reescrituras": [
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ],
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ],
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La restricción clave (solo compras, sin efectivo) va en texto pequeño debajo del monto grande. Quien lea solo el monto creerá que puede retirar efectivo.",
+    "La noticia que cambia la decisión (solo sirve para comprar productos, no da efectivo) queda en texto pequeño y debajo. El titular sugiere libertad de uso.",
+    "La noticia que cambia la decisión (el préstamo solo sirve para comprar productos, no da efectivo) va en texto pequeño, debajo del monto. Arriba solo se ve el monto y 'productos favoritos'."
+   ],
+   "recomendaciones": [
+    "Subir la condición al titular o junto al monto.",
+    "Subir la restricción al titular o al chip.",
+    "Subir la restricción al titular o junto al monto. Decir claro que es para compras en tiendas, no efectivo."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo de $30,000 es solo para comprar productos. No puedes retirarlo en efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo de $30,000* es solo para compras en tiendas. No es para retirar efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tienes $30,000 para comprar en tiendas. No puedes retirarlo en efectivo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El condicional resta certeza y contradice «Aprobado» y «listo para usarse».",
+    "La condición deja el monto como incierto, mientras la pantalla afirma «tienes $30,000» y «ya está listo para usarse».",
+    "La condición 'Sujeto a aprobación' le quita certeza a un monto presentado como aprobado y listo."
+   ],
+   "recomendaciones": [
+    "Quitar el asterisco o explicar qué condición falta.",
+    "Decir con certeza lo que es seguro y explicar qué condición falta.",
+    "Usar un mensaje cierto y coherente con el chip."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Vigente hasta dd/mm/aaaa. Aplican términos y condiciones."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "*Tu monto se confirma al finalizar tu compra."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Quitar la condición o explicar con claridad qué falta."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La condición que cambia la decisión está en letra muy pequeña y gris, al fondo.",
+    "La condición «Sujeto a aprobación» va en letra muy pequeña y gris, y decide si el monto es real.",
+    "La condición del monto está en letra muy pequeña y gris, con asterisco diminuto en el monto. Es información que cambia la decisión."
+   ],
+   "recomendaciones": [
+    "Aumentar tamaño y contraste, o integrarla en el cuerpo.",
+    "Aumentar tamaño y contraste, y acercarla al monto.",
+    "Aumentar tamaño y contraste, o integrarla al cuerpo."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "*Monto sujeto a aprobación final."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La noticia clave (el dinero es solo para comprar productos, no efectivo) va en texto pequeño, debajo del monto grande que sugiere dinero libre.",
+    "La noticia clave (el monto es solo para comprar productos, sin efectivo) va en texto pequeño debajo. El titular solo celebra el monto.",
+    "La noticia que cambia la decisión es que el préstamo no se puede retirar en efectivo. Está en un texto pequeño, debajo del monto grande. El titular y el chip dan a entender que el dinero es libre."
+   ],
+   "recomendaciones": [
+    "Subir la restricción al titular o junto al monto.",
+    "Subir la restricción a un lugar más visible, cerca del monto o en el titular.",
+    "Poner el límite en el titular o junto al monto."
+   ],
+   "reescrituras": [
+    [
+     "$30,000 para tus productos favoritos! / En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "¡María, tienes $30,000 para comprar en tiendas aliadas! No puedes retirarlo en efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La limitación que cambia la decisión está en cuerpo pequeño y poco destacado frente al monto enorme.",
+    "La condición que cambia la decisión se ve en cuerpo pequeño y con poco peso frente al monto enorme.",
+    "El texto que limita el uso del dinero es pequeño y de peso ligero frente al monto. El asterisco del monto y la nota son aún menores."
+   ],
+   "recomendaciones": [
+    "Aumentar tamaño y peso del texto de la restricción.",
+    "Aumentar tamaño y peso del texto de la restricción.",
+    "Subir tamaño y peso de la aclaración y de la nota."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+    ],
+    [
+     "Texto de aclaración pequeño",
+     "Aclaración en tamaño de cuerpo destacado"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "nota",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El condicional «sujeto a aprobación» resta certeza a un monto ya aprobado.",
+    "El condicional resta certeza a un préstamo ya aprobado y listo.",
+    "La condición «sujeto a aprobación» es un condicional que contradice la certeza de «Aprobado» y «tienes $30,000»."
+   ],
+   "recomendaciones": [
+    "Quitar el condicional o explicar qué condición falta.",
+    "Eliminar el condicional o precisar qué falta.",
+    "Eliminar el condicional o decir con claridad qué falta."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "*Monto disponible solo para compras en tiendas aliadas."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "*Aplican términos y condiciones."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "*Monto disponible solo en tiendas participantes."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "titular",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.7,
+   "problemas": [
+    "No se nombra el producto: no dice que es un préstamo. «Efectivo» queda ambiguo, aunque tiene mayúscula como producto.",
+    "«Efectivo» no dice que es un préstamo. Falta la palabra del glosario y el cliente puede no entender qué es.",
+    "No dice qué producto es. «Efectivo» suena a dinero en mano, no a préstamo. El glosario pide «préstamo»."
+   ],
+   "recomendaciones": [
+    "Nombra el producto con claridad y usa «préstamo».",
+    "Nombrar «préstamo» y usar «Efectivo» como nombre de producto si aplica.",
+    "Nombrar el producto como «préstamo». Si «Efectivo» es nombre de producto, usarlo con claridad."
+   ],
+   "reescrituras": [
+    [
+     "en Efectivo ya son tuyos",
+     "de tu préstamo Efectivo ya son tuyos"
+    ],
+    [
+     "en Efectivo ya son tuyos",
+     "de tu préstamo Efectivo ya son tuyos"
+    ],
+    [
+     "en Efectivo ya son tuyos",
+     "Tu préstamo Efectivo de $30,000 está aprobado."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "titular",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.7,
+   "problemas": [
+    "No dice «préstamo»: no queda claro qué producto es. «Efectivo» se entiende como nombre de producto, pero la persona no sabe si es un préstamo. Además «ya son tuyos» sugiere regalo.",
+    "No dice «préstamo». «Efectivo» parece un medio de pago, y no se sabe qué es lo aprobado. Si es producto, el nombre debe ser claro.",
+    "No dice «préstamo». «en Efectivo» se entiende como el producto o como dinero en mano, y está en minúscula inicial dentro de la frase partida."
+   ],
+   "recomendaciones": [
+    "Nombrar el préstamo y mantener «Efectivo» con mayúscula inicial como producto.",
+    "Nombra el producto con la palabra del glosario.",
+    "Nombra «préstamo» y usa el nombre del producto con mayúscula inicial."
+   ],
+   "reescrituras": [
+    [
+     "en Efectivo ya son tuyos",
+     "Tu préstamo Efectivo de $30,000 está aprobado"
+    ],
+    [
+     "en Efectivo ya son tuyos",
+     "en tu préstamo Efectivo"
+    ],
+    [
+     "en Efectivo ya son tuyos",
+     "de tu préstamo Efectivo ya son tuyos"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "saludo",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.7,
+   "problemas": [
+    "Signo de apertura incorrecto: «!» en lugar de «¡». Falta el de apertura en la frase partida, y el cierre queda en otra línea.",
+    "Signo de apertura mal: «!» en vez de «¡». Además, el titular se parte en dos tamaños con el monto en medio y cierra con «!» sin apertura.",
+    "Falta el signo de apertura «¡». Se escribió «!» al inicio, lo que es un error ortográfico visible en el titular."
+   ],
+   "recomendaciones": [
+    "Usar «¡» al inicio y un solo signo de cierre.",
+    "Usar «¡» y reunir la idea en una frase legible.",
+    "Usar «¡» al abrir la exclamación."
+   ],
+   "reescrituras": [
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ],
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ],
+    [
+     "!María, tienes",
+     "¡María, tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "titular",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.3,
+   "problemas": [
+    "La frase se parte en tres textos de distinto tamaño (saludo, monto, resto). La oración se lee cortada y el monto queda en medio. El signo de apertura «¡» y el de cierre «!» quedan lejos uno del otro.",
+    "La frase se parte en tres bloques de distinto tamaño (saludo, monto, remate) y la lectura se rompe. Los signos «¡» y «!» quedan separados.",
+    "La frase se parte en tres tamaños (saludo, monto, titular). Se lee como una sola oración entrecortada por el monto grande."
+   ],
+   "recomendaciones": [
+    "Armar una frase corta y completa, o separar en dos ideas con puntuación propia.",
+    "Haz una frase completa y corta, con el monto dentro.",
+    "Separa en frases completas: una para el monto y otra para el uso."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+     "¡María, tu préstamo está aprobado! Tienes $30,000 en Efectivo, listos para usar."
+    ],
+    [
+     "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+     "¡María, tu préstamo de $30,000 está aprobado!"
+    ],
+    [
+     "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+     "¡María, tu préstamo fue aprobado! / $30,000 / Ya son tuyos, listos para usar."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W5",
+   "nombre_criterio": "Negativas dichas de frente: el «no» se dice claro, sin esconderlo ni culpar",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.3,
+   "problemas": [
+    "El «no» sobre el efectivo es tímido y abre con «En esta ocasión», lo que sugiere que podría cambiar.",
+    "El «no» va escondido a media frase y con rodeo («en esta ocasión», «disponer de efectivo»).",
+    "La negativa se suaviza con «En esta ocasión» y «no para disponer de efectivo». No queda claro si es una regla o algo temporal."
+   ],
+   "recomendaciones": [
+    "Decir el no directo, con causa y salida.",
+    "Decir de frente que no se puede retirar efectivo.",
+    "Decir el «no» de frente y dar la causa y la salida."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo no se puede retirar en efectivo. Úsalo en las tiendas de abajo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "No puedes retirar este préstamo en efectivo. Úsalo para comprar productos."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "No puedes retirar este préstamo en efectivo. Úsalo para comprar en las tiendas de abajo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "titular",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La frase se parte en tres tamaños y bloques: saludo, monto enorme y resto. La frase se lee entrecortada y el signo de cierre queda lejos del de apertura.",
+    "La frase está partida en tres tamaños: saludo, monto enorme y resto. Se lee en pedazos y el asterisco se pierde.",
+    "La frase está partida en tres tamaños y líneas: saludo, monto y «en Efectivo…». Se lee a trozos y la apertura «¡» queda lejos del cierre «!»."
+   ],
+   "recomendaciones": [
+    "Haz frases cortas y completas. Separa el saludo de la noticia.",
+    "Hacer una frase más corta y con un solo hilo de lectura.",
+    "Hacer frases completas y cortas. Separar el saludo de la noticia."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+     "¡María, tu préstamo fue aprobado! Tienes $30,000 listos para usar."
+    ],
+    [
+     "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+     "María, tienes $30,000 de préstamo en Efectivo, listos para usar."
+    ],
+    [
+     "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+     "María, tu préstamo de $30,000 está aprobado."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "boton",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Continuar con mi monto» no dice qué pasa al tocar: ¿recibo el dinero, elijo plazo, firmo? Además usa «mi» (voz del cliente) sin necesidad.",
+    "«Continuar» es vago. No dice si se recibe el dinero, se firma o se revisan condiciones. «mi monto» no es claro.",
+    "«Continuar con mi monto» no dice qué pasa al tocar. Sugiere que ya hay monto asegurado."
+   ],
+   "recomendaciones": [
+    "Usa un verbo que describa el resultado real.",
+    "Usar un verbo que diga el resultado.",
+    "Usar un verbo que anticipe el resultado."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir mi dinero"
+    ],
+    [
+     "Continuar con mi monto",
+     "Recibir mi préstamo"
+    ],
+    [
+     "Continuar con mi monto",
+     "Contratar mi préstamo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W8",
+   "nombre_criterio": "Enlaces que se explican solos: el enlace dice a dónde lleva",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Los dos enlaces dicen igual «Estrenar ahora» y no dicen a dónde llevan (Elektra o Shopinbaz). «Estrenar» tampoco describe la acción.",
+    "Dos enlaces «Estrenar ahora» iguales no dicen a dónde llevan. «Estrenar» tampoco encaja con «Encuentra productos».",
+    "«Estrenar ahora» se repite en ambas tarjetas. No dice a dónde lleva. «Estrenar» no es claro."
+   ],
+   "recomendaciones": [
+    "Haz que cada enlace nombre su destino.",
+    "Nombrar el destino en cada enlace.",
+    "Nombrar el destino en cada enlace."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ],
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ],
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "boton",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Continuar» es genérico y no anticipa el resultado. «Mi monto» no aclara si es aceptar, firmar o recibir el dinero.",
+    "«Continuar con mi monto» no dice qué pasa al tocar (firmar, recibir, elegir plazo). Y «monto» sugiere que ya está asegurado.",
+    "«Continuar con mi monto» no dice qué pasa al tocar (¿contratar, recibir, depositar?). Además, «mi» usa voz de la persona."
+   ],
+   "recomendaciones": [
+    "Usar un verbo que describa lo que pasa al tocar.",
+    "Usa un verbo que diga el resultado.",
+    "Usa un verbo que anticipe el resultado."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir mi dinero"
+    ],
+    [
+     "Continuar con mi monto",
+     "Recibir mi préstamo"
+    ],
+    [
+     "Continuar con mi monto",
+     "Recibir mi dinero"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W8",
+   "nombre_criterio": "Enlaces que se explican solos: el enlace dice a dónde lleva",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Los dos enlaces dicen igual «Estrenar ahora» y no dicen a dónde llevan. «Estrenar» no describe ir a una tienda.",
+    "«Estrenar ahora» se repite en ambas tarjetas y no dice a dónde lleva. «Estrenar» no cuadra con tecnología o moda.",
+    "Los dos enlaces dicen igual «Estrenar ahora» y no explican a dónde llevan (tienda o catálogo). «Estrenar» no describe la acción."
+   ],
+   "recomendaciones": [
+    "Nombrar el destino en cada enlace.",
+    "Di el destino en cada enlace.",
+    "Di el destino en cada enlace."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ],
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ],
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shop in Baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "saber_mas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Falta el acento en «más».",
+    "Falta el acento en «más».",
+    "Falta el acento en 'más'."
+   ],
+   "recomendaciones": [
+    "Corregir la ortografía.",
+    "Acentuar «más».",
+    "Corregir la tilde."
+   ],
+   "reescrituras": [
+    [
+     "Saber mas",
+     "Saber más"
+    ],
+    [
+     "Saber mas",
+     "Saber más"
+    ],
+    [
+     "Saber mas",
+     "Saber más"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W8",
+   "nombre_criterio": "Enlaces que se explican solos: el enlace dice a dónde lleva",
+   "zona": "saber_mas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El enlace no dice qué explica ni a dónde lleva.",
+    "El enlace no dice qué se va a saber ni a dónde lleva. Es pequeño.",
+    "El enlace no dice qué se va a saber ni a dónde lleva."
+   ],
+   "recomendaciones": [
+    "Nombrar el contenido al que lleva.",
+    "Nombrar el contenido.",
+    "Nombrar el contenido al que lleva."
+   ],
+   "reescrituras": [
+    [
+     "Saber mas",
+     "Ver dónde puedo usar mi préstamo"
+    ],
+    [
+     "Saber mas",
+     "Ver cómo usar mi préstamo"
+    ],
+    [
+     "Saber mas",
+     "Ver cómo usar mi préstamo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W5",
+   "nombre_criterio": "Negativas dichas de frente: el «no» se dice claro, sin esconderlo ni culpar",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El «no» queda escondido tras «En esta ocasión» y no explica por qué ni qué hacer para obtener efectivo.",
+    "El «no» sobre el efectivo va suavizado con «En esta ocasión», que sugiere que otra vez sí se podrá, y queda escondido.",
+    "El 'no' sobre el efectivo va escondido y suavizado con 'En esta ocasión'. Suena a algo pasajero sin explicar."
+   ],
+   "recomendaciones": [
+    "Decir la negativa directa y dar una salida o motivo.",
+    "Decir de frente que no se puede retirar efectivo.",
+    "Decir de frente que no hay efectivo y por qué, y qué opciones hay."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo no se puede retirar en efectivo. Úsalo para comprar en Elektra y Shop in baz."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo no se entrega en efectivo. Úsalo para comprar en las tiendas de abajo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "boton",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Continuar comprando» sugiere que ya estabas comprando y no dice a dónde lleva. Hay dos tiendas.",
+    "«Continuar comprando» no indica a dónde va (¿tienda, tarjeta?) y el usuario aún no compra. Compite con los «Estrenar ahora» de las tarjetas.",
+    "'Continuar comprando' sugiere que ya se estaba comprando. No dice si lleva a una tienda o al catálogo. Las tarjetas ya tienen otro botón 'Estrenar ahora', y hay dos acciones parecidas."
+   ],
+   "recomendaciones": [
+    "Verbo y destino claros.",
+    "Nombrar el destino.",
+    "Usar un verbo que diga el resultado."
+   ],
+   "reescrituras": [
+    [
+     "Continuar comprando",
+     "Ver tiendas"
+    ],
+    [
+     "Continuar comprando",
+     "Ir a las tiendas"
+    ],
+    [
+     "Continuar comprando",
+     "Ir a las tiendas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "titular",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La frase está partida en tres tamaños: saludo, monto y cierre. Se lee en pedazos.",
+    "La frase se parte en tres piezas (saludo, monto, titular) con tamaños distintos.",
+    "La frase se parte en tres piezas con tamaños distintos (saludo, monto, cierre). La exclamación abre en una línea y cierra en otra, lo que dificulta la lectura."
+   ],
+   "recomendaciones": [
+    "Dejar una frase continua o reorganizar el titular.",
+    "Mantener la frase continua o simplificar a una idea por bloque.",
+    "Mantener la frase, pero cuidar la puntuación para que se lea como una sola idea."
+   ],
+   "reescrituras": [
+    [
+     "para tus productos favoritos!",
+     "para comprar tus productos favoritos."
+    ],
+    [
+     "para tus productos favoritos!",
+     "para comprar en tus tiendas favoritas."
+    ],
+    [
+     "¡María, tienes $30,000 para tus productos favoritos!",
+     "María, tienes $30,000 para comprar en tus tiendas favoritas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "saber_mas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Falta el acento en «más».",
+    "Falta el acento en «más».",
+    "Falta el acento en «más»."
+   ],
+   "recomendaciones": [
+    "Corregir la ortografía.",
+    "Corregir la ortografía.",
+    "Escribir «más» con acento."
+   ],
+   "reescrituras": [
+    [
+     "Saber mas",
+     "Saber más"
+    ],
+    [
+     "Saber mas",
+     "Saber más"
+    ],
+    [
+     "Saber mas",
+     "Saber más"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W8",
+   "nombre_criterio": "Enlaces que se explican solos: el enlace dice a dónde lleva",
+   "zona": "saber_mas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El enlace no dice qué explica ni a dónde lleva.",
+    "El enlace no dice qué se va a saber ni a dónde lleva.",
+    "El enlace es vago: no dice qué se va a saber ni a dónde lleva. Además, le falta el acento."
+   ],
+   "recomendaciones": [
+    "Nombrar el contenido del enlace.",
+    "Nombrar el contenido del enlace.",
+    "Nombrar el contenido y acentuar «más»."
+   ],
+   "reescrituras": [
+    [
+     "Saber mas",
+     "Ver cómo usar mi préstamo"
+    ],
+    [
+     "Saber mas",
+     "Ver dónde puedo usar mi préstamo"
+    ],
+    [
+     "Saber mas",
+     "Ver por qué no puedo retirar efectivo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "aclaracion",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No explica por qué es solo para compras ni qué hacer si se necesita efectivo.",
+    "No explica por qué es solo para productos ni qué hacer si se necesita efectivo.",
+    "No dice por qué el préstamo es solo para compras ni qué puede hacer la persona si necesita efectivo."
+   ],
+   "recomendaciones": [
+    "Añadir motivo breve y alternativa.",
+    "Dar causa breve y salida.",
+    "Añadir la causa o una salida."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo es para comprar en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo es solo para compras en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+    ],
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Este préstamo es solo para compras. Para efectivo, consulta otras opciones aquí."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W4",
+   "nombre_criterio": "Lenguaje del cliente: sin términos internos",
+   "zona": "chip",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Aprobado en producto» es jerga interna y poco clara.",
+    "«Aprobado en producto» es jerga interna y poco clara.",
+    "«Aprobado en producto» es un término interno. La persona no sabe qué significa."
+   ],
+   "recomendaciones": [
+    "Decir qué fue aprobado.",
+    "Decir qué está aprobado y para qué.",
+    "Decir en lenguaje común lo que se aprobó."
+   ],
+   "reescrituras": [
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado"
+    ],
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado para compras"
+    ],
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado para compras"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "boton",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Continuar comprando» sugiere que ya había una compra en curso y no dice a dónde lleva.",
+    "«Continuar comprando» sugiere que ya se compraba y no dice a dónde lleva.",
+    "«Continuar comprando» sugiere que ya se está comprando. No dice a dónde lleva."
+   ],
+   "recomendaciones": [
+    "Usar un verbo que diga el resultado.",
+    "Verbo que anticipe el resultado.",
+    "Verbo que anticipe el siguiente paso."
+   ],
+   "reescrituras": [
+    [
+     "Continuar comprando",
+     "Ver tiendas"
+    ],
+    [
+     "Continuar comprando",
+     "Ir a comprar"
+    ],
+    [
+     "Continuar comprando",
+     "Ir a las tiendas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.7,
+   "problemas": [
+    "Nombres de marca en minúscula inicial («elektra», «shopinbaz»), y el chip no usa «préstamo».",
+    "Nombres de marca en minúscula («elektra», «shopinbaz») y «paga después» puede leerse como otro producto.",
+    "Nombres de tienda en minúscula ('elektra', 'shopinbaz') en el texto. 'Shopinbaz' no coincide con el logo 'Shop in baz'."
+   ],
+   "recomendaciones": [
+    "Escribir con mayúscula inicial: Elektra, Shop in baz, según la marca.",
+    "Poner mayúscula inicial en nombres de producto en el texto.",
+    "Escribir los nombres de marca con mayúscula inicial en texto."
+   ],
+   "reescrituras": [
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shopinbaz"
+    ],
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shopinbaz"
+    ],
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shop in baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Los nombres de marca aparecen en minúscula (elektra, shopinbaz) en los logotipos; en texto deben llevar mayúscula inicial.",
+    "Nombres de marca en minúscula («elektra», «shopinbaz») en vez de mayúscula inicial.",
+    "El nombre de marca aparece como «elektra» y «shopinbaz» en minúscula; el logo muestra «Shop in baz». Inconsistente con la regla de mayúscula inicial."
+   ],
+   "recomendaciones": [
+    "Escribir los nombres con mayúscula inicial en cualquier texto.",
+    "Escribe los nombres con mayúscula inicial en el texto.",
+    "Escribe los nombres de producto con mayúscula inicial en texto."
+   ],
+   "reescrituras": [
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shopinbaz"
+    ],
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shopinbaz"
+    ],
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shop in Baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "saludo",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El nombre «María» aporta cercanía en una buena noticia. Pero el botón repite «mi» y el titular «tuyos»: demasiada personalización.",
+    "Hay mucha personalización: «María», «tienes», «tuyos», «mi monto». Es aceptable, pero se acumula.",
+    "El nombre «María» aporta cercanía en la felicitación, pero junto a «tu», «mi» y «tuyos» hay personalización repetida."
+   ],
+   "recomendaciones": [
+    "Mantener el nombre y quitar posesivos innecesarios.",
+    "Deja el nombre en el saludo y quita personalización redundante.",
+    "Deja el nombre y reduce los posesivos."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir dinero"
+    ],
+    [
+     "¡María, tienes ... ya son tuyos ... mi monto",
+     "¡María, tu préstamo está aprobado!"
+    ],
+    [
+     "¡María, tienes",
+     "¡María, tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Nombres de marca con mayúscula inconsistente: «shopinbaz» en minúsculas.",
+    "Nombre de marca «shopinbaz» en minúscula en el texto (el logo dice Shopinbaz).",
+    "El nombre del producto «shopinbaz» no lleva mayúscula inicial en el texto."
+   ],
+   "recomendaciones": [
+    "Escribir «Shopinbaz» con mayúscula inicial.",
+    "Escribir con mayúscula inicial.",
+    "Usar mayúscula inicial."
+   ],
+   "reescrituras": [
+    [
+     "shopinbaz",
+     "Shopinbaz"
+    ],
+    [
+     "shopinbaz",
+     "Shopinbaz"
+    ],
+    [
+     "shopinbaz",
+     "Shopinbaz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "tarjetas",
+   "evaluadores": 3,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Ofertas que solo tú tienes» exagera la exclusividad.",
+    "«Ofertas que solo tú tienes» y «muévete ya» exageran y presionan.",
+    "«Ofertas que solo tú tienes» es una promesa exagerada de exclusividad que no se puede comprobar."
+   ],
+   "recomendaciones": [
+    "Bajar la promesa.",
+    "Bajar la promesa.",
+    "Bajar el tono."
+   ],
+   "reescrituras": [
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para ti"
+    ],
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para ti"
+    ],
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para ti"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "chip",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 4.0,
+   "problemas": [
+    "«Aprobado» choca con la nota «Sujeto a aprobación» y con «Ya está listo para usarse». No queda claro si ya está aprobado.",
+    "El chip dice «Aprobado», pero la nota dice «Sujeto a aprobación». Se contradicen. Además «en producto» es ambiguo."
+   ],
+   "recomendaciones": [
+    "Decidir el estado real: si está aprobado, quitar la nota condicional; si no, no decir aprobado.",
+    "Alinear el estado con la condición real. Si está aprobado, quitar la condición o explicar qué falta."
+   ],
+   "reescrituras": [
+    [
+     "Aprobado en producto / *Sujeto a aprobación",
+     "Aprobado para compras"
+    ],
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado para compras"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "nota",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.5,
+   "problemas": [
+    "La promesa de certeza («ya son tuyos, listos para usar») queda condicionada por el asterisco.",
+    "La condición introduce duda en una pantalla que promete certeza. «Sujeto a aprobación» contradice «Aprobado» y «ya son tuyos»."
+   ],
+   "recomendaciones": [
+    "Usa un mensaje cierto, sin condicional escondido.",
+    "Usa un solo mensaje cierto. Elimina el asterisco o explica qué falta exactamente."
+   ],
+   "reescrituras": [
+    [
+     "$30,000* ... ya son tuyos, listos para usar!",
+     "Tu préstamo de $30,000 está aprobado."
+    ],
+    [
+     "$30,000*",
+     "$30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "nota",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.5,
+   "problemas": [
+    "«Sujeto a aprobación» contradice «Aprobado» y «Ya está listo para usarse».",
+    "El chip dice «Aprobado», pero la nota dice «Sujeto a aprobación». Un texto desmiente al otro. «Ya está listo para usarse» también se contradice con la nota."
+   ],
+   "recomendaciones": [
+    "Quitar el asterisco condicional o explicar qué condición queda pendiente.",
+    "Definir si ya está aprobado. Si lo está, quitar la nota o explicar qué condición queda."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "*Aplican términos y condiciones."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "Quitar la nota, o: *Tu compra se valida al pagar."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "nota",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El condicional «Sujeto a aprobación» resta certeza a una promesa de dinero ya aprobado y listo. Además el asterisco en el monto sugiere que puede cambiar.",
+    "La condición «Sujeto a aprobación» y el asterisco en el monto quitan certeza a una promesa de «ya son tuyos, listos para usar»."
+   ],
+   "recomendaciones": [
+    "Usa un mensaje cierto y coherente. Quita el asterisco o explica la condición concreta.",
+    "Alinear la certeza: o está aprobado y se dice sin condición, o es una oferta y se dice como tal."
+   ],
+   "reescrituras": [
+    [
+     "$30,000* / *Sujeto a aprobación",
+     "$30,000"
+    ],
+    [
+     "$30,000* ... *Sujeto a aprobación",
+     "$30,000 (sin asterisco si ya está aprobado)"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "titular",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "«Ya son tuyos, listos para usar» promete disponibilidad inmediata que la nota contradice.",
+    "«Ya son tuyos, listos para usar» promete más de lo que la pantalla sostiene por la condición."
+   ],
+   "recomendaciones": [
+    "Promete solo lo que sea cierto; baja el tono.",
+    "Prometer solo lo que ocurre al tocar el botón."
+   ],
+   "reescrituras": [
+    [
+     "ya son tuyos, listos para usar!",
+     "Tu dinero está listo para recibirlo."
+    ],
+    [
+     "ya son tuyos, listos para usar",
+     "los recibes al confirmar"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "nota",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "No dice por qué podría no aprobarse ni qué hacer. Falta causa y salida.",
+    "No explica qué aprobación falta ni qué debe hacer la persona."
+   ],
+   "recomendaciones": [
+    "Explicar qué falta y cómo resolverlo.",
+    "Explicar la causa y el siguiente paso."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Falta confirmar tus datos. Hazlo en el siguiente paso."
+    ],
+    [
+     "*Sujeto a aprobación",
+     "*Debes completar tu contratación para recibir el dinero."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "tiendas_titulo",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "«Ya está listo para usarse» contradice «Sujeto a aprobación». Además el sujeto («Ya está») no está claro.",
+    "'Ya está listo para usarse aquí' contradice 'Sujeto a aprobación'. Además no queda claro qué está listo."
+   ],
+   "recomendaciones": [
+    "Decir qué está listo y bajo qué condición.",
+    "Nombrar el sujeto y alinear con el estado."
+   ],
+   "reescrituras": [
+    [
+     "Ya está listo para usarse aquí",
+     "Puedes usar tu préstamo en estas tiendas"
+    ],
+    [
+     "Ya está listo para usarse aquí",
+     "Ya puedes usar tu préstamo en estas tiendas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.5,
+   "problemas": [
+    "El texto de la tarjeta de Shopinbaz está cortado en el borde y no se lee completo.",
+    "La tarjeta de Shopinbaz está cortada y el texto no se lee completo."
+   ],
+   "recomendaciones": [
+    "Ajustar la tarjeta para que el texto quepa.",
+    "Ajustar el carrusel para que se vea completo."
+   ],
+   "reescrituras": [
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas que solo tú tienes"
+    ],
+    [
+     "Ofertas que solo tú tienes / Estrenar ahora",
+     "Ofertas que solo tú tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "titular",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Ya son tuyos, listos para usar» exagera: promete dinero disponible al instante cuando la pantalla aún pide un paso y una aprobación.",
+    "«Listos para usar» exagera: el dinero no se puede usar si falta aprobación."
+   ],
+   "recomendaciones": [
+    "Prometer solo lo que ocurre, con el paso siguiente claro.",
+    "Prometer solo lo que se cumple."
+   ],
+   "reescrituras": [
+    [
+     "ya son tuyos, listos para usar",
+     "Listos para recibir en tu cuenta"
+    ],
+    [
+     "listos para usar",
+     "Indica cuándo recibirás el dinero."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "titular",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La frase «tienes $30,000 en Efectivo ya son tuyos» está mal armada: faltan puntuación y conexión.",
+    "Los signos de exclamación abren en el saludo y cierran en otro bloque. La frase queda sin signo claro al leerse por zonas. «Efectivo» sin contexto no concuerda con «son tuyos»."
+   ],
+   "recomendaciones": [
+    "Reescribe con una sola idea y puntuación correcta.",
+    "Haz frases completas con sus propios signos."
+   ],
+   "reescrituras": [
+    [
+     "tienes $30,000* en Efectivo ya son tuyos",
+     "tienes $30,000 en tu préstamo Efectivo"
+    ],
+    [
+     "¡María, tienes ... listos para usar!",
+     "¡María, tienes $30,000 en Efectivo! Ya son tuyos."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "titular",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La frase se parte en tres tamaños (saludo, monto, cierre) y el signo de cierre queda lejos del de apertura.",
+    "La frase se parte en tres tamaños (saludo, monto, cierre). Se lee como piezas sueltas, aunque el monto destaca."
+   ],
+   "recomendaciones": [
+    "Reescribir como una frase más corta que se lea completa, o quitar la exclamación.",
+    "Mantener la frase, pero reducir el salto de tamaño o cuidar que se lea como una sola idea."
+   ],
+   "reescrituras": [
+    [
+     "!María, tienes / $30,000* / para tus productos favoritos!",
+     "María, tienes $30,000 para comprar en tus tiendas favoritas"
+    ],
+    [
+     "¡María, tienes / $30,000* / para tus productos favoritos!",
+     "¡María, tienes $30,000* para comprar tus productos favoritos!"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "aclaracion",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No dice la causa de la restricción ni si hay alternativa para obtener efectivo.",
+    "Dice la limitación pero no la causa ni qué hacer si se necesita efectivo."
+   ],
+   "recomendaciones": [
+    "Añadir motivo breve y siguiente paso.",
+    "Explicar el motivo o dar una salida."
+   ],
+   "reescrituras": [
+    [
+     "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+     "Tu préstamo es solo para compras en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W4",
+   "nombre_criterio": "Lenguaje del cliente: sin términos internos",
+   "zona": "chip",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«en producto» es jerga interna y poco clara.",
+    "'Aprobado en producto' es término interno y poco claro."
+   ],
+   "recomendaciones": [
+    "Decir para qué se aprobó en lenguaje llano.",
+    "Decir qué está aprobado."
+   ],
+   "reescrituras": [
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado"
+    ],
+    [
+     "Aprobado en producto",
+     "Préstamo aprobado"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Dos botones iguales «Estrenar ahora» no dicen a dónde llevan ni qué tienda. «Estrenar» no describe ver ofertas.",
+    "«Estrenar ahora» no deja claro qué pasa: ¿abre la tienda?, ¿usa el préstamo? Se repite igual en ambas."
+   ],
+   "recomendaciones": [
+    "Verbo que diga el resultado y la tienda.",
+    "Un verbo que diga el resultado y la tienda."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Comprar en Elektra / Ver ofertas en Shopinbaz"
+    ],
+    [
+     "Estrenar ahora",
+     "Ir a Elektra / Ir a Shopinbaz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W4",
+   "nombre_criterio": "Lenguaje del cliente: sin términos internos",
+   "zona": "aclaracion",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Disponer de efectivo» es lenguaje bancario poco cotidiano.",
+    "'Disponer de efectivo' es lenguaje bancario."
+   ],
+   "recomendaciones": [
+    "Usar «retirar efectivo».",
+    "Usar 'retirar efectivo'."
+   ],
+   "reescrituras": [
+    [
+     "no para disponer de efectivo",
+     "no para retirar efectivo"
+    ],
+    [
+     "disponer de efectivo",
+     "retirar efectivo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W7",
+   "nombre_criterio": "El botón anticipa el resultado: el verbo describe lo que pasa al tocar",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Dos botones idénticos «Estrenar ahora» no dicen a qué tienda llevan. «Estrenar» no encaja con ofertas.",
+    "«Estrenar ahora» se repite en ambas tarjetas y no dice a dónde lleva ni qué pasa. «Estrenar» no encaja con el contexto de una tienda en línea."
+   ],
+   "recomendaciones": [
+    "Nombrar la acción y la tienda.",
+    "Usar verbos que digan la tienda o el resultado."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Ir a Shopinbaz / Ver motos"
+    ],
+    [
+     "Estrenar ahora",
+     "Ver ofertas / Ver motos"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "titular",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.5,
+   "problemas": [
+    "Falta una coma o conector tras «Efectivo». «tienes $30,000 en Efectivo ya son tuyos» pega dos ideas sin puntuación y la concordancia suena rara.",
+    "El signo de apertura «¡» queda en el saludo y el cierre «!» en otra línea. La exclamación está partida entre tamaños."
+   ],
+   "recomendaciones": [
+    "Separa en dos oraciones con punto.",
+    "Dejar la frase completa o quitar las exclamaciones."
+   ],
+   "reescrituras": [
+    [
+     "en Efectivo ya son tuyos, listos para usar!",
+     "en Efectivo. Ya son tuyos, listos para usar."
+    ],
+    [
+     "¡María, tienes … listos para usar!",
+     "María, tienes $30,000 …"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G2",
+   "nombre_criterio": "Terminología del glosario: «préstamo», nunca «crédito»; nombres de producto con mayúscula inicial (Fundamentos, Mini Guía 16.4)",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Nombres de marca en minúscula («elektra», «shopinbaz») según el texto dado.",
+    "Los nombres de marca aparecen en minúscula («elektra», «shopinbaz») en el logotipo. El texto accesible debería llevar mayúscula inicial."
+   ],
+   "recomendaciones": [
+    "Escribir los nombres de producto con mayúscula inicial en el texto.",
+    "Escribir los nombres con mayúscula inicial en el texto."
+   ],
+   "reescrituras": [
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shopinbaz"
+    ],
+    [
+     "elektra / shopinbaz",
+     "Elektra / Shop in Baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "boton",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«mi monto» en el botón suma personalización que no aporta. Ya se usa «María» en el saludo.",
+    "«mi» y «María» suman personalización. «mi monto» queda ambiguo, porque habla en primera persona."
+   ],
+   "recomendaciones": [
+    "Simplificar el botón.",
+    "Evitar la primera persona de la persona usuaria si no aporta. Mantener el nombre solo en el saludo."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir mi préstamo"
+    ],
+    [
+     "Continuar con mi monto",
+     "Contratar mi préstamo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Ofertas que solo tú tienes» es una promesa exagerada y vaga. «Renueva tu casa hoy» presiona.",
+    "'Ofertas que solo tú tienes' exagera y no se puede comprobar."
+   ],
+   "recomendaciones": [
+    "Describir la oferta real sin exclusividad.",
+    "Describir sin exagerar."
+   ],
+   "reescrituras": [
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para comprar con tu préstamo"
+    ],
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para ti en Shop in baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "tarjetas",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Exceso de «tu/tú» en pantalla; «solo tú» no aporta cercanía real.",
+    "«Solo tú» y «tus productos favoritos» personalizan en exceso; no se conocen sus gustos."
+   ],
+   "recomendaciones": [
+    "Mantener «tu» solo donde aporte.",
+    "Usar texto neutro."
+   ],
+   "reescrituras": [
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas disponibles hoy"
+    ],
+    [
+     "para tus productos favoritos!",
+     "para tus compras."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "tiendas_titulo",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Ya está listo» no concuerda con claridad: no se sabe qué está listo (el préstamo o el monto).",
+    "Concordancia dudosa: «Ya está listo» no dice qué; el sujeto es el préstamo y la tarjeta se corta a la izquierda."
+   ],
+   "recomendaciones": [
+    "Nombrar el sujeto.",
+    "Nombrar el sujeto."
+   ],
+   "reescrituras": [
+    [
+     "Ya está listo para usarse aquí",
+     "Tu préstamo ya está listo para usarse aquí"
+    ],
+    [
+     "Ya está listo para usarse aquí",
+     "Tu préstamo ya está listo para usarse aquí"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W4",
+   "nombre_criterio": "Lenguaje del cliente: sin términos internos",
+   "zona": "aclaracion",
+   "evaluadores": 2,
+   "de": 3,
+   "consenso": true,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Disponer de efectivo» es lenguaje bancario.",
+    "«Disponer de efectivo» es lenguaje bancario poco natural."
+   ],
+   "recomendaciones": [
+    "Usar «retirar efectivo».",
+    "Usar «retirar efectivo»."
+   ],
+   "reescrituras": [
+    [
+     "disponer de efectivo",
+     "retirar efectivo"
+    ],
+    [
+     "disponer de efectivo",
+     "retirar efectivo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "monto",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 4.0,
+   "problemas": [
+    "El asterisco en el monto convierte una certeza («ya son tuyos, listos para usar») en una promesa condicionada. La pantalla promete y a la vez se retracta."
+   ],
+   "recomendaciones": [
+    "Quitar el asterisco del monto o aclarar la condición de forma visible y consistente con el resto."
+   ],
+   "reescrituras": [
+    [
+     "$30,000*",
+     "$30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "titular",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 3.0,
+   "problemas": [
+    "«Ya son tuyos, listos para usar» promete certeza. El asterisco y la nota la contradicen."
+   ],
+   "recomendaciones": [
+    "Alinear la promesa con la condición real. Decir qué falta para usar el dinero."
+   ],
+   "reescrituras": [
+    [
+     "en Efectivo ya son tuyos, listos para usar!",
+     "Tu préstamo está aprobado. Continúa para recibirlo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "boton",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 3.0,
+   "problemas": [
+    "No dice qué falta para recibir el dinero ni qué pasa después de continuar. Con la nota de «aprobación», la persona no sabe el siguiente paso."
+   ],
+   "recomendaciones": [
+    "Indicar en una frase el paso siguiente y cuándo llega el dinero."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir mis $30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W10",
+   "nombre_criterio": "Tamaño y contraste del texto que decide: lo que cambia la decisión se alcanza a leer",
+   "zona": "aclaracion",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 3.0,
+   "problemas": [
+    "La condición que cambia la decisión tiene letra pequeña y poco peso frente al monto."
+   ],
+   "recomendaciones": [
+    "Aumentar tamaño y peso del texto de la restricción."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "nota",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 3.0,
+   "problemas": [
+    "El chip dice 'Aprobado' y el monto aparece como ya listo para usar, pero la nota dice 'Sujeto a aprobación'. Se contradicen."
+   ],
+   "recomendaciones": [
+    "Quitar la condición o explicar qué falta por aprobar. Mantener un solo estado."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Quitar el asterisco, o: *Monto aprobado. Puede cambiar si tus datos no coinciden."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "chip",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 3.0,
+   "problemas": [
+    "«Aprobado» y «*Sujeto a aprobación» se contradicen. Además, «Ya está listo para usarse» y «Continuar comprando» sugieren que ya se puede usar."
+   ],
+   "recomendaciones": [
+    "Decidir si está aprobado o no y alinear chip, nota y botón."
+   ],
+   "reescrituras": [
+    [
+     "Aprobado en producto / *Sujeto a aprobación",
+     "Aprobado para compras / Monto aprobado para compras en tiendas aliadas."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "general",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No dice cómo ni cuándo se recibe el dinero, ni qué pasa si hay condición. No hay causa ni salida clara."
+   ],
+   "recomendaciones": [
+    "Añade una línea sobre cómo y cuándo recibirá el dinero."
+   ],
+   "reescrituras": []
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "titular",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Lo que cambia la decisión (condición, qué sigue, costo o plazo) no aparece en el texto grande. Solo hay celebración y monto."
+   ],
+   "recomendaciones": [
+    "Decir en el titular qué debe hacer la persona para recibir el dinero."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes $30,000* en Efectivo…",
+     "María, tu préstamo de $30,000 está aprobado. Confirma para recibirlo."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G3",
+   "nombre_criterio": "Tono: más casual que formal; formal en errores y temas sensibles; nunca culpar, infantilizar ni ironizar (Voz y Tono 11)",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El tono exclamativo es muy festivo para dinero con condición. Puede sonar a promesa exagerada."
+   ],
+   "recomendaciones": [
+    "Tono cálido, pero sereno."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes",
+     "María, tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La noticia real (aprobado, con una condición) queda repartida. El chip pequeño dice «Aprobado» y el titular grande habla de dinero ya disponible."
+   ],
+   "recomendaciones": [
+    "Poner en el titular lo que pasa y lo que sigue."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes",
+     "María, tu préstamo está aprobado"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "W2",
+   "nombre_criterio": "Coherencia entre textos: ningún texto desmiente a otro en la misma pantalla",
+   "zona": "tiendas_titulo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«También puedes comprar en» sugiere que el dinero ya se puede gastar en tiendas, lo que choca con la nota de condición."
+   ],
+   "recomendaciones": [
+    "Aclarar cuándo se puede usar el dinero."
+   ],
+   "reescrituras": [
+    [
+     "También puedes comprar en:",
+     "Cuando recibas tu préstamo, úsalo en:"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "chip",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El chip «Aprobado» es pequeño frente al monto. La noticia clave está en el chip, no en el titular, y el titular no la repite."
+   ],
+   "recomendaciones": [
+    "Incluir «aprobado» en el titular principal."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes",
+     "¡María, tu préstamo está aprobado!"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "titular",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El titular no dice qué se aprobó ni qué falta por hacer. La aclaración clave queda al final y en pequeño."
+   ],
+   "recomendaciones": [
+    "Pon primero qué se aprobó y qué sigue."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+     "¡María, tu préstamo de $30,000 está aprobado!"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "nota",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No explica qué falta para la aprobación ni qué puede hacer la persona."
+   ],
+   "recomendaciones": [
+    "Di la causa y el paso siguiente."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "Para recibir tu dinero, confirma tus datos en el siguiente paso."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "W1",
+   "nombre_criterio": "Lo importante primero: la noticia que cambia la decisión está en el texto de mayor jerarquía",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El mensaje principal no dice qué es lo aprobado. Falta decir que es un préstamo y que hay que dar un paso para recibirlo."
+   ],
+   "recomendaciones": [
+    "Pon primero qué se aprobó y cuánto."
+   ],
+   "reescrituras": [
+    [
+     "¡María, tienes",
+     "¡María, tu préstamo está aprobado!"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "tiendas_titulo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Ya está listo» no dice qué está listo; el sujeto no se entiende. «usarse» es impersonal."
+   ],
+   "recomendaciones": [
+    "Nombrar el sujeto y hablar de tú."
+   ],
+   "reescrituras": [
+    [
+     "Ya está listo para usarse aquí",
+     "Ya puedes usar tu préstamo aquí"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W6",
+   "nombre_criterio": "Causa y salida: dice por qué y qué puede hacer la persona",
+   "zona": "nota",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "No explica qué se aprueba, quién ni qué debe hacer la persona."
+   ],
+   "recomendaciones": [
+    "Indicar la causa y el paso siguiente."
+   ],
+   "reescrituras": [
+    [
+     "*Sujeto a aprobación",
+     "*Validaremos tus datos al pagar. Si algo falla, te avisamos."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G1",
+   "nombre_criterio": "Certeza: sin condicionales ni promesas que el resto de la pantalla contradiga (Voz y Tono 4.1, 14)",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "«Paga después» y «estrenar ahora» prometen sin matices, pero el monto está sujeto a aprobación."
+   ],
+   "recomendaciones": [
+    "Alinear la promesa con la condición."
+   ],
+   "reescrituras": [
+    [
+     "Renueva tu casa hoy y paga después",
+     "Renueva tu casa hoy con tu préstamo"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "W3",
+   "nombre_criterio": "Una idea por frase: sin frases partidas en varios tamaños ni ideas pegadas sin puntuación",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "La frase se parte en tres tamaños: saludo, monto y cierre. Además va con signo de apertura mal escrito."
+   ],
+   "recomendaciones": [
+    "Armar una frase que se lea fluida, con el signo correcto, o reducir los saltos de tamaño."
+   ],
+   "reescrituras": [
+    [
+     "!María, tienes / $30,000* / para tus productos favoritos!",
+     "¡María, tienes $30,000 para tus productos favoritos!"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W8",
+   "nombre_criterio": "Enlaces que se explican solos: el enlace dice a dónde lleva",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "Dos enlaces iguales «Estrenar ahora» no dicen a dónde llevan; «Estrenar» no encaja con un préstamo."
+   ],
+   "recomendaciones": [
+    "Diferenciar cada enlace."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Ir a Shopinbaz / Ver motos ITALIKA"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "W9",
+   "nombre_criterio": "Ortografía y concordancia: signos, acentos, género y número",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 2.0,
+   "problemas": [
+    "El texto de la tarjeta de shopinbaz está cortado («Ofertas que solo tú tienes» se ve como «Ofertas que solo tú / tienes» y «Estrenar ahora» cortado). El nombre de marca va en minúsculas."
+   ],
+   "recomendaciones": [
+    "Corregir el desplazamiento para que se lea completo. Escribir «Shopinbaz» con mayúscula inicial."
+   ],
+   "reescrituras": [
+    [
+     "shopinbaz Ofertas que solo tú tienes",
+     "Shopinbaz: ofertas que solo tú tienes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G6",
+   "nombre_criterio": "Formatos: dinero con $ y comas, fecha dd/mm/aaaa, hora 12 h con a.m./p.m. (Mini Guía 16.8, 16.9)",
+   "zona": "monto",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El monto con $ y coma está bien, pero el asterisco pegado al número lo hace parecer un monto no seguro."
+   ],
+   "recomendaciones": [
+    "Quita el asterisco si el monto es firme."
+   ],
+   "reescrituras": [
+    [
+     "$30,000*",
+     "$30,000"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-A",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El nombre «María» aporta cercanía, pero junto con «tienes» y «mi» en el botón la personalización es algo cargada."
+   ],
+   "recomendaciones": [
+    "Mantén el nombre solo en el saludo y neutraliza el botón."
+   ],
+   "reescrituras": [
+    [
+     "Continuar con mi monto",
+     "Recibir mi dinero"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Estrenar ahora» y «Tecnología, hogar, moda y más» sugieren gastar ya, aunque la condición de aprobación sigue abierta. Promete uso inmediato."
+   ],
+   "recomendaciones": [
+    "Baja el tono comercial hasta confirmar el préstamo."
+   ],
+   "reescrituras": [
+    [
+     "Encuentra productos para renovar tu hogar.",
+     "Compra productos para tu hogar."
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "titular",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«María» y «tus productos favoritos» se repiten con «tu préstamo»; personalización excesiva en la misma pantalla."
+   ],
+   "recomendaciones": [
+    "Mantener el nombre solo en el saludo y simplificar los «tu»."
+   ],
+   "reescrituras": [
+    [
+     "para tus productos favoritos!",
+     "para comprar en tus tiendas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Ofertas que solo tú tienes» exagera la exclusividad y es poco creíble."
+   ],
+   "recomendaciones": [
+    "Describir la oferta de forma realista."
+   ],
+   "reescrituras": [
+    [
+     "Ofertas que solo tú tienes",
+     "Ofertas para ti en Shopinbaz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G7",
+   "nombre_criterio": "Optimismo realista: inspira sin exagerar beneficios ni prometer milagros (Voz y Tono 4.2, 13.4)",
+   "zona": "titular",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "«Productos favoritos» promete algo que depende del catálogo de las tiendas."
+   ],
+   "recomendaciones": [
+    "Hablar de compras en tiendas."
+   ],
+   "reescrituras": [
+    [
+     "para tus productos favoritos!",
+     "para comprar en tus tiendas"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G3",
+   "nombre_criterio": "Tono: más casual que formal; formal en errores y temas sensibles; nunca culpar, infantilizar ni ironizar (Voz y Tono 11)",
+   "zona": "tarjetas",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "'Estrenar ahora' se repite igual en las dos tarjetas y suena a empuje de venta. 'Paga después' no deja claro el préstamo."
+   ],
+   "recomendaciones": [
+    "Diferenciar el botón por tienda y ser más claro."
+   ],
+   "reescrituras": [
+    [
+     "Estrenar ahora",
+     "Comprar en Elektra / Comprar en Shop in baz"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-A",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "Mucha personalización: 'María', 'tu/tus' repetido en pocas líneas."
+   ],
+   "recomendaciones": [
+    "Mantener el nombre en el saludo y reducir 'tu' en el cuerpo."
+   ],
+   "reescrituras": [
+    [
+     "tus productos favoritos / tu préstamo",
+     "los productos que quieras"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G8",
+   "nombre_criterio": "Personalización medida: «María» y «tu» solo donde aportan cercanía (Mini Guía 16.6, 16.7)",
+   "zona": "saludo",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El nombre «María» y varios «tu» aparecen juntos. Hay exceso de personalización: «tus productos favoritos» supone gustos que no se conocen."
+   ],
+   "recomendaciones": [
+    "Dejar el nombre y quitar «favoritos»."
+   ],
+   "reescrituras": [
+    [
+     "para tus productos favoritos!",
+     "para comprar en tiendas participantes"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E2-B",
+   "criterio": "G6",
+   "nombre_criterio": "Formatos: dinero con $ y comas, fecha dd/mm/aaaa, hora 12 h con a.m./p.m. (Mini Guía 16.8, 16.9)",
+   "zona": "monto",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 1.0,
+   "problemas": [
+    "El monto usa $ y comas, bien. Pero no lleva «MXN» ni vigencia, y el asterisco queda muy chico."
+   ],
+   "recomendaciones": [
+    "Mantener el formato y hacer legible el asterisco."
+   ],
+   "reescrituras": [
+    [
+     "$30,000*",
+     "$30,000*"
+    ]
+   ]
+  },
+  {
+   "pantalla": "E1-B",
+   "criterio": "G6",
+   "nombre_criterio": "Formatos: dinero con $ y comas, fecha dd/mm/aaaa, hora 12 h con a.m./p.m. (Mini Guía 16.8, 16.9)",
+   "zona": "monto",
+   "evaluadores": 1,
+   "de": 3,
+   "consenso": false,
+   "severidad_media": 0.0,
+   "problemas": [
+    "El formato $30,000 es correcto, pero sin «MXN» ni centavos no es un error. No se detecta problema de formato."
+   ],
+   "recomendaciones": [
+    "Sin cambios."
+   ],
+   "reescrituras": []
+  }
+ ],
+ "positivos": {
+  "E1-A": [
+   "El chip «Aprobado» da la buena noticia de entrada.",
+   "El monto en grande es lo primero que se ve y usa $ y coma correctamente.",
+   "Saludo cercano con nombre y tuteo, en tono casual y optimista.",
+   "Las tarjetas de tiendas son breves y fáciles de escanear.",
+   "El botón es claro y destaca por su contraste.",
+   "El chip «Aprobado» comunica claro el estado.",
+   "El monto en $30,000 con formato correcto, grande y con alto contraste.",
+   "Tuteo correcto y tono cercano.",
+   "El botón es claro visualmente y tiene buen contraste.",
+   "Las tarjetas de tiendas tienen descripciones breves y fáciles de leer.",
+   "La jerarquía visual guía la mirada del saludo al monto y al botón.",
+   "El chip «Aprobado» con ícono de palomita se ve claro.",
+   "El monto $30,000 usa $ y coma, y es el elemento más grande y legible.",
+   "El saludo con nombre da cercanía y usa «tú».",
+   "El botón es ancho, con buen contraste y es la acción principal.",
+   "Las tarjetas de tiendas son breves y fáciles de recorrer.",
+   "El tono es cercano y positivo."
+  ],
+  "E1-B": [
+   "El monto $30,000 es grande y con alto contraste: se ve primero.",
+   "El saludo con nombre da cercanía en una buena noticia.",
+   "El tono es casual y optimista, sin culpar.",
+   "Usa «tú» al cliente de forma consistente.",
+   "El chip «Aprobado» comunica el estado con claridad visual.",
+   "El formato de dinero cumple con $ y comas.",
+   "La jerarquía visual (chip, monto, botón) guía bien la lectura.",
+   "El chip «Aprobado» es claro y está bien ubicado.",
+   "El monto es grande, con $ y coma de miles, y se lee fácil.",
+   "Tono cercano, con «tú» al cliente.",
+   "El botón tiene buen contraste y es fácil de ubicar.",
+   "«También puedes comprar en:» presenta las opciones de forma sencilla.",
+   "El monto $30,000 tiene formato correcto (signo $ y comas) y es el texto más grande.",
+   "El chip «Aprobado» es claro, visible y comunica buenas noticias.",
+   "El tono es cercano, casual y positivo, con tú al cliente.",
+   "El botón ocupa todo el ancho y destaca con buen contraste.",
+   "La ilustración de billetes refuerza el mensaje del dinero."
+  ],
+  "E2-A": [
+   "El monto $30,000 es grande y fácil de ver, con formato de dinero correcto.",
+   "Se usa «préstamo» y no «crédito».",
+   "Trata de tú de forma consistente y con tono cercano.",
+   "La aclaración dice con claridad que es solo para productos.",
+   "El botón principal tiene buen contraste y destaca.",
+   "La ilustración y las tarjetas de tienda orientan dónde usar el préstamo.",
+   "El monto $30,000 tiene el mayor tamaño y contraste, y se ve de inmediato.",
+   "El formato de dinero cumple con $ y comas.",
+   "Usa «préstamo» y no «crédito».",
+   "Trato de «tú» consistente y saludo con el nombre, que da cercanía.",
+   "El botón principal es claro, visible y ocupa todo el ancho.",
+   "Las tarjetas de tiendas están ordenadas y son fáciles de recorrer.",
+   "El monto $30,000 es grande, con buen contraste y se ve primero.",
+   "El formato de dinero usa $ y comas, como pide la guía.",
+   "Usa 'préstamo' y no 'crédito'.",
+   "Tratamiento de tú al cliente, tono cercano.",
+   "Las tarjetas de tienda son cortas y fáciles de leer.",
+   "El botón principal tiene alto contraste y es fácil de ubicar."
+  ],
+  "E2-B": [
+   "Usa «préstamo» y no «crédito».",
+   "El monto es grande y fácil de ubicar.",
+   "Trata al cliente de «tú» de forma cercana.",
+   "La aclaración de que no es efectivo existe y se dice en lenguaje sencillo.",
+   "El botón principal es claro y visible, con buen contraste.",
+   "El monto tiene formato correcto con $ y coma.",
+   "Usa «préstamo», no «crédito».",
+   "El monto es grande, claro y con formato $30,000.",
+   "Trata al cliente de tú.",
+   "El saludo con nombre da cercanía.",
+   "El botón es visible y con buen contraste.",
+   "El monto está en el texto más grande y se lee de inmediato.",
+   "El tuteo es consistente y cercano.",
+   "Usa «préstamo» y no «crédito».",
+   "Formato de dinero correcto: $30,000.",
+   "El botón es grande y de alto contraste.",
+   "Las marcas de las tiendas aparecen con su logo y dan contexto del uso."
+  ]
+ },
+ "crudo": [
+  {
+   "pantalla": "E1-A",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a lo anterior: no queda claro si el dinero ya está aprobado.",
+      "severidad": 4,
+      "recomendacion": "Quita la condición si ya está aprobado. Si hay un paso pendiente, dilo claro y quita «ya son tuyos».",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Sin nota. Si hay condición: *Tu dinero se libera al confirmar tus datos."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "El condicional «Sujeto a aprobación» resta certeza a una promesa de dinero ya aprobado y listo. Además el asterisco en el monto sugiere que puede cambiar.",
+      "severidad": 3,
+      "recomendacion": "Usa un mensaje cierto y coherente. Quita el asterisco o explica la condición concreta.",
+      "actual": "$30,000* / *Sujeto a aprobación",
+      "recomendado": "$30,000"
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris, al final de la pantalla. Casi no se lee.",
+      "severidad": 3,
+      "recomendacion": "Si la condición se mantiene, dale mayor tamaño y contraste, cerca del monto.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Condición visible junto al monto, en tamaño de cuerpo."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres tamaños y bloques: saludo, monto enorme y resto. La frase se lee entrecortada y el signo de cierre queda lejos del de apertura.",
+      "severidad": 2,
+      "recomendacion": "Haz frases cortas y completas. Separa el saludo de la noticia.",
+      "actual": "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "¡María, tu préstamo fue aprobado! Tienes $30,000 listos para usar."
+     },
+     {
+      "criterio": "W9",
+      "zona": "titular",
+      "problema": "Falta una coma o conector tras «Efectivo». «tienes $30,000 en Efectivo ya son tuyos» pega dos ideas sin puntuación y la concordancia suena rara.",
+      "severidad": 2,
+      "recomendacion": "Separa en dos oraciones con punto.",
+      "actual": "en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "en Efectivo. Ya son tuyos, listos para usar."
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "No se nombra el producto: no dice que es un préstamo. «Efectivo» queda ambiguo, aunque tiene mayúscula como producto.",
+      "severidad": 2,
+      "recomendacion": "Nombra el producto con claridad y usa «préstamo».",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "de tu préstamo Efectivo ya son tuyos"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar con mi monto» no dice qué pasa al tocar: ¿recibo el dinero, elijo plazo, firmo? Además usa «mi» (voz del cliente) sin necesidad.",
+      "severidad": 2,
+      "recomendacion": "Usa un verbo que describa el resultado real.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi dinero"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "Los dos enlaces dicen igual «Estrenar ahora» y no dicen a dónde llevan (Elektra o Shopinbaz). «Estrenar» tampoco describe la acción.",
+      "severidad": 2,
+      "recomendacion": "Haz que cada enlace nombre su destino.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "W6",
+      "zona": "general",
+      "problema": "No dice cómo ni cuándo se recibe el dinero, ni qué pasa si hay condición. No hay causa ni salida clara.",
+      "severidad": 2,
+      "recomendacion": "Añade una línea sobre cómo y cuándo recibirá el dinero.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "G7",
+      "zona": "titular",
+      "problema": "«Ya son tuyos, listos para usar» promete disponibilidad inmediata que la nota contradice.",
+      "severidad": 2,
+      "recomendacion": "Promete solo lo que sea cierto; baja el tono.",
+      "actual": "ya son tuyos, listos para usar!",
+      "recomendado": "Tu dinero está listo para recibirlo."
+     },
+     {
+      "criterio": "G6",
+      "zona": "monto",
+      "problema": "El monto con $ y coma está bien, pero el asterisco pegado al número lo hace parecer un monto no seguro.",
+      "severidad": 1,
+      "recomendacion": "Quita el asterisco si el monto es firme.",
+      "actual": "$30,000*",
+      "recomendado": "$30,000"
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "El nombre «María» aporta cercanía, pero junto con «tienes» y «mi» en el botón la personalización es algo cargada.",
+      "severidad": 1,
+      "recomendacion": "Mantén el nombre solo en el saludo y neutraliza el botón.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi dinero"
+     }
+    ],
+    "positivos": [
+     "El chip «Aprobado» da la buena noticia de entrada.",
+     "El monto en grande es lo primero que se ve y usa $ y coma correctamente.",
+     "Saludo cercano con nombre y tuteo, en tono casual y optimista.",
+     "Las tarjetas de tiendas son breves y fáciles de escanear.",
+     "El botón es claro y destaca por su contraste."
+    ]
+   }
+  },
+  {
+   "pantalla": "E1-A",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los demás textos.",
+      "severidad": 4,
+      "recomendacion": "Quitar la condición si ya está aprobado. Si hay un paso pendiente, decir cuál es y quitar «ya son tuyos».",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Tu préstamo ya está aprobado. Falta que confirmes tus datos para recibirlo."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La condición «Sujeto a aprobación» y el asterisco en el monto quitan certeza a una promesa de «ya son tuyos, listos para usar».",
+      "severidad": 3,
+      "recomendacion": "Alinear la certeza: o está aprobado y se dice sin condición, o es una oferta y se dice como tal.",
+      "actual": "$30,000* ... *Sujeto a aprobación",
+      "recomendado": "$30,000 (sin asterisco si ya está aprobado)"
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris, al final de la pantalla.",
+      "severidad": 3,
+      "recomendacion": "Subir tamaño y contraste de la condición, o resolverla en el texto principal.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Condición visible junto al monto, en tamaño de cuerpo."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase está partida en tres tamaños: saludo, monto enorme y resto. Se lee en pedazos y el asterisco se pierde.",
+      "severidad": 2,
+      "recomendacion": "Hacer una frase más corta y con un solo hilo de lectura.",
+      "actual": "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "María, tienes $30,000 de préstamo en Efectivo, listos para usar."
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "«Efectivo» no dice que es un préstamo. Falta la palabra del glosario y el cliente puede no entender qué es.",
+      "severidad": 3,
+      "recomendacion": "Nombrar «préstamo» y usar «Efectivo» como nombre de producto si aplica.",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "de tu préstamo Efectivo ya son tuyos"
+     },
+     {
+      "criterio": "W1",
+      "zona": "titular",
+      "problema": "Lo que cambia la decisión (condición, qué sigue, costo o plazo) no aparece en el texto grande. Solo hay celebración y monto.",
+      "severidad": 2,
+      "recomendacion": "Decir en el titular qué debe hacer la persona para recibir el dinero.",
+      "actual": "¡María, tienes $30,000* en Efectivo…",
+      "recomendado": "María, tu préstamo de $30,000 está aprobado. Confirma para recibirlo."
+     },
+     {
+      "criterio": "W6",
+      "zona": "nota",
+      "problema": "No dice por qué podría no aprobarse ni qué hacer. Falta causa y salida.",
+      "severidad": 2,
+      "recomendacion": "Explicar qué falta y cómo resolverlo.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Falta confirmar tus datos. Hazlo en el siguiente paso."
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar» es vago. No dice si se recibe el dinero, se firma o se revisan condiciones. «mi monto» no es claro.",
+      "severidad": 2,
+      "recomendacion": "Usar un verbo que diga el resultado.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi préstamo"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "Dos enlaces «Estrenar ahora» iguales no dicen a dónde llevan. «Estrenar» tampoco encaja con «Encuentra productos».",
+      "severidad": 2,
+      "recomendacion": "Nombrar el destino en cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de marca en minúscula («elektra», «shopinbaz») según el texto dado.",
+      "severidad": 1,
+      "recomendacion": "Escribir los nombres de producto con mayúscula inicial en el texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shopinbaz"
+     },
+     {
+      "criterio": "G3",
+      "zona": "saludo",
+      "problema": "El tono exclamativo es muy festivo para dinero con condición. Puede sonar a promesa exagerada.",
+      "severidad": 2,
+      "recomendacion": "Tono cálido, pero sereno.",
+      "actual": "¡María, tienes",
+      "recomendado": "María, tienes"
+     },
+     {
+      "criterio": "G8",
+      "zona": "boton",
+      "problema": "«mi monto» en el botón suma personalización que no aporta. Ya se usa «María» en el saludo.",
+      "severidad": 1,
+      "recomendacion": "Simplificar el botón.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi préstamo"
+     },
+     {
+      "criterio": "G7",
+      "zona": "titular",
+      "problema": "«Ya son tuyos, listos para usar» promete más de lo que la pantalla sostiene por la condición.",
+      "severidad": 3,
+      "recomendacion": "Prometer solo lo que ocurre al tocar el botón.",
+      "actual": "ya son tuyos, listos para usar",
+      "recomendado": "los recibes al confirmar"
+     },
+     {
+      "criterio": "W9",
+      "zona": "titular",
+      "problema": "El signo de apertura «¡» queda en el saludo y el cierre «!» en otra línea. La exclamación está partida entre tamaños.",
+      "severidad": 1,
+      "recomendacion": "Dejar la frase completa o quitar las exclamaciones.",
+      "actual": "¡María, tienes … listos para usar!",
+      "recomendado": "María, tienes $30,000 …"
+     }
+    ],
+    "positivos": [
+     "El chip «Aprobado» comunica claro el estado.",
+     "El monto en $30,000 con formato correcto, grande y con alto contraste.",
+     "Tuteo correcto y tono cercano.",
+     "El botón es claro visualmente y tiene buen contraste.",
+     "Las tarjetas de tiendas tienen descripciones breves y fáciles de leer.",
+     "La jerarquía visual guía la mirada del saludo al monto y al botón."
+    ]
+   }
+  },
+  {
+   "pantalla": "E1-A",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente lo anterior.",
+      "severidad": 4,
+      "recomendacion": "Quitar la condición si ya está aprobado. Si hay un paso pendiente, decir cuál es, con claridad.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Monto aprobado. Para recibirlo, termina tu contratación."
+     },
+     {
+      "criterio": "G1",
+      "zona": "titular",
+      "problema": "«Ya son tuyos, listos para usar» promete certeza. El asterisco y la nota la contradicen.",
+      "severidad": 3,
+      "recomendacion": "Alinear la promesa con la condición real. Decir qué falta para usar el dinero.",
+      "actual": "en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "Tu préstamo está aprobado. Continúa para recibirlo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris claro, al final. El asterisco junto al monto es diminuto.",
+      "severidad": 3,
+      "recomendacion": "Subir tamaño y contraste de la nota. Ponerla cerca del monto.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Condición visible, en un tamaño legible y con buen contraste."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase está partida en tres tamaños y líneas: saludo, monto y «en Efectivo…». Se lee a trozos y la apertura «¡» queda lejos del cierre «!».",
+      "severidad": 2,
+      "recomendacion": "Hacer frases completas y cortas. Separar el saludo de la noticia.",
+      "actual": "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "María, tu préstamo de $30,000 está aprobado."
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "No dice qué producto es. «Efectivo» suena a dinero en mano, no a préstamo. El glosario pide «préstamo».",
+      "severidad": 3,
+      "recomendacion": "Nombrar el producto como «préstamo». Si «Efectivo» es nombre de producto, usarlo con claridad.",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "Tu préstamo Efectivo de $30,000 está aprobado."
+     },
+     {
+      "criterio": "W1",
+      "zona": "saludo",
+      "problema": "La noticia real (aprobado, con una condición) queda repartida. El chip pequeño dice «Aprobado» y el titular grande habla de dinero ya disponible.",
+      "severidad": 2,
+      "recomendacion": "Poner en el titular lo que pasa y lo que sigue.",
+      "actual": "¡María, tienes",
+      "recomendado": "María, tu préstamo está aprobado"
+     },
+     {
+      "criterio": "W6",
+      "zona": "nota",
+      "problema": "No explica qué aprobación falta ni qué debe hacer la persona.",
+      "severidad": 3,
+      "recomendacion": "Explicar la causa y el siguiente paso.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Debes completar tu contratación para recibir el dinero."
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar con mi monto» no dice qué pasa al tocar. Sugiere que ya hay monto asegurado.",
+      "severidad": 2,
+      "recomendacion": "Usar un verbo que anticipe el resultado.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Contratar mi préstamo"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "«Estrenar ahora» se repite en ambas tarjetas. No dice a dónde lleva. «Estrenar» no es claro.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el destino en cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Los nombres de marca aparecen en minúscula («elektra», «shopinbaz») en el logotipo. El texto accesible debería llevar mayúscula inicial.",
+      "severidad": 1,
+      "recomendacion": "Escribir los nombres con mayúscula inicial en el texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shop in Baz"
+     },
+     {
+      "criterio": "W2",
+      "zona": "tiendas_titulo",
+      "problema": "«También puedes comprar en» sugiere que el dinero ya se puede gastar en tiendas, lo que choca con la nota de condición.",
+      "severidad": 2,
+      "recomendacion": "Aclarar cuándo se puede usar el dinero.",
+      "actual": "También puedes comprar en:",
+      "recomendado": "Cuando recibas tu préstamo, úsalo en:"
+     },
+     {
+      "criterio": "G8",
+      "zona": "boton",
+      "problema": "«mi» y «María» suman personalización. «mi monto» queda ambiguo, porque habla en primera persona.",
+      "severidad": 1,
+      "recomendacion": "Evitar la primera persona de la persona usuaria si no aporta. Mantener el nombre solo en el saludo.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Contratar mi préstamo"
+     }
+    ],
+    "positivos": [
+     "El chip «Aprobado» con ícono de palomita se ve claro.",
+     "El monto $30,000 usa $ y coma, y es el elemento más grande y legible.",
+     "El saludo con nombre da cercanía y usa «tú».",
+     "El botón es ancho, con buen contraste y es la acción principal.",
+     "Las tarjetas de tiendas son breves y fáciles de recorrer.",
+     "El tono es cercano y positivo."
+    ]
+   }
+  },
+  {
+   "pantalla": "E1-B",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los otros textos: no queda claro si el dinero ya es de la persona.",
+      "severidad": 4,
+      "recomendacion": "Quitar el asterisco y la nota si ya está aprobado. Si hay condiciones reales, decirlas con claridad y no llamar «Aprobado» a lo que no lo es.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Quita la nota. Si hay una condición real: «Tu préstamo está aprobado. Recibes el dinero al firmar tu contrato»."
+     },
+     {
+      "criterio": "G1",
+      "zona": "monto",
+      "problema": "El asterisco en el monto convierte una certeza («ya son tuyos, listos para usar») en una promesa condicionada. La pantalla promete y a la vez se retracta.",
+      "severidad": 4,
+      "recomendacion": "Quitar el asterisco del monto o aclarar la condición de forma visible y consistente con el resto.",
+      "actual": "$30,000*",
+      "recomendado": "$30,000"
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris claro, al final y debajo del botón. Casi no se alcanza a leer.",
+      "severidad": 3,
+      "recomendacion": "Si existe una condición real, ponerla cerca del monto con tamaño y contraste legibles.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Condición visible junto al monto, con tamaño de cuerpo."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres textos de distinto tamaño (saludo, monto, resto). La oración se lee cortada y el monto queda en medio. El signo de apertura «¡» y el de cierre «!» quedan lejos uno del otro.",
+      "severidad": 2,
+      "recomendacion": "Armar una frase corta y completa, o separar en dos ideas con puntuación propia.",
+      "actual": "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "¡María, tu préstamo está aprobado! Tienes $30,000 en Efectivo, listos para usar."
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "No dice «préstamo»: no queda claro qué producto es. «Efectivo» se entiende como nombre de producto, pero la persona no sabe si es un préstamo. Además «ya son tuyos» sugiere regalo.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el préstamo y mantener «Efectivo» con mayúscula inicial como producto.",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "Tu préstamo Efectivo de $30,000 está aprobado"
+     },
+     {
+      "criterio": "W6",
+      "zona": "boton",
+      "problema": "No dice qué falta para recibir el dinero ni qué pasa después de continuar. Con la nota de «aprobación», la persona no sabe el siguiente paso.",
+      "severidad": 3,
+      "recomendacion": "Indicar en una frase el paso siguiente y cuándo llega el dinero.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mis $30,000"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar» es genérico y no anticipa el resultado. «Mi monto» no aclara si es aceptar, firmar o recibir el dinero.",
+      "severidad": 2,
+      "recomendacion": "Usar un verbo que describa lo que pasa al tocar.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi dinero"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "Los dos enlaces dicen igual «Estrenar ahora» y no dicen a dónde llevan. «Estrenar» no describe ir a una tienda.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el destino en cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Los nombres de marca aparecen en minúscula (elektra, shopinbaz) en los logotipos; en texto deben llevar mayúscula inicial.",
+      "severidad": 1,
+      "recomendacion": "Escribir los nombres con mayúscula inicial en cualquier texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shopinbaz"
+     },
+     {
+      "criterio": "W1",
+      "zona": "chip",
+      "problema": "El chip «Aprobado» es pequeño frente al monto. La noticia clave está en el chip, no en el titular, y el titular no la repite.",
+      "severidad": 2,
+      "recomendacion": "Incluir «aprobado» en el titular principal.",
+      "actual": "¡María, tienes",
+      "recomendado": "¡María, tu préstamo está aprobado!"
+     },
+     {
+      "criterio": "G7",
+      "zona": "titular",
+      "problema": "«Ya son tuyos, listos para usar» exagera: promete dinero disponible al instante cuando la pantalla aún pide un paso y una aprobación.",
+      "severidad": 2,
+      "recomendacion": "Prometer solo lo que ocurre, con el paso siguiente claro.",
+      "actual": "ya son tuyos, listos para usar",
+      "recomendado": "Listos para recibir en tu cuenta"
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "El nombre «María» aporta cercanía en una buena noticia. Pero el botón repite «mi» y el titular «tuyos»: demasiada personalización.",
+      "severidad": 1,
+      "recomendacion": "Mantener el nombre y quitar posesivos innecesarios.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir dinero"
+     },
+     {
+      "criterio": "G6",
+      "zona": "monto",
+      "problema": "El formato $30,000 es correcto, pero sin «MXN» ni centavos no es un error. No se detecta problema de formato.",
+      "severidad": 0,
+      "recomendacion": "Sin cambios.",
+      "actual": "",
+      "recomendado": ""
+     }
+    ],
+    "positivos": [
+     "El monto $30,000 es grande y con alto contraste: se ve primero.",
+     "El saludo con nombre da cercanía en una buena noticia.",
+     "El tono es casual y optimista, sin culpar.",
+     "Usa «tú» al cliente de forma consistente.",
+     "El chip «Aprobado» comunica el estado con claridad visual.",
+     "El formato de dinero cumple con $ y comas.",
+     "La jerarquía visual (chip, monto, botón) guía bien la lectura."
+    ]
+   }
+  },
+  {
+   "pantalla": "E1-B",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente lo anterior.",
+      "severidad": 4,
+      "recomendacion": "Quita la condición si ya está aprobado. Si hay un paso pendiente, dilo claro y cambia el chip.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Tu préstamo ya está aprobado. El desembolso depende de que firmes tu contrato."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La promesa de certeza («ya son tuyos, listos para usar») queda condicionada por el asterisco.",
+      "severidad": 3,
+      "recomendacion": "Usa un mensaje cierto, sin condicional escondido.",
+      "actual": "$30,000* ... ya son tuyos, listos para usar!",
+      "recomendado": "Tu préstamo de $30,000 está aprobado."
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris, bajo el botón. Casi no se lee.",
+      "severidad": 3,
+      "recomendacion": "Sube tamaño y contraste, o ponla cerca del monto.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Condición visible junto al monto, en tamaño de cuerpo."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres bloques de distinto tamaño (saludo, monto, remate) y la lectura se rompe. Los signos «¡» y «!» quedan separados.",
+      "severidad": 3,
+      "recomendacion": "Haz una frase completa y corta, con el monto dentro.",
+      "actual": "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "¡María, tu préstamo de $30,000 está aprobado!"
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "No dice «préstamo». «Efectivo» parece un medio de pago, y no se sabe qué es lo aprobado. Si es producto, el nombre debe ser claro.",
+      "severidad": 3,
+      "recomendacion": "Nombra el producto con la palabra del glosario.",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "en tu préstamo Efectivo"
+     },
+     {
+      "criterio": "W1",
+      "zona": "titular",
+      "problema": "El titular no dice qué se aprobó ni qué falta por hacer. La aclaración clave queda al final y en pequeño.",
+      "severidad": 2,
+      "recomendacion": "Pon primero qué se aprobó y qué sigue.",
+      "actual": "¡María, tienes $30,000* en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "¡María, tu préstamo de $30,000 está aprobado!"
+     },
+     {
+      "criterio": "W9",
+      "zona": "titular",
+      "problema": "La frase «tienes $30,000 en Efectivo ya son tuyos» está mal armada: faltan puntuación y conexión.",
+      "severidad": 2,
+      "recomendacion": "Reescribe con una sola idea y puntuación correcta.",
+      "actual": "tienes $30,000* en Efectivo ya son tuyos",
+      "recomendado": "tienes $30,000 en tu préstamo Efectivo"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar con mi monto» no dice qué pasa al tocar (firmar, recibir, elegir plazo). Y «monto» sugiere que ya está asegurado.",
+      "severidad": 2,
+      "recomendacion": "Usa un verbo que diga el resultado.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi préstamo"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "«Estrenar ahora» se repite en ambas tarjetas y no dice a dónde lleva. «Estrenar» no cuadra con tecnología o moda.",
+      "severidad": 2,
+      "recomendacion": "Di el destino en cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de marca en minúscula («elektra», «shopinbaz») en vez de mayúscula inicial.",
+      "severidad": 1,
+      "recomendacion": "Escribe los nombres con mayúscula inicial en el texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shopinbaz"
+     },
+     {
+      "criterio": "G7",
+      "zona": "titular",
+      "problema": "«Listos para usar» exagera: el dinero no se puede usar si falta aprobación.",
+      "severidad": 2,
+      "recomendacion": "Prometer solo lo que se cumple.",
+      "actual": "listos para usar",
+      "recomendado": "Indica cuándo recibirás el dinero."
+     },
+     {
+      "criterio": "W6",
+      "zona": "nota",
+      "problema": "No explica qué falta para la aprobación ni qué puede hacer la persona.",
+      "severidad": 2,
+      "recomendacion": "Di la causa y el paso siguiente.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Para recibir tu dinero, confirma tus datos en el siguiente paso."
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "Hay mucha personalización: «María», «tienes», «tuyos», «mi monto». Es aceptable, pero se acumula.",
+      "severidad": 1,
+      "recomendacion": "Deja el nombre en el saludo y quita personalización redundante.",
+      "actual": "¡María, tienes ... ya son tuyos ... mi monto",
+      "recomendado": "¡María, tu préstamo está aprobado!"
+     }
+    ],
+    "positivos": [
+     "El chip «Aprobado» es claro y está bien ubicado.",
+     "El monto es grande, con $ y coma de miles, y se lee fácil.",
+     "Tono cercano, con «tú» al cliente.",
+     "El botón tiene buen contraste y es fácil de ubicar.",
+     "«También puedes comprar en:» presenta las opciones de forma sencilla."
+    ]
+   }
+  },
+  {
+   "pantalla": "E1-B",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado» y el titular dice «ya son tuyos», pero la nota dice «Sujeto a aprobación». La nota desmiente a los demás textos.",
+      "severidad": 4,
+      "recomendacion": "Quita la nota si ya está aprobado. Si hay una condición real, dila con claridad y quita «ya son tuyos».",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Si hay condición real: «*Tu préstamo está aprobado. Para recibirlo, confirma tus datos.»"
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La condición introduce duda en una pantalla que promete certeza. «Sujeto a aprobación» contradice «Aprobado» y «ya son tuyos».",
+      "severidad": 4,
+      "recomendacion": "Usa un solo mensaje cierto. Elimina el asterisco o explica qué falta exactamente.",
+      "actual": "$30,000*",
+      "recomendado": "$30,000"
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris claro, casi ilegible. El monto tiene el mayor tamaño.",
+      "severidad": 3,
+      "recomendacion": "Sube tamaño y contraste de la nota, o quítala si no aplica.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Nota con tamaño legible y contraste alto, junto al monto."
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres tamaños (saludo, monto, titular). Se lee como una sola oración entrecortada por el monto grande.",
+      "severidad": 2,
+      "recomendacion": "Separa en frases completas: una para el monto y otra para el uso.",
+      "actual": "¡María, tienes / $30,000* / en Efectivo ya son tuyos, listos para usar!",
+      "recomendado": "¡María, tu préstamo fue aprobado! / $30,000 / Ya son tuyos, listos para usar."
+     },
+     {
+      "criterio": "G2",
+      "zona": "titular",
+      "problema": "No dice «préstamo». «en Efectivo» se entiende como el producto o como dinero en mano, y está en minúscula inicial dentro de la frase partida.",
+      "severidad": 3,
+      "recomendacion": "Nombra «préstamo» y usa el nombre del producto con mayúscula inicial.",
+      "actual": "en Efectivo ya son tuyos",
+      "recomendado": "de tu préstamo Efectivo ya son tuyos"
+     },
+     {
+      "criterio": "W1",
+      "zona": "saludo",
+      "problema": "El mensaje principal no dice qué es lo aprobado. Falta decir que es un préstamo y que hay que dar un paso para recibirlo.",
+      "severidad": 2,
+      "recomendacion": "Pon primero qué se aprobó y cuánto.",
+      "actual": "¡María, tienes",
+      "recomendado": "¡María, tu préstamo está aprobado!"
+     },
+     {
+      "criterio": "W9",
+      "zona": "titular",
+      "problema": "Los signos de exclamación abren en el saludo y cierran en otro bloque. La frase queda sin signo claro al leerse por zonas. «Efectivo» sin contexto no concuerda con «son tuyos».",
+      "severidad": 2,
+      "recomendacion": "Haz frases completas con sus propios signos.",
+      "actual": "¡María, tienes ... listos para usar!",
+      "recomendado": "¡María, tienes $30,000 en Efectivo! Ya son tuyos."
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar con mi monto» no dice qué pasa al tocar (¿contratar, recibir, depositar?). Además, «mi» usa voz de la persona.",
+      "severidad": 2,
+      "recomendacion": "Usa un verbo que anticipe el resultado.",
+      "actual": "Continuar con mi monto",
+      "recomendado": "Recibir mi dinero"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "Los dos enlaces dicen igual «Estrenar ahora» y no explican a dónde llevan (tienda o catálogo). «Estrenar» no describe la acción.",
+      "severidad": 2,
+      "recomendacion": "Di el destino en cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shop in Baz"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "«Estrenar ahora» y «Tecnología, hogar, moda y más» sugieren gastar ya, aunque la condición de aprobación sigue abierta. Promete uso inmediato.",
+      "severidad": 1,
+      "recomendacion": "Baja el tono comercial hasta confirmar el préstamo.",
+      "actual": "Encuentra productos para renovar tu hogar.",
+      "recomendado": "Compra productos para tu hogar."
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "El nombre de marca aparece como «elektra» y «shopinbaz» en minúscula; el logo muestra «Shop in baz». Inconsistente con la regla de mayúscula inicial.",
+      "severidad": 1,
+      "recomendacion": "Escribe los nombres de producto con mayúscula inicial en texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shop in Baz"
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "El nombre «María» aporta cercanía en la felicitación, pero junto a «tu», «mi» y «tuyos» hay personalización repetida.",
+      "severidad": 1,
+      "recomendacion": "Deja el nombre y reduce los posesivos.",
+      "actual": "¡María, tienes",
+      "recomendado": "¡María, tienes"
+     }
+    ],
+    "positivos": [
+     "El monto $30,000 tiene formato correcto (signo $ y comas) y es el texto más grande.",
+     "El chip «Aprobado» es claro, visible y comunica buenas noticias.",
+     "El tono es cercano, casual y positivo, con tú al cliente.",
+     "El botón ocupa todo el ancho y destaca con buen contraste.",
+     "La ilustración de billetes refuerza el mensaje del dinero."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-A",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "El signo de apertura está al revés: «!» en lugar de «¡». Se ve descuidado.",
+      "severidad": 3,
+      "recomendacion": "Usar «¡» al abrir la exclamación.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres tamaños (saludo, monto, cierre) y el signo de cierre queda lejos del de apertura.",
+      "severidad": 2,
+      "recomendacion": "Reescribir como una frase más corta que se lea completa, o quitar la exclamación.",
+      "actual": "!María, tienes / $30,000* / para tus productos favoritos!",
+      "recomendado": "María, tienes $30,000 para comprar en tus tiendas favoritas"
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en «más».",
+      "severidad": 2,
+      "recomendacion": "Corregir la ortografía.",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace no dice qué explica ni a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido al que lleva.",
+      "actual": "Saber mas",
+      "recomendado": "Ver dónde puedo usar mi préstamo"
+     },
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La restricción clave (solo compras, sin efectivo) va en texto pequeño debajo del monto grande. Quien lea solo el monto creerá que puede retirar efectivo.",
+      "severidad": 3,
+      "recomendacion": "Subir la condición al titular o junto al monto.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo de $30,000 es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "aclaracion",
+      "problema": "La condición que cambia la decisión tiene letra pequeña y poco peso frente al monto.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y peso del texto de la restricción.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "El «no» queda escondido tras «En esta ocasión» y no explica por qué ni qué hacer para obtener efectivo.",
+      "severidad": 2,
+      "recomendacion": "Decir la negativa directa y dar una salida o motivo.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo no se puede retirar en efectivo. Úsalo para comprar en Elektra y Shop in baz."
+     },
+     {
+      "criterio": "W6",
+      "zona": "aclaracion",
+      "problema": "No dice la causa de la restricción ni si hay alternativa para obtener efectivo.",
+      "severidad": 2,
+      "recomendacion": "Añadir motivo breve y siguiente paso.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "W2",
+      "zona": "chip",
+      "problema": "«Aprobado» choca con la nota «Sujeto a aprobación» y con «Ya está listo para usarse». No queda claro si ya está aprobado.",
+      "severidad": 4,
+      "recomendacion": "Decidir el estado real: si está aprobado, quitar la nota condicional; si no, no decir aprobado.",
+      "actual": "Aprobado en producto / *Sujeto a aprobación",
+      "recomendado": "Aprobado para compras"
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "El condicional resta certeza y contradice «Aprobado» y «listo para usarse».",
+      "severidad": 3,
+      "recomendacion": "Quitar el asterisco o explicar qué condición falta.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Vigente hasta dd/mm/aaaa. Aplican términos y condiciones."
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición que cambia la decisión está en letra muy pequeña y gris, al fondo.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y contraste, o integrarla en el cuerpo.",
+      "actual": "",
+      "recomendado": ""
+     },
+     {
+      "criterio": "W4",
+      "zona": "chip",
+      "problema": "«en producto» es jerga interna y poco clara.",
+      "severidad": 2,
+      "recomendacion": "Decir para qué se aprobó en lenguaje llano.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de marca en minúscula inicial («elektra», «shopinbaz»), y el chip no usa «préstamo».",
+      "severidad": 2,
+      "recomendacion": "Escribir con mayúscula inicial: Elektra, Shop in baz, según la marca.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shopinbaz"
+     },
+     {
+      "criterio": "W7",
+      "zona": "tarjetas",
+      "problema": "Dos botones iguales «Estrenar ahora» no dicen a dónde llevan ni qué tienda. «Estrenar» no describe ver ofertas.",
+      "severidad": 2,
+      "recomendacion": "Verbo que diga el resultado y la tienda.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Comprar en Elektra / Ver ofertas en Shopinbaz"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "«Ofertas que solo tú tienes» es una promesa exagerada y vaga. «Renueva tu casa hoy» presiona.",
+      "severidad": 1,
+      "recomendacion": "Describir la oferta real sin exclusividad.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para comprar con tu préstamo"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar comprando» sugiere que ya estabas comprando y no dice a dónde lleva. Hay dos tiendas.",
+      "severidad": 2,
+      "recomendacion": "Verbo y destino claros.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ver tiendas"
+     },
+     {
+      "criterio": "W3",
+      "zona": "tiendas_titulo",
+      "problema": "«Ya está listo» no dice qué está listo; el sujeto no se entiende. «usarse» es impersonal.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el sujeto y hablar de tú.",
+      "actual": "Ya está listo para usarse aquí",
+      "recomendado": "Ya puedes usar tu préstamo aquí"
+     },
+     {
+      "criterio": "G8",
+      "zona": "titular",
+      "problema": "«María» y «tus productos favoritos» se repiten con «tu préstamo»; personalización excesiva en la misma pantalla.",
+      "severidad": 1,
+      "recomendacion": "Mantener el nombre solo en el saludo y simplificar los «tu».",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para comprar en tus tiendas"
+     }
+    ],
+    "positivos": [
+     "El monto $30,000 es grande y fácil de ver, con formato de dinero correcto.",
+     "Se usa «préstamo» y no «crédito».",
+     "Trata de tú de forma consistente y con tono cercano.",
+     "La aclaración dice con claridad que es solo para productos.",
+     "El botón principal tiene buen contraste y destaca.",
+     "La ilustración y las tarjetas de tienda orientan dónde usar el préstamo."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-A",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "Signo de apertura incorrecto: «!» al inicio en lugar de «¡». Se ve como error de calidad.",
+      "severidad": 3,
+      "recomendacion": "Usar «¡» al abrir la exclamación.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en «más».",
+      "severidad": 2,
+      "recomendacion": "Acentuar «más».",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres tamaños (saludo, monto, cierre). Se lee como piezas sueltas, aunque el monto destaca.",
+      "severidad": 2,
+      "recomendacion": "Mantener la frase, pero reducir el salto de tamaño o cuidar que se lea como una sola idea.",
+      "actual": "¡María, tienes / $30,000* / para tus productos favoritos!",
+      "recomendado": "¡María, tienes $30,000* para comprar tus productos favoritos!"
+     },
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La noticia que cambia la decisión (solo sirve para comprar productos, no da efectivo) queda en texto pequeño y debajo. El titular sugiere libertad de uso.",
+      "severidad": 3,
+      "recomendacion": "Subir la restricción al titular o al chip.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo de $30,000* es solo para compras en tiendas. No es para retirar efectivo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición «Sujeto a aprobación» va en letra muy pequeña y gris, y decide si el monto es real.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y contraste, y acercarla al monto.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Monto sujeto a aprobación final."
+     },
+     {
+      "criterio": "W2",
+      "zona": "chip",
+      "problema": "El chip dice «Aprobado», pero la nota dice «Sujeto a aprobación». Se contradicen. Además «en producto» es ambiguo.",
+      "severidad": 4,
+      "recomendacion": "Alinear el estado con la condición real. Si está aprobado, quitar la condición o explicar qué falta.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado para compras"
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La condición deja el monto como incierto, mientras la pantalla afirma «tienes $30,000» y «ya está listo para usarse».",
+      "severidad": 3,
+      "recomendacion": "Decir con certeza lo que es seguro y explicar qué condición falta.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Tu monto se confirma al finalizar tu compra."
+     },
+     {
+      "criterio": "W6",
+      "zona": "nota",
+      "problema": "No explica qué se aprueba, quién ni qué debe hacer la persona.",
+      "severidad": 2,
+      "recomendacion": "Indicar la causa y el paso siguiente.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Validaremos tus datos al pagar. Si algo falla, te avisamos."
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "El «no» sobre el efectivo va suavizado con «En esta ocasión», que sugiere que otra vez sí se podrá, y queda escondido.",
+      "severidad": 2,
+      "recomendacion": "Decir de frente que no se puede retirar efectivo.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W4",
+      "zona": "aclaracion",
+      "problema": "«Disponer de efectivo» es lenguaje bancario poco cotidiano.",
+      "severidad": 2,
+      "recomendacion": "Usar «retirar efectivo».",
+      "actual": "no para disponer de efectivo",
+      "recomendado": "no para retirar efectivo"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace no dice qué se va a saber ni a dónde lleva. Es pequeño.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido.",
+      "actual": "Saber mas",
+      "recomendado": "Ver cómo usar mi préstamo"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar comprando» no indica a dónde va (¿tienda, tarjeta?) y el usuario aún no compra. Compite con los «Estrenar ahora» de las tarjetas.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el destino.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ir a las tiendas"
+     },
+     {
+      "criterio": "W7",
+      "zona": "tarjetas",
+      "problema": "«Estrenar ahora» no deja claro qué pasa: ¿abre la tienda?, ¿usa el préstamo? Se repite igual en ambas.",
+      "severidad": 2,
+      "recomendacion": "Un verbo que diga el resultado y la tienda.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Elektra / Ir a Shopinbaz"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de marca en minúscula («elektra», «shopinbaz») y «paga después» puede leerse como otro producto.",
+      "severidad": 2,
+      "recomendacion": "Poner mayúscula inicial en nombres de producto en el texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shopinbaz"
+     },
+     {
+      "criterio": "G1",
+      "zona": "tarjetas",
+      "problema": "«Paga después» y «estrenar ahora» prometen sin matices, pero el monto está sujeto a aprobación.",
+      "severidad": 2,
+      "recomendacion": "Alinear la promesa con la condición.",
+      "actual": "Renueva tu casa hoy y paga después",
+      "recomendado": "Renueva tu casa hoy con tu préstamo"
+     },
+     {
+      "criterio": "W2",
+      "zona": "tiendas_titulo",
+      "problema": "«Ya está listo para usarse» contradice «Sujeto a aprobación». Además el sujeto («Ya está») no está claro.",
+      "severidad": 3,
+      "recomendacion": "Decir qué está listo y bajo qué condición.",
+      "actual": "Ya está listo para usarse aquí",
+      "recomendado": "Puedes usar tu préstamo en estas tiendas"
+     },
+     {
+      "criterio": "G8",
+      "zona": "tarjetas",
+      "problema": "«Ofertas que solo tú tienes» exagera la exclusividad y es poco creíble.",
+      "severidad": 1,
+      "recomendacion": "Describir la oferta de forma realista.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para ti en Shopinbaz"
+     },
+     {
+      "criterio": "G7",
+      "zona": "titular",
+      "problema": "«Productos favoritos» promete algo que depende del catálogo de las tiendas.",
+      "severidad": 1,
+      "recomendacion": "Hablar de compras en tiendas.",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para comprar en tus tiendas"
+     }
+    ],
+    "positivos": [
+     "El monto $30,000 tiene el mayor tamaño y contraste, y se ve de inmediato.",
+     "El formato de dinero cumple con $ y comas.",
+     "Usa «préstamo» y no «crédito».",
+     "Trato de «tú» consistente y saludo con el nombre, que da cercanía.",
+     "El botón principal es claro, visible y ocupa todo el ancho.",
+     "Las tarjetas de tiendas están ordenadas y son fáciles de recorrer."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-A",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La noticia que cambia la decisión (el préstamo solo sirve para comprar productos, no da efectivo) va en texto pequeño, debajo del monto. Arriba solo se ve el monto y 'productos favoritos'.",
+      "severidad": 3,
+      "recomendacion": "Subir la restricción al titular o junto al monto. Decir claro que es para compras en tiendas, no efectivo.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tienes $30,000 para comprar en tiendas. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice 'Aprobado' y el monto aparece como ya listo para usar, pero la nota dice 'Sujeto a aprobación'. Se contradicen.",
+      "severidad": 3,
+      "recomendacion": "Quitar la condición o explicar qué falta por aprobar. Mantener un solo estado.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Quitar el asterisco, o: *Monto aprobado. Puede cambiar si tus datos no coinciden."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La condición 'Sujeto a aprobación' le quita certeza a un monto presentado como aprobado y listo.",
+      "severidad": 3,
+      "recomendacion": "Usar un mensaje cierto y coherente con el chip.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Quitar la condición o explicar con claridad qué falta."
+     },
+     {
+      "criterio": "W3",
+      "zona": "saludo",
+      "problema": "La frase se parte en tres tamaños: saludo, monto y cierre. Además va con signo de apertura mal escrito.",
+      "severidad": 2,
+      "recomendacion": "Armar una frase que se lea fluida, con el signo correcto, o reducir los saltos de tamaño.",
+      "actual": "!María, tienes / $30,000* / para tus productos favoritos!",
+      "recomendado": "¡María, tienes $30,000 para tus productos favoritos!"
+     },
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "Signo de exclamación de apertura incorrecto: '!' en vez de '¡'. El titular tiene cierre sin apertura.",
+      "severidad": 3,
+      "recomendacion": "Usar ¡ al abrir.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en 'más'.",
+      "severidad": 2,
+      "recomendacion": "Corregir la tilde.",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace no dice qué se va a saber ni a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido al que lleva.",
+      "actual": "Saber mas",
+      "recomendado": "Ver cómo usar mi préstamo"
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "El 'no' sobre el efectivo va escondido y suavizado con 'En esta ocasión'. Suena a algo pasajero sin explicar.",
+      "severidad": 2,
+      "recomendacion": "Decir de frente que no hay efectivo y por qué, y qué opciones hay.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo no se entrega en efectivo. Úsalo para comprar en las tiendas de abajo."
+     },
+     {
+      "criterio": "W4",
+      "zona": "aclaracion",
+      "problema": "'Disponer de efectivo' es lenguaje bancario.",
+      "severidad": 2,
+      "recomendacion": "Usar 'retirar efectivo'.",
+      "actual": "disponer de efectivo",
+      "recomendado": "retirar efectivo"
+     },
+     {
+      "criterio": "W4",
+      "zona": "chip",
+      "problema": "'Aprobado en producto' es término interno y poco claro.",
+      "severidad": 2,
+      "recomendacion": "Decir qué está aprobado.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado"
+     },
+     {
+      "criterio": "W6",
+      "zona": "aclaracion",
+      "problema": "Dice la limitación pero no la causa ni qué hacer si se necesita efectivo.",
+      "severidad": 2,
+      "recomendacion": "Explicar el motivo o dar una salida.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo es solo para compras en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "'Continuar comprando' sugiere que ya se estaba comprando. No dice si lleva a una tienda o al catálogo. Las tarjetas ya tienen otro botón 'Estrenar ahora', y hay dos acciones parecidas.",
+      "severidad": 2,
+      "recomendacion": "Usar un verbo que diga el resultado.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ir a las tiendas"
+     },
+     {
+      "criterio": "W10",
+      "zona": "nota",
+      "problema": "La condición del monto está en letra muy pequeña y gris, con asterisco diminuto en el monto. Es información que cambia la decisión.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y contraste, o integrarla al cuerpo.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": ""
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de tienda en minúscula ('elektra', 'shopinbaz') en el texto. 'Shopinbaz' no coincide con el logo 'Shop in baz'.",
+      "severidad": 1,
+      "recomendacion": "Escribir los nombres de marca con mayúscula inicial en texto.",
+      "actual": "elektra / shopinbaz",
+      "recomendado": "Elektra / Shop in baz"
+     },
+     {
+      "criterio": "W2",
+      "zona": "tiendas_titulo",
+      "problema": "'Ya está listo para usarse aquí' contradice 'Sujeto a aprobación'. Además no queda claro qué está listo.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el sujeto y alinear con el estado.",
+      "actual": "Ya está listo para usarse aquí",
+      "recomendado": "Ya puedes usar tu préstamo en estas tiendas"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "'Ofertas que solo tú tienes' exagera y no se puede comprobar.",
+      "severidad": 1,
+      "recomendacion": "Describir sin exagerar.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para ti en Shop in baz"
+     },
+     {
+      "criterio": "G3",
+      "zona": "tarjetas",
+      "problema": "'Estrenar ahora' se repite igual en las dos tarjetas y suena a empuje de venta. 'Paga después' no deja claro el préstamo.",
+      "severidad": 1,
+      "recomendacion": "Diferenciar el botón por tienda y ser más claro.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Comprar en Elektra / Comprar en Shop in baz"
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "Mucha personalización: 'María', 'tu/tus' repetido en pocas líneas.",
+      "severidad": 1,
+      "recomendacion": "Mantener el nombre en el saludo y reducir 'tu' en el cuerpo.",
+      "actual": "tus productos favoritos / tu préstamo",
+      "recomendado": "los productos que quieras"
+     }
+    ],
+    "positivos": [
+     "El monto $30,000 es grande, con buen contraste y se ve primero.",
+     "El formato de dinero usa $ y comas, como pide la guía.",
+     "Usa 'préstamo' y no 'crédito'.",
+     "Tratamiento de tú al cliente, tono cercano.",
+     "Las tarjetas de tienda son cortas y fáciles de leer.",
+     "El botón principal tiene alto contraste y es fácil de ubicar."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-B",
+   "evaluador": 1,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La noticia clave (el dinero es solo para comprar productos, no efectivo) va en texto pequeño, debajo del monto grande que sugiere dinero libre.",
+      "severidad": 3,
+      "recomendacion": "Subir la restricción al titular o junto al monto.",
+      "actual": "$30,000 para tus productos favoritos! / En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "¡María, tienes $30,000 para comprar en tiendas aliadas! No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "aclaracion",
+      "problema": "La limitación que cambia la decisión está en cuerpo pequeño y poco destacado frente al monto enorme.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y peso del texto de la restricción.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W2",
+      "zona": "chip",
+      "problema": "«Aprobado» y «*Sujeto a aprobación» se contradicen. Además, «Ya está listo para usarse» y «Continuar comprando» sugieren que ya se puede usar.",
+      "severidad": 3,
+      "recomendacion": "Decidir si está aprobado o no y alinear chip, nota y botón.",
+      "actual": "Aprobado en producto / *Sujeto a aprobación",
+      "recomendado": "Aprobado para compras / Monto aprobado para compras en tiendas aliadas."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "El condicional «sujeto a aprobación» resta certeza a un monto ya aprobado.",
+      "severidad": 3,
+      "recomendacion": "Quitar el condicional o explicar qué condición falta.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Monto disponible solo para compras en tiendas aliadas."
+     },
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "Signo de apertura incorrecto: «!» en lugar de «¡». Falta el de apertura en la frase partida, y el cierre queda en otra línea.",
+      "severidad": 2,
+      "recomendacion": "Usar «¡» al inicio y un solo signo de cierre.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase está partida en tres tamaños: saludo, monto y cierre. Se lee en pedazos.",
+      "severidad": 2,
+      "recomendacion": "Dejar una frase continua o reorganizar el titular.",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para comprar tus productos favoritos."
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en «más».",
+      "severidad": 2,
+      "recomendacion": "Corregir la ortografía.",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace no dice qué explica ni a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido del enlace.",
+      "actual": "Saber mas",
+      "recomendado": "Ver cómo usar mi préstamo"
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "El «no» sobre el efectivo es tímido y abre con «En esta ocasión», lo que sugiere que podría cambiar.",
+      "severidad": 2,
+      "recomendacion": "Decir el no directo, con causa y salida.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo no se puede retirar en efectivo. Úsalo en las tiendas de abajo."
+     },
+     {
+      "criterio": "W6",
+      "zona": "aclaracion",
+      "problema": "No explica por qué es solo para compras ni qué hacer si se necesita efectivo.",
+      "severidad": 2,
+      "recomendacion": "Añadir motivo breve y alternativa.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo es para comprar en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+     },
+     {
+      "criterio": "W4",
+      "zona": "chip",
+      "problema": "«Aprobado en producto» es jerga interna y poco clara.",
+      "severidad": 2,
+      "recomendacion": "Decir qué fue aprobado.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar comprando» sugiere que ya había una compra en curso y no dice a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Usar un verbo que diga el resultado.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ver tiendas"
+     },
+     {
+      "criterio": "W7",
+      "zona": "tarjetas",
+      "problema": "Dos botones idénticos «Estrenar ahora» no dicen a qué tienda llevan. «Estrenar» no encaja con ofertas.",
+      "severidad": 2,
+      "recomendacion": "Nombrar la acción y la tienda.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Shopinbaz / Ver motos"
+     },
+     {
+      "criterio": "W10",
+      "zona": "tarjetas",
+      "problema": "El texto de la tarjeta de Shopinbaz está cortado en el borde y no se lee completo.",
+      "severidad": 3,
+      "recomendacion": "Ajustar la tarjeta para que el texto quepa.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas que solo tú tienes"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombres de marca con mayúscula inconsistente: «shopinbaz» en minúsculas.",
+      "severidad": 1,
+      "recomendacion": "Escribir «Shopinbaz» con mayúscula inicial.",
+      "actual": "shopinbaz",
+      "recomendado": "Shopinbaz"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "«Ofertas que solo tú tienes» exagera la exclusividad.",
+      "severidad": 1,
+      "recomendacion": "Bajar la promesa.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para ti"
+     },
+     {
+      "criterio": "G8",
+      "zona": "tarjetas",
+      "problema": "Exceso de «tu/tú» en pantalla; «solo tú» no aporta cercanía real.",
+      "severidad": 1,
+      "recomendacion": "Mantener «tu» solo donde aporte.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas disponibles hoy"
+     },
+     {
+      "criterio": "W9",
+      "zona": "tiendas_titulo",
+      "problema": "«Ya está listo» no concuerda con claridad: no se sabe qué está listo (el préstamo o el monto).",
+      "severidad": 1,
+      "recomendacion": "Nombrar el sujeto.",
+      "actual": "Ya está listo para usarse aquí",
+      "recomendado": "Tu préstamo ya está listo para usarse aquí"
+     }
+    ],
+    "positivos": [
+     "Usa «préstamo» y no «crédito».",
+     "El monto es grande y fácil de ubicar.",
+     "Trata al cliente de «tú» de forma cercana.",
+     "La aclaración de que no es efectivo existe y se dice en lenguaje sencillo.",
+     "El botón principal es claro y visible, con buen contraste.",
+     "El monto tiene formato correcto con $ y coma."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-B",
+   "evaluador": 2,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La noticia clave (el monto es solo para comprar productos, sin efectivo) va en texto pequeño debajo. El titular solo celebra el monto.",
+      "severidad": 3,
+      "recomendacion": "Subir la restricción a un lugar más visible, cerca del monto o en el titular.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "aclaracion",
+      "problema": "La condición que cambia la decisión se ve en cuerpo pequeño y con poco peso frente al monto enorme.",
+      "severidad": 3,
+      "recomendacion": "Aumentar tamaño y peso del texto de la restricción.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "El «no» va escondido a media frase y con rodeo («en esta ocasión», «disponer de efectivo»).",
+      "severidad": 3,
+      "recomendacion": "Decir de frente que no se puede retirar efectivo.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "No puedes retirar este préstamo en efectivo. Úsalo para comprar productos."
+     },
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "«Sujeto a aprobación» contradice «Aprobado» y «Ya está listo para usarse».",
+      "severidad": 3,
+      "recomendacion": "Quitar el asterisco condicional o explicar qué condición queda pendiente.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Aplican términos y condiciones."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "El condicional resta certeza a un préstamo ya aprobado y listo.",
+      "severidad": 3,
+      "recomendacion": "Eliminar el condicional o precisar qué falta.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Aplican términos y condiciones."
+     },
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "Signo de apertura mal: «!» en vez de «¡». Además, el titular se parte en dos tamaños con el monto en medio y cierra con «!» sin apertura.",
+      "severidad": 3,
+      "recomendacion": "Usar «¡» y reunir la idea en una frase legible.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres piezas (saludo, monto, titular) con tamaños distintos.",
+      "severidad": 2,
+      "recomendacion": "Mantener la frase continua o simplificar a una idea por bloque.",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para comprar en tus tiendas favoritas."
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en «más».",
+      "severidad": 2,
+      "recomendacion": "Corregir la ortografía.",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace no dice qué se va a saber ni a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido del enlace.",
+      "actual": "Saber mas",
+      "recomendado": "Ver dónde puedo usar mi préstamo"
+     },
+     {
+      "criterio": "W4",
+      "zona": "chip",
+      "problema": "«Aprobado en producto» es jerga interna y poco clara.",
+      "severidad": 2,
+      "recomendacion": "Decir qué está aprobado y para qué.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado para compras"
+     },
+     {
+      "criterio": "W4",
+      "zona": "aclaracion",
+      "problema": "«Disponer de efectivo» es lenguaje bancario.",
+      "severidad": 1,
+      "recomendacion": "Usar «retirar efectivo».",
+      "actual": "disponer de efectivo",
+      "recomendado": "retirar efectivo"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar comprando» sugiere que ya se compraba y no dice a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Verbo que anticipe el resultado.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ir a comprar"
+     },
+     {
+      "criterio": "W6",
+      "zona": "aclaracion",
+      "problema": "No explica por qué es solo para productos ni qué hacer si se necesita efectivo.",
+      "severidad": 2,
+      "recomendacion": "Dar causa breve y salida.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo es solo para compras en tiendas aliadas. Si necesitas efectivo, consulta otras opciones."
+     },
+     {
+      "criterio": "W9",
+      "zona": "tiendas_titulo",
+      "problema": "Concordancia dudosa: «Ya está listo» no dice qué; el sujeto es el préstamo y la tarjeta se corta a la izquierda.",
+      "severidad": 1,
+      "recomendacion": "Nombrar el sujeto.",
+      "actual": "Ya está listo para usarse aquí",
+      "recomendado": "Tu préstamo ya está listo para usarse aquí"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "Nombre de marca «shopinbaz» en minúscula en el texto (el logo dice Shopinbaz).",
+      "severidad": 1,
+      "recomendacion": "Escribir con mayúscula inicial.",
+      "actual": "shopinbaz",
+      "recomendado": "Shopinbaz"
+     },
+     {
+      "criterio": "W10",
+      "zona": "tarjetas",
+      "problema": "La tarjeta de Shopinbaz está cortada y el texto no se lee completo.",
+      "severidad": 2,
+      "recomendacion": "Ajustar el carrusel para que se vea completo.",
+      "actual": "Ofertas que solo tú tienes / Estrenar ahora",
+      "recomendado": "Ofertas que solo tú tienes"
+     },
+     {
+      "criterio": "W8",
+      "zona": "tarjetas",
+      "problema": "Dos enlaces iguales «Estrenar ahora» no dicen a dónde llevan; «Estrenar» no encaja con un préstamo.",
+      "severidad": 2,
+      "recomendacion": "Diferenciar cada enlace.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ir a Shopinbaz / Ver motos ITALIKA"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "«Ofertas que solo tú tienes» y «muévete ya» exageran y presionan.",
+      "severidad": 1,
+      "recomendacion": "Bajar la promesa.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para ti"
+     },
+     {
+      "criterio": "G8",
+      "zona": "tarjetas",
+      "problema": "«Solo tú» y «tus productos favoritos» personalizan en exceso; no se conocen sus gustos.",
+      "severidad": 1,
+      "recomendacion": "Usar texto neutro.",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para tus compras."
+     }
+    ],
+    "positivos": [
+     "Usa «préstamo», no «crédito».",
+     "El monto es grande, claro y con formato $30,000.",
+     "Trata al cliente de tú.",
+     "El saludo con nombre da cercanía.",
+     "El botón es visible y con buen contraste."
+    ]
+   }
+  },
+  {
+   "pantalla": "E2-B",
+   "evaluador": 3,
+   "salida": {
+    "observaciones": [
+     {
+      "criterio": "W9",
+      "zona": "saludo",
+      "problema": "Falta el signo de apertura «¡». Se escribió «!» al inicio, lo que es un error ortográfico visible en el titular.",
+      "severidad": 3,
+      "recomendacion": "Usar «¡» al abrir la exclamación.",
+      "actual": "!María, tienes",
+      "recomendado": "¡María, tienes"
+     },
+     {
+      "criterio": "W3",
+      "zona": "titular",
+      "problema": "La frase se parte en tres piezas con tamaños distintos (saludo, monto, cierre). La exclamación abre en una línea y cierra en otra, lo que dificulta la lectura.",
+      "severidad": 2,
+      "recomendacion": "Mantener la frase, pero cuidar la puntuación para que se lea como una sola idea.",
+      "actual": "¡María, tienes $30,000 para tus productos favoritos!",
+      "recomendado": "María, tienes $30,000 para comprar en tus tiendas favoritas"
+     },
+     {
+      "criterio": "W1",
+      "zona": "aclaracion",
+      "problema": "La noticia que cambia la decisión es que el préstamo no se puede retirar en efectivo. Está en un texto pequeño, debajo del monto grande. El titular y el chip dan a entender que el dinero es libre.",
+      "severidad": 3,
+      "recomendacion": "Poner el límite en el titular o junto al monto.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Tu préstamo es solo para comprar productos. No puedes retirarlo en efectivo."
+     },
+     {
+      "criterio": "W10",
+      "zona": "aclaracion",
+      "problema": "El texto que limita el uso del dinero es pequeño y de peso ligero frente al monto. El asterisco del monto y la nota son aún menores.",
+      "severidad": 3,
+      "recomendacion": "Subir tamaño y peso de la aclaración y de la nota.",
+      "actual": "Texto de aclaración pequeño",
+      "recomendado": "Aclaración en tamaño de cuerpo destacado"
+     },
+     {
+      "criterio": "W2",
+      "zona": "nota",
+      "problema": "El chip dice «Aprobado», pero la nota dice «Sujeto a aprobación». Un texto desmiente al otro. «Ya está listo para usarse» también se contradice con la nota.",
+      "severidad": 4,
+      "recomendacion": "Definir si ya está aprobado. Si lo está, quitar la nota o explicar qué condición queda.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "Quitar la nota, o: *Tu compra se valida al pagar."
+     },
+     {
+      "criterio": "G1",
+      "zona": "nota",
+      "problema": "La condición «sujeto a aprobación» es un condicional que contradice la certeza de «Aprobado» y «tienes $30,000».",
+      "severidad": 3,
+      "recomendacion": "Eliminar el condicional o decir con claridad qué falta.",
+      "actual": "*Sujeto a aprobación",
+      "recomendado": "*Monto disponible solo en tiendas participantes."
+     },
+     {
+      "criterio": "W4",
+      "zona": "chip",
+      "problema": "«Aprobado en producto» es un término interno. La persona no sabe qué significa.",
+      "severidad": 2,
+      "recomendacion": "Decir en lenguaje común lo que se aprobó.",
+      "actual": "Aprobado en producto",
+      "recomendado": "Préstamo aprobado para compras"
+     },
+     {
+      "criterio": "W8",
+      "zona": "saber_mas",
+      "problema": "El enlace es vago: no dice qué se va a saber ni a dónde lleva. Además, le falta el acento.",
+      "severidad": 2,
+      "recomendacion": "Nombrar el contenido y acentuar «más».",
+      "actual": "Saber mas",
+      "recomendado": "Ver por qué no puedo retirar efectivo"
+     },
+     {
+      "criterio": "W9",
+      "zona": "saber_mas",
+      "problema": "Falta el acento en «más».",
+      "severidad": 2,
+      "recomendacion": "Escribir «más» con acento.",
+      "actual": "Saber mas",
+      "recomendado": "Saber más"
+     },
+     {
+      "criterio": "W5",
+      "zona": "aclaracion",
+      "problema": "La negativa se suaviza con «En esta ocasión» y «no para disponer de efectivo». No queda claro si es una regla o algo temporal.",
+      "severidad": 2,
+      "recomendacion": "Decir el «no» de frente y dar la causa y la salida.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "No puedes retirar este préstamo en efectivo. Úsalo para comprar en las tiendas de abajo."
+     },
+     {
+      "criterio": "W6",
+      "zona": "aclaracion",
+      "problema": "No dice por qué el préstamo es solo para compras ni qué puede hacer la persona si necesita efectivo.",
+      "severidad": 2,
+      "recomendacion": "Añadir la causa o una salida.",
+      "actual": "En esta ocasión, tu préstamo es para comprar productos y no para disponer de efectivo.",
+      "recomendado": "Este préstamo es solo para compras. Para efectivo, consulta otras opciones aquí."
+     },
+     {
+      "criterio": "W4",
+      "zona": "aclaracion",
+      "problema": "«Disponer de efectivo» es lenguaje bancario poco natural.",
+      "severidad": 1,
+      "recomendacion": "Usar «retirar efectivo».",
+      "actual": "disponer de efectivo",
+      "recomendado": "retirar efectivo"
+     },
+     {
+      "criterio": "W9",
+      "zona": "tarjetas",
+      "problema": "El texto de la tarjeta de shopinbaz está cortado («Ofertas que solo tú tienes» se ve como «Ofertas que solo tú / tienes» y «Estrenar ahora» cortado). El nombre de marca va en minúsculas.",
+      "severidad": 2,
+      "recomendacion": "Corregir el desplazamiento para que se lea completo. Escribir «Shopinbaz» con mayúscula inicial.",
+      "actual": "shopinbaz Ofertas que solo tú tienes",
+      "recomendado": "Shopinbaz: ofertas que solo tú tienes"
+     },
+     {
+      "criterio": "G2",
+      "zona": "tarjetas",
+      "problema": "El nombre del producto «shopinbaz» no lleva mayúscula inicial en el texto.",
+      "severidad": 1,
+      "recomendacion": "Usar mayúscula inicial.",
+      "actual": "shopinbaz",
+      "recomendado": "Shopinbaz"
+     },
+     {
+      "criterio": "W7",
+      "zona": "tarjetas",
+      "problema": "«Estrenar ahora» se repite en ambas tarjetas y no dice a dónde lleva ni qué pasa. «Estrenar» no encaja con el contexto de una tienda en línea.",
+      "severidad": 2,
+      "recomendacion": "Usar verbos que digan la tienda o el resultado.",
+      "actual": "Estrenar ahora",
+      "recomendado": "Ver ofertas / Ver motos"
+     },
+     {
+      "criterio": "W7",
+      "zona": "boton",
+      "problema": "«Continuar comprando» sugiere que ya se está comprando. No dice a dónde lleva.",
+      "severidad": 2,
+      "recomendacion": "Verbo que anticipe el siguiente paso.",
+      "actual": "Continuar comprando",
+      "recomendado": "Ir a las tiendas"
+     },
+     {
+      "criterio": "G7",
+      "zona": "tarjetas",
+      "problema": "«Ofertas que solo tú tienes» es una promesa exagerada de exclusividad que no se puede comprobar.",
+      "severidad": 1,
+      "recomendacion": "Bajar el tono.",
+      "actual": "Ofertas que solo tú tienes",
+      "recomendado": "Ofertas para ti"
+     },
+     {
+      "criterio": "G8",
+      "zona": "saludo",
+      "problema": "El nombre «María» y varios «tu» aparecen juntos. Hay exceso de personalización: «tus productos favoritos» supone gustos que no se conocen.",
+      "severidad": 1,
+      "recomendacion": "Dejar el nombre y quitar «favoritos».",
+      "actual": "para tus productos favoritos!",
+      "recomendado": "para comprar en tiendas participantes"
+     },
+     {
+      "criterio": "G6",
+      "zona": "monto",
+      "problema": "El monto usa $ y comas, bien. Pero no lleva «MXN» ni vigencia, y el asterisco queda muy chico.",
+      "severidad": 1,
+      "recomendacion": "Mantener el formato y hacer legible el asterisco.",
+      "actual": "$30,000*",
+      "recomendado": "$30,000*"
+     }
+    ],
+    "positivos": [
+     "El monto está en el texto más grande y se lee de inmediato.",
+     "El tuteo es consistente y cercano.",
+     "Usa «préstamo» y no «crédito».",
+     "Formato de dinero correcto: $30,000.",
+     "El botón es grande y de alto contraste.",
+     "Las marcas de las tiendas aparecen con su logo y dan contexto del uso."
+    ]
+   }
+  }
+ ],
+ "costo_usd": 0.509
+}

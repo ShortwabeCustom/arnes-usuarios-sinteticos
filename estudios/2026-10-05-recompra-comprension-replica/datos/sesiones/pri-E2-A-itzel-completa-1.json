@@ -1,0 +1,77 @@
+{
+ "id": "pri-E2-A-itzel-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000, pero para comprar productos, no en efectivo. Dice «Aprobado en producto». Pero abajo hay un asterisco con «Sujeto a aprobación». Eso se contradice: ¿ya me aprobaron o no?",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Me aprobaron el monto, $30,000, pero no la forma que pedí. Yo pedí efectivo y esto es para productos. Además dice «Sujeto a aprobación», así que no sé si ya está aprobado de verdad."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "En Elektra y en Shopinbaz, que son las tarjetas que se ven. Puede haber más tiendas porque la tarjeta de la derecha está cortada, pero eso no lo sé. No dice en qué productos ni si hay mínimos o plazos.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El asterisco dice «Sujeto a aprobación» y no explica qué falta ni cuánto tarda. Tampoco dice cuota mensual, total a pagar, fechas ni qué pasa si me atraso. Y «Ya está listo para usarse» contradice lo del asterisco."
+  },
+  "p6": "El botón verde dice «Continuar comprando». Supongo que me lleva a comprar, pero no sé a dónde ni con qué condiciones. La pantalla no lo explica y no voy a inventarlo.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No lo dice. Solo afirma «en esta ocasión» y no da ningún motivo. Existe un «Saber mas», pero no sé qué contiene. Si ahí está la razón, tendría que abrirlo para saberlo."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas» primero, para ver por qué no es efectivo, qué significa «sujeto a aprobación» y cuánto voy a pagar en total. No me comprometo sin ver el número final. El botón verde no, hasta tener eso claro."
+  },
+  "reglas": [
+   "B-02",
+   "B-08",
+   "B-10",
+   "B-06"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me aprobaron el monto de $30,000, pero no en efectivo como lo pedí. Sigue el asterisco de «Sujeto a aprobación» y el panel no lo aclara. No sé si ya está firme."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel confirma que por ahora solo puedo usarlo para comprar productos en sus tiendas."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice, pero a medias: «por tu historial crediticio». No explica qué del historial ni qué vieron. Es una razón, pero vaga. Y justo mi historial es lo que más cuido."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice con claridad. Habla de usarlo, mantener mis pagos al día y fortalecer mi historial para «nuevas opciones de financiamiento». No menciona efectivo, ni cuánto tiempo, ni qué requisitos. Tampoco dice cuánto voy a pagar al mes ni en total."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me deja con dudas. Agradezco que expliquen algo, pero sigo sin saber la cuota, el total a pagar, las fechas, qué pasa si me atraso ni qué significa el asterisco. Me inquieta que hablen de mi historial sin detalle. No me comprometo sin ese número final."
+   },
+   "reglas": [
+    "B-02",
+    "B-08",
+    "B-06"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1442
+}

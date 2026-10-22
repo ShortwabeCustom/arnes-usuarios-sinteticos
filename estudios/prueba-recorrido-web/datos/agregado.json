@@ -1,0 +1,478 @@
+{
+ "n_sesiones": 2,
+ "resultados": {
+  "T1": {
+   "exito_con_friccion": 2
+  }
+ },
+ "wcag_258": [
+  {
+   "pantalla": "localhost:8737/index.html",
+   "captura": "datos/capturas/T1-arturo/p01.png",
+   "objetivos": 3,
+   "fallan": [],
+   "aproximado": false
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "captura": "datos/capturas/T1-arturo/p02.png",
+   "objetivos": 5,
+   "fallan": [],
+   "aproximado": false
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "captura": "datos/capturas/T1-arturo/p07.png",
+   "objetivos": 2,
+   "fallan": [],
+   "aproximado": false
+  }
+ ],
+ "primer_toque": {
+  "T1": {
+   "correcto": 2,
+   "total": 2,
+   "completan_si_correcto": "2 de 2",
+   "completan_si_incorrecto": "0 de 0"
+  }
+ },
+ "robustez": {
+  "repetidas": {},
+  "estables": 0,
+  "con_repeticion": 0,
+  "alertas": []
+ },
+ "metricas": {
+  "sesiones": [
+   {
+    "sesion": "T1-arturo",
+    "tarea": "T1",
+    "integrante": "arturo",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 4,
+    "clics": 7,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 34,
+    "tiempo_estimado_s": 55.3,
+    "tiempo_rango_s": [
+     65.0,
+     50.0
+    ],
+    "espera_sistema_s": 8.8,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "localhost:8737"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [
+     "llamada",
+     "sucursal"
+    ],
+    "retoma": "vuelve_al_inicio",
+    "pantallas_con_estatus": 3,
+    "pantallas_revisadas_estatus": 3,
+    "sabe_donde_va": {
+     "si": 4,
+     "mas_o_menos": 2,
+     "no": 1
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "localhost:8737/index.html": {
+      "pasos": 7,
+      "tiempo_s": 55.3,
+      "clics": 7,
+      "campos": 2
+     },
+     "localhost:8737/index.html#datos": {
+      "pasos": 6,
+      "tiempo_s": 45.5,
+      "clics": 6,
+      "campos": 2
+     },
+     "localhost:8737/index.html#confirmar": {
+      "pasos": 1,
+      "tiempo_s": 13.0,
+      "clics": 1,
+      "campos": 0
+     },
+     "localhost:8737/index.html#listo": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T1-bryan",
+    "tarea": "T1",
+    "integrante": "bryan",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 4,
+    "clics": 7,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 34,
+    "tiempo_estimado_s": 55.4,
+    "tiempo_rango_s": [
+     65.0,
+     50.1
+    ],
+    "espera_sistema_s": 8.9,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "localhost:8737"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [
+     "llamada",
+     "sucursal"
+    ],
+    "retoma": "vuelve_al_inicio",
+    "pantallas_con_estatus": 3,
+    "pantallas_revisadas_estatus": 3,
+    "sabe_donde_va": {
+     "si": 5,
+     "mas_o_menos": 2,
+     "no": 0
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "localhost:8737/index.html": {
+      "pasos": 7,
+      "tiempo_s": 55.4,
+      "clics": 7,
+      "campos": 2
+     },
+     "localhost:8737/index.html#datos": {
+      "pasos": 6,
+      "tiempo_s": 45.5,
+      "clics": 6,
+      "campos": 2
+     },
+     "localhost:8737/index.html#confirmar": {
+      "pasos": 1,
+      "tiempo_s": 13.0,
+      "clics": 1,
+      "campos": 0
+     },
+     "localhost:8737/index.html#listo": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   }
+  ],
+  "tareas": {
+   "T1": {
+    "sesiones": 2,
+    "completan": 2,
+    "pasos": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 2
+    },
+    "pantallas": {
+     "mediana": 4,
+     "min": 4,
+     "max": 4,
+     "n": 2
+    },
+    "clics": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 2
+    },
+    "clics_sin_respuesta": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 2
+    },
+    "tiempo_completan_s": {
+     "mediana": 55.3,
+     "min": 55.3,
+     "max": 55.4,
+     "n": 2
+    },
+    "espera_sistema_s": {
+     "mediana": 8.9,
+     "min": 8.8,
+     "max": 8.9,
+     "n": 2
+    },
+    "validaciones_disparadas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "pantallas_verificacion": [],
+    "cambios_dominio": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "dominios": [
+     "localhost:8737"
+    ],
+    "pestanas_nuevas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "permisos": [],
+    "menciones_otro_canal": [
+     "llamada",
+     "sucursal"
+    ],
+    "retoma": {
+     "vuelve_al_inicio": 2
+    },
+    "estatus": {
+     "con_indicador": 3,
+     "pantallas": 3
+    },
+    "sabe_donde_va": {
+     "si": 9,
+     "mas_o_menos": 4,
+     "no": 1
+    },
+    "ces": {
+     "mediana": 4.5,
+     "min": 4,
+     "max": 5,
+     "n": 2
+    }
+   }
+  },
+  "distancia_por_pantalla": {
+   "localhost:8737/index.html": {
+    "pasos": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 2
+    },
+    "clics": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 2
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 2
+    },
+    "tiempo_s": {
+     "mediana": 55.3,
+     "min": 55.3,
+     "max": 55.4,
+     "n": 2
+    }
+   },
+   "localhost:8737/index.html#datos": {
+    "pasos": {
+     "mediana": 6,
+     "min": 6,
+     "max": 6,
+     "n": 2
+    },
+    "clics": {
+     "mediana": 6,
+     "min": 6,
+     "max": 6,
+     "n": 2
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 2
+    },
+    "tiempo_s": {
+     "mediana": 45.5,
+     "min": 45.5,
+     "max": 45.5,
+     "n": 2
+    }
+   },
+   "localhost:8737/index.html#confirmar": {
+    "pasos": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 2
+    },
+    "clics": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 2
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "tiempo_s": {
+     "mediana": 13,
+     "min": 13,
+     "max": 13,
+     "n": 2
+    }
+   },
+   "localhost:8737/index.html#listo": {
+    "pasos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "clics": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    },
+    "tiempo_s": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 2
+    }
+   }
+  },
+  "modelo_tiempo": {
+   "palabras_por_segundo": 3.5,
+   "decision_s": 1.35,
+   "toque_s": 0.4,
+   "tecla_s": 0.3,
+   "relectura": 0.25,
+   "velocidades": [
+    2.5,
+    4.5
+   ]
+  }
+ },
+ "embudo": [
+  {
+   "pantalla": "localhost:8737/index.html",
+   "sesiones": 2
+  },
+  {
+   "pantalla": "localhost:8737/index.html#datos",
+   "sesiones": 2
+  },
+  {
+   "pantalla": "localhost:8737/index.html#confirmar",
+   "sesiones": 2
+  },
+  {
+   "pantalla": "localhost:8737/index.html#listo",
+   "sesiones": 2
+  }
+ ],
+ "momentos": [
+  {
+   "sesion": "T1-arturo",
+   "paso": 3,
+   "pantalla": "localhost:8737/index.html#datos",
+   "confianza": 40,
+   "caida": 15,
+   "friccion": 3,
+   "pensamiento": "¿Otra vez desde el principio? No sé si se guardó mi nombre. Ni modo, vuelvo a intentarlo, pero ya me da desconfianza."
+  },
+  {
+   "sesion": "T1-arturo",
+   "paso": 4,
+   "pantalla": "localhost:8737/index.html#datos",
+   "confianza": 40,
+   "caida": 0,
+   "friccion": 3,
+   "pensamiento": "Todo vacío otra vez. Bueno, lo vuelvo a escribir con calma. Es poco lo que piden."
+  },
+  {
+   "sesion": "T1-bryan",
+   "paso": 3,
+   "pantalla": "localhost:8737/index.html#datos",
+   "confianza": 50,
+   "caida": 14,
+   "friccion": 3,
+   "pensamiento": "Ah, qué flojera, otra vez desde cero. Ni me recordó ni me guardó mi nombre. Bueno, son pocos pasos, lo repito rápido."
+  }
+ ],
+ "sesiones": [
+  {
+   "sesion": "T1-arturo",
+   "tarea": "T1",
+   "integrante": "arturo",
+   "nombre": "Arturo Belmont",
+   "resultado": "exito_con_friccion",
+   "pasos": 8,
+   "toques": 7,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 4,
+   "confianza_inicial": 50,
+   "confianza_final": 58,
+   "confianza_min": 40,
+   "friccion_max": 3,
+   "costo_usd": 0.8355
+  },
+  {
+   "sesion": "T1-bryan",
+   "tarea": "T1",
+   "integrante": "bryan",
+   "nombre": "Bryan Nájera",
+   "resultado": "exito_con_friccion",
+   "pasos": 8,
+   "toques": 7,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 4,
+   "confianza_inicial": 60,
+   "confianza_final": 55,
+   "confianza_min": 48,
+   "friccion_max": 3,
+   "costo_usd": 0.9561
+  }
+ ]
+}

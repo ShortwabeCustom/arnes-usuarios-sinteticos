@@ -1,0 +1,49 @@
+{
+ "fases": {
+  "medir": {
+   "t": "2026-10-20T13:40:51",
+   "pantallas": 4,
+   "integrantes": 4
+  },
+  "sesiones": {
+   "t": "2026-10-20T13:48:48",
+   "ok": 32,
+   "fallos": [],
+   "costo_usd": 1.848
+  },
+  "analizar": {
+   "t": "2026-10-20T16:12:50",
+   "sesiones": 32
+  },
+  "reporte": {
+   "t": "2026-10-20T18:53:08",
+   "html": "reporte/oupwa-abtesting-recompra-resultado-replica-sintetico_2026-10-20-v1.html",
+   "kb": 1109
+  },
+  "verificar": {
+   "t": "2026-10-20T18:58:10",
+   "avisos": 4
+  },
+  "auditar": {
+   "t": "2026-10-20T16:43:32",
+   "evaluadores": 3,
+   "consenso": 59,
+   "costo_usd": 0.509
+  },
+  "sintesis": {
+   "t": "2026-10-20T18:58:03",
+   "nota": "03-Sintesis/estudio-2026-10-05-recompra-comprension-replica.md"
+  },
+  "estilo": {
+   "t": "2026-10-20T16:41:52",
+   "guia": "pwa",
+   "errores": 2,
+   "avisos": 2
+  }
+ },
+ "biblioteca": {
+  "id": "pwa",
+  "huella": "26e3e3cfcbc5",
+  "panel": "base4"
+ }
+}

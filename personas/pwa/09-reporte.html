@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>User Persona OU-PWA — reporte</title>
+<style>
+  :root{
+    --bosque:#14342b; --bosque-2:#1d4a3c; --lima:#b8e02a; --lima-2:#d4f25c;
+    --rojo:#c1352a; --ambar:#c98a12;
+    --tinta:#151a17; --tinta-2:#4a544e; --tinta-3:#78837c;
+    --papel:#fbfaf6; --papel-2:#f3f1e9; --linea:#dcd9cd; --blanco:#fff;
+    --sans:"Inter","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);
+       font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+  h1,h2,h3,h4{line-height:1.2;letter-spacing:-.02em;margin:0}
+  a{color:var(--bosque-2)}
+
+  /* ---------- portada de decisión ---------- */
+  .portada{background:var(--bosque);color:#eef3ee;padding-block:56px 44px;
+           padding-top:calc(56px + env(safe-area-inset-top,0px))}
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima);
+          font-weight:600;margin-bottom:18px}
+  .portada h1{font-size:clamp(30px,5.2vw,50px);font-weight:700;max-width:19ch}
+  .portada .bajada{margin-top:20px;max-width:62ch;font-size:clamp(16px,2vw,19px);
+                   color:#c8d4c9;line-height:1.5}
+  .decision{margin-top:32px;border-left:4px solid var(--lima);padding:14px 0 14px 18px;
+            max-width:64ch}
+  .decision strong{color:var(--lima-2)}
+  .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#93a396}
+  .meta b{color:#c8d4c9;font-weight:600}
+
+  /* ---------- dashboard: cuatro indicadores ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea);
+        border:1px solid var(--linea);margin-top:-30px;border-radius:6px;overflow:hidden;
+        box-shadow:0 12px 34px rgba(20,52,43,.13)}
+  .kpi{background:var(--blanco);padding:22px 20px 20px}
+  .kpi .n{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1}
+  .kpi .n.rojo{color:var(--rojo)} .kpi .n.bosque{color:var(--bosque)}
+  .kpi .t{margin-top:10px;font-size:14px;font-weight:600;line-height:1.35}
+  .kpi .b{margin-top:8px;font-size:12px;color:var(--tinta-3);line-height:1.4}
+
+  /* ---------- pestañas ---------- */
+  .tabs{display:flex;gap:4px;margin:44px 0 0;border-bottom:2px solid var(--linea);
+        flex-wrap:wrap}
+  .tab{appearance:none;border:0;background:none;font:inherit;font-weight:600;font-size:15px;
+       color:var(--tinta-2);padding:11px 18px;cursor:pointer;border-bottom:3px solid transparent;
+       margin-bottom:-2px;min-height:44px}
+  .tab[aria-selected="true"]{color:var(--bosque);border-bottom-color:var(--lima)}
+  .tab:focus-visible{outline:2px solid var(--bosque);outline-offset:2px}
+  .panel{padding-top:34px}
+  .panel[hidden]{display:none!important}
+
+  section{margin-bottom:46px}
+  section h2{font-size:clamp(21px,3vw,27px);font-weight:700;max-width:28ch}
+  section h2 .num{color:var(--tinta-3);font-weight:600;margin-right:10px;font-size:.72em;
+                  vertical-align:.12em}
+  .lede{margin-top:12px;max-width:66ch;color:var(--tinta-2);font-size:16.5px}
+  p{max-width:66ch}
+
+  /* ---------- tablas ---------- */
+  .tabla-wrap{overflow-x:auto;margin-top:20px;border:1px solid var(--linea);border-radius:6px;
+              background:var(--blanco)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--linea);vertical-align:top}
+  thead th{background:var(--papel-2);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+           color:var(--tinta-2);font-weight:600;white-space:nowrap}
+  tbody tr:last-child td{border-bottom:0}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr.total td{background:var(--papel-2);font-weight:600}
+  .destacada{background:#f6fbe8}
+
+  /* ---------- barras ---------- */
+  .barra{display:flex;height:26px;border-radius:4px;overflow:hidden;min-width:200px}
+  .barra span{display:block}
+  .leyenda{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-size:12.5px;
+           color:var(--tinta-2)}
+  .leyenda i{width:11px;height:11px;border-radius:2px;display:inline-block;margin-right:6px;
+             vertical-align:-1px}
+
+  /* ---------- callouts ---------- */
+  .nota{border-left:4px solid var(--lima);background:var(--blanco);padding:16px 20px;
+        margin-top:22px;border-radius:0 6px 6px 0;border-top:1px solid var(--linea);
+        border-right:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .nota.alerta{border-left-color:var(--rojo)}
+  .nota.limite{border-left-color:var(--ambar)}
+  .nota h4{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);
+           margin-bottom:8px}
+  .nota p{margin:0;font-size:15px}
+  .nota p + p{margin-top:10px}
+
+  .etiqueta{display:inline-block;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+            font-weight:700;padding:3px 7px;border-radius:3px;vertical-align:1px;white-space:nowrap}
+  .e-obs{background:#e7f0e3;color:var(--bosque)}
+  .e-int{background:#eae7f0;color:#4a3b6b}
+  .e-hip{background:#faf0d8;color:#7a5a06}
+  .e-lim{background:#f7e2e0;color:var(--rojo)}
+  .e-sen{background:var(--papel-2);color:var(--tinta-2)}
+
+  /* ---------- hallazgos colapsables ---------- */
+  details{background:var(--blanco);border:1px solid var(--linea);border-radius:6px;
+          margin-top:10px}
+  details[open]{border-color:#c3c0b2}
+  summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:15px;list-style:none;
+          display:flex;gap:14px;align-items:baseline;min-height:44px}
+  summary::-webkit-details-marker{display:none}
+  summary:focus-visible{outline:2px solid var(--bosque);outline-offset:-2px}
+  summary::after{content:"+";margin-left:auto;color:var(--tinta-3);font-weight:400;font-size:20px;
+                 line-height:1}
+  details[open] summary::after{content:"–"}
+  .sev{font-size:11px;font-weight:700;padding:3px 8px;border-radius:3px;white-space:nowrap;
+       flex:none}
+  .s4{background:#f7e2e0;color:var(--rojo)} .s3{background:#faf0d8;color:#7a5a06}
+  .s2{background:var(--papel-2);color:var(--tinta-2)} .s1{background:var(--papel-2);color:var(--tinta-3)}
+  details .cuerpo{padding:0 18px 18px;font-size:15px;color:var(--tinta-2)}
+  details .cuerpo p{margin:0 0 10px}
+  details .cuerpo p:last-child{margin-bottom:0}
+  details .cuerpo b{color:var(--tinta)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;
+       background:var(--papel-2);padding:1px 5px;border-radius:3px}
+
+  /* ---------- perfiles ---------- */
+  .perfiles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+  .perfil{background:var(--blanco);border:1px solid var(--linea);border-radius:6px;padding:22px}
+  .perfil .id{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3);
+              font-weight:700}
+  .perfil h3{font-size:20px;margin-top:6px}
+  .perfil .arq{color:var(--bosque-2);font-size:14.5px;font-weight:600;margin-top:4px}
+  .perfil dl{margin:16px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+  .perfil dt{color:var(--tinta-3)} .perfil dd{margin:0;font-variant-numeric:tabular-nums}
+  .perfil .tension{margin-top:16px;padding-top:14px;border-top:1px solid var(--linea);
+                   font-size:14px;color:var(--tinta-2)}
+
+  /* ---------- plan de acción: una sola columna ---------- */
+  .plan{margin-top:22px;border-top:1px solid var(--linea)}
+  .accion{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:22px 0;
+          border-bottom:1px solid var(--linea)}
+  .accion .r{font-size:13px;font-weight:700;color:var(--bosque);letter-spacing:.04em;
+             padding-top:2px}
+  .accion h4{font-size:17px;font-weight:700}
+  .accion p{margin:8px 0 0;color:var(--tinta-2);font-size:15px}
+  .accion .por{margin-top:10px;font-size:13.5px;color:var(--tinta-3)}
+
+  footer{background:var(--bosque);color:#93a396;margin-top:56px;padding-block:34px;
+         padding-bottom:calc(34px + env(safe-area-inset-bottom,0px));font-size:13.5px}
+  footer .wrap > p{max-width:70ch;margin:0 0 10px}
+  footer b{color:var(--lima)}
+
+  @media (max-width:860px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .perfiles{grid-template-columns:1fr}
+  }
+  @media (max-width:520px){
+    .kpis{grid-template-columns:1fr;margin-top:-20px}
+    .accion{grid-template-columns:1fr;gap:6px}
+  }
+  @media print{
+    .tabs{display:none} .panel[hidden]{display:block!important}
+    details{break-inside:avoid} details .cuerpo{display:block!important}
+    .portada,footer{background:#fff;color:#000}
+  }
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <div class="wrap">
+    <p class="kicker">Originación Única · User Persona · Reporte de investigación</p>
+    <h1>El cliente que el producto describe no es el cliente que tiene</h1>
+    <p class="bajada">
+      Reconstrucción del User Persona de la OU a partir de sus fuentes originales:
+      685,243 clientes reales del estudio de mayo 2025 y 19 hallazgos verificados contra
+      la aplicación web en ambiente dev. Cuatro segmentos observados, 48 reglas conductuales
+      y una auditoría del documento vigente.
+    </p>
+    <div class="decision">
+      <p><strong>La decisión que este reporte pide:</strong> separar el objetivo comercial
+      de la población observada antes de seguir diseñando. El arquetipo vigente se construye
+      sobre una proporción demográfica que ninguna generación de la base alcanza, y deja fuera
+      al 43.9% de los clientes que hoy están usando el producto.</p>
+    </div>
+    <div class="meta">
+      <span><b>Base</b> 685,243 clientes · semanas 1 a 20</span>
+      <span><b>Capa 2</b> 19 hallazgos · aplicación real</span>
+      <span><b>Segmentos</b> 4 generaciones</span>
+      <span><b>Fecha</b> 18 de septiembre de 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi">
+      <p class="n bosque">43.9%</p>
+      <p class="t">de la base son Centennials</p>
+      <p class="b">301 mil de 686 mil. Es el segmento más grande y ningún artefacto de diseño lo toma como destinatario. Lámina 7</p>
+    </div>
+    <div class="kpi">
+      <p class="n rojo">2.40×</p>
+      <p class="t">cuesta el plazo que la pantalla muestra como más barato</p>
+      <p class="b">$70,000 a 100 semanas se pagan $168,000. El cotizador solo muestra el pago semanal. Hallazgo H01–H02</p>
+    </div>
+    <div class="kpi">
+      <p class="n rojo">13</p>
+      <p class="t">afirmaciones del documento vigente que no resisten su fuente</p>
+      <p class="b">Tres de fondo, seis errores de lectura de tabla, cuatro omisiones. Auditoría completa en el artefacto 12</p>
+    </div>
+    <div class="kpi">
+      <p class="n bosque">11.4</p>
+      <p class="t">pérdida del segmento que no aparece en el encuadre de negocio</p>
+      <p class="b">Los mayores de 50 son los que menos pierden de toda la base. No son «antes», ni «ahora», ni «ideal». Lámina 16</p>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Secciones del reporte">
+    <button class="tab" role="tab" id="t-cliente" aria-controls="p-cliente" aria-selected="true">Cliente</button>
+    <button class="tab" role="tab" id="t-negocio" aria-controls="p-negocio" aria-selected="false">Negocio</button>
+    <button class="tab" role="tab" id="t-operacion" aria-controls="p-operacion" aria-selected="false">Operación</button>
+    <button class="tab" role="tab" id="t-metodo" aria-controls="p-metodo" aria-selected="false">Método y límites</button>
+  </div>
+
+  <!-- ============ CLIENTE ============ -->
+  <div class="panel" id="p-cliente" role="tabpanel" aria-labelledby="t-cliente">
+
+    <section>
+      <h2><span class="num">01</span>El usuario modal de la OU tiene 19 años</h2>
+      <p class="lede">La edad que más se repite en toda la base es 19 años entre hombres y 22 entre
+      mujeres. El estudio lo dice con todas las letras: ambos son Centennials. El arquetipo vigente
+      describe a alguien de 30 a 55.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Generación</th><th>Rango</th><th class="n">Clientes</th><th class="n">% de la base</th><th class="n">Hombres</th><th class="n">Mujeres</th></tr></thead>
+          <tbody>
+            <tr class="destacada"><td><b>Centennials (Z)</b></td><td>18–30</td><td class="n">301,000</td><td class="n">43.9%</td><td class="n">54%</td><td class="n">46%</td></tr>
+            <tr><td>Millennials (Y)</td><td>31–45</td><td class="n">229,000</td><td class="n">33.4%</td><td class="n">52%</td><td class="n">48%</td></tr>
+            <tr><td>Gen X</td><td>46–60</td><td class="n">119,000</td><td class="n">17.3%</td><td class="n">54%</td><td class="n">46%</td></tr>
+            <tr><td>Boomers</td><td>61–80</td><td class="n">37,000</td><td class="n">5.4%</td><td class="n">57%</td><td class="n">43%</td></tr>
+            <tr class="total"><td>Total</td><td>18–80</td><td class="n">686,000</td><td class="n">100%</td><td class="n">53.2%</td><td class="n">46.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lede" style="margin-top:14px"><span class="etiqueta e-obs">Observado</span>
+      Lámina 7 del estudio. La edad modal masculina es 19 años (4.4%) y la femenina 22 años (4.1%).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span>El crédito cambia de función con la edad, no solo de monto</h2>
+      <p class="lede">Efectivo sube de 48.7% a 62.4% de Centennials a Boomers. Movilidad hace el
+      camino inverso: cae de 28.0% a 14.8%. Casi un tercio de los créditos Centennial son una moto.
+      Los dos gradientes son monótonos en los cuatro segmentos.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Segmento</th><th>Mezcla de producto</th><th class="n">Efectivo</th><th class="n">Movilidad</th><th class="n">Hogar</th><th class="n">Telefonía</th></tr></thead>
+          <tbody>
+            <tr><td>Centennials</td>
+              <td><div class="barra">
+                <span style="width:48.7%;background:#1d4a3c"></span><span style="width:28.0%;background:#b8e02a"></span><span style="width:12.4%;background:#7e9c8f"></span><span style="width:10.9%;background:#c98a12"></span></div></td>
+              <td class="n">48.7%</td><td class="n"><b>28.0%</b></td><td class="n">12.4%</td><td class="n"><b>10.9%</b></td></tr>
+            <tr><td>Millennials</td>
+              <td><div class="barra">
+                <span style="width:55.9%;background:#1d4a3c"></span><span style="width:22.6%;background:#b8e02a"></span><span style="width:13.5%;background:#7e9c8f"></span><span style="width:8.0%;background:#c98a12"></span></div></td>
+              <td class="n">55.9%</td><td class="n">22.6%</td><td class="n">13.5%</td><td class="n">8.0%</td></tr>
+            <tr><td>Gen X</td>
+              <td><div class="barra">
+                <span style="width:60.4%;background:#1d4a3c"></span><span style="width:17.2%;background:#b8e02a"></span><span style="width:13.9%;background:#7e9c8f"></span><span style="width:7.5%;background:#c98a12"></span></div></td>
+              <td class="n">60.4%</td><td class="n">17.2%</td><td class="n">13.9%</td><td class="n">7.5%</td></tr>
+            <tr><td>Boomers</td>
+              <td><div class="barra">
+                <span style="width:62.4%;background:#1d4a3c"></span><span style="width:14.8%;background:#b8e02a"></span><span style="width:15.2%;background:#7e9c8f"></span><span style="width:7.0%;background:#c98a12"></span></div></td>
+              <td class="n"><b>62.4%</b></td><td class="n">14.8%</td><td class="n"><b>15.2%</b></td><td class="n">7.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="leyenda">
+        <span><i style="background:#1d4a3c"></i>Efectivo</span>
+        <span><i style="background:#b8e02a"></i>Movilidad</span>
+        <span><i style="background:#7e9c8f"></i>Productos del hogar</span>
+        <span><i style="background:#c98a12"></i>Telefonía</span>
+      </p>
+
+      <div class="nota alerta">
+        <h4>Un producto desapareció del documento vigente</h4>
+        <p><b>Telefonía es el 9% de la demanda: 62 mil clientes.</b> No aparece en ninguna parte
+        de <code>User-person-PWA.md</code> v2.0. Y es el producto que más se inclina hacia la
+        generación mayoritaria de la base: 10.9% de la mezcla Centennial contra 7.0–8.0% en el resto.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span>Los cuatro perfiles</h2>
+      <p class="lede">Un usuario sintético por generación. Cada uno lleva 12 reglas conductuales
+      en formato SI / Y / ENTONCES / PORQUE / probabilidad, con su capa de evidencia declarada.
+      Los prompts están en <code>system-prompts/</code>.</p>
+
+      <div class="perfiles">
+        <article class="perfil">
+          <p class="id">A · Centennials</p>
+          <h3>Bryan Nájera</h3>
+          <p class="arq">El que ya está adentro y nadie diseñó para él</p>
+          <dl>
+            <dt>Segmento</dt><dd>301,000 · 43.9%</dd>
+            <dt>Edad</dt><dd>22 años</dd>
+            <dt>Pide</dt><dd>Efectivo 48.7% · Movilidad 28.0%</dd>
+            <dt>Pérdida</dt><dd>~14.6 <span class="etiqueta e-hip">Aprox</span></dd>
+            <dt>Prefiere</dt><dd>Experiencia C</dd>
+          </dl>
+          <p class="tension"><b>Tensión:</b> es el 43.9% de la base y el estudio lo clasifica como
+          «ahora en la OU», es decir como el cliente que la empresa quiere reemplazar por otro.</p>
+        </article>
+
+        <article class="perfil">
+          <p class="id">B · Millennials</p>
+          <h3>Itzel Camacho</h3>
+          <p class="arq">La que decide por la cuota y paga el precio de esa decisión</p>
+          <dl>
+            <dt>Segmento</dt><dd>229,000 · 33.4%</dd>
+            <dt>Edad</dt><dd>36 años</dd>
+            <dt>Pide</dt><dd>Efectivo 55.9% · Movilidad 22.6%</dd>
+            <dt>Pérdida</dt><dd>~13.8 <span class="etiqueta e-hip">Aprox</span></dd>
+            <dt>Prefiere</dt><dd>Experiencia B · 50%</dd>
+          </dl>
+          <p class="tension"><b>Tensión:</b> su prudencia —elegir la cuota más baja— es exactamente
+          lo que la lleva al plazo que cuesta 2.40 veces el préstamo.</p>
+        </article>
+
+        <article class="perfil">
+          <p class="id">C · Gen X</p>
+          <h3>Rosalba Quintero</h3>
+          <p class="arq">La que mejor paga y peor ve la letra</p>
+          <dl>
+            <dt>Segmento</dt><dd>119,000 · 17.3%</dd>
+            <dt>Edad</dt><dd>52 años</dd>
+            <dt>Pide</dt><dd>Efectivo 60.4% · Hogar 13.9%</dd>
+            <dt>Pérdida</dt><dd>~11.6 <span class="etiqueta e-hip">Aprox</span></dd>
+            <dt>Prefiere</dt><dd>Experiencia A</dd>
+          </dl>
+          <p class="tension"><b>Tensión:</b> es la mitad del Cliente Ideal que el negocio declara
+          querer, y es a quien el producto le impide materialmente leer las condiciones.</p>
+        </article>
+
+        <article class="perfil">
+          <p class="id">D · Boomers</p>
+          <h3>Arturo Belmont</h3>
+          <p class="arq">El que menos pierde y a quien nadie le habló</p>
+          <dl>
+            <dt>Segmento</dt><dd>37,000 · 5.4%</dd>
+            <dt>Edad</dt><dd>66 años</dd>
+            <dt>Pide</dt><dd>Efectivo 62.4% · Hogar 15.2%</dd>
+            <dt>Pérdida</dt><dd>11.4 <span class="etiqueta e-obs">Observado</span></dd>
+            <dt>Prefiere</dt><dd>Experiencia C</dd>
+          </dl>
+          <p class="tension"><b>Tensión:</b> tiene la pérdida más baja de toda la base y es el único
+          segmento que no aparece en el encuadre de negocio. Ni «antes», ni «ahora», ni «ideal».</p>
+        </article>
+      </div>
+
+      <div class="nota limite">
+        <h4>Límite de los cuatro perfiles</h4>
+        <p>La pérdida por segmento es una <b>aproximación</b>: los rangos de edad de la lámina 16
+        (≤21, 21–25, 25–30, 30–40, 40–50, &gt;50) no coinciden con los cortes generacionales de la
+        lámina 7. Solo Boomers cae limpio dentro de un bucket.</p>
+        <p>Gen X y Boomers <b>no tienen arquetipo cualitativo</b> en ninguna fuente. Sus perfiles
+        se construyen sobre datos poblacionales y rasgos declarados, no sobre entrevistas.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ NEGOCIO ============ -->
+  <div class="panel" id="p-negocio" role="tabpanel" aria-labelledby="t-negocio" hidden>
+
+    <section>
+      <h2><span class="num">04</span>El «cliente ideal» es un objetivo, no una población</h2>
+      <p class="lede">La lámina 12 presenta tres columnas. Las dos primeras describen clientes
+      observados. La tercera declara a quién le gustaría vender. El documento vigente puso la
+      tercera bajo el título «Validación empírica».</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th></th><th>Antes de la OU</th><th>Ahora en la OU</th><th>Cliente Ideal</th></tr></thead>
+          <tbody>
+            <tr><td><b>Naturaleza</b></td><td><span class="etiqueta e-obs">Observado</span></td><td><span class="etiqueta e-obs">Observado</span></td><td><span class="etiqueta e-lim">Objetivo</span></td></tr>
+            <tr><td>Generación</td><td>Gen X</td><td>Centennials</td><td>Millennials + Gen X</td></tr>
+            <tr><td>Edad</td><td>45 a 60</td><td>18 a 29</td><td>30 a 55</td></tr>
+            <tr class="destacada"><td>Proporción H/M</td><td>60% H / 40% M</td><td>53% H / 47% M</td><td><b>40% H / 60% M</b></td></tr>
+            <tr><td>Estado civil</td><td>Casados</td><td>Solteros</td><td>Casados</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="nota alerta">
+        <h4>Ninguna generación observada llega a 60% de mujeres</h4>
+        <p>El máximo es <b>48% en Millennials</b>. Le siguen Centennials y Gen X con 46%, y
+        Boomers con 43%. La base completa es 46.8% mujeres. El arquetipo vigente se construye
+        entero sobre un rasgo que la población no tiene.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span>Lo que sí sostiene priorizar a la clienta mujer</h2>
+      <p class="lede">No hace falta el supuesto del 60%. Hay dos relaciones observadas, limpias y
+      consistentes, que justifican el mismo objetivo comercial con mejor evidencia.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Producto</th><th class="n">Pérdida mujeres</th><th class="n">Pérdida hombres</th><th class="n">Delta</th><th class="n">% colocación mujeres</th></tr></thead>
+          <tbody>
+            <tr><td>Efectivo</td><td class="n">20.9</td><td class="n">23.8</td><td class="n">−2.9</td><td class="n">54.6%</td></tr>
+            <tr><td>Movilidad</td><td class="n">6.5</td><td class="n">8.3</td><td class="n">−1.8</td><td class="n">41.0%</td></tr>
+            <tr><td>Hogar</td><td class="n">10.3</td><td class="n">12.3</td><td class="n">−2.0</td><td class="n">55.2%</td></tr>
+            <tr><td>Conectividad</td><td class="n">14.7</td><td class="n">17.1</td><td class="n">−2.4</td><td class="n">56.4%</td></tr>
+            <tr class="total"><td>Total</td><td class="n">13.4</td><td class="n">14.1</td><td class="n">−0.7</td><td class="n">49.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lede" style="margin-top:14px"><span class="etiqueta e-obs">Observado</span>
+      <b>La mujer pierde menos en los cuatro productos, sin una sola excepción.</b></p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Rango de edad</th><th class="n">≤21</th><th class="n">21–25</th><th class="n">25–30</th><th class="n">30–40</th><th class="n">40–50</th><th class="n">&gt;50</th></tr></thead>
+          <tbody>
+            <tr><td>Pérdida observada</td><td class="n">14.3</td><td class="n">14.4</td><td class="n">15.1</td><td class="n">14.5</td><td class="n destacada"><b>12.3</b></td><td class="n destacada"><b>11.4</b></td></tr>
+            <tr><td>% de colocación</td><td class="n">11.8</td><td class="n">14.6</td><td class="n">15.1</td><td class="n">25.0</td><td class="n">17.6</td><td class="n">15.9</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lede" style="margin-top:14px"><span class="etiqueta e-obs">Observado</span>
+      <b>La pérdida es plana hasta los 40 y cae después.</b> El corte real está en la edad, no en la
+      etiqueta generacional. Traducir estos buckets a generaciones —como hace el documento vigente—
+      inventa un límite que el dato no tiene.</p>
+
+      <div class="nota limite">
+        <h4>El dato que falta pedir</h4>
+        <p>El estudio <b>no publica el cruce edad × género</b> para pérdida. Combinar las dos
+        ventajas —«la clienta mujer mayor de 40 es la mejor»— es una inferencia razonable, no un
+        hallazgo. Es una consulta corta al equipo de datos y convierte la mejor hipótesis del
+        estudio en evidencia.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span>El producto más pedido es el más riesgoso</h2>
+      <p class="lede">Efectivo es el 54% de la demanda y pierde entre 17.4 y 26.2 según la edad.
+      Movilidad es el 24% y pierde entre 5.6 y 8.7 — es el producto con mejor relación volumen-riesgo
+      de todo el catálogo, y es el que más cae al subir la edad.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Producto</th><th class="n">Clientes</th><th class="n">% demanda</th><th class="n">Rango de pérdida</th><th>Lectura</th></tr></thead>
+          <tbody>
+            <tr><td>Efectivo</td><td class="n">369,000</td><td class="n">54%</td><td class="n">17.4 – 26.2</td><td>El más pedido y el más riesgoso</td></tr>
+            <tr class="destacada"><td>Movilidad</td><td class="n">161,000</td><td class="n">24%</td><td class="n">5.6 – 8.7</td><td>Segundo en demanda, el más seguro del catálogo</td></tr>
+            <tr><td>Productos del hogar</td><td class="n">91,000</td><td class="n">13%</td><td class="n">6.9 – 14.0</td><td>Mayoritariamente femenino (55.2%)</td></tr>
+            <tr><td>Telefonía</td><td class="n">62,000</td><td class="n">9%</td><td class="n">13.0 – 18.8</td><td>Ausente del documento vigente</td></tr>
+            <tr><td>Préstamo para autos</td><td class="n">1,000</td><td class="n">0.18%</td><td class="n">no reportado</td><td>Marginal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nota">
+        <h4>Movilidad es joven, masculina y de bajo riesgo</h4>
+        <p><span class="etiqueta e-int">Interpretación</span> Es el único producto donde el hombre
+        domina la colocación (59%), es el que más pesa en el segmento mayoritario de la base
+        (28% de la mezcla Centennial) y es el que menos pierde. El flujo actual, sin embargo,
+        está construido asumiendo que el cliente viene por efectivo.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ OPERACIÓN ============ -->
+  <div class="panel" id="p-operacion" role="tabpanel" aria-labelledby="t-operacion" hidden>
+
+    <section>
+      <h2><span class="num">07</span>Dónde se rompe el producto</h2>
+      <p class="lede">Diecinueve hallazgos verificados contra la aplicación real en ambiente dev.
+      Cinco son críticos. Abajo, los que cruzan con un rasgo documentado del cliente — que es lo
+      que los vuelve caros.</p>
+
+      <details open>
+        <summary><span class="sev s4">S4 · Prioridad 100</span> El costo total del préstamo no existe en la interfaz</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> Búsqueda de once términos en la pantalla completa del cotizador —CAT,
+          Costo Anual, total a pagar, Total, interés, tasa, comisión, anual—: <b>todos ausentes</b>.
+          La nota legal que sí los menciona está en la pantalla anterior y mide 11 píxeles.</p>
+          <p><b>Por qué importa.</b> El cliente toma la decisión financiera más importante del flujo
+          con un solo número, y es el que menos informa. El modelo del cliente coloca «total a pagar»
+          como el segundo dato que necesita ver. El producto entrega el primero y omite el segundo.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary><span class="sev s4">S4 · Prioridad 80</span> La pantalla empuja hacia el plazo más caro</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> Pago semanal medido para $70,000 en los seis plazos:</p>
+          <div class="tabla-wrap" style="margin-top:12px">
+            <table>
+              <thead><tr><th>Plazo</th><th class="n">Pago semanal</th><th class="n">Total pagado</th><th class="n">Costo del financiamiento</th><th class="n">Múltiplo</th></tr></thead>
+              <tbody>
+                <tr><td>13 semanas</td><td class="n">$6,320</td><td class="n">$82,160</td><td class="n">$12,160</td><td class="n">1.17×</td></tr>
+                <tr><td>26 semanas</td><td class="n">$3,636</td><td class="n">$94,536</td><td class="n">$24,536</td><td class="n">1.35×</td></tr>
+                <tr><td>39 semanas</td><td class="n">$2,743</td><td class="n">$106,977</td><td class="n">$36,977</td><td class="n">1.53×</td></tr>
+                <tr><td>52 semanas</td><td class="n">$2,300</td><td class="n">$119,600</td><td class="n">$49,600</td><td class="n">1.71×</td></tr>
+                <tr><td>80 semanas</td><td class="n">$1,840</td><td class="n">$147,200</td><td class="n">$77,200</td><td class="n">2.10×</td></tr>
+                <tr class="destacada"><td><b>100 semanas</b></td><td class="n"><b>$1,680</b></td><td class="n"><b>$168,000</b></td><td class="n"><b>$98,000</b></td><td class="n"><b>2.40×</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:12px"><b>El cruce.</b> La pantalla ordena de «más caro por semana» a
+          «más barato por semana», que es el orden inverso al costo real. Y el mensaje
+          «¡Si pagas antes, pagas menos!» está impreso justo debajo del número más bajo. El cliente
+          documentado prefiere cuota pequeña aunque tarde más. <b>Ese conservadurismo, que es una
+          virtud, aquí lo conduce al peor precio disponible.</b></p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="sev s4">S4 · Prioridad 100</span> Los tres documentos legales no se pueden leer, y «Continuar» los acepta</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> Los tres botones abren un visor con un icono de documento roto. Las
+          tres peticiones responden HTTP 200 desde <code>servicios.bazdigital.com:8443</code> con
+          <code>x-frame-options: SAMEORIGIN</code>, y la aplicación corre en otro origen. El
+          navegador se niega a mostrarlos.</p>
+          <p><b>El cruce.</b> Se pide autorizar una consulta a buró y se niega materialmente la
+          posibilidad de leer qué se autoriza. Para el segmento cuyo miedo declarado número uno es
+          el daño al historial crediticio, es el peor lugar posible del flujo para un documento roto.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="sev s3">S3 · Prioridad 45</span> El zoom está desactivado y el texto legal es el más pequeño</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> <code>user-scalable=no</code> y <code>maximum-scale=1.0</code> en el
+          viewport. La nota legal sobre tasas, comisiones y CAT mide 11 píxeles. Tres controles
+          quedan por debajo del área de toque de 44 px. Incumplimiento de WCAG 1.4.4.</p>
+          <p><b>El cruce.</b> El cliente que más necesita agrandar el texto —mayores de 40, que son
+          los que menos pierden— es el que tiene el impedimento. Y lo que no puede agrandar es
+          precisamente la información de costo.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="sev s3">S3 · Prioridad 60</span> El flujo cruza a dominios ajenos sin aviso</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> Cinco dominios participan en el recorrido: la aplicación,
+          <code>servicios.bazdigital.com:8443</code>, <code>maria.biofac-credito-dev.link</code>,
+          <code>identidad-digital-ocrdual-dev.com</code> y <code>cdn.incodesmile.com</code>.
+          Ningún salto va precedido de aviso. El token de sesión viaja como parámetro en la URL del
+          proveedor biométrico.</p>
+          <p><b>El cruce.</b> La desconfianza institucional está declarada en el arquetipo cualitativo.
+          Un dominio con terminación <code>.link</code>, sin relación nominal con el banco y pidiendo
+          acceso a la cámara, es la configuración exacta que el cliente aprendió a leer como fraude.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="sev s4">S4 · Prioridad 60</span> El paso biométrico no tiene estado de fallo ni salida</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> Con la cámara activa y sin rostro reconocible, la pantalla alterna
+          «Enfoca tu rostro en el óvalo» / «No te muevas durante: 3» durante más de dos minutos de
+          observación continua, sin ayuda progresiva, sin tiempo límite y sin alternativa.
+          «Cancelar» reinicia el intento en lugar de salir.</p>
+          <p><b>El cruce.</b> El estándar existe dentro del propio producto: el escáner de INE sí
+          tiene diálogo de confirmación con la consecuencia nombrada. Este paso no lo cumple. Golpea
+          más fuerte a los dos extremos: Centennials por baja tolerancia a la frustración y Boomers
+          por menor familiaridad digital.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="sev s3">S3 · Prioridad 60</span> La promesa de duración y pasos no coincide con el proceso real</summary>
+        <div class="cuerpo">
+          <p><b>Evidencia.</b> El carrusel promete «¡Tu oferta en menos de 5 minutos!» y «Completa tu
+          solicitud en tan solo 4 pasos». El tramo navegable ya son 9 pantallas más dos proveedores
+          externos. El modelo de estado contempla además domicilio, ingresos, dos referencias
+          personales, comprobante de domicilio, <b>agenda de visita con un asesor</b>, día de pago,
+          contratos y desembolso. Dos estados terminales mandan a sucursal.</p>
+          <p><b>El cruce.</b> La expectativa que fija el onboarding es el punto de comparación con el
+          que el cliente juzga todo lo que sigue. Una visita agendada no es un paso de un proceso de
+          cuatro pasos y cinco minutos.</p>
+        </div>
+      </details>
+
+      <div class="nota">
+        <h4>Lo que funciona y no debería tocarse</h4>
+        <p><b>El simulador aparece antes de pedir un solo dato personal.</b> Es exactamente la regla
+        principal de diseño que la investigación de 685 mil clientes marca como no negociable, y el
+        producto la cumple.</p>
+        <p>También: el manejo de error del código por SMS es ejemplar (mensaje claro, intentos
+        restantes visibles, temporizador de reenvío); los seis campos del código traen etiquetas
+        accesibles correctas; la cancelación del escáner de INE nombra la consecuencia; el tono es
+        cálido y no depredador; y la arquitectura contempla más estados de borde que un producto
+        promedio.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span>Plan de acción</h2>
+      <p class="lede">En orden de prioridad. Las tres primeras son de investigación y no dependen de
+      ningún ciclo de producto.</p>
+
+      <div class="plan">
+        <div class="accion">
+          <p class="r">R1</p>
+          <div>
+            <h4>Separar el objetivo comercial de la población observada</h4>
+            <p>Retirar la etiqueta «Validación empírica» del Cliente Ideal y reescribirlo como
+            objetivo declarado. Reemplazar la justificación del 60% por las dos relaciones que sí
+            sostiene la evidencia: la mujer pierde menos en los cuatro productos, y los mayores de
+            40 pierden menos que el resto.</p>
+            <p class="por">Por qué primero: todo artefacto que se derive del documento vigente
+            hereda la premisa. El reporte dev ya la heredó.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R2</p>
+          <div>
+            <h4>Pedir dos cruces al equipo de datos</h4>
+            <p>Primero, <b>edad × género para pérdida</b>: convierte la mejor hipótesis del estudio
+            en hallazgo. Segundo, <b>el catálogo y los denominadores de la lámina 16</b>: permite
+            levantar la suspensión de estado civil, hoy irreconciliable con la lámina 6.</p>
+            <p class="por">Por qué: son dos consultas cortas que desbloquean la variable suspendida
+            y la inferencia más valiosa del estudio.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R3</p>
+          <div>
+            <h4>Decidir explícitamente qué se hace con los 301 mil Centennials</h4>
+            <p>Son el 43.9% de la base y el usuario modal del producto. Hoy ningún artefacto de
+            diseño los toma como destinatario. La decisión puede ser no diseñar para ellos —es
+            legítima si su pérdida lo justifica— pero tiene que estar tomada y escrita.</p>
+            <p class="por">Por qué: hoy la exclusión es un efecto secundario de un arquetipo mal
+            fundado, no una decisión.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R4</p>
+          <div>
+            <h4>Poner el costo total en el cotizador, junto al pago semanal</h4>
+            <p>Y reordenar los plazos, o marcar el costo de cada uno. Mientras la pantalla ordene de
+            mayor a menor pago semanal sin mostrar el total, el cliente conservador elige
+            sistemáticamente el peor precio.</p>
+            <p class="por">Por qué: es el único hallazgo del estudio con impacto patrimonial directo
+            sobre el cliente.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R5</p>
+          <div>
+            <h4>Arreglar la cabecera que impide leer los tres documentos legales</h4>
+            <p>Es una configuración de <code>X-Frame-Options</code> en el origen que los sirve. El
+            contenido existe y se descarga. Separar además el consentimiento del avance: hoy el
+            mismo gesto que envía nombre y teléfono otorga las tres autorizaciones.</p>
+            <p class="por">Por qué: se pide autorizar buró sin posibilidad de leer qué se autoriza.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R6</p>
+          <div>
+            <h4>Reactivar el zoom y subir el tamaño del texto legal</h4>
+            <p>Quitar <code>user-scalable=no</code> y <code>maximum-scale=1.0</code>. Subir la nota
+            legal por encima de 11 px y los tres controles por encima de 44 px de área de toque.
+            Corregir <code>&lt;html lang="en"&gt;</code> a <code>es</code>.</p>
+            <p class="por">Por qué: la barrera cae sobre el segmento con mejor comportamiento de pago,
+            y son tres líneas de configuración.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R7</p>
+          <div>
+            <h4>Dar al paso biométrico un estado de fallo y una salida</h4>
+            <p>Y avisar antes de salir del dominio del banco. El estándar ya existe dentro del
+            producto: el escáner de INE confirma y nombra la consecuencia.</p>
+            <p class="por">Por qué: es el paso más frágil del flujo y el único sin manejo de error.</p>
+          </div>
+        </div>
+        <div class="accion">
+          <p class="r">R8</p>
+          <div>
+            <h4>Alinear la promesa del onboarding con el proceso real</h4>
+            <p>Y reincorporar Telefonía a cualquier modelo de producto: son 62 mil clientes y el
+            producto más inclinado hacia la generación mayoritaria de la base.</p>
+            <p class="por">Por qué: «cambios de términos después de iniciar» es destructor permanente
+            de confianza en el modelo del cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ MÉTODO ============ -->
+  <div class="panel" id="p-metodo" role="tabpanel" aria-labelledby="t-metodo" hidden>
+
+    <section>
+      <h2><span class="num">09</span>Método</h2>
+      <p class="lede">Réplica del pipeline usado en el proyecto GIC-User Person, adaptado a un
+      proyecto que no tenía dataset: hubo que construirlo extrayendo las tablas de las láminas y
+      el texto de los PDF de arquetipo.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Paso</th><th>Qué se hizo</th><th>Artefacto</th></tr></thead>
+          <tbody>
+            <tr><td>0 · Dataset</td><td>Transcripción de 9 láminas con datos, 2 PDF de arquetipo y 23 hallazgos del reporte dev</td><td><code>00-fuente/</code></td></tr>
+            <tr><td>1 · Auditoría</td><td>24 variables clasificadas con fuente, clase, N y uso en el modelo</td><td><code>01-diccionario-variables.csv</code></td></tr>
+            <tr><td>2 · Frecuencias</td><td>Todas las distribuciones con base explícita o declaración de base ausente</td><td><code>02-frecuencias.csv</code></td></tr>
+            <tr><td>3 · Codificación</td><td>32 temas cualitativos con fuentes que los atestiguan y cita representativa</td><td><code>03-codificacion-cualitativa.csv</code></td></tr>
+            <tr><td>4 · Relaciones</td><td>15 cruces con fuerza, n, interpretación y nivel de evidencia</td><td><code>04-matriz-relaciones.csv</code></td></tr>
+            <tr><td>5 · Segmentación</td><td>4 generaciones comparadas en 27 dimensiones</td><td><code>05-segmentos.csv</code></td></tr>
+            <tr><td>6 · Perfiles</td><td>4 usuarios sintéticos + 48 reglas conductuales</td><td><code>06</code>, <code>07</code>, <code>system-prompts/</code></td></tr>
+            <tr><td>7 · Reproducibilidad</td><td>Script sin dependencias que rehace auditoría, frecuencias, mezcla y cruces</td><td><code>08-analisis.py</code></td></tr>
+            <tr><td>8 · Capa editorial</td><td>Voz, tres niveles de lenguaje, etiquetas cerradas y 12 correcciones concretas</td><td><code>10</code>, <code>11</code></td></tr>
+            <tr><td>9 · Auditoría del documento vigente</td><td>Contraste de cada cifra de <code>User-person-PWA.md</code> v2.0 contra su fuente</td><td><code>12-auditoria-user-person-pwa.md</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="nota">
+        <h4>Las dos capas de evidencia</h4>
+        <p><b>Capa 1.</b> 685,243 clientes reales, semanas 1 a 20, estudio de mayo 2025. Responde
+        quién es el cliente y qué pide.</p>
+        <p><b>Capa 2.</b> 19 hallazgos y 4 observaciones verificados contra la aplicación web real
+        en ambiente dev, el 3 de septiembre de 2026. Responde dónde se rompe el producto.</p>
+        <p>Son poblaciones y unidades de análisis distintas. Cada una de las 48 reglas conductuales
+        declara de cuál sale. Una regla marcada <b>capa 1+2</b> es un cruce interpretativo, no una
+        observación directa.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">10</span>Límites que hay que respetar</h2>
+
+      <div class="nota limite">
+        <h4>Variables suspendidas</h4>
+        <p><b>Estado civil.</b> Las dos tablas del mismo mazo no reconcilian: Divorciado es 7% del
+        registro (lámina 6) y 21.8% de la colocación (lámina 16); Unión Libre es 23% y 8.1%. Sin
+        catálogo ni denominador no se puede interpretar.</p>
+      </div>
+
+      <div class="nota limite">
+        <h4>Aproximaciones declaradas</h4>
+        <p><b>Pérdida por generación.</b> Los rangos de la lámina 16 no coinciden con los cortes
+        generacionales de la lámina 7. Solo Boomers cae limpio dentro de un bucket (&gt;50 = 11.4).</p>
+        <p><b>Cortes de edad.</b> La lámina 7 usa 18–30 / 31–45 / 46–60; las láminas 9 y 10 usan
+        18–29 / 30–44 / 45–60 para las mismas generaciones. Las mezclas de producto se calculan
+        sobre los n de la lámina 7.</p>
+        <p><b>«Pérdida observada» contra «pérdida esperada».</b> El mazo usa los dos términos y no
+        define ninguno.</p>
+      </div>
+
+      <div class="nota limite">
+        <h4>Ausente en todas las fuentes</h4>
+        <p>Monto promedio solicitado · motivo real de abandono (no hay analítica de embudo) ·
+        ingreso del cliente · cruce edad × género para pérdida · perfiles de accesibilidad y
+        alfabetización digital baja · marcas y apps del segmento Boomer.</p>
+      </div>
+
+      <div class="nota limite">
+        <h4>Qué no es observación</h4>
+        <p>La tasa de completitud de 5 sobre 8 que aparece en los reportes previos es
+        <b>simulación conductual</b>, no medición sobre usuarios reales. Ningún número de este
+        reporte se apoya en ella.</p>
+        <p>Nada de esto es causalidad. Las relaciones del artefacto 04 son asociaciones observadas.</p>
+      </div>
+
+      <p class="lede" style="margin-top:28px"><b>Regla de fidelidad:</b> fidelidad a los datos &gt;
+      consistencia conductual &gt; completitud narrativa.</p>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>User Persona OU-PWA</b> · Reporte de investigación · 18 de septiembre de 2026</p>
+    <p>Fuentes: <code>buyer-persona-9junio.pptx</code> (UIX by UPAX, mayo 2025, 685,243 clientes),
+    <code>User persona.pdf</code> y <code>User persona-1.pdf</code> (arquetipos María PA y María PO),
+    <code>reporte-investigacion-sintetica-dev-onboarding.md</code> (19 hallazgos, ambiente dev).</p>
+    <p>Los cuatro usuarios sintéticos son construcciones derivadas de la evidencia. No son personas
+    reales y sus frases son sintéticas, no citas.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function activar(tab){
+    tabs.forEach(function(t){
+      var sel = t === tab;
+      t.setAttribute('aria-selected', sel ? 'true' : 'false');
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ activar(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if(!d) return;
+      e.preventDefault();
+      var n = tabs[(i + d + tabs.length) % tabs.length];
+      n.focus(); activar(n);
+    });
+  });
+})();
+</script>
+</body>
+</html>

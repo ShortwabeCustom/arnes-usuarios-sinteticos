@@ -1,0 +1,32 @@
+{
+ "fases": {
+  "sesiones": {
+   "t": "2026-10-20T17:13:16",
+   "ultima": "T1-arturo"
+  },
+  "analizar": {
+   "t": "2026-10-20T17:33:11",
+   "sesiones": 2
+  },
+  "reporte": {
+   "t": "2026-10-20T18:53:08",
+   "html": "reporte/arnes-pdu-flujo-web-prueba-sintetico_2026-10-20-v1.html",
+   "kb": 345
+  },
+  "verificar": {
+   "t": "2026-10-20T18:58:10",
+   "avisos": 0
+  },
+  "auditar": {
+   "t": "2026-10-20T16:24:12",
+   "evaluadores": 3,
+   "consenso": 25,
+   "costo_usd": 0.302
+  }
+ },
+ "biblioteca": {
+  "id": "pwa",
+  "huella": "26e3e3cfcbc5",
+  "panel": "base4-ocean"
+ }
+}

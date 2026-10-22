@@ -1,0 +1,84 @@
+# Estudio de comprensión de pantallas estáticas (A/B, vistazo vs. lectura completa).
+# Ejemplo completo y validado: estudios/2026-10-05-recompra-comprension-replica/estudio.yaml
+id: {{id}}
+titulo: "TÍTULO DEL ESTUDIO"
+metodo: comprension
+fecha: "{{fecha}}"
+autor: "Alexis Valdez + Claude"
+producto: "Originación Única · PWA"
+marca: {color: "#0B6B4F", nombre: "Banco Azteca"}
+
+# Estándares de UiX (fuentes-equipo/uix/). Con este bloque el reporte se llama proyecto-metodologia-tema_aaaa-mm-dd-vN
+# y el tema lleva «-sintetico» al final, para que no se confunda con un estudio hecho con personas.
+uix:
+  proyecto: {{proyecto}}   # una sola forma por proyecto (oupwa, oupax, pp…); acordarla con CS y PD
+  metodologia: abtesting   # código de la guía de naming: abtesting si compara variantes; si no, el que mejor describa la prueba
+  tema: {{tema}}           # flujo, fase, paso, pantalla o componente; waveN al final si hay dos iguales el mismo día
+  version: 1               # súbela cada vez que se actualiza el entregable
+  # fecha_fin: "aaaa-mm-dd"  # cuándo terminó el estudio; si falta, la fecha en que se genera el reporte
+  cliente: "Originación Única · PWA"
+  autorizacion: ""         # quién aprueba el protocolo (nombre y apellido)
+  alcance: descriptiva     # superficial · descriptiva · profunda · predictiva
+  decision: {impacto: alto, incertidumbre: alta}   # matriz de «Research en tus proyectos»: alto/bajo × alta/baja
+
+guia_estilo: pwa       # guía de voz y estilo del producto: fuentes-producto/pwa (arnes estilo)
+biblioteca: pwa        # arnes bibliotecas
+panel: ocean8          # base4 | base4-ocean | ocean8
+# integrantes: [S01, S03]   # opcional: solo estos del panel
+modelo: sonnet
+corridas: 3            # 2–3 como mínimo: con una sola no se sabe qué se repite ni si una brecha es clara
+paralelo: 6
+
+pregunta_principal: "¿…?"
+hipotesis:
+  - {id: H1, texto: "…", se_sostiene_si: "…", se_cae_si: "…"}
+
+# Lo que se le dice al perfil antes de mostrarle la pantalla. No anticipa el resultado.
+consigna: >-
+  Ya tuviste un crédito con Banco Azteca. Hoy pediste desde la aplicación web un préstamo de $30,000 en
+  efectivo. Después de enviar la solicitud te aparece una pantalla.
+nombre_de_ejemplo: María       # si la pantalla usa un nombre de muestra; si no, borrar la línea
+
+modos: [vistazo, completa]
+velocidad_base: 3.5            # palabras por segundo [SUPUESTO]
+velocidad_vistazo: 3.5
+velocidades: [2.5, 3.5, 4.5]   # análisis de sensibilidad del vistazo
+pliegues: [640, 800]
+orden_por_pliegue: true        # el vistazo de 5 s no desplaza
+
+# Una entrada por imagen. `grupo` junta las variantes que se comparan entre sí.
+pantallas:
+  E1-A: {imagen: material/E1-A.jpg, grupo: E1, variante: A, recorte_superior: 0, baseline: true}   # baseline = diseño actual
+  E1-B: {imagen: material/E1-B.jpg, grupo: E1, variante: B, recorte_superior: 0}
+
+# Zonas de lectura en px de la imagen. Roles: titular, monto, accion, enlace, nota, ilustracion,
+# cuerpo, tarjeta, estado, otro. Las reglas del persona y los umbrales OCEAN operan sobre el rol.
+# alto_px: forzar el alto de línea cuando la medición automática no lo detecta (texto claro sobre color).
+zonas:
+  E1-A:
+    titular: {caja: [0, 0, 360, 40], rol: titular, texto: "…", nombre: "Titular"}
+    ilustracion: {caja: [0, 0, 0, 0], rol: ilustracion, descripcion: "el dibujo de …"}
+    boton: {caja: [0, 0, 0, 0], rol: accion, texto: "…", nombre: "Botón principal"}
+    nota: {caja: [0, 0, 0, 0], rol: nota, texto: "*…", nombre: "Nota al pie"}
+  E1-B: {}
+
+# Primero la abierta, después las cerradas. `correcta` por grupo; lista si hay varias válidas;
+# diccionario por momento si cambia tras una continuación ({antes: …, <id continuación>: …}).
+preguntas:
+  - {id: p1, texto: "Con tus palabras, ¿qué te está diciendo esta pantalla?"}
+  - {id: p2, texto: "¿…?", opciones: [si, no, no_se], correcta: {E1: si}}
+
+# Opcional: algo que el perfil abre después de la lectura completa (un panel, un bottom sheet).
+continuaciones: []
+#  - {id: sheet, tras: [completa], solo: [E1], imagen: material/sheet.png,
+#     consigna: "Ahora tocaste «Saber más» y se abrió un panel desde abajo.", preguntas: [p2]}
+
+# Opcional: los perfiles base corren también sin OCEAN para saber si la capa cambia algo.
+# sensibilidad_ocean: {modos: [vistazo]}
+
+# Opcional: comparación lado a lado, en los dos órdenes.
+# pareada:
+#   corridas: 2
+#   pares: {E1: [E1-A, E1-B]}
+#   preguntas:
+#     - {id: q1, texto: "¿Cuál deja más claro qué puedes hacer con el dinero?"}

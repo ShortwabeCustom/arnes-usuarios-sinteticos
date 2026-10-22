@@ -1,0 +1,41 @@
+pantalla,zona,nombre,rol,x0,y0,x1,y1,palabras,alto_px,contraste,visible_640,visible_800,saliencia_pct,densidad,rango
+E1-A,chip,Chip de estado,estado,117,158,243,197,1,13,4.98,completa,completa,1.0,0.62,7
+E1-A,ilustracion,ilustracion,ilustracion,60,205,300,468,0,,,completa,completa,32.4,1.69,
+E1-A,saludo,"«María, tienes»",titular,119,507,240,524,2,18,12.13,completa,completa,1.3,1.9,2
+E1-A,monto,monto,monto,53,533,307,588,1,56,6.17,completa,completa,10.8,2.53,1
+E1-A,titular,Resto del titular,titular,62,604,297,649,8,18,12.08,cortada,completa,4.1,1.25,4
+E1-A,tiendas_titulo,Título de tiendas,cuerpo,16,686,237,700,4,15,12.13,no,completa,0.9,0.87,5
+E1-A,tarjetas,Tarjetas de tienda,tarjeta,16,718,359,868,17,12,6.54,no,cortada,9.3,0.59,8
+E1-A,boton,Botón principal,accion,16,904,344,952,4,49,4.87,no,no,7.8,1.61,3
+E1-A,nota,«*Sujeto a aprobación»,nota,122,971,237,982,3,12,4.67,no,no,0.3,0.74,6
+E1-B,chip,Chip de estado,estado,118,502,242,538,1,13,7.73,completa,completa,0.7,0.57,7
+E1-B,ilustracion,ilustracion,ilustracion,65,172,300,431,0,,,completa,completa,31.8,1.85,
+E1-B,saludo,"«María, tienes»",titular,119,571,240,588,2,18,12.13,completa,completa,1.0,1.69,3
+E1-B,monto,monto,monto,53,597,307,652,1,56,6.17,cortada,completa,9.6,2.41,1
+E1-B,titular,Resto del titular,titular,62,668,297,713,8,18,12.08,no,completa,3.2,1.04,4
+E1-B,tiendas_titulo,Título de tiendas,cuerpo,16,750,237,764,4,15,12.13,no,completa,0.9,0.92,5
+E1-B,tarjetas,Tarjetas de tienda,tarjeta,16,782,359,932,17,12,6.54,no,cortada,7.7,0.53,8
+E1-B,boton,Botón principal,accion,16,968,344,1016,4,49,4.81,no,no,8.0,1.77,2
+E1-B,nota,«*Sujeto a aprobación»,nota,122,1035,237,1046,3,12,4.76,no,no,0.3,0.82,6
+E2-A,chip,Chip de estado,estado,77,158,283,197,3,13,4.98,completa,completa,1.6,0.68,9
+E2-A,ilustracion,ilustracion,ilustracion,61,234,298,439,0,,,completa,completa,18.8,1.38,
+E2-A,saludo,"«María, tienes»",titular,119,507,240,523,2,17,12.13,completa,completa,1.3,2.21,2
+E2-A,monto,monto,monto,53,533,307,588,1,56,6.17,completa,completa,10.6,2.68,1
+E2-A,titular,Resto del titular,titular,42,604,321,621,4,18,12.13,completa,completa,2.3,1.62,4
+E2-A,aclaracion,Aclaración (no efectivo),cuerpo,30,645,329,695,15,16,12.13,no,completa,5.9,1.38,5
+E2-A,saber_mas,«Saber mas»,enlace,151,708,208,721,2,11,4.11,no,completa,0.2,0.7,8
+E2-A,tiendas_titulo,Título de tiendas,cuerpo,24,753,243,768,6,16,12.18,no,completa,0.9,0.87,6
+E2-A,tarjetas,Tarjetas de tienda,tarjeta,0,786,359,936,18,12,6.62,no,cortada,8.6,0.57,10
+E2-A,boton,Botón principal,accion,24,972,336,1020,2,49,4.81,no,no,8.1,1.9,3
+E2-A,nota,«*Sujeto a aprobación»,nota,130,1039,245,1050,3,12,4.67,no,no,0.3,0.87,7
+E2-B,chip,Chip de estado,estado,78,502,282,538,3,13,7.83,completa,completa,2.0,1.02,9
+E2-B,ilustracion,ilustracion,ilustracion,61,172,298,403,0,,,completa,completa,19.1,1.31,
+E2-B,saludo,"«María, tienes»",titular,119,571,240,587,2,17,12.13,completa,completa,1.2,2.1,2
+E2-B,monto,monto,monto,53,597,307,652,1,56,6.17,cortada,completa,9.5,2.53,1
+E2-B,titular,Resto del titular,titular,42,668,321,685,4,18,12.13,no,completa,2.0,1.47,5
+E2-B,aclaracion,Aclaración (no efectivo),cuerpo,30,709,329,759,15,16,12.13,no,completa,6.2,1.53,4
+E2-B,saber_mas,«Saber mas»,enlace,151,772,208,785,2,11,4.11,no,completa,0.2,1.16,7
+E2-B,tiendas_titulo,Título de tiendas,cuerpo,24,817,243,832,6,16,12.18,no,no,1.0,1.09,8
+E2-B,tarjetas,Tarjetas de tienda,tarjeta,0,850,359,1000,16,11,15.54,no,no,9.2,0.64,10
+E2-B,boton,Botón principal,accion,24,1036,336,1084,2,49,4.87,no,no,7.4,1.82,3
+E2-B,nota,«*Sujeto a aprobación»,nota,130,1103,245,1114,3,12,4.67,no,no,0.5,1.3,6

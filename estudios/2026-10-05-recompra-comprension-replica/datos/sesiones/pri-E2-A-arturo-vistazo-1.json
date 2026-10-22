@@ -1,0 +1,50 @@
+{
+ "id": "pri-E2-A-arturo-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra chica] «Aprobado en producto»\n6. [letra mediana] «En esta ocasión, tu préstamo…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Veo que me saludan y dicen que tengo $30,000 para mis productos favoritos. Hay un asterisco y una letra chica que dice \"Aprobado en producto\". Luego una frase que empieza \"En esta ocasión, tu préstamo…\" y ahí me quedé. Se me hace que algo no es tan sencillo como parece, pero no alcancé a leer qué.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo los $30,000, que es lo que pedí, pero dice 'aprobado en producto' y 'en esta ocasión, tu préstamo…'. No sé si es lo mismo que pedí, que era efectivo. No me queda claro."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo alcancé a leer. Dice 'para tus productos favoritos' y 'aprobado en producto', y eso suena a que no es en efectivo. Pero no lo puedo afirmar porque no terminé de leer la frase."
+  },
+  "p4": "Por lo que leí, en productos, o sea en tiendas o artículos. No vi dónde ni cuáles. Eso no lo alcancé a leer y no voy a suponerlo.",
+  "p5": {
+   "opcion": "no_se",
+   "texto": "No sé si ya es mío. El asterisco y la letra chica me dicen que puede haber condiciones, pero no las leí. Tampoco vi qué sigue ni cómo se termina el trámite."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer, así que no sé qué pasaría si lo tocara.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer no dice por qué me dieron esto y no efectivo. La frase 'En esta ocasión, tu préstamo…' parecía que iba a explicarlo, pero me quedé a la mitad. Y las explicaciones vienen en letra chica."
+  },
+  "p8": {
+   "opcion": "otro",
+   "texto": "Antes de tocar algo, volvería a leer la pantalla con calma, porque me quedé a media frase y la letra chica no la leí. Si no puedo agrandar la letra, mejor iría a una sucursal, donde alguien me explique."
+  },
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-01"
+  ],
+  "sin_cobertura": [
+   "p6"
+  ]
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0318
+}

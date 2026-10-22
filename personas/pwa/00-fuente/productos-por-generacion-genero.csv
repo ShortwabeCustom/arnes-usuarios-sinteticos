@@ -1,0 +1,41 @@
+genero,generacion,rango_edad_declarado,producto,pct,n,fuente
+Hombres,Centennials (Z),18-29,Efectivo,45.0,73000,buyer-persona-9junio lamina 9
+Hombres,Centennials (Z),18-29,Productos del hogar,11.0,18000,buyer-persona-9junio lamina 9
+Hombres,Centennials (Z),18-29,Movilidad,34.0,54000,buyer-persona-9junio lamina 9
+Hombres,Centennials (Z),18-29,Telefonia,10.0,15000,buyer-persona-9junio lamina 9
+Hombres,Centennials (Z),18-29,Prestamo para autos,0.2,244,buyer-persona-9junio lamina 9
+Hombres,Millennials (Y),30-44,Efectivo,54.0,63000,buyer-persona-9junio lamina 9
+Hombres,Millennials (Y),30-44,Productos del hogar,13.0,15000,buyer-persona-9junio lamina 9
+Hombres,Millennials (Y),30-44,Movilidad,26.0,30000,buyer-persona-9junio lamina 9
+Hombres,Millennials (Y),30-44,Telefonia,7.0,8000,buyer-persona-9junio lamina 9
+Hombres,Millennials (Y),30-44,Prestamo para autos,0.3,362,buyer-persona-9junio lamina 9
+Hombres,Gen X,45-60,Efectivo,59.0,38000,buyer-persona-9junio lamina 9
+Hombres,Gen X,45-60,Productos del hogar,13.0,8000,buyer-persona-9junio lamina 9
+Hombres,Gen X,45-60,Movilidad,20.0,13000,buyer-persona-9junio lamina 9
+Hombres,Gen X,45-60,Telefonia,7.0,5000,buyer-persona-9junio lamina 9
+Hombres,Gen X,45-60,Prestamo para autos,0.3,183,buyer-persona-9junio lamina 9
+Hombres,Boomers,61-80,Efectivo,62.0,13000,buyer-persona-9junio lamina 9
+Hombres,Boomers,61-80,Productos del hogar,13.0,3000,buyer-persona-9junio lamina 9
+Hombres,Boomers,61-80,Movilidad,17.0,4000,buyer-persona-9junio lamina 9
+Hombres,Boomers,61-80,Telefonia,7.0,2000,buyer-persona-9junio lamina 9
+Hombres,Boomers,61-80,Prestamo para autos,0.2,40,buyer-persona-9junio lamina 9
+Mujeres,Centennials (Z),18-29,Efectivo,53.0,73000,buyer-persona-9junio lamina 10
+Mujeres,Centennials (Z),18-29,Productos del hogar,14.0,19000,buyer-persona-9junio lamina 10
+Mujeres,Centennials (Z),18-29,Movilidad,21.0,30000,buyer-persona-9junio lamina 10
+Mujeres,Centennials (Z),18-29,Telefonia,12.0,16000,buyer-persona-9junio lamina 10
+Mujeres,Centennials (Z),18-29,Prestamo para autos,0.1,150,buyer-persona-9junio lamina 10
+Mujeres,Millennials (Y),30-44,Efectivo,58.0,64000,buyer-persona-9junio lamina 10
+Mujeres,Millennials (Y),30-44,Productos del hogar,14.0,16000,buyer-persona-9junio lamina 10
+Mujeres,Millennials (Y),30-44,Movilidad,19.0,21000,buyer-persona-9junio lamina 10
+Mujeres,Millennials (Y),30-44,Telefonia,9.0,10000,buyer-persona-9junio lamina 10
+Mujeres,Millennials (Y),30-44,Prestamo para autos,0.1,165,buyer-persona-9junio lamina 10
+Mujeres,Gen X,45-60,Efectivo,62.0,34000,buyer-persona-9junio lamina 10
+Mujeres,Gen X,45-60,Productos del hogar,15.0,8000,buyer-persona-9junio lamina 10
+Mujeres,Gen X,45-60,Movilidad,14.0,8000,buyer-persona-9junio lamina 10
+Mujeres,Gen X,45-60,Telefonia,8.0,5000,buyer-persona-9junio lamina 10
+Mujeres,Gen X,45-60,Prestamo para autos,0.1,78,buyer-persona-9junio lamina 10
+Mujeres,Boomers,61-80,Efectivo,63.0,10000,buyer-persona-9junio lamina 10
+Mujeres,Boomers,61-80,Productos del hogar,18.0,3000,buyer-persona-9junio lamina 10
+Mujeres,Boomers,61-80,Movilidad,12.0,2000,buyer-persona-9junio lamina 10
+Mujeres,Boomers,61-80,Telefonia,7.0,1000,buyer-persona-9junio lamina 10
+Mujeres,Boomers,61-80,Prestamo para autos,0.1,16,buyer-persona-9junio lamina 10

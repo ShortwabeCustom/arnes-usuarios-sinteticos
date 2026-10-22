@@ -1,0 +1,77 @@
+{
+ "id": "pri-E2-B-arturo-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "arturo",
+ "perfil": "D",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 \"para mis productos favoritos\", pero que esta vez el préstamo es para comprar productos y no para sacar efectivo. Hay dos tarjetas, Shopinbaz e Italika, y un botón verde que dice \"Continuar comprando\". Abajo, en letra chiquita, dice \"Sujeto a aprobación\". Sale el nombre María y yo soy Arturo; lo leo como si dijera el mío. La letra de \"Saber mas\" y la de las tarjetas está muy chiquita.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Pedí $30,000 en efectivo. La cantidad sale igual, pero ya no es en efectivo, es para comprar productos. La etiqueta dice \"Aprobado en producto\" y al mismo tiempo hay un asterisco de \"Sujeto a aprobación\". Eso se contradice y no sé en qué quedamos."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice claro que no es para disponer de efectivo."
+  },
+  "p4": "Según la pantalla, en productos. Me ponen dos opciones: Shopinbaz e Italika. Dice que \\\"ya está listo para usarse aquí\\\". No dice si hay otros lugares ni si sirve en sucursal, y no voy a suponerlo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Creo que falta algo, pero no sé qué. Dice \"Sujeto a aprobación\" y no explica a qué se refiere ni qué tengo que hacer. Pero también dice \"Ya está listo para usarse\". Está confuso."
+  },
+  "p6": "Sí lo vi. Dice \\\"Continuar comprando\\\". Supongo que me lleva a comprar, pero no sé a qué tienda ni qué sigue, porque la pantalla no lo dice. No me da confianza tocarlo sin saber.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "No lo dice. Solo dice \"en esta ocasión\" y que es para comprar productos, pero no explica por qué no me dieron el efectivo. Tal vez \"Saber mas\" lo explique, pero no lo abrí y no sé qué dice."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría \"Saber mas\" antes que nada, para entender por qué no es en efectivo y qué significa lo de \"sujeto a aprobación\". Aunque esa letra está muy chiquita y casi no se alcanza a ver. Si hubiera sucursal, preferiría ir a que me expliquen, pero la pantalla no muestra esa opción."
+  },
+  "reglas": [
+   "D-02",
+   "D-04",
+   "D-08",
+   "D-01"
+  ],
+  "sin_cobertura": []
+ },
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me aprobaron el monto, pero no como lo pedí. Yo pedí efectivo y esto es solo para comprar productos en sus tiendas. Lo del \"sujeto a aprobación\" de la pantalla de antes el panel no lo aclara."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy lo puedo usar para comprar productos en sus tiendas. No habla de efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí lo dice: \"por tu historial crediticio\". Pero no explica qué tiene mi historial que sea el problema, ni qué vieron en él. Dice la razón en general, sin detalle."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "No lo dice claro. Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a \"nuevas opciones de financiamiento\". No dice que esas opciones sean efectivo, ni cuánto tiempo, ni qué tendría que cumplir exactamente. No voy a suponerlo."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me deja ni contento ni enojado. La letra aquí se lee mejor y la explicación es sencilla, y eso se agradece. Pero no me dan una salida clara para el efectivo ni dicen a dónde ir si tengo dudas. Si hubiera sucursal, preferiría ir a preguntar."
+   },
+   "reglas": [
+    "D-08",
+    "D-04",
+    "D-03",
+    "D-01"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1241
+}

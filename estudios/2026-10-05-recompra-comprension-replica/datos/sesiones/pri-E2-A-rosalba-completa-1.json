@@ -1,0 +1,83 @@
+{
+ "id": "pri-E2-A-rosalba-completa-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "A",
+ "pantalla": "E2-A",
+ "integrante": "rosalba",
+ "perfil": "C",
+ "modo": "completa",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "respuestas": {
+  "p1": "Se ve seria, con el logo del banco. Me dice que me aprobaron $30,000, pero para comprar productos y no para recibirlos en efectivo. Hay un asterisco y abajo dice «Sujeto a aprobación», y eso no me cuadra con «Aprobado». Esa letra de abajo es chica y me cuesta leerla.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "La cifra es la que pedí, $30,000. Pero yo pedí efectivo y esto es para productos. Arriba dice «Aprobado en producto» y abajo «Sujeto a aprobación». No me queda claro si ya está aprobado o falta algo."
+  },
+  "p3": {
+   "opcion": "no",
+   "texto": "No. La pantalla dice que mi préstamo es para comprar productos y no para disponer de efectivo."
+  },
+  "p4": "Veo Elektra y shopinbaz, con una tarjeta que se corta a la derecha. Entiendo que puedo usarlo ahí, y no sé si hay más lugares. No veo condiciones, plazo ni total a pagar. Compararía contra el precio de contado antes de aceptar algo.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Dice «Ya está listo para usarse aquí», pero también «*Sujeto a aprobación». No dice qué falta ni quién tiene que aprobar. Tampoco veo cuánto voy a pagar en total. Yo quiero leer eso antes de firmar."
+  },
+  "p6": "Sí vi el botón verde, «Continuar comprando». Supongo que me lleva a comprar en las tiendas. La pantalla no dice a dónde, ni si ahí me muestran las condiciones. Prefiero no tocarlo todavía.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "Dice que «en esta ocasión» es para productos, pero no explica el motivo. No sé si fue algo que hice yo o una decisión del banco. Tiendo a pensar que fue mi error. No hay nadie a quién preguntarle."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Tocaría «Saber mas», aunque el texto es chico y está en letra pequeña. Quiero entender por qué no me dan efectivo y qué condiciones tiene. Me gustaría saber con quién hablar si tengo una duda, y aquí no veo un teléfono ni una sucursal."
+  },
+  "reglas": [
+   "C-01",
+   "C-02",
+   "C-03",
+   "C-05",
+   "C-08",
+   "C-10",
+   "C-12"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "continuaciones": {
+  "sheet": {
+   "p2": {
+    "opcion": "en_parte",
+    "texto": "Me aprobaron el monto, $30,000, pero no en la forma que pedí, que era efectivo. El panel no aclara el asterisco de «Sujeto a aprobación» de la pantalla anterior. Sigo sin saber si ya es definitivo."
+   },
+   "p3": {
+    "opcion": "no",
+    "texto": "No. El panel dice que hoy puedo usar el préstamo para comprar productos en sus tiendas. No menciona efectivo."
+   },
+   "p7": {
+    "opcion": "lo_dice",
+    "texto": "Sí, en parte. Dice «Por tu historial crediticio». No explica qué del historial ni qué pasó con el mío. Yo ya tuve un crédito con ellos y no sé si fue algo que hice mal."
+   },
+   "p9": {
+    "opcion": "no_lo_dice",
+    "texto": "Dice que si lo uso y mantengo mis pagos al día puedo fortalecer mi historial y acceder a «nuevas opciones de financiamiento». No dice que una de esas opciones sea efectivo, ni cuánto tiempo tardaría, ni qué monto. No puedo asegurar que así llegue el efectivo."
+   },
+   "p10": {
+    "opcion": "neutra",
+    "texto": "Me da una razón, y eso lo agradezco, y el tono es formal. Pero no tengo el efectivo que pedí, no veo condiciones ni total a pagar, y sigo sin saber con quién hablar si tengo dudas. No me quita la duda, pero tampoco me enoja."
+   },
+   "reglas": [
+    "C-02",
+    "C-03",
+    "C-05",
+    "C-08",
+    "C-10",
+    "C-12"
+   ],
+   "sin_cobertura": []
+  }
+ },
+ "costo_usd": 0.1514
+}

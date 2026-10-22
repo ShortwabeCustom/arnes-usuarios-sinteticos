@@ -1,0 +1,39 @@
+{
+ "id": "pri-E1-A-itzel-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E1",
+ "variante": "A",
+ "pantalla": "E1-A",
+ "integrante": "itzel",
+ "perfil": "B",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «¡María, tienes»\n2. [letra muy grande] «$30,000*»\n3. [letra chica] «Aprobado»\n4. [letra mediana] «en Efectivo ya son tuyos, listos para usar!»\n5. [letra chica] «También puedes comprar en:»\n6. [botón] «Continuar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que me aprobaron $30,000 y que ya los puedo usar en Efectivo. Pero el monto trae un asterisco y \"Aprobado\" salió chiquito. También dice que puedo comprar en otros lados, pero no alcancé a leer dónde. No vi cuánto voy a pagar al final ni en cuánto tiempo. Eso me inquieta.",
+  "p2": {
+   "opcion": "si",
+   "texto": "Por lo que alcancé a leer, sí: $30,000 es justo lo que pedí y dice «Aprobado». Pero el asterisco me hace dudar, porque no vi qué condiciona. No lo alcancé a leer, así que no puedo asegurar que no haya letra chica que cambie algo."
+  },
+  "p3": {
+   "opcion": "si",
+   "texto": "La pantalla dice «en Efectivo ya son tuyos, listos para usar». Eso me suena a que sí puedo recibirlos en efectivo. No vi cómo ni cuándo me llegan, ni si hay algún paso antes. El asterisco tampoco lo pude leer."
+  },
+  "p4": "En Efectivo, eso sí lo leí. También dice «También puedes comprar en:», pero ahí me quedé. No vi en qué tiendas o categorías. No voy a suponerlo.\"",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "La pantalla dice que ya son míos, pero el botón dice «Continuar…», así que hay al menos un paso más. Además hay un asterisco que no leí. No vi la cuota mensual, el total a pagar ni las fechas. Antes de dar el sí final necesito ese número, y que no cambie."
+  },
+  "p6": "Sí vi el botón, pero solo decía «Continuar…» y ahí me quedé. No sé qué sigue. Podría ser un resumen, la firma o algo más. No sé si me saca del celular, y si me saca, ahí lo dejo. Antes de tocarlo quisiera ver el total a pagar.",
+  "reglas": [
+   "B-05",
+   "B-02",
+   "B-08"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0303
+}

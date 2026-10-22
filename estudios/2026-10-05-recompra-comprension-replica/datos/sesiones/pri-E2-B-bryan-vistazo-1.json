@@ -1,0 +1,47 @@
+{
+ "id": "pri-E2-B-bryan-vistazo-1",
+ "bloque": "principal",
+ "grupo": "E2",
+ "variante": "B",
+ "pantalla": "E2-B",
+ "integrante": "bryan",
+ "perfil": "A",
+ "modo": "vistazo",
+ "corrida": 1,
+ "con_ocean": false,
+ "modelo": "sonnet",
+ "estimulo": "1. [letra mediana] «!María, tienes»\n2. (miraste el dibujo de una mujer con una laptop y un celular)\n3. [letra muy grande] «$30,000*»\n4. [letra mediana] «para tus productos favoritos!»\n5. [letra mediana] «En esta ocasión, tu préstamo es para comprar…  (hasta ahí llegaste)»",
+ "respuestas": {
+  "p1": "Me dice que tengo $30,000 para mis productos favoritos. Parece que sí me lo dieron, pero la última frase dice \"tu préstamo es para comprar…\" y ahí me quedé. Hay un asterisco en el monto, así que algo falta. Yo pedí efectivo y esto suena a otra cosa.",
+  "p2": {
+   "opcion": "en_parte",
+   "texto": "Veo los $30,000, que es lo que pedí, pero no dice 'aprobado' ni 'efectivo'. Dice 'para tus productos favoritos'. Y hay un asterisco que no leí. No sé si me aprobaron lo que pedí o algo distinto."
+  },
+  "p3": {
+   "opcion": "no_se",
+   "texto": "No lo dice en lo que alcancé a leer. 'Productos favoritos' y 'para comprar…' me suenan a que no es efectivo. Pero me quedé a la mitad, no puedo afirmarlo."
+  },
+  "p4": "En 'tus productos favoritos', según la pantalla. No sé en dónde: si en una tienda, en una app o en un catálogo. La frase 'para comprar…' quedó cortada y no vi qué sigue.",
+  "p5": {
+   "opcion": "falta_algo",
+   "texto": "Falta algo. El asterisco avisa de condiciones que no leí. Tampoco vi cuánto voy a pagar ni cada cuánto, ni qué sigue para usar el dinero. Y no vi ningún paso que diga que ya es mío."
+  },
+  "p6": "No vi ningún botón verde en lo que alcancé a leer. No sé qué pasa si lo toco. Lo que miré fue el texto, el dibujo y el monto.",
+  "p7": {
+   "opcion": "no_lo_dice",
+   "texto": "En lo que alcancé a leer, no. Dice 'en esta ocasión, tu préstamo es para comprar…' y se corta. Por qué me dan esto en vez de efectivo, no lo vi. Si lo explican, estaba en lo que no alcancé a leer."
+  },
+  "p8": {
+   "opcion": "saber_mas",
+   "texto": "Antes de seguir buscaría qué dice el asterisco y cómo sigue la frase de 'para comprar…'. Pedí efectivo y esto no se ve como efectivo. No le doy continuar sin saber si puedo disponer del dinero y cuánto pagaría en total. Si no lo encuentro rápido, me frustro."
+  },
+  "reglas": [
+   "A-04",
+   "A-03",
+   "A-09"
+  ],
+  "sin_cobertura": []
+ },
+ "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+ "costo_usd": 0.0341
+}

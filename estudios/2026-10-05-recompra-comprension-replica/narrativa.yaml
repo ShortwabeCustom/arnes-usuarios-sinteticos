@@ -1,0 +1,76 @@
+# Narrativa de la réplica. Las cifras de los KPI con `verificar` las recuenta `arnes verificar`.
+titulo_corto: Réplica recompra
+titular: "El arnés reproduce el estudio de recompra dentro de la variación propia del método"
+veredicto: >-
+  Con la corrida 1 de las 32 celdas, el arnés coincide con el estudio original en 145 de 168 respuestas cerradas (86%).
+  El propio estudio original coincide consigo mismo en 108 de 128 (84%) entre su corrida 1 y su corrida 2.
+  Las mediciones de pantalla (zonas, contraste, saliencia, orden y vistazo) salen idénticas: 240 de 240 valores y 68 de 68 recorridos.
+decision:
+  - {texto: "Usar el arnés para los próximos estudios de comprensión", si: true}
+  - {texto: "No cambiar la redacción de las sesiones sin volver a validar", si: true}
+  - {texto: "Esta réplica no reemplaza el reporte original", si: false}
+kpis:
+  - {valor: "145 de 168", etiqueta: "respuestas cerradas iguales al original", detalle: "Corrida 1, mismas celdas. Referencia: el original contra sí mismo, 108 de 128.", tono: bien}
+  - {valor: "1 de 4", etiqueta: "vistazos de E2-A entienden que no hay efectivo", detalle: "Mismo patrón que el original: en un vistazo la negativa casi no entra. Igual que E2-B (1 de 4): sin diferencia entre variantes.", tono: mal, verificar: "principal|E2|A|vistazo|antes|p3", compara: ["principal|E2|A|vistazo|antes|p3", "principal|E2|B|vistazo|antes|p3"]}
+  - {valor: "4 de 4", etiqueta: "lecturas completas de E2-B aciertan que no hay efectivo", detalle: "Leída completa, la pantalla se entiende.", tono: bien, verificar: "principal|E2|B|completa|antes|p3"}
+  - {valor: "4 de 4", etiqueta: "tras el panel siguen sin saber cómo tener efectivo (E2-A)", detalle: "«Nuevas opciones de financiamiento» no nombra el efectivo.", tono: mal, verificar: "principal|E2|A|completa|sheet|p9"}
+kpis_nota: "Los tres últimos cuentan corridas de perfiles sintéticos (una por perfil), no personas."
+resumen:
+  - "La medición de pantallas se reprodujo exacta: 240 de 240 valores de zona y 68 de 68 órdenes, vistazos y recorridos de lectura."
+  - "La redacción de la sesión cambia los resultados. Con las preguntas como lista, el vistazo de E1 respondió «no sé» donde el original decía «sí» (79% de coincidencia). Con la plantilla JSON original, la coincidencia subió a 86%."
+  - "Los hallazgos centrales del estudio original se repiten: en vistazo la negativa de E2 casi no se lee, en lectura completa sí, y el panel «Saber mas» no explica cómo tener efectivo."
+  - "Arturo marcó «sin cobertura» en 4 preguntas (p6 y p4): su perfil no cubre qué pasa después de tocar el botón. Es un vacío de la fuente, no un fallo de comprensión."
+grupos:
+  E1: {titulo: "Estudio 1 · Efectivo aprobado", texto: "En lectura completa los cuatro perfiles responden «no sé» a si pueden recibir el efectivo: «Aprobado» y «*Sujeto a aprobación» se contradicen. Igual que en el original."}
+  E2: {titulo: "Estudio 2 · Aprobado solo en producto", texto: "La negativa vive en la aclaración, que en un vistazo de 5 segundos se corta a la tercera palabra."}
+hipotesis_resultado:
+  - {id: H1.2, estado: se_sostiene, evidencia: "En lectura completa de E1, 0 de 8 corridas afirman que el efectivo ya es suyo; citan el asterisco."}
+  - {id: H2.1, estado: se_cae, evidencia: "Ninguna corrida de vistazo de E2 responde «sí» a P3; el riesgo que aparece es el «no sé»."}
+  - {id: H2.3, estado: se_sostiene, evidencia: "«Saber mas» no entra en ningún vistazo; su porción de saliencia es 0.2%."}
+  - {id: H2.5, estado: se_sostiene, evidencia: "Tras el panel, 8 de 8 corridas dicen que no explica cómo tener efectivo."}
+hallazgos:
+  - id: V1
+    titulo: "La redacción de la sesión cambia las respuestas: fijarla y validarla"
+    severidad: 3
+    oportunidad: mejorar
+    donde: "Instrumento · todas las sesiones"
+    hallazgo: "Con las preguntas como lista numerada, 6 de 8 vistazos de E1 respondieron «no sé» a P3; con la plantilla JSON del original, 4 de 4 respondieron «sí» en la misma pantalla."
+    interpretacion: "El formato de la pregunta funciona como parte del estímulo. Un cambio menor de redacción mueve la respuesta más que la diferencia entre variantes A y B."
+    recomendacion: "Tratar el texto de las sesiones como instrumento versionado. Cualquier cambio se valida contra una réplica antes de usarlo en un estudio nuevo."
+    evidencia: "datos/historial/sesiones-formato-lista frente a datos/sesiones. Prueba aislada del 20 de octubre de 2026."
+    confianza: alta
+    etiquetas: [EVIDENCIA]
+  - id: V2
+    titulo: "Las sesiones de antes reanudaban sin el prompt del perfil"
+    severidad: 2
+    oportunidad: hacer_diferente
+    donde: "Continuaciones (bottom sheet)"
+    hallazgo: "El código original reanudaba la sesión del panel sin volver a pasar el system prompt del perfil."
+    interpretacion: "La continuación pudo responder con el prompt por defecto de Claude Code. El arnés lo pasa en cada turno."
+    recomendacion: "Si se reusan datos de continuaciones del estudio original, marcarlos con confianza media."
+    evidencia: "Investigacion comprension de pantallas en recompra/datos/sesiones.py, llamada `llamar(p2, resume=s, leer=True)`."
+    confianza: alta
+    etiquetas: [EVIDENCIA]
+aprendizajes_metodo:
+  - "La redacción de la sesión es parte del instrumento: con las preguntas como lista numerada, 6 de 8 vistazos cambiaron de «sí» a «no sé»; con la plantilla JSON original volvieron a «sí». Antes de cambiar el texto de una sesión, volver a correr una réplica."
+  - "Con una corrida por perfil (4 por celda) ninguna de las 14 comparaciones entre variantes tiene intervalos de Wilson separados. Con las 3 corridas del original (12 por celda) la brecha más grande, 92% contra 50%, tampoco alcanza: hacen falta más corridas o más perfiles antes de declarar una variante ganadora."
+  - "El estudio original repite su propia respuesta en 93% de las celdas perfil-pregunta entre corridas: los perfiles son estables, la incertidumbre viene del tamaño de la muestra."
+  - "Tres evaluaciones expertas independientes por pantalla, consolidadas por consenso, encontraron los 9 criterios de UX writing que el protocolo había observado a mano (W1 a W9). Sirven como primera pasada, no reemplazan la revisión del investigador."
+  - "Al reanudar una sesión para una continuación hay que volver a pasar el system prompt del perfil; el código original no lo hacía."
+  - "La guía de estilo de la PWA, convertida en reglas verificables, detecta sola «!María» y «Saber mas» en E2. Con los criterios de la guía, los 3 evaluadores marcan la falta de certeza de «*Sujeto a aprobación» en E2 (G1, 3 de 3): la regla de certeza del producto choca con su nota legal."
+conceptos: [evaluacion-heuristica, ab-testing-y-split-testing, saturacion-de-muestra]
+positivos:
+  - "El panel «Saber mas» sí explica el porqué: 8 de 8 lecturas lo encuentran tras abrirlo."
+  - "Leída completa, la pantalla E2 se entiende en las dos variantes: 8 de 8 aciertan que no hay efectivo."
+limitaciones:
+  - "Solo se corrió la corrida 1 de cada celda (32 de 96 sesiones del diseño original)."
+  - "Los perfiles son sintéticos: la coincidencia mide si el arnés reproduce el método, no si el método predice a personas."
+  - "La sesión recibe un bloque técnico de entorno que la suscripción no permite quitar; las reglas piden ignorarlo."
+  - "El alias de modelo «sonnet» cambia de versión con el tiempo. Esta réplica corrió con claude-sonnet-5-5; el original no registró la versión."
+proximos_pasos:
+  - "Correr las corridas 2 y 3 si se quiere comparar el estudio completo."
+  - "Usar esta réplica como prueba de regresión del arnés antes de cambiar el texto de las sesiones."
+fuentes:
+  - {nombre: "Protocolo de comprensión de recompra", ruta: "Investigacion comprension de pantallas en recompra/Protocolo-comprension-recompra.md", uso: "zonas, preguntas, respuestas correctas"}
+  - {nombre: "Sesiones originales", ruta: "Investigacion comprension de pantallas en recompra/datos/sesiones/", uso: "comparación respuesta por respuesta"}
+  - {nombre: "User Persona OU-PWA", ruta: "personas/pwa", uso: "system prompts y reglas de los cuatro perfiles"}
