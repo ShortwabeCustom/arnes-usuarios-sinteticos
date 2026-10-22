@@ -27,6 +27,7 @@ import time
 from .. import motor
 from ..estudio import Estudio
 from .. import consumo
+from ..guardia import limpiar
 from ..navegador import Navegador, marcar, node_id, recortar
 
 REGLAS_SESION = """
@@ -207,6 +208,7 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             reg["fin"] = time.strftime("%Y-%m-%dT%H:%M:%S")
             reg["costo_usd"] = round(reg["costo_usd"], 4)
             e.sesiones_dir.mkdir(parents=True, exist_ok=True)
+            reg = limpiar(reg)   # sin correos, CURP ni tarjetas en lo que se guarda (arnes/guardia.py)
             dst.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
             with open(e.ruta("datos", "registro-sesiones.jsonl"), "a", encoding="utf-8") as f:
                 f.write(json.dumps(dict(id=sid, ok=True, costo_usd=reg["costo_usd"], tokens=reg["tokens"], resultado=reg.get("resultado"),

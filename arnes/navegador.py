@@ -152,7 +152,10 @@ async (page) => {
   if (a && a.tipo === 'recargar') await page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
   if (a) {
     if (a.tipo === 'tocar' || a.tipo === 'escribir') {
-      await page.mouse.move(a.x, a.y); await page.mouse.down(); await page.mouse.up();
+      // Como una persona: llegar al botón, detenerse y tocar. Mover y hacer clic en el mismo instante hacía que
+      // Figma tomara el toque como hecho fuera del botón (lo resaltaba en azul y no navegaba): piloto de OU 2.0.
+      await page.mouse.move(a.x, a.y, { steps: 4 }); await page.waitForTimeout(C.pausa_toque_ms || 150);
+      await page.mouse.down(); await page.waitForTimeout(60); await page.mouse.up();
       if (a.tipo === 'escribir') { await page.waitForTimeout(300); await page.keyboard.type(a.texto || '', { delay: 40 }); }
     } else if (a.tipo === 'desplazar') {
       await page.mouse.move(a.x, a.y); await page.mouse.wheel(0, a.dy);
@@ -162,6 +165,11 @@ async (page) => {
       await page.goBack().catch(() => {});
     } else if (a.tipo === 'arrastrar') {
       await page.mouse.move(a.x, a.y); await page.mouse.down(); await page.mouse.move(a.x2, a.y2, { steps: 12 }); await page.mouse.up();
+    } else if (a.tipo === 'tocar_texto') {      // botones HTML fuera del prototipo: banner de cookies, avisos
+      const b = page.getByRole('button', { name: a.texto }).first();
+      await b.waitFor({ timeout: 8000 }).catch(() => {});
+      if (await b.count()) await b.click({ timeout: 4000 }).catch(() => {});
+      else await page.getByText(a.texto, { exact: true }).first().click({ timeout: 4000 }).catch(() => {});
     } else if (a.tipo === 'ir') {
       await page.goto(a.url, { waitUntil: 'domcontentloaded' }).catch(() => {});
     }
@@ -212,6 +220,7 @@ class Navegador:
         return r.stdout
 
     def abrir(self, url: str, visible: bool = True):
+        url = url_figma(url) if self.material == "figma" else url
         self.cli("open", *(["--headed"] if visible else []), url, timeout=240)
         if self.material == "web" and self.viewport:
             self.cli("resize", *self.viewport)
@@ -241,6 +250,8 @@ class Navegador:
         return v
 
     def _paso(self, captura: Path, accion: dict | None = None, overlay: str | None = None, **cfg) -> dict:
+        if self.material == "figma" and accion and accion.get("tipo") == "ir":
+            accion = dict(accion, url=url_figma(accion["url"]))
         c = dict(material=self.material, captura=str(captura), accion=accion, overlay=overlay, **cfg)
         js = (JS_PASO.replace("__CFG__", json.dumps(c, ensure_ascii=False))
               .replace("__ZONAS__", JS_ZONAS_FIGMA if self.material == "figma" else JS_ZONAS_WEB)
@@ -418,6 +429,21 @@ def elegir_zonas_figma(v: dict) -> tuple[list[dict], str]:
     if z and sum(t["w"] * t["h"] for t in z) / area < 0.4:
         return z, "cursor"
     return [], "sin zonas detectadas"
+
+
+def url_figma(url: str) -> str:
+    """Link de prototipo listo para el arnés: sin la barra lateral de flujos (mueve el marco) y sin la interfaz de
+    Figma (`hide-ui=1`: la barra de arriba y la de abajo aparecían y desaparecían con el mouse y la ventana
+    parpadeaba)."""
+    import re
+
+    if "figma.com/proto" not in url:
+        return url
+    url = re.sub(r"([?&])show-proto-sidebar=1", r"\1show-proto-sidebar=0", url)
+    for k, v in (("show-proto-sidebar", "0"), ("hide-ui", "1")):
+        if f"{k}=" not in url:
+            url += ("&" if "?" in url else "?") + f"{k}={v}"
+    return url
 
 
 def node_id(url: str) -> str | None:

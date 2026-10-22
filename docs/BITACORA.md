@@ -123,6 +123,18 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   ventana visible.
 - **Modelo de tokens por tamaño de captura:** crecimiento por paso = 1,518 de texto + 2 × (ancho × alto / 750).
   Reproduce el piloto (ventana completa) y estima el recorte al teléfono. Panel A: ≈ 7.9 M tokens, ≈ 1 M nuevos.
+- **Panel, Bryan, invalidado por el instrumento** (2.1 M tokens, igual a lo estimado): T1 abandonó 2 de 2 por toques
+  sin respuesta. El video mostró la causa: el toque movía el mouse y hacía clic en el mismo instante y Figma, a veces,
+  lo tomaba como hecho fuera del botón (lo resaltaba en azul). Ahora el toque llega, espera 150 ms y toca. Validado
+  sin costo: T1 y T2 dos veces, 40 toques, solo 2 sin respuesta y ambos reales (correo antes que celular).
+- **Parpadeo, segunda causa:** la barra de Figma aparecía y desaparecía con el mouse. `url_figma()` agrega
+  `hide-ui=1` y `show-proto-sidebar=0` a todo link de prototipo.
+- **El banner de cookies nunca se cerró:** la acción `tocar_texto` se había perdido (iba en un comando que la
+  revisión de seguridad bloqueó). Agregada; ahora toca el botón por su rol.
+- **Los registros de sesión se limpian al guardar** (`guardia.limpiar`): un perfil leyó y escribió el correo de
+  ejemplo del prototipo y la guardia bloqueó el commit. Correos, CURP y tarjetas pasan a `[correo]`, `[CURP]`,
+  `[tarjeta]` en el JSON de la sesión. Las capturas no se pueden revisar así: el correo de ejemplo del prototipo
+  puede verse en ellas (es ficticio).
 - Pendiente (histórico): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 

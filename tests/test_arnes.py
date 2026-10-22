@@ -283,3 +283,10 @@ def test_consumo_en_tokens():
     # el modelo reproduce lo medido en el piloto 3 de OU 2.0: 18 pasos ≈ 1.9 M tokens, 192 mil nuevos
     e = consumo.estimar_recorrido(18, captura=consumo.CAPTURA_VENTANA)
     assert 1_700_000 <= consumo.total(e) <= 2_000_000 and 180_000 <= consumo.nuevos(e) <= 205_000
+
+
+def test_limpiar_datos_de_sesion():
+    from arnes.guardia import limpiar
+
+    d = limpiar({"pasos": [{"texto": "Escribo maria.g" + "@mail.com y prueba@example.com"}], "n": 3})
+    assert d["pasos"][0]["texto"] == "Escribo [correo] y prueba@example.com" and d["n"] == 3

@@ -48,6 +48,26 @@ def revisar_texto(texto: str) -> list[str]:
     return out
 
 
+SUSTITUTOS = {"correo": "[correo]", "CURP": "[CURP]", "número de tarjeta": "[tarjeta]"}
+
+
+def limpiar(obj):
+    """Copia de `obj` (texto, lista o dict) con correos, CURP y tarjetas sustituidos. Se aplica a lo que guarda una
+    sesión: un perfil puede leer o escribir el correo de ejemplo de un prototipo, y eso no debe llegar a GitHub."""
+    if isinstance(obj, str):
+        for nombre, rx in PATRONES:
+            if nombre not in SUSTITUTOS:
+                continue
+            obj = rx.sub(lambda m, n=nombre: m.group(0) if (n == "correo" and CORREOS_DE_EJEMPLO.search(m.group(0)))
+                         or (n == "número de tarjeta" and not _luhn(m.group(0))) else SUSTITUTOS[n], obj)
+        return obj
+    if isinstance(obj, list):
+        return [limpiar(x) for x in obj]
+    if isinstance(obj, dict):
+        return {k: limpiar(v) for k, v in obj.items()}
+    return obj
+
+
 def _git(repo: Path, *args: str) -> str:
     return subprocess.run(["git", "-C", str(repo), *args], capture_output=True, text=True, check=True).stdout
 

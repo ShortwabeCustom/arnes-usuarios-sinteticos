@@ -1,0 +1,521 @@
+{
+ "id": "T2-bryan-2",
+ "tarea": "T2",
+ "corrida": 2,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "figma",
+ "modelo": "sonnet",
+ "inicio": "2026-10-22T02:22:56",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "9830-189949",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-189949&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p01.png",
+   "marcas": "datos/capturas/T2-bryan-2/p01-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y clara, con letra grande y verde de Banco Azteca, y una pregunta simple.",
+    "que_miras_primero": "El título \"¿te está ayudando un asesor?\" y las dos opciones.",
+    "interpretacion": "Me pregunta si alguien del banco me atiende, para seguir el flujo con asesor o sin él. El botón Confirmar está gris hasta que elija.",
+    "pensamiento": "Pues sí, el asesor está aquí conmigo. Elijo \"Sí\" y le doy confirmar. Ojalá no sean mil pantallas.",
+    "intencion": "Marcar que sí me ayuda un asesor y luego darle Confirmar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco 'Sí, me están ayudando' porque es mi caso y así se activa Confirmar."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé en qué paso voy ni cuánto falta; no hay indicador de pasos."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "A-05",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 442,
+     "y": 420,
+     "w": 24,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 442,
+     "y": 472,
+     "w": 24,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 454,
+    "y": 432
+   },
+   "zona_tocada": {
+    "x": 442,
+    "y": 420,
+    "w": 24,
+    "h": 24,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 369,
+   "reintento": true,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9830-200001"
+  },
+  {
+   "n": 2,
+   "pantalla": "9830-200001",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-200001&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p02.png",
+   "marcas": "datos/capturas/T2-bryan-2/p02-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Sencilla: apareció un campo para el número de empleado del asesor.",
+    "que_miras_primero": "El campo nuevo \"Ingresa el número de empleado\".",
+    "interpretacion": "Me pide el número del asesor que me atiende para registrar quién me ayuda. Confirmar sigue gris hasta que lo llene.",
+    "pensamiento": "Ok, el asesor ya me dio su número. Lo meto y sigo.",
+    "intencion": "Escribir el número de empleado que me dio el asesor y luego Confirmar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el número de empleado en el campo, porque es lo que pide la pantalla."
+    },
+    "marca": 1,
+    "escribir": "123456789",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Sigo sin saber cuántos pasos faltan; no hay barra ni conteo."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "A-05",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 528,
+     "w": 328,
+     "h": 70,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 563
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 528,
+    "w": 328,
+    "h": 70,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 757,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9830-200002"
+  },
+  {
+   "n": 3,
+   "pantalla": "9830-200002",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-200002&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p03.png",
+   "marcas": "datos/capturas/T2-bryan-2/p03-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Ya quedó listo: el número está puesto y el botón se activó en verde.",
+    "que_miras_primero": "El botón Confirmar, que ya se ve activo.",
+    "interpretacion": "Ya capturé el número del asesor y solo falta confirmar para avanzar.",
+    "pensamiento": "Listo, le doy Confirmar. A ver cuántas pantallas más faltan.",
+    "intencion": "Tocar Confirmar para seguir con la solicitud.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Confirmar porque ya llené lo que pedía."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No me dice cuántos pasos faltan."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "A-05",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 790,
+     "w": 328,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 814
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 790,
+    "w": 328,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 376,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326717"
+  },
+  {
+   "n": 4,
+   "pantalla": "7723-326717",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326717&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p04.png",
+   "marcas": "datos/capturas/T2-bryan-2/p04-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Se ve clara y amigable, con ilustración y pasos cortos, pero ya me piden selfie.",
+    "que_miras_primero": "El título \"Empezamos con tu selfie\" y la ilustración de la chava con el celular.",
+    "interpretacion": "Me van a tomar una foto para verificar mi identidad. Piden permiso de ubicación y cámara. Abajo se asoma un botón cortado.",
+    "pensamiento": "Ok, es la selfie. Sigo en el mismo dominio del banco, así que no me late raro. Pero el botón casi no se ve, ¿cuántos pasos más faltan?",
+    "intencion": "Tocar el botón de abajo, que se asoma cortado, para empezar la selfie.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el botón de abajo para continuar; sigue en la misma página del banco y no me manda a otro dominio."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuántos pasos llevo ni cuántos faltan; el botón ni se lee completo."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "A-05",
+     "A-02",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 432,
+     "y": 864,
+     "w": 332,
+     "h": 16,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 872
+   },
+   "zona_tocada": {
+    "x": 432,
+    "y": 864,
+    "w": 332,
+    "h": 16,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 701,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327683"
+  },
+  {
+   "n": 5,
+   "pantalla": "7723-327683",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327683&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p05.png",
+   "marcas": "datos/capturas/T2-bryan-2/p05-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Un aviso emergente pidiendo la cámara; normal, pero seco.",
+    "que_miras_primero": "El letrero \"Habilita el acceso a la cámara\" y la URL arriba.",
+    "interpretacion": "Me piden permiso de cámara para la selfie. Sigo en bazsolicitudunica, el mismo dominio de antes, y dice que es necesario.",
+    "pensamiento": "Sigo en el sitio del banco, no es un .link raro. Le doy Continuar, qué hueva igual.",
+    "intencion": "Darle Continuar para permitir la cámara y tomarme la foto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar: el dominio es el mismo y sin la cámara no avanzo."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Sé que es la selfie, pero no cuántos pasos faltan."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "A-02",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 598,
+     "y": 553,
+     "w": 136,
+     "h": 44,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 666,
+    "y": 575
+   },
+   "zona_tocada": {
+    "x": 598,
+    "y": 553,
+    "w": 136,
+    "h": 44,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 703,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9591-77774"
+  },
+  {
+   "n": 6,
+   "pantalla": "9591-77774",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9591-77774&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p06.png",
+   "marcas": "datos/capturas/T2-bryan-2/p06-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Otro permiso más, ahora de ubicación; ya me lo habían avisado en la pantalla de la selfie.",
+    "que_miras_primero": "La pregunta \"¿Permitir que Solicitud Única acceda a tu ubicación?\"",
+    "interpretacion": "Es el permiso de ubicación que mencionaban junto con la cámara. Sigue en el mismo dominio del banco.",
+    "pensamiento": "Ya lo decía en la lista, así que no me sorprende. Le doy Permitir para no atorarme.",
+    "intencion": "Darle Permitir para seguir con la selfie.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Permitir porque ya lo habían anunciado y sin esto no avanzo; el dominio es el mismo."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Voy en la selfie, pero no sé cuántas pantallas faltan."
+    },
+    "confianza": 58,
+    "friccion": 2,
+    "reglas": [
+     "A-02",
+     "A-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 598,
+     "y": 553,
+     "w": 136,
+     "h": 44,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 65,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    59
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 666,
+    "y": 575
+   },
+   "zona_tocada": {
+    "x": 598,
+    "y": 553,
+    "w": 136,
+    "h": 44,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 698,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327412"
+  },
+  {
+   "n": 7,
+   "pantalla": "7723-327412",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327412&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739",
+   "captura": "datos/capturas/T2-bryan-2/p07.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.6145,
+ "tokens": {
+  "entrada": 26,
+  "cache_escritura": 31057,
+  "cache_lectura": 165793,
+  "salida": 5182
+ },
+ "resultado": "exito",
+ "ces": {
+  "ces": 5,
+  "texto": "Fue bastante fácil porque cada pantalla pedía una sola cosa, se leía bien y todo seguía en el mismo dominio del banco. Pero nunca supe cuántos pasos faltaban y fueron varios permisos seguidos."
+ },
+ "video": "datos/videos/T2-bryan-2.webm",
+ "fin": "2026-10-22T02:24:39"
+}
