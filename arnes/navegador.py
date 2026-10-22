@@ -26,7 +26,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-PW = os.path.expanduser(os.environ.get("PWCLI", "~/.claude/skills/playwright/scripts/playwright_cli.sh"))
+# CLI de Playwright: el del repositorio (versión fija, bin/playwright-cli); PWCLI lo reemplaza.
+PW = os.path.expanduser(os.environ.get("PWCLI") or str(Path(__file__).resolve().parent.parent / "bin" / "playwright-cli"))
 
 JS_ZONAS_FIGMA = r"""
 const zonasFigma = async (page) => page.evaluate(() => {

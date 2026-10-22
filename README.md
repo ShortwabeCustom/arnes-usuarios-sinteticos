@@ -12,15 +12,16 @@ pregunta al reporte, con las prácticas de UX research que aplica cada uno.
 
 ## Instalación
 
-Requiere Python 3.12, [uv](https://docs.astral.sh/uv/), Claude Code (`claude`) con sesión iniciada y, para
-recorridos, el CLI de Playwright en `~/.claude/skills/playwright/scripts/playwright_cli.sh`.
+Requiere acceso a este repositorio y a `ShortwabeCustom/vault-equipo`, Claude Code con sesión iniciada y, para
+recorridos, Node.js. Lo demás se instala solo:
 
 ```bash
-uv venv --python 3.12 .venv
-source .venv/bin/activate
-uv pip install -e .
-arnes bibliotecas
+git clone https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
+cd arnes-usuarios-sinteticos
+bin/instalar          # Python 3.12, dependencias, vault, Playwright, guardia y el comando `arnes`
 ```
+
+Al abrir Claude Code en la carpeta, `bin/instalar` corre solo.
 
 ## Qué hace
 

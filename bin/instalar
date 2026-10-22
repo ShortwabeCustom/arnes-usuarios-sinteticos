@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# Prepara el arnés en este clon: Python y dependencias, vault, guardia de commits, Playwright y el comando `arnes`.
+# Se puede correr las veces que sea: solo hace lo que falta. Lo llaman solos `bin/arnes` y Claude Code al abrir.
+#   bin/instalar                 con mensajes y `arnes doctor` al final
+#   bin/instalar --silencioso    solo dice lo que hizo o lo que falta
+set -uo pipefail
+RAIZ="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$RAIZ"
+SILENCIO=0
+[[ "${1:-}" == "--silencioso" ]] && SILENCIO=1
+paso() { echo "→ $*"; }
+aviso() { echo "! $*"; }
+
+# 1. uv (gestor de Python)
+for d in "$HOME/.local/bin" "$HOME/.cargo/bin" /opt/homebrew/bin; do
+  [[ -x "$d/uv" ]] && PATH="$d:$PATH"
+done
+if ! command -v uv >/dev/null 2>&1; then
+  paso "Instalando uv (gestor de Python)"
+  curl -LsSf https://astral.sh/uv/install.sh | sh >/dev/null 2>&1 && PATH="$HOME/.local/bin:$PATH" \
+    || { aviso "No pude instalar uv: https://docs.astral.sh/uv/"; exit 1; }
+fi
+
+# 2. Python 3.12 y dependencias (se reinstalan solas si cambia pyproject.toml)
+SELLO=.venv/.instalado
+if [[ ! -x .venv/bin/python ]]; then
+  paso "Creando el entorno de Python 3.12 (.venv)"
+  uv venv -q --python 3.12 .venv || { aviso "No pude crear .venv"; exit 1; }
+fi
+if [[ ! -f $SELLO || pyproject.toml -nt $SELLO ]]; then
+  paso "Instalando dependencias"
+  uv pip install -q --python .venv/bin/python -e . pytest || { aviso "Falló la instalación de dependencias"; exit 1; }
+  touch "$SELLO"
+fi
+
+# 3. Git: guardia antes de cada commit
+git config core.hooksPath .githooks
+
+# 4. Vault: si no está en Google Drive ni en ARNES_VAULT, se baja el submódulo
+if ! .venv/bin/python -c "from arnes.conocimiento import vault; vault()" >/dev/null 2>&1; then
+  paso "Bajando el vault (submódulo vault/)"
+  .venv/bin/python -c "import sys; from arnes.conocimiento import bajar_submodulo as b; sys.exit(not b())" \
+    || aviso "No pude bajar el vault: pide acceso a github.com/ShortwabeCustom/vault-equipo e inicia sesión con «gh auth login»"
+fi
+
+# 5. Playwright para los recorridos (necesita Node.js)
+if command -v npx >/dev/null 2>&1; then
+  if [[ ! -f .venv/.playwright ]]; then
+    paso "Preparando Playwright para los recorridos"
+    bin/playwright-cli install-browser >/dev/null 2>&1 && touch .venv/.playwright \
+      || aviso "No pude instalar el navegador de Playwright; los recorridos no van a abrir"
+  fi
+else
+  aviso "Falta Node.js (https://nodejs.org): sin él no corren los recorridos; comprensión y persona sí"
+fi
+
+# 6. El comando `arnes` disponible en cualquier terminal, sin activar .venv
+DESTINO="$HOME/.local/bin/arnes"
+if [[ ! -e "$DESTINO" || -L "$DESTINO" ]]; then
+  mkdir -p "$HOME/.local/bin"
+  [[ "$(readlink "$DESTINO" 2>/dev/null)" == "$RAIZ/bin/arnes" ]] || { ln -sf "$RAIZ/bin/arnes" "$DESTINO"; paso "Comando arnes listo en ~/.local/bin"; }
+fi
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) aviso "Agrega ~/.local/bin a tu PATH para usar «arnes» en cualquier carpeta";; esac
+
+# 7. Claude Code: el motor de las sesiones (no se instala solo: requiere tu cuenta)
+command -v claude >/dev/null 2>&1 || aviso "Falta Claude Code (https://claude.com/claude-code): sin él no corren sesiones"
+
+[[ $SILENCIO == 1 ]] || .venv/bin/arnes doctor
+exit 0

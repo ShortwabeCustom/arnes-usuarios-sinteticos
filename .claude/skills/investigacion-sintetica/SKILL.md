@@ -21,7 +21,6 @@ Si no está claro, pregunta con una sola pregunta y ofrece la recomendación pri
 ## 2. Armar el estudio
 
 ```bash
-source .venv/bin/activate
 arnes nuevo <metodo> <nombre-corto> --proyecto oupwa --tema <tema>   # naming de UiX
 arnes bibliotecas          # bibliotecas y paneles disponibles
 arnes conocimiento <metodo>   # notas del vault de Obsidian para este método: léelas antes de escribir el protocolo

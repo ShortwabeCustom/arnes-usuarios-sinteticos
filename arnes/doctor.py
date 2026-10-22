@@ -27,7 +27,7 @@ def doctor() -> bool:
 
     v = sys.version_info
     rev(f"Python {v.major}.{v.minor}", (3, 12) <= v[:2] < (3, 14), "uv venv --python 3.12 .venv")
-    rev("Entorno .venv activo", sys.prefix != sys.base_prefix, "source .venv/bin/activate")
+    rev("Entorno de Python del arnés (.venv)", sys.prefix != sys.base_prefix, "bin/instalar")
     rev("Claude Code (motor de las sesiones)", bool(shutil.which("claude")), "instalar Claude Code e iniciar sesión")
     rev("CLI de Playwright (recorridos)", os.path.exists(PW),
         "instalar el skill de Playwright de Claude Code", obligatorio=False)
@@ -44,7 +44,7 @@ def doctor() -> bool:
 
             rev("Vault: sincronización automática", mv.PLIST.exists(), "arnes vault automatizar", obligatorio=False)
     except FileNotFoundError:
-        rev("Vault", False, "git submodule update --init vault  (o sincronizar Google Drive)")
+        rev("Vault", False, "pedir acceso a ShortwabeCustom/vault-equipo, `gh auth login` y `bin/instalar`")
 
     rev("Guardia antes de cada commit", _git("config", "core.hooksPath") == ".githooks",
         "git config core.hooksPath .githooks")

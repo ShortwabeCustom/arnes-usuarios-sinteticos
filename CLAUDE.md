@@ -35,7 +35,8 @@ arnes verificar                   → debe decir LISTO PARA ENTREGAR
 arnes sintesis <estudio>          → archiva lo aprendido en 03-Sintesis/ del vault (con --simular antes)
 ```
 
-El entorno es `.venv` (`source .venv/bin/activate`). En `--filtro` usar `--filtro=valor` si el valor empieza con «-».
+`arnes` funciona sin activar `.venv` (`bin/arnes`, enlazado en `~/.local/bin`); `bin/instalar` prepara un clon nuevo y
+corre solo al abrir Claude Code (`.claude/settings.json`). En `--filtro` usar `--filtro=valor` si el valor empieza con «-».
 
 ## Puntos donde se pregunta a la persona usuaria
 

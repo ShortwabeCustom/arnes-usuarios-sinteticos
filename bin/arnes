@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# `arnes` sin activar nada: si el clon no está preparado (o cambiaron las dependencias), lo prepara primero.
+RAIZ="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
+if [[ ! -x "$RAIZ/.venv/bin/arnes" || ! -f "$RAIZ/.venv/.instalado" || "$RAIZ/pyproject.toml" -nt "$RAIZ/.venv/.instalado" ]]; then
+  "$RAIZ/bin/instalar" --silencioso >&2 || exit 1
+fi
+exec "$RAIZ/.venv/bin/arnes" "$@"

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# CLI de Playwright para los recorridos, con versión fija para que todos los clones naveguen igual.
+# Cambiar la versión es cambiar el instrumento: probar con `arnes recorrido` sobre tests/fixtures/flujo-web.
+set -euo pipefail
+VERSION="${PLAYWRIGHT_CLI_VERSION:-0.1.22}"
+command -v npx >/dev/null 2>&1 || { echo "Falta Node.js (npx) para los recorridos: https://nodejs.org" >&2; exit 1; }
+cmd=(npx --yes --package "@playwright/cli@${VERSION}" playwright-cli)
+if [[ -n "${PLAYWRIGHT_CLI_SESSION:-}" && " $* " != *" --session"* && " $* " != *" -s="* ]]; then
+  cmd+=(--session "${PLAYWRIGHT_CLI_SESSION}")
+fi
+exec "${cmd[@]}" "$@"

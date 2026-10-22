@@ -60,6 +60,17 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
   si el vault es un repositorio git (el arnés no hace commits en el vault).
 - Pendiente para Alexis: el `CLAUDE.md` del vault sigue en voseo y con rutas de Windows y de otra cuenta de Mac.
 
+**Instalación automática** (pedido: que quien clone el repositorio no tenga que instalar las dependencias a mano):
+- `bin/instalar`: uv, Python 3.12, dependencias, guardia de commits, vault (submódulo en la rama `main`, solo si no
+  está en Drive ni en `ARNES_VAULT`), navegador de Playwright y el comando `arnes` en `~/.local/bin`. Idempotente.
+- `bin/arnes`: corre `bin/instalar` si falta el entorno o si `pyproject.toml` cambió; no hay que activar `.venv`.
+- `.claude/settings.json`: hook `SessionStart` que corre `bin/instalar --silencioso` al abrir Claude Code.
+- `bin/playwright-cli`: el CLI de Playwright dentro del repositorio, con versión fija (0.1.22). Antes dependía de
+  `~/.claude/skills/playwright/` de la Mac de Alexis.
+- `vault()` baja el submódulo si no encuentra el vault, y el error ya no es una traza sino qué hacer.
+- Probado con un clon nuevo sin `--recursive` y con una carpeta personal vacía: en 32 s quedó todo instalado; el vault
+  bajó con credenciales de GitHub (sin ellas, el aviso dice pedir acceso y `gh auth login`).
+
 **Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el
 crecimiento sano y útil del arnés»):
 - `arnes vault` (`arnes/vault.py`): `estado`, `sincronizar` (trae, hace commit con la lista de notas que cambiaron y

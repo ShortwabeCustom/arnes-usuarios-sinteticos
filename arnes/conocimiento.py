@@ -15,6 +15,8 @@ from __future__ import annotations
 import glob
 import os
 import re
+import subprocess
+import sys
 import time
 import unicodedata
 from pathlib import Path
@@ -31,17 +33,46 @@ def config() -> dict:
     return cargar((RAIZ / "conocimiento.yaml").read_text(encoding="utf-8"))
 
 
-def vault() -> Path:
-    """Ruta del vault, en este orden: `ARNES_VAULT`; la de conocimiento.yaml (admite ~ y comodines, para no guardar
-    en el repositorio la carpeta de Google Drive, que lleva el correo de la cuenta); el submódulo `./vault`."""
+class VaultNoEncontrado(FileNotFoundError):
+    pass
+
+
+def _buscar_vault() -> Path | None:
     candidatos = [os.environ.get("ARNES_VAULT"), config()["vault"], str(RAIZ / "vault")]
     for patron in (os.path.expanduser(c) for c in candidatos if c):
         for v in map(Path, sorted(glob.glob(patron))):
             if (v / "02-Conceptos").is_dir():
                 return v
-    raise FileNotFoundError(
-        "No encuentro el vault. Opciones: sincronizar Google Drive, definir ARNES_VAULT, "
-        "o bajar el submódulo con `git submodule update --init vault`.")
+    return None
+
+
+def bajar_submodulo() -> bool:
+    """Baja el vault en `./vault` en la versión más reciente de `main`, en la rama (no en un commit suelto), para que
+    las síntesis que escriba el arnés se puedan subir."""
+    r = subprocess.run(["git", "-C", str(RAIZ), "submodule", "update", "--init", "--remote", "-q", "vault"],
+                       capture_output=True)
+    if r.returncode == 0:
+        subprocess.run(["git", "-C", str(RAIZ / "vault"), "checkout", "-q", "-B", "main", "origin/main"],
+                       capture_output=True)
+        subprocess.run(["git", "-C", str(RAIZ / "vault"), "branch", "-q", "--set-upstream-to=origin/main"],
+                       capture_output=True)
+    return r.returncode == 0
+
+
+def vault() -> Path:
+    """Ruta del vault, en este orden: `ARNES_VAULT`; la de conocimiento.yaml (admite ~ y comodines, para no guardar
+    en el repositorio la carpeta de Google Drive, que lleva el correo de la cuenta); el submódulo `./vault`.
+    Si no está en ningún lado y el repositorio tiene el submódulo, lo baja una vez."""
+    v = _buscar_vault()
+    if v is None and (RAIZ / ".gitmodules").exists() and not (RAIZ / "vault" / "02-Conceptos").is_dir():
+        print("Bajando el vault (submódulo vault/)…", file=sys.stderr)
+        bajar_submodulo()
+        v = _buscar_vault()
+    if v is None:
+        raise VaultNoEncontrado(
+            "No encuentro el vault. Pide acceso a github.com/ShortwabeCustom/vault-equipo, inicia sesión en GitHub "
+            "(`gh auth login`) y corre `bin/instalar`. Si lo tienes en otra carpeta, define ARNES_VAULT.")
+    return v
 
 
 def subir_vault(V: Path, mensaje: str) -> None:

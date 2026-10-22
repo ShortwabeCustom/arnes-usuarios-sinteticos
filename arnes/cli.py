@@ -328,7 +328,12 @@ def main(argv=None):
     x.add_argument("--modelo", default="sonnet")
     x.set_defaults(fn=cmd_persona)
     a = p.parse_args(argv)
-    a.fn(a)
+    from .conocimiento import VaultNoEncontrado
+
+    try:
+        a.fn(a)
+    except VaultNoEncontrado as err:
+        sys.exit(str(err))
 
 
 if __name__ == "__main__":

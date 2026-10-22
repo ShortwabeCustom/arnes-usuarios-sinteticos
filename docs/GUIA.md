@@ -31,34 +31,28 @@ No lo uses para:
 
 ## 2. Antes de empezar
 
-Necesitas:
-- **Claude Code** con sesión iniciada (las sesiones sintéticas usan tu suscripción, no una API key);
-- **Python 3.12** y **uv**;
-- para recorridos, el CLI de Playwright (`~/.claude/skills/playwright/scripts/playwright_cli.sh`);
-- el vault de Obsidian «vault-equipo» (base de conocimiento metodológico): viene con el arnés como submódulo en
-  `vault/`, o en Google Drive si ya lo tienes ahí.
+Necesitas, antes de clonar:
+- **acceso a los dos repositorios privados** (`ShortwabeCustom/arnes-usuarios-sinteticos` y
+  `ShortwabeCustom/vault-equipo`) y sesión de GitHub en tu Mac (`gh auth login`);
+- **Claude Code** con sesión iniciada: es el motor de las sesiones (usa tu suscripción, no una API key);
+- **Node.js**, solo si vas a hacer recorridos.
 
-Instalación, una sola vez:
+Todo lo demás (Python 3.12, dependencias, el vault, Playwright, la guardia de commits y el comando `arnes`) se instala
+solo:
 
 ```bash
-git clone --recursive https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
+git clone https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
 cd arnes-usuarios-sinteticos
-uv venv --python 3.12 .venv
-source .venv/bin/activate
-uv pip install -e .
-git config core.hooksPath .githooks   # guardia y pruebas antes de cada commit
-arnes doctor               # revisa todo y dice cómo arreglar lo que falte
+bin/instalar
 ```
 
-Cada vez que abras una terminal nueva: `source .venv/bin/activate`.
+`bin/instalar` termina con `arnes doctor`: si dice «Listo para trabajar», ya está. Y si en vez de correrlo abres
+Claude Code en la carpeta, Claude Code lo corre solo al iniciar. No hace falta activar ningún entorno: `arnes`
+funciona en cualquier terminal y, si después de un `git pull` cambiaron las dependencias, se actualiza solo.
 
-**El vault.** Los dos repositorios son privados: pide acceso a los dos. El arnés busca el vault en este orden:
-1. la variable `ARNES_VAULT`, si la defines;
-2. la carpeta de Google Drive de `conocimiento.yaml` (así trabaja quien mantiene el vault);
-3. el submódulo `vault/`, que trae el clon con `--recursive`. Si clonaste sin esa opción:
-   `git submodule update --init vault`.
-
-Para traer la versión más reciente del vault: `git submodule update --remote vault`.
+**El vault.** El arnés lo busca en este orden: la variable `ARNES_VAULT`; la carpeta de Google Drive de
+`conocimiento.yaml` (así trabaja quien mantiene el vault); y el submódulo `vault/`, que baja solo si no está en
+ninguno de los otros dos. `arnes vault sincronizar` lo pone al día con GitHub.
 
 **El vault se sube solo.** `arnes sintesis` hace commit y push en el vault al terminar. Para lo que escribes en
 Obsidian, `arnes vault automatizar` instala una sincronización cada hora (trae lo de GitHub, hace commit con la lista
@@ -414,7 +408,8 @@ Son uso de la suscripción de Claude Code, medidos en octubre de 2026.
 ## 9. Hoja de comandos
 
 ```bash
-source .venv/bin/activate
+# preparar (una vez; luego es automático)
+bin/instalar
 
 # diseñar
 arnes nuevo <comprension|recorrido|persona> <nombre> [--proyecto oupwa] [--tema …]
