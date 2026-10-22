@@ -1,0 +1,527 @@
+{
+ "id": "T2-rosalba-1",
+ "tarea": "T2",
+ "corrida": 1,
+ "integrante": "rosalba",
+ "nombre": "Rosalba Quintero",
+ "perfil": "C",
+ "segmento": "Gen X · 17.3%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "figma",
+ "modelo": "sonnet",
+ "inicio": "2026-10-22T09:59:09",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "9830-189949",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-189949&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p01.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p01-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y con el logo de Banco Azteca, con letra grande y clara. Me da confianza.",
+    "que_miras_primero": "El logo del banco y la pregunta grande: «María, ¿te está ayudando un asesor?»",
+    "interpretacion": "Me preguntan si alguien de la sucursal me está atendiendo. Supongo que es para ligar mi solicitud con el asesor. El botón Confirmar está gris, así que primero tengo que elegir una respuesta.",
+    "pensamiento": "Sí, aquí está el asesor, me dio su número. Marco que sí y confirmo.",
+    "intencion": "Contestar que sí me están ayudando y luego darle Confirmar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Sí, me están ayudando», porque estoy en la sucursal con el asesor. Después de eso se activaría Confirmar."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "No veo cuántos pasos faltan. Sé que ya llené mis datos y verifiqué mi número, pero no sé cuánto queda."
+    },
+    "confianza": 72,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-04",
+     "C-05",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 442,
+     "y": 453,
+     "w": 24,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 442,
+     "y": 505,
+     "w": 24,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 454,
+    "y": 465
+   },
+   "zona_tocada": {
+    "x": 442,
+    "y": 453,
+    "w": 24,
+    "h": 24,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 370,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9830-200001"
+  },
+  {
+   "n": 2,
+   "pantalla": "9830-200001",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-200001&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p02.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p02-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Sigue viéndose seria y ordenada; apareció un campo para el número de empleado del asesor.",
+    "que_miras_primero": "El campo que dice «Ingresa el número de empleado», con un número gris de ejemplo.",
+    "interpretacion": "Me piden el número de empleado del asesor que me atiende. Ese me lo dio él. El botón Confirmar sigue gris, o sea que falta escribirlo.",
+    "pensamiento": "Ah, aquí va el número que me dio el asesor. Lo escribo con cuidado para no equivocarme.",
+    "intencion": "Tocar el campo y escribir el número de empleado que me dio el asesor.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el número de empleado que me dio el asesor en el campo, para que se active Confirmar."
+    },
+    "marca": 1,
+    "escribir": "123456789",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es un paso de la solicitud con el asesor, pero no hay indicador de cuántos pasos faltan."
+    },
+    "confianza": 74,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-04",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 561,
+     "w": 328,
+     "h": 70,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 596
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 561,
+    "w": 328,
+    "h": 70,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 746,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9830-200002"
+  },
+  {
+   "n": 3,
+   "pantalla": "9830-200002",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-200002&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p03.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p03-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Ya está el número escrito y el botón Confirmar se puso verde; se ve claro y formal.",
+    "que_miras_primero": "El botón verde de Confirmar, que ya se activó.",
+    "interpretacion": "Ya capturé el número de empleado del asesor y el sistema me deja continuar. Confirmar manda esa información y sigue el siguiente paso.",
+    "pensamiento": "El número se ve bien, es el que me dieron. Le doy Confirmar.",
+    "intencion": "Revisar que el número esté bien y tocar Confirmar para seguir.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Confirmar porque el número coincide con el que me dio el asesor y el botón ya está activo."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy por terminar este paso con el asesor, pero sigo sin saber cuántos pasos faltan después."
+    },
+    "confianza": 75,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-04",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 434,
+     "y": 823,
+     "w": 328,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 847
+   },
+   "zona_tocada": {
+    "x": 434,
+    "y": 823,
+    "w": 328,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 366,
+   "reintento": true,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326717"
+  },
+  {
+   "n": 4,
+   "pantalla": "7723-326717",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326717&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p04.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p04-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Se ve clara y con letra legible. Me explica bien lo que sigue, aunque el botón se ve cortado abajo.",
+    "que_miras_primero": "El título grande «¡Empezamos con tu selfie!» y la lista de recomendaciones con palomitas.",
+    "interpretacion": "Me van a pedir una foto de mi cara para proteger mi información. Tengo que quitarme lentes y gorra, estar en un lugar con luz y dar permiso de ubicación y de cámara. El botón para seguir apenas se asoma en la parte de abajo.",
+    "pensamiento": "Me piden la cámara y la ubicación. Estoy en la sucursal con el asesor, así que sigo. Si se complica, le pregunto a él.",
+    "intencion": "Quitarme los lentes, ver bien el botón de abajo y tocarlo para empezar con la foto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el botón que se asoma abajo para seguir con la selfie. El asesor está conmigo si me surge una duda con la cámara."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Entiendo que ahora toca la foto, pero no sé cuántos pasos faltan después. El botón cortado tampoco ayuda."
+    },
+    "confianza": 70,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-04",
+     "C-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 432,
+     "y": 897,
+     "w": 332,
+     "h": 16,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 598,
+    "y": 905
+   },
+   "zona_tocada": {
+    "x": 432,
+    "y": 897,
+    "w": 332,
+    "h": 16,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 736,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327683"
+  },
+  {
+   "n": 5,
+   "pantalla": "7723-327683",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327683&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p05.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p05-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Salió un aviso pidiendo permiso para la cámara. Se entiende, pero el texto chico de «Este paso es necesario» me cuesta leerlo.",
+    "que_miras_primero": "El recuadro del centro: «Habilita el acceso a la cámara para tomar tu fotografía» y los dos botones azules.",
+    "interpretacion": "El teléfono me pide permiso para usar la cámara y tomar mi selfie, como ya me habían avisado en la pantalla anterior. Dice que el paso es necesario, o sea que sin eso no avanzo.",
+    "pensamiento": "Ya me lo habían avisado. El nombre del sitio sigue siendo el mismo y estoy con el asesor, así que le doy Continuar.",
+    "intencion": "Darle permiso a la cámara tocando Continuar para poder tomarme la foto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque la pantalla anterior ya me avisó que iban a pedir la cámara y no cambió de dirección. Si no me deja, le pregunto al asesor."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en la parte de la selfie, pero no sé cuántos pasos más faltan para terminar la solicitud."
+    },
+    "confianza": 68,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-04",
+     "C-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 598,
+     "y": 586,
+     "w": 136,
+     "h": 44,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 666,
+    "y": 608
+   },
+   "zona_tocada": {
+    "x": 598,
+    "y": 586,
+    "w": 136,
+    "h": 44,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 701,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9591-77774"
+  },
+  {
+   "n": 6,
+   "pantalla": "9591-77774",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9591-77774&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p06.png",
+   "marcas": "datos/capturas/T2-rosalba-1/p06-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Otro aviso del teléfono, ahora pidiendo mi ubicación. Es corto y se lee bien.",
+    "que_miras_primero": "La pregunta «¿Permitir que Solicitud Única acceda a tu ubicación?» y los dos botones.",
+    "interpretacion": "Me piden permiso para saber dónde estoy. La pantalla de la selfie ya me había avisado que iban a pedir ubicación y cámara. No explica para qué la usan, pero sí lo anunciaron antes.",
+    "pensamiento": "Esto sí me lo dijeron antes. No dice para qué, pero estoy en la sucursal, así que le doy Permitir.",
+    "intencion": "Darle Permitir a la ubicación para seguir con la selfie.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Permitir porque ya lo habían avisado en la pantalla de la selfie y estoy en la sucursal con el asesor. Si no avanza, le pregunto a él."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en los permisos para la selfie. No sé cuántos pasos faltan después."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "C-04",
+     "C-06",
+     "C-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 598,
+     "y": 586,
+     "w": 136,
+     "h": 44,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 666,
+    "y": 608
+   },
+   "zona_tocada": {
+    "x": 598,
+    "y": 586,
+    "w": 136,
+    "h": 44,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 732,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327412"
+  },
+  {
+   "n": 7,
+   "pantalla": "7723-327412",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327412&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T2-rosalba-1/p07.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.7343,
+ "tokens": {
+  "entrada": 30,
+  "cache_escritura": 34401,
+  "cache_lectura": 175513,
+  "salida": 6245
+ },
+ "resultado": "exito",
+ "ces": {
+  "ces": 6,
+  "texto": "Fue bastante fácil porque las pantallas se veían serias, con letra grande, y el asesor estaba conmigo. Lo que me restó fue no saber cuántos pasos faltaban, que el botón de la selfie estaba cortado y que los permisos no explicaban para qué los querían."
+ },
+ "video": "datos/videos/T2-rosalba-1.webm",
+ "fin": "2026-10-22T10:01:07"
+}

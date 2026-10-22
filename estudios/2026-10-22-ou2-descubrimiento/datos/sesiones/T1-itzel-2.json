@@ -1,0 +1,1178 @@
+{
+ "id": "T1-itzel-2",
+ "tarea": "T1",
+ "corrida": 2,
+ "integrante": "itzel",
+ "nombre": "Itzel Camacho",
+ "perfil": "B",
+ "segmento": "Millennial · 33.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "figma",
+ "modelo": "sonnet",
+ "inicio": "2026-10-22T09:36:32",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "7723-327419",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p01.png",
+   "marcas": "datos/capturas/T1-itzel-2/p01-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Se ve de Banco Azteca y es clara, pero está cortada de lado y no me muestra todo el texto.",
+    "que_miras_primero": "El '$70,000' grande y la mano con billetes.",
+    "interpretacion": "Es una portada que me ofrece un préstamo de hasta $70,000 y un botón para iniciar la solicitud. No dice cuánto voy a pagar ni qué requisitos hay.",
+    "pensamiento": "Ok, $70,000, pero ¿a cuánto me sale? Eso no lo dice. Veamos si el simulador me enseña el total antes de pedirme datos.",
+    "intencion": "Tocar 'Inicia tu solicitud' para ver si me enseñan el monto y la cuota antes de dar mis datos.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco 'Inicia tu solicitud' porque es el único camino y sigo desde el celular. Voy atenta a que me muestren el costo total."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Todavía no sé cuántos pasos son ni cuánto tarda. Los puntitos de abajo parecen un carrusel, no un avance del proceso."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "B-04",
+     "B-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 837,
+     "w": 225,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 861
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 837,
+    "w": 225,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 735,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327702"
+  },
+  {
+   "n": 2,
+   "pantalla": "7723-327702",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327702&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p02.png",
+   "marcas": "datos/capturas/T1-itzel-2/p02-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Es una pantalla sencilla con opciones claras, aunque se ve cortada de lado.",
+    "que_miras_primero": "La lista de opciones y la palabra 'Efectivo' arriba.",
+    "interpretacion": "Me preguntan para qué voy a usar el crédito. Tengo que elegir una opción y luego darle a Continuar, que está gris porque todavía no elijo nada.",
+    "pensamiento": "Yo quiero efectivo. Ahí abajo dice 'sujeto a aprobación', ok. Todavía no me dicen cuánto voy a pagar.",
+    "intencion": "Elegir Efectivo y luego tocar Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Efectivo, que es lo que quiero pedir. Después toco Continuar."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es el inicio, pero no sé cuántos pasos faltan ni cuánto tarda."
+    },
+    "confianza": 58,
+    "friccion": 1,
+    "reglas": [
+     "B-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 467,
+     "w": 225,
+     "h": 68,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 501
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 467,
+    "w": 225,
+    "h": 68,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 773,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327703"
+  },
+  {
+   "n": 3,
+   "pantalla": "7723-327703",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327703&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p03.png",
+   "marcas": "datos/capturas/T1-itzel-2/p03-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Ya quedó marcado Efectivo y el botón Continuar se puso verde, se entiende bien.",
+    "que_miras_primero": "El botón verde de Continuar y el círculo marcado en Efectivo.",
+    "interpretacion": "Mi elección quedó registrada. Ahora puedo seguir al siguiente paso.",
+    "pensamiento": "Bien, es Efectivo. Sigo, a ver si ahora sí me enseñan montos y cuánto pago.",
+    "intencion": "Tocar Continuar para avanzar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque ya elegí Efectivo y no veo otra cosa que hacer aquí."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en el primer paso, pero no veo cuántos faltan."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "B-05",
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 819,
+     "w": 225,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 843
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 819,
+    "w": 225,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 369,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 4,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p04.png",
+   "marcas": "datos/capturas/T1-itzel-2/p04-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Por fin un simulador con monto y pago semanal, pero el pago dice $0 y me da desconfianza.",
+    "que_miras_primero": "El monto grande que termina en '2,000' y abajo el 'pago semanal sería de $0 Pesos'.",
+    "interpretacion": "Aquí elijo cuánto dinero quiero con la barra y en cuántas semanas pagar. Me dice el pago semanal, pero todavía no hay semanas elegidas, por eso sale $0. Confirmar está gris.",
+    "pensamiento": "Solo me da el pago semanal, no el total. 'Pagas menos' si pagas antes... ¿menos de qué? Necesito ver cuánto es en total.",
+    "intencion": "Elegir las semanas para ver cuánto sería el pago, y fijarme si aparece el total. Prefiero un monto chico para no arriesgarme.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de semanas para ver qué plazos hay y cuánto cambia el pago. Dejo el monto bajo, no quiero arriesgar mi historial."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en el paso de monto y plazo, pero no sé cuántos pasos siguen ni qué datos me van a pedir."
+    },
+    "confianza": 50,
+    "friccion": 3,
+    "reglas": [
+     "B-06",
+     "B-01",
+     "B-04",
+     "B-09"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 427,
+     "y": 508,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 418,
+     "y": 661,
+     "w": 225,
+     "h": 62,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 692
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 661,
+    "w": 225,
+    "h": 62,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 1100,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-327462"
+  },
+  {
+   "n": 5,
+   "pantalla": "7723-327462",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327462&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p05.png",
+   "marcas": "datos/capturas/T1-itzel-2/p05-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Una lista de plazos en semanas, pero se ve cortada y no me dice cuánto pagaría con cada uno.",
+    "que_miras_primero": "'Elige tu plazo' y la opción resaltada en verde, la cuarta.",
+    "interpretacion": "Me enseñan varios plazos en semanas y ya hay uno seleccionado sin que yo lo eligiera. Solo veo el botón Continuar para seguir. No hay ninguna recomendación ni costos.",
+    "pensamiento": "Son como seis opciones y ninguna dice cuánto me cuesta en total. Ya viene una marcada, no sé por qué esa. Sigo y reviso el pago semanal.",
+    "intencion": "Quería comparar los plazos y escoger uno con cuota chiquita, pero solo puedo tocar Continuar con el que está marcado. Sigo y luego reviso qué pago me sale.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar con el plazo que ya está marcado, porque es lo único que me deja tocar. Luego reviso el pago semanal y, si no me gusta, regreso a cambiarlo."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy eligiendo plazo, pero no sé cuánto falta ni cuánto voy a pagar en total."
+    },
+    "confianza": 45,
+    "friccion": 3,
+    "reglas": [
+     "B-09",
+     "B-01",
+     "B-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 847,
+     "w": 225,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 871
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 847,
+    "w": 225,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 772,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "8922-87422"
+  },
+  {
+   "n": 6,
+   "pantalla": "8922-87422",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=8922-87422&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p06.png",
+   "marcas": "datos/capturas/T1-itzel-2/p06-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Ya me sale un pago semanal de unos 525 pesos, pero sigo sin ver el total.",
+    "que_miras_primero": "El pago semanal '…525 Pesos' en grande.",
+    "interpretacion": "Con el monto y el plazo que quedaron, me dicen cuánto pagaría cada semana. Ya se puso verde Confirmar. Del total a pagar, intereses o fechas no dice nada.",
+    "pensamiento": "Ese número solo es por semana. ¿Cuánto es en total? Nadie me lo dice, y 'pagas menos' no me aclara nada. Me da cosa, pero Confirmar todavía no es aceptar, ¿verdad?",
+    "intencion": "Avanzar con Confirmar para ver si más adelante me muestran el total y las condiciones antes de comprometerme. Si no, me detengo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Confirmar para ver el siguiente paso, vigilando que aparezca el total a pagar antes de aceptar algo. Si me piden autorizar algo sin ese número, me detengo."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ya eleguí monto y plazo, pero no sé cuántos pasos faltan ni qué va a pasar al confirmar."
+    },
+    "confianza": 40,
+    "friccion": 3,
+    "reglas": [
+     "B-01",
+     "B-02",
+     "B-06",
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 427,
+     "y": 508,
+     "w": 25,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 418,
+     "y": 904,
+     "w": 225,
+     "h": 24,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 916
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 904,
+    "w": 225,
+    "h": 24,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 388,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326705"
+  },
+  {
+   "n": 7,
+   "pantalla": "7723-326705",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326705&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p07.png",
+   "marcas": "datos/capturas/T1-itzel-2/p07-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Ya me piden mis datos: nombre, celular y correo. Es corto, pero todavía no vi el total.",
+    "que_miras_primero": "Los tres campos y abajo el texto chiquito con 'Aviso de Privacidad' y 'Buró de Crédito'.",
+    "interpretacion": "Para iniciar mi solicitud me piden nombre, celular y correo. Continuar está gris hasta que los llene. Abajo, al continuar, autorizo consultar mi buró y mi información laboral.",
+    "pensamiento": "Ok, el simulador salió antes que mis datos, eso está bien. Pero ahí abajo dice que autorizo buró; eso lo voy a revisar con calma y ver si abren los documentos.",
+    "intencion": "Llenar mis datos empezando por el nombre y luego revisar los enlaces legales antes de continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el campo del nombre para llenar mis datos, empiezo por el primero. Los enlaces de buró los reviso antes de darle Continuar."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya pasé monto y plazo y ahora son datos, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 48,
+    "friccion": 2,
+    "reglas": [
+     "B-04",
+     "B-07"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 497,
+     "w": 224,
+     "h": 94,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 418,
+     "y": 615,
+     "w": 224,
+     "h": 71,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 418,
+     "y": 710,
+     "w": 224,
+     "h": 71,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 544
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 497,
+    "w": 224,
+    "h": 94,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 384,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326707"
+  },
+  {
+   "n": 8,
+   "pantalla": "7723-326707",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326707&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p08.png",
+   "marcas": "datos/capturas/T1-itzel-2/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "El nombre ya se llenó, \"5/15\" caracteres, y faltan celular y correo.",
+    "que_miras_primero": "El contador 5/15 del nombre y el campo de celular vacío.",
+    "interpretacion": "Mi nombre ya quedó (María). Sigo con el celular y luego el correo. Continuar sigue gris.",
+    "pensamiento": "Bien, falta el celular. Es poquito lo que piden, eso sí me gusta.",
+    "intencion": "Tocar el campo del celular para ponerlo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el campo del número celular para que se llene con mi número de prueba."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy llenando mis datos, me faltan dos campos, pero no sé cuántos pasos hay después."
+    },
+    "confianza": 50,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 615,
+     "w": 224,
+     "h": 71,
+     "tipo": "zona",
+     "etiqueta": ""
+    },
+    {
+     "x": 418,
+     "y": 710,
+     "w": 224,
+     "h": 71,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 650
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 615,
+    "w": 224,
+    "h": 71,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 731,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326708"
+  },
+  {
+   "n": 9,
+   "pantalla": "7723-326708",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326708&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p09.png",
+   "marcas": "datos/capturas/T1-itzel-2/p09-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Mi celular ya salió completo, solo falta el correo.",
+    "que_miras_primero": "El número 5569607716 en el campo de celular.",
+    "interpretacion": "Ya tengo nombre y celular. Falta el correo para que Continuar se active.",
+    "pensamiento": "Ese es mi número, bien. Me falta el correo y ya.",
+    "intencion": "Tocar el campo del correo para llenarlo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el campo del correo electrónico, que es lo único que falta."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya casi acabo este formulario, pero no sé cuánto falta después."
+    },
+    "confianza": 50,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 710,
+     "w": 224,
+     "h": 71,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 745
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 710,
+    "w": 224,
+    "h": 71,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 759,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326710"
+  },
+  {
+   "n": 10,
+   "pantalla": "7723-326710",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326710&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p10.png",
+   "marcas": "datos/capturas/T1-itzel-2/p10-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Ya está todo lleno y Continuar se puso verde, pero abajo el texto legal me hace dudar.",
+    "que_miras_primero": "El texto chiquito de abajo: acepto el Aviso de Privacidad y autorizo Buró de Crédito e información laboral.",
+    "interpretacion": "Con solo darle Continuar estoy aceptando el aviso y autorizando la consulta a buró y mi información laboral. No hay una casilla aparte, el permiso va pegado al botón.",
+    "pensamiento": "Autorizar buró es lo que más me preocupa por mi historial. Quise leer esos enlaces, pero no veo que respondan al toque. Aun así sigo, a ver qué sigue; todavía no es un desembolso.",
+    "intencion": "Tocar Continuar y ver qué sigue, con cuidado de que no cambien las condiciones.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar aunque me incomoda autorizar buró sin poder leer los documentos; es el único paso posible y sigo en el celular."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuántos pasos faltan ni qué sigue después de autorizar."
+    },
+    "confianza": 40,
+    "friccion": 3,
+    "reglas": [
+     "B-07",
+     "B-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 805,
+     "w": 224,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 829
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 805,
+    "w": 224,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 752,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "8015-60615"
+  },
+  {
+   "n": 11,
+   "pantalla": "8015-60615",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=8015-60615&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p11.png",
+   "marcas": "datos/capturas/T1-itzel-2/p11-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Me piden un código de verificación que me llega por WhatsApp o SMS; es normal y no me saca del celular.",
+    "que_miras_primero": "Mi número terminando en 60 77 16 y los cuadritos del código.",
+    "interpretacion": "Me mandaron un código a mi celular para confirmar que soy yo. Lo escribo en los cuadritos. Si no llega, puedo reenviarlo en 60 segundos.",
+    "pensamiento": "Esto sí me da confianza, así sé que es seguro. Tengo el código 123456 y lo pongo.",
+    "intencion": "Escribir el código 123456 en los cuadritos.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el código de verificación que me llegó al celular, sin salir de la página."
+    },
+    "marca": 1,
+    "escribir": "123456",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy verificando mi número, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 52,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 584,
+     "w": 213,
+     "h": 60,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 524,
+    "y": 614
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 584,
+    "w": 213,
+    "h": 60,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 733,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326714"
+  },
+  {
+   "n": 12,
+   "pantalla": "7723-326714",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326714&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p12.png",
+   "marcas": "datos/capturas/T1-itzel-2/p12-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Salió el teclado numérico y los cuadritos siguen vacíos, listo para escribir el código.",
+    "que_miras_primero": "El teclado de números abajo y los cuadritos con guiones.",
+    "interpretacion": "El campo ya está activo. Escribo los 6 dígitos del código que me llegó.",
+    "pensamiento": "Ahora sí, pongo el código. No veo botón, supongo que se manda solo al completar los números.",
+    "intencion": "Escribir 123456 en los cuadritos.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el código de verificación con el teclado que ya abrió."
+    },
+    "marca": 1,
+    "escribir": "123456",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy verificando mi número, pero no sé cuántos pasos faltan después."
+    },
+    "confianza": 52,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 611,
+     "w": 241,
+     "h": 46,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 538,
+    "y": 634
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 611,
+    "w": 241,
+    "h": 46,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 772,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326716"
+  },
+  {
+   "n": 13,
+   "pantalla": "7723-326716",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326716&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p13.png",
+   "marcas": "datos/capturas/T1-itzel-2/p13-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "El código ya quedó completo, pero no veo ningún botón ni mensaje de qué sigue.",
+    "que_miras_primero": "Los números 3 4 5 6 en los cuadritos y el espacio vacío de abajo.",
+    "interpretacion": "Ya metí el código. Parece que se valida solo, pero la pantalla no me dice nada. Abajo hay una zona vacía que marca como tocable, aunque no se ve botón.",
+    "pensamiento": "¿Ya quedó? No me dicen nada, ni 'verificando'. Mejor espero un momento antes de tocar un espacio en blanco.",
+    "intencion": "Esperar unos segundos a ver si avanza sola la pantalla.",
+    "accion": {
+     "opcion": "esperar",
+     "texto": "No veo un botón claro, así que espero a ver si la página valida el código y avanza sola."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé si ya se verificó ni qué sigue, la pantalla no da señal."
+    },
+    "confianza": 45,
+    "friccion": 2,
+    "reglas": [
+     "B-08",
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 847,
+     "w": 225,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "esperar"
+   },
+   "espera_ms": 391,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "7723-326716"
+  },
+  {
+   "n": 14,
+   "pantalla": "7723-326716",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-326716&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p14.png",
+   "marcas": "datos/capturas/T1-itzel-2/p14-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Qué alivio, me confirman que mi número se verificó con éxito.",
+    "que_miras_primero": "La palomita en el celular y el mensaje de 'número verificado con éxito'.",
+    "interpretacion": "El código funcionó y ya puedo seguir con el botón 'Sigamos adelante!'.",
+    "pensamiento": "Qué bueno que avisó, así sé que sí quedó. Sigo, pero sigo sin ver cuánto me va a costar en total.",
+    "intencion": "Tocar 'Sigamos adelante' para continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco 'Sigamos adelante' porque mi número ya quedó verificado y sigo desde el celular."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya hice varios pasos, pero no sé cuántos faltan."
+    },
+    "confianza": 55,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 418,
+     "y": 847,
+     "w": 225,
+     "h": 48,
+     "tipo": "zona",
+     "etiqueta": ""
+    }
+   ],
+   "texto_pantalla": null,
+   "marco": {
+    "x": 418,
+    "y": 98,
+    "w": 360,
+    "h": 830
+   },
+   "recorte": [
+    412,
+    92
+   ],
+   "campos": null,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "www.figma.com",
+   "paginas": 1,
+   "palabras": null,
+   "accion": {
+    "tipo": "tocar",
+    "x": 530,
+    "y": 871
+   },
+   "zona_tocada": {
+    "x": 418,
+    "y": 847,
+    "w": 225,
+    "h": 48,
+    "tipo": "zona",
+    "etiqueta": ""
+   },
+   "espera_ms": 383,
+   "host_despues": "www.figma.com",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "9830-189949"
+  },
+  {
+   "n": 15,
+   "pantalla": "9830-189949",
+   "url": "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-189949&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&page-id=4%3A739&hide-ui=1",
+   "captura": "datos/capturas/T1-itzel-2/p15.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 3.7401,
+ "tokens": {
+  "entrada": 66,
+  "cache_escritura": 114676,
+  "cache_lectura": 744012,
+  "salida": 14045
+ },
+ "resultado": "exito_con_friccion",
+ "cierre": {
+  "pregunta": "La aplicación te pregunta si te está ayudando un asesor. ¿Qué contestarías y por qué? ¿Te queda claro para qué te lo pregunta?",
+  "respuesta": "Diría que no, que lo estoy haciendo yo sola desde mi celular. Pero en mi pantalla no alcanzo a ver las opciones de respuesta, solo veo el texto 'están ayudando' y el botón Confirmar en gris. Si no me aparece dónde contestar, no sigo hasta entender qué pasa.",
+  "por_que": "Yo entré sola y no quiero explicarle nada a nadie. No me queda claro para qué lo preguntan: puede ser para darle crédito o comisión a un asesor, o para que alguien me llame, y eso no lo dicen. Con el miedo que tengo a estafas y a que cambien las condiciones, prefiero saber qué hacen con mi respuesta antes de confirmar. Además sigo sin ver el total a pagar, y eso me pesa más que esta pregunta.",
+  "confianza": 55
+ },
+ "ces": {
+  "ces": 4,
+  "texto": "Los pasos fueron sencillos y todo fue desde el celular, pero nunca me dijeron el total a pagar, los enlaces legales de buró no se podían abrir y no supe cuántos pasos faltaban."
+ },
+ "video": "datos/videos/T1-itzel-2.webm",
+ "fin": "2026-10-22T09:43:27"
+}

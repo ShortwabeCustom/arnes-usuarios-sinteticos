@@ -188,14 +188,15 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             abierto = True
             for a in c.get("preparacion", []):  # p. ej. descartar cookies antes de medir nada
                 nav.paso(cap / "prep.png", a)
-            if material == "figma":
-                # esperar a que el prototipo termine de dibujarse (con hide-ui=1 tarda más): hasta ver zonas tocables
-                for _ in range(8):
-                    if nav.paso(cap / "prep.png").get("zonas"):
-                        break
-                    time.sleep(2)
         elif c.get("reiniciar_entre_tareas", True) or n > 1:
             nav.paso(cap / "prep.png", {"tipo": "ir", "url": t.get("url") or c["url"]})
+        if material == "figma":
+            # esperar a que el prototipo termine de cargar y dibujarse (al abrir y al recargar entre tareas; con
+            # hide-ui=1 tarda más): hasta ver zonas tocables, máximo ≈ 30 s
+            for _ in range(10):
+                if nav.paso(cap / "prep.png").get("zonas"):
+                    break
+                time.sleep(2)
         if c.get("video", True):
             e.ruta("datos", "videos").mkdir(parents=True, exist_ok=True)
             nav.video(True, str(e.ruta("datos", "videos", f"{sid}.webm")))
