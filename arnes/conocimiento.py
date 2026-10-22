@@ -128,7 +128,9 @@ def _cuerpo(e: Estudio, N: dict, nombre: str, enlaces: list[str]) -> str:
                     f"confianza {h.get('confianza', '—')}. {h.get('hallazgo', '')}" for h in hs) or "- (sin hallazgos registrados)"
     apr = "\n".join(f"- {x}" for x in N.get("aprendizajes_metodo") or []) or "- (sin aprendizajes de método registrados en narrativa.yaml)"
     lim = "\n".join(f"- {x}" for x in N.get("limitaciones") or [])
-    val = "\n".join(f"- {x}" for x in N.get("validar_con_personas") or [])
+    from .reporte import texto_validar
+
+    val = "\n".join(f"- {texto_validar(x)}" for x in N.get("validar_con_personas") or [])
     reporte = e.ruta("reporte", f"{e.entregable()}.html")
     tags = ["research-sintetico", "estudio", e.metodo]
     return f"""---

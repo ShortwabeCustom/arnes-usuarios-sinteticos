@@ -416,7 +416,7 @@ arnes analizar <estudio>
 arnes estado <estudio>                             # qué fases se hicieron y cuánto costó
 
 # comunicar
-arnes reporte <estudio>
+arnes reporte <estudio>                            # recorrido: tablero + <nombre>-detalle.html
 arnes verificar <estudio>
 arnes sintesis <estudio> [--simular]
 

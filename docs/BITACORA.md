@@ -43,6 +43,29 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ---
 
+## Sesión del 22 de octubre de 2026 (tablero de investigación)
+
+**Pedido:** rediseñar el reporte como un sistema para decidir con evidencia UX (prompt maestro «UX Research
+Intelligence Dashboard»), para los próximos usos del arnés.
+
+- `docs/TABLERO.md`: auditoría del reporte anterior, arquitectura (6 áreas), plan de visualización, estructura,
+  componentes y sistema visual (secciones A–F del prompt).
+- `arnes/reporte/tablero.py`, `tablero.css`, `tablero.js`: en recorrido, `arnes reporte` genera el tablero como reporte
+  principal y el documento completo como `-detalle.html`. Sin librerías externas; claro y oscuro; modo ejecutivo e
+  investigación; filtros de tarea, perfil, severidad y confianza; mapa del recorrido, línea de confianza con anotaciones,
+  mapa de fricción, matriz severidad × confianza, hallazgo × perfil, cajón de evidencia (capturas, pensamientos
+  marcados como perfil simulado, auditoría, sesión paso a paso), hipótesis y cola de validación con la muestra de UiX.
+- Paleta de perfiles validada con el script de la guía de visualización (claro y oscuro; en claro, aqua y amarillo
+  piden etiquetas directas y vista de tabla: las tiene).
+- Integridad: lo calculado lleva «Métrica derivada»; lo que falta, «Sin dato». Prioridad = severidad × frecuencia ×
+  confianza de investigación; el impacto de negocio va aparte.
+- `narrativa.yaml` admite campos nuevos (`confianza`, `tablero.pasos_prometidos`, `etapas`, `impacto_usuario`,
+  `validacion`, `validar_con_personas` como objetos); el reporte detallado, el `.md` y la síntesis los leen.
+- Probado: sin errores de JavaScript; escritorio, móvil y oscuro revisados en capturas; `arnes verificar` → LISTO.
+- Pendiente: el tablero cubre recorrido; comprensión sigue con el reporte anterior.
+
+---
+
 ## Sesiones del 21 y 22 de octubre de 2026 (repositorios en GitHub)
 
 - Commit inicial y push al repositorio **privado** `ShortwabeCustom/arnes-usuarios-sinteticos` (rama `main`). Es

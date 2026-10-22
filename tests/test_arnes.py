@@ -297,3 +297,18 @@ def test_guardia_acepta_textos_de_ayuda_de_un_campo():
 
     assert not revisar_texto("El campo muestra «ejemplo@mail.com» como texto de ayuda")
     assert revisar_texto("contacto: ana.lopez@" + "mail.com")
+
+
+def test_tablero_de_recorrido():
+    from arnes.reporte import tablero
+
+    e = Estudio(str(RAIZ / "estudios" / "2026-10-22-ou2-descubrimiento"))
+    d = tablero.datos(e, e.narrativa(), lambda *a, **k: "data:")
+    assert len(d["hallazgos"]) == 9 and len(d["top"]) == 3 and d["top"][0] == "H1"
+    assert {k["id"] for k in d["kpis"]} >= {"completitud", "sin_friccion", "ces", "confianza", "primer_toque"}
+    assert next(k for k in d["kpis"] if k["id"] == "confianza")["derivado"] is True
+    h1 = next(h for h in d["hallazgos"] if h["id"] == "H1")
+    assert h1["n_ses"] == 8 and h1["base"] == 8 and set(h1["matriz"].values()) == {"si"}
+    assert next(h for h in d["hallazgos"] if h["id"] == "H8")["matriz"]["bryan"] == "na"   # hallazgo de auditoría
+    html = tablero.armar(e, e.narrativa(), "x-detalle.html", lambda *a, **k: "data:")
+    assert '<html lang="es">' in html and "Investigación sintética" in html and 'id="H1"' in html

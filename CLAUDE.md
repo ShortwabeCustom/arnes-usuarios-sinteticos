@@ -142,6 +142,7 @@ una entrada en la bitácora por sesión.
 
 ## Entregables
 
-`reporte/<nombre-uix>.html` (autocontenido, abre con doble clic) y `.md` con el mismo nombre (naming de UiX; sin
+`reporte/<nombre-uix>.html` (autocontenido, abre con doble clic; en recorrido es el **tablero de investigación**, ver
+`docs/TABLERO.md`, y el documento completo queda en `<nombre-uix>-detalle.html`) y `.md` con el mismo nombre (naming de UiX; sin
 bloque `uix`, el nombre de la carpeta). Si la persona usuaria lo pide o el reporte es para otras personas, publicarlo
 además como Artifact privado y dar el link.

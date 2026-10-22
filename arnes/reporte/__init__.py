@@ -193,13 +193,22 @@ def seccion_demograficos(panel) -> str:
             'no por estos datos.</p>')
 
 
+def texto_validar(v) -> str:
+    """Un elemento de `validar_con_personas`: texto, o {que, aprender, metodo, prioridad, hallazgo}."""
+    if not isinstance(v, dict):
+        return str(v)
+    met = std.std()["naming"]["metodologias"].get(v.get("metodo"), v.get("metodo") or "")
+    extra = " · ".join(x for x in (met, f"prioridad {v['prioridad'].lower()}" if v.get("prioridad") else "", v.get("hallazgo", "")) if x)
+    return f"{v.get('que', '')}" + (f": {v['aprender']}" if v.get("aprender") else "") + (f" ({extra})" if extra else "")
+
+
 def seccion_validar(e: Estudio, N: dict) -> str:
     """Qué validar con personas y con cuántas, según la tabla de tamaño de muestra de UiX."""
     met = (e.cfg.get("uix") or {}).get("metodologia") or std.std()["naming"]["por_metodo"].get(e.metodo)
     m = std.muestra(met) if met else None
     n = (f'<p class="nota">Para validar estos hallazgos con personas en una {e_(std.std()["naming"]["metodologias"][met].lower())}, '
          f'UiX recomienda {m[0]}: {e_(m[1].lower())}. Las corridas sintéticas no cuentan para esa muestra.</p>') if m else ""
-    xs = N.get("validar_con_personas")
+    xs = [e_(texto_validar(v)) for v in N.get("validar_con_personas") or []]
     return (("<h3>Para validar con personas</h3>" + lista(xs)) if xs else "") + n if xs or n else ""
 
 
@@ -429,6 +438,12 @@ def construir(e: Estudio) -> str:
     html_txt, md = mod.armar(e, N)
     nombre = e.entregable(al_construir=True)
     salida = e.ruta("reporte", f"{nombre}.html")
+    if e.metodo == "recorrido":
+        # el reporte principal es el tablero (docs/TABLERO.md); el documento completo queda como -detalle
+        from . import tablero
+
+        e.ruta("reporte", f"{nombre}-detalle.html").write_text(html_txt, encoding="utf-8")
+        html_txt = tablero.armar(e, N, f"{nombre}-detalle.html", img64)
     salida.write_text(html_txt, encoding="utf-8")
     e.ruta("reporte", f"{nombre}.md").write_text(md, encoding="utf-8")
     e.marcar("reporte", html=str(salida.relative_to(e.dir)), kb=round(len(html_txt.encode()) / 1024))
@@ -496,7 +511,7 @@ def md_comun(e: Estudio, N: dict, cuerpo: str) -> str:
 
 ## Para validar con personas
 
-{li(N.get('validar_con_personas'))}
+{li([texto_validar(v) for v in N.get('validar_con_personas') or []])}
 
 {re.sub(r"<[^>]+>", "", seccion_validar(e, N).split("</ul>")[-1]).strip()}
 

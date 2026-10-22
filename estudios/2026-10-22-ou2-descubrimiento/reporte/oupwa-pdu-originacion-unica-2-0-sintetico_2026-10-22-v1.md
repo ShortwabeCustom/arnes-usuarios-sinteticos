@@ -194,10 +194,10 @@ Los cuatro perfiles de la PWA llegan de la bienvenida a la pregunta del asesor (
 
 ## Para validar con personas
 
-- Si mostrar el total a pagar junto al pago semanal cambia la decisión de plazo y la confianza (prueba A/B de la pantalla de monto y plazo).
-- Si las personas entienden qué autorizan con la consulta de buró y cómo prefieren darla (casilla explícita frente a texto al pie).
-- Cómo responden a la pregunta del asesor quienes solicitan solos, una vez conectada la rama «No».
-- Los permisos de cámara y ubicación sin asesor presente, al final del flujo completo.
+- Mostrar el total a pagar antes de confirmar: ¿Ver el total y el número de pagos junto al pago semanal mejora la confianza y la calidad de la decisión de plazo? (A/B Testing · prioridad alta · H1)
+- Consentimiento de buró explícito y legible: ¿Las personas entienden qué autorizan y prefieren una casilla explícita al texto al pie? (Prueba de usabilidad · prioridad alta · H2)
+- Solicitud sin asesor (rama «No»): ¿Quien solicita solo entiende para qué se pregunta por el asesor y cómo sigue el flujo? Requiere conectar la rama en el prototipo. (Prueba de usabilidad · prioridad media · H4)
+- Permisos de cámara y ubicación sin acompañamiento: ¿La confianza en los permisos se sostiene al final del flujo completo y sin asesor presente? (Prueba de usabilidad · prioridad media · H7)
 
 Para validar estos hallazgos con personas en una prueba de usabilidad, UiX recomienda 8–10 personas: los patrones de experiencia aparecen desde 8. Las corridas sintéticas no cuentan para esa muestra.
 
