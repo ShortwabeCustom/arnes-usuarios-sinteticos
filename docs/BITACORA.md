@@ -117,6 +117,12 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
 - **Reintento de toques en Figma:** un toque que no cambia el teléfono se repite una vez; la respuesta se juzga por
   el cambio en el teléfono, no en toda la ventana (la burbuja y los resaltados la cambian). Validado sin costo: 26
   pasos hasta el fin.
+- **Opción A aprobada por Alexis:** T1 (va solo, bienvenida → pregunta del asesor, con `pregunta_cierre`: el perfil
+  contesta qué respondería sin actuar) y T2 (con asesor, desde esa pantalla hasta la selfie; `url` propia de la
+  tarea). Validado sin costo: T2 abre en `9830-189949` y llega a «cargando» en 6 toques. `primer_toque` medido con
+  ventana visible.
+- **Modelo de tokens por tamaño de captura:** crecimiento por paso = 1,518 de texto + 2 × (ancho × alto / 750).
+  Reproduce el piloto (ventana completa) y estima el recorte al teléfono. Panel A: ≈ 7.9 M tokens, ≈ 1 M nuevos.
 - Pendiente (histórico): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 

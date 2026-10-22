@@ -15,11 +15,16 @@ from __future__ import annotations
 CAMPOS = ("entrada", "cache_escritura", "cache_lectura", "salida")
 
 # Modelo de consumo de un recorrido. Cada paso son 2 llamadas (abrir la captura y responder) sobre un contexto que
-# crece con cada captura que queda en la sesión. Medido en el piloto 3 de OU 2.0 (Figma, ventana visible, capturas de
-# 1200×1026, 22/10/2026): contexto inicial ≈ 7,600, +4,800 por paso, caché nueva ≈ 9,800 y salida ≈ 890 por paso.
-# (Con las capturas más chicas de `estudios/prueba-recorrido-web` el crecimiento era ≈ 1,900 por paso.)
-RECORRIDO = dict(contexto_inicial=7_600, crecimiento_por_paso=4_800, llamadas_por_paso=2, salida_por_paso=890,
-                 cache_nueva_por_paso=9_800)
+# crece con cada paso: ≈ 1,500 tokens de texto más 2 imágenes (la limpia y la marcada), y Claude cuenta una imagen como
+# ≈ ancho × alto / 750 tokens. Calibrado con el piloto 3 de OU 2.0 (22/10/2026, capturas de 1200×1026: +4,800 por
+# paso medidos = 1,518 + 2 × 1,641), contexto inicial ≈ 7,600, caché nueva ≈ 2 × el crecimiento, salida ≈ 890.
+RECORRIDO = dict(contexto_inicial=7_600, texto_por_paso=1_518, llamadas_por_paso=2, salida_por_paso=890)
+CAPTURA_VENTANA = (1200, 1026)      # ventana completa de Figma (pilotos 1–3)
+CAPTURA_TELEFONO = (380, 850)       # captura recortada al teléfono (desde el 22/10/2026)
+
+
+def tokens_imagen(ancho: int, alto: int) -> int:
+    return round(ancho * alto / 750)
 
 
 def de_usage(u: dict | None) -> dict:
@@ -61,12 +66,13 @@ def texto(d: dict | None) -> str:
     return f"{cifra(t)} tokens" + (f" · {cifra(n)} nuevos (el resto es relectura de caché)" if n < 0.95 * t else "")
 
 
-def estimar_recorrido(pasos: int, sesiones: int = 1) -> dict:
-    """Tokens esperados de `sesiones` recorridos de `pasos` pasos (más la pregunta final de facilidad)."""
+def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = CAPTURA_TELEFONO) -> dict:
+    """Tokens esperados de `sesiones` recorridos de `pasos` pasos (más la pregunta final), con capturas de `captura`."""
     m = RECORRIDO
-    ctx = [m["contexto_inicial"] + m["crecimiento_por_paso"] * k for k in range(pasos)]
+    crece = m["texto_por_paso"] + 2 * tokens_imagen(*captura)
+    ctx = [m["contexto_inicial"] + crece * k for k in range(pasos)]
     lectura_total = sum(m["llamadas_por_paso"] * c for c in ctx) + (ctx[-1] if ctx else 0)
-    escritura = m["cache_nueva_por_paso"] * pasos
+    escritura = 2 * crece * pasos
     d = dict(entrada=0, cache_escritura=escritura, cache_lectura=max(0, lectura_total - escritura),
              salida=m["salida_por_paso"] * pasos + 60)
     return {k: v * sesiones for k, v in d.items()}

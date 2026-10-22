@@ -84,6 +84,11 @@ FORMATO = 'Responde con este formato, en primera persona; en "accion" elige una 
 # se reporta junto a la tasa de éxito, nunca sola.
 ESQUEMA_CES = {"type": "object", "additionalProperties": False, "required": ["ces", "texto"],
                "properties": {"ces": {"type": "integer", "minimum": 1, "maximum": 7}, "texto": {"type": "string"}}}
+# Pregunta de cierre de una tarea (`pregunta_cierre` en estudio.yaml): al llegar al fin, el perfil mira esa última
+# pantalla y contesta sin actuar. Sirve cuando el prototipo no deja seguir (p. ej. una rama sin conectar).
+ESQUEMA_CIERRE = {"type": "object", "additionalProperties": False, "required": ["respuesta", "por_que", "confianza"],
+                  "properties": {"respuesta": {"type": "string"}, "por_que": {"type": "string"},
+                                 "confianza": {"type": "integer", "minimum": 0, "maximum": 100}}}
 RETOMA_TEXTO = r"contin[uú]a tu solicitud|retoma|sigue (con|donde)|guardamos tu (avance|progreso)|vuelve a donde"
 
 
@@ -263,6 +268,15 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         if _fin_alcanzado(t.get("fin"), info, material):
             reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
             reg["pasos"].append(dict(n=n, pantalla=pid, url=info["url"], captura=str(png.relative_to(e.dir)), fin=True))
+            if t.get("pregunta_cierre") and ses:
+                r = motor.llamar(motor.Llamada(
+                    f"{reg['id']}-cierre", f"Llegaste a esta pantalla: `{png.name}` (ábrela con Read). Aquí termina la tarea; no "
+                    f"toques nada. {' '.join(t['pregunta_cierre'].split())} Responde en JSON: «respuesta» (qué harías o "
+                    "contestarías), «por_que» (en tus palabras) y «confianza» de 0 a 100.",
+                    sistema, ESQUEMA_CIERRE, ["Read"], [png], reanudar=ses, modelo=modelo, persistir=True))
+                reg["cierre"] = dict(pregunta=t["pregunta_cierre"], **(r.salida or {}))
+                reg["costo_usd"] += r.costo_usd
+                reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
             return
         if material == "figma" and not zonas:
             # sin zonas el perfil no puede tocar nada: se detecta otra vez y, si sigue en 0, se detiene ANTES de

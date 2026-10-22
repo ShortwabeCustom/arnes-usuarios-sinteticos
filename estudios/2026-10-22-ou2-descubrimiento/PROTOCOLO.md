@@ -21,7 +21,7 @@ estado: "Diseño — pendiente de aprobación antes de correr"
 
 - **Descripción del proyecto:** descubrimiento preliminar del prototipo de Figma «Originación Única 2.0 · Cliente», flujo «OU 2.0 Flujo Amarillo», de la bienvenida a la toma de selfie (24 pantallas en el recorrido mecánico). El flujo «Mini Juego» queda fuera.
 - **Objetivo:** documentar, como benchmark, la experiencia completa del flujo con heurísticas y métricas de producto y de negocio, para priorizar qué mejorar antes de probar con personas.
-- **Muestra esperada:** panel sintético «base4» (4 perfiles) × 2 corridas = 8 sesiones. Para validar con personas, UiX recomienda 8–10 personas (los patrones de experiencia aparecen desde 8).
+- **Muestra esperada:** panel sintético «base4» (4 perfiles) × 2 tareas × 2 corridas = 16 sesiones. Para validar con personas, UiX recomienda 8–10 personas (los patrones de experiencia aparecen desde 8).
 - **Incentivos:** No aplica (participantes sintéticos).
 - **Alcance de la investigación:** Descriptiva.
 - **Público objetivo:** clientes nuevos que piden un préstamo personal desde el celular (User Persona OU-PWA: Centennial 43.9%, Millennial 33.4%, Gen X 17.3%, Boomer 5.4%).
@@ -87,9 +87,21 @@ Biblioteca `pwa`, panel `base4`: Bryan (Centennial, 22), Itzel (Millennial, 36),
 
 | ID | Escenario | Instrucción exacta | Objetivo | Criterio de éxito (fin) | Señales de fracaso |
 |---|---|---|---|---|---|
-| T1 | Quieres un préstamo en efectivo y entraste desde tu celular a la página de Banco Azteca para pedirlo. | Pide un préstamo en efectivo y avanza hasta donde la aplicación te deje llegar. | Recorrer el flujo completo | Llega a «cargando» o a la toma de selfie (`7723-327412`, `7723-327416`) | Abandona, se atasca 4 pasos sin cambio, niega un permiso, más de 30 pasos |
+| T1 | Quieres un préstamo en efectivo y entraste desde tu celular a la página de Banco Azteca para pedirlo. | Pide un préstamo en efectivo y avanza hasta donde la aplicación te deje llegar. | Flujo de quien va solo, de la bienvenida a la pregunta del asesor | Llega a «¿te está ayudando un asesor?» (`9830-189949`) y contesta la pregunta de cierre sin actuar | Abandona, se atasca 4 pasos sin cambio, más de 22 pasos |
+| T2 | Estás en una sucursal y un asesor te ayuda; ya elegiste monto y plazo, llenaste tus datos y verificaste tu número; el asesor te dio su número de empleado. | Continúa tu solicitud hasta donde la aplicación te deje llegar. | Tramo asistido: número de empleado, selfie y permisos | Llega a «cargando» o a la toma de selfie (`7723-327412`, `7723-327416`) | Abandona, niega un permiso, más de 14 pasos |
 
-Primer toque esperado: «Inicia tu solicitud». Sin retoma: en Figma recargar vuelve al inicio del prototipo.
+**Por qué dos tareas [SUPUESTO METODOLÓGICO].** El prototipo solo conecta «Sí» en la pregunta del asesor (piloto 3:
+Bryan respondió «No» y no pudo seguir). T1 cubre a quien va solo y, al llegar a esa pregunta, el perfil contesta qué
+respondería y por qué (`pregunta_cierre`), sin depender de la rama sin conectar. T2 empieza en esa pantalla con un
+asesor presente. Primer toque esperado: «Inicia tu solicitud» (T1) y «Sí, me están ayudando» (T2).
+
+| Hipótesis | Dónde se observa |
+|---|---|
+| H1 promesa de 5 minutos y 4 pasos | T1 y la calificación de facilidad |
+| H2 pago total | T1, monto y plazo |
+| H3 permisos | T2 |
+| H4 pregunta del asesor | T1, pregunta de cierre |
+| H5 «Continuar» deshabilitado | T1, datos de contacto |
 
 No se alteran las tareas originales salvo imposibilidad técnica, y entonces se marca **[SUPUESTO METODOLÓGICO]**.
 
@@ -118,6 +130,11 @@ Resultado por tarea: éxito · éxito con fricción · cree que terminó · aban
 - Es un prototipo: lo que no está conectado es estado de prototipado (categoría B), no defecto. Solo «Efectivo»
   está conectado en el uso del préstamo; el resto de las opciones queda fuera.
 - Los datos los llena el prototipo: no se mide el esfuerzo real de escribir.
+- En T2 el perfil llega «fresco» a los permisos, sin el cansancio de todo el flujo: su confianza ahí es un techo;
+  si aun así cae, la señal es fuerte. El tiempo total del flujo es la suma estimada de T1 y T2.
+- El camino de quien responde «No» al asesor no existe en el prototipo: no se evalúa.
+- Un toque que no cambia el teléfono se repite una vez (`reintento`) [SUPUESTO METODOLÓGICO].
+- El perfil ve la captura recortada al teléfono; la burbuja con su pensamiento queda fuera, solo para observar.
 
 ## 8. Oportunidades, tiempos y entregables
 
@@ -139,7 +156,7 @@ Resultado por tarea: éxito · éxito con fricción · cree que terminó · aban
 
 - [x] `arnes revisar` sin errores y avisos leídos
 - [x] Baseline (`baseline_url`) o razón declarada; `primer_toque` por tarea
-- [ ] Piloto: un perfil, una tarea, capturas revisadas
+- [x] Piloto: un perfil, una tarea, capturas revisadas (3 intentos; los 2 primeros fallaron por el instrumento)
 - [ ] 2 corridas por perfil planeadas
 - [x] Pre-flight completo, sin bloqueos
 - [x] Tareas con criterio de fin verificable por el arnés

@@ -53,16 +53,28 @@ datos_prueba:
   codigo_de_verificacion: "123456"
   numero_de_empleado: "123456789"
 
+# Opción A (22/10/2026): el prototipo solo conecta «Sí» en «¿te está ayudando un asesor?». T1 recorre el flujo de
+# quien va solo hasta esa pregunta y la contesta sin actuar; T2 sigue desde ahí con un asesor hasta la selfie.
 tareas:
   - id: T1
     escenario: "Quieres un préstamo en efectivo y entraste desde tu celular a la página de Banco Azteca para pedirlo."
     instruccion: "Pide un préstamo en efectivo y avanza hasta donde la aplicación te deje llegar."
+    exito: "Llega a la pregunta «¿te está ayudando un asesor?»."
+    fin: {node_ids: ["9830-189949"]}
+    pregunta_cierre: "La aplicación te pregunta si te está ayudando un asesor. ¿Qué contestarías y por qué? ¿Te queda claro para qué te lo pregunta?"
+    max_pasos: 22
+    pasos_esperados: 14
+    primer_toque: {caja: [434, 782, 762, 830]}        # «Inicia tu solicitud» (coordenadas con ventana visible)
+    # Sin retoma: en Figma, recargar regresa al inicio del prototipo; mediría el prototipo, no el producto.
+  - id: T2
+    url: "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-189949&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&show-proto-sidebar=0&page-id=4%3A739"
+    escenario: "Estás en una sucursal de Banco Azteca y un asesor te está ayudando con tu solicitud de préstamo en efectivo. Ya elegiste el monto y el plazo, llenaste tus datos y verificaste tu número. El asesor te dio su número de empleado."
+    instruccion: "Continúa tu solicitud hasta donde la aplicación te deje llegar."
     exito: "Llega a la toma de selfie (fin del prototipo)."
     fin: {node_ids: ["7723-327412", "7723-327416"]}   # cargando y «Coloca tu rostro dentro del óvalo»
-    max_pasos: 30
-    pasos_esperados: 21        # camino feliz del recorrido mecánico (21 toques hasta «cargando»)
-    primer_toque: {caja: [532, 522, 743, 553]}          # «Inicia tu solicitud»
-    # Sin retoma: en Figma, recargar regresa al inicio del prototipo; mediría el prototipo, no el producto.
+    max_pasos: 14
+    pasos_esperados: 8
+    primer_toque: {caja: [436, 414, 472, 450]}        # «Sí, me están ayudando»
 
 # Modelo de tiempo [SUPUESTO]: el tiempo humano no se mide en una sesión sintética; se estima y se le suma la espera
 # real del sistema. Se reporta solo para las sesiones que completan.
