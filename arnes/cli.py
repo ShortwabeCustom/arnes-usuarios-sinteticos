@@ -12,7 +12,9 @@
     arnes auditar <estudio> [--evaluadores 3] evaluación experta independiente (UX writing o heurísticas) y consolidación
     arnes estilo <estudio>                    textos contra la guía de estilo del producto (guia_estilo en estudio.yaml)
     arnes conocimiento <metodo>               notas del vault de Obsidian para diseñar el protocolo
-    arnes sintesis <estudio> [--simular]      archiva lo aprendido en 03-Sintesis/ del vault
+    arnes sintesis <estudio> [--simular]      archiva lo aprendido en 03-Sintesis/ del vault (y lo sube a GitHub)
+    arnes vault [estado|sincronizar|automatizar|quitar]   el vault como repositorio: estado, subir, sincronizar solo
+    arnes doctor                              revisa que el entorno esté completo (para quien empieza)
     arnes reporte <estudio>                   arma reporte/<id>.html autocontenido
     arnes verificar <estudio>                 control final: cifras, etiquetas, checklist
     arnes persona validar <carpeta>           revisa los entregables 01–12 de un User Persona
@@ -187,7 +189,47 @@ def cmd_conocimiento(a):
 def cmd_sintesis(a):
     from . import conocimiento
 
-    conocimiento.sintesis(Estudio(a.estudio), simular=a.simular, enlazar=not a.sin_enlazar)
+    conocimiento.sintesis(Estudio(a.estudio), simular=a.simular, enlazar=not a.sin_enlazar, subir=not a.sin_subir)
+
+
+def cmd_vault(a):
+    from . import vault as V
+
+    if a.accion == "estado":
+        d = V.estado()
+        print(f"Vault: {d['ruta']}")
+        if not d["repositorio"]:
+            return print("  no es un repositorio git")
+        print(f"  último commit: {d['ultimo']}")
+        print(f"  cambios sin commit: {len(d['pendientes'])}" + "".join(f"\n    {x}" for x in d["pendientes"][:15]))
+        print(f"  commits sin subir: {d['sin_subir']} · en GitHub sin bajar: {d['sin_bajar']}")
+        print(f"  sincronización automática: {'activa' if V.PLIST.exists() else 'no instalada'}")
+    elif a.accion == "sincronizar":
+        try:
+            r = V.sincronizar(a.mensaje, silencioso=a.auto)
+            if a.auto and r != "sin cambios":
+                V.registrar(r)
+        except V.ErrorVault as err:
+            if not a.auto:
+                sys.exit(f"Vault: {err}")
+            V.registrar(f"ERROR {err}")
+            import subprocess
+
+            subprocess.run(["osascript", "-e", 'display notification "No se pudo sincronizar el vault. '
+                            f'Revisa {V.BITACORA}" with title "Arnés"'], capture_output=True)
+            sys.exit(1)
+    elif a.accion == "automatizar":
+        p = V.automatizar(a.cada)
+        print(f"Sincronización automática instalada: cada {a.cada} min ({p}).\nBitácora: {V.BITACORA}\n"
+              "Para quitarla: arnes vault quitar")
+    elif a.accion == "quitar":
+        V.quitar_automatizacion() or print("No había sincronización automática instalada.")
+
+
+def cmd_doctor(a):
+    from .doctor import doctor
+
+    sys.exit(0 if doctor() else 1)
 
 
 def cmd_reporte(a):
@@ -262,7 +304,15 @@ def main(argv=None):
     x.add_argument("estudio")
     x.add_argument("--simular", action="store_true", help="muestra qué escribiría en el vault, sin escribir")
     x.add_argument("--sin-enlazar", action="store_true", help="no agrega el enlace en las notas de concepto")
+    x.add_argument("--sin-subir", action="store_true", help="escribe en el vault pero no hace commit ni push")
     x.set_defaults(fn=cmd_sintesis)
+    x = s.add_parser("vault")
+    x.add_argument("accion", nargs="?", default="estado", choices=["estado", "sincronizar", "automatizar", "quitar"])
+    x.add_argument("-m", "--mensaje", help="mensaje del commit (por omisión, la lista de notas que cambiaron)")
+    x.add_argument("--cada", type=int, default=60, help="minutos entre sincronizaciones automáticas")
+    x.add_argument("--auto", action="store_true", help=argparse.SUPPRESS)
+    x.set_defaults(fn=cmd_vault)
+    s.add_parser("doctor").set_defaults(fn=cmd_doctor)
     x = s.add_parser("recorrido")
     x.add_argument("estudio")
     x.add_argument("integrante")

@@ -1,0 +1,14 @@
+#!/bin/sh
+# Antes de cada commit del arnés: guardia (correos, llaves, CURP, tarjetas), lint y pruebas.
+# Se activa una vez por clon: git config core.hooksPath .githooks
+# Saltarlo (solo si sabes por qué): git commit --no-verify
+set -e
+cd "$(git rev-parse --show-toplevel)"
+PY=.venv/bin/python
+[ -x "$PY" ] || PY=python3
+
+"$PY" -m arnes.guardia
+if command -v uvx >/dev/null 2>&1; then
+  uvx -q ruff check --select F,E9 arnes || { echo "Lint: corrige los errores de arriba."; exit 1; }
+fi
+"$PY" -m pytest tests -q -x >/tmp/arnes-pruebas.log 2>&1 || { tail -30 /tmp/arnes-pruebas.log; echo "Pruebas: fallan (arriba)."; exit 1; }

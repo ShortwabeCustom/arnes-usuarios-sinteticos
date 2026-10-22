@@ -46,7 +46,8 @@ cd arnes-usuarios-sinteticos
 uv venv --python 3.12 .venv
 source .venv/bin/activate
 uv pip install -e .
-arnes bibliotecas          # si lista «pwa» y «gic», está listo
+git config core.hooksPath .githooks   # guardia y pruebas antes de cada commit
+arnes doctor               # revisa todo y dice cómo arreglar lo que falte
 ```
 
 Cada vez que abras una terminal nueva: `source .venv/bin/activate`.
@@ -57,8 +58,13 @@ Cada vez que abras una terminal nueva: `source .venv/bin/activate`.
 3. el submódulo `vault/`, que trae el clon con `--recursive`. Si clonaste sin esa opción:
    `git submodule update --init vault`.
 
-Para traer la versión más reciente del vault: `git submodule update --remote vault`. Si el arnés escribe una
-síntesis en `vault/`, al final te recuerda hacer commit y push en el vault, que es un repositorio aparte.
+Para traer la versión más reciente del vault: `git submodule update --remote vault`.
+
+**El vault se sube solo.** `arnes sintesis` hace commit y push en el vault al terminar. Para lo que escribes en
+Obsidian, `arnes vault automatizar` instala una sincronización cada hora (trae lo de GitHub, hace commit con la lista
+de notas que cambiaron y sube). `arnes vault` muestra el estado; `arnes vault sincronizar` lo hace en el momento.
+Antes de cada commit pasa una guardia: si encuentra un correo, una llave, una CURP o un número de tarjeta, no sube
+nada y te avisa con una notificación.
 
 ### Dos formas de trabajar
 
@@ -327,7 +333,7 @@ de cada perfil con su evidencia; donde el User Persona no tiene el dato, dice AU
 
 ```bash
 arnes sintesis <estudio> --simular     # muestra qué escribiría en el vault
-arnes sintesis <estudio>               # lo escribe
+arnes sintesis <estudio>               # lo escribe y lo sube a GitHub (--sin-subir para no subirlo)
 ```
 
 Guarda en `03-Sintesis/` del vault lo que aprendió el estudio, con enlaces a las notas de concepto que aplicó. No
@@ -400,6 +406,7 @@ Son uso de la suscripción de Claude Code, medidos en octubre de 2026.
 | Todos los perfiles siguen la misma ruta | Flujo lineal, o panel que no diferencia | Revisar si el material permite desviarse |
 | Una cifra del KPI no recuenta | La narrativa quedó vieja | Volver a `arnes analizar` y corregir la narrativa |
 | El reporte «es más viejo que la narrativa» | Se editó la narrativa después del reporte | `arnes reporte` de nuevo |
+| `arnes vault`: «conflicto en alguna nota» | La misma nota cambió en dos lugares | Abrir la nota, resolver y `git pull --rebase` en el vault |
 | No encuentra el vault | Ni Drive ni el submódulo están disponibles | `git submodule update --init vault`, o sincronizar Drive |
 
 ---
@@ -438,6 +445,12 @@ arnes sintesis <estudio> [--simular]
 # bibliotecas de personas
 arnes persona validar <biblioteca>
 arnes persona probar <biblioteca>
+
+# entorno y vault
+arnes doctor                                       # qué falta en el entorno
+arnes vault                                        # estado del vault como repositorio
+arnes vault sincronizar [-m "mensaje"]             # commit y push del vault ahora
+arnes vault automatizar [--cada 60] | quitar       # sincronización automática
 ```
 
 ## 10. Dónde está cada cosa

@@ -44,11 +44,16 @@ def vault() -> Path:
         "o bajar el submódulo con `git submodule update --init vault`.")
 
 
-def recordar_commit(V: Path) -> None:
-    """Si el vault es un repositorio git, recuerda subir lo escrito (el arnés no hace commit en el vault)."""
-    if (V / ".git").exists():
-        print(f"  El vault es un repositorio git: revisa y sube los cambios con\n"
-              f"  git -C \"{V}\" add -A && git -C \"{V}\" commit -m \"Síntesis: …\" && git -C \"{V}\" push")
+def subir_vault(V: Path, mensaje: str) -> None:
+    """Si el vault es un repositorio git, hace commit y push de lo que se acaba de escribir (con la guardia)."""
+    if not (V / ".git").exists():
+        return
+    from .vault import ErrorVault, sincronizar
+
+    try:
+        sincronizar(mensaje)
+    except ErrorVault as err:
+        print(f"  ! El vault quedó escrito pero sin subir: {err}")
 
 
 def notas(metodo: str) -> list[Path]:
@@ -144,7 +149,7 @@ sintética. {N.get('veredicto', '').strip()}
 """
 
 
-def sintesis(e: Estudio, simular: bool = False, enlazar: bool = True) -> Path:
+def sintesis(e: Estudio, simular: bool = False, enlazar: bool = True, subir: bool = True) -> Path:
     c = config()
     V = vault()
     N = e.narrativa()
@@ -205,5 +210,6 @@ def sintesis(e: Estudio, simular: bool = False, enlazar: bool = True) -> Path:
         p.write_text(t, encoding="utf-8")
     e.marcar("sintesis", nota=str(destino.relative_to(V)))
     print("Escrito en el vault:\n" + "\n".join(f"  · {x}" for x in cambios))
-    recordar_commit(V)
+    if subir:
+        subir_vault(V, f"Síntesis: {nombre}")
     return destino

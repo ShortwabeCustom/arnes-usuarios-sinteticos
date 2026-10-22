@@ -178,3 +178,65 @@ def test_estandares_uix():
         panel = Biblioteca(b).panel(p)
         assert std.revisar_demograficos(panel) == []
         assert all(set(std.demograficos(it)) == {"edad", "genero", "region", "ocupacion"} for it in panel)
+
+
+# ---- guardia y vault como repositorio -----------------------------------------------------------
+
+
+def test_guardia():
+    from arnes.guardia import revisar_texto
+
+    assert revisar_texto("contacto: ana.lopez@" + "hotmail.com")
+    assert revisar_texto("token sk-" + "ant-api03-abcdefghijklmnop")
+    assert revisar_texto("CURP: GOMA850101" + "HDFRRN09")
+    assert revisar_texto("tarjeta 4111 1111 " + "1111 1111")              # pasa Luhn
+    assert not revisar_texto("folio 1234 5678 9012 3456")            # no pasa Luhn
+    assert not revisar_texto("correo: prueba@example.com · nombre@empresa.com")
+    assert not revisar_texto("Co-Authored-By: Claude <noreply@anthropic.com>")
+
+
+def test_vault_sincronizar(tmp_path, monkeypatch):
+    import subprocess
+
+    import pytest
+
+    from arnes import vault as mv
+
+    def git(d, *a):
+        subprocess.run(["git", "-C", str(d), *a], check=True, capture_output=True)
+
+    remoto, V, otro = tmp_path / "remoto.git", tmp_path / "vault", tmp_path / "otro"
+    subprocess.run(["git", "init", "-q", "--bare", "-b", "main", str(remoto)], check=True)
+    (V / "02-Conceptos").mkdir(parents=True)
+    (V / "02-Conceptos" / "a.md").write_text("# A\n", encoding="utf-8")
+    git(V.parent, "init", "-q", "-b", "main", str(V))
+    for d in (V,):
+        git(d, "config", "user.email", "prueba@example.com")
+        git(d, "config", "user.name", "Prueba")
+    git(V, "remote", "add", "origin", str(remoto))
+    monkeypatch.setenv("ARNES_VAULT", str(V))
+
+    assert "subido" in mv.sincronizar(silencioso=True)
+
+    # una nota nueva y otra editada: el mensaje lo dice
+    (V / "02-Conceptos" / "b.md").write_text("# B\n", encoding="utf-8")
+    (V / "02-Conceptos" / "a.md").write_text("# A\nmás\n", encoding="utf-8")
+    assert mv.sincronizar(silencioso=True).startswith("Vault: notas 1 nuevas, 1 editadas")
+
+    # un cambio hecho en otro clon se integra antes de subir
+    subprocess.run(["git", "clone", "-q", str(remoto), str(otro)], check=True)
+    git(otro, "config", "user.email", "prueba@example.com")
+    git(otro, "config", "user.name", "Prueba")
+    (otro / "02-Conceptos" / "c.md").write_text("# C\n", encoding="utf-8")
+    git(otro, "add", "-A")
+    git(otro, "commit", "-qm", "c")
+    git(otro, "push", "-q")
+    (V / "02-Conceptos" / "d.md").write_text("# D\n", encoding="utf-8")
+    assert "subido" in mv.sincronizar(silencioso=True)
+    assert (V / "02-Conceptos" / "c.md").exists()
+
+    # la guardia bloquea y no deja nada en stage
+    (V / "02-Conceptos" / "e.md").write_text("correo real: ana.lopez@" + "hotmail.com\n", encoding="utf-8")
+    with pytest.raises(mv.ErrorVault, match="guardia"):
+        mv.sincronizar(silencioso=True)
+    assert subprocess.run(["git", "-C", str(V), "diff", "--cached", "--quiet"]).returncode == 0

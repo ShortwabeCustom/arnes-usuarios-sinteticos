@@ -76,8 +76,8 @@ Nunca presentar una simulación como hallazgo de un usuario real ni una frase si
 
 El vault «vault-equipo» se busca en este orden: `ARNES_VAULT`, la carpeta de Google Drive de `conocimiento.yaml` y el
 submódulo `vault/` (repositorio privado `ShortwabeCustom/vault-equipo`). En la Mac de Alexis manda Drive; su historial
-de git vive fuera de Drive (`~/Documents/claude/vault-equipo.git`) y el submódulo queda vacío allí. El arnés no hace
-commit en el vault: después de escribir una síntesis, recordar el commit y el push. Es un wiki vivo que mantiene la persona
+de git vive fuera de Drive (`~/Documents/claude/vault-equipo.git`) y el submódulo queda vacío allí. `arnes sintesis` hace
+commit y push en el vault (con guardia); `arnes vault automatizar` sube cada hora lo que Alexis escribe en Obsidian. Es un wiki vivo que mantiene la persona
 usuaria: el arnés lo **lee en su ruta** y solo **escribe** en `03-Sintesis/`, más una entrada en el índice, una en
 el log y una línea en «Ver también» de las notas de concepto relacionadas (convenciones de `vault-equipo/CLAUDE.md`).
 No editar ninguna otra cosa del vault. Correr `arnes sintesis --simular` antes de escribir.
@@ -125,6 +125,12 @@ Research en tus proyectos, Template de protocolo tipo brief) y `estandares.yaml`
   recorrido con su intervalo, como referencia. Es para personas: nunca presentarlo como tasa de éxito.
 - **Muestra:** el reporte dice cuántas personas recomienda UiX para validar los hallazgos; las corridas sintéticas no
   cuentan para esa muestra.
+
+## Crecer el arnés sin romperlo
+
+Ver `docs/CRECER.md`. En corto: cada cambio de código con su prueba; `.githooks/pre-commit` corre guardia (correos,
+llaves, CURP, tarjetas), lint y pruebas; GitHub Actions repite lo mismo en cada push; `arnes doctor` revisa el entorno;
+una entrada en la bitácora por sesión.
 
 ## Lo que no se toca
 

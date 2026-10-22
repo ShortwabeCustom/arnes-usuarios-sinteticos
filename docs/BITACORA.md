@@ -18,7 +18,7 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
   (submódulo en `vault/`), rama `main`.
 - **Estándares de UiX integrados** (naming, demográficos, semáforo de completitud, muestra, brief de protocolo):
   `fuentes-equipo/uix/`, `arnes/estandares.py`.
-- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 16 pasan. Los dos estudios de ejemplo dan `arnes verificar`
+- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 18 pasan (también en GitHub Actions). Los dos estudios de ejemplo dan `arnes verificar`
   → LISTO PARA ENTREGAR.
 - **Gasto acumulado** en uso de la suscripción: ≈ US$ 9 (sesiones, auditorías, pruebas de fidelidad y pruebas
   sueltas del motor).
@@ -59,6 +59,21 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 - `vault()` busca en este orden: `ARNES_VAULT` → Drive → `./vault`. `arnes sintesis` recuerda hacer commit y push
   si el vault es un repositorio git (el arnés no hace commits en el vault).
 - Pendiente para Alexis: el `CLAUDE.md` del vault sigue en voseo y con rutas de Windows y de otra cuenta de Mac.
+
+**Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el
+crecimiento sano y útil del arnés»):
+- `arnes vault` (`arnes/vault.py`): `estado`, `sincronizar` (trae, hace commit con la lista de notas que cambiaron y
+  sube) y `automatizar`/`quitar` (agente de launchd `com.arnes.vault-sincronizar`, cada hora; bitácora en
+  `~/Library/Logs/arnes-vault.log`; si falla, notificación de macOS). Instalado en la Mac de Alexis y probado: lee
+  Google Drive sin problemas.
+- `arnes sintesis` ya hace commit y push del vault (antes solo lo recordaba); `--sin-subir` lo evita.
+- `arnes/guardia.py`: bloquea correos (salvo dominios de ejemplo), llaves de Anthropic, GitHub y AWS, llaves
+  privadas, contraseñas escritas, CURP y números de tarjeta (con Luhn). La usan el hook, la sincronización del vault y
+  la integración continua. Los dos repositorios pasan limpios.
+- `.githooks/pre-commit` (guardia, lint, pruebas) y `.github/workflows/pruebas.yml` (lo mismo en GitHub).
+- `arnes doctor`: revisa Python, `.venv`, Claude Code, Playwright, bibliotecas, vault, hook y remoto.
+- `docs/CRECER.md`: reglas para cambiar el arnés. 18 pruebas (2 nuevas: guardia y sincronización del vault contra un
+  remoto local, con integración de cambios de otro clon y bloqueo por la guardia).
 
 ---
 
