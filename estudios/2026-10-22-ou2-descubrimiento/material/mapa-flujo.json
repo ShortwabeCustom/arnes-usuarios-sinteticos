@@ -1,0 +1,225 @@
+[
+ {
+  "paso": 0,
+  "nodo": "7723-327419",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 537]",
+  "espera_ms": 1467
+ },
+ {
+  "paso": 1,
+  "nodo": "7723-327702",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 305]",
+  "espera_ms": 1447
+ },
+ {
+  "paso": 2,
+  "nodo": "7723-327703",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 525]",
+  "espera_ms": 1075
+ },
+ {
+  "paso": 3,
+  "nodo": "7723-327462",
+  "zonas": 2,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 428]",
+  "espera_ms": 1112
+ },
+ {
+  "paso": 4,
+  "nodo": "7723-327462",
+  "zonas": 2,
+  "overlay": true,
+  "alteró": false,
+  "accion": "tocar [637, 543]",
+  "espera_ms": 720
+ },
+ {
+  "paso": 5,
+  "nodo": "8922-87422",
+  "zonas": 2,
+  "overlay": true,
+  "alteró": false,
+  "accion": "tocar [637, 575]",
+  "espera_ms": 344
+ },
+ {
+  "paso": 6,
+  "nodo": "7723-326705",
+  "zonas": 3,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 463]",
+  "espera_ms": 356
+ },
+ {
+  "paso": 7,
+  "nodo": "7723-326705",
+  "zonas": 2,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 401]",
+  "espera_ms": 355
+ },
+ {
+  "paso": 8,
+  "nodo": "7723-326705",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 332]",
+  "espera_ms": 351
+ },
+ {
+  "paso": 9,
+  "nodo": "7723-326707",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 401]",
+  "espera_ms": 777
+ },
+ {
+  "paso": 10,
+  "nodo": "7723-326708",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 463]",
+  "espera_ms": 697
+ },
+ {
+  "paso": 11,
+  "nodo": "7723-326710",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 516]",
+  "espera_ms": 721
+ },
+ {
+  "paso": 12,
+  "nodo": "8015-60615",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 378]",
+  "espera_ms": 727
+ },
+ {
+  "paso": 13,
+  "nodo": "7723-326713",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [638, 391]",
+  "espera_ms": 674
+ },
+ {
+  "paso": 14,
+  "nodo": "8015-60889",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 543]",
+  "espera_ms": 1042
+ },
+ {
+  "paso": 15,
+  "nodo": "9830-189949",
+  "zonas": 2,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [545, 329]",
+  "espera_ms": 1043
+ },
+ {
+  "paso": 16,
+  "nodo": "9830-189949",
+  "zonas": 2,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [545, 296]",
+  "espera_ms": 342
+ },
+ {
+  "paso": 17,
+  "nodo": "9830-200001",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 380]",
+  "espera_ms": 1476
+ },
+ {
+  "paso": 18,
+  "nodo": "9830-200002",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [637, 542]",
+  "espera_ms": 349
+ },
+ {
+  "paso": 19,
+  "nodo": "7723-326717",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [638, 580]",
+  "espera_ms": 665
+ },
+ {
+  "paso": 20,
+  "nodo": "7723-327683",
+  "zonas": 1,
+  "overlay": true,
+  "alteró": false,
+  "accion": "tocar [681, 388]",
+  "espera_ms": 668
+ },
+ {
+  "paso": 21,
+  "nodo": "9591-77774",
+  "zonas": 1,
+  "overlay": false,
+  "alteró": false,
+  "accion": "tocar [681, 388]",
+  "espera_ms": 667
+ },
+ {
+  "paso": 22,
+  "nodo": "7723-327412",
+  "zonas": 0,
+  "overlay": false,
+  "alteró": false,
+  "accion": "desplazar"
+ },
+ {
+  "paso": 23,
+  "nodo": "7723-327416",
+  "zonas": 0,
+  "overlay": false,
+  "alteró": false,
+  "accion": "desplazar"
+ },
+ {
+  "paso": 24,
+  "nodo": "7723-327416",
+  "zonas": 0,
+  "overlay": false,
+  "alteró": false,
+  "accion": "desplazar",
+  "fin": "sin salida nueva"
+ }
+]
