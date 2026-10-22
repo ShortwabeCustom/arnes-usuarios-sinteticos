@@ -9,6 +9,29 @@
   "sesiones": {
    "t": "2026-10-22T10:30:34",
    "ultima": "T2-itzel-2"
+  },
+  "analizar": {
+   "t": "2026-10-22T10:31:11",
+   "sesiones": 16
+  },
+  "auditar": {
+   "t": "2026-10-22T10:33:44",
+   "evaluadores": 3,
+   "consenso": 155,
+   "tokens": 568275
+  },
+  "reporte": {
+   "t": "2026-10-22T10:37:04",
+   "html": "reporte/oupwa-pdu-originacion-unica-2-0-sintetico_2026-10-22-v1.html",
+   "kb": 7695
+  },
+  "verificar": {
+   "t": "2026-10-22T10:37:04",
+   "avisos": 1
+  },
+  "sintesis": {
+   "t": "2026-10-22T10:37:04",
+   "nota": "03-Sintesis/estudio-2026-10-22-ou2-descubrimiento.md"
   }
  },
  "biblioteca": {

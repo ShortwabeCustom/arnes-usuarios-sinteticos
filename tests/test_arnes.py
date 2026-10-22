@@ -280,9 +280,9 @@ def test_consumo_en_tokens():
     assert consumo.total(d) == 25290 and consumo.nuevos(d) == 3625
     assert consumo.total(consumo.sumar(d, d, None)) == 50580
     assert consumo.cifra(1_234_567) == "1.2 M" and consumo.cifra(24_061) == "24 mil"
-    # el modelo reproduce lo medido en el piloto 3 de OU 2.0: 18 pasos ≈ 1.9 M tokens, 192 mil nuevos
-    e = consumo.estimar_recorrido(18, captura=consumo.CAPTURA_VENTANA)
-    assert 1_700_000 <= consumo.total(e) <= 2_000_000 and 180_000 <= consumo.nuevos(e) <= 205_000
+    # el modelo reproduce lo medido en el panel de OU 2.0 (captura recortada): 17 pasos ≈ 1.15 M tokens, ≈ 155 mil nuevos
+    e = consumo.estimar_recorrido(17)
+    assert 1_050_000 <= consumo.total(e) <= 1_250_000 and 130_000 <= consumo.nuevos(e) <= 180_000
 
 
 def test_limpiar_datos_de_sesion():
@@ -290,3 +290,10 @@ def test_limpiar_datos_de_sesion():
 
     d = limpiar({"pasos": [{"texto": "Escribo maria.g" + "@mail.com y prueba@example.com"}], "n": 3})
     assert d["pasos"][0]["texto"] == "Escribo [correo] y prueba@example.com" and d["n"] == 3
+
+
+def test_guardia_acepta_textos_de_ayuda_de_un_campo():
+    from arnes.guardia import revisar_texto
+
+    assert not revisar_texto("El campo muestra «ejemplo@mail.com» como texto de ayuda")
+    assert revisar_texto("contacto: ana.lopez@" + "mail.com")

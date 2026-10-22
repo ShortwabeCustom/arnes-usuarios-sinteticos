@@ -1,59 +1,272 @@
-# Narrativa del reporte. La escribe el investigador (o el agente) DESPUÉS de `arnes analizar`.
-# El código pone tablas y gráficos; aquí van titulares, interpretación y recomendaciones.
-# Reglas (guía editorial): el titular da la conclusión, no el tema. Hecho → interpretación → hipótesis,
-# sin mezclar. Cada cifra con su base («19 de 24»). Nada de «todos», «nadie», «demuestra», «provoca».
-titulo_corto: ""
-titular: ""            # la conclusión principal, en una frase
-veredicto: ""          # 2–3 frases: qué pasó y qué conviene hacer
-decision:              # chips de la portada
-  - {texto: "", si: true}
-kpis:                  # máximo 4. `verificar` hace que `arnes verificar` recuente la cifra
-  - {valor: "x de y", etiqueta: "", detalle: "", tono: bien, verificar: ""}
-  # comprensión: verificar: "principal|<grupo>|<variante>|<modo>|<momento>|<pregunta>"
-  #              compara: [claveA, claveB]  → el verificador avisa si la brecha no es clara (intervalos de Wilson)
-  # recorrido:   verificar: "<tarea>|<resultado>"   (exito, exito_con_friccion, abandono, …)
-kpis_nota: "Cuentan corridas de perfiles sintéticos, no personas."
-resumen: []            # máximo 10 hallazgos en lenguaje llano
-
-# Comprensión: textos por grupo de pantallas y por pregunta (opcionales)
-grupos: {}
-preguntas: {}
-# Recorrido: nombre legible de cada pantalla (node-id o URL → nombre)
-pantallas: {}
-momentos: []           # {pantalla, tipo: verde|amarillo|rojo, texto}
-
-hipotesis_resultado:   # {id, estado: se_sostiene|se_cae|no_concluyente, evidencia}
-  []
-perfiles: {}           # por integrante: {cita, entiende, rompe, reglas}
+# Narrativa del reporte · OU 2.0, descubrimiento preliminar (recorrido sobre el prototipo de Figma, flujo amarillo).
+# Escrita después de `arnes analizar` y `arnes auditar`. Cifras = sesiones simuladas, no personas.
+titulo_corto: OU 2.0 · descubrimiento
+titular: "El flujo se recorre sin perderse, pero el préstamo se confirma sin ver cuánto se pagará en total: lo señalan 8 de 8 sesiones"
+veredicto: >-
+  Los cuatro perfiles de la PWA llegan de la bienvenida a la pregunta del asesor (8 de 8 sesiones) y, con un asesor, hasta
+  la selfie (8 de 8). La confianza cae en dos momentos: al ver solo el pago semanal ($525 por 100 semanas, sin total) y al
+  autorizar la consulta de buró en letra chica. Conviene mostrar el total a pagar antes de «Confirmar», hacer explícito y
+  legible el consentimiento de buró y decir en qué paso va el usuario. Son hipótesis para validar con personas.
+decision:
+  - {texto: "El flujo base se puede recorrer sin ayuda hasta la pregunta del asesor", si: true}
+  - {texto: "Mostrar el total a pagar antes de confirmar el monto", si: true}
+  - {texto: "Dar por resuelto el consentimiento de buró tal como está", si: false}
+  - {texto: "Evaluar la rama «No me ayuda un asesor»: no existe en el prototipo", si: false}
+kpis:
+  - {valor: "7 de 8", etiqueta: "sesiones de T1 llegan a la pregunta del asesor con fricción", detalle: "Una llega sin fricción. La fricción se concentra en monto y plazo y en el consentimiento de buró.", tono: duda, verificar: "T1|exito_con_friccion"}
+  - {valor: "7 de 8", etiqueta: "sesiones de T2 llegan a la selfie sin fricción", detalle: "Con un asesor presente, el tramo de número de empleado, selfie y permisos se recorre en 6–7 toques.", tono: bien, verificar: "T2|exito"}
+  - {valor: "4", etiqueta: "facilidad percibida en T1 (CES 1–7, mediana)", detalle: "En T2 es 5.5. Las razones de T1: no ver el total, la letra chica y no saber cuántos pasos faltan.", tono: duda, verificar: "metrica|T1|ces"}
+  - {valor: "17", etiqueta: "pasos de la bienvenida a la pregunta del asesor (mediana)", detalle: "13 pantallas y 8 campos. La bienvenida promete «4 pasos» y «menos de 5 minutos».", tono: duda, verificar: "metrica|T1|pasos"}
+kpis_nota: "Corridas de perfiles sintéticos (4 perfiles × 2 corridas por tarea), no personas. El tiempo estimado es un modelo, no una medición."
+resumen:
+  - "En 8 de 8 sesiones de T1 el perfil confirma el monto viendo solo el pago semanal y comenta que no sabe cuánto pagará en total. Itzel hace la cuenta: $525 × 100 semanas es más del doble de $22,000."
+  - "La pantalla del pago semanal tiene la confianza más baja del flujo (media 45 de 100, mínima 33) y fricción 3 o más en 9 de 11 observaciones."
+  - "La autorización de consulta de historial crediticio va en letra chica y se acepta al tocar «Continuar». 7 de 8 sesiones de T1 la mencionan; en 4 (Arturo y Rosalba) el perfil dice que no alcanza a leerla."
+  - "En ningún paso de T1 los perfiles dicen saber en qué parte del proceso van (0 de 130 respuestas «sí»). La bienvenida promete «4 pasos» y la mediana es de 17 pasos; 8 de 8 sesiones de T2 cierran diciendo que no supieron cuántos pasos faltaban."
+  - "Ante «¿te está ayudando un asesor?», 8 de 8 contestarían «No» sin dudar, y 8 de 8 dicen no entender para qué se pregunta; varios sospechan que es para la comisión de alguien."
+  - "Al completar el código de verificación no hay botón ni señal de envío: en 8 de 8 sesiones de T1 el perfil decide esperar sin tocar, por miedo a «tocar a ciegas»."
+  - "Con asesor presente, los permisos de cámara y ubicación no hacen caer la confianza más de 13 puntos; la introducción a la selfie los anticipa. 4 de 8 sesiones de T2 preguntan para qué se usa la ubicación."
+  - "La auditoría con 3 evaluadores coincide (3 de 3) en dos puntos de redacción: «Crédito sujeto a aprobación» contradice el glosario, que pide «préstamo», y «Te prestamos hasta $70,000» no aclara que depende de aprobación."
+  - "«Confirmar» (monto y plazo) y «Tomar foto» (introducción a la selfie) quedan cortados al pie de la pantalla; 5 de 8 sesiones de T2 lo mencionan."
+  - "El primer toque fue el esperado en 16 de 16 sesiones: «Inicia tu solicitud» y «Sí, me están ayudando» se encuentran sin dudar."
+pantallas:
+  "7723-327419": "Bienvenida (carrusel)"
+  "7723-327702": "Uso del préstamo"
+  "7723-327703": "Uso del préstamo · Efectivo elegido"
+  "7723-327462": "Monto y plazo"
+  "8922-87422": "Monto y plazo · pago semanal"
+  "7723-326705": "Datos de contacto"
+  "7723-326707": "Datos de contacto · nombre"
+  "7723-326708": "Datos de contacto · celular"
+  "7723-326710": "Datos de contacto · completos"
+  "8015-60615": "Código de verificación"
+  "7723-326714": "Código · teclado"
+  "7723-326716": "Código · completo"
+  "9830-189949": "¿Te ayuda un asesor?"
+  "9830-200001": "Número de empleado del asesor"
+  "9830-200002": "Número de empleado · escrito"
+  "7723-326717": "Introducción a la selfie"
+  "7723-327683": "Permiso de cámara"
+  "9591-77774": "Permiso de ubicación"
+  "7723-327412": "Cargando"
+  "7723-327416": "Toma de selfie"
+momentos:
+  - {pantalla: "Monto y plazo · pago semanal", tipo: rojo, texto: "Confianza media 45, mínima 33. Itzel: «Quinientos veinticinco por cien semanas… eso es más del doble de lo que pido. Antes de confirmar quiero ver el total»."}
+  - {pantalla: "Datos de contacto · completos", tipo: rojo, texto: "Confianza media 46, mínima 33. Itzel: «No me han dicho el total y ya me piden autorizar buró». Rosalba: «No alcanzo a leer eso bien, ¿no se puede hacer más grande?»."}
+  - {pantalla: "Código · completo", tipo: amarillo, texto: "Sin botón ni aviso de envío. Arturo: «No sé si ya se mandó o si tengo que tocar algo. No quiero tocar a ciegas»."}
+  - {pantalla: "¿Te ayuda un asesor?", tipo: amarillo, texto: "La pregunta se entiende, su propósito no: 8 de 8 sesiones de T1 lo dicen en la pregunta de cierre."}
+  - {pantalla: "Código de verificación", tipo: verde, texto: "La confianza sube: «Esto sí es lo normal en bancos y me da más confianza» (Itzel)."}
+  - {pantalla: "Introducción a la selfie", tipo: verde, texto: "Explica para qué es la foto y anticipa los permisos: «Me dicen para qué es la foto y eso me tranquiliza» (Arturo)."}
+hipotesis_resultado:
+  - {id: H1, estado: se_sostiene, evidencia: "0 de 130 respuestas de T1 dicen saber dónde van; 4 de 8 sesiones de T1 y 8 de 8 de T2 comentan no saber cuántos pasos faltan. Mediana de 17 pasos frente a «4 pasos»; la confianza baja de 62 en la bienvenida a 46 en los datos completos."}
+  - {id: H2, estado: se_sostiene, evidencia: "8 de 8 sesiones de T1 confirman con el pago semanal a la vista y mencionan que no ven el total."}
+  - {id: H3, estado: se_cae, evidencia: "Con asesor presente, la mayor caída entre la pregunta del asesor y el permiso de ubicación es de 13 puntos (Arturo, 65 → 52) y ningún perfil niega un permiso. Es un techo: en T2 el perfil llega sin el cansancio de todo el flujo y acompañado."}
+  - {id: H4, estado: se_sostiene, evidencia: "8 de 8 contestarían «No» sin dudar, pero 8 de 8 dicen no entender para qué se pregunta."}
+  - {id: H5, estado: se_cae, evidencia: "En datos de contacto ningún toque cae sobre «Continuar» deshabilitado: los perfiles llenan los tres campos en orden y continúan."}
+perfiles:
+  bryan: {cita: "Fue bastante fácil y rápido, todo en el cel, pero nunca me dijeron cuántos pasos faltaban y solo vi el pago semanal sin costo total.", entiende: "El orden del flujo y el código de verificación.", rompe: "No ver el total ni el avance; quiere resolverlo solo y rápido."}
+  itzel: {cita: "Me dan un solo número y yo tengo que hacer la cuenta.", entiende: "Que todo sigue en el celular y que no pide datos al inicio.", rompe: "Autorizar buró antes de saber el total; es la sesión con CES más bajo (3)."}
+  rosalba: {cita: "No alcanzo a leer eso bien, ¿no se puede hacer más grande?", entiende: "La seriedad del banco y los pasos cortos.", rompe: "La letra chica de los avisos y elegir el plazo."}
+  arturo: {cita: "No sé si ya se mandó o si tengo que tocar algo. No quiero tocar a ciegas.", entiende: "Las pantallas con letra grande y para qué es la selfie.", rompe: "La letra chica, el código sin botón y no tener a quién preguntar."}
 hallazgos:
   - id: H1
-    titulo: ""         # conclusión, no tema
-    severidad: 3       # 0 sin problema · 1 cosmético · 2 menor · 3 importante · 4 crítico
-    categoria: A       # solo recorrido: A diseño · C cableado. B (estado de prototipado) va en estado_prototipado
-    donde: ""
-    pantalla: ""       # recorrido: node-id o URL, para el embudo
-    sesiones: []       # ids de sesión afectadas → frecuencia y matriz usuario × problema
-    impacto_negocio: 3 # 1–5, para la prioridad F × S × I
-    oportunidad: mejorar   # template de protocolo de UiX: mantener · mejorar · incorporar · hacer_diferente
-    hallazgo: ""       # qué ocurrió, con cifra
-    interpretacion: "" # por qué podría ocurrir
-    recomendacion: ""  # qué cambiar
-    evidencia: ""      # archivo, captura, sesión
-    heuristica: ""     # p. ej. «Nielsen 4 · Consistencia y estándares»
-    walkthrough: null  # recorrido: 1 ¿intentará el resultado correcto? · 2 ¿notará la acción? · 3 ¿la asociará con su meta? · 4 ¿verá que avanza?
-    wcag: ""           # p. ej. «1.4.3 Contraste mínimo»
-    confianza: media   # alta · media · baja
+    titulo: "Se confirma el monto sin ver el total a pagar: solo aparece el pago semanal"
+    severidad: 3
+    categoria: A
+    oportunidad: incorporar
+    donde: "Monto y plazo, después de elegir las semanas"
+    pantalla: "8922-87422"
+    sesiones: [T1-arturo-1, T1-arturo-2, T1-bryan-1, T1-bryan-2, T1-itzel-1, T1-itzel-2, T1-rosalba-1, T1-rosalba-2]
+    impacto_negocio: 5
+    walkthrough: 3
+    hallazgo: "En 8 de 8 sesiones de T1 el perfil confirma con «Tu pago semanal sería de: $525 Pesos» a la vista y comenta que no sabe el total. Es la pantalla con la confianza más baja del flujo (media 45, mínima 33) y fricción 3 o más en 9 de 11 observaciones."
+    interpretacion: "El pago semanal sirve para decidir si alcanza, pero no para saber cuánto cuesta el préstamo. Con 100 semanas, el total que calculan los perfiles es más del doble del monto; descubrirlo después (o hacer la cuenta) erosiona la confianza justo antes de pedir datos y autorizar buró."
+    recomendacion: "Mostrar, junto al pago semanal, el total a pagar y el número de pagos, y que cambien al elegir otro plazo. Llevar ese resumen a la confirmación."
+    evidencia: "datos/capturas/T1-itzel-1/p09.png y p10.png · pensamientos de 8922-87422 en las 8 sesiones de T1 · CES de T1."
+    heuristica: "Nielsen 1 · Visibilidad del estado del sistema"
+    confianza: alta
     etiquetas: [EVIDENCIA, SIMULACIÓN]
-    reescritura: []    # [[actual, recomendado, razón]] para UX writing
-aprendizajes_metodo: []   # qué enseñó este estudio sobre el método: va a la síntesis del vault
-conceptos: []             # slugs de notas del vault a enlazar además de las del método
-positivos: []
-estado_prototipado: []
+  - id: H2
+    titulo: "La autorización de buró se acepta al continuar, en letra que los perfiles mayores no alcanzan a leer"
+    severidad: 3
+    categoria: A
+    oportunidad: hacer_diferente
+    donde: "Datos de contacto, pie de pantalla"
+    pantalla: "7723-326710"
+    sesiones: [T1-arturo-1, T1-arturo-2, T1-bryan-1, T1-bryan-2, T1-itzel-1, T1-itzel-2, T1-rosalba-1]
+    impacto_negocio: 4
+    walkthrough: 3
+    hallazgo: "El texto «Al continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral» va en letra chica al pie. 7 de 8 sesiones de T1 lo mencionan; en 4 (Arturo y Rosalba) el perfil dice que no alcanza a leerlo, e Itzel señala que se pide antes de conocer el total. Confianza media 46 en esa pantalla, mínima 33."
+    interpretacion: "La autorización más sensible del flujo queda implícita en un botón genérico. Para quien cuida su historial (Itzel) o lee con dificultad (Arturo, Rosalba), avanzar sin entenderla es aceptar a ciegas."
+    recomendacion: "Separar la autorización de buró en un paso o casilla explícita, con una frase legible de para qué se consulta, después de mostrar el total. Tamaño de texto legible sin hacer zoom."
+    evidencia: "datos/capturas/T1-itzel-1/p14.png · pensamientos de 7723-326705 y 7723-326710 en T1."
+    heuristica: "Nielsen 2 · Relación con el mundo real; Nielsen 1 · Visibilidad del estado del sistema"
+    confianza: alta
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+  - id: H3
+    titulo: "El flujo promete «4 pasos» y en ninguna pantalla dice en cuál va el usuario"
+    severidad: 2
+    categoria: A
+    oportunidad: incorporar
+    donde: "Todo el flujo, desde la bienvenida"
+    pantalla: "7723-327419"
+    sesiones: [T1-arturo-1, T1-bryan-1, T1-bryan-2, T1-itzel-2, T2-arturo-1, T2-arturo-2, T2-bryan-1, T2-bryan-2, T2-itzel-1, T2-itzel-2, T2-rosalba-1, T2-rosalba-2]
+    impacto_negocio: 3
+    walkthrough: 4
+    hallazgo: "La bienvenida dice «Completa tu solicitud en tan solo 4 pasos» y «Tu oferta en menos de 5 minutos». La mediana de T1 es de 17 pasos en 13 pantallas; en 0 de 130 respuestas el perfil dice saber en qué parte del proceso va; 4 de 8 sesiones de T1 y 8 de 8 de T2 comentan, en el recorrido o al calificarlo, que no supieron cuántos pasos faltaban."
+    interpretacion: "Sin indicador, cada pantalla nueva se vive como un paso extra frente a la promesa de 4. La sensación de «mil pantallas» aparece aunque cada una sea corta."
+    recomendacion: "Agrupar las pantallas en los 4 pasos prometidos y mostrar «Paso N de 4» con el nombre del paso, o ajustar la promesa a lo que se recorre."
+    evidencia: "Métrica «sabe dónde va» de `arnes analizar` · CES de T1 y T2 · auditoría: 3 de 3 evaluadores señalan la falta de indicador de avance (Nielsen 1)."
+    heuristica: "Nielsen 1 · Visibilidad del estado del sistema"
+    confianza: media
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+  - id: H4
+    titulo: "La pregunta del asesor se entiende, pero no dice para qué se hace"
+    severidad: 2
+    categoria: A
+    oportunidad: mejorar
+    donde: "¿Te ayuda un asesor?"
+    pantalla: "9830-189949"
+    sesiones: [T1-arturo-1, T1-arturo-2, T1-bryan-1, T1-bryan-2, T1-itzel-1, T1-itzel-2, T1-rosalba-1, T1-rosalba-2]
+    impacto_negocio: 3
+    walkthrough: 3
+    hallazgo: "En la pregunta de cierre, 8 de 8 sesiones de T1 contestarían «No» porque lo hacen solas, y 8 de 8 dicen no entender para qué se pregunta. Varios perfiles suponen que es para la comisión de alguien o para que los llamen."
+    interpretacion: "Una pregunta sin propósito explícito en medio de una solicitud de crédito invita a sospechar. La duda no impide responder, pero resta confianza a quien va solo, que es el caso que el prototipo no cubre."
+    recomendacion: "Agregar una línea que explique el uso: por ejemplo, que si un asesor te ayuda, su número permite darte seguimiento. Conectar la rama «No» en el prototipo para poder evaluarla."
+    evidencia: "Campo `cierre` de las 8 sesiones de T1."
+    heuristica: "Nielsen 2 · Relación con el mundo real"
+    confianza: media
+    etiquetas: [SIMULACIÓN]
+    reescritura:
+      - ["María, ¿te está ayudando un asesor?", "¿Te está ayudando un asesor? Si es así, ingresa su número para que te dé seguimiento.", "Dice para qué se pregunta y qué pasa si respondes que sí."]
+  - id: H5
+    titulo: "Al completar el código no hay botón ni aviso de envío: los perfiles esperan sin saber si se mandó"
+    severidad: 2
+    categoria: A
+    oportunidad: mejorar
+    donde: "Código de verificación, con los 6 dígitos escritos"
+    pantalla: "7723-326716"
+    sesiones: [T1-arturo-1, T1-arturo-2, T1-bryan-1, T1-bryan-2, T1-itzel-1, T1-itzel-2, T1-rosalba-1, T1-rosalba-2]
+    impacto_negocio: 2
+    walkthrough: 4
+    hallazgo: "Con el código completo la pantalla no muestra botón ni estado. En 8 de 8 sesiones de T1 el perfil elige «esperar» en esa pantalla «a ver si avanza sola»; fricción 3 en 3 de 16 observaciones."
+    interpretacion: "Si el envío es automático, falta la señal de que se está verificando. En el prototipo el avance es una zona invisible al pie: puede ser un atajo de prototipado (verificar en el producto)."
+    recomendacion: "Mostrar «Verificando…» al completar el sexto dígito o un botón «Verificar» visible."
+    evidencia: "Acción «esperar» en 7723-326716 en las 8 sesiones de T1 · pensamientos de Arturo y Rosalba."
+    heuristica: "Nielsen 1 · Visibilidad del estado del sistema"
+    confianza: media
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+  - id: H6
+    titulo: "«Confirmar» y «Tomar foto» quedan cortados al pie de la pantalla"
+    severidad: 2
+    categoria: A
+    oportunidad: mejorar
+    donde: "Monto y plazo; introducción a la selfie"
+    pantalla: "7723-326717"
+    sesiones: [T2-arturo-1, T2-bryan-1, T2-itzel-1, T2-rosalba-1, T2-rosalba-2]
+    impacto_negocio: 2
+    walkthrough: 2
+    hallazgo: "En el tamaño «Android Grande» del prototipo, el botón principal de esas dos pantallas aparece cortado hasta desplazar. 5 de 8 sesiones de T2 lo mencionan en su calificación de facilidad."
+    interpretacion: "Un botón cortado se lee como «no es para mí todavía» o como error de la página; obliga a buscar la acción principal."
+    recomendacion: "Fijar el botón principal al pie (sticky) o compactar el contenido para que quepa sin desplazar en pantallas de 800 px de alto."
+    evidencia: "datos/capturas/T2-itzel-1/p04.png · datos/capturas/T1-itzel-1/p09.png · CES de T2."
+    heuristica: "Nielsen 6 · Reconocer antes que recordar"
+    confianza: media
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+  - id: H7
+    titulo: "El permiso de ubicación no dice para qué se usa"
+    severidad: 1
+    categoria: A
+    oportunidad: mejorar
+    donde: "Permiso de ubicación"
+    pantalla: "9591-77774"
+    sesiones: [T2-arturo-2, T2-itzel-1, T2-rosalba-1, T2-rosalba-2]
+    impacto_negocio: 2
+    walkthrough: 3
+    hallazgo: "4 de 8 sesiones de T2 comentan que no se explica para qué se pide la ubicación; aun así permiten, apoyadas en el aviso previo y en el asesor presente."
+    interpretacion: "Con asesor el permiso pasa; sin él (caso no cubierto) la misma falta de propósito podría pesar más, como dice Itzel."
+    recomendacion: "Agregar el propósito en el aviso previo o en el diálogo propio: por ejemplo, «para confirmar que la solicitud se hace desde México»."
+    evidencia: "Pensamientos de 9591-77774 en T2 · auditoría: 3 de 3 evaluadores (Nielsen 1)."
+    heuristica: "Nielsen 2 · Relación con el mundo real"
+    confianza: media
+    etiquetas: [SIMULACIÓN]
+  - id: H8
+    titulo: "La pantalla de uso dice «Crédito» y la bienvenida promete un monto sin aclarar que depende de aprobación"
+    severidad: 2
+    categoria: A
+    oportunidad: mejorar
+    donde: "Bienvenida; uso del préstamo"
+    pantalla: "7723-327702"
+    sesiones: []
+    impacto_negocio: 3
+    hallazgo: "En la auditoría, 3 de 3 evaluadores marcan «Crédito sujeto a aprobación» porque el glosario de la PWA pide «préstamo» (criterio G2, severidad 3), y «¡Te prestamos hasta $70,000…!» porque suena a promesa sin aclarar la aprobación (G1, severidad 2.7)."
+    interpretacion: "Mezclar «crédito» y «préstamo» en la misma pantalla resta consistencia; una cifra «hasta» sin condición puede leerse como monto asegurado."
+    recomendacion: "Usar «préstamo» en todo el flujo y acompañar el monto de la bienvenida con la condición («sujeto a aprobación»)."
+    evidencia: "datos/auditoria.json (consenso 3 de 3)."
+    heuristica: "Nielsen 4 · Consistencia y estándares; guía de voz de la PWA G1 y G2"
+    confianza: media
+    etiquetas: [MODELO]
+    reescritura:
+      - ["Crédito sujeto a aprobación.", "Préstamo sujeto a aprobación.", "Glosario de la PWA: «préstamo», no «crédito»."]
+  - id: H9
+    titulo: "Antes de elegir el plazo, el pago semanal se muestra como «$0 Pesos»"
+    severidad: 2
+    categoria: A
+    oportunidad: mejorar
+    donde: "Monto y plazo, antes de elegir semanas"
+    pantalla: "7723-327462"
+    sesiones: []
+    impacto_negocio: 2
+    hallazgo: "3 de 3 evaluadores señalan que «Tu pago semanal sería de: $0 Pesos» parece un dato real mientras no hay plazo (Nielsen 1, severidad 3), y que «Confirmar» aparece deshabilitado sin decir por qué (Nielsen 5)."
+    interpretacion: "Un cero en una cifra de dinero se lee como resultado, no como espacio vacío."
+    recomendacion: "Mostrar «Elige un plazo para ver tu pago» en lugar de $0, y explicar junto al botón qué falta."
+    evidencia: "datos/auditoria.json (consenso 3 de 3) · datos/capturas/T1-itzel-1/p09.png."
+    heuristica: "Nielsen 1 · Visibilidad del estado del sistema; Nielsen 5 · Prevención de errores"
+    confianza: media
+    etiquetas: [MODELO, EVIDENCIA]
+aprendizajes_metodo:
+  - "Prototipos táctiles de Figma: el cursor de «dedo» aparece en todo el lienzo y el barrido de cursor da 0 zonas. Los resaltados de hotspots (tocar el fondo) sí las encuentran; dentro de un overlay hay que tocar su manija o se cierra."
+  - "Validar el instrumento con el mismo camino de código que la sesión real (ventana visible, mismas rutas de captura, pausas de pensamiento). El mapeo sin ventana pasó y la sesión falló tres veces: escala Retina, captura previa sobrescrita y toque demasiado rápido."
+  - "El toque en Figma necesita llegar, esperar y tocar (150 ms): mover y hacer clic en el mismo instante a veces cuenta como toque fuera del botón."
+  - "Cuando el prototipo no conecta una rama (el «No» del asesor), dividir en dos tareas y cerrar la primera con una pregunta sin actuar conserva la hipótesis sin medir el prototipo en lugar del producto."
+  - "Recortar la captura al teléfono reduce el crecimiento del contexto de ≈ 4,800 a ≈ 3,100 tokens por paso. La estimación previa quedó ≈ 20% baja; recalibrada con las 16 sesiones, su error medio es ≈ 3%."
+conceptos: [first-click-testing, formularios-copy-y-validacion, accesibilidad-cognitiva, metricas-ux]
+positivos:
+  - "El primer toque fue el esperado en 16 de 16 sesiones: la acción principal de la bienvenida y de la pregunta del asesor se encuentran sin dudar."
+  - "El código de verificación sube la confianza: los perfiles lo reconocen como «lo normal en bancos»."
+  - "Los datos de contacto son tres campos y se llenan en orden sin errores ni validaciones disparadas (0 de 8 sesiones)."
+  - "La introducción a la selfie explica para qué es la foto y anticipa los permisos; con asesor, la confianza en cámara y ubicación cae 13 puntos o menos."
+  - "El tramo con asesor (número de empleado → selfie) se completa en 6–7 toques con confianza de 62–72."
+  - "El mensaje de seguridad de la bienvenida («Tus datos están 100% seguros») tranquiliza a Itzel, que teme a las estafas."
+estado_prototipado:
+  - "En «Uso del préstamo» solo «Efectivo» está conectado."
+  - "En «Elige tu plazo» solo responde «100 semanas»: 5 de 8 sesiones de T1 intentan otro plazo (26 o más corto) y no pasa nada."
+  - "La rama «No» de «¿te está ayudando un asesor?» no está conectada: por eso T1 termina en esa pregunta."
+  - "El monto ($22,000) y la barra no se ajustan; los enlaces de Aviso de Privacidad y Consulta de Historial no abren."
+  - "«Tomar selfie» no tiene conexión: es el fin del prototipo."
+  - "Los campos se llenan solos al tocarlos y solo en orden (nombre → celular → correo)."
 limitaciones:
   - "Los perfiles son sintéticos y derivan de la evidencia disponible; no sustituyen pruebas con personas."
-  - "OCEAN no predice conducta de forma determinista; sus valores son de diseño del panel."
-validar_con_personas: []   # el reporte agrega la muestra recomendada por UiX para la metodología del estudio
-proximos_pasos: []
-limitaciones_tecnicas: []   # lo que no se pudo abrir, navegar, verificar o guardar
+  - "4 perfiles (panel base4, sin capa OCEAN) × 2 corridas por tarea: hablan de patrones del panel, no de porcentajes de clientes."
+  - "Es un prototipo: lo no conectado es estado de prototipado, no defecto. El plazo, el monto y la rama «No» no se pudieron evaluar."
+  - "T2 empieza a mitad del flujo y con asesor: la confianza en los permisos es un techo; sin asesor y tras todo el flujo podría ser menor."
+  - "Los datos los llena el prototipo: no se mide el esfuerzo real de escribir. El tiempo estimado es un modelo [SUPUESTO]."
+  - "El perfil ve las zonas tocables numeradas, que una persona no ve [SUPUESTO METODOLÓGICO]; un toque que no cambia la pantalla se repite una vez."
+  - "Las sesiones de Bryan se corrieron con el banner de cookies visible fuera del teléfono; las demás, sin él. No afecta lo que el perfil ve (captura recortada al teléfono)."
+validar_con_personas:
+  - "Si mostrar el total a pagar junto al pago semanal cambia la decisión de plazo y la confianza (prueba A/B de la pantalla de monto y plazo)."
+  - "Si las personas entienden qué autorizan con la consulta de buró y cómo prefieren darla (casilla explícita frente a texto al pie)."
+  - "Cómo responden a la pregunta del asesor quienes solicitan solos, una vez conectada la rama «No»."
+  - "Los permisos de cámara y ubicación sin asesor presente, al final del flujo completo."
+proximos_pasos:
+  - "Conectar en el prototipo la rama «No» del asesor, los plazos y el monto, y repetir el recorrido (es la línea base de este benchmark)."
+  - "Comparar con la PWA actual en el ambiente dev con el mismo protocolo para tener la segunda columna del benchmark."
+  - "Probar las recomendaciones H1–H3 con personas: 8–10 en prueba de usabilidad, según la guía de UiX."
+limitaciones_tecnicas:
+  - "Dos pilotos y la primera ronda de Bryan fallaron por el instrumento (escala de captura, overlays, toque rápido); están en datos/historial/ y no cuentan como resultados."
 fuentes:
-  - {nombre: "", ruta: "", uso: ""}
+  - {nombre: "Prototipo OU 2.0 · Cliente (flujo amarillo)", ruta: "figma.com/proto/UchZSf5TEKlm88h1cJTyRG", uso: "Material del recorrido"}
+  - {nombre: "User Persona OU-PWA", ruta: "personas/pwa/", uso: "Panel base4: Bryan, Itzel, Rosalba, Arturo"}
+  - {nombre: "Guía de voz y estilo de la PWA", ruta: "fuentes-producto/pwa/", uso: "Criterios G de la auditoría"}
+  - {nombre: "Estándares de UiX", ruta: "fuentes-equipo/uix/", uso: "Naming, semáforo de completitud, muestra para validar"}
+  - {nombre: "Mapa del flujo (recorrido mecánico)", ruta: "estudios/2026-10-22-ou2-descubrimiento/material/", uso: "Pantallas, node-ids y criterio de fin"}

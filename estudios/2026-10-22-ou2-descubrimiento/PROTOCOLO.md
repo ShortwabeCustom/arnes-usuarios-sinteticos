@@ -3,7 +3,7 @@ titulo: "Protocolo · oupwa-pdu-originacion-unica-2-0-sintetico_2026-10-22-v1"
 fecha: "2026-10-22"
 autor: "Alexis Valdez + Claude"
 tipo: "Recorrido de flujo con usuarios sintéticos"
-estado: "Diseño — pendiente de aprobación antes de correr"
+estado: "Completado — reporte verificado (LISTO PARA ENTREGAR) y síntesis en el vault"
 ---
 
 # Protocolo · oupwa-pdu-originacion-unica-2-0-sintetico_2026-10-22-v1
@@ -157,9 +157,9 @@ Resultado por tarea: éxito · éxito con fricción · cree que terminó · aban
 - [x] `arnes revisar` sin errores y avisos leídos
 - [x] Baseline (`baseline_url`) o razón declarada; `primer_toque` por tarea
 - [x] Piloto: un perfil, una tarea, capturas revisadas (3 intentos; los 2 primeros fallaron por el instrumento)
-- [ ] 2 corridas por perfil planeadas
+- [x] 2 corridas por perfil planeadas
 - [x] Pre-flight completo, sin bloqueos
 - [x] Tareas con criterio de fin verificable por el arnés
 - [x] Panel revisado
-- [ ] Brief completo, con autorización y decisión de investigar
-- [ ] Consumo estimado aceptado (`arnes recorrido <estudio> todos --simular`, en tokens)
+- [x] Brief completo, con autorización y decisión de investigar
+- [x] Consumo estimado aceptado (`arnes recorrido <estudio> todos --simular`, en tokens)

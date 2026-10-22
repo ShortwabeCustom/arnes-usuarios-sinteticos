@@ -15,7 +15,9 @@ import sys
 from pathlib import Path
 
 # Dominios de ejemplo que aparecen en plantillas y en notas de UX writing.
-CORREOS_DE_EJEMPLO = re.compile(r"@(example\.(com|org|net)|ejemplo\.com|empresa\.com|correo\.com|dominio\.com)$|^noreply@", re.I)
+# Dominios de ejemplo y textos de ayuda típicos de un campo de correo («ejemplo@mail.com», «tucorreo@…»).
+CORREOS_DE_EJEMPLO = re.compile(r"@(example\.(com|org|net)|ejemplo\.com|empresa\.com|correo\.com|dominio\.com)$"
+                                r"|^(noreply|ejemplo|example|tucorreo|tu\.correo|usuario|nombre|correo)@", re.I)
 
 PATRONES = [
     ("correo", re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")),

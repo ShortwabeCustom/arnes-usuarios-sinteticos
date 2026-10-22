@@ -1,0 +1,3166 @@
+{
+ "n_sesiones": 16,
+ "resultados": {
+  "T1": {
+   "exito_con_friccion": 7,
+   "exito": 1
+  },
+  "T2": {
+   "exito": 7,
+   "exito_con_friccion": 1
+  }
+ },
+ "wcag_258": [
+  {
+   "pantalla": "7723-327419",
+   "captura": "datos/capturas/T1-arturo-1/p01.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-327702",
+   "captura": "datos/capturas/T1-arturo-1/p02.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-327703",
+   "captura": "datos/capturas/T1-arturo-1/p03.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-327462",
+   "captura": "datos/capturas/T1-arturo-1/p04.png",
+   "objetivos": 2,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "8922-87422",
+   "captura": "datos/capturas/T1-arturo-1/p06.png",
+   "objetivos": 2,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326705",
+   "captura": "datos/capturas/T1-arturo-1/p07.png",
+   "objetivos": 3,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326707",
+   "captura": "datos/capturas/T1-arturo-1/p08.png",
+   "objetivos": 2,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326708",
+   "captura": "datos/capturas/T1-arturo-1/p09.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326710",
+   "captura": "datos/capturas/T1-arturo-1/p10.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "8015-60615",
+   "captura": "datos/capturas/T1-arturo-1/p11.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326714",
+   "captura": "datos/capturas/T1-arturo-1/p12.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326716",
+   "captura": "datos/capturas/T1-arturo-1/p13.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "9830-189949",
+   "captura": "datos/capturas/T2-arturo-1/p01.png",
+   "objetivos": 2,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "9830-200001",
+   "captura": "datos/capturas/T2-arturo-1/p02.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "9830-200002",
+   "captura": "datos/capturas/T2-arturo-1/p03.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-326717",
+   "captura": "datos/capturas/T2-arturo-1/p04.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "7723-327683",
+   "captura": "datos/capturas/T2-arturo-1/p06.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  },
+  {
+   "pantalla": "9591-77774",
+   "captura": "datos/capturas/T2-arturo-1/p07.png",
+   "objetivos": 1,
+   "fallan": [],
+   "aproximado": true
+  }
+ ],
+ "primer_toque": {
+  "T1": {
+   "correcto": 8,
+   "total": 8,
+   "completan_si_correcto": "8 de 8",
+   "completan_si_incorrecto": "0 de 0"
+  },
+  "T2": {
+   "correcto": 8,
+   "total": 8,
+   "completan_si_correcto": "8 de 8",
+   "completan_si_incorrecto": "0 de 0"
+  }
+ },
+ "robustez": {
+  "repetidas": {
+   "T1|arturo": [
+    "exito_con_friccion",
+    "exito_con_friccion"
+   ],
+   "T1|bryan": [
+    "exito",
+    "exito_con_friccion"
+   ],
+   "T1|itzel": [
+    "exito_con_friccion",
+    "exito_con_friccion"
+   ],
+   "T1|rosalba": [
+    "exito_con_friccion",
+    "exito_con_friccion"
+   ],
+   "T2|arturo": [
+    "exito",
+    "exito_con_friccion"
+   ],
+   "T2|bryan": [
+    "exito",
+    "exito"
+   ],
+   "T2|itzel": [
+    "exito",
+    "exito"
+   ],
+   "T2|rosalba": [
+    "exito",
+    "exito"
+   ]
+  },
+  "estables": 6,
+  "con_repeticion": 8,
+  "alertas": [
+   "2 de 8 perfil-tareas cambian de resultado entre corridas: reportar solo lo que se repite"
+  ]
+ },
+ "metricas": {
+  "sesiones": [
+   {
+    "sesion": "T1-arturo-1",
+    "tarea": "T1",
+    "integrante": "arturo",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 14,
+    "pantallas": 13,
+    "clics": 13,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 33.1,
+    "tiempo_rango_s": [
+     33.1,
+     33.1
+    ],
+    "espera_sistema_s": 9.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 13,
+     "no": 1
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 14,
+      "tiempo_s": 33.1,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 13,
+      "tiempo_s": 30.6,
+      "clics": 12,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 12,
+      "tiempo_s": 28.1,
+      "clics": 11,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 11,
+      "tiempo_s": 26.0,
+      "clics": 10,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 9,
+      "tiempo_s": 20.6,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.4,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.8,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.3,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.8,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.3,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.8,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-arturo-2",
+    "tarea": "T1",
+    "integrante": "arturo",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 17,
+    "pantallas": 13,
+    "clics": 14,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 1,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 39.0,
+    "tiempo_rango_s": [
+     39.0,
+     39.0
+    ],
+    "espera_sistema_s": 10.5,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 14,
+     "no": 3
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 17,
+      "tiempo_s": 39.0,
+      "clics": 14,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 16,
+      "tiempo_s": 36.5,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 15,
+      "tiempo_s": 34.0,
+      "clics": 12,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 14,
+      "tiempo_s": 31.9,
+      "clics": 11,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 9,
+      "tiempo_s": 20.6,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.3,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.8,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.3,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.9,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.4,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.9,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-bryan-1",
+    "tarea": "T1",
+    "integrante": "bryan",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 14,
+    "pantallas": 13,
+    "clics": 13,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 33.1,
+    "tiempo_rango_s": [
+     33.1,
+     33.1
+    ],
+    "espera_sistema_s": 9.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 13,
+     "no": 1
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 14,
+      "tiempo_s": 33.1,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 13,
+      "tiempo_s": 30.6,
+      "clics": 12,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 12,
+      "tiempo_s": 28.1,
+      "clics": 11,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 11,
+      "tiempo_s": 26.0,
+      "clics": 10,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 9,
+      "tiempo_s": 20.6,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.3,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.9,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.4,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.9,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.4,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.9,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-bryan-2",
+    "tarea": "T1",
+    "integrante": "bryan",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 17,
+    "pantallas": 13,
+    "clics": 14,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 1,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 39.0,
+    "tiempo_rango_s": [
+     39.0,
+     39.0
+    ],
+    "espera_sistema_s": 10.5,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 8,
+     "no": 9
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 17,
+      "tiempo_s": 39.0,
+      "clics": 14,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 16,
+      "tiempo_s": 36.5,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 15,
+      "tiempo_s": 34.0,
+      "clics": 12,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 14,
+      "tiempo_s": 31.9,
+      "clics": 11,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 9,
+      "tiempo_s": 20.6,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.3,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.8,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.4,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.9,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.3,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.9,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-itzel-1",
+    "tarea": "T1",
+    "integrante": "itzel",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 18,
+    "pantallas": 13,
+    "clics": 15,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 1,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 41.5,
+    "tiempo_rango_s": [
+     41.5,
+     41.5
+    ],
+    "espera_sistema_s": 11.2,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 10,
+     "no": 8
+    },
+    "ces": 3,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 18,
+      "tiempo_s": 41.5,
+      "clics": 15,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 17,
+      "tiempo_s": 39.0,
+      "clics": 14,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 16,
+      "tiempo_s": 36.5,
+      "clics": 13,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 15,
+      "tiempo_s": 34.4,
+      "clics": 12,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 10,
+      "tiempo_s": 22.3,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.4,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.3,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.8,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.3,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.8,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.3,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.8,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-itzel-2",
+    "tarea": "T1",
+    "integrante": "itzel",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 14,
+    "pantallas": 13,
+    "clics": 13,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 33.1,
+    "tiempo_rango_s": [
+     33.1,
+     33.1
+    ],
+    "espera_sistema_s": 9.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 11,
+     "no": 3
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 14,
+      "tiempo_s": 33.1,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 13,
+      "tiempo_s": 30.7,
+      "clics": 12,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 12,
+      "tiempo_s": 28.1,
+      "clics": 11,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 11,
+      "tiempo_s": 26.0,
+      "clics": 10,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 9,
+      "tiempo_s": 20.6,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.4,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.9,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.4,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.9,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.4,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.9,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-rosalba-1",
+    "tarea": "T1",
+    "integrante": "rosalba",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 18,
+    "pantallas": 13,
+    "clics": 14,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 1,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 40.8,
+    "tiempo_rango_s": [
+     40.8,
+     40.8
+    ],
+    "espera_sistema_s": 10.9,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 17,
+     "no": 1
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 18,
+      "tiempo_s": 40.8,
+      "clics": 14,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 17,
+      "tiempo_s": 38.3,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 16,
+      "tiempo_s": 35.8,
+      "clics": 12,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 15,
+      "tiempo_s": 33.6,
+      "clics": 11,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 10,
+      "tiempo_s": 22.3,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.4,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.9,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.4,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.9,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.3,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.8,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T1-rosalba-2",
+    "tarea": "T1",
+    "integrante": "rosalba",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 18,
+    "pantallas": 13,
+    "clics": 14,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 1,
+    "campos": 8,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 40.8,
+    "tiempo_rango_s": [
+     40.8,
+     40.8
+    ],
+    "espera_sistema_s": 10.9,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 16,
+     "no": 2
+    },
+    "ces": 4,
+    "distancia_a_la_compra": {
+     "7723-327419": {
+      "pasos": 18,
+      "tiempo_s": 40.8,
+      "clics": 14,
+      "campos": 8
+     },
+     "7723-327702": {
+      "pasos": 17,
+      "tiempo_s": 38.3,
+      "clics": 13,
+      "campos": 8
+     },
+     "7723-327703": {
+      "pasos": 16,
+      "tiempo_s": 35.8,
+      "clics": 12,
+      "campos": 7
+     },
+     "7723-327462": {
+      "pasos": 15,
+      "tiempo_s": 33.6,
+      "clics": 11,
+      "campos": 7
+     },
+     "8922-87422": {
+      "pasos": 10,
+      "tiempo_s": 22.4,
+      "clics": 8,
+      "campos": 5
+     },
+     "7723-326705": {
+      "pasos": 8,
+      "tiempo_s": 18.5,
+      "clics": 7,
+      "campos": 5
+     },
+     "7723-326707": {
+      "pasos": 7,
+      "tiempo_s": 16.4,
+      "clics": 6,
+      "campos": 2
+     },
+     "7723-326708": {
+      "pasos": 6,
+      "tiempo_s": 13.9,
+      "clics": 5,
+      "campos": 2
+     },
+     "7723-326710": {
+      "pasos": 5,
+      "tiempo_s": 11.3,
+      "clics": 4,
+      "campos": 2
+     },
+     "8015-60615": {
+      "pasos": 4,
+      "tiempo_s": 8.8,
+      "clics": 3,
+      "campos": 2
+     },
+     "7723-326714": {
+      "pasos": 3,
+      "tiempo_s": 6.4,
+      "clics": 2,
+      "campos": 1
+     },
+     "7723-326716": {
+      "pasos": 2,
+      "tiempo_s": 3.8,
+      "clics": 1,
+      "campos": 1
+     },
+     "9830-189949": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 1
+     }
+    }
+   },
+   {
+    "sesion": "T2-arturo-1",
+    "tarea": "T2",
+    "integrante": "arturo",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 15.9,
+    "tiempo_rango_s": [
+     15.9,
+     15.9
+    ],
+    "espera_sistema_s": 4.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 7,
+     "no": 0
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 7,
+      "tiempo_s": 15.9,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 6,
+      "tiempo_s": 13.7,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 5,
+      "tiempo_s": 11.2,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 4,
+      "tiempo_s": 9.1,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.4,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-arturo-2",
+    "tarea": "T2",
+    "integrante": "arturo",
+    "resultado": "exito_con_friccion",
+    "completa": true,
+    "pasos": 6,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 14.1,
+    "tiempo_rango_s": [
+     14.1,
+     14.1
+    ],
+    "espera_sistema_s": 3.6,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 3,
+     "no": 3
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 6,
+      "tiempo_s": 14.1,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 5,
+      "tiempo_s": 12.0,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 4,
+      "tiempo_s": 9.5,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 3,
+      "tiempo_s": 7.4,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.4,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-bryan-1",
+    "tarea": "T2",
+    "integrante": "bryan",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 15.9,
+    "tiempo_rango_s": [
+     15.9,
+     15.9
+    ],
+    "espera_sistema_s": 4.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 7,
+     "no": 0
+    },
+    "ces": 6,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 7,
+      "tiempo_s": 15.9,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 6,
+      "tiempo_s": 13.8,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 5,
+      "tiempo_s": 11.2,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 4,
+      "tiempo_s": 9.1,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.5,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-bryan-2",
+    "tarea": "T2",
+    "integrante": "bryan",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 6,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 14.1,
+    "tiempo_rango_s": [
+     14.1,
+     14.1
+    ],
+    "espera_sistema_s": 3.6,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 0,
+     "no": 6
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 6,
+      "tiempo_s": 14.1,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 5,
+      "tiempo_s": 12.0,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 4,
+      "tiempo_s": 9.5,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 3,
+      "tiempo_s": 7.4,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.5,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-itzel-1",
+    "tarea": "T2",
+    "integrante": "itzel",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 15.8,
+    "tiempo_rango_s": [
+     15.8,
+     15.8
+    ],
+    "espera_sistema_s": 4.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 0,
+     "no": 7
+    },
+    "ces": 6,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 7,
+      "tiempo_s": 15.8,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 6,
+      "tiempo_s": 13.7,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 5,
+      "tiempo_s": 11.2,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 4,
+      "tiempo_s": 9.1,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.5,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-itzel-2",
+    "tarea": "T2",
+    "integrante": "itzel",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 6,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 14.1,
+    "tiempo_rango_s": [
+     14.1,
+     14.1
+    ],
+    "espera_sistema_s": 3.6,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 6,
+     "no": 0
+    },
+    "ces": 6,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 6,
+      "tiempo_s": 14.1,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 5,
+      "tiempo_s": 12.0,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 4,
+      "tiempo_s": 9.5,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 3,
+      "tiempo_s": 7.3,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.4,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-rosalba-1",
+    "tarea": "T2",
+    "integrante": "rosalba",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 6,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 14.2,
+    "tiempo_rango_s": [
+     14.2,
+     14.2
+    ],
+    "espera_sistema_s": 3.7,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 6,
+     "no": 0
+    },
+    "ces": 6,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 6,
+      "tiempo_s": 14.2,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 5,
+      "tiempo_s": 12.0,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 4,
+      "tiempo_s": 9.5,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 3,
+      "tiempo_s": 7.4,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.5,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   },
+   {
+    "sesion": "T2-rosalba-2",
+    "tarea": "T2",
+    "integrante": "rosalba",
+    "resultado": "exito",
+    "completa": true,
+    "pasos": 7,
+    "pantallas": 7,
+    "clics": 6,
+    "clics_sin_respuesta": 0,
+    "intentos_fuera_de_zonas": 0,
+    "campos": 2,
+    "caracteres_escritos": 0,
+    "tiempo_estimado_s": 15.9,
+    "tiempo_rango_s": [
+     15.9,
+     15.9
+    ],
+    "espera_sistema_s": 4.0,
+    "validaciones_disparadas": 0,
+    "mensajes_validacion": [],
+    "pantallas_verificacion": [],
+    "cambios_dominio": 0,
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": 0,
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": null,
+    "pantallas_con_estatus": 0,
+    "pantallas_revisadas_estatus": 0,
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 7,
+     "no": 0
+    },
+    "ces": 5,
+    "distancia_a_la_compra": {
+     "9830-189949": {
+      "pasos": 7,
+      "tiempo_s": 15.9,
+      "clics": 6,
+      "campos": 2
+     },
+     "9830-200001": {
+      "pasos": 6,
+      "tiempo_s": 13.7,
+      "clics": 5,
+      "campos": 1
+     },
+     "9830-200002": {
+      "pasos": 5,
+      "tiempo_s": 11.2,
+      "clics": 4,
+      "campos": 0
+     },
+     "7723-326717": {
+      "pasos": 4,
+      "tiempo_s": 9.1,
+      "clics": 3,
+      "campos": 0
+     },
+     "7723-327683": {
+      "pasos": 2,
+      "tiempo_s": 4.9,
+      "clics": 2,
+      "campos": 0
+     },
+     "9591-77774": {
+      "pasos": 1,
+      "tiempo_s": 2.4,
+      "clics": 1,
+      "campos": 0
+     },
+     "7723-327412": {
+      "pasos": 0,
+      "tiempo_s": 0.0,
+      "clics": 0,
+      "campos": 0
+     }
+    }
+   }
+  ],
+  "tareas": {
+   "T1": {
+    "sesiones": 8,
+    "completan": 8,
+    "pasos": {
+     "mediana": 17,
+     "min": 14,
+     "max": 18,
+     "n": 8
+    },
+    "pantallas": {
+     "mediana": 13,
+     "min": 13,
+     "max": 13,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 14,
+     "min": 13,
+     "max": 15,
+     "n": 8
+    },
+    "clics_sin_respuesta": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 8,
+     "min": 8,
+     "max": 8,
+     "n": 8
+    },
+    "tiempo_completan_s": {
+     "mediana": 39,
+     "min": 33.1,
+     "max": 41.5,
+     "n": 8
+    },
+    "espera_sistema_s": {
+     "mediana": 10.5,
+     "min": 9,
+     "max": 11.2,
+     "n": 8
+    },
+    "validaciones_disparadas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "pantallas_verificacion": [],
+    "cambios_dominio": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": {},
+    "estatus": {
+     "con_indicador": 0,
+     "pantallas": 0
+    },
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 102,
+     "no": 28
+    },
+    "ces": {
+     "mediana": 4,
+     "min": 3,
+     "max": 5,
+     "n": 8
+    }
+   },
+   "T2": {
+    "sesiones": 8,
+    "completan": 8,
+    "pasos": {
+     "mediana": 6.5,
+     "min": 6,
+     "max": 7,
+     "n": 8
+    },
+    "pantallas": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 6,
+     "min": 6,
+     "max": 6,
+     "n": 8
+    },
+    "clics_sin_respuesta": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "tiempo_completan_s": {
+     "mediana": 15,
+     "min": 14.1,
+     "max": 15.9,
+     "n": 8
+    },
+    "espera_sistema_s": {
+     "mediana": 3.9,
+     "min": 3.6,
+     "max": 4,
+     "n": 8
+    },
+    "validaciones_disparadas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "pantallas_verificacion": [],
+    "cambios_dominio": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "dominios": [
+     "www.figma.com"
+    ],
+    "pestanas_nuevas": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "permisos": [],
+    "menciones_otro_canal": [],
+    "retoma": {},
+    "estatus": {
+     "con_indicador": 0,
+     "pantallas": 0
+    },
+    "sabe_donde_va": {
+     "si": 0,
+     "mas_o_menos": 36,
+     "no": 16
+    },
+    "ces": {
+     "mediana": 5.5,
+     "min": 5,
+     "max": 6,
+     "n": 8
+    }
+   }
+  },
+  "distancia_por_pantalla": {
+   "7723-327419": {
+    "pasos": {
+     "mediana": 17,
+     "min": 14,
+     "max": 18,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 14,
+     "min": 13,
+     "max": 15,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 8,
+     "min": 8,
+     "max": 8,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 39,
+     "min": 33.1,
+     "max": 41.5,
+     "n": 8
+    }
+   },
+   "7723-327702": {
+    "pasos": {
+     "mediana": 16,
+     "min": 13,
+     "max": 17,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 13,
+     "min": 12,
+     "max": 14,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 8,
+     "min": 8,
+     "max": 8,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 36.5,
+     "min": 30.6,
+     "max": 39,
+     "n": 8
+    }
+   },
+   "7723-327703": {
+    "pasos": {
+     "mediana": 15,
+     "min": 12,
+     "max": 16,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 12,
+     "min": 11,
+     "max": 13,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 34,
+     "min": 28.1,
+     "max": 36.5,
+     "n": 8
+    }
+   },
+   "7723-327462": {
+    "pasos": {
+     "mediana": 14,
+     "min": 11,
+     "max": 15,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 11,
+     "min": 10,
+     "max": 12,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 31.9,
+     "min": 26,
+     "max": 34.4,
+     "n": 8
+    }
+   },
+   "8922-87422": {
+    "pasos": {
+     "mediana": 9,
+     "min": 9,
+     "max": 10,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 8,
+     "min": 8,
+     "max": 8,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 5,
+     "min": 5,
+     "max": 5,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 20.6,
+     "min": 20.6,
+     "max": 22.4,
+     "n": 8
+    }
+   },
+   "7723-326705": {
+    "pasos": {
+     "mediana": 8,
+     "min": 8,
+     "max": 8,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 5,
+     "min": 5,
+     "max": 5,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 18.5,
+     "min": 18.4,
+     "max": 18.5,
+     "n": 8
+    }
+   },
+   "7723-326707": {
+    "pasos": {
+     "mediana": 7,
+     "min": 7,
+     "max": 7,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 6,
+     "min": 6,
+     "max": 6,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 16.4,
+     "min": 16.3,
+     "max": 16.4,
+     "n": 8
+    }
+   },
+   "7723-326708": {
+    "pasos": {
+     "mediana": 6,
+     "min": 6,
+     "max": 6,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 5,
+     "min": 5,
+     "max": 5,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 13.9,
+     "min": 13.8,
+     "max": 13.9,
+     "n": 8
+    }
+   },
+   "7723-326710": {
+    "pasos": {
+     "mediana": 5,
+     "min": 5,
+     "max": 5,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 4,
+     "min": 4,
+     "max": 4,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 11.4,
+     "min": 11.3,
+     "max": 11.4,
+     "n": 8
+    }
+   },
+   "8015-60615": {
+    "pasos": {
+     "mediana": 4,
+     "min": 4,
+     "max": 4,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 3,
+     "min": 3,
+     "max": 3,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 8.9,
+     "min": 8.8,
+     "max": 8.9,
+     "n": 8
+    }
+   },
+   "7723-326714": {
+    "pasos": {
+     "mediana": 3,
+     "min": 3,
+     "max": 3,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 6.3,
+     "min": 6.3,
+     "max": 6.4,
+     "n": 8
+    }
+   },
+   "7723-326716": {
+    "pasos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 3.8,
+     "min": 3.8,
+     "max": 3.9,
+     "n": 8
+    }
+   },
+   "9830-189949": {
+    "pasos": {
+     "mediana": 3,
+     "min": 0,
+     "max": 7,
+     "n": 16
+    },
+    "clics": {
+     "mediana": 3,
+     "min": 0,
+     "max": 6,
+     "n": 16
+    },
+    "campos": {
+     "mediana": 1.5,
+     "min": 1,
+     "max": 2,
+     "n": 16
+    },
+    "tiempo_s": {
+     "mediana": 7.0,
+     "min": 0,
+     "max": 15.9,
+     "n": 16
+    }
+   },
+   "9830-200001": {
+    "pasos": {
+     "mediana": 5.5,
+     "min": 5,
+     "max": 6,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 5,
+     "min": 5,
+     "max": 5,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 12.8,
+     "min": 12,
+     "max": 13.8,
+     "n": 8
+    }
+   },
+   "9830-200002": {
+    "pasos": {
+     "mediana": 4.5,
+     "min": 4,
+     "max": 5,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 4,
+     "min": 4,
+     "max": 4,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 10.3,
+     "min": 9.5,
+     "max": 11.2,
+     "n": 8
+    }
+   },
+   "7723-326717": {
+    "pasos": {
+     "mediana": 3.5,
+     "min": 3,
+     "max": 4,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 3,
+     "min": 3,
+     "max": 3,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 8.2,
+     "min": 7.3,
+     "max": 9.1,
+     "n": 8
+    }
+   },
+   "7723-327683": {
+    "pasos": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 2,
+     "min": 2,
+     "max": 2,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 4.9,
+     "min": 4.9,
+     "max": 4.9,
+     "n": 8
+    }
+   },
+   "9591-77774": {
+    "pasos": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 1,
+     "min": 1,
+     "max": 1,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 2.5,
+     "min": 2.4,
+     "max": 2.5,
+     "n": 8
+    }
+   },
+   "7723-327412": {
+    "pasos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "clics": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "campos": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    },
+    "tiempo_s": {
+     "mediana": 0,
+     "min": 0,
+     "max": 0,
+     "n": 8
+    }
+   }
+  },
+  "modelo_tiempo": {
+   "palabras_por_segundo": 3.5,
+   "decision_s": 1.35,
+   "toque_s": 0.4,
+   "tecla_s": 0.3,
+   "relectura": 0.25,
+   "velocidades": [
+    2.5,
+    4.5
+   ]
+  }
+ },
+ "embudo": [
+  {
+   "pantalla": "7723-327419",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-327702",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-327703",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-327462",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "8922-87422",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326705",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326707",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326708",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326710",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "8015-60615",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326714",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326716",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "9830-189949",
+   "sesiones": 16
+  },
+  {
+   "pantalla": "9830-200001",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "9830-200002",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-326717",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-327683",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "9591-77774",
+   "sesiones": 8
+  },
+  {
+   "pantalla": "7723-327412",
+   "sesiones": 8
+  }
+ ],
+ "momentos": [
+  {
+   "sesion": "T1-arturo-1",
+   "paso": 7,
+   "pantalla": "7723-326705",
+   "confianza": 45,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Esa letra de abajo no la alcanzo a leer bien y no sé cómo agrandarla. Nombre, celular y correo sí me los piden con claridad. Eso de la consulta de historial, no sé bien para qué. Voy llenando y luego veo."
+  },
+  {
+   "sesion": "T1-arturo-1",
+   "paso": 10,
+   "pantalla": "7723-326710",
+   "confianza": 42,
+   "caida": 3,
+   "friccion": 3,
+   "pensamiento": "Esa letra de abajo apenas la leo y ahí dice que autorizo cosas. No me explican para qué. Pero es lo que hay que hacer para seguir con la solicitud, y todavía dice sujeto a aprobación."
+  },
+  {
+   "sesion": "T1-arturo-1",
+   "paso": 13,
+   "pantalla": "7723-326716",
+   "confianza": 40,
+   "caida": 15,
+   "friccion": 3,
+   "pensamiento": "No sé si ya se mandó o si tengo que tocar algo. No quiero tocar a ciegas el espacio vacío de abajo. Voy a esperar tantito a ver si avanza sola."
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "paso": 7,
+   "pantalla": "7723-327462",
+   "confianza": 48,
+   "caida": 10,
+   "friccion": 3,
+   "pensamiento": "¿Lo habré hecho mal? No me dijeron nada. Lo intento otra vez."
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "paso": 8,
+   "pantalla": "7723-327462",
+   "confianza": 38,
+   "caida": 10,
+   "friccion": 4,
+   "pensamiento": "Ya lo intenté y no pasa nada con los números. No sé si lo estoy haciendo mal y no hay nadie a quién preguntarle."
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "paso": 9,
+   "pantalla": "8922-87422",
+   "confianza": 40,
+   "caida": -2,
+   "friccion": 3,
+   "pensamiento": "No me gusta quedar debiendo tanto tiempo, y aquí nadie me explica el total. Pero ya llegó el botón de Confirmar y quiero ver qué sigue, aunque sea con desconfianza."
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "paso": 10,
+   "pantalla": "7723-326705",
+   "confianza": 45,
+   "caida": -5,
+   "friccion": 3,
+   "pensamiento": "Nombre y celular sí los doy, pero esa letra de abajo está muy chiquita y no me deja agrandarla. Si me explicaran para qué quieren el historial, estaría más tranquilo."
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "paso": 16,
+   "pantalla": "7723-326716",
+   "confianza": 45,
+   "caida": 13,
+   "friccion": 3,
+   "pensamiento": "Ya puse el código, ¿y ahora qué? No veo botón. Tal vez la pantalla cambie sola, así que espero un poquito antes de tocar a ciegas."
+  },
+  {
+   "sesion": "T1-bryan-2",
+   "paso": 7,
+   "pantalla": "7723-327462",
+   "confianza": 45,
+   "caida": 7,
+   "friccion": 3,
+   "pensamiento": "¿Y mi plazo? Se perdió. Qué molesto. Lo intento otra vez, y si vuelve a pasar, ya me cansé."
+  },
+  {
+   "sesion": "T1-bryan-2",
+   "paso": 8,
+   "pantalla": "7723-327462",
+   "confianza": 40,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Intenté tocar 26 y no pasó nada. Le doy Continuar a ver si se queda con lo que sea. Si me regresa otra vez, ya no."
+  },
+  {
+   "sesion": "T1-bryan-2",
+   "paso": 9,
+   "pantalla": "8922-87422",
+   "confianza": 50,
+   "caida": -10,
+   "friccion": 3,
+   "pensamiento": "525 a la semana, ok, lo puedo pagar. No sé cuánto es en total, pero no veo dónde checarlo. Ya llevo varios intentos, mejor sigo."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 5,
+   "pantalla": "7723-327462",
+   "confianza": 52,
+   "caida": 8,
+   "friccion": 3,
+   "pensamiento": "Primero sale el más largo, y ese seguro tiene el pago más bajito. Pero cuánto voy a pagar al final, eso no me lo dicen."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 6,
+   "pantalla": "7723-327462",
+   "confianza": 48,
+   "caida": 4,
+   "friccion": 3,
+   "pensamiento": "Qué raro, ¿no me dejó escoger? Voy a intentar otra vez en el texto de 128 semanas."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 7,
+   "pantalla": "7723-327462",
+   "confianza": 42,
+   "caida": 6,
+   "friccion": 3,
+   "pensamiento": "¿Se perdió lo que escogí? Así no puedo saber cuánto voy a pagar. Lo intento otra vez, y si no, me desespero."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 8,
+   "pantalla": "7723-327462",
+   "confianza": 40,
+   "caida": 2,
+   "friccion": 3,
+   "pensamiento": "Yo quería la más larga, pero no me deja. Mejor le doy Continuar para ver cuánto me sale de pago, y ahí decido."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 9,
+   "pantalla": "8922-87422",
+   "confianza": 33,
+   "caida": 7,
+   "friccion": 4,
+   "pensamiento": "Quinientos veinticinco por cien semanas... eso es más del doble de lo que pido. Eso no me lo dijo la pantalla. Antes de confirmar quiero ver el total."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 10,
+   "pantalla": "8922-87422",
+   "confianza": 35,
+   "caida": -2,
+   "friccion": 4,
+   "pensamiento": "Me dan un solo número y yo tengo que hacer la cuenta. Me incomoda, pero todavía no me han pedido ningún dato mío. Sigo con cuidado a ver si más adelante dicen el total."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 11,
+   "pantalla": "7723-326705",
+   "confianza": 35,
+   "caida": 0,
+   "friccion": 3,
+   "pensamiento": "Me piden los datos y todavía no me dijeron el total. Y lo de buró va metido en letra chica; mi historial me costó mucho. Pero son solo nombre, celular y correo, sigo con cuidado."
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "paso": 14,
+   "pantalla": "7723-326710",
+   "confianza": 33,
+   "caida": 5,
+   "friccion": 4,
+   "pensamiento": "No me han dicho el total y ya me piden autorizar buró. Eso me da desconfianza, pero son solo datos de ejemplo y quiero ver qué sigue."
+  },
+  {
+   "sesion": "T1-itzel-2",
+   "paso": 4,
+   "pantalla": "7723-327462",
+   "confianza": 50,
+   "caida": 10,
+   "friccion": 3,
+   "pensamiento": "Solo me da el pago semanal, no el total. 'Pagas menos' si pagas antes... ¿menos de qué? Necesito ver cuánto es en total."
+  },
+  {
+   "sesion": "T1-itzel-2",
+   "paso": 5,
+   "pantalla": "7723-327462",
+   "confianza": 45,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Son como seis opciones y ninguna dice cuánto me cuesta en total. Ya viene una marcada, no sé por qué esa. Sigo y reviso el pago semanal."
+  },
+  {
+   "sesion": "T1-itzel-2",
+   "paso": 6,
+   "pantalla": "8922-87422",
+   "confianza": 40,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Ese número solo es por semana. ¿Cuánto es en total? Nadie me lo dice, y 'pagas menos' no me aclara nada. Me da cosa, pero Confirmar todavía no es aceptar, ¿verdad?"
+  },
+  {
+   "sesion": "T1-itzel-2",
+   "paso": 10,
+   "pantalla": "7723-326710",
+   "confianza": 40,
+   "caida": 10,
+   "friccion": 3,
+   "pensamiento": "Autorizar buró es lo que más me preocupa por mi historial. Quise leer esos enlaces, pero no veo que respondan al toque. Aun así sigo, a ver qué sigue; todavía no es un desembolso."
+  },
+  {
+   "sesion": "T1-rosalba-1",
+   "paso": 8,
+   "pantalla": "7723-327462",
+   "confianza": 45,
+   "caida": 7,
+   "friccion": 3,
+   "pensamiento": "Creo que el error fue mío, pero no entiendo qué hice mal. Pruebo con Continuar a ver si me deja avanzar o me dice qué falta."
+  },
+  {
+   "sesion": "T1-rosalba-1",
+   "paso": 9,
+   "pantalla": "8922-87422",
+   "confianza": 48,
+   "caida": -3,
+   "friccion": 3,
+   "pensamiento": "Hago la cuenta: 525 por 100 son $52,500, más del doble de lo que me prestan. No lo veo escrito en ningún lado. Antes de confirmar quiero ver si hay más información abajo."
+  },
+  {
+   "sesion": "T1-rosalba-1",
+   "paso": 10,
+   "pantalla": "8922-87422",
+   "confianza": 45,
+   "caida": 3,
+   "friccion": 3,
+   "pensamiento": "Son $52,500 en total y no lo dice por ningún lado, eso no me gusta nada. Pero como dice que está sujeto a aprobación, sigo para ver si más adelante me muestran las condiciones por escrito."
+  },
+  {
+   "sesion": "T1-rosalba-1",
+   "paso": 14,
+   "pantalla": "7723-326710",
+   "confianza": 42,
+   "caida": 10,
+   "friccion": 3,
+   "pensamiento": "No alcanzo a leer eso bien, ¿no se puede hacer más grande? Quería leerlo antes, pero no veo cómo abrirlo. Sigo porque falta aprobación y todavía no firmo."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 7,
+   "pantalla": "7723-327462",
+   "confianza": 55,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Seguro me equivoqué al tocar. Voy a abrir otra vez las semanas y ahora sí lo hago con más cuidado."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 8,
+   "pantalla": "7723-327462",
+   "confianza": 48,
+   "caida": 7,
+   "friccion": 3,
+   "pensamiento": "Creo que no sé tocar bien estas opciones, seguro es error mío. Voy a darle Continuar y ver qué pasa; si no me gusta lo que sale, regreso."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 9,
+   "pantalla": "8922-87422",
+   "confianza": 45,
+   "caida": 3,
+   "friccion": 3,
+   "pensamiento": "Haciendo cuentas, cien veces 525 son como $52,500 por $22,000. Eso no me cuadra. Antes de darle Confirmar quiero ver las condiciones, y aquí no las veo."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 10,
+   "pantalla": "8922-87422",
+   "confianza": 50,
+   "caida": -5,
+   "friccion": 3,
+   "pensamiento": "Todavía no estoy firmando nada, creo que es seguir con la solicitud. Pero el total no me lo han dicho y eso lo voy a buscar en el siguiente paso; si no lo encuentro, me detengo."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 11,
+   "pantalla": "7723-326705",
+   "confianza": 52,
+   "caida": -2,
+   "friccion": 3,
+   "pensamiento": "Eso de abajo está muy chiquito; no alcanzo a leerlo bien y ahí dice que autorizo cosas. Primero lleno los datos, y luego veo si puedo abrir esos avisos."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 14,
+   "pantalla": "7723-326710",
+   "confianza": 50,
+   "caida": 5,
+   "friccion": 3,
+   "pensamiento": "Yo quería leer eso antes de dar mi autorización, pero no alcanzo a leerlo ni se deja abrir. Es un banco que se ve serio, así que sigo, aunque no me gusta no leer lo que autorizo."
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "paso": 17,
+   "pantalla": "7723-326716",
+   "confianza": 52,
+   "caida": 6,
+   "friccion": 3,
+   "pensamiento": "No veo dónde darle para seguir. Voy a esperar un momento a ver si avanza sola, no vaya a ser que lo estropee si toco algo que no sé qué es."
+  },
+  {
+   "sesion": "T2-arturo-2",
+   "paso": 4,
+   "pantalla": "7723-326717",
+   "confianza": 58,
+   "caida": 12,
+   "friccion": 3,
+   "pensamiento": "La cámara es lo que más me preocupa, ¿y si no me sale y no sé por qué? Aquí el asesor está a un lado, que me eche la mano si se traba."
+  }
+ ],
+ "sesiones": [
+  {
+   "sesion": "T1-arturo-1",
+   "tarea": "T1",
+   "integrante": "arturo",
+   "nombre": "Arturo Belmont",
+   "resultado": "exito_con_friccion",
+   "pasos": 15,
+   "toques": 13,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 13,
+   "confianza_inicial": 60,
+   "confianza_final": 58,
+   "confianza_min": 40,
+   "friccion_max": 3,
+   "tokens": 843348
+  },
+  {
+   "sesion": "T1-arturo-2",
+   "tarea": "T1",
+   "integrante": "arturo",
+   "nombre": "Arturo Belmont",
+   "resultado": "exito_con_friccion",
+   "pasos": 18,
+   "toques": 14,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 1,
+   "pantallas": 13,
+   "confianza_inicial": 65,
+   "confianza_final": 60,
+   "confianza_min": 38,
+   "friccion_max": 4,
+   "tokens": 1160478
+  },
+  {
+   "sesion": "T1-bryan-1",
+   "tarea": "T1",
+   "integrante": "bryan",
+   "nombre": "Bryan Nájera",
+   "resultado": "exito",
+   "pasos": 15,
+   "toques": 13,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 13,
+   "confianza_inicial": 62,
+   "confianza_final": 64,
+   "confianza_min": 55,
+   "friccion_max": 2,
+   "tokens": 859857
+  },
+  {
+   "sesion": "T1-bryan-2",
+   "tarea": "T1",
+   "integrante": "bryan",
+   "nombre": "Bryan Nájera",
+   "resultado": "exito_con_friccion",
+   "pasos": 18,
+   "toques": 14,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 1,
+   "pantallas": 13,
+   "confianza_inicial": 62,
+   "confianza_final": 58,
+   "confianza_min": 40,
+   "friccion_max": 3,
+   "tokens": 1130568
+  },
+  {
+   "sesion": "T1-itzel-1",
+   "tarea": "T1",
+   "integrante": "itzel",
+   "nombre": "Itzel Camacho",
+   "resultado": "exito_con_friccion",
+   "pasos": 19,
+   "toques": 15,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 1,
+   "pantallas": 13,
+   "confianza_inicial": 60,
+   "confianza_final": 45,
+   "confianza_min": 33,
+   "friccion_max": 4,
+   "tokens": 1285984
+  },
+  {
+   "sesion": "T1-itzel-2",
+   "tarea": "T1",
+   "integrante": "itzel",
+   "nombre": "Itzel Camacho",
+   "resultado": "exito_con_friccion",
+   "pasos": 15,
+   "toques": 13,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 13,
+   "confianza_inicial": 55,
+   "confianza_final": 55,
+   "confianza_min": 40,
+   "friccion_max": 3,
+   "tokens": 872799
+  },
+  {
+   "sesion": "T1-rosalba-1",
+   "tarea": "T1",
+   "integrante": "rosalba",
+   "nombre": "Rosalba Quintero",
+   "resultado": "exito_con_friccion",
+   "pasos": 19,
+   "toques": 14,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 1,
+   "pantallas": 13,
+   "confianza_inicial": 65,
+   "confianza_final": 58,
+   "confianza_min": 42,
+   "friccion_max": 3,
+   "tokens": 1243686
+  },
+  {
+   "sesion": "T1-rosalba-2",
+   "tarea": "T1",
+   "integrante": "rosalba",
+   "nombre": "Rosalba Quintero",
+   "resultado": "exito_con_friccion",
+   "pasos": 19,
+   "toques": 14,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 1,
+   "pantallas": 13,
+   "confianza_inicial": 68,
+   "confianza_final": 62,
+   "confianza_min": 45,
+   "friccion_max": 3,
+   "tokens": 1304443
+  },
+  {
+   "sesion": "T2-arturo-1",
+   "tarea": "T2",
+   "integrante": "arturo",
+   "nombre": "Arturo Belmont",
+   "resultado": "exito",
+   "pasos": 8,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 65,
+   "confianza_final": 52,
+   "confianza_min": 52,
+   "friccion_max": 2,
+   "tokens": 251306
+  },
+  {
+   "sesion": "T2-arturo-2",
+   "tarea": "T2",
+   "integrante": "arturo",
+   "nombre": "Arturo Belmont",
+   "resultado": "exito_con_friccion",
+   "pasos": 7,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 65,
+   "confianza_final": 52,
+   "confianza_min": 52,
+   "friccion_max": 3,
+   "tokens": 193929
+  },
+  {
+   "sesion": "T2-bryan-1",
+   "tarea": "T2",
+   "integrante": "bryan",
+   "nombre": "Bryan Nájera",
+   "resultado": "exito",
+   "pasos": 8,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 65,
+   "confianza_final": 66,
+   "confianza_min": 65,
+   "friccion_max": 2,
+   "tokens": 270093
+  },
+  {
+   "sesion": "T2-bryan-2",
+   "tarea": "T2",
+   "integrante": "bryan",
+   "nombre": "Bryan Nájera",
+   "resultado": "exito",
+   "pasos": 7,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 62,
+   "confianza_final": 57,
+   "confianza_min": 57,
+   "friccion_max": 2,
+   "tokens": 202754
+  },
+  {
+   "sesion": "T2-itzel-1",
+   "tarea": "T2",
+   "integrante": "itzel",
+   "nombre": "Itzel Camacho",
+   "resultado": "exito",
+   "pasos": 8,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 65,
+   "confianza_final": 60,
+   "confianza_min": 60,
+   "friccion_max": 2,
+   "tokens": 266038
+  },
+  {
+   "sesion": "T2-itzel-2",
+   "tarea": "T2",
+   "integrante": "itzel",
+   "nombre": "Itzel Camacho",
+   "resultado": "exito",
+   "pasos": 7,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 65,
+   "confianza_final": 60,
+   "confianza_min": 60,
+   "friccion_max": 2,
+   "tokens": 211545
+  },
+  {
+   "sesion": "T2-rosalba-1",
+   "tarea": "T2",
+   "integrante": "rosalba",
+   "nombre": "Rosalba Quintero",
+   "resultado": "exito",
+   "pasos": 7,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 72,
+   "confianza_final": 66,
+   "confianza_min": 66,
+   "friccion_max": 2,
+   "tokens": 216189
+  },
+  {
+   "sesion": "T2-rosalba-2",
+   "tarea": "T2",
+   "integrante": "rosalba",
+   "nombre": "Rosalba Quintero",
+   "resultado": "exito",
+   "pasos": 8,
+   "toques": 6,
+   "sin_respuesta": 0,
+   "fuera_de_marcas": 0,
+   "pantallas": 7,
+   "confianza_inicial": 72,
+   "confianza_final": 63,
+   "confianza_min": 63,
+   "friccion_max": 2,
+   "tokens": 250273
+  }
+ ]
+}

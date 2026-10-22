@@ -25,7 +25,8 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ## Pendientes
 
-1. Probar `recorrido` con un prototipo de Figma real: un perfil, una tarea, revisar capturas y video, después el panel.
+1. ~~Probar `recorrido` con un prototipo de Figma real~~ Hecho con OU 2.0 (22/10/2026). Siguiente: conectar en el
+   prototipo la rama «No» del asesor y los plazos, y repetir como segunda medición del benchmark.
 2. Probar `recorrido` en el ambiente dev (`dev-bazsolicitudunica.com.mx`): pre-flight de acceso primero.
 3. Las sesiones de `estudios/prueba-recorrido-web` se corrieron antes de corregir la medición de la espera del sistema
    (pausas de 1.2 s); su tiempo estimado está inflado. Repetirlas si se quiere el ejemplo exacto (≈ US$ 1.80).
@@ -135,6 +136,19 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   ejemplo del prototipo y la guardia bloqueó el commit. Correos, CURP y tarjetas pasan a `[correo]`, `[CURP]`,
   `[tarjeta]` en el JSON de la sesión. Las capturas no se pueden revisar así: el correo de ejemplo del prototipo
   puede verse en ellas (es ficticio).
+- **Estudio terminado** (Alexis autorizó correr todas las fases sin volver a preguntar). Panel: 16 sesiones válidas
+  (4 perfiles × T1 y T2 × 2 corridas). Fallas del instrumento resueltas en el camino: cálculo del teléfono con el
+  lienzo vacío, clic de cookies que desplazaba la página (0 zonas), espera tras recargar entre tareas; las sesiones
+  fallidas se detuvieron antes de llamar al modelo (0 tokens). Auditoría: 57 llamadas, 155 observaciones con
+  consenso. Reporte `oupwa-pdu-originacion-unica-2-0-sintetico_2026-10-22-v1` → LISTO PARA ENTREGAR (1 aviso: 2 de 8
+  perfil-tareas cambian entre éxito y éxito con fricción). Síntesis en `03-Sintesis/`, subida sola al repo del vault.
+- **Resultado principal:** se confirma el monto viendo solo el pago semanal (8 de 8 sesiones de T1 lo señalan) y el
+  consentimiento de buró va en letra chica al continuar (7 de 8). H1, H2 y H4 se sostienen; H3 y H5 se caen.
+- **Consumo total del estudio:** ≈ 21 M tokens (≈ 3 M nuevos): pilotos y rondas fallidas ≈ 5 M, panel ≈ 15 M,
+  auditoría ≈ 0.6 M. Modelo de tokens recalibrado con el panel (error medio ≈ 3%).
+- La tabla de auditoría del reporte usa los nombres de pantalla de la narrativa, no los node-ids.
+- La guardia acepta textos de ayuda de un campo de correo (`ejemplo@`, `tucorreo@`, `usuario@`…): la auditoría los cita
+  de la pantalla. La salida de `arnes auditar` también pasa por `limpiar`.
 - Pendiente (histórico): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 

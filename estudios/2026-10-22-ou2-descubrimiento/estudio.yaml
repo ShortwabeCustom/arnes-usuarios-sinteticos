@@ -2,6 +2,7 @@
 # Ejemplo mínimo que corre: estudios/prueba-recorrido-web/estudio.yaml
 id: 2026-10-22-ou2-descubrimiento
 titulo: "Descubrimiento preliminar del prototipo de Originación Única 2.0 (flujo amarillo)"
+pregunta_principal: "¿Un cliente nuevo puede llegar de la bienvenida a la selfie sin ayuda, y qué le cuesta en cada pantalla?"
 metodo: recorrido
 fecha: "2026-10-22"
 autor: "Alexis Valdez + Claude"

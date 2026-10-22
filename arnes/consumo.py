@@ -15,10 +15,11 @@ from __future__ import annotations
 CAMPOS = ("entrada", "cache_escritura", "cache_lectura", "salida")
 
 # Modelo de consumo de un recorrido. Cada paso son 2 llamadas (abrir la captura y responder) sobre un contexto que
-# crece con cada paso: ≈ 1,500 tokens de texto más 2 imágenes (la limpia y la marcada), y Claude cuenta una imagen como
-# ≈ ancho × alto / 750 tokens. Calibrado con el piloto 3 de OU 2.0 (22/10/2026, capturas de 1200×1026: +4,800 por
-# paso medidos = 1,518 + 2 × 1,641), contexto inicial ≈ 7,600, caché nueva ≈ 2 × el crecimiento, salida ≈ 890.
-RECORRIDO = dict(contexto_inicial=7_600, texto_por_paso=1_518, llamadas_por_paso=2, salida_por_paso=890)
+# crece con cada paso: texto más 2 imágenes (la limpia y la marcada); Claude cuenta una imagen como ≈ ancho × alto
+# / 750 tokens. Calibrado con las 16 sesiones del panel de OU 2.0 (22/10/2026, captura recortada al teléfono):
+# texto ≈ 2,200 por paso, caché nueva ≈ 3 × el crecimiento, salida ≈ 890; error medio del total ≈ 3%.
+RECORRIDO = dict(contexto_inicial=7_600, texto_por_paso=2_200, llamadas_por_paso=2, salida_por_paso=890,
+                 factor_cache_nueva=3)
 CAPTURA_VENTANA = (1200, 1026)      # ventana completa de Figma (pilotos 1–3)
 CAPTURA_TELEFONO = (380, 850)       # captura recortada al teléfono (desde el 22/10/2026)
 
@@ -72,7 +73,7 @@ def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = 
     crece = m["texto_por_paso"] + 2 * tokens_imagen(*captura)
     ctx = [m["contexto_inicial"] + crece * k for k in range(pasos)]
     lectura_total = sum(m["llamadas_por_paso"] * c for c in ctx) + (ctx[-1] if ctx else 0)
-    escritura = 2 * crece * pasos
+    escritura = m["factor_cache_nueva"] * crece * pasos
     d = dict(entrada=0, cache_escritura=escritura, cache_lectura=max(0, lectura_total - escritura),
              salida=m["salida_por_paso"] * pasos + 60)
     return {k: v * sesiones for k, v in d.items()}

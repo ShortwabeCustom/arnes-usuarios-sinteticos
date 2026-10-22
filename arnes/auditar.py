@@ -17,6 +17,7 @@ import math
 from concurrent.futures import ThreadPoolExecutor
 
 from . import consumo, motor
+from .guardia import limpiar
 from .estudio import Estudio
 
 W = {
@@ -126,6 +127,7 @@ def auditar(e: Estudio, evaluadores: int = 3, modelo: str = "sonnet", simular: b
     res = dict(metodo=e.metodo, evaluadores=evaluadores, umbral_consenso=umbral, consolidado=cons,
                positivos={k: v for k, v in positivos.items()}, crudo=[dict(pantalla=p, evaluador=k, salida=s) for p, k, s, *_ in crudo],
                costo_usd=round(sum(x[3] for x in crudo), 3), tokens=consumo.sumar(*(x[4] for x in crudo)))
+    res = limpiar(res)   # sin correos, CURP ni tarjetas que un evaluador cite de la pantalla
     e.ruta("datos", "auditoria.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     e.marcar("auditar", evaluadores=evaluadores, consenso=sum(x["consenso"] for x in cons), tokens=consumo.total(res["tokens"]))
     print(f"Consenso ({umbral}+ de {evaluadores}): {sum(x['consenso'] for x in cons)} · a revisar (1 evaluador): {sum(not x['consenso'] for x in cons)} · {consumo.texto(res['tokens'])}")

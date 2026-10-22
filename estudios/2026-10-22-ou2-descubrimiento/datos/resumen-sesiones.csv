@@ -1,0 +1,17 @@
+sesion,tarea,integrante,nombre,resultado,pasos,toques,sin_respuesta,fuera_de_marcas,pantallas,confianza_inicial,confianza_final,confianza_min,friccion_max,tokens
+T1-arturo-1,T1,arturo,Arturo Belmont,exito_con_friccion,15,13,0,0,13,60,58,40,3,843348
+T1-arturo-2,T1,arturo,Arturo Belmont,exito_con_friccion,18,14,0,1,13,65,60,38,4,1160478
+T1-bryan-1,T1,bryan,Bryan Nájera,exito,15,13,0,0,13,62,64,55,2,859857
+T1-bryan-2,T1,bryan,Bryan Nájera,exito_con_friccion,18,14,0,1,13,62,58,40,3,1130568
+T1-itzel-1,T1,itzel,Itzel Camacho,exito_con_friccion,19,15,0,1,13,60,45,33,4,1285984
+T1-itzel-2,T1,itzel,Itzel Camacho,exito_con_friccion,15,13,0,0,13,55,55,40,3,872799
+T1-rosalba-1,T1,rosalba,Rosalba Quintero,exito_con_friccion,19,14,0,1,13,65,58,42,3,1243686
+T1-rosalba-2,T1,rosalba,Rosalba Quintero,exito_con_friccion,19,14,0,1,13,68,62,45,3,1304443
+T2-arturo-1,T2,arturo,Arturo Belmont,exito,8,6,0,0,7,65,52,52,2,251306
+T2-arturo-2,T2,arturo,Arturo Belmont,exito_con_friccion,7,6,0,0,7,65,52,52,3,193929
+T2-bryan-1,T2,bryan,Bryan Nájera,exito,8,6,0,0,7,65,66,65,2,270093
+T2-bryan-2,T2,bryan,Bryan Nájera,exito,7,6,0,0,7,62,57,57,2,202754
+T2-itzel-1,T2,itzel,Itzel Camacho,exito,8,6,0,0,7,65,60,60,2,266038
+T2-itzel-2,T2,itzel,Itzel Camacho,exito,7,6,0,0,7,65,60,60,2,211545
+T2-rosalba-1,T2,rosalba,Rosalba Quintero,exito,7,6,0,0,7,72,66,66,2,216189
+T2-rosalba-2,T2,rosalba,Rosalba Quintero,exito,8,6,0,0,7,72,63,63,2,250273

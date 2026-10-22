@@ -331,8 +331,9 @@ def seccion_auditoria(e: Estudio) -> str:
     if not f.exists():
         return ""
     A = json.loads(f.read_text(encoding="utf-8"))
+    nombres = (e.narrativa() or {}).get("pantallas") or {}   # recorrido: node-id o URL → nombre legible
     filas = "".join(
-        f'<tr><th scope="row">{e_(x["pantalla"])}<small>{e_(x["zona"])}</small></th><td><b>{e_(x["criterio"])}</b> {e_(x["nombre_criterio"])}</td>'
+        f'<tr><th scope="row">{e_(nombres.get(x["pantalla"], x["pantalla"]))}<small>{e_(x["zona"])}</small></th><td><b>{e_(x["criterio"])}</b> {e_(x["nombre_criterio"])}</td>'
         f'<td class="n">{x["evaluadores"]} de {x["de"]}</td><td class="n">{x["severidad_media"]}</td><td>{e_(x["problemas"][0])}</td>'
         f'<td>{e_(x["recomendaciones"][0])}</td></tr>' for x in A["consolidado"] if x["consenso"])
     revisar = sum(not x["consenso"] for x in A["consolidado"])
