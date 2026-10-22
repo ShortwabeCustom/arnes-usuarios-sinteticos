@@ -64,7 +64,7 @@ tareas:
     pregunta_cierre: "La aplicación te pregunta si te está ayudando un asesor. ¿Qué contestarías y por qué? ¿Te queda claro para qué te lo pregunta?"
     max_pasos: 22
     pasos_esperados: 14
-    primer_toque: {caja: [434, 782, 762, 830]}        # «Inicia tu solicitud» (coordenadas con ventana visible)
+    primer_toque: {caja_telefono: [16, 717, 344, 765]}   # «Inicia tu solicitud», relativa a la esquina del teléfono
     # Sin retoma: en Figma, recargar regresa al inicio del prototipo; mediría el prototipo, no el producto.
   - id: T2
     url: "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=9830-189949&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&show-proto-sidebar=0&page-id=4%3A739"
@@ -74,7 +74,7 @@ tareas:
     fin: {node_ids: ["7723-327412", "7723-327416"]}   # cargando y «Coloca tu rostro dentro del óvalo»
     max_pasos: 14
     pasos_esperados: 8
-    primer_toque: {caja: [436, 414, 472, 450]}        # «Sí, me están ayudando»
+    primer_toque: {caja_telefono: [18, 349, 54, 385]}    # «Sí, me están ayudando», relativa a la esquina del teléfono
 
 # Modelo de tiempo [SUPUESTO]: el tiempo humano no se mide en una sesión sintética; se estima y se le suma la espera
 # real del sistema. Se reporta solo para las sesiones que completan.

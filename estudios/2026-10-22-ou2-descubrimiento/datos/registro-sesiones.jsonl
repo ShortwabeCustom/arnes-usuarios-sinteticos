@@ -5,3 +5,8 @@
 {"id": "T1-bryan-2", "ok": true, "costo_usd": 0.645, "tokens": {"entrada": 30, "cache_escritura": 31190, "cache_lectura": 176744, "salida": 5544}, "resultado": "abandono", "t": "2026-10-22T02:20:22"}
 {"id": "T2-bryan-1", "ok": true, "costo_usd": 0.8533, "tokens": {"entrada": 32, "cache_escritura": 37693, "cache_lectura": 218989, "salida": 6206}, "resultado": "exito_con_friccion", "t": "2026-10-22T02:22:44"}
 {"id": "T2-bryan-2", "ok": true, "costo_usd": 0.6145, "tokens": {"entrada": 26, "cache_escritura": 31057, "cache_lectura": 165793, "salida": 5182}, "resultado": "exito", "t": "2026-10-22T02:24:39"}
+{"id": "T1-bryan-1", "ok": true, "costo_usd": 0.0, "tokens": {"entrada": 0, "cache_escritura": 0, "cache_lectura": 0, "salida": 0}, "resultado": "fallo_instrumento", "t": "2026-10-22T09:06:11"}
+{"id": "T1-bryan-2", "ok": true, "costo_usd": 5.407, "tokens": {"entrada": 74, "cache_escritura": 148660, "cache_lectura": 966718, "salida": 15116}, "resultado": "exito_con_friccion", "t": "2026-10-22T09:11:41"}
+{"id": "T2-bryan-1", "ok": true, "costo_usd": 0.902, "tokens": {"entrada": 34, "cache_escritura": 38592, "cache_lectura": 224855, "salida": 6612}, "resultado": "exito", "t": "2026-10-22T09:14:15"}
+{"id": "T2-bryan-2", "ok": true, "costo_usd": 0.6171, "tokens": {"entrada": 26, "cache_escritura": 31192, "cache_lectura": 166322, "salida": 5214}, "resultado": "exito", "t": "2026-10-22T09:17:06"}
+{"id": "T1-bryan-1", "ok": true, "costo_usd": 0.0, "tokens": {"entrada": 0, "cache_escritura": 0, "cache_lectura": 0, "salida": 0}, "resultado": "fallo_instrumento", "t": "2026-10-22T09:19:39"}

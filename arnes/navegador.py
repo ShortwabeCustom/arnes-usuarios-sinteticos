@@ -166,10 +166,13 @@ async (page) => {
     } else if (a.tipo === 'arrastrar') {
       await page.mouse.move(a.x, a.y); await page.mouse.down(); await page.mouse.move(a.x2, a.y2, { steps: 12 }); await page.mouse.up();
     } else if (a.tipo === 'tocar_texto') {      // botones HTML fuera del prototipo: banner de cookies, avisos
+      // clic por JavaScript: el clic de Playwright desplaza la página para mostrar el botón y movía todo el
+      // prototipo hacia un lado (0 zonas en la primera pantalla del panel de OU 2.0)
       const b = page.getByRole('button', { name: a.texto }).first();
       await b.waitFor({ timeout: 8000 }).catch(() => {});
-      if (await b.count()) await b.click({ timeout: 4000 }).catch(() => {});
-      else await page.getByText(a.texto, { exact: true }).first().click({ timeout: 4000 }).catch(() => {});
+      const el = (await b.count()) ? b : page.getByText(a.texto, { exact: true }).first();
+      await el.evaluate(n => n.click()).catch(() => {});
+      await page.evaluate(() => { window.scrollTo(0, 0); document.scrollingElement && (document.scrollingElement.scrollLeft = 0); }).catch(() => {});
     } else if (a.tipo === 'ir') {
       await page.goto(a.url, { waitUntil: 'domcontentloaded' }).catch(() => {});
     }
@@ -349,7 +352,11 @@ def dispositivo(captura: Path, lienzo: dict) -> dict | None:
     (la burbuja del pensamiento queda a la izquierda, separada por fondo negro)."""
     import numpy as np
 
+    if not lienzo or lienzo.get("w", 0) < 100 or lienzo.get("h", 0) < 100:
+        return None                       # el lienzo aún no se dibuja: se intenta en la siguiente captura
     g = _gris(captura, lienzo) > 30
+    if g.size == 0:
+        return None
     cols = g.mean(axis=0) > 0.05
     c = len(cols) // 2
     if not cols[c]:

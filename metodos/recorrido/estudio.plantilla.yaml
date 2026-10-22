@@ -62,7 +62,8 @@ tareas:
     max_pasos: 25
     # Primer toque esperado (first-click testing): por texto del elemento (web) o por caja en px de pantalla
     primer_toque: {etiqueta_contiene: "Solicitar"}
-    # primer_toque: {caja: [x0, y0, x1, y1]}
+    # primer_toque: {caja: [x0, y0, x1, y1]}            # px de la página
+    # primer_toque: {caja_telefono: [x0, y0, x1, y1]}    # Figma: px desde la esquina del teléfono (recomendado)
     # Retoma de solicitud: después del paso N sale del proceso y vuelve a entrar; mide si conserva el avance.
     retoma: {tras_paso: 3, modo: recargar}   # recargar = misma sesión del navegador · reabrir = entra de nuevo por la URL
 

@@ -188,6 +188,12 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             abierto = True
             for a in c.get("preparacion", []):  # p. ej. descartar cookies antes de medir nada
                 nav.paso(cap / "prep.png", a)
+            if material == "figma":
+                # esperar a que el prototipo termine de dibujarse (con hide-ui=1 tarda más): hasta ver zonas tocables
+                for _ in range(8):
+                    if nav.paso(cap / "prep.png").get("zonas"):
+                        break
+                    time.sleep(2)
         elif c.get("reiniciar_entre_tareas", True) or n > 1:
             nav.paso(cap / "prep.png", {"tipo": "ir", "url": t.get("url") or c["url"]})
         if c.get("video", True):
@@ -576,6 +582,11 @@ def primer_toque(e: Estudio, S: list[dict]) -> dict:
             a = p["accion"]
             if exp.get("etiqueta_contiene"):
                 acierta = exp["etiqueta_contiene"].lower() in (z.get("etiqueta") or "").lower()
+            elif exp.get("caja_telefono"):
+                # caja relativa a la esquina del teléfono: no depende de dónde quede el teléfono en la ventana
+                m = p.get("marco") or {"x": 0, "y": 0}
+                x0, y0, x1, y1 = exp["caja_telefono"]
+                acierta = x0 <= a["x"] - m["x"] <= x1 and y0 <= a["y"] - m["y"] <= y1
             else:
                 x0, y0, x1, y1 = exp["caja"]
                 acierta = x0 <= a["x"] <= x1 and y0 <= a["y"] <= y1
