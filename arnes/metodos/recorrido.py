@@ -27,7 +27,7 @@ import time
 from .. import motor
 from ..estudio import Estudio
 from .. import consumo
-from ..navegador import Navegador, marcar, node_id
+from ..navegador import Navegador, marcar, node_id, recortar
 
 REGLAS_SESION = """
 
@@ -227,6 +227,16 @@ def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo):
         reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
 
 
+def _recortar(material, info, png, marcas) -> list[int] | None:
+    """Figma: el perfil ve solo el teléfono, como en su celular, y no la ventana de Figma ni la burbuja del arnés.
+    Las coordenadas de zonas y toques siguen siendo de la página; `recorte` es el origen para dibujarlas encima."""
+    if material != "figma" or not info.get("marco") or info.get("marco") == info.get("lienzo"):
+        return None
+    o = recortar(png, info["marco"])
+    recortar(marcas, info["marco"])
+    return o
+
+
 def _senales(info) -> dict:
     t = info.get("texto") or ""
     return dict(campos=info.get("campos"), progreso_visible=info.get("progreso"), errores_visibles=info.get("errores_validacion") or [],
@@ -248,6 +258,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         actual.replace(png)
         zonas = info.get("zonas", [])
         marcar(png, zonas, marcas)
+        recorte = _recortar(material, info, png, marcas)
         pid = _pantalla_id(material, info["url"])
         if _fin_alcanzado(t.get("fin"), info, material):
             reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
@@ -259,6 +270,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
             info = nav.paso(png)
             zonas = info.get("zonas", [])
             marcar(png, zonas, marcas)
+            recorte = _recortar(material, info, png, marcas)
             if not zonas:
                 reg["resultado"] = "fallo_instrumento"
                 reg["nota_instrumento"] = (f"Paso {n}: 0 zonas tocables en dos detecciones seguidas ({info.get('deteccion')}). "
@@ -288,7 +300,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
                     marcas=str(marcas.relative_to(e.dir)), zonas=len(zonas), perfil=p, modelo_id=r.modelo_id,
                     zonas_detalle=[{k: z[k] for k in ("x", "y", "w", "h", "tipo", "etiqueta")} for z in zonas],
                     texto_pantalla=info.get("texto") or None,
-                    marco=info.get("marco"), **_senales(info))
+                    marco=info.get("marco"), recorte=recorte, **_senales(info))
         if op in ("abandonar", "terminar"):
             fin = _fin_alcanzado(t.get("fin"), info, material)
             reg["resultado"] = "abandono" if op == "abandonar" else ("exito" if fin else "falso_exito" if t.get("fin") else "terminado_sin_criterio")
@@ -308,8 +320,10 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         else:
             antes = info
             info = nav.paso(actual, accion, overlay=_overlay(it, t, n, p) if c.get("video", True) else None)
-            cambio = info["cambio_url"] or info["cambio_imagen"]
+            cambio = info["cambio_url"] or info.get("cambio_telefono", info["cambio_imagen"])
             paso["espera_ms"] = info.get("espera_ms")
+            if info.get("reintento"):
+                paso["reintento"] = True   # el primer toque no respondió y se repitió una vez [SUPUESTO METODOLÓGICO]
             paso["host_despues"], paso["paginas_despues"] = info.get("host"), info.get("paginas")
             nuevos = sorted(set(info.get("errores_validacion") or []) - set(antes.get("errores_validacion") or []))
             if nuevos:
@@ -593,12 +607,13 @@ def _heatmaps_toques(e: Estudio, S: list[dict]):
     from PIL import Image, ImageDraw
 
     por = collections.defaultdict(list)
-    base = {}
+    base, origen = {}, {}
     for s in S:
         for p in s["pasos"]:
             a = p.get("accion") or {}
             if p.get("pantalla") and p.get("captura") and p["pantalla"] not in base:
                 base[p["pantalla"]] = e.ruta(p["captura"])
+                origen[p["pantalla"]] = p.get("recorte") or [0, 0]
             if a.get("tipo") in ("tocar", "escribir"):
                 por[p["pantalla"]].append((a["x"], a["y"], p.get("respuesta") == "si", s["integrante"]))
     for pid, toques in por.items():
@@ -607,7 +622,9 @@ def _heatmaps_toques(e: Estudio, S: list[dict]):
         im = Image.open(base[pid]).convert("RGBA")
         capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
         d = ImageDraw.Draw(capa)
+        ox, oy = origen.get(pid) or [0, 0]
         for x, y, ok, _ in toques:
+            x, y = x - ox, y - oy
             col = (34, 160, 90, 110) if ok else (210, 50, 40, 140)
             d.ellipse([x - 16, y - 16, x + 16, y + 16], fill=col, outline=col[:3] + (255,), width=2)
         Image.alpha_composite(im, capa).convert("RGB").save(e.ruta("heatmaps", f"toques-{slug(pid)}.png"))

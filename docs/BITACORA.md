@@ -110,6 +110,13 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   Decisión pendiente con Alexis: cómo tratar la rama del asesor en el panel.
 - **Modelo de tokens recalibrado** con el piloto 3: con capturas de 1200×1026 el contexto crece ≈ 4,800 por paso (no
   1,900). Una sesión de 23 pasos ≈ 2.9 M. Recortar la captura al teléfono reduciría el crecimiento.
+- **Parpadeo de la ventana** (observación de Alexis): la burbuja del pensamiento se ocultaba y se mostraba en cada
+  sondeo de 0.3 s. En Figma ahora queda fija a la izquierda y **la captura del perfil se recorta al teléfono**, así
+  que la burbuja no le estorba (y la captura pesa menos tokens). El destello azul de los resaltados de Figma sigue: es
+  como el arnés encuentra los botones.
+- **Reintento de toques en Figma:** un toque que no cambia el teléfono se repite una vez; la respuesta se juzga por
+  el cambio en el teléfono, no en toda la ventana (la burbuja y los resaltados la cambian). Validado sin costo: 26
+  pasos hasta el fin.
 - Pendiente (histórico): aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
   (8 sesiones ≈ 9.4 M tokens).
 

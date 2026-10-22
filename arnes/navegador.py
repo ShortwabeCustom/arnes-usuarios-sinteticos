@@ -27,6 +27,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import time
 from pathlib import Path
 
 # CLI de Playwright: el del repositorio (versión fija, bin/playwright-cli); PWCLI lo reemplaza.
@@ -139,10 +140,14 @@ async (page) => {
     d.style.cssText = 'position:fixed;z-index:2147483647;pointer-events:none;font:14px/1.45 -apple-system,"Segoe UI",sans-serif;' +
       'color:#EAF2EE;background:rgba(6,42,34,.95);border:1px solid #2E7D57;border-radius:12px;padding:12px 14px;max-width:260px;' + pos;
     d.innerHTML = html;
-  }, { html, pos: C.overlay_pos || 'right:12px;top:12px' }).catch(() => {});
+  }, { html, pos: C.overlay_pos || (C.material === 'figma' ? 'left:16px;top:16px' : 'right:12px;top:12px') }).catch(() => {});
+  // En Figma la burbuja queda fija fuera del teléfono (la captura se recorta al teléfono): ocultarla y mostrarla en
+  // cada sondeo hacía parpadear la ventana. En web cubre la pantalla, así que se oculta para capturar.
+  const fija = C.material === 'figma';
   const url0 = page.url();
+  if (fija && C.overlay && C.accion) await ov(C.overlay);
   const antes = C.accion ? await page.screenshot({ scale: 'css' }) : null;
-  if (C.overlay && C.accion) await ov(C.overlay);
+  if (!fija && C.overlay && C.accion) await ov(C.overlay);
   const a = C.accion;
   if (a && a.tipo === 'recargar') await page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
   if (a) {
@@ -168,7 +173,7 @@ async (page) => {
   let prev = null, tPrev = t0, racha = 0, tEstable = null, asentada = false, i = 0;
   while (Date.now() - t0 < max) {
     await page.waitForTimeout(pausa);
-    if (C.overlay) await ov(null);
+    if (C.overlay && !fija) await ov(null);
     const b = await page.screenshot({ scale: 'css' }), tb = Date.now();
     if (prev && hash(b) === hash(prev) && b.equals(prev)) {
       if (racha === 0) tEstable = tPrev;
@@ -176,10 +181,10 @@ async (page) => {
       if (racha >= estable) { asentada = true; break; }
     } else { racha = 0; tEstable = null; }
     prev = b; tPrev = tb; i++;
-    if (C.overlay && a) await ov(C.overlay);
+    if (C.overlay && a && !fija) await ov(C.overlay);
   }
   const espera = asentada ? Math.max(0, tEstable - t0) : Date.now() - t0;
-  if (C.overlay) await ov(null);
+  if (C.overlay && !fija) await ov(null);
   await page.screenshot({ scale: 'css', path: C.captura });
   const z = C.material === 'figma' ? await zonasFigma(page) : await zonasWeb(page);
   if (C.material === 'figma' && z.marco) await page.mouse.move(z.marco.x + 3, z.marco.y + 3);
@@ -215,6 +220,27 @@ class Navegador:
         self.cli("close")
 
     def paso(self, captura: Path, accion: dict | None = None, overlay: str | None = None, **cfg) -> dict:
+        v = self._paso(captura, accion, overlay, **cfg)
+        previa, disp = getattr(self, "_previa", None), getattr(self, "_dispositivo", None)
+        if (self.material == "figma" and accion and accion.get("tipo") == "tocar" and previa and disp
+                and node_id(v.get("url")) == node_id(v.get("url_antes"))
+                and not cambio_visible(previa, captura, disp, umbral=0.002)):
+            # En Figma un hotspot a veces no responde al primer toque (transición o carga en curso): se repite una
+            # vez y se registra. [SUPUESTO METODOLÓGICO] Sin esto, el tiempo del prototipo contaría como fricción.
+            time.sleep(0.8)
+            v = self._paso(captura, accion, overlay, **cfg)
+            v["reintento"] = True
+        if self.material == "figma" and accion and previa and disp:
+            # ¿cambió el teléfono? (la página completa también cambia por la burbuja, el carrusel o los resaltados)
+            v["cambio_telefono"] = cambio_visible(previa, captura, disp, umbral=0.002)
+        if self.material == "figma":
+            # copia propia: quien llama puede renombrar o sobrescribir `captura` (recorrido usa siguiente.png),
+            # y entonces la pantalla se compararía consigo misma y nunca se vería un overlay (piloto 2 de OU 2.0)
+            self._previa = self.cwd / "_previa.png"
+            shutil.copyfile(captura, self._previa)
+        return v
+
+    def _paso(self, captura: Path, accion: dict | None = None, overlay: str | None = None, **cfg) -> dict:
         c = dict(material=self.material, captura=str(captura), accion=accion, overlay=overlay, **cfg)
         js = (JS_PASO.replace("__CFG__", json.dumps(c, ensure_ascii=False))
               .replace("__ZONAS__", JS_ZONAS_FIGMA if self.material == "figma" else JS_ZONAS_WEB)
@@ -232,11 +258,12 @@ class Navegador:
         except json.JSONDecodeError as e:
             raise RuntimeError(f"run-code no devolvió JSON: {out[:400]}") from e
         if self.material == "figma":
+            v["lienzo"] = v.get("marco")
+            if v["lienzo"] and not getattr(self, "_dispositivo", None):
+                self._dispositivo = dispositivo(captura, v["lienzo"])
+            if getattr(self, "_dispositivo", None):
+                v["marco"] = self._dispositivo
             self._pistas(captura, v)
-            # copia propia: quien llama puede renombrar o sobrescribir `captura` (recorrido usa siguiente.png),
-            # y entonces la pantalla se compararía consigo misma y nunca se vería un overlay (piloto 2 de OU 2.0)
-            self._previa = self.cwd / "_previa.png"
-            shutil.copyfile(captura, self._previa)
         return v
 
     def _pistas(self, captura: Path, v: dict) -> None:
@@ -247,7 +274,8 @@ class Navegador:
             v["deteccion"] = "sin lienzo"
             return
         ov = overlay_abierto(getattr(self, "_previa", None), captura, marco)
-        x, y = (ov["x"], ov["y"]) if ov else (marco["x"] + 6, marco["y"] + 6)
+        lz = v.get("lienzo") or marco
+        x, y = (ov["x"], ov["y"]) if ov else (lz["x"] + 6, lz["y"] + 6)   # fondo del lienzo, fuera del teléfono
         f = {k: captura.with_suffix(f".{k}.png") for k in ("base", "pistas", "despues")}
         js = JS_PISTAS.replace("__CFG__", json.dumps(dict(x=x, y=y, **{k: str(p) for k, p in f.items()})))
         with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, dir=self.cwd) as t:
@@ -303,6 +331,39 @@ def zonas_por_pistas(base: Path, pistas: Path, marco: dict | None = None) -> lis
         zonas.append(dict(x=x, y=y, w=w, h=h, tocar=[x + w // 2, y + h // 2], tipo="zona", editable=False,
                           etiqueta=""))
     return sorted(zonas, key=lambda z: (z["y"], z["x"]))
+
+
+def dispositivo(captura: Path, lienzo: dict) -> dict | None:
+    """Rectángulo del teléfono dentro del lienzo de Figma: la franja de columnas no negras que contiene el centro
+    (la burbuja del pensamiento queda a la izquierda, separada por fondo negro)."""
+    import numpy as np
+
+    g = _gris(captura, lienzo) > 30
+    cols = g.mean(axis=0) > 0.05
+    c = len(cols) // 2
+    if not cols[c]:
+        return None
+    x0, x1 = c, c
+    while x0 > 0 and cols[x0 - 1]:
+        x0 -= 1
+    while x1 < len(cols) - 1 and cols[x1 + 1]:
+        x1 += 1
+    filas = np.where(g[:, x0:x1 + 1].mean(axis=1) > 0.05)[0]
+    if not len(filas) or x1 - x0 < 100:
+        return None
+    return dict(x=lienzo["x"] + int(x0), y=lienzo["y"] + int(filas.min()), w=int(x1 - x0 + 1),
+                h=int(filas.max() - filas.min() + 1))
+
+
+def recortar(ruta: Path, marco: dict, margen: int = 6) -> list[int]:
+    """Recorta la captura al teléfono (lo que vería una persona) y devuelve el origen del recorte en la página."""
+    from PIL import Image
+
+    im = Image.open(ruta)
+    x0, y0 = max(0, marco["x"] - margen), max(0, marco["y"] - margen)
+    x1, y1 = min(im.width, marco["x"] + marco["w"] + margen), min(im.height, marco["y"] + marco["h"] + margen)
+    im.crop((x0, y0, x1, y1)).save(ruta)
+    return [x0, y0]
 
 
 def _gris(ruta: Path, marco: dict):

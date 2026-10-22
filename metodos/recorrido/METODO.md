@@ -34,6 +34,12 @@ aprendidos en el primer prototipo real (OU 2.0, 22/10/2026):
 - **Overlays** (hojas inferiores, modales): tocar fuera los cierra. Si el arnés detecta un velo que oscurece la
   pantalla anterior, toca dentro del overlay, en su franja superior (la manija), y comprueba que la pantalla no
   cambió (`pistas_alteraron` en el paso).
+- **El perfil ve solo el teléfono.** La captura se recorta al dispositivo (como lo vería en su celular); la burbuja
+  con su pensamiento queda fija a la izquierda, fuera del teléfono, para quien observa la ventana o el video. Antes
+  la burbuja se ocultaba y se mostraba en cada sondeo y la ventana parpadeaba.
+- **Un toque que no cambia el teléfono se repite una vez** (0.8 s después) y queda como `reintento` en el paso: en
+  Figma un hotspot a veces no responde al primer toque por una transición en curso. [SUPUESTO METODOLÓGICO] Si
+  tampoco responde la segunda vez, cuenta como «sin respuesta».
 - El banner de cookies es HTML: se descarta con `{tipo: tocar_texto, texto: "No permitir cookies"}` en
   `preparacion`.
 
