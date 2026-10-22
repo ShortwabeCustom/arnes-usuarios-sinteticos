@@ -27,6 +27,7 @@ import argparse
 import json
 import shutil
 import sys
+import textwrap
 import time
 
 from . import ocean
@@ -49,7 +50,9 @@ def cmd_bibliotecas(a):
         print(f"{b:6s} {bib.meta['nombre']}  ·  huella {bib.huella()}")
         print(f"       base: {bib.meta.get('base', '')}")
         for p, d in bib.paneles.items():
-            print(f"       panel {p:12s} {len(d['integrantes'])} integrantes · {d.get('descripcion', '').strip()[:90]}")
+            desc = textwrap.fill(f"{len(d['integrantes'])} integrantes · {' '.join(d.get('descripcion', '').split())}",
+                                 width=100, initial_indent=f"       panel {p:12s} ", subsequent_indent=" " * 26)
+            print(desc)
 
 
 def cmd_panel(a):
@@ -58,10 +61,11 @@ def cmd_panel(a):
         panel = Biblioteca(b).panel(p)
     else:
         panel = Estudio(a.objetivo).panel()
-    print(f"{'id':5s} {'nombre':18s} {'perfil':6s} {'segmento':22s} {'edad':>4s} {'género':7s}  O  C  E  A  N")
+    w = max([2] + [len(it.id) for it in panel])
+    print(f"{'id':{w}s} {'nombre':18s} {'perfil':6s} {'segmento':22s} {'edad':>4s} {'género':7s}  O  C  E  A  N")
     for it in panel:
         o = it.ocean or {}
-        print(f"{it.id:5s} {it.nombre:18s} {it.perfil:6s} {it.segmento[:22]:22s} {str(it.edad or ''):>4s} {str(it.genero or ''):7s} "
+        print(f"{it.id:{w}s} {it.nombre:18s} {it.perfil:6s} {it.segmento[:22]:22s} {str(it.edad or ''):>4s} {str(it.genero or ''):7s} "
               + " ".join(f"{o.get(k, '·'):>2}" for k in "OCEAN") + ("  [OCEAN SUPUESTO]" if it.ocean_supuesto else ""))
     d = ocean.diversidad({it.id: it.ocean for it in panel})
     if d["rasgos"]:
