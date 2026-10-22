@@ -14,7 +14,7 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
   `tests/fixtures/flujo-web` (servido con `python3 -m http.server 8737`).
 - **Sin probar:** recorrido sobre un **prototipo de Figma real** (zonas activas por cursor del canvas) y sobre el
   **ambiente dev** (puede pedir VPN).
-- **Repositorio:** git inicializado, **sin ningún commit**.
+- **Repositorio:** privado en GitHub, `ShortwabeCustom/arnes-usuarios-sinteticos`, rama `main`.
 - **Estándares de UiX integrados** (naming, demográficos, semáforo de completitud, muestra, brief de protocolo):
   `fuentes-equipo/uix/`, `arnes/estandares.py`.
 - **Pruebas:** `.venv/bin/python -m pytest tests -q` → 16 pasan. Los dos estudios de ejemplo dan `arnes verificar`
@@ -38,6 +38,17 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
    cifras de muestra de encuestas y A/B son cualitativas.
 7. Ocupación AUSENTE en los 4 perfiles de la PWA: si alguna base la trae, agregarla a `personas/pwa/biblioteca.yaml`.
 8. Si se agrega una biblioteca nueva de personas, seguir `metodos/persona/METODO.md` y correr `arnes persona probar`.
+
+---
+
+## Sesión del 21 de octubre de 2026 (repositorio en GitHub)
+
+- Commit inicial y push al repositorio **privado** `ShortwabeCustom/arnes-usuarios-sinteticos` (rama `main`). Es
+  privado porque lleva material interno: perfiles hechos con bases de clientes, guías de UiX, manuales de la PWA y
+  reportes.
+- `conocimiento.yaml` ya no guarda la ruta completa del vault, que incluía el correo de la cuenta: usa
+  `~/Library/CloudStorage/GoogleDrive-*/…` y `arnes/conocimiento.py` la resuelve. La variable `ARNES_VAULT` la reemplaza
+  si el vault está en otro lado.
 
 ---
 
