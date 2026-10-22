@@ -35,11 +35,14 @@ Necesitas:
 - **Claude Code** con sesión iniciada (las sesiones sintéticas usan tu suscripción, no una API key);
 - **Python 3.12** y **uv**;
 - para recorridos, el CLI de Playwright (`~/.claude/skills/playwright/scripts/playwright_cli.sh`);
-- acceso al vault de Obsidian «vault-equipo» en Google Drive (base de conocimiento metodológico).
+- el vault de Obsidian «vault-equipo» (base de conocimiento metodológico): viene con el arnés como submódulo en
+  `vault/`, o en Google Drive si ya lo tienes ahí.
 
-Instalación, una sola vez, desde la carpeta del arnés:
+Instalación, una sola vez:
 
 ```bash
+git clone --recursive https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
+cd arnes-usuarios-sinteticos
 uv venv --python 3.12 .venv
 source .venv/bin/activate
 uv pip install -e .
@@ -47,6 +50,15 @@ arnes bibliotecas          # si lista «pwa» y «gic», está listo
 ```
 
 Cada vez que abras una terminal nueva: `source .venv/bin/activate`.
+
+**El vault.** Los dos repositorios son privados: pide acceso a los dos. El arnés busca el vault en este orden:
+1. la variable `ARNES_VAULT`, si la defines;
+2. la carpeta de Google Drive de `conocimiento.yaml` (así trabaja quien mantiene el vault);
+3. el submódulo `vault/`, que trae el clon con `--recursive`. Si clonaste sin esa opción:
+   `git submodule update --init vault`.
+
+Para traer la versión más reciente del vault: `git submodule update --remote vault`. Si el arnés escribe una
+síntesis en `vault/`, al final te recuerda hacer commit y push en el vault, que es un repositorio aparte.
 
 ### Dos formas de trabajar
 
@@ -388,7 +400,7 @@ Son uso de la suscripción de Claude Code, medidos en octubre de 2026.
 | Todos los perfiles siguen la misma ruta | Flujo lineal, o panel que no diferencia | Revisar si el material permite desviarse |
 | Una cifra del KPI no recuenta | La narrativa quedó vieja | Volver a `arnes analizar` y corregir la narrativa |
 | El reporte «es más viejo que la narrativa» | Se editó la narrativa después del reporte | `arnes reporte` de nuevo |
-| No encuentra el vault | Google Drive sin sincronizar | Abrir Drive y esperar la sincronización |
+| No encuentra el vault | Ni Drive ni el submódulo están disponibles | `git submodule update --init vault`, o sincronizar Drive |
 
 ---
 
@@ -440,4 +452,4 @@ arnes persona probar <biblioteca>
 | Estándares de UiX (naming, demográficos, completitud, protocolo, muestra) | `fuentes-equipo/uix` (`estandares.yaml` es la versión que lee el arnés) |
 | Estudios de ejemplo | `estudios/2026-10-05-recompra-comprension-replica` (comprensión), `estudios/prueba-recorrido-web` (recorrido) |
 | Cómo se validó el arnés | `docs/VALIDACION.md` |
-| Base de conocimiento | vault de Obsidian «vault-equipo» (ruta en `conocimiento.yaml`) |
+| Base de conocimiento | vault de Obsidian «vault-equipo»: repositorio `ShortwabeCustom/vault-equipo`, submódulo en `vault/` |

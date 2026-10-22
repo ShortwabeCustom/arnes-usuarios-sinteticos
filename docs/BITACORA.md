@@ -14,7 +14,8 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
   `tests/fixtures/flujo-web` (servido con `python3 -m http.server 8737`).
 - **Sin probar:** recorrido sobre un **prototipo de Figma real** (zonas activas por cursor del canvas) y sobre el
   **ambiente dev** (puede pedir VPN).
-- **Repositorio:** privado en GitHub, `ShortwabeCustom/arnes-usuarios-sinteticos`, rama `main`.
+- **Repositorios** privados en GitHub: `ShortwabeCustom/arnes-usuarios-sinteticos` y `ShortwabeCustom/vault-equipo`
+  (submódulo en `vault/`), rama `main`.
 - **Estándares de UiX integrados** (naming, demográficos, semáforo de completitud, muestra, brief de protocolo):
   `fuentes-equipo/uix/`, `arnes/estandares.py`.
 - **Pruebas:** `.venv/bin/python -m pytest tests -q` → 16 pasan. Los dos estudios de ejemplo dan `arnes verificar`
@@ -41,7 +42,7 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ---
 
-## Sesión del 21 de octubre de 2026 (repositorio en GitHub)
+## Sesiones del 21 y 22 de octubre de 2026 (repositorios en GitHub)
 
 - Commit inicial y push al repositorio **privado** `ShortwabeCustom/arnes-usuarios-sinteticos` (rama `main`). Es
   privado porque lleva material interno: perfiles hechos con bases de clientes, guías de UiX, manuales de la PWA y
@@ -49,6 +50,15 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 - `conocimiento.yaml` ya no guarda la ruta completa del vault, que incluía el correo de la cuenta: usa
   `~/Library/CloudStorage/GoogleDrive-*/…` y `arnes/conocimiento.py` la resuelve. La variable `ARNES_VAULT` la reemplaza
   si el vault está en otro lado.
+- **El vault también está en GitHub**: repositorio privado `ShortwabeCustom/vault-equipo` (141 archivos; excluye
+  `.obsidian/workspace*.json`, `.claude/settings.local.json` y `.DS_Store`). Se queda en Google Drive; su historial de
+  git vive fuera de Drive (`~/Documents/claude/vault-equipo.git`, con `--separate-git-dir`) porque Drive puede
+  corromper una carpeta `.git`. En Drive solo se agregaron `.gitignore` y un archivo `.git` de una línea.
+- En el arnés, el vault es un **submódulo en `vault/`**: quien clona con `--recursive` recibe las dos cosas. En la Mac
+  de Alexis el submódulo está vacío (`deinit`) para no tener dos copias.
+- `vault()` busca en este orden: `ARNES_VAULT` → Drive → `./vault`. `arnes sintesis` recuerda hacer commit y push
+  si el vault es un repositorio git (el arnés no hace commits en el vault).
+- Pendiente para Alexis: el `CLAUDE.md` del vault sigue en voseo y con rutas de Windows y de otra cuenta de Mac.
 
 ---
 

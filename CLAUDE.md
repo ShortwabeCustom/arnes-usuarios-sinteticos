@@ -74,7 +74,10 @@ Nunca presentar una simulación como hallazgo de un usuario real ni una frase si
 
 ## Base de conocimiento: el vault de Obsidian
 
-`conocimiento.yaml` apunta al vault «vault-equipo» (Google Drive). Es un wiki vivo que mantiene la persona
+El vault «vault-equipo» se busca en este orden: `ARNES_VAULT`, la carpeta de Google Drive de `conocimiento.yaml` y el
+submódulo `vault/` (repositorio privado `ShortwabeCustom/vault-equipo`). En la Mac de Alexis manda Drive; su historial
+de git vive fuera de Drive (`~/Documents/claude/vault-equipo.git`) y el submódulo queda vacío allí. El arnés no hace
+commit en el vault: después de escribir una síntesis, recordar el commit y el push. Es un wiki vivo que mantiene la persona
 usuaria: el arnés lo **lee en su ruta** y solo **escribe** en `03-Sintesis/`, más una entrada en el índice, una en
 el log y una línea en «Ver también» de las notas de concepto relacionadas (convenciones de `vault-equipo/CLAUDE.md`).
 No editar ninguna otra cosa del vault. Correr `arnes sintesis --simular` antes de escribir.

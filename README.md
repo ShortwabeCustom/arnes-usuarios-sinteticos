@@ -48,7 +48,8 @@ verificables).
 
 ## Base de conocimiento
 
-El arnés lee el vault de Obsidian «vault-equipo» (ruta en `conocimiento.yaml`) para diseñar cada protocolo, y al
+El arnés lee el vault de Obsidian «vault-equipo» (repositorio privado aparte, incluido como submódulo en `vault/`;
+clonar con `git clone --recursive`) para diseñar cada protocolo, y al
 cerrar un estudio archiva lo aprendido en `03-Sintesis/` siguiendo las convenciones del vault. Del vault salieron:
 revisión de preguntas sugestivas, estabilidad entre corridas y brechas con intervalo («creer en lo que se repite»),
 alerta de panel homogéneo, auditoría con evaluadores independientes, cognitive walkthrough, WCAG 2.5.8, primer toque,

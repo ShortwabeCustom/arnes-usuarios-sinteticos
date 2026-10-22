@@ -32,13 +32,23 @@ def config() -> dict:
 
 
 def vault() -> Path:
-    """Ruta del vault: `ARNES_VAULT` si está definida; si no, la de conocimiento.yaml (admite ~ y comodines, para
-    no guardar en el repositorio la carpeta de Google Drive, que lleva el correo de la cuenta)."""
-    patron = os.path.expanduser(os.environ.get("ARNES_VAULT") or config()["vault"])
-    v = Path(next(iter(sorted(glob.glob(patron))), patron))
-    if not v.is_dir():
-        raise FileNotFoundError(f"No encuentro el vault en {v}. ¿Google Drive está sincronizado?")
-    return v
+    """Ruta del vault, en este orden: `ARNES_VAULT`; la de conocimiento.yaml (admite ~ y comodines, para no guardar
+    en el repositorio la carpeta de Google Drive, que lleva el correo de la cuenta); el submódulo `./vault`."""
+    candidatos = [os.environ.get("ARNES_VAULT"), config()["vault"], str(RAIZ / "vault")]
+    for patron in (os.path.expanduser(c) for c in candidatos if c):
+        for v in map(Path, sorted(glob.glob(patron))):
+            if (v / "02-Conceptos").is_dir():
+                return v
+    raise FileNotFoundError(
+        "No encuentro el vault. Opciones: sincronizar Google Drive, definir ARNES_VAULT, "
+        "o bajar el submódulo con `git submodule update --init vault`.")
+
+
+def recordar_commit(V: Path) -> None:
+    """Si el vault es un repositorio git, recuerda subir lo escrito (el arnés no hace commit en el vault)."""
+    if (V / ".git").exists():
+        print(f"  El vault es un repositorio git: revisa y sube los cambios con\n"
+              f"  git -C \"{V}\" add -A && git -C \"{V}\" commit -m \"Síntesis: …\" && git -C \"{V}\" push")
 
 
 def notas(metodo: str) -> list[Path]:
@@ -195,4 +205,5 @@ def sintesis(e: Estudio, simular: bool = False, enlazar: bool = True) -> Path:
         p.write_text(t, encoding="utf-8")
     e.marcar("sintesis", nota=str(destino.relative_to(V)))
     print("Escrito en el vault:\n" + "\n".join(f"  · {x}" for x in cambios))
+    recordar_commit(V)
     return destino
