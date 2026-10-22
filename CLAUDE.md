@@ -4,7 +4,7 @@ Este repositorio automatiza la investigación UX con usuarios sintéticos que an
 (GIC y PWA User Person, OU-PWA, entrecalles, recompra ×2, auditoría de prototipos). Todo en español.
 
 **Para retomar el trabajo:** leer `docs/BITACORA.md` (estado, decisiones y pendientes). Al terminar una sesión de
-trabajo, agregar una entrada ahí. Para usar el arnés por primera vez: `docs/GUIA.md`.
+trabajo, agregar una entrada ahí. Para usar el arnés por primera vez: `docs/INSTALACION.md` y luego `docs/GUIA.md`.
 
 ## Tres métodos
 

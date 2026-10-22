@@ -7,21 +7,19 @@ proceso con fases, datos trazables, reporte autocontenido y control final.
 **Los resultados son hipótesis de UX a validar con personas.** El arnés no reemplaza la investigación con
 usuarios reales; la hace más rápida de diseñar y más honesta de reportar.
 
-**¿Primera vez?** Empieza por [docs/GUIA.md](docs/GUIA.md): los pasos de una prueba con usuarios sintéticos, de la
+**¿Primera vez?** Instala con [docs/INSTALACION.md](docs/INSTALACION.md) y sigue con [docs/GUIA.md](docs/GUIA.md): los pasos de una prueba con usuarios sintéticos, de la
 pregunta al reporte, con las prácticas de UX research que aplica cada uno.
 
 ## Instalación
 
-Requiere acceso a este repositorio y a `ShortwabeCustom/vault-equipo`, Claude Code con sesión iniciada y, para
-recorridos, Node.js. Lo demás se instala solo:
-
 ```bash
 git clone https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
 cd arnes-usuarios-sinteticos
-bin/instalar          # Python 3.12, dependencias, vault, Playwright, guardia y el comando `arnes`
+bin/instalar
 ```
 
-Al abrir Claude Code en la carpeta, `bin/instalar` corre solo.
+Lo que necesitas antes (acceso a los repositorios, Claude Code, Node.js), qué se instala y cómo resolver problemas:
+[docs/INSTALACION.md](docs/INSTALACION.md).
 
 ## Qué hace
 
@@ -49,8 +47,8 @@ verificables).
 
 ## Base de conocimiento
 
-El arnés lee el vault de Obsidian «vault-equipo» (repositorio privado aparte, incluido como submódulo en `vault/`;
-clonar con `git clone --recursive`) para diseñar cada protocolo, y al
+El arnés lee el vault de Obsidian «vault-equipo» (repositorio privado aparte, submódulo en `vault/`, lo baja `bin/instalar`)
+para diseñar cada protocolo, y al
 cerrar un estudio archiva lo aprendido en `03-Sintesis/` siguiendo las convenciones del vault. Del vault salieron:
 revisión de preguntas sugestivas, estabilidad entre corridas y brechas con intervalo («creer en lo que se repite»),
 alerta de panel homogéneo, auditoría con evaluadores independientes, cognitive walkthrough, WCAG 2.5.8, primer toque,

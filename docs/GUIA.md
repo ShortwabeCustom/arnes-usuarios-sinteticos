@@ -31,34 +31,8 @@ No lo uses para:
 
 ## 2. Antes de empezar
 
-Necesitas, antes de clonar:
-- **acceso a los dos repositorios privados** (`ShortwabeCustom/arnes-usuarios-sinteticos` y
-  `ShortwabeCustom/vault-equipo`) y sesión de GitHub en tu Mac (`gh auth login`);
-- **Claude Code** con sesión iniciada: es el motor de las sesiones (usa tu suscripción, no una API key);
-- **Node.js**, solo si vas a hacer recorridos.
-
-Todo lo demás (Python 3.12, dependencias, el vault, Playwright, la guardia de commits y el comando `arnes`) se instala
-solo:
-
-```bash
-git clone https://github.com/ShortwabeCustom/arnes-usuarios-sinteticos.git
-cd arnes-usuarios-sinteticos
-bin/instalar
-```
-
-`bin/instalar` termina con `arnes doctor`: si dice «Listo para trabajar», ya está. Y si en vez de correrlo abres
-Claude Code en la carpeta, Claude Code lo corre solo al iniciar. No hace falta activar ningún entorno: `arnes`
-funciona en cualquier terminal y, si después de un `git pull` cambiaron las dependencias, se actualiza solo.
-
-**El vault.** El arnés lo busca en este orden: la variable `ARNES_VAULT`; la carpeta de Google Drive de
-`conocimiento.yaml` (así trabaja quien mantiene el vault); y el submódulo `vault/`, que baja solo si no está en
-ninguno de los otros dos. `arnes vault sincronizar` lo pone al día con GitHub.
-
-**El vault se sube solo.** `arnes sintesis` hace commit y push en el vault al terminar. Para lo que escribes en
-Obsidian, `arnes vault automatizar` instala una sincronización cada hora (trae lo de GitHub, hace commit con la lista
-de notas que cambiaron y sube). `arnes vault` muestra el estado; `arnes vault sincronizar` lo hace en el momento.
-Antes de cada commit pasa una guardia: si encuentra un correo, una llave, una CURP o un número de tarjeta, no sube
-nada y te avisa con una notificación.
+**Instala el arnés con [INSTALACION.md](INSTALACION.md).** Son tres comandos (clonar, entrar a la carpeta y
+`bin/instalar`) y el resto se instala solo. Cuando `arnes doctor` diga «Listo para trabajar», vuelve aquí.
 
 ### Dos formas de trabajar
 

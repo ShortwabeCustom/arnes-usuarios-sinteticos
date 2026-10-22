@@ -68,6 +68,8 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 - `bin/playwright-cli`: el CLI de Playwright dentro del repositorio, con versión fija (0.1.22). Antes dependía de
   `~/.claude/skills/playwright/` de la Mac de Alexis.
 - `vault()` baja el submódulo si no encuentra el vault, y el error ya no es una traza sino qué hacer.
+- `docs/INSTALACION.md`: guía de instalación para quien clona el repositorio (requisitos de cuenta, los tres comandos,
+  qué se instala, comprobación, problemas frecuentes, desinstalar). La sección 2 de la guía y el README apuntan ahí.
 - Probado con un clon nuevo sin `--recursive` y con una carpeta personal vacía: en 32 s quedó todo instalado; el vault
   bajó con credenciales de GitHub (sin ellas, el aviso dice pedir acceso y `gh auth login`).
 
