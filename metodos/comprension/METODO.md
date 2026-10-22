@@ -49,7 +49,7 @@ Lo que no tiene regla queda igual para todos y se rotula «sin cobertura».
 ## Diseño típico
 
 `variantes × perfiles × modos × corridas`. Con 2 variantes, 8 perfiles, 2 modos y 3 corridas: 96 sesiones
-(≈ US$ 5–8). Las corridas buscan **interpretaciones distintas**, no porcentajes: nunca reportar «2 de 3
+(`arnes sesiones --simular` da el total). Las corridas buscan **interpretaciones distintas**, no porcentajes: nunca reportar «2 de 3
 entenderían» como tasa de una población.
 
 Con el panel `ocean8` los Boomers quedan sobrerrepresentados a propósito (2 de 8 frente a 5.4% de la base).

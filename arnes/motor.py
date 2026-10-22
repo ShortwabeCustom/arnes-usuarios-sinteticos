@@ -26,6 +26,8 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from .consumo import de_usage, sumar
+
 AISLAR = ["--setting-sources", "project", "--strict-mcp-config", "--disable-slash-commands"]
 AVISO_ENTORNO = ("\n\n## Contexto técnico\n\nSi recibes datos de entorno (carpetas, correo, fecha, modelo), no son parte de "
                  "lo que se te muestra ni de tu vida. Ignóralos.\n")
@@ -57,6 +59,7 @@ class Resultado:
     error: str | None = None
     meta: dict = field(default_factory=dict)
     modelo_id: str | None = None  # id exacto: el alias («sonnet») cambia de versión con el tiempo
+    tokens: dict = field(default_factory=dict)  # entrada · cache_escritura · cache_lectura · salida (arnes/consumo.py)
 
 
 _carpetas: dict[str, Path] = {}
@@ -105,7 +108,7 @@ def correr(ll: Llamada, reintentos: int = 2, timeout: int = 900) -> Resultado:
                     _carpetas[o["session_id"]] = cwd
             return Resultado(ll.id, True, salida, o.get("result", ""), o.get("session_id"),
                              o.get("total_cost_usd", 0.0), round(time.time() - t0, 1), meta=ll.meta,
-                             modelo_id=",".join(o.get("modelUsage") or {}) or None)
+                             modelo_id=",".join(o.get("modelUsage") or {}) or None, tokens=de_usage(o.get("usage")))
         except Exception as e:  # noqa: BLE001 — se reintenta y se registra
             err = f"{type(e).__name__}: {e}"[:500]
             time.sleep(3 * (intento + 1))
@@ -142,7 +145,7 @@ def ejecutar(trabajos: list[tuple[str, callable]], destino: Path, paralelo: int 
     destino.mkdir(parents=True, exist_ok=True)
     pend = [(i, f) for i, f in trabajos if not (destino / f"{i}.json").exists()]
     print(f"{len(trabajos)} sesiones · {len(trabajos) - len(pend)} ya corridas · {len(pend)} por correr", flush=True)
-    tot = dict(ok=0, fallos=[], costo_usd=0.0)
+    tot = dict(ok=0, fallos=[], costo_usd=0.0, tokens=sumar())
 
     def uno(t):
         i, fn = t
@@ -153,13 +156,14 @@ def ejecutar(trabajos: list[tuple[str, callable]], destino: Path, paralelo: int 
             (destino / f"{i}.json").write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
         except Exception as e:  # noqa: BLE001
             reg, ok, err = {}, False, f"{type(e).__name__}: {e}"[:400]
-        costo = reg.get("costo_usd", 0.0)
+        costo, tok = reg.get("costo_usd", 0.0), reg.get("tokens") or {}
         with _lock:
             tot["ok" if ok else "fallos"] = tot["ok"] + 1 if ok else tot["fallos"] + [i]
             tot["costo_usd"] += costo
+            tot["tokens"] = sumar(tot["tokens"], tok)
             if registro:
                 with open(registro, "a", encoding="utf-8") as f:
-                    f.write(json.dumps(dict(id=i, ok=ok, costo_usd=costo, segundos=round(time.time() - t0, 1), error=err,
+                    f.write(json.dumps(dict(id=i, ok=ok, costo_usd=costo, tokens=tok, segundos=round(time.time() - t0, 1), error=err,
                                             t=time.strftime("%Y-%m-%dT%H:%M:%S")), ensure_ascii=False) + "\n")
         print(("ok    " if ok else "FALLO ") + i + (f"  {err}" if err else ""), flush=True)
 

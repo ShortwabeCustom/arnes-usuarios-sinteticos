@@ -80,6 +80,23 @@ class Estudio:
                 return Path(h).stem
         return naming(self.cfg, self.metodo) or self.dir.name
 
+    def consumo(self) -> tuple[dict, int, int]:
+        """Tokens de todas las llamadas registradas, cuántas llamadas y cuántas sin medición de tokens (anteriores
+        a que el arnés los registrara)."""
+        from .consumo import sumar
+
+        f = self.ruta("datos", "registro-sesiones.jsonl")
+        if not f.exists():
+            return sumar(), 0, 0
+        filas = [json.loads(x) for x in f.read_text(encoding="utf-8").splitlines() if x.strip()]
+        return sumar(*(x.get("tokens") for x in filas)), len(filas), sum(1 for x in filas if not x.get("tokens"))
+
+    def texto_consumo(self) -> str:
+        from .consumo import texto
+
+        tok, n, sin = self.consumo()
+        return f"{n} llamadas · {texto(tok)}" + (f" · {sin} sin medición de tokens (anteriores al registro)" if sin else "")
+
     def costo_total(self) -> tuple[float, int]:
         f = self.ruta("datos", "registro-sesiones.jsonl")
         if not f.exists():

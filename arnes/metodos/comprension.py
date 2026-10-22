@@ -18,7 +18,7 @@ import collections
 import csv
 import json
 
-from .. import medir as M
+from .. import consumo, medir as M
 from .. import motor, robustez
 from ..estudio import Estudio
 
@@ -178,7 +178,7 @@ def trabajos(e: Estudio, filtro: str = "") -> list[tuple[str, callable]]:
                      and (not k.get("solo") or grupo in k["solo"])] if bloque == "principal" else []
             r = motor.llamar(motor.Llamada(sid, prompt, sistema, _esquema(qs), herr, archivos, modelo=modelo,
                                            persistir=bool(conts)))
-            reg["respuestas"], costo, ses = r.salida, r.costo_usd, r.session_id
+            reg["respuestas"], costo, ses, tok = r.salida, r.costo_usd, r.session_id, r.tokens
             reg["modelo_id"] = r.modelo_id
             for k in conts:
                 q2 = _preguntas_de(c, grupo, k["preguntas"])
@@ -189,7 +189,8 @@ def trabajos(e: Estudio, filtro: str = "") -> list[tuple[str, callable]]:
                                                 reanudar=ses, modelo=modelo, persistir=True))
                 reg.setdefault("continuaciones", {})[k["id"]] = r2.salida
                 costo += r2.costo_usd
-            reg["costo_usd"] = round(costo, 4)
+                tok = consumo.sumar(tok, r2.tokens)
+            reg["costo_usd"], reg["tokens"] = round(costo, 4), consumo.sumar(tok)
             return reg
 
         out.append((sid, fn))
@@ -238,7 +239,7 @@ def _pareadas(e, panel, par, modelo, reglas):
                         return dict(id=sid, bloque="pareada", grupo=g, variante="".join(m[x] for x in ("primera", "segunda")),
                                     pantalla="+".join(orden), integrante=it.id, perfil=it.perfil, modo="pareada",
                                     corrida=int(sid.rsplit("-", 1)[1]), con_ocean=bool(it.ocean), modelo=modelo,
-                                    respuestas=resp, costo_usd=round(r.costo_usd, 4), modelo_id=r.modelo_id)
+                                    respuestas=resp, costo_usd=round(r.costo_usd, 4), tokens=r.tokens, modelo_id=r.modelo_id)
 
                     out.append((sid, fn))
     return out

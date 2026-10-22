@@ -60,6 +60,7 @@ tareas:
     exito: "Llega a la toma de selfie (fin del prototipo)."
     fin: {node_ids: ["7723-327412", "7723-327416"]}   # cargando y «Coloca tu rostro dentro del óvalo»
     max_pasos: 30
+    pasos_esperados: 21        # camino feliz del recorrido mecánico (21 toques hasta «cargando»)
     primer_toque: {caja: [532, 522, 743, 553]}          # «Inicia tu solicitud»
     # Sin retoma: en Figma, recargar regresa al inicio del prototipo; mediría el prototipo, no el producto.
 

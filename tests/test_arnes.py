@@ -270,3 +270,15 @@ def test_zonas_por_resaltados_de_figma(tmp_path):
     p = overlay_abierto(tmp_path / "previa.png", tmp_path / "actual.png", marco)
     assert p and 300 <= p["y"] <= 320
     assert overlay_abierto(tmp_path / "previa.png", tmp_path / "previa.png", marco) is None
+
+
+def test_consumo_en_tokens():
+    from arnes import consumo
+
+    u = {"input_tokens": 2, "cache_creation_input_tokens": 2865, "cache_read_input_tokens": 21665, "output_tokens": 758}
+    d = consumo.de_usage(u)
+    assert consumo.total(d) == 25290 and consumo.nuevos(d) == 3625
+    assert consumo.total(consumo.sumar(d, d, None)) == 50580
+    assert consumo.cifra(1_234_567) == "1.2 M" and consumo.cifra(24_061) == "24 mil"
+    # el modelo reproduce lo medido: una sesión de 5 pasos ≈ 120–135 mil tokens
+    assert 110_000 <= consumo.total(consumo.estimar_recorrido(5)) <= 140_000

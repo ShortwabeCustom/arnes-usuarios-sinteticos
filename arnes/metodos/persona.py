@@ -18,7 +18,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from .. import motor
+from .. import consumo, motor
 from ..personas import PERSONAS, Biblioteca
 
 ENTREGABLES = {
@@ -154,7 +154,7 @@ def probar(biblioteca: str, panel: str = "base4", modelo: str = "sonnet", n_fuer
         uso = b.frase_sin_cobertura.rstrip(".") in r.texto
         ok = uso if tipo == "fuera" else (not uso if tipo == "dentro" else None)
         return dict(integrante=it.id, tipo=tipo, tema=tema, pregunta=q, respuesta=r.texto, uso_frase=uso, ok=ok,
-                    costo_usd=r.costo_usd)
+                    costo_usd=r.costo_usd, tokens=r.tokens)
 
     with ThreadPoolExecutor(6) as ex:
         res = list(ex.map(una, trabajos))
@@ -164,7 +164,8 @@ def probar(biblioteca: str, panel: str = "base4", modelo: str = "sonnet", n_fuer
     resumen = dict(biblioteca=b.id, huella=b.huella(), panel=panel, modelo=modelo,
                    fuera=f"{sum(1 for x in res if x['tipo'] == 'fuera' and x['ok'])}/{sum(1 for x in res if x['tipo'] == 'fuera')}",
                    dentro=f"{sum(1 for x in res if x['tipo'] == 'dentro' and x['ok'])}/{sum(1 for x in res if x['tipo'] == 'dentro')}",
-                   costo_usd=round(sum(x["costo_usd"] for x in res), 3), resultados=res)
+                   costo_usd=round(sum(x["costo_usd"] for x in res), 3), tokens=consumo.sumar(*(x["tokens"] for x in res)),
+                   resultados=res)
     f.write_text(json.dumps(resumen, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Fuera de cobertura respondidas con la frase exacta: {resumen['fuera']}")
     print(f"Dentro de cobertura respondidas sin negarse:         {resumen['dentro']}")
@@ -175,5 +176,5 @@ def probar(biblioteca: str, panel: str = "base4", modelo: str = "sonnet", n_fuer
     for x in res:
         if x["tipo"] == "sugerida":
             print(f"  {x['integrante']}: {x['respuesta'][:200]}")
-    print(f"Guardado en {f.relative_to(PERSONAS.parent)} · US$ {resumen['costo_usd']}")
+    print(f"Guardado en {f.relative_to(PERSONAS.parent)} · {consumo.texto(resumen['tokens'])}")
     return resumen

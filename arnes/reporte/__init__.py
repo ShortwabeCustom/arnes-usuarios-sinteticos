@@ -268,7 +268,6 @@ def seccion_priorizacion(N: dict, n_total: int) -> str:
 
 def seccion_trazabilidad(e: Estudio, N: dict) -> str:
     st = e.estado()
-    costo, n = e.costo_total()
     ses = [json.loads(p.read_text(encoding="utf-8")) for p in e.sesiones_dir.glob("*.json")] if e.sesiones_dir.exists() else []
     modelos = sorted({s.get("modelo_id") or "" for s in ses} - {""})
     for s in ses:
@@ -281,7 +280,7 @@ def seccion_trazabilidad(e: Estudio, N: dict) -> str:
                       for x in N.get("fuentes") or [])
     tec = lista(N.get("limitaciones_tecnicas"))
     return (f'<div class="metodo"><p><b>Biblioteca:</b> {e_(bib.get("id", ""))} · huella {e_(bib.get("huella", ""))} · panel {e_(bib.get("panel", ""))}</p>'
-            f'<p><b>Sesiones:</b> {len(ses)} guardadas · {n} llamadas registradas · costo US$ {costo}</p>'
+            f'<p><b>Sesiones:</b> {len(ses)} guardadas · {e_(e.texto_consumo())}</p>'
             f'<p><b>Modelos:</b> {e_(", ".join(modelos) or "—")}</p>'
             f'<p><b>Fuentes consultadas:</b></p><ul>{fuentes}</ul><p><b>Fases ejecutadas:</b></p><ul>{fases}</ul>'
             f'{"<p><b>Limitaciones técnicas:</b></p>" + tec if tec else ""}'
@@ -454,7 +453,6 @@ def md_comun(e: Estudio, N: dict, cuerpo: str) -> str:
     li = lambda xs: "\n".join(f"- {x}" for x in xs or [])  # noqa: E731
     dm = lambda v: " ".join(x for x in (v["valor"], f"({v['detalle']})" if v["detalle"] else "", f"[{v['evidencia']}]" if v["evidencia"] else "") if x)  # noqa: E731
     demo = "\n".join(f"| {it.nombre} | " + " | ".join(dm(v) for v in std.demograficos(it).values()) + " |" for it in panel)
-    costo, n = e.costo_total()
     return f"""# {N.get('titular') or c.get('titulo')}
 
 **Estudio:** {c.get('titulo')}  ·  **Fecha:** {c.get('fecha')}  ·  **Método:** {e.metodo}
@@ -508,7 +506,7 @@ def md_comun(e: Estudio, N: dict, cuerpo: str) -> str:
 ## Trazabilidad
 
 - Carpeta: `{e.dir}`
-- Llamadas registradas: {n} · costo US$ {costo}
+- Consumo: {e.texto_consumo()}
 - Fuentes:
 {chr(10).join(f"  - {x.get('nombre')} — {x.get('ruta', '')}" for x in N.get('fuentes') or [])}
 """

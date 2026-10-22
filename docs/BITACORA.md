@@ -20,8 +20,8 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
   `fuentes-equipo/uix/`, `arnes/estandares.py`.
 - **Pruebas:** `.venv/bin/python -m pytest tests -q` → 18 pasan (también en GitHub Actions). Los dos estudios de ejemplo dan `arnes verificar`
   → LISTO PARA ENTREGAR.
-- **Gasto acumulado** en uso de la suscripción: ≈ US$ 9 (sesiones, auditorías, pruebas de fidelidad y pruebas
-  sueltas del motor).
+- **Consumo acumulado** de la suscripción: antes del 22/10/2026 se registraba en dólares equivalentes (≈ US$ 9); desde
+  entonces, en tokens (`arnes estado <estudio>`).
 
 ## Pendientes
 
@@ -89,7 +89,12 @@ métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento
   detecta el overlay por el velo y toca dentro, en la manija. Prueba nueva con imágenes sintéticas (19 pruebas).
 - **Recorrido mecánico sin perfiles (US$ 0):** 24 pantallas de la bienvenida a la selfie; mapa y node-ids en
   `pantallas_info` del estudio. Solo «Efectivo» está conectado en el uso del préstamo; «Tomar selfie» es el fin.
-- Pendiente: aprobación del piloto (un perfil, T1, ≈ 20 pasos ≈ US$ 1.20) y luego el panel (8 sesiones ≈ US$ 10).
+- **Consumo en tokens, no en dinero** (pedido de Alexis: con la suscripción no hay precio por sesión). `arnes/consumo.py`
+  registra los tokens de cada llamada (entrada, caché nueva, relectura de caché, salida) y los muestra en `arnes
+  estado`, reportes y síntesis. `arnes recorrido … --simular` estima con un modelo medido en 9 sesiones reales
+  (contexto ≈ 7,500 tokens + 1,900 por paso, 2 llamadas por paso). Las llamadas anteriores no guardaron tokens.
+- Pendiente: aprobación del piloto (Bryan, T1, ≈ 21 pasos ≈ 1.2 M tokens, ≈ 80 mil nuevos) y luego el panel
+  (8 sesiones ≈ 9.4 M tokens).
 
 **Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el
 crecimiento sano y útil del arnés»):

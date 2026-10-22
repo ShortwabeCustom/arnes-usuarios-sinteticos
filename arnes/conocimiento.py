@@ -121,7 +121,6 @@ def _kebab(s: str) -> str:
 def _cuerpo(e: Estudio, N: dict, nombre: str, enlaces: list[str]) -> str:
     c = e.cfg
     hoy = time.strftime("%Y-%m-%d")
-    costo, n_llamadas = e.costo_total()
     n_ses = len(list(e.sesiones_dir.glob("*.json"))) if e.sesiones_dir.exists() else 0
     panel = f"biblioteca «{c.get('biblioteca')}», panel «{c.get('panel')}»" if e.metodo != "persona" else "—"
     hs = sorted(N.get("hallazgos") or [], key=lambda h: -int(h.get("severidad", 0)))
@@ -154,7 +153,7 @@ sintética. {N.get('veredicto', '').strip()}
 
 - **Pregunta:** {c.get('pregunta_principal', '—')}
 - **Método:** {e.metodo} · {panel}
-- **Sesiones:** {n_ses} guardadas · {n_llamadas} llamadas · US$ {costo}
+- **Sesiones:** {n_ses} guardadas · {e.texto_consumo()}
 
 ## Hallazgos
 

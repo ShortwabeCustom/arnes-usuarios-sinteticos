@@ -197,14 +197,15 @@ avisa lo demás. Corrige los errores; lee los avisos.
 **Por qué.** En la validación del arnés, cambiar solo la redacción de las preguntas movió las respuestas más que la
 diferencia entre las variantes A y B. **El texto de la pregunta también es parte de lo que se mide.**
 
-#### Paso 7 · ⏸ Aprobación del protocolo y del costo
+#### Paso 7 · ⏸ Aprobación del protocolo y del consumo
 
 ```bash
 arnes sesiones <estudio> --simular       # comprensión: cuántas sesiones va a correr
+arnes recorrido <estudio> todos --simular # recorrido: sesiones y tokens estimados
 ```
 
 Antes de correr, que alguien (tú, o quien pidió el estudio) apruebe hipótesis, panel, preguntas o tareas, total de
-sesiones y costo estimado. Referencias en la sección 7.
+sesiones y tokens estimados. Referencias en la sección 7.
 
 #### Paso 8 · ⏸ Estudio piloto
 
@@ -350,18 +351,24 @@ Y tres lecturas que ayudan:
 
 ---
 
-## 7. Costos y tiempos de referencia
+## 7. Consumo y tiempos de referencia
 
-Son uso de la suscripción de Claude Code, medidos en octubre de 2026.
+Las sesiones usan la cuota de tu suscripción de Claude, no se cobran por separado. Por eso el arnés mide el
+consumo en **tokens**: lo registra en cada llamada (`arnes estado <estudio>`) y lo estima antes de correr
+(`arnes recorrido … --simular`, `arnes sesiones … --simular`).
 
-| Qué | Costo aproximado | Tiempo |
+Casi todo lo que consume una sesión larga es **relectura de caché**: el modelo vuelve a leer lo que ya vio (las
+capturas anteriores). Pesa mucho menos que un token nuevo, por eso el arnés muestra las dos cifras.
+
+| Qué | Tokens | Tiempo |
 |---|---|---|
-| Comprensión, una sesión de vistazo | US$ 0.02–0.04 | segundos |
-| Comprensión, lectura completa con continuación | US$ 0.07–0.15 | ~30 s |
-| Comprensión, estudio de 96 sesiones | US$ 5–8 | 15–25 min (6 en paralelo) |
-| Recorrido, una sesión de 6–8 pasos | US$ 0.25–0.95 | 3–6 min |
-| Auditoría, 4 pantallas × 3 evaluadores | US$ 0.40–0.50 | 2–3 min |
-| Prueba de fidelidad de una biblioteca | US$ 0.30 | 2 min |
+| Recorrido, un paso | ≈ 24 mil al principio; crece ≈ 4 mil por cada paso anterior | 10–20 s |
+| Recorrido, una sesión de 5–7 pasos | ≈ 120–170 mil · ≈ 20–30 mil nuevos | 3–6 min |
+| Recorrido, una sesión de 20 pasos | ≈ 1.1 M · ≈ 75 mil nuevos | 5–10 min |
+| Comprensión, auditoría y fidelidad | se miden desde la siguiente corrida | vistazo: segundos · lectura: ~30 s · 96 sesiones: 15–25 min |
+
+Las cifras de recorrido salen de 9 sesiones reales (octubre de 2026). Las demás no se pueden reconstruir: esas
+llamadas no guardaron sus tokens.
 
 ---
 

@@ -26,6 +26,7 @@ import time
 
 from .. import motor
 from ..estudio import Estudio
+from .. import consumo
 from ..navegador import Navegador, marcar, node_id
 
 REGLAS_SESION = """
@@ -125,6 +126,28 @@ def _overlay(it, tarea, paso, p) -> str:
             '<div style="margin-top:6px;font-size:10px;opacity:.6">Ruta y toques reales. Pensamiento y ritmo simulados.</div>')
 
 
+def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int | None = None) -> dict:
+    """Cuántas sesiones correría y cuántos tokens se esperan, sin abrir el navegador ni llamar al modelo.
+    Los pasos por sesión salen de `pasos_esperados` de la tarea (p. ej. del recorrido mecánico) o, si falta,
+    de `max_pasos` (techo: sobreestima)."""
+    c = e.cfg
+    ids = [it.id for it in e.panel()] if integrante == "todos" else [integrante]
+    tareas = [t for t in c["tareas"] if not tarea or t["id"] == tarea]
+    ncorr = corridas or c.get("corridas", 1)
+    tot, filas = consumo.sumar(), []
+    for t in tareas:
+        pasos = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
+        n = len(ids) * ncorr
+        est = consumo.estimar_recorrido(pasos, n)
+        tot = consumo.sumar(tot, est)
+        filas.append((t["id"], n, pasos, "pasos_esperados" if t.get("pasos_esperados") else "max_pasos (techo)", est))
+    print(f"{len(ids)} perfil(es) × {ncorr} corrida(s):")
+    for tid, n, pasos, origen, est in filas:
+        print(f"  {tid}: {n} sesiones × ≈ {pasos} pasos ({origen}) → ≈ {consumo.texto(est)}")
+    print(f"Total estimado: ≈ {consumo.texto(tot)} · modelo de consumo en arnes/consumo.py [SUPUESTO]")
+    return tot
+
+
 def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = False, corridas: int | None = None) -> list[dict]:
     c = e.cfg
     panel = {it.id: it for it in e.panel()}
@@ -166,7 +189,7 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             nav.video(True, str(e.ruta("datos", "videos", f"{sid}.webm")))
         reg = dict(id=sid, tarea=t["id"], corrida=n, integrante=it.id, nombre=it.nombre, perfil=it.perfil, segmento=it.segmento,
                    ocean=it.ocean, modo="guion" if guion else "autonomo", material=material, modelo=modelo,
-                   inicio=time.strftime("%Y-%m-%dT%H:%M:%S"), pasos=[], costo_usd=0.0)
+                   inicio=time.strftime("%Y-%m-%dT%H:%M:%S"), pasos=[], costo_usd=0.0, tokens=consumo.sumar())
         try:
             if guion:
                 _guion(e, nav, it, t, cap, reg)
@@ -181,9 +204,9 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             e.sesiones_dir.mkdir(parents=True, exist_ok=True)
             dst.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
             with open(e.ruta("datos", "registro-sesiones.jsonl"), "a", encoding="utf-8") as f:
-                f.write(json.dumps(dict(id=sid, ok=True, costo_usd=reg["costo_usd"], resultado=reg.get("resultado"),
+                f.write(json.dumps(dict(id=sid, ok=True, costo_usd=reg["costo_usd"], tokens=reg["tokens"], resultado=reg.get("resultado"),
                                         t=reg["fin"]), ensure_ascii=False) + "\n")
-        print(f"{sid}: {reg.get('resultado')} en {len(reg['pasos'])} pasos · US$ {reg['costo_usd']}")
+        print(f"{sid}: {reg.get('resultado')} en {len(reg['pasos'])} pasos · {consumo.texto(reg['tokens'])}")
         registros.append(reg)
     if abierto and c.get("cerrar_al_terminar", True):
         nav.cerrar()
@@ -201,6 +224,7 @@ def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo):
                                        modelo=modelo, persistir=True))
         reg["ces"] = r.salida
         reg["costo_usd"] += r.costo_usd
+        reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
 
 
 def _senales(info) -> dict:
@@ -242,6 +266,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         ses = r.session_id
         reg["_ses"] = ses
         reg["costo_usd"] += r.costo_usd
+        reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
         p = r.salida
         op = p["accion"]["opcion"]
         friccion_max = max(friccion_max, p["friccion"])
@@ -395,7 +420,7 @@ def analizar(e: Estudio) -> dict:
                           pantallas=len({p.get("pantalla") for p in ps}),
                           confianza_inicial=conf[0] if conf else "", confianza_final=conf[-1] if conf else "",
                           confianza_min=min(conf) if conf else "", friccion_max=max(fr) if fr else "",
-                          costo_usd=s.get("costo_usd", 0)))
+                          tokens=consumo.total(s.get("tokens"))))
     with open(e.ruta("datos", "resumen-sesiones.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(filas[0]) if filas else ["sesion"])
         w.writeheader()

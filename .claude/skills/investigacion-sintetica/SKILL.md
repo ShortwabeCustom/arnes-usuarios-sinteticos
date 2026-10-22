@@ -38,8 +38,9 @@ arnes conocimiento <metodo>   # notas del vault de Obsidian para este método: l
   decisión de investigar con la matriz impacto × incertidumbre); después: material verificado, hipótesis con criterio de confirmación y de
   descarte, panel, preguntas o tareas, métricas, límites.
 - `arnes panel <estudio>`: pega la matriz de diversidad en el protocolo y nombra los vacíos.
-- `arnes sesiones <estudio> --simular` (comprensión) para el total. Costos de referencia: vistazo ≈ US$ 0.03,
-  lectura completa con continuación ≈ US$ 0.14, paso de recorrido ≈ US$ 0.06.
+- `arnes sesiones <estudio> --simular` (comprensión) o `arnes recorrido <estudio> todos --simular` (recorrido) para
+  el total. El consumo se expresa en **tokens**, no en dinero: las sesiones usan la suscripción. Un recorrido de 20
+  pasos ≈ 1.1 M tokens, casi todos relectura de caché (≈ 75 mil nuevos).
 
 - Marca el diseño actual como `baseline: true` (comprensión) o `baseline_url` (recorrido). Define `primer_toque` por tarea.
 - Si el producto tiene guía (`guia_estilo: pwa`), corre `arnes estilo <estudio>` y `arnes conocimiento <metodo> --producto pwa`.

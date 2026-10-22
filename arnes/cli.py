@@ -3,11 +3,11 @@
     arnes bibliotecas                         lista bibliotecas y paneles
     arnes panel <estudio|biblioteca:panel>    fichas del panel, diversidad OCEAN, system prompt de muestra
     arnes nuevo <metodo> <nombre>             crea estudios/<fecha>-<nombre>/ desde la plantilla del método
-    arnes estado <estudio>                    fases completadas, sesiones, costo
+    arnes estado <estudio>                    fases completadas, sesiones, consumo en tokens
     arnes medir <estudio>                     comprensión: fases 0, 2 y 3
     arnes sesiones <estudio> [--filtro=X] [--simular] [--piloto] [--paralelo N] [--forzar]
     arnes analizar <estudio>
-    arnes recorrido <estudio> <integrante|todos> [--tarea T1] [--guion] [--corridas N]
+    arnes recorrido <estudio> <integrante|todos> [--tarea T1] [--guion] [--corridas N] [--simular]
     arnes revisar <estudio>                   instrumento: preguntas sugestivas, baseline, lenguaje de la interfaz
     arnes auditar <estudio> [--evaluadores 3] evaluación experta independiente (UX writing o heurísticas) y consolidación
     arnes estilo <estudio>                    textos contra la guía de estilo del producto (guia_estilo en estudio.yaml)
@@ -118,13 +118,12 @@ def cmd_nuevo(a):
 def cmd_estado(a):
     e = Estudio(a.estudio)
     st = e.estado()
-    costo, n = e.costo_total()
     print(f"{e.cfg.get('titulo', e.dir.name)}\n  método {e.metodo} · biblioteca {e.cfg.get('biblioteca')} · panel {e.cfg.get('panel')}")
     for f, v in st.get("fases", {}).items():
         print(f"  ✓ {f:10s} {v['t']}  " + " ".join(f"{k}={v[k]}" for k in v if k != "t"))
     if e.sesiones_dir.exists():
         print(f"  sesiones guardadas: {len(list(e.sesiones_dir.glob('*.json')))}")
-    print(f"  llamadas registradas: {n} · costo acumulado US$ {costo}")
+    print(f"  consumo: {e.texto_consumo()}")
 
 
 def cmd_medir(a):
@@ -166,6 +165,9 @@ def cmd_recorrido(a):
     e = Estudio(a.estudio)
     from .metodos import recorrido
 
+    if a.simular:
+        recorrido.simular(e, a.integrante, tarea=a.tarea, corridas=a.corridas)
+        return
     _revisar_o_salir(e, a.forzar)
     recorrido.sesion(e, a.integrante, tarea=a.tarea, guion=a.guion, corridas=a.corridas)
 
@@ -323,6 +325,7 @@ def main(argv=None):
     x.add_argument("--tarea")
     x.add_argument("--guion", action="store_true", help="ejecuta el guion escrito en lugar de que el perfil decida")
     x.add_argument("--corridas", type=int, help="repeticiones por integrante y tarea (para medir qué se repite)")
+    x.add_argument("--simular", action="store_true", help="cuántas sesiones y tokens, sin correr nada")
     x.add_argument("--forzar", action="store_true")
     x.set_defaults(fn=cmd_recorrido)
     x = s.add_parser("persona")

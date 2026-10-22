@@ -16,7 +16,7 @@ import json
 import math
 from concurrent.futures import ThreadPoolExecutor
 
-from . import motor
+from . import consumo, motor
 from .estudio import Estudio
 
 W = {
@@ -103,13 +103,13 @@ def auditar(e: Estudio, evaluadores: int = 3, modelo: str = "sonnet", simular: b
                   "la versión actual y la recomendada (si no aplica, deja esos dos campos vacíos).")
         r = motor.llamar(motor.Llamada(f"aud-{m['pantalla']}-{k}", prompt, SISTEMA.format(tipo=tipo),
                                        _esquema(criterios, m["zonas"]), ["Read"], [m["imagen"]], modelo=modelo))
-        return m["pantalla"], k, r.salida, r.costo_usd
+        return m["pantalla"], k, r.salida, r.costo_usd, r.tokens
 
     with ThreadPoolExecutor(6) as ex:
         crudo = list(ex.map(una, llamadas))
     grupos = collections.defaultdict(list)
     positivos = collections.defaultdict(list)
-    for pid, k, sal, _ in crudo:
+    for pid, k, sal, *_ in crudo:
         for o in sal["observaciones"]:
             clave = (pid, o["criterio"], o["zona"] if e.metodo == "comprension" else "")
             grupos[clave].append(dict(o, evaluador=k))
@@ -124,11 +124,11 @@ def auditar(e: Estudio, evaluadores: int = 3, modelo: str = "sonnet", simular: b
                          reescrituras=[[o["actual"], o["recomendado"]] for o in obs if o.get("actual") and o.get("recomendado")]))
     cons.sort(key=lambda x: (-x["evaluadores"], -x["severidad_media"]))
     res = dict(metodo=e.metodo, evaluadores=evaluadores, umbral_consenso=umbral, consolidado=cons,
-               positivos={k: v for k, v in positivos.items()}, crudo=[dict(pantalla=p, evaluador=k, salida=s) for p, k, s, _ in crudo],
-               costo_usd=round(sum(x[3] for x in crudo), 3))
+               positivos={k: v for k, v in positivos.items()}, crudo=[dict(pantalla=p, evaluador=k, salida=s) for p, k, s, *_ in crudo],
+               costo_usd=round(sum(x[3] for x in crudo), 3), tokens=consumo.sumar(*(x[4] for x in crudo)))
     e.ruta("datos", "auditoria.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
-    e.marcar("auditar", evaluadores=evaluadores, consenso=sum(x["consenso"] for x in cons), costo_usd=res["costo_usd"])
-    print(f"Consenso ({umbral}+ de {evaluadores}): {sum(x['consenso'] for x in cons)} · a revisar (1 evaluador): {sum(not x['consenso'] for x in cons)} · US$ {res['costo_usd']}")
+    e.marcar("auditar", evaluadores=evaluadores, consenso=sum(x["consenso"] for x in cons), tokens=consumo.total(res["tokens"]))
+    print(f"Consenso ({umbral}+ de {evaluadores}): {sum(x['consenso'] for x in cons)} · a revisar (1 evaluador): {sum(not x['consenso'] for x in cons)} · {consumo.texto(res['tokens'])}")
     for x in cons[:15]:
         print(f"  {'●' if x['consenso'] else '○'} {x['pantalla']:12s} {x['criterio']:4s} {x['zona'][:14]:14s} {x['evaluadores']}/{evaluadores} "
               f"sev {x['severidad_media']} · {x['problemas'][0][:90]}")

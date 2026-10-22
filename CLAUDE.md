@@ -24,7 +24,7 @@ arnes conocimiento <metodo>       → notas del vault que hay que leer para dise
   completar estudio.yaml y PROTOCOLO.md (sección «Referencias del vault»)
 arnes revisar <estudio>           → preguntas sugestivas, baseline, lenguaje de la interfaz (bloquea si hay errores)
 arnes estilo <estudio>            → textos contra la guía de estilo del producto (`guia_estilo: pwa`)
-  ⏸ APROBACIÓN del protocolo y del costo (arnes sesiones --simular da el total)
+  ⏸ APROBACIÓN del protocolo y del consumo en tokens (arnes sesiones|recorrido --simular)
 arnes sesiones --piloto           → estudio piloto: un perfil, corrida 1; revisar antes de seguir
 arnes medir / arnes sesiones / arnes recorrido
 arnes auditar <estudio>           → 3 evaluaciones expertas independientes, consolidadas (opcional, recomendado)
@@ -40,7 +40,8 @@ corre solo al abrir Claude Code (`.claude/settings.json`). En `--filtro` usar `-
 
 ## Puntos donde se pregunta a la persona usuaria
 
-- Antes de correr sesiones: protocolo aprobado y costo aceptado. Las sesiones gastan uso de la suscripción.
+- Antes de correr sesiones: protocolo aprobado y consumo aceptado. Las sesiones gastan cuota de la suscripción:
+  se expresan en tokens (`arnes/consumo.py`), no en dólares ni pesos.
 - Si el material no abre (VPN, login, prototipo privado): reportar el error exacto y preguntar. Nunca inventar
   credenciales.
 - Si hay que elegir el eje de segmentación de un User Persona o suspender una variable importante.

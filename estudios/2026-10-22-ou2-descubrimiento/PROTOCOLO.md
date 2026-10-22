@@ -145,4 +145,4 @@ Resultado por tarea: éxito · éxito con fricción · cree que terminó · aban
 - [x] Tareas con criterio de fin verificable por el arnés
 - [x] Panel revisado
 - [ ] Brief completo, con autorización y decisión de investigar
-- [ ] Costo estimado aceptado (≈ US$ 0.06 por paso)
+- [ ] Consumo estimado aceptado (`arnes recorrido <estudio> todos --simular`, en tokens)
