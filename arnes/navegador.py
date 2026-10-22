@@ -5,9 +5,9 @@ así no se pagan cinco procesos por toque.
 
 Dos materiales, un solo modo de interacción (por coordenada):
 
-- **figma**: el prototipo se dibuja en <canvas>, sin árbol de accesibilidad. Las zonas activas se
-  leen del cursor del canvas (`cursor: pointer`), con la misma rejilla de `hotspots.js` del skill
-  auditoria-prototipos-figma. No se cambia el tamaño de la ventana: el encuadre es parte del prototipo.
+- **figma**: el prototipo se dibuja en <canvas>, sin árbol de accesibilidad. Las zonas activas salen de los
+  resaltados azules que Figma muestra al tocar fuera de un hotspot (dentro del overlay si hay uno abierto); el
+  barrido de cursor queda de respaldo. No se cambia el tamaño de la ventana: el encuadre es parte del prototipo.
 - **web**: sitio real. Las zonas son los elementos interactivos visibles y no tapados del DOM, y el
   viewport se fija al del dispositivo del estudio.
 
@@ -103,6 +103,23 @@ const senales = async (page) => page.evaluate(() => {
   const m = (document.body.innerText || '').match(/paso\s+\d+\s+de\s+\d+|\b\d+\s*(?:de|\/)\s*\d+\s+pasos?\b/i);
   return { errores_validacion: [...new Set(errores)], campos, progreso: m ? m[0] : (barra ? 'barra de progreso' : null), permisos: window.__arnesPermisos || [] };
 }).catch(() => ({}));
+"""
+
+JS_PISTAS = r"""
+async (page) => {
+  // Figma resalta en azul lo tocable cuando se toca algo que no lo es (hotspot hints). Captura antes, toque en el
+  // punto que eligió Python (fondo, o dentro del overlay si hay uno abierto), captura con resaltados y, ya
+  // apagados, una tercera para comprobar que el toque no cambió la pantalla.
+  const C = __CFG__;
+  await page.screenshot({ path: C.base });
+  await page.mouse.click(C.x, C.y);
+  await page.waitForTimeout(C.pistas_ms || 160);
+  await page.screenshot({ path: C.pistas });
+  await page.mouse.move(C.x, C.y);
+  await page.waitForTimeout(700);
+  await page.screenshot({ path: C.despues });
+  return JSON.stringify({ url: page.url() });
+}
 """
 
 JS_PASO = r"""
@@ -208,15 +225,132 @@ class Navegador:
             os.unlink(f.name)
         try:
             v = json.loads(out)
-            return json.loads(v) if isinstance(v, str) else v
+            v = json.loads(v) if isinstance(v, str) else v
         except json.JSONDecodeError as e:
             raise RuntimeError(f"run-code no devolvió JSON: {out[:400]}") from e
+        if self.material == "figma":
+            self._pistas(captura, v)
+            self._previa = captura
+        return v
+
+    def _pistas(self, captura: Path, v: dict) -> None:
+        """Zonas tocables de Figma por sus resaltados. Si hay un overlay abierto, el toque va dentro de él (en
+        la franja superior, sin interacción); si no, al fondo del lienzo, fuera del dispositivo."""
+        marco = v.get("marco") or {}
+        if not marco:
+            v["deteccion"] = "sin lienzo"
+            return
+        ov = overlay_abierto(getattr(self, "_previa", None), captura, marco)
+        x, y = (ov["x"], ov["y"]) if ov else (marco["x"] + 6, marco["y"] + 6)
+        f = {k: captura.with_suffix(f".{k}.png") for k in ("base", "pistas", "despues")}
+        js = JS_PISTAS.replace("__CFG__", json.dumps(dict(x=x, y=y, **{k: str(p) for k, p in f.items()})))
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, dir=self.cwd) as t:
+            t.write(js)
+        try:
+            self.cli("run-code", "--filename", t.name, raw=True, timeout=120)
+        finally:
+            os.unlink(t.name)
+        if not f["base"].exists():
+            v["deteccion"] = "sin captura de resaltados"
+            return
+        z = zonas_por_pistas(f["base"], f["pistas"], marco)
+        v["pistas_alteraron"] = cambio_visible(f["base"], f["despues"], marco)
+        v["overlay"] = bool(ov)
+        for p in f.values():
+            p.unlink(missing_ok=True)
+        if z:
+            v["zonas"], v["deteccion"] = z, "resaltados de Figma" + (" (dentro del overlay)" if ov else "")
+        else:
+            v["zonas"], v["deteccion"] = elegir_zonas_figma(v)
 
     def video(self, iniciar: bool, nombre: str | None = None) -> str:
         if iniciar:
             self.cli("video-start", *( [nombre] if nombre else []))
             return ""
         return self.cli("video-stop")
+
+
+def zonas_por_pistas(base: Path, pistas: Path, marco: dict | None = None) -> list[dict]:
+    """Zonas tocables de Figma a partir de sus resaltados azules (hotspot hints): píxeles que se vuelven más azules
+    entre la captura previa y la de los resaltados, agrupados en rectángulos."""
+    import cv2
+    import numpy as np
+    from PIL import Image
+
+    a = np.asarray(Image.open(base).convert("RGB")).astype(int)
+    b = np.asarray(Image.open(pistas).convert("RGB")).astype(int)
+    if a.shape != b.shape:
+        return []
+    azul = (b[..., 2] - b[..., 0]) - (a[..., 2] - a[..., 0])
+    m = ((azul > 25) & (np.abs(b - a).sum(axis=2) > 30)).astype(np.uint8)
+    if marco:
+        fuera = np.ones_like(m, dtype=bool)
+        fuera[marco["y"]:marco["y"] + marco["h"], marco["x"]:marco["x"] + marco["w"]] = False
+        m[fuera] = 0
+    m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    n, _, st, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
+    zonas = []
+    for i in range(1, n):
+        x, y, w, h, area = (int(t) for t in st[i])
+        if w < 8 or h < 8 or area < 120 or area / (w * h) < 0.35:
+            continue
+        zonas.append(dict(x=x, y=y, w=w, h=h, tocar=[x + w // 2, y + h // 2], tipo="zona", editable=False,
+                          etiqueta=""))
+    return sorted(zonas, key=lambda z: (z["y"], z["x"]))
+
+
+def _gris(ruta: Path, marco: dict):
+    import numpy as np
+    from PIL import Image
+
+    a = np.asarray(Image.open(ruta).convert("L")).astype(int)
+    return a[marco["y"]:marco["y"] + marco["h"], marco["x"]:marco["x"] + marco["w"]]
+
+
+def cambio_visible(a: Path, b: Path, marco: dict, umbral: float = 0.03) -> bool:
+    """¿Cambió más del `umbral` de los píxeles del lienzo entre dos capturas?"""
+    import numpy as np
+
+    x, y = _gris(a, marco), _gris(b, marco)
+    return x.shape == y.shape and float(np.mean(np.abs(x - y) > 24)) > umbral
+
+
+def overlay_abierto(previa: Path | None, actual: Path, marco: dict) -> dict | None:
+    """Detecta un overlay (hoja inferior, modal) por el velo que oscurece la parte de arriba de la pantalla anterior.
+    Devuelve el punto donde tocar sin cerrarlo: en la franja superior del overlay, donde suele ir la manija."""
+    import numpy as np
+
+    if not previa or not Path(previa).exists():
+        return None
+    a, b = _gris(previa, marco), _gris(actual, marco)
+    if a.shape != b.shape:
+        return None
+    cols = np.where(np.abs(a - b).mean(axis=0) > 1)[0]
+    if len(cols) < 20:
+        return None
+    x0, x1 = int(cols.min()), int(cols.max())
+    cx = (x0 + x1) // 2
+    franja = slice(max(0, cx - 30), cx + 30)
+    da, db = a[:, franja].mean(axis=1), b[:, franja].mean(axis=1)
+    oscuro = (da - db) > 12                   # filas que se oscurecieron: el velo
+    if oscuro[: len(oscuro) // 3].mean() < 0.3:
+        return None
+    filas = np.where(~oscuro & (np.abs(da - db) > 12))[0]
+    filas = filas[filas > np.argmax(oscuro)]
+    if not len(filas):
+        return None
+    top = int(filas.min())
+    return dict(x=marco["x"] + cx, y=marco["y"] + top + 8)
+
+
+def elegir_zonas_figma(v: dict) -> tuple[list[dict], str]:
+    """Si los resaltados no dieron zonas: el barrido de cursor, salvo que el cursor sea el mismo en todo el lienzo
+    (prototipos táctiles: Figma muestra el cursor de dedo en todas partes)."""
+    z, m = v.get("zonas") or [], v.get("marco") or {}
+    area = max(1, m.get("w", 1) * m.get("h", 1))
+    if z and sum(t["w"] * t["h"] for t in z) / area < 0.4:
+        return z, "cursor"
+    return [], "sin zonas detectadas"
 
 
 def node_id(url: str) -> str | None:

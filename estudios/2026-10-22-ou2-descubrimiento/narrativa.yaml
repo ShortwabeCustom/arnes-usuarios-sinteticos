@@ -1,0 +1,59 @@
+# Narrativa del reporte. La escribe el investigador (o el agente) DESPUÉS de `arnes analizar`.
+# El código pone tablas y gráficos; aquí van titulares, interpretación y recomendaciones.
+# Reglas (guía editorial): el titular da la conclusión, no el tema. Hecho → interpretación → hipótesis,
+# sin mezclar. Cada cifra con su base («19 de 24»). Nada de «todos», «nadie», «demuestra», «provoca».
+titulo_corto: ""
+titular: ""            # la conclusión principal, en una frase
+veredicto: ""          # 2–3 frases: qué pasó y qué conviene hacer
+decision:              # chips de la portada
+  - {texto: "", si: true}
+kpis:                  # máximo 4. `verificar` hace que `arnes verificar` recuente la cifra
+  - {valor: "x de y", etiqueta: "", detalle: "", tono: bien, verificar: ""}
+  # comprensión: verificar: "principal|<grupo>|<variante>|<modo>|<momento>|<pregunta>"
+  #              compara: [claveA, claveB]  → el verificador avisa si la brecha no es clara (intervalos de Wilson)
+  # recorrido:   verificar: "<tarea>|<resultado>"   (exito, exito_con_friccion, abandono, …)
+kpis_nota: "Cuentan corridas de perfiles sintéticos, no personas."
+resumen: []            # máximo 10 hallazgos en lenguaje llano
+
+# Comprensión: textos por grupo de pantallas y por pregunta (opcionales)
+grupos: {}
+preguntas: {}
+# Recorrido: nombre legible de cada pantalla (node-id o URL → nombre)
+pantallas: {}
+momentos: []           # {pantalla, tipo: verde|amarillo|rojo, texto}
+
+hipotesis_resultado:   # {id, estado: se_sostiene|se_cae|no_concluyente, evidencia}
+  []
+perfiles: {}           # por integrante: {cita, entiende, rompe, reglas}
+hallazgos:
+  - id: H1
+    titulo: ""         # conclusión, no tema
+    severidad: 3       # 0 sin problema · 1 cosmético · 2 menor · 3 importante · 4 crítico
+    categoria: A       # solo recorrido: A diseño · C cableado. B (estado de prototipado) va en estado_prototipado
+    donde: ""
+    pantalla: ""       # recorrido: node-id o URL, para el embudo
+    sesiones: []       # ids de sesión afectadas → frecuencia y matriz usuario × problema
+    impacto_negocio: 3 # 1–5, para la prioridad F × S × I
+    oportunidad: mejorar   # template de protocolo de UiX: mantener · mejorar · incorporar · hacer_diferente
+    hallazgo: ""       # qué ocurrió, con cifra
+    interpretacion: "" # por qué podría ocurrir
+    recomendacion: ""  # qué cambiar
+    evidencia: ""      # archivo, captura, sesión
+    heuristica: ""     # p. ej. «Nielsen 4 · Consistencia y estándares»
+    walkthrough: null  # recorrido: 1 ¿intentará el resultado correcto? · 2 ¿notará la acción? · 3 ¿la asociará con su meta? · 4 ¿verá que avanza?
+    wcag: ""           # p. ej. «1.4.3 Contraste mínimo»
+    confianza: media   # alta · media · baja
+    etiquetas: [EVIDENCIA, SIMULACIÓN]
+    reescritura: []    # [[actual, recomendado, razón]] para UX writing
+aprendizajes_metodo: []   # qué enseñó este estudio sobre el método: va a la síntesis del vault
+conceptos: []             # slugs de notas del vault a enlazar además de las del método
+positivos: []
+estado_prototipado: []
+limitaciones:
+  - "Los perfiles son sintéticos y derivan de la evidencia disponible; no sustituyen pruebas con personas."
+  - "OCEAN no predice conducta de forma determinista; sus valores son de diseño del panel."
+validar_con_personas: []   # el reporte agrega la muestra recomendada por UiX para la metodología del estudio
+proximos_pasos: []
+limitaciones_tecnicas: []   # lo que no se pudo abrir, navegar, verificar o guardar
+fuentes:
+  - {nombre: "", ruta: "", uso: ""}

@@ -113,7 +113,9 @@ Se crea `estudios/<fecha>-<nombre>/` con `estudio.yaml`, `PROTOCOLO.md` y `narra
   ([[first-click-testing]]).
 - **Fija la versión.** Anota fecha, hora y, en Figma, el `node-id` de inicio. Si el prototipo cambia a mitad del
   estudio, la evidencia deja de servir.
-- **Recorrido:** comprueba que la URL abre sin iniciar sesión. Si pide VPN o credenciales, resuélvelo antes. Nunca
+- **Recorrido: verifica que el link esté compartido sin restricciones.** En Figma: «Share» → «Anyone with the link» →
+  «can view». Ábrelo en una **ventana de incógnito** antes de dárselo al arnés: si ahí te pide iniciar sesión, el
+  arnés tampoco va a poder abrirlo. Si pide VPN o credenciales, resuélvelo antes. Nunca
   inventes credenciales.
 
 #### Paso 3 · Lee lo que ya sabemos

@@ -1,0 +1,15 @@
+{
+ "fases": {
+  "estilo": {
+   "t": "2026-10-22T00:53:28",
+   "guia": "pwa",
+   "errores": 0,
+   "avisos": 0
+  }
+ },
+ "biblioteca": {
+  "id": "pwa",
+  "huella": "26e3e3cfcbc5",
+  "panel": "base4"
+ }
+}

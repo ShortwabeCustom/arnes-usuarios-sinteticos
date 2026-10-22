@@ -1,0 +1,111 @@
+# Estudio de recorrido de un flujo interactivo (prototipo Figma o sitio web real).
+# Ejemplo mínimo que corre: estudios/prueba-recorrido-web/estudio.yaml
+id: 2026-10-22-ou2-descubrimiento
+titulo: "Descubrimiento preliminar del prototipo de Originación Única 2.0 (flujo amarillo)"
+metodo: recorrido
+fecha: "2026-10-22"
+autor: "Alexis Valdez + Claude"
+producto: "Originación Única · PWA"
+marca: {color: "#0B6B4F", nombre: "Banco Azteca"}
+
+# Estándares de UiX (fuentes-equipo/uix/). Con este bloque el reporte se llama proyecto-metodologia-tema_aaaa-mm-dd-vN
+# y el tema lleva «-sintetico» al final, para que no se confunda con un estudio hecho con personas.
+uix:
+  proyecto: oupwa   # una sola forma por proyecto (oupwa, oupax, pp…); acordarla con CS y PD
+  metodologia: pdu         # código de la guía de naming: pdu (prueba de usabilidad)
+  tema: originacion-unica-2-0           # flujo, fase, paso, pantalla o componente; waveN al final si hay dos iguales el mismo día
+  version: 1               # súbela cada vez que se actualiza el entregable
+  # fecha_fin: "aaaa-mm-dd"  # cuándo terminó el estudio; si falta, la fecha en que se genera el reporte
+  cliente: "Originación Única · PWA"
+  autorizacion: "Alexis Valdez"
+  alcance: descriptiva     # superficial · descriptiva · profunda · predictiva
+  decision: {impacto: alto, incertidumbre: alta}   # matriz de «Research en tus proyectos»: alto/bajo × alta/baja
+
+guia_estilo: pwa       # guía de voz y estilo del producto: fuentes-producto/pwa (arnes estilo)
+biblioteca: pwa
+panel: base4              # los cuatro segmentos, sin OCEAN: lo más fiel a los datos para un primer descubrimiento
+modelo: sonnet
+
+# figma: prototipo en canvas; zonas activas por cursor (hotspots), no se cambia el tamaño de ventana.
+# web: sitio real; zonas = elementos interactivos del DOM; viewport fijado al dispositivo.
+material: figma
+url: "https://www.figma.com/proto/UchZSf5TEKlm88h1cJTyRG/Originaci%C3%B3n-%C3%9Anica-2.0---Cliente?node-id=7723-327419&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7723%3A327419&show-proto-sidebar=0&page-id=4%3A739"
+# Link original con la barra lateral de flujos abierta; se cierra (show-proto-sidebar=0) para que no mueva el marco.
+# Flujo «OU 2.0 Flujo Amarillo». El flujo «Mini Juego» queda fuera de este estudio.
+dispositivo: {ancho: 360, alto: 800}   # «Android Grande» en el prototipo
+visible: true            # ventana visible: permite ver el recorrido mientras corre
+video: true              # graba datos/videos/<sesión>.webm con el pensamiento del perfil superpuesto
+max_pasos: 30
+corridas: 2              # repeticiones por perfil y tarea: «creer en lo que se repite»
+baseline_url: null
+sin_baseline_porque: "Descubrimiento preliminar: OU 2.0 es la línea base (benchmark) contra la que se compararán sus siguientes versiones y la PWA actual."
+max_sin_cambio: 4        # pasos seguidos sin cambio de pantalla antes de dar la sesión por atascada
+reiniciar_entre_tareas: true
+
+# Acciones antes de la primera tarea, p. ej. descartar el banner de cookies de Figma ANTES de medir nada.
+preparacion:
+  - {tipo: tocar_texto, texto: "No permitir cookies"}
+
+# Datos claramente ficticios. Nunca datos personales reales.
+# El prototipo llena los campos solo al tocarlos y usa sus propios datos de ejemplo. [SUPUESTO METODOLÓGICO]
+datos_prueba:
+  nota: "El prototipo usa «María», el celular 55 6960 7716 y un correo como datos de ejemplo, y llena los campos solo al tocarlos. Léelos como si fueran los tuyos."
+  codigo_de_verificacion: "123456"
+  numero_de_empleado: "123456789"
+
+tareas:
+  - id: T1
+    escenario: "Quieres un préstamo en efectivo y entraste desde tu celular a la página de Banco Azteca para pedirlo."
+    instruccion: "Pide un préstamo en efectivo y avanza hasta donde la aplicación te deje llegar."
+    exito: "Llega a la toma de selfie (fin del prototipo)."
+    fin: {node_ids: ["7723-327412", "7723-327416"]}   # cargando y «Coloca tu rostro dentro del óvalo»
+    max_pasos: 30
+    primer_toque: {caja: [532, 522, 743, 553]}          # «Inicia tu solicitud»
+    # Sin retoma: en Figma, recargar regresa al inicio del prototipo; mediría el prototipo, no el producto.
+
+# Modelo de tiempo [SUPUESTO]: el tiempo humano no se mide en una sesión sintética; se estima y se le suma la espera
+# real del sistema. Se reporta solo para las sesiones que completan.
+# modelo_tiempo: {palabras_por_segundo: 3.5, decision_s: 1.35, toque_s: 0.4, tecla_s: 0.3, relectura: 0.25, velocidades: [2.5, 4.5]}
+
+# Figma no tiene DOM: campos, palabras e indicador de estatus por pantalla se cargan a mano (node-id → datos).
+pantallas_info:            # recorrido mecánico del 22/10/2026 (sin perfiles)
+  "7723-327419": {nombre: "Bienvenida (carrusel)", campos: 0}
+  "7723-327702": {nombre: "Uso del préstamo", campos: 1}
+  "7723-327462": {nombre: "Monto y plazo", campos: 2}
+  "7723-326705": {nombre: "Datos de contacto", campos: 3}
+  "8015-60615": {nombre: "Código de verificación", campos: 1}
+  "9830-189949": {nombre: "¿Te ayuda un asesor?", campos: 1}
+  "9830-200001": {nombre: "Número de empleado del asesor", campos: 1}
+  "7723-326717": {nombre: "Introducción a la selfie", campos: 0}
+  "7723-327683": {nombre: "Permiso de cámara", campos: 0}
+  "9591-77774": {nombre: "Permiso de ubicación", campos: 0}
+  "7723-327416": {nombre: "Toma de selfie", campos: 0}
+
+hipotesis:
+  - id: H1
+    texto: "La promesa de la bienvenida («menos de 5 minutos», «4 pasos») no coincide con lo que se recorre: los perfiles perciben un proceso más largo."
+    se_sostiene_si: "En al menos la mitad de las sesiones el perfil menciona que son más pasos o más tiempo de lo prometido, o pierde la noción de en qué paso va."
+    se_cae_si: "Ninguna sesión lo menciona y la confianza no baja a lo largo del flujo."
+  - id: H2
+    texto: "En «Monto y plazo» el pago semanal aparece solo después de elegir el plazo en una hoja aparte; los perfiles confirman sin tener claro cuánto pagarán."
+    se_sostiene_si: "Alguna sesión confirma el monto sin mencionar el pago semanal, o expresa duda sobre cuánto pagará en total."
+    se_cae_si: "Todas las sesiones mencionan el pago semanal antes de confirmar."
+  - id: H3
+    texto: "Los permisos de cámara y ubicación seguidos generan la mayor caída de confianza del flujo, más en Gen X y Boomer."
+    se_sostiene_si: "La confianza baja 15 puntos o más en las pantallas de permisos en alguna sesión, o algún perfil niega un permiso."
+    se_cae_si: "La confianza se mantiene en las dos pantallas de permisos en todas las sesiones."
+  - id: H4
+    texto: "La pregunta «¿te está ayudando un asesor?» confunde a quien solicita solo."
+    se_sostiene_si: "Algún perfil duda, elige «Sí» sin asesor o comenta que no entiende para qué se pregunta."
+    se_cae_si: "Todos responden sin duda y siguen."
+  - id: H5
+    texto: "En «Datos de contacto» el botón deshabilitado no explica qué falta: hay toques sobre el botón gris antes de completar."
+    se_sostiene_si: "Algún perfil toca «Continuar» deshabilitado o dice no saber qué le falta."
+    se_cae_si: "Ningún perfil intenta continuar antes de completar los tres campos."
+
+# Opcional: modo guion (`arnes recorrido <estudio> <integrante> --guion`), como en entrecalles.
+# guiones:
+#   S01:
+#     T1:
+#       - {pantalla: "Intro", dice: "Verificar domicilio. Va.", etiqueta: "A-05",
+#          acciones: [[tocar, 720, 876, "Continuar"], [observar, 2000]]}

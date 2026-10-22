@@ -73,6 +73,24 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 - Probado con un clon nuevo sin `--recursive` y con una carpeta personal vacía: en 32 s quedó todo instalado; el vault
   bajó con credenciales de GitHub (sin ellas, el aviso dice pedir acceso y `gh auth login`).
 
+---
+
+## Sesión del 22 de octubre de 2026 (primer recorrido sobre Figma real: OU 2.0)
+
+**Pedido:** descubrimiento preliminar del prototipo de Originación Única 2.0, como benchmark, con heurísticas y
+métricas de producto y negocio. Estudio `estudios/2026-10-22-ou2-descubrimiento`.
+
+- La guía y el método ahora piden **compartir el link sin restricciones y probarlo en incógnito** (sugerencia de
+  Alexis: es un consejo, no una pregunta).
+- **Pre-flight:** el link abre sin sesión. Banner de cookies y barra lateral de flujos movían el marco: se cierra la
+  barra (`show-proto-sidebar=0`) y el banner se descarta con la acción nueva `tocar_texto`.
+- **El detector de zonas no servía en Figma real:** en prototipos táctiles el cursor es de «dedo» en todo el lienzo y
+  daba 0 zonas. Ahora usa los **resaltados de hotspots** de Figma. Tocar fuera cerraba las hojas inferiores; ahora
+  detecta el overlay por el velo y toca dentro, en la manija. Prueba nueva con imágenes sintéticas (19 pruebas).
+- **Recorrido mecánico sin perfiles (US$ 0):** 24 pantallas de la bienvenida a la selfie; mapa y node-ids en
+  `pantallas_info` del estudio. Solo «Efectivo» está conectado en el uso del préstamo; «Tomar selfie» es el fin.
+- Pendiente: aprobación del piloto (un perfil, T1, ≈ 20 pasos ≈ US$ 1.20) y luego el panel (8 sesiones ≈ US$ 10).
+
 **Automatización y crecimiento sano** (pedido: «automatiza este proceso y haz lo que más convenga para el
 crecimiento sano y útil del arnés»):
 - `arnes vault` (`arnes/vault.py`): `estado`, `sincronizar` (trae, hace commit con la lista de notas que cambiaron y

@@ -18,15 +18,30 @@ No arranca sin esta tabla, y se reporta tal cual en el protocolo:
 | Protocolo | tareas, criterio de fin, métricas | | |
 | Datos de prueba | ficticios, en `estudio.yaml` | | |
 
+- **Antes del pre-flight**: el link debe estar compartido sin restricciones («Anyone with the link · can view» en
+  Figma) y abrir en una ventana de incógnito. El arnés navega como incógnito: sin tu sesión.
 - **Si no carga** (certificado, DNS, VPN, IP allow-list): detenerse y reportar el error exacto.
 - **Si pide credenciales**: preguntar. Nunca inventarlas ni adivinarlas.
 - **Figma privado**: `state-save`/`state-load` del CLI de Playwright desde un navegador con sesión.
+
+### Zonas tocables en Figma
+
+Figma resalta en azul lo tocable cuando se toca algo que no lo es (*hotspot hints*). El arnés toca el fondo del
+lienzo, fuera del dispositivo, compara la captura previa con la de los resaltados y saca las zonas. Dos cuidados,
+aprendidos en el primer prototipo real (OU 2.0, 22/10/2026):
+- **Prototipos táctiles:** el cursor de «dedo» aparece en todo el lienzo, así que el barrido de cursor (el método
+  anterior) no distingue botones. Queda solo como respaldo.
+- **Overlays** (hojas inferiores, modales): tocar fuera los cierra. Si el arnés detecta un velo que oscurece la
+  pantalla anterior, toca dentro del overlay, en su franja superior (la manija), y comprueba que la pantalla no
+  cambió (`pistas_alteraron` en el paso).
+- El banner de cookies es HTML: se descarta con `{tipo: tocar_texto, texto: "No permitir cookies"}` en
+  `preparacion`.
 
 ## Cómo corre una sesión (modo autónomo)
 
 ```
 por cada paso:
-  arnés    → captura la pantalla y mapea lo que responde (Figma: cursor del canvas · web: DOM)
+  arnés    → captura la pantalla y mapea lo que responde (Figma: resaltados de hotspots · web: DOM)
   arnés    → dibuja números sobre cada zona activa
   perfil   → mira la captura limpia, dice qué ve, qué cree, qué quiere hacer y elige un número
   arnés    → ejecuta el toque, espera a que la pantalla se asiente, le dice al perfil qué pasó

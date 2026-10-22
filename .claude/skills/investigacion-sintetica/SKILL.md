@@ -56,7 +56,7 @@ Muestra en el chat: hipótesis, panel, total de sesiones y costo estimado. **No 
   lee esas sesiones → `arnes sesiones` en segundo plano → `arnes analizar`.
 - `arnes auditar <estudio>`: 3 evaluaciones expertas independientes (UX writing en comprensión, Nielsen en recorrido).
   Usa el consenso como primera pasada de la Fase 1 o de la evaluación heurística.
-- Recorrido: verifica antes que la URL abre (pre-flight). `arnes recorrido <estudio> <integrante|todos>`; empieza
+- Recorrido: pide a la persona usuaria que comparta el link sin restricciones y lo pruebe en incógnito; luego verifica que abre (pre-flight). `arnes recorrido <estudio> <integrante|todos>`; empieza
   con un integrante y una tarea, mira las capturas de `datos/capturas/`, y recién después corre el panel.
   `arnes analizar`.
 - Persona: sigue `metodos/persona/METODO.md`; al final `arnes persona validar` y `arnes persona probar`.

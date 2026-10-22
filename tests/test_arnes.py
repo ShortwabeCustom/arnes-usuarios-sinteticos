@@ -240,3 +240,33 @@ def test_vault_sincronizar(tmp_path, monkeypatch):
     with pytest.raises(mv.ErrorVault, match="guardia"):
         mv.sincronizar(silencioso=True)
     assert subprocess.run(["git", "-C", str(V), "diff", "--cached", "--quiet"]).returncode == 0
+
+
+# ---- recorrido en Figma: zonas por resaltados y overlays ----------------------------------------
+
+
+def test_zonas_por_resaltados_de_figma(tmp_path):
+    from PIL import Image, ImageDraw
+
+    from arnes.navegador import overlay_abierto, zonas_por_pistas
+
+    marco = dict(x=0, y=0, w=400, h=800)
+    base = Image.new("RGB", (400, 800), (20, 130, 90))
+    d = ImageDraw.Draw(base)
+    d.rectangle([40, 700, 360, 740], fill=(255, 255, 255))          # botón blanco
+    base.save(tmp_path / "base.png")
+    pistas = base.copy()
+    ImageDraw.Draw(pistas).rectangle([38, 698, 362, 742], fill=(173, 224, 245), outline=(0, 170, 220), width=2)
+    pistas.save(tmp_path / "pistas.png")
+    z = zonas_por_pistas(tmp_path / "base.png", tmp_path / "pistas.png", marco)
+    assert len(z) == 1 and abs(z[0]["tocar"][1] - 720) <= 3
+
+    # overlay: la mitad de arriba se oscurece (velo) y abajo aparece una hoja clara
+    previa = Image.new("RGB", (400, 800), (200, 200, 200))
+    previa.save(tmp_path / "previa.png")
+    actual = Image.new("RGB", (400, 800), (110, 110, 110))
+    ImageDraw.Draw(actual).rectangle([0, 300, 399, 799], fill=(245, 245, 245))
+    actual.save(tmp_path / "actual.png")
+    p = overlay_abierto(tmp_path / "previa.png", tmp_path / "actual.png", marco)
+    assert p and 300 <= p["y"] <= 320
+    assert overlay_abierto(tmp_path / "previa.png", tmp_path / "previa.png", marco) is None
