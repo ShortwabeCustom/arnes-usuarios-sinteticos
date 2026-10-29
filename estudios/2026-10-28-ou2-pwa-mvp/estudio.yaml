@@ -40,6 +40,7 @@ observacion: true
 video: true              # datos/videos/<sesión>.webm, con capítulos por paso
 limpiar_datos: true      # cada sesión empieza como alguien que nunca abrió la app
 max_pasos: 30
+memoria: completa         # sus sesiones corrieron en modo completo; así se repiten igual
 corridas: 2
 baseline_url: null
 sin_baseline_porque: "La línea base es la primera medición del benchmark (estudios/2026-10-22-ou2-descubrimiento, prototipo de Figma, mismo panel). La comparación entre las dos se hace en la narrativa, etapa por etapa."

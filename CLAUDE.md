@@ -105,8 +105,9 @@ Pasos, clics, campos solicitados, tiempo, validaciones, cambios de canal, retoma
 y distancia a la compra salen de `arnes analizar`, cada una con su origen (EVIDENCIA, MODELO, INFERENCIA,
 SIMULACIÓN). Detalle en `metodos/recorrido/METODO.md`. Para medir la retoma, poner `retoma` en la tarea más larga. En web/PWA:
 celular emulado (`dispositivo.emular`), pantalla por `pantalla: {selector, atributo}`, `ruta_mecanica` para
-`arnes tecnico` y para empezar tareas a mitad del flujo (`inicia_en`). Costo: en modo completo crece con el cuadrado de los
-pasos; `memoria: bitacora` (modo ligero, en validación) lo baja ≈ 5×; `--paralelo N` baja el tiempo, no los tokens.
+`arnes tecnico` y para empezar tareas a mitad del flujo (`inicia_en`). Costo: el modo ligero (predeterminado: bitácora y una
+captura por paso) gasta ≈ 4.5× menos que `memoria: completa`, que crece con el cuadrado de los pasos (validación en
+`estudios/2026-10-28-ou2-ligero-validacion`); `--paralelo N` baja el tiempo, no los tokens.
 
 ## Guía de voz y estilo del producto
 

@@ -166,20 +166,25 @@ def _ruta_hasta(c: dict, tarea: dict) -> dict | None:
 
 def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int | None = None) -> dict:
     """Cuántas sesiones correría y cuántos tokens se esperan, sin abrir el navegador ni llamar al modelo.
-    Los pasos por sesión salen de `pasos_esperados` de la tarea (p. ej. del recorrido mecánico) o, si falta,
-    de `max_pasos` (techo: sobreestima)."""
+    Los pasos por sesión salen del ensayo (`datos/ensayo.json`: pasos mínimos × 1.15, lo que dieron los perfiles en la
+    validación del 29/10/2026) si es mayor que `pasos_esperados`; si no, de `pasos_esperados` o de `max_pasos` (techo)."""
     c = e.cfg
+    fe = e.ruta("datos", "ensayo.json")
+    minimos = json.loads(fe.read_text(encoding="utf-8")).get("pasos_minimos", {}) if fe.exists() else {}
     ids = [it.id for it in e.panel()] if integrante == "todos" else [integrante]
     tareas = [t for t in c["tareas"] if not tarea or t["id"] == tarea]
     ncorr = corridas or c.get("corridas", 1)
     tot, filas = consumo.sumar(), []
     for t in tareas:
         pasos = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
+        origen = "pasos_esperados" if t.get("pasos_esperados") else "max_pasos (techo)"
+        if minimos.get(t["id"]) and round(minimos[t["id"]] * 1.15) > (t.get("pasos_esperados") or 0):
+            pasos, origen = round(minimos[t["id"]] * 1.15), f"ensayo: {minimos[t['id']]} mínimos × 1.15"
         n = len(ids) * ncorr
-        est = consumo.estimar_recorrido(pasos, n, captura=_captura_estimada(c), memoria=c.get("memoria", "completa"),
-                                       capturas_por_paso=c.get("capturas_por_paso", 1 if c.get("memoria") == "bitacora" else 2))
+        est = consumo.estimar_recorrido(pasos, n, captura=_captura_estimada(c), memoria=_memoria(c),
+                                       capturas_por_paso=c.get("capturas_por_paso", 1 if _memoria(c) == "bitacora" else 2))
         tot = consumo.sumar(tot, est)
-        filas.append((t["id"], n, pasos, "pasos_esperados" if t.get("pasos_esperados") else "max_pasos (techo)", est))
+        filas.append((t["id"], n, pasos, origen, est))
     print(f"{len(ids)} perfil(es) × {ncorr} corrida(s):")
     for tid, n, pasos, origen, est in filas:
         print(f"  {tid}: {n} sesiones × ≈ {pasos} pasos ({origen}) → ≈ {consumo.texto(est)}")
@@ -271,13 +276,13 @@ def _sesiones(e, panel, integrante, tarea, guion, corridas, sala) -> list[dict]:
             e.ruta("datos", "videos").mkdir(parents=True, exist_ok=True)
             nav.video(True, str(e.ruta("datos", "videos", f"{sid}.webm")))
         reg = dict(id=sid, tarea=t["id"], corrida=n, integrante=it.id, nombre=it.nombre, perfil=it.perfil, segmento=it.segmento,
-                   ocean=it.ocean, modo="guion" if guion else "autonomo", material=material, modelo=modelo,
+                   ocean=it.ocean, modo="guion" if guion else "autonomo", memoria=_memoria(c), material=material, modelo=modelo,
                    inicio=time.strftime("%Y-%m-%dT%H:%M:%S"), pasos=[], costo_usd=0.0, tokens=consumo.sumar())
         if sala:
             pasos_est = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
             sala.iniciar_sesion(reg, t, t.get("max_pasos", c.get("max_pasos", 25)), consumo.total(consumo.estimar_recorrido(
-                pasos_est, 1, captura=_captura_estimada(c), memoria=c.get("memoria", "completa"),
-                capturas_por_paso=c.get("capturas_por_paso", 1 if c.get("memoria") == "bitacora" else 2))))
+                pasos_est, 1, captura=_captura_estimada(c), memoria=_memoria(c),
+                capturas_por_paso=c.get("capturas_por_paso", 1 if _memoria(c) == "bitacora" else 2))))
         try:
             if guion:
                 _guion(e, nav, it, t, cap, reg)
@@ -329,6 +334,12 @@ def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
         reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
 
 
+def _memoria(c: dict) -> str:
+    """`bitacora` (modo ligero, predeterminado desde la validación del 29/10/2026) o `completa` (cada paso reanuda la
+    sesión y relee todo; el costo crece con el cuadrado de los pasos)."""
+    return c.get("memoria", "bitacora")
+
+
 def _recuerdo(t: dict, datos: str, bitacora: list[str], ultimos: int = 40) -> str:
     """Modo bitácora: lo que el perfil sabe al empezar cada llamada (escenario, tarea, datos y su propio recorrido)."""
     s = (f"{' '.join(t.get('escenario', '').split())}\n\nTu tarea: {' '.join(t['instruccion'].split())}\n\n"
@@ -372,7 +383,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
     texto_inicio = info.get("texto")
     retoma = t.get("retoma")
     ses, aviso, quietos = None, "", 0
-    ligero, bitacora = c.get("memoria") == "bitacora", []
+    ligero, bitacora = _memoria(c) == "bitacora", []
     friccion_max, sin_resp = 0, 0
     for n in range(1, t.get("max_pasos", c.get("max_pasos", 25)) + 1):
         png, marcas = cap / f"p{n:02d}.png", cap / f"p{n:02d}-marcas.png"

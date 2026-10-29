@@ -90,12 +90,13 @@ axe encuentra una parte de los problemas: lo demás exige revisión manual.
 por cada paso:
   arnés    → captura la pantalla y mapea lo que responde (Figma: resaltados de hotspots · web: DOM)
   arnés    → dibuja números sobre cada zona activa
-  perfil   → mira la captura limpia, dice qué ve, qué cree, qué quiere hacer y elige un número
+  perfil   → mira la captura numerada, dice qué ve, qué cree, qué quiere hacer y elige un número
   arnés    → ejecuta el toque, espera a que la pantalla se asiente, le dice al perfil qué pasó
   fin      → llegó a la pantalla de fin · el perfil abandona o cree que terminó · atascado · máximo de pasos
 ```
 
-- Cada paso **reanuda la sesión del mismo perfil**: recuerda su propio recorrido, nunca el de otros.
+- Cada perfil recuerda **su propio recorrido** (con la bitácora, en el modo ligero, que es el predeterminado), nunca
+  el de otros.
 - **La ruta y los toques son reales**; pensamiento, decisiones, confianza y fricción son **[SIMULACIÓN]**.
 - El perfil ve las zonas numeradas; un usuario real no las ve. Es una ayuda del instrumento
   **[SUPUESTO METODOLÓGICO]**, por eso declara su intención antes de elegir y puede responder «lo que quiero
@@ -103,21 +104,29 @@ por cada paso:
 - `--guion` reproduce pasos escritos a mano (como entrecalles): sirve para un video demostrativo o para
   repetir una ruta exacta.
 
-### Modo ligero (`memoria: bitacora`, en validación)
+### Modo ligero (predeterminado) y modo completo (`memoria: completa`)
 
-En el modo completo cada paso reanuda la sesión: el modelo relee todas las capturas y respuestas anteriores. El
+En el **modo completo** cada paso reanuda la sesión: el modelo relee todas las capturas y respuestas anteriores. El
 costo crece con el cuadrado de los pasos (OU 2.0 MVP: T3, de unos 30 pasos, costó ≈ 2.1 M de tokens por sesión; el
-91 % fue relectura de caché). En el modo ligero cada paso es una llamada nueva con:
+91 % fue relectura de caché). En el **modo ligero** cada paso es una llamada nueva con:
 
 - el prompt del perfil (se relee de caché, igual para todos los pasos);
 - escenario, tarea y datos de prueba;
-- una **bitácora** corta de lo hecho («paso 3 · pantalla otp · toqué “Continuar” · cambió a datosPersonales»);
-- **una sola captura** (la marcada con números), dentro del mensaje, sin que el modelo tenga que abrir un archivo.
+- una **bitácora** corta de lo hecho («Paso 3 (otp) · escribiste en el 3 · la pantalla cambió · Confianza 70»), con
+  los avisos que aparecieron y la retoma, si hubo;
+- **una sola captura** (la numerada), dentro del mensaje, sin que el modelo tenga que abrir un archivo.
 
-Estimado: un panel como el de OU 2.0 baja de ≈ 41 M a ≈ 7 M de tokens, y cada paso responde más rápido. Lo que se
-pierde: el perfil ya no «ve» las pantallas anteriores, solo lo que anotó de ellas **[SUPUESTO METODOLÓGICO]**. Por
-eso es un cambio de instrumento: antes de usarlo como predeterminado se compara contra el modo completo en las mismas
-tareas (éxito, abandonos, fricciones y primer toque). `capturas_por_paso: 2` agrega la captura limpia.
+**Validación** (29/10/2026, `estudios/2026-10-28-ou2-ligero-validacion/RESULTADOS.md`): 8 sesiones (T1 y T3 de OU 2.0
+MVP) contra las 16 del modo completo. Consumió 2.54 M contra ≈ 11.5 M (4.5× menos). Reprodujo los hallazgos fuertes
+con la misma causa (el total que no se ve, los enlaces del buró que no abren, la foto de ejemplo de la fachada) y llegó
+o no llegó igual en 8 de 8. Diferencias: en 3 sesiones dio «éxito» donde el completo dio «éxito con fricción»
+(fricción máxima 2 contra 3) y ningún perfil se quejó de los apellidos vacíos (en el completo, 2 de 8). No suavizó:
+en T3 la confianza mínima bajó más que en el completo. Con 8 sesiones se ven diferencias grandes, no pequeñas.
+
+Lo que se pierde: el perfil ya no «ve» las pantallas anteriores, solo lo que anotó de ellas
+**[SUPUESTO METODOLÓGICO]**. Usar `memoria: completa` cuando la pregunta dependa de esa memoria visual (p. ej.
+«¿recuerda el monto que eligió tres pantallas atrás?») o para repetir exactamente un estudio que corrió así (los
+estudios anteriores al 29/10/2026 lo declaran en su `estudio.yaml`). `capturas_por_paso: 2` agrega la captura limpia.
 
 ### Antes del piloto: `arnes ensayar` (0 tokens)
 

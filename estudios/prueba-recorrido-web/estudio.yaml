@@ -21,6 +21,7 @@ dispositivo: {ancho: 360, alto: 800}
 visible: false
 video: true
 max_pasos: 10
+memoria: completa         # sus sesiones corrieron en modo completo; así se repiten igual
 max_sin_cambio: 3
 corridas: 2
 sin_baseline_porque: "material de prueba del arnés, no hay diseño actual"

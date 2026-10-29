@@ -67,9 +67,11 @@ def texto(d: dict | None) -> str:
     return f"{cifra(t)} tokens" + (f" · {cifra(n)} nuevos (el resto es relectura de caché)" if n < 0.95 * t else "")
 
 
-# Modo ligero (memoria: bitacora): una llamada nueva por paso. El prompt del perfil se relee de caché; lo nuevo es la
-# tarea, la lista de elementos, la bitácora (≈ 120 tokens por paso ya hecho) y la captura. [SUPUESTO] hasta calibrar.
-LIGERO = dict(sistema=7_600, texto_paso=2_400, bitacora_por_paso=120, salida_por_paso=890)
+# Modo ligero (memoria: bitacora, el predeterminado): una llamada nueva por paso. Calibrado con las 8 sesiones de
+# estudios/2026-10-28-ou2-ligero-validacion (T1 y T3, 17 y 31 pasos): por paso se escriben en caché ≈ 4 mil tokens de
+# texto más la captura; se releen el prompt del perfil (≈ 5.5 mil) y la parte ya vista de la bitácora (≈ 195 por paso
+# hecho). El estimado por paso quedó dentro de ±12 % del real por tipo de token.
+LIGERO = dict(texto_paso=4_020, lectura_base=5_550, lectura_por_paso=195, salida_por_paso=895)
 
 
 def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = CAPTURA_TELEFONO, memoria: str = "completa",
@@ -77,8 +79,8 @@ def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = 
     """Tokens esperados de `sesiones` recorridos de `pasos` pasos (más la pregunta final), con capturas de `captura`."""
     if memoria == "bitacora":
         m = LIGERO
-        nuevo = sum(m["texto_paso"] + m["bitacora_por_paso"] * k + capturas_por_paso * tokens_imagen(*captura) for k in range(pasos))
-        d = dict(entrada=0, cache_escritura=nuevo + 2_000, cache_lectura=m["sistema"] * (pasos + 1),
+        d = dict(entrada=0, cache_escritura=(m["texto_paso"] + capturas_por_paso * tokens_imagen(*captura)) * pasos,
+                 cache_lectura=sum(m["lectura_base"] + m["lectura_por_paso"] * k for k in range(pasos)),
                  salida=m["salida_por_paso"] * pasos + 60)
         return {k: v * sesiones for k, v in d.items()}
     m = RECORRIDO

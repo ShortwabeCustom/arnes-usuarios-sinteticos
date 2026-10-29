@@ -375,17 +375,23 @@ capturas anteriores). Pesa mucho menos que un token nuevo, por eso el arnés mue
 
 | Qué | Tokens | Tiempo |
 |---|---|---|
-| Recorrido, un paso | ≈ 24 mil al principio; crece ≈ 4 mil por cada paso anterior | 10–20 s |
-| Recorrido, una sesión de 5–7 pasos | ≈ 120–170 mil · ≈ 20–30 mil nuevos | 3–6 min |
-| Recorrido, una sesión de 20 pasos | ≈ 1.1 M · ≈ 75 mil nuevos | 5–10 min |
+| Recorrido, un paso (modo ligero, predeterminado) | ≈ 12–14 mil; crece ≈ 200 por cada paso anterior | ≈ 14 s |
+| Recorrido, una sesión de 17 pasos (ligero) | ≈ 210 mil · ≈ 90 mil nuevos | ≈ 4 min |
+| Recorrido, una sesión de 31 pasos (ligero) | ≈ 430 mil · ≈ 165 mil nuevos | 7–8 min |
+| Recorrido, un panel de 4 perfiles × 4 tareas × 2 corridas (ligero) | ≈ 7–8 M (estimado) | ≈ 40 min con `--paralelo 4` (estimado; 8 sesiones de T1 y T3 tardaron 13 min) |
+| Recorrido, una sesión de 20 pasos (modo completo) | ≈ 1.1 M · ≈ 75 mil nuevos | 5–10 min |
+| Recorrido, una sesión de 30 pasos (modo completo) | ≈ 2–3 M | 15–25 min |
+| Ensayo sin modelo (`arnes ensayar`) | 0 | ≈ 10 min para 59 pasos de ruta |
 | Comprensión, auditoría y fidelidad | se miden desde la siguiente corrida | vistazo: segundos · lectura: ~30 s · 96 sesiones: 15–25 min |
 
-**Por qué un recorrido largo cuesta tanto.** En el modo completo cada paso relee todo lo anterior, así que el costo
-crece con el cuadrado de los pasos: una tarea de 30 pasos cuesta unas 7 veces lo que una de 10. Para bajarlo:
-partir las tareas largas (`inicia_en`), correr `arnes ensayar` antes del piloto y, cuando quede validado, el **modo
-ligero** (`memoria: bitacora`, ver `metodos/recorrido/METODO.md`): ≈ 13 mil tokens por paso, casi sin crecer (estimado).
+**Por qué el modo completo cuesta tanto.** Cada paso relee todo lo anterior, así que el costo crece con el cuadrado
+de los pasos: una tarea de 30 pasos cuesta unas 7 veces lo que una de 10. El modo ligero relee solo el prompt del
+perfil y una bitácora corta, y crece casi en línea recta. Para gastar todavía menos: `arnes ensayar` antes del
+piloto (cada piloto fallido gasta tokens), tareas que empiecen a mitad del flujo (`inicia_en`) y 2 corridas, no 3,
+salvo que las brechas queden cerca. El estimado (`--simular`) usa los pasos del ensayo × 1.15 cuando existe: es lo que
+dieron los perfiles en la validación.
 
-Las cifras de recorrido salen de 9 sesiones reales (octubre de 2026). Las demás no se pueden reconstruir: esas
+Las cifras de recorrido salen de sesiones reales: 9 de modo completo (octubre de 2026) y 8 de modo ligero (validación del 29/10/2026). Las demás no se pueden reconstruir: esas
 llamadas no guardaron sus tokens.
 
 ---

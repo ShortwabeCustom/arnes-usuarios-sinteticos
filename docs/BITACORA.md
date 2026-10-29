@@ -21,11 +21,8 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ## Pendientes
 
-0. **Decidir si el modo ligero pasa a ser el predeterminado.** Validación corrida el 29/10/2026
-   (`estudios/2026-10-28-ou2-ligero-validacion/RESULTADOS.md`): 2.54 M tokens contra ≈ 11.5 M (4.5× menos). Reproduce
-   los hallazgos fuertes con la misma causa (total que no se ve, buró que no abre, fachada de ejemplo) y llega o no
-   llega igual en 8 de 8. Con los criterios fijados antes, no pasa completo: V1 5 de 8 (umbral 6, todas las
-   diferencias entre «éxito» y «éxito con fricción») y V4 en T1 28% (umbral 25%). Decide Alexis.
+0. Guardar tokens por modelo en cada llamada (Haiku aparece junto a Sonnet) y, después, evaluar `modelo: haiku` con su
+   propia validación, como la del modo ligero.
 1. ~~Segunda medición del benchmark~~ Hecha sobre la PWA MVP (28/10/2026). Siguiente: tercera medición cuando el MVP
    muestre el total a pagar y unifique los permisos de ubicación; recorrer también las ramas de error del MVP
    (escenarios por URL: `otp=incorrecto`, `selfie=noReconocida`, `ine=vencida`, `evaluacion=scoreGuardian`…).
@@ -46,6 +43,25 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 8. Si se agrega una biblioteca nueva de personas, seguir `metodos/persona/METODO.md` y correr `arnes persona probar`.
 
 ---
+
+## Sesión del 29 de octubre de 2026 (validación y cierre del modo ligero)
+
+- **Validación** aprobada por Alexis (≈ 2.3 M estimados): 8 sesiones, T1 y T3, 4 perfiles en paralelo, 13 minutos.
+  Consumo real 2.54 M contra ≈ 11.5 M del modo completo (4.5× menos). Resultados y criterios en
+  `estudios/2026-10-28-ou2-ligero-validacion/RESULTADOS.md`. Con los criterios fijados antes no pasó completo (V1 5 de
+  8, V4 en T1 28%), pero las diferencias están entre «éxito» y «éxito con fricción» y los hallazgos fuertes se
+  repitieron con la misma causa. **Alexis decidió dejarlo como predeterminado.**
+- `memoria` sin declarar = `bitacora` (`recorrido._memoria`); cada sesión guarda su `memoria`. Los tres estudios de
+  recorrido anteriores declaran `memoria: completa` para repetirse igual.
+- `consumo.LIGERO` recalibrado con las 8 sesiones (por paso: ≈ 4 mil de texto + la captura escritos; ≈ 5.5 mil + 195 por
+  paso hecho releídos); queda dentro de ±12% por tipo de token. El faltante del estimado venía de los pasos: `--simular`
+  ahora usa los mínimos del ensayo × 1.15 cuando superan a `pasos_esperados`.
+- Observado: el estimador del modo completo sobreestima (panel de OU 2.0: 41 M estimados, 30.9 M reales). No se
+  recalibró: ya no es el predeterminado.
+- Pendiente acordado para después: guardar tokens por modelo (Claude Code lista Haiku junto a Sonnet en cada paso;
+  hoy no se sabe cuánto pesa) y evaluar `modelo: haiku` como otro cambio de instrumento, con su propia validación.
+- Hay trabajo de otra sesión sin commit (presentación editorial del reporte de OU 2.0: `_presentacion_editorial` en
+  `arnes/reporte/__init__.py`, `tests/test_presentacion_editorial.py`, archivos en `reporte/`). No se tocó.
 
 ## Sesión del 28 de octubre de 2026, noche (investigaciones más baratas y rápidas)
 

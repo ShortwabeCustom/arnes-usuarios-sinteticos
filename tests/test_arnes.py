@@ -459,3 +459,9 @@ def test_modo_ligero_mensaje_bitacora_y_consumo(tmp_path):
     completo = consumo.total(consumo.estimar_recorrido(30, 1, captura=(412, 839)))
     ligero = consumo.total(consumo.estimar_recorrido(30, 1, captura=(412, 839), memoria="bitacora", capturas_por_paso=1))
     assert ligero < completo / 4                                   # crece lineal, no con el cuadrado de los pasos
+    # calibración con la validación del 29/10/2026: T1 ≈ 17 pasos → 209 mil por sesión; T3 ≈ 31 pasos → 427 mil
+    for pasos, real in ((17, 209_000), (31, 427_000)):
+        est = consumo.total(consumo.estimar_recorrido(pasos, 1, captura=(412, 839), memoria="bitacora", capturas_por_paso=1))
+        assert abs(est - real) / real < 0.15
+    from arnes.metodos.recorrido import _memoria
+    assert _memoria({}) == "bitacora" and _memoria({"memoria": "completa"}) == "completa"
