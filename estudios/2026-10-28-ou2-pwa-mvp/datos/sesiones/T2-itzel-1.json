@@ -1,0 +1,1123 @@
+{
+ "id": "T2-itzel-1",
+ "tarea": "T2",
+ "corrida": 1,
+ "integrante": "itzel",
+ "nombre": "Itzel Camacho",
+ "perfil": "B",
+ "segmento": "Millennial · 33.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T14:10:45",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "selfieIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p01.png",
+   "marcas": "datos/capturas/T2-itzel-1/p01-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve clara y sencilla: me piden una selfie con cuatro indicaciones fáciles.",
+    "que_miras_primero": "El título «Empezamos con tu selfie» y la lista de palomitas con las indicaciones.",
+    "interpretacion": "Me piden una selfie para comprobar que soy yo. También piden permiso de cámara y ubicación. Sigue en el celular, eso me tranquiliza.",
+    "pensamiento": "Ok, es la selfie, todo desde el celular. No me dicen cuántos pasos faltan ni qué hacen con mi foto, pero es lo normal. Sigo.",
+    "intencion": "Tomar la foto como dicen, para pasar a la verificación y llegar a confirmar mis datos.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Tomar foto» porque es el paso que sigue y no me saca del celular."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en la verificación de identidad, pero no veo cuántos pasos faltan."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 14,
+     "y": 763,
+     "w": 384,
+     "h": 52,
+     "tipo": "button",
+     "etiqueta": "Tomar foto"
+    }
+   ],
+   "texto_pantalla": "¡Empezamos con tu selfie!\n\nTu foto nos ayuda a proteger tu información.\n\nEvita hacer caras y gestos.\nUbícate en un lugar bien iluminado.\nRetira gorra, lentes o cubrebocas.\nDa permisos de ubicación y acceso a tu cámara.\nTomar foto",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [
+    "¡Empezamos con tu selfie! Tu foto nos ayuda a proteger tu información. Evita hacer caras y gestos. Ubícate en un lugar bien iluminado. Retira gorra, lentes o cu"
+   ],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 789
+   },
+   "zona_tocada": {
+    "x": 14,
+    "y": 763,
+    "w": 384,
+    "h": 52,
+    "tipo": "button",
+    "etiqueta": "Tomar foto"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "permisoCamara"
+  },
+  {
+   "n": 2,
+   "pantalla": "permisoCamara",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p02.png",
+   "marcas": "datos/capturas/T2-itzel-1/p02-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Es un aviso normal del teléfono pidiendo permiso para la cámara.",
+    "que_miras_primero": "El mensaje «Habilita el acceso a la cámara para tomar tu fotografía» y «Este paso es necesario».",
+    "interpretacion": "La app necesita usar mi cámara para la selfie. Me da a elegir entre cancelar o continuar.",
+    "pensamiento": "Tiene sentido que pidan la cámara para la selfie. Solo la uso para esto, así que le doy continuar.",
+    "intencion": "Permitir la cámara para poder tomarme la foto y seguir.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Continuar» porque el permiso es necesario para la selfie y sigo en el celular."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es parte de la verificación, pero sigo sin ver cuántos pasos faltan."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 447,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Cancelar"
+    },
+    {
+     "x": 206,
+     "y": 447,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Habilita el acceso a la cámara para tomar tu fotografía.\n\nEste paso es necesario.\n\nCancelar\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 469
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 447,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 315,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "permisoUbicacion"
+  },
+  {
+   "n": 3,
+   "pantalla": "permisoUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p03.png",
+   "marcas": "datos/capturas/T2-itzel-1/p03-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otro permiso del teléfono, ahora de ubicación, sin explicar para qué.",
+    "que_miras_primero": "La pregunta «¿Permitir que Solicitud Única acceda a tu ubicación?» y que el nombre no dice Banco Azteca.",
+    "interpretacion": "La app quiere saber dónde estoy, probablemente para validar mi identidad. La pantalla anterior ya avisaba que pedirían ubicación y cámara.",
+    "pensamiento": "Me da un poquito de duda que diga «Solicitud Única» y no Banco Azteca. Pero ya lo habían avisado en la selfie, y si no, no avanzo. Permito.",
+    "intencion": "Permitir la ubicación para seguir, ya que era parte de lo que pedían.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque ya lo habían avisado y es necesario para continuar en el celular."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en la verificación de identidad, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 459
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 437,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 622,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "selfieEncuadre"
+  },
+  {
+   "n": 4,
+   "pantalla": "selfieEncuadre",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p04.png",
+   "marcas": "datos/capturas/T2-itzel-1/p04-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Me dice que no hay cámara y que usarán una captura simulada; raro, pero ya me habían avisado de la prueba.",
+    "que_miras_primero": "El mensaje «No encontramos una cámara en este equipo. Usaremos una captura simulada.»",
+    "interpretacion": "La app no detecta cámara y me deja seguir con una foto de ejemplo. Es la parte simulada de la prueba.",
+    "pensamiento": "Qué raro que no encuentre mi cámara, pero me dijeron que es parte de la prueba. Toco «Tomar selfie» y sigo.",
+    "intencion": "Tomar la selfie simulada para avanzar con la verificación.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Tomar selfie» para continuar; es la única opción y sigo en el celular."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que sigo en la selfie de identidad, pero no veo cuánto falta."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 56,
+     "y": 496,
+     "w": 300,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Tomar selfie"
+    }
+   ],
+   "texto_pantalla": "No encontramos una cámara en este equipo. Usaremos una captura simulada.\n\nTomar selfie",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 13,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 520
+   },
+   "zona_tocada": {
+    "x": 56,
+    "y": 496,
+    "w": 300,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Tomar selfie"
+   },
+   "espera_ms": 3025,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "selfieAprobada",
+   "indicador_carga": true,
+   "avisos": [
+    "No te muevas"
+   ]
+  },
+  {
+   "n": 5,
+   "pantalla": "selfieAprobada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p05.png",
+   "marcas": "datos/capturas/T2-itzel-1/p05-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Pantalla de felicitación, amable y clara: la selfie salió bien.",
+    "que_miras_primero": "El «¡Qué gran foto!» y la palomita sobre el celular.",
+    "interpretacion": "La selfie ya quedó aceptada y me falta seguir con el resto de la verificación, probablemente la INE.",
+    "pensamiento": "Listo, la foto pasó. «Más cerca de tu préstamo», pero no me dicen cuánto falta. Sigo, tengo mi INE a la mano.",
+    "intencion": "Continuar al siguiente paso de la verificación.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «¡Sigamos adelante!» para continuar con la verificación desde el celular."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que avancé, pero «más cerca» no me dice cuántos pasos faltan."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "¡Sigamos adelante!"
+    }
+   ],
+   "texto_pantalla": "¡Qué gran foto!\n\nAhora estás más cerca de tu préstamo.\n\n¡Sigamos adelante!",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 12,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "¡Sigamos adelante!"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineIntro"
+  },
+  {
+   "n": 6,
+   "pantalla": "ineIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p06.png",
+   "marcas": "datos/capturas/T2-itzel-1/p06-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Clara: me piden la INE y ya la tengo a la mano.",
+    "que_miras_primero": "El título «Prueba, ten tu INE a la mano» y la ilustración de la credencial.",
+    "interpretacion": "Van a escanear mi INE con el celular para verificar mi identidad. Es el paso que sigue de la verificación.",
+    "pensamiento": "Perfecto, todo sigue en el celular y no me piden nada raro. Ya tengo la INE. Continúo.",
+    "intencion": "Continuar para escanear la INE.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Continuar»; tengo la INE lista y el proceso sigue en el celular."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ahora toca la INE, pero no sé cuánto falta después."
+    },
+    "confianza": 70,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 20,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "inePermisoUbicacion"
+  },
+  {
+   "n": 7,
+   "pantalla": "inePermisoUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p07.png",
+   "marcas": "datos/capturas/T2-itzel-1/p07-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otra vez me preguntan lo de la ubicación; ya lo había permitido y me da una dudita.",
+    "que_miras_primero": "El aviso «¿Permitir que Solicitud Única acceda a tu ubicación?» encima de la pantalla de la INE.",
+    "interpretacion": "Es el mismo permiso de ubicación de antes, que vuelve a salir. Seguramente lo necesitan también para el paso de la INE.",
+    "pensamiento": "Qué raro, esto ya lo contesté. Bueno, si no lo permito me quedo atorada. Permito y sigo.",
+    "intencion": "Permitir otra vez para que me deje escanear la INE.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» para no quedarme trabada y seguir en el celular."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en el escaneo de la INE, pero no sé cuánto falta."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar\n¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 31,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 459
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 437,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "incodeUbicacion"
+  },
+  {
+   "n": 8,
+   "pantalla": "incodeUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p08.png",
+   "marcas": "datos/capturas/T2-itzel-1/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Me late raro: pantalla negra, sin logo de Banco Azteca y con otra dirección web que no conozco.",
+    "que_miras_primero": "El nombre «identidad-digital-ocrdual.com.mx», que no dice Banco Azteca.",
+    "interpretacion": "Parece que la verificación de la INE la hace otro sitio, probablemente un proveedor del banco, y también pide mi ubicación.",
+    "pensamiento": "¿Y este sitio quién es? Nadie me dijo que me iban a mandar a otra página. Me da miedo una estafa, pero vengo del proceso del banco y la INE es el paso que sigue. Permito, con cuidado.",
+    "intencion": "Permitir para llegar al escaneo de la INE, pero quedándome atenta a que sí sea del banco.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» con dudas: vengo del proceso del banco, sigo en el celular y sin esto no avanzo."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Ya no sé bien en qué sitio estoy ni cuánto falta."
+    },
+    "confianza": 45,
+    "friccion": 3,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 482,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 482,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "\"identidad-digital-ocrdual.com.mx\" quiere utilizar tu ubicación\n\nSafari actualmente tiene acceso a tu ubicación precisa. ¿Quieres permitírselo a identidad-digital-ocrdual.com.mx también?\n\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 21,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 504
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 482,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "incodeCamara"
+  },
+  {
+   "n": 9,
+   "pantalla": "incodeCamara",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p09.png",
+   "marcas": "datos/capturas/T2-itzel-1/p09-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Ahora ese sitio desconocido me pide la cámara; sigo sin ver nada del banco.",
+    "que_miras_primero": "La pregunta de la cámara con el mismo dominio raro, y abajo, chiquito, «verified by incode».",
+    "interpretacion": "El sitio de verificación necesita la cámara para escanear mi INE. Lo de «verified by incode» parece un proveedor de verificación de identidad.",
+    "pensamiento": "Otro permiso, y sigue sin decir Banco Azteca. Lo de incode me da algo de confianza, pero poca. Es para escanear la INE, así que permito.",
+    "intencion": "Permitir la cámara para poder escanear la INE y terminar la verificación.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque sin la cámara no puedo mostrar mi INE; sigo en el celular, aunque con dudas."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Supongo que ya casi toca escanear la INE, pero no sé cuánto falta después."
+    },
+    "confianza": 48,
+    "friccion": 3,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 448,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 448,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "¿Permitir a \"identidad-digital-ocrdual.com.mx\" usar tu cámara?\nNo permitir\nPermitir\n\n✓ verified by incode",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 13,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 470
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 448,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineFrente"
+  },
+  {
+   "n": 10,
+   "pantalla": "ineFrente",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p10.png",
+   "marcas": "datos/capturas/T2-itzel-1/p10-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Ya regresó el logo de Banco Azteca y se ve sencillo; me tranquiliza.",
+    "que_miras_primero": "El logo de Banco Azteca arriba y el texto «Coloca tu INE dentro del marco».",
+    "interpretacion": "Es el escaneo de la INE. Pongo la credencial frente a la cámara y toco «Escanear».",
+    "pensamiento": "Ah, ya se ve del banco otra vez. Bueno, tengo la INE a la mano. Escaneo.",
+    "intencion": "Escanear mi INE para que se verifique mi identidad.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Escanear» para escanear la INE; sigo en el celular."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es el paso de la INE, pero no sé cuánto falta para confirmar mis datos."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 24,
+     "w": 172,
+     "h": 18,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Escanear"
+    }
+   ],
+   "texto_pantalla": "Coloca tu INE dentro del marco\nEscanear",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 7,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Escanear"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineFrente",
+   "avisos": [
+    "Procesando"
+   ]
+  },
+  {
+   "n": 11,
+   "pantalla": "ineFrente",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p11.png",
+   "marcas": "datos/capturas/T2-itzel-1/p11-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Salió bien el frente de la INE y ahora piden el reverso; es lógico.",
+    "que_miras_primero": "La palomita y «Procesado con éxito», luego «Ahora vamos a capturar la parte de atrás».",
+    "interpretacion": "El frente ya quedó. Falta el reverso de la INE y con eso termino esta verificación.",
+    "pensamiento": "Bien, el frente pasó. Ahora volteo la INE y escaneo la parte de atrás. Ya casi.",
+    "intencion": "Voltear mi INE y escanear el reverso.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Escanear el reverso» para terminar con la INE, todo en el celular."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Sé que falta solo el reverso de la INE; este paso sí está claro."
+    },
+    "confianza": 66,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 56,
+     "tipo": "button",
+     "etiqueta": "Escanear el reverso"
+    }
+   ],
+   "texto_pantalla": "Procesado con éxito\n\nAhora vamos a capturar la parte de atrás\n\nFrente capturado\nEscanear el reverso",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 779
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 56,
+    "tipo": "button",
+    "etiqueta": "Escanear el reverso"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineReverso"
+  },
+  {
+   "n": 12,
+   "pantalla": "ineReverso",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p12.png",
+   "marcas": "datos/capturas/T2-itzel-1/p12-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Es la captura del reverso, y me gusta que diga que las fotos están encriptadas.",
+    "que_miras_primero": "El marco blanco con «Captura simulada · reverso» y el candadito de «Todas las fotos están encriptadas».",
+    "interpretacion": "La app está capturando el reverso de mi INE (simulado en la prueba). No hay botones; debe avanzar sola.",
+    "pensamiento": "No hay nada que tocar, así que espero a que procese. Lo del candado sí me da tranquilidad por lo de las estafas.",
+    "intencion": "Esperar a que termine de capturar y procesar el reverso.",
+    "accion": {
+     "opcion": "esperar",
+     "texto": "No hay botones y la captura va en proceso, así que espero unos segundos a que avance sola."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es lo último de la INE, pero no sé cuánto va a tardar."
+    },
+    "confianza": 64,
+    "friccion": 1,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": "Rellena el marco con tu INE\n\nCaptura simulada · reverso\n\n🔒 Todas las fotos están encriptadas",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "esperar",
+    "ms": 5000
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "no",
+   "pantalla_despues": "ineValidada"
+  },
+  {
+   "n": 13,
+   "pantalla": "ineValidada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p13.png",
+   "marcas": "datos/capturas/T2-itzel-1/p13-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Qué alivio: la INE se validó y ya se ve todo del banco otra vez.",
+    "que_miras_primero": "El «¡Tu INE se validó con éxito!» y la palomita sobre la credencial.",
+    "interpretacion": "La verificación de identidad salió bien. Lo que sigue debe ser confirmar mis datos personales.",
+    "pensamiento": "Listo, ya pasó la INE. Sigo, a ver si ya me piden confirmar mis datos. Todavía no sé cuánto me van a cobrar al final, eso lo quiero ver.",
+    "intencion": "Continuar al siguiente paso, que debería ser confirmar mis datos.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «¡Sigamos adelante!» para avanzar; la verificación ya terminó y sigo en el celular."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que terminé la identidad, pero no sé cuántos pasos faltan para el préstamo."
+    },
+    "confianza": 70,
+    "friccion": 0,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "¡Sigamos adelante!"
+    }
+   ],
+   "texto_pantalla": "¡Tu INE se validó con éxito!\n¡Sigamos adelante!",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 8,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "¡Sigamos adelante!"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 14,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-itzel-1/p14.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 2.0049,
+ "tokens": {
+  "entrada": 80,
+  "cache_escritura": 52360,
+  "cache_lectura": 485918,
+  "salida": 9405
+ },
+ "resultado": "exito_con_friccion",
+ "ces": {
+  "ces": 5,
+  "texto": "Fue bastante fácil y todo desde el celular, pero me incomodó que cambiara de sitio sin avisar, con una página desconocida y permisos repetidos, y que nunca me dijeran cuántos pasos faltaban."
+ },
+ "video": "datos/videos/T2-itzel-1.webm",
+ "fin": "2026-10-28T14:14:12"
+}

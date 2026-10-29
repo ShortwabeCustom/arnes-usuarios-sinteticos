@@ -29,6 +29,13 @@ disponible: todo lo del reporte anterior sigue a un clic.
 06 Metodología   alcance · etiquetas de evidencia · límites · estado de prototipado · aprendizajes del método · fuentes · reporte completo
 ```
 
+Si el estudio tiene `datos/tecnico.json` (`arnes tecnico`, productos web y PWA), aparece **Calidad técnica** entre
+Perfiles y Evidencia: KPIs con estado (pantallas sin fallas WCAG, objetivos < 24 px, foco visible, LCP, INP,
+legibilidad INFLESZ, sin conexión, retoma), reglas de axe con criterio WCAG, impacto y pantallas, tabla pantalla por
+pantalla (clic → cajón con captura y reglas), carga en frío y con caché contra los umbrales de Core Web Vitals,
+lista de PWA, retoma y ruta mínima. El Resumen muestra 4 de esos KPIs, también en modo ejecutivo. Todo es
+EVIDENCIA medida en el producto; la legibilidad es métrica derivada.
+
 Controles globales: modo **Ejecutivo / Investigación**, **Tarea** (Todas · T1 · T2) y **Perfil** (Todos · cada perfil).
 El modo ejecutivo deja solo el Resumen (lectura < 2 minutos).
 

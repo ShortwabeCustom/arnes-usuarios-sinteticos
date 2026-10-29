@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sala de observación</title>
+<style>
+:root{--pag:#f6f6f3;--sup:#fff;--borde:#e3e2dc;--tinta:#1b1d1c;--tinta2:#55595a;--tenue:#8a8d8c;--marca:#10553d;--marca2:#e7f1ec;
+  --sim:#6a4fb3;--sim2:#efeafb;--ok:#1b7a4b;--aten:#a86400;--mal:#b3261e;--lin:#2a78d6;--fri:#eb6834;--foco:#2a78d6}
+@media (prefers-color-scheme:dark){:root{--pag:#121413;--sup:#1b1e1d;--borde:#2c302e;--tinta:#eceeed;--tinta2:#b5bab8;--tenue:#868b89;
+  --marca:#6fd3a4;--marca2:#18302a;--sim:#b8a3f0;--sim2:#272040;--ok:#6fd3a4;--aten:#f0b350;--mal:#ff8a80;--lin:#3987e5;--fri:#d95926}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--pag);color:var(--tinta);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--borde);background:var(--sup);position:sticky;top:0;z-index:2}
+header h1{font-size:17px;margin:0;font-weight:650}
+.pild{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--sim2);color:var(--sim);font-weight:600;letter-spacing:.02em}
+.vivo{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--tinta2);margin-left:auto}
+.vivo i{width:9px;height:9px;border-radius:50%;background:var(--tenue)}
+.vivo.on i{background:#e53935;animation:lat 1.4s infinite}
+@keyframes lat{50%{opacity:.35}}
+main{display:grid;grid-template-columns:minmax(280px,380px) 1fr;gap:20px;padding:20px;max-width:1280px;margin:0 auto}
+.tarj{background:var(--sup);border:1px solid var(--borde);border-radius:12px;padding:16px}
+.tel{position:relative;border-radius:22px;overflow:hidden;border:6px solid #222;background:#000;aspect-ratio:412/839}
+.tel img{width:100%;height:100%;object-fit:contain;display:block}
+.toque{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:3px solid #ff4081;background:rgba(255,64,129,.25);pointer-events:none}
+.bajo{display:flex;justify-content:space-between;font-size:13px;color:var(--tinta2);margin-top:8px;gap:8px;flex-wrap:wrap}
+.quien{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.quien b{font-size:20px}
+.meta{font-size:13px;color:var(--tinta2)}
+.inst{margin:8px 0 0;font-size:14px;color:var(--tinta2)}
+.barra{height:6px;border-radius:3px;background:var(--borde);overflow:hidden;margin-top:6px}
+.barra span{display:block;height:100%;background:var(--marca)}
+.ahora{margin-top:16px}
+.ahora .pens{font-size:19px;line-height:1.45;margin:4px 0 10px;font-weight:500}
+.etq{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tenue);font-weight:650}
+.fila{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}
+.dato b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:12px;padding:2px 8px;border-radius:6px;background:var(--marca2);color:var(--marca);font-weight:600}
+.chip.mal{background:#fde7e5;color:var(--mal)}.chip.aten{background:#fff1d6;color:var(--aten)}
+@media (prefers-color-scheme:dark){.chip.mal{background:#3a1f1d}.chip.aten{background:#3a2e14}}
+.graf{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.graf svg{width:100%;height:90px;display:block}
+.graf .eje{stroke:var(--borde)}
+.lista{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.it{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:start;padding:10px;border:1px solid var(--borde);border-radius:10px;background:var(--sup)}
+.it img{width:44px;border-radius:6px;border:1px solid var(--borde)}
+.it .t{font-size:13px;color:var(--tinta2)}
+.it .p{font-size:14px;margin-top:2px}
+.ses{font-size:13px;display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.vacio{color:var(--tenue);font-size:14px}
+.aviso{font-size:13px;color:var(--aten);margin-top:8px}
+.nota{font-size:12px;color:var(--tenue);margin-top:12px}
+@media (max-width:820px){main{grid-template-columns:1fr}.tel{max-width:340px;margin:0 auto}}
+@media (prefers-reduced-motion:reduce){.vivo.on i{animation:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="titulo">Sala de observación</h1>
+  <span class="pild">Sesión sintética · simulación</span>
+  <span class="vivo" id="vivo" aria-live="polite"><i></i><span>Conectando…</span></span>
+</header>
+<main>
+  <section>
+    <div class="tel" id="tel" aria-label="Lo que ve el perfil"><img id="cap" alt="Pantalla que ve el perfil"><div class="toque" id="toque" hidden></div></div>
+    <div class="bajo"><span id="pant">—</span><span id="esp"></span></div>
+    <div class="tarj" style="margin-top:16px">
+      <div class="etq">Sesiones de esta corrida</div>
+      <div class="ses" id="sesiones"><span class="vacio">Todavía ninguna terminada.</span></div>
+    </div>
+  </section>
+  <section>
+    <div class="tarj">
+      <div class="quien"><b id="nombre">Esperando la primera sesión…</b><span class="meta" id="seg"></span></div>
+      <p class="inst" id="inst"></p>
+      <div class="fila">
+        <div class="dato"><span class="etq">Paso</span><b id="paso">—</b></div>
+        <div class="dato"><span class="etq">Tokens de la sesión</span><b id="tok">—</b><div class="barra"><span id="tokb" style="width:0"></span></div></div>
+        <div class="dato"><span class="etq">Resultado</span><b id="res">en curso</b></div>
+      </div>
+      <div class="aviso" id="aviso"></div>
+    </div>
+    <div class="tarj ahora">
+      <div class="etq" id="estadoP">Ahora</div>
+      <p class="pens" id="pens">—</p>
+      <div class="fila">
+        <div><span class="etq">Qué quiere hacer</span><div id="int">—</div></div>
+        <div><span class="etq">Qué hace</span><div id="acc">—</div></div>
+        <div><span class="etq">Confianza · fricción · ubicación</span><div id="cf">—</div></div>
+      </div>
+      <div class="graf">
+        <div><span class="etq">Confianza por paso (0–100)</span><svg id="gConf" viewBox="0 0 300 90" role="img" aria-label="Confianza por paso"></svg></div>
+        <div><span class="etq">Fricción por paso (0–5)</span><svg id="gFri" viewBox="0 0 300 90" role="img" aria-label="Fricción por paso"></svg></div>
+      </div>
+    </div>
+    <div class="lista" id="lista"></div>
+    <p class="nota">La ruta, los toques y las esperas son reales sobre el producto. Lo que el perfil piensa, decide y siente es una simulación: no es la voz de una persona usuaria.</p>
+  </section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const img = r => r ? '/archivo?ruta=' + encodeURIComponent(r) : '';
+const ACC = { tocar: 'Toca', escribir: 'Escribe', desplazar_abajo: 'Desliza hacia abajo', desplazar_arriba: 'Desliza hacia arriba', volver: 'Vuelve', esperar: 'Espera', abandonar: 'Abandona', terminar: 'Da por terminada la tarea' };
+const RES = { exito: 'Completó', exito_con_friccion: 'Completó con fricción', abandono: 'Abandonó', atascado: 'Se atascó', fallo_max_pasos: 'Llegó al máximo de pasos', fallo_instrumento: 'Falla del instrumento', falso_exito: 'Creyó terminar sin llegar' };
+const PROG = { si: 'sabe dónde va', mas_o_menos: 'más o menos', no: 'no sabe dónde va' };
+const fmt = n => n == null ? '—' : n >= 1e6 ? (n / 1e6).toFixed(1) + ' M' : n >= 1e3 ? Math.round(n / 1e3) + ' mil' : String(n);
+function linea(svg, vals, max, color) {
+  const W = 300, H = 90, p = 6, n = vals.length;
+  let h = `<line class="eje" x1="${p}" y1="${H - p}" x2="${W - p}" y2="${H - p}"/>`;
+  if (n) {
+    const x = i => n === 1 ? W / 2 : p + i * (W - 2 * p) / (n - 1), y = v => H - p - (v / max) * (H - 2 * p);
+    const pts = vals.map((v, i) => v == null ? null : [x(i), y(v)]).filter(Boolean);
+    h += `<polyline fill="none" stroke="${color}" stroke-width="2" points="${pts.map(q => q.join(',')).join(' ')}"/>`;
+    const u = pts[pts.length - 1];
+    if (u) h += `<circle cx="${u[0]}" cy="${u[1]}" r="4" fill="${color}"/><text x="${Math.min(u[0] + 6, W - 24)}" y="${Math.max(u[1] - 6, 12)}" font-size="12" fill="currentColor">${vals[vals.length - 1]}</text>`;
+  }
+  svg.innerHTML = h;
+}
+let ultimo = '', actual = null;
+function ponerToque() {
+  const t = $('toque'), c = $('cap'), u = actual;
+  if (u && u.toque && c.naturalWidth) {
+    const o = u.recorte || [0, 0], k = c.clientWidth / c.naturalWidth;
+    t.style.left = ((u.toque[0] - o[0]) * k) + 'px'; t.style.top = ((u.toque[1] - o[1]) * k) + 'px'; t.hidden = false;
+  } else t.hidden = true;
+}
+async function tick() {
+  let e;
+  try { const r = await fetch('/estado.json', { cache: 'no-store' }); e = await r.json(); $('vivo').className = 'vivo on'; $('vivo').lastChild.textContent = 'En vivo'; }
+  catch (_) { $('vivo').className = 'vivo'; $('vivo').lastChild.textContent = 'Sin conexión: la corrida terminó o se detuvo'; return; }
+  const s = JSON.stringify(e); if (s === ultimo) return; ultimo = s;
+  $('titulo').textContent = 'Sala de observación' + (e.titulo ? ' · ' + e.titulo : '');
+  $('sesiones').innerHTML = (e.sesiones || []).length ? e.sesiones.map(x => `<div>${esc(x.nombre)} · ${esc(x.tarea)} · ${esc(RES[x.resultado] || x.resultado)} · ${x.pasos} pasos · ${fmt(x.tokens)} tokens</div>`).join('') : '<span class="vacio">Todavía ninguna terminada.</span>';
+  $('aviso').textContent = e.aviso || '';
+  const ss = e.sesion; if (!ss) return;
+  $('nombre').textContent = ss.nombre; $('seg').textContent = [ss.segmento, ss.tarea].filter(Boolean).join(' · ');
+  $('inst').textContent = ss.instruccion || '';
+  $('tok').textContent = fmt(ss.tokens) + (ss.tokens_estimados ? ' de ≈ ' + fmt(ss.tokens_estimados) : '');
+  $('tokb').style.width = ss.tokens_estimados ? Math.min(100, 100 * ss.tokens / ss.tokens_estimados) + '%' : '0';
+  $('res').textContent = ss.resultado ? (RES[ss.resultado] || ss.resultado) + (ss.ces ? ' · facilidad ' + ss.ces + '/7' : '') : 'en curso';
+  const P = e.pasos || [], u = P[P.length - 1];
+  $('paso').textContent = u ? `${u.n} de ${ss.max_pasos}` : '—';
+  if (u) {
+    if ($('cap').dataset.r !== (u.captura || '')) { $('cap').dataset.r = u.captura || ''; $('cap').src = img(u.captura); }
+    actual = u;
+    $('pant').textContent = 'Pantalla: ' + (u.pantalla || '—') + (u.zonas != null ? ' · ' + u.zonas + ' elementos tocables' : '');
+    $('esp').textContent = u.espera_ms != null ? 'espera del sistema ' + (u.espera_ms / 1000).toFixed(1) + ' s' : '';
+    ponerToque();
+    $('estadoP').textContent = u.estado === 'pensando' ? 'Mirando la pantalla y decidiendo…' : 'Ahora';
+    $('pens').textContent = u.pensamiento ? '«' + u.pensamiento + '»' : (u.estado === 'pensando' ? '…' : '—');
+    $('int').textContent = u.intencion || '—';
+    $('acc').innerHTML = u.accion ? esc(ACC[u.accion] || u.accion) + (u.escribir ? ` «${esc(u.escribir)}»` : '') + (u.respuesta ? ` <span class="chip ${u.respuesta === 'si' ? '' : 'aten'}">${u.respuesta === 'si' ? 'la pantalla respondió' : u.respuesta === 'no' ? 'sin respuesta visible' : 'fuera de lo tocable'}</span>` : '') + (u.por_que ? `<div class="meta">${esc(u.por_que)}</div>` : '') : '—';
+    $('cf').innerHTML = u.confianza != null ? `<span class="chip ${u.confianza < 50 ? 'mal' : u.confianza < 70 ? 'aten' : ''}">confianza ${u.confianza}</span> <span class="chip ${u.friccion >= 3 ? 'mal' : u.friccion >= 2 ? 'aten' : ''}">fricción ${u.friccion}</span> <span class="chip">${esc(PROG[u.progreso] || '—')}</span>` : '—';
+  }
+  linea($('gConf'), P.map(p => p.confianza ?? null), 100, 'var(--lin)');
+  linea($('gFri'), P.map(p => p.friccion ?? null), 5, 'var(--fri)');
+  $('lista').innerHTML = P.slice().reverse().map(p => `<div class="it">${p.captura ? `<img src="${img(p.captura)}" alt="">` : '<span></span>'}<div><div class="t">Paso ${p.n} · ${esc(p.pantalla || '')}${p.pantalla_despues && p.pantalla_despues !== p.pantalla ? ' → ' + esc(p.pantalla_despues) : ''}${p.espera_ms != null ? ' · espera ' + (p.espera_ms / 1000).toFixed(1) + ' s' : ''}</div><div class="p">${p.pensamiento ? '«' + esc(p.pensamiento) + '»' : '<span class="vacio">pensando…</span>'}</div><div class="t">${esc(ACC[p.accion] || p.accion || '')}${p.confianza != null ? ' · confianza ' + p.confianza + ' · fricción ' + p.friccion : ''}</div></div></div>`).join('');
+}
+$('cap').addEventListener('load', ponerToque);
+addEventListener('resize', ponerToque);
+tick(); setInterval(tick, 1000);
+</script>
+</body>
+</html>

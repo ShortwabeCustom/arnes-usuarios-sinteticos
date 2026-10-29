@@ -312,3 +312,128 @@ def test_tablero_de_recorrido():
     assert next(h for h in d["hallazgos"] if h["id"] == "H8")["matriz"]["bryan"] == "na"   # hallazgo de auditoría
     html = tablero.armar(e, e.narrativa(), "x-detalle.html", lambda *a, **k: "data:")
     assert '<html lang="es">' in html and "Investigación sintética" in html and 'id="H1"' in html
+
+
+def test_legibilidad_y_criterios_wcag():
+    from arnes.tecnico import criterios, estado_umbral, legibilidad
+
+    assert legibilidad("Toca aquí.") is None                       # muy corto: no se calcula
+    facil = legibilidad("Pide tu préstamo. Elige el monto. Toca el botón. Te damos la respuesta hoy. " * 3)
+    dificil = legibilidad("La autorización correspondiente para la consulta de información crediticia implica "
+                          "responsabilidades institucionales considerablemente específicas y extraordinariamente "
+                          "complicadas para cualquier solicitante interesado en obtener financiamiento.")
+    assert facil["indice"] > dificil["indice"] and facil["nivel"] in ("muy fácil", "bastante fácil")
+    assert dificil["nivel"] in ("muy difícil", "algo difícil")
+    assert criterios(["wcag2aa", "wcag143", "wcag258", "best-practice"]) == ["1.4.3", "2.5.8"]
+    assert estado_umbral("lcp_ms", 2000) == "bueno" and estado_umbral("lcp_ms", 3000) == "mejorable"
+    assert estado_umbral("cls", 0.3) == "malo" and estado_umbral("otra", 1) is None
+
+
+def test_resumen_tecnico():
+    from arnes.tecnico import resumir
+
+    regla = dict(id="color-contrast", impacto="serious", ayuda="Contraste", tags=["wcag2aa", "wcag143"], nodos=2,
+                 ejemplos=[dict(selector="p", html="<p>", resumen="")])
+    pant = lambda est, v, foco: dict(estado=est, axe=dict(violaciones=v, por_revisar=[]), foco=foco,  # noqa: E731
+                                      objetivos=dict(total=4, menores_24=1, menores_44=2), campos=[dict(etiqueta="", tipo="text", autocomplete="")],
+                                      reflujo_320=dict(desborde=est == "b"), h1=1, main=1, legibilidad=None, fuente_min_px=11)
+    res = dict(pantallas=[pant("a", [regla], [dict(visible=True)]), pant("b", [regla], [dict(visible=False)]), pant("c", [], [])],
+               ruta=[dict(accion={"nombre": "X"}, espera_ms=500, vio_carga=False), dict(accion={"etiqueta": "Y", "llenar": "1"}, espera_ms=2500, vio_carga=True,
+                                                                                    interacciones=[["click", 240]])],
+               carga=dict(fria=dict(lcp_ms=3100, cls=0.01, bytes=2048)), pwa=dict(manifiesto={"icons": [{"sizes": "192x192"}]}, service_worker=[{}]))
+    s = resumir(res)
+    assert s["reglas_wcag"][0]["pantallas"] == ["a", "b"] and s["reglas_wcag"][0]["criterios"] == ["1.4.3"]
+    assert s["pantallas_sin_fallas"] == 1 and s["por_impacto"]["serious"] == 1
+    assert (s["foco_visible"], s["foco_total"]) == (1, 2) and s["reflujo_320_falla"] == ["b"]
+    assert (s["toques_ruta"], s["campos_ruta"], s["espera_total_s"], s["pasos_con_carga"]) == (1, 1, 3.0, 1)
+    assert s["lcp_estado"] == "mejorable" and s["inp_aprox_ms"] == 240 and s["inp_estado"] == "mejorable"
+    assert s["pwa"]["icono_192"] and not s["pwa"]["icono_512"] and s["campos_sin_etiqueta"] == 3
+
+
+def test_sala_de_observacion(tmp_path):
+    import urllib.request
+
+    from arnes.observacion import Sala
+
+    (tmp_path / "datos").mkdir()
+    (tmp_path / "datos" / "p01.png").write_bytes(b"\x89PNG")
+    (tmp_path / "secreto.txt").write_text("no")
+    sala = Sala(tmp_path, titulo="Prueba")
+    url = sala.abrir(navegador=False)
+    try:
+        sala.iniciar_sesion(dict(id="T1-S01", nombre="Bryan", segmento="Gen Z"), dict(id="T1", instruccion="Pide"), 20, 1000)
+        sala.pantalla(1, "bienvenida", tmp_path / "datos" / "p01.png", 8)
+        sala.decision(1, dict(pensamiento="A ver", accion={"opcion": "tocar", "texto": "empiezo"}, confianza=70, friccion=1), [10, 20], 500)
+        sala.resultado_paso(1, "si", 300, "producto")
+        e = json.loads(urllib.request.urlopen(url + "estado.json").read())
+        assert e["sesion"]["nombre"] == "Bryan" and e["sesion"]["tokens"] == 500
+        assert e["pasos"][0]["captura"] == "datos/p01.png" and e["pasos"][0]["pantalla_despues"] == "producto"
+        assert urllib.request.urlopen(url + "archivo?ruta=datos/p01.png").read() == b"\x89PNG"
+        assert b"Sala de observaci" in urllib.request.urlopen(url).read()
+        for malo in ("archivo?ruta=secreto.txt", "archivo?ruta=../../etc/hosts"):   # solo imágenes del estudio
+            try:
+                urllib.request.urlopen(url + malo)
+                assert False, malo
+            except urllib.error.HTTPError as err:
+                assert err.code == 404
+    finally:
+        sala.cerrar()
+
+
+def test_recorrido_web_pantalla_zonas_y_deslizador():
+    from arnes.metodos.recorrido import _fin_alcanzado, _lista_zonas, _pantalla_id, _ruta_hasta, _traducir
+
+    assert _pantalla_id("web", "https://x.mx/app/", "otp") == "otp"
+    assert _pantalla_id("web", "https://x.mx/app/") == "x.mx/app"
+    assert _fin_alcanzado({"pantallas": ["oferta"]}, {"url": "https://x.mx/app/", "estado": "oferta"}, "web")
+    zonas = [dict(x=16, y=300, w=380, h=24, tocar=[206, 312], tipo="input", tipo_input="range", min=2000, max=70000, valor="22000",
+                  editable=False, etiqueta="Monto"),
+             dict(x=16, y=400, w=380, h=48, tocar=[206, 424], tipo="input", tipo_input="text", editable=True, etiqueta="Nombre", valor="Ana"),
+             dict(x=16, y=500, w=380, h=48, tocar=[206, 524], tipo="button", rol="radio", editable=False, etiqueta="No", marcado=True),
+             dict(x=16, y=600, w=380, h=48, tocar=[206, 624], tipo="button", editable=False, etiqueta="Continuar", desactivado=True)]
+    txt = _lista_zonas("web", zonas)
+    assert "deslizador de 2000 a 70000" in txt and "ahora dice «Ana»" in txt and "radio (seleccionado)" in txt and "(desactivado)" in txt
+    a, _ = _traducir("escribir", {"marca": 1, "escribir": "$36,000"}, zonas, {}, "web")
+    assert a["tipo"] == "tocar" and abs(a["x"] - 206) <= 2            # 36 000 es la mitad del rango
+    a, _ = _traducir("escribir", {"marca": 2, "escribir": "Prueba"}, zonas, {}, "web")
+    assert a == dict(tipo="escribir", x=206, y=424, texto="Prueba")
+    assert _ruta_hasta({"ruta_mecanica": [{"nombre": "A"}]}, {"inicia_en": "otp"}) == {"tipo": "mecanico", "pasos": [{"nombre": "A"}], "hasta": "otp"}
+    assert _ruta_hasta({}, {"id": "T1"}) is None
+
+
+def test_estilo_sin_falsos_positivos_de_la_pwa():
+    from arnes.estilo import guia, revisar_texto
+
+    g = guia("pwa")
+    r = revisar_texto("Ahora cuéntanos, ¿cuánto dinero\nnecesitas? Habilita tu cuenta de débito con 10 dígitos. Evita reflejos.", g["reglas"], None)
+    assert not [x for x in r if x["regla"] in ("E02", "E08")], r
+    assert [x for x in revisar_texto("Tu cafecito", g["reglas"], None) if x["regla"] == "E08"]
+
+
+def test_tablero_con_calidad_tecnica():
+    from arnes.reporte import tablero
+
+    e = Estudio(RAIZ / "estudios" / "2026-10-28-ou2-pwa-mvp")
+    N = cargar((e.dir / "narrativa.yaml").read_text(encoding="utf-8"))
+    D = tablero.datos(e, N, lambda ruta, ancho, calidad: "data:,")
+    T = D["tecnico"]
+    assert T and len(T["pantallas"]) == T["resumen"]["pantallas"] >= 30
+    assert {r["punto"] for r in T["retoma"]} == {"otp", "datosPersonales", "oferta"}
+    assert all(p["etapa"] for p in T["pantallas"]) and D["alcance"]["sesiones"] == 32
+    html = tablero.armar(e, N, "detalle.html", lambda ruta, ancho, calidad: "data:,")
+    assert "vistaTecnica" in html and "\"tecnico\": {" in html
+
+
+def test_guardia_ignora_codigo_de_terceros(tmp_path):
+    import subprocess
+
+    from arnes.guardia import revisar_stage
+
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    num = "4111" + "1111" + "1111" + "1111"                     # pasa Luhn
+    (tmp_path / "arnes" / "vendor").mkdir(parents=True)
+    (tmp_path / "arnes" / "vendor" / "lib.min.js").write_text(f"var a={num};")
+    (tmp_path / "nota.md").write_text(f"tarjeta {num}")
+    subprocess.run(["git", "-C", str(tmp_path), "add", "-A"], check=True)
+    h = revisar_stage(tmp_path)
+    assert h and all(x.startswith("nota.md") for x in h)

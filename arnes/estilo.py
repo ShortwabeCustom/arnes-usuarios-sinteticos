@@ -32,6 +32,8 @@ def _frases(t: str) -> list[str]:
 def _especial(tipo: str, texto: str, nombre: str | None) -> list[str]:
     out = []
     if tipo == "apertura":
+        # un salto de línea seguido de minúscula es la misma frase partida («¿cuánto dinero\nnecesitas?»)
+        texto = re.sub(r"(?<![.!?:¡¿])\n(?=[a-záéíóúñ])", " ", texto or "")
         for f in _frases(texto):
             for cierre, apertura in (("!", "¡"), ("?", "¿")):
                 if cierre in f and apertura not in f:
@@ -90,6 +92,12 @@ def _textos(e: Estudio) -> list[tuple[str, str, str]]:
                 if p.get("texto_pantalla") and p["pantalla"] not in vistos:
                     vistos.add(p["pantalla"])
                     out.append((p["pantalla"], "pantalla", p["texto_pantalla"]))
+        tf = e.ruta("datos", "tecnico.json")      # la ruta mecánica ve todas las pantallas, aunque ningún perfil llegue
+        if tf.exists():
+            for p in json.loads(tf.read_text(encoding="utf-8")).get("pantallas") or []:
+                if p.get("texto") and p["estado"] not in vistos:
+                    vistos.add(p["estado"])
+                    out.append((p["estado"], "pantalla", p["texto"]))
     return out
 
 

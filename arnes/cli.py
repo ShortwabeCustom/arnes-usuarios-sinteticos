@@ -172,6 +172,12 @@ def cmd_recorrido(a):
     recorrido.sesion(e, a.integrante, tarea=a.tarea, guion=a.guion, corridas=a.corridas)
 
 
+def cmd_tecnico(a):
+    from .tecnico import auditar
+
+    auditar(Estudio(a.estudio), visible=a.visible)
+
+
 def cmd_auditar(a):
     from .auditar import auditar
 
@@ -328,6 +334,10 @@ def main(argv=None):
     x.add_argument("--simular", action="store_true", help="cuántas sesiones y tokens, sin correr nada")
     x.add_argument("--forzar", action="store_true")
     x.set_defaults(fn=cmd_recorrido)
+    x = s.add_parser("tecnico", help="auditoría técnica de un producto web (accesibilidad, rendimiento, PWA); 0 tokens")
+    x.add_argument("estudio")
+    x.add_argument("--visible", action="store_true", help="muestra la ventana del navegador mientras mide")
+    x.set_defaults(fn=cmd_tecnico)
     x = s.add_parser("persona")
     x.add_argument("accion", choices=["validar", "probar"])
     x.add_argument("objetivo")

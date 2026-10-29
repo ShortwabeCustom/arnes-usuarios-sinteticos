@@ -1,0 +1,5271 @@
+{
+ "fecha": "2026-10-28 13:27",
+ "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+ "dispositivo": "Pixel 7",
+ "condiciones": {
+  "red_carga": "móvil lenta (150 ms de latencia, 1.6 Mbps de bajada, 750 kbps de subida)",
+  "cpu_carga": "4× más lenta",
+  "cpu_ruta": "4× más lenta",
+  "navegador": "Chromium de Playwright con emulación de dispositivo"
+ },
+ "umbrales": {
+  "lcp_ms": [
+   2500,
+   4000
+  ],
+  "fcp_ms": [
+   1800,
+   3000
+  ],
+  "cls": [
+   0.1,
+   0.25
+  ],
+  "inp_ms": [
+   200,
+   500
+  ],
+  "ttfb_ms": [
+   800,
+   1800
+  ],
+  "tbt_ms": [
+   200,
+   600
+  ]
+ },
+ "carga": {
+  "fria": {
+   "ttfb_ms": 507,
+   "fcp_ms": 2412,
+   "lcp_ms": 2412,
+   "cls": 0,
+   "dcl_ms": 1507,
+   "load_ms": 2357,
+   "tbt_ms": 20,
+   "tareas_largas": 1,
+   "peticiones": 21,
+   "bytes": 683290,
+   "documento_bytes": 2732,
+   "por_tipo": {
+    "link": {
+     "n": 6,
+     "bytes": 140494
+    },
+    "script": {
+     "n": 7,
+     "bytes": 162671
+    },
+    "other": {
+     "n": 1,
+     "bytes": 5237
+    },
+    "img": {
+     "n": 6,
+     "bytes": 372156
+    }
+   },
+   "controlado_por_sw": true,
+   "total_ms": 6363
+  },
+  "con_cache": {
+   "ttfb_ms": 166,
+   "fcp_ms": 364,
+   "lcp_ms": 364,
+   "cls": 0,
+   "dcl_ms": 195,
+   "load_ms": 220,
+   "tbt_ms": 8,
+   "tareas_largas": 1,
+   "peticiones": 24,
+   "bytes": 8619,
+   "documento_bytes": 8619,
+   "por_tipo": {
+    "link": {
+     "n": 6,
+     "bytes": 0
+    },
+    "script": {
+     "n": 7,
+     "bytes": 0
+    },
+    "other": {
+     "n": 1,
+     "bytes": 0
+    },
+    "img": {
+     "n": 9,
+     "bytes": 0
+    }
+   },
+   "controlado_por_sw": true,
+   "total_ms": 4227
+  }
+ },
+ "pwa": {
+  "https": true,
+  "manifiesto_url": "https://pwa.productdesign.mx/app/manifest.webmanifest",
+  "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+  "theme_color": "#10553d",
+  "lang": "es-MX",
+  "apple_touch_icon": true,
+  "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+  "manifiesto": {
+   "name": "Solicitud Única · Banco Azteca",
+   "short_name": "Solicitud Única",
+   "description": "Pide tu préstamo de punta a punta desde tu celular.",
+   "id": "/app/",
+   "start_url": "/app/",
+   "scope": "/app/",
+   "display": "standalone",
+   "orientation": "portrait",
+   "lang": "es-MX",
+   "background_color": "#10553d",
+   "theme_color": "#10553d",
+   "icons": [
+    {
+     "src": "/app/iconos/icono-192.png",
+     "sizes": "192x192",
+     "type": "image/png",
+     "purpose": "any"
+    },
+    {
+     "src": "/app/iconos/icono-512.png",
+     "sizes": "512x512",
+     "type": "image/png",
+     "purpose": "any"
+    },
+    {
+     "src": "/app/iconos/icono-maskable-512.png",
+     "sizes": "512x512",
+     "type": "image/png",
+     "purpose": "maskable"
+    }
+   ]
+  },
+  "service_worker": [
+   {
+    "scope": "https://pwa.productdesign.mx/app/",
+    "activo": true
+   }
+  ],
+  "controlado": true,
+  "sin_conexion": {
+   "abre": true,
+   "texto": "¡Te prestamos hasta $70,000 para usar como quieras! Obtén el préstamo ideal para cumplir tus sueños. ¡Tu oferta en menos de 5 minutos! Completa tu solicitud en tan solo 4 pasos. ¡Tus datos están 100% "
+  }
+ },
+ "pantallas": [
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "scrollable-region-focusable",
+      "impacto": "serious",
+      "ayuda": "Asegurar que la región de desplazamiento vertical ('scroll') tiene acceso por teclado",
+      "tags": [
+       "wcag2a",
+       "wcag211",
+       "wcag213"
+      ],
+      "nodos": 1,
+      "ejemplos": [
+       {
+        "selector": ".carrusel",
+        "html": "<div class=\"carrusel\" aria-roledescription=\"carrusel\" aria-label=\"Beneficios\">",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento debería tener contenido que admita el foco\n  El elemento debería admitir el foco"
+       }
+      ]
+     }
+    ],
+    "por_revisar": [
+     {
+      "id": "aria-prohibited-attr",
+      "impacto": "serious",
+      "ayuda": "Elements must only use permitted ARIA attributes",
+      "nodos": 1
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 11,
+   "textos_menores_12px": 4,
+   "textos": 15,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 5,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Te prestamos hasta $70,000 para usar como quieras!\n\nObtén el préstamo ideal para cumplir tus sueños.\n\n¡Tu oferta en menos de 5 minutos!\n\nCompleta tu solicitud en tan solo 4 pasos.\n\n¡Tus datos están 100% seguros!\n\nProtegemos tu información en cada momento, desde que inicias tu solicitud.\n\n¡Si pagas antes, pagas menos!\n\nCon tu pago puntual ahorras en tus pagos semanales.\n\n¡Recibe tu préstamo en tu cuenta de débito!\n\nAbre tu cuenta fácil y rápido para tus depósitos de hasta $200,000.\n\nInicia tu solicitud\n\nBanco Azteca S.A., Institución de Banca Múltiple.\nDerechos reservados, 2026.",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Tarjeta 1",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Tarjeta 2",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Tarjeta 3",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Tarjeta 4",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Tarjeta 5",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Inicia tu solicitud",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 8
+   },
+   "legibilidad": {
+    "indice": 72.4,
+    "nivel": "bastante fácil",
+    "palabras": 89,
+    "frases": 14,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 8,
+    "menores_24": 0,
+    "menores_44": 4,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Tarjeta 2",
+      "w": 30,
+      "h": 44
+     },
+     {
+      "etiqueta": "Tarjeta 3",
+      "w": 30,
+      "h": 44
+     },
+     {
+      "etiqueta": "Tarjeta 4",
+      "w": 30,
+      "h": 44
+     },
+     {
+      "etiqueta": "Tarjeta 5",
+      "w": 30,
+      "h": 44
+     }
+    ]
+   },
+   "estado": "bienvenida",
+   "captura": "datos/tecnico/01-bienvenida.png",
+   "paso_ruta": 0
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 8
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 11,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Elige cómo usarás tu préstamo\n\nCuéntanos qué necesitas\n\nEfectivo\nCelulares y cómputo\nLínea blanca\nMotocicletas\nAutos\nMi negocio\nContinuar\n\nCrédito sujeto a aprobación.\n\nVer información legal",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Efectivo",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Celulares y cómputo",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Línea blanca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Motocicletas",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Autos",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Mi negocio",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ver información legal",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 39.1,
+    "nivel": "muy difícil",
+    "palabras": 26,
+    "frases": 11,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 9,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "producto",
+   "captura": "datos/tecnico/02-producto.png",
+   "paso_ruta": 1
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 13
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "Monto del préstamo",
+     "tipo": "range",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": null,
+     "placeholder": "",
+     "describe": false
+    }
+   ],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 16,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 2,
+   "texto": "Lo soñaste\n\nAhora cuéntanos, ¿cuánto dinero\nnecesitas?\n\n$22,000\n$2,000\n$70,000\n\n¿En cuántas semanas quieres pagar?\n\n---\nSemanas\n\nTu pago semanal sería de:\n\n$0 Pesos\n\nTú tienes el control de tus pagos.\n¡Si pagas antes, pagas menos!\n\nConfirmar\n\nCrédito sujeto a aprobación.",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Editar monto",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Monto del préstamo",
+     "tag": "input",
+     "visible": false,
+     "dentro": true
+    },
+    {
+     "nombre": "--- Semanas",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 2
+   },
+   "legibilidad": {
+    "indice": 70.6,
+    "nivel": "bastante fácil",
+    "palabras": 36,
+    "frases": 12,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 6,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "simulador",
+   "captura": "datos/tecnico/03-simulador.png",
+   "paso_ruta": 3
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "aria-prohibited-attr",
+      "impacto": "serious",
+      "ayuda": "Elements must only use permitted ARIA attributes",
+      "nodos": 1
+     },
+     {
+      "id": "aria-valid-attr-value",
+      "impacto": "critical",
+      "ayuda": "Los atributos ARIA deben cumplir los requisitos para valores válidos",
+      "nodos": 2
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 2
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "¿Cómo prefieres que te llamemos?",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "given-name",
+     "obligatorio": false,
+     "maxlength": 15,
+     "placeholder": "Ingresa tu nombre",
+     "describe": true
+    },
+    {
+     "etiqueta": "¿Cuál es tu número celular?",
+     "tipo": "tel",
+     "inputmode": "numeric",
+     "autocomplete": "tel-national",
+     "obligatorio": false,
+     "maxlength": 10,
+     "placeholder": "Ingresa 10 dígitos",
+     "describe": true
+    },
+    {
+     "etiqueta": "¿Cuál es tu correo electrónico?",
+     "tipo": "email",
+     "inputmode": "email",
+     "autocomplete": "email",
+     "obligatorio": false,
+     "maxlength": null,
+     "placeholder": "ejemplo@mail.com",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 11,
+   "textos_menores_12px": 6,
+   "textos": 16,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n0/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Ingresa tu nombre",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa 10 dígitos",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "ejemplo@mail.com",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Aviso de Privacidad",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Consulta de Historial Crediticio",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Información laboral.",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 63.2,
+    "nivel": "normal",
+    "palabras": 44,
+    "frases": 7,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 8,
+    "menores_24": 2,
+    "menores_44": 2,
+    "ejemplos_24": [
+     {
+      "etiqueta": "Aviso de Privacidad",
+      "w": 113,
+      "h": 14
+     },
+     {
+      "etiqueta": "Información laboral.",
+      "w": 115,
+      "h": 14
+     }
+    ],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Aviso de Privacidad",
+      "w": 113,
+      "h": 14
+     },
+     {
+      "etiqueta": "Información laboral.",
+      "w": 115,
+      "h": 14
+     }
+    ]
+   },
+   "estado": "contacto",
+   "captura": "datos/tecnico/04-contacto.png",
+   "paso_ruta": 7
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 2,
+      "ejemplos": [
+       {
+        "selector": ".reenviar",
+        "html": "<p class=\"reenviar inactivo\" aria-live=\"off\">Reenviar código en 56 seg.</p>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 1.99 (color de primer plano: #acb1b4, color de fondo: #f5f6f6, tamaño de fuente: 12.0pt (16px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": ".app",
+        "html": "<span class=\"app\" aria-hidden=\"true\">✉︎</span>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 2.21 (color de primer plano: #ffffff, color de fondo: #34c759, tamaño de fuente: 15.0pt (20px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 4
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "Código de verificación de 6 dígitos - - - - -",
+     "tipo": "text",
+     "inputmode": "numeric",
+     "autocomplete": "one-time-code",
+     "obligatorio": false,
+     "maxlength": 6,
+     "placeholder": "",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 12,
+   "textos_menores_12px": 0,
+   "textos": 23,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "¡Hola, Prueba!\nVerifica tu número\n\nIngresa el código que se envió al:\n\n55 00 00 00 00\nEditar\nCódigo de verificación de 6 dígitos\n-\n-\n-\n-\n-\n\nPuedes recibirlo por WhatsApp o por SMS\n\nReenviar código en 56 seg.\n\n✉︎\nBanco Azteca · ahora\n\nTu código de verificación de Banco Azteca es 980808. No lo compartas con nadie.",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Mensaje de Banco Azteca: Tu código de verificación de Banco ",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 73.6,
+    "nivel": "bastante fácil",
+    "palabras": 45,
+    "frases": 10,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 1,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Editar",
+      "w": 82,
+      "h": 32
+     }
+    ]
+   },
+   "estado": "otp",
+   "captura": "datos/tecnico/05-otp.png",
+   "paso_ruta": 11
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Tu número se verificó con éxito!\n¡Sigamos adelante!",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "¡Sigamos adelante!",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "otpVerificado",
+   "captura": "datos/tecnico/06-otpVerificado.png",
+   "paso_ruta": 12
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Prueba, ¿te está ayudando un asesor?\nSí, me están ayudando\nNo\nConfirmar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Sí, me están ayudando",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 5,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "asesor",
+   "captura": "datos/tecnico/07-asesor.png",
+   "paso_ruta": 13
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 6
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 7,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Empezamos con tu selfie!\n\nTu foto nos ayuda a proteger tu información.\n\nEvita hacer caras y gestos.\nUbícate en un lugar bien iluminado.\nRetira gorra, lentes o cubrebocas.\nDa permisos de ubicación y acceso a tu cámara.\nTomar foto",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Tomar foto",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 70.3,
+    "nivel": "bastante fácil",
+    "palabras": 39,
+    "frases": 7,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "selfieIntro",
+   "captura": "datos/tecnico/08-selfieIntro.png",
+   "paso_ruta": 15
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 2,
+      "ejemplos": [
+       {
+        "selector": ".acciones > button:nth-child(1)",
+        "html": "<button type=\"button\">Cancelar</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.5 (color de primer plano: #007aff, color de fondo: #efeff4, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": "button:nth-child(2)",
+        "html": "<button type=\"button\">Continuar</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.5 (color de primer plano: #007aff, color de fondo: #efeff4, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": []
+   },
+   "campos": [],
+   "fuente_min_px": 13,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Habilita el acceso a la cámara para tomar tu fotografía.\n\nEste paso es necesario.\n\nCancelar\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Cancelar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "permisoCamara",
+   "captura": "datos/tecnico/09-permisoCamara.png",
+   "paso_ruta": 16
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 2,
+      "ejemplos": [
+       {
+        "selector": ".acciones > button:nth-child(1)",
+        "html": "<button type=\"button\">No permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.5 (color de primer plano: #007aff, color de fondo: #efeff4, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": "button:nth-child(2)",
+        "html": "<button type=\"button\">Permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.5 (color de primer plano: #007aff, color de fondo: #efeff4, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": []
+   },
+   "campos": [],
+   "fuente_min_px": 17,
+   "textos_menores_12px": 0,
+   "textos": 3,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "No permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "permisoUbicacion",
+   "captura": "datos/tecnico/10-permisoUbicacion.png",
+   "paso_ruta": 17
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 1
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 2,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "No encontramos una cámara en este equipo. Usaremos una captura simulada.\n\nTomar selfie",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Tomar selfie",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "selfieEncuadre",
+   "captura": "datos/tecnico/11-selfieEncuadre.png",
+   "paso_ruta": 18
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 3,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Qué gran foto!\n\nAhora estás más cerca de tu préstamo.\n\n¡Sigamos adelante!",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "¡Sigamos adelante!",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "selfieAprobada",
+   "captura": "datos/tecnico/12-selfieAprobada.png",
+   "paso_ruta": 19
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 4
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 72.5,
+    "nivel": "bastante fácil",
+    "palabras": 20,
+    "frases": 3,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "ineIntro",
+   "captura": "datos/tecnico/13-ineIntro.png",
+   "paso_ruta": 20
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 7,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar\n¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "No permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 65.0,
+    "nivel": "bastante fácil",
+    "palabras": 31,
+    "frases": 6,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "inePermisoUbicacion",
+   "captura": "datos/tecnico/14-inePermisoUbicacion.png",
+   "paso_ruta": 21
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 2,
+      "ejemplos": [
+       {
+        "selector": "button:nth-child(1)",
+        "html": "<button type=\"button\">No permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.38 (color de primer plano: #007aff, color de fondo: #ebebf0, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": "button:nth-child(2)",
+        "html": "<button type=\"button\">Permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.38 (color de primer plano: #007aff, color de fondo: #ebebf0, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": []
+   },
+   "campos": [],
+   "fuente_min_px": 13,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "\"identidad-digital-ocrdual.com.mx\" quiere utilizar tu ubicación\n\nSafari actualmente tiene acceso a tu ubicación precisa. ¿Quieres permitírselo a identidad-digital-ocrdual.com.mx también?\n\nNo permitir\nPermitir",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "No permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 51.1,
+    "nivel": "algo difícil",
+    "palabras": 29,
+    "frases": 9,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "incodeUbicacion",
+   "captura": "datos/tecnico/15-incodeUbicacion.png",
+   "paso_ruta": 22
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 4,
+      "ejemplos": [
+       {
+        "selector": "button:nth-child(1)",
+        "html": "<button type=\"button\">No permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.38 (color de primer plano: #007aff, color de fondo: #ebebf0, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": "button:nth-child(2)",
+        "html": "<button type=\"button\">Permitir</button>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.38 (color de primer plano: #007aff, color de fondo: #ebebf0, tamaño de fuente: 12.8pt (17px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       },
+       {
+        "selector": "p",
+        "html": "<p class=\"verificado\"><span aria-hidden=\"true\">✓</span> verified by <b>incode</b></p>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 3.43 (color de primer plano: #5a6b80, color de fondo: #121212, tamaño de fuente: 9.8pt (13px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 1
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 13,
+   "textos_menores_12px": 0,
+   "textos": 6,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¿Permitir a \"identidad-digital-ocrdual.com.mx\" usar tu cámara?\nNo permitir\nPermitir\n\n✓ verified by incode",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "No permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Permitir",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "incodeCamara",
+   "captura": "datos/tecnico/16-incodeCamara.png",
+   "paso_ruta": 23
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 1
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 2,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Coloca tu INE dentro del marco\nEscanear",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Escanear",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 2,
+    "menores_24": 1,
+    "menores_44": 1,
+    "ejemplos_24": [
+     {
+      "etiqueta": "Banco Azteca",
+      "w": 172,
+      "h": 18
+     }
+    ],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Banco Azteca",
+      "w": 172,
+      "h": 18
+     }
+    ]
+   },
+   "estado": "ineFrente",
+   "captura": "datos/tecnico/17-ineFrente.png",
+   "paso_ruta": 24
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 1,
+      "ejemplos": [
+       {
+        "selector": ".ine-simulada",
+        "html": "<span class=\"ine-simulada\">Captura simulada · reverso</span>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 4.48 (color de primer plano: #e0e0e0, color de fondo: #646464, tamaño de fuente: 9.0pt (12px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": []
+   },
+   "campos": [],
+   "fuente_min_px": 12,
+   "textos_menores_12px": 0,
+   "textos": 5,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 0,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Rellena el marco con tu INE\n\nCaptura simulada · reverso\n\n🔒 Todas las fotos están encriptadas",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": null,
+   "objetivos": {
+    "total": 0,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "ineReverso",
+   "captura": "datos/tecnico/18-ineReverso.png",
+   "paso_ruta": 26
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "tags": [
+       "wcag2aa",
+       "wcag143"
+      ],
+      "nodos": 1,
+      "ejemplos": [
+       {
+        "selector": "#_r_7_-val",
+        "html": "<span id=\"_r_7_-val\" class=\"valor vacio\">Selecciona una opción</span>",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 1.53 (color de primer plano: #d0d1d0, color de fondo: #ffffff, tamaño de fuente: 12.0pt (16px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+       }
+      ]
+     }
+    ],
+    "por_revisar": [
+     {
+      "id": "aria-valid-attr-value",
+      "impacto": "critical",
+      "ayuda": "Los atributos ARIA deben cumplir los requisitos para valores válidos",
+      "nodos": 4
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "Nombre(s)",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "given-name",
+     "obligatorio": false,
+     "maxlength": null,
+     "placeholder": "Como aparece en tu INE",
+     "describe": true
+    },
+    {
+     "etiqueta": "Primer apellido",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "family-name",
+     "obligatorio": false,
+     "maxlength": null,
+     "placeholder": "Ingresa tu primer apellido",
+     "describe": true
+    },
+    {
+     "etiqueta": "Segundo apellido (opcional)",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": null,
+     "placeholder": "Ingresa tu segundo apellido",
+     "describe": true
+    },
+    {
+     "etiqueta": "Fecha de nacimiento",
+     "tipo": "text",
+     "inputmode": "numeric",
+     "autocomplete": "bday",
+     "obligatorio": false,
+     "maxlength": 10,
+     "placeholder": "DD/MM/AAAA",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 15,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Guardar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Prueba",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa tu primer apellido",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa tu segundo apellido",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "DD/MM/AAAA",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Selecciona una opción",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Selecciona una opción",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 46.9,
+    "nivel": "algo difícil",
+    "palabras": 40,
+    "frases": 15,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 8,
+    "menores_24": 0,
+    "menores_44": 1,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Guardar",
+      "w": 78,
+      "h": 32
+     }
+    ]
+   },
+   "estado": "datosPersonales",
+   "captura": "datos/tecnico/19-datosPersonales.png",
+   "paso_ruta": 27
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 4
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 16,
+   "textos_menores_12px": 0,
+   "textos": 4,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Prueba, vamos a verificar tu domicilio\n\nVerifica que la dirección donde vives sea correcta y ubícala en el mapa.\n\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 63.1,
+    "nivel": "normal",
+    "palabras": 20,
+    "frases": 3,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "domicilioInicio",
+   "captura": "datos/tecnico/20-domicilioInicio.png",
+   "paso_ruta": 37
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "aria-prohibited-attr",
+      "impacto": "serious",
+      "ayuda": "Elements must only use permitted ARIA attributes",
+      "nodos": 4
+     },
+     {
+      "id": "aria-valid-attr-value",
+      "impacto": "critical",
+      "ayuda": "Los atributos ARIA deben cumplir los requisitos para valores válidos",
+      "nodos": 1
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 2
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "Calle",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "address-line1",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ingresa tu calle",
+     "describe": true
+    },
+    {
+     "etiqueta": "No. exterior",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ingresa el número exterior",
+     "describe": true
+    },
+    {
+     "etiqueta": "No. interior (opcional)",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ingresa el número interior",
+     "describe": true
+    },
+    {
+     "etiqueta": "Código postal",
+     "tipo": "text",
+     "inputmode": "numeric",
+     "autocomplete": "postal-code",
+     "obligatorio": false,
+     "maxlength": 5,
+     "placeholder": "Ingresa el código postal",
+     "describe": true
+    },
+    {
+     "etiqueta": "Colonia",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "address-level3",
+     "obligatorio": false,
+     "maxlength": 60,
+     "placeholder": "Ingresa la colonia",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 23,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n0/25\nNo. exterior\n0/25\nNo. interior (opcional)\n0/25\nCódigo postal\n0/5\nColonia\nConfirmar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Sí",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa tu calle",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa el número exterior",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa el número interior",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa el código postal",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ingresa la colonia",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Confirmar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 77.8,
+    "nivel": "bastante fácil",
+    "palabras": 26,
+    "frases": 13,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 7,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "direccion",
+   "captura": "datos/tecnico/21-direccion.png",
+   "paso_ruta": 38
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "aria-prohibited-attr",
+      "impacto": "serious",
+      "ayuda": "Elements must only use permitted ARIA attributes",
+      "nodos": 5
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 3
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "Agrega las referencias para llegar",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 150,
+     "placeholder": "Ej. Casa beige, frente a una tienda",
+     "describe": true
+    },
+    {
+     "etiqueta": "Calle de enfrente",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ej. Sur 21",
+     "describe": true
+    },
+    {
+     "etiqueta": "Calle de la derecha",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ej. Entre Sur 23",
+     "describe": true
+    },
+    {
+     "etiqueta": "Calle de la izquierda",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ej. Av. Izamal",
+     "describe": true
+    },
+    {
+     "etiqueta": "Calle de atrás",
+     "tipo": "text",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 25,
+     "placeholder": "Ej. Av. Teotihuacán",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 28,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n0/150\nCalle de enfrente\nNo aplica\n0/25\nCalle de la derecha\nNo aplica\n0/25\nCalle de la izquierda\nNo aplica\n0/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Ej. Casa beige, frente a una tienda",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ej. Sur 21",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No aplica",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ej. Entre Sur 23",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No aplica",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ej. Av. Izamal",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No aplica",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ej. Av. Teotihuacán",
+     "tag": "input",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No aplica",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Confirmar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 11
+   },
+   "legibilidad": {
+    "indice": 77.4,
+    "nivel": "bastante fácil",
+    "palabras": 45,
+    "frases": 13,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 10,
+    "menores_24": 0,
+    "menores_44": 4,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "No aplica",
+      "w": 85,
+      "h": 32
+     },
+     {
+      "etiqueta": "No aplica",
+      "w": 85,
+      "h": 32
+     },
+     {
+      "etiqueta": "No aplica",
+      "w": 85,
+      "h": 32
+     },
+     {
+      "etiqueta": "No aplica",
+      "w": 85,
+      "h": 32
+     }
+    ]
+   },
+   "estado": "referencias",
+   "captura": "datos/tecnico/22-referencias.png",
+   "paso_ruta": 43
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 8
+     },
+     {
+      "id": "link-in-text-block",
+      "impacto": "serious",
+      "ayuda": "Los enlaces deben distinguirse del texto adyacente por un medio que no dependa del color",
+      "nodos": 1
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 10,
+   "textos_menores_12px": 3,
+   "textos": 10,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu domicilio\nUbica tu domicilio con el pin en el mapa\n+\n−\n Leaflet | © OpenStreetMap\n⤢\nUtiliza dos dedos para hacer zoom\nConfirmar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Mapa de tu domicilio. Toca el mapa o arrastra el pin para ub",
+     "tag": "div",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "IMG",
+     "tag": "img",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Zoom in",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Zoom out",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Leaflet",
+     "tag": "a",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Utiliza dos dedos para hacer zoom. Toca para cerrar.",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Confirmar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 65.8,
+    "nivel": "bastante fácil",
+    "palabras": 20,
+    "frases": 5,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 2,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "mapa",
+   "captura": "datos/tecnico/23-mapa.png",
+   "paso_ruta": 49
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 4
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 5,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu domicilio\n¿Este es tu domicilio?\n\nConfirma que la foto corresponda a tu fachada.\n\nSí, es mi fachada\nNo es mi fachada",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Sí, es mi fachada",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "No es mi fachada",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 86.3,
+    "nivel": "muy fácil",
+    "palabras": 22,
+    "frases": 5,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "fachada",
+   "captura": "datos/tecnico/24-fachada.png",
+   "paso_ruta": 50
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 1
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 12,
+   "textos_menores_12px": 0,
+   "textos": 22,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "¡Prueba, te podemos prestar hasta $22,000* en Efectivo!\n\n¡Tú decides cómo usarlo!\n\nO llévate:\n\n$23,700 en\nLínea blanca\n$25,000 en\nMotocicletas\n$28,000 en\nCelulares y cómputo\nContinuar\n\n*Sujeto a aprobación",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "$23,700 en Línea blanca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "$25,000 en Motocicletas",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "$28,000 en Celulares y cómputo",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 3
+   },
+   "legibilidad": {
+    "indice": 60.7,
+    "nivel": "normal",
+    "palabras": 26,
+    "frases": 11,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 5,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "oferta",
+   "captura": "datos/tecnico/25-oferta.png",
+   "paso_ruta": 51
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 4
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 5,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Prueba, agenda una visita para confirmar tu solicitud\nEs una visita segura ya que la realiza uno de nuestros asesores dentro de tu domicilio.\n\n¡7 de cada 10 personas usan su préstamo el mismo día!\n\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 64.6,
+    "nivel": "normal",
+    "palabras": 34,
+    "frases": 4,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 3,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "agendaIntro",
+   "captura": "datos/tecnico/26-agendaIntro.png",
+   "paso_ruta": 52
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 23
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 12,
+   "textos_menores_12px": 0,
+   "textos": 26,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 1,
+   "texto": "Tu visita\n¡Vamos a conocernos!\n\nTú eliges el día y la hora para la visita en tu domicilio.\n\nJue.\n29\nOct.\nVie.\n30\nOct.\nSáb.\n31\nOct.\nDom.\n1\nNov.\nLun.\n2\nNov.\nMar.\n3\nNov.\nMié.\n4\nNov.\n\nSelecciona un día para ver los horarios disponibles.\n\nConfirmar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "29 de octubre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "30 de octubre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "31 de octubre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "1 de noviembre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "2 de noviembre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "3 de noviembre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "4 de noviembre",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Confirmar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 2
+   },
+   "legibilidad": {
+    "indice": 99.8,
+    "nivel": "muy fácil",
+    "palabras": 41,
+    "frases": 19,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 9,
+    "menores_24": 0,
+    "menores_44": 0,
+    "ejemplos_24": [],
+    "ejemplos_44": []
+   },
+   "estado": "agendaDiaHora",
+   "captura": "datos/tecnico/27-agendaDiaHora.png",
+   "paso_ruta": 53
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 9
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 11,
+   "textos_menores_12px": 3,
+   "textos": 13,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¡Prueba, tú tienes el control de tus pagos semanales!\n\nElige tu día de pago ideal, lo guardaremos para más adelante.\n\nLunes\nMartes\nMiércoles\nJueves\nViernes\nSábado\nDomingo\n\nAl continuar, aceptas el Contrato de préstamo.\n\nConfirmar\n\nLa aceptación y firma de los documentos no significa que el préstamo esté activo y solo serán válidos en caso de ser aprobado. Si el préstamo no se aprueba, no habrá ningún efecto legal ni se realizarán cargos.",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Lunes",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Martes",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Miércoles",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Jueves",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Viernes",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Sábado",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Domingo",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Contrato de préstamo.",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Confirmar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Banco Azteca",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Ayuda de Olivia",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 73.2,
+    "nivel": "bastante fácil",
+    "palabras": 73,
+    "frases": 13,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 11,
+    "menores_24": 1,
+    "menores_44": 1,
+    "ejemplos_24": [
+     {
+      "etiqueta": "Contrato de préstamo.",
+      "w": 129,
+      "h": 15
+     }
+    ],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Contrato de préstamo.",
+      "w": 129,
+      "h": 15
+     }
+    ]
+   },
+   "estado": "diaPago",
+   "captura": "datos/tecnico/28-diaPago.png",
+   "paso_ruta": 56
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [],
+    "por_revisar": [
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 8
+     }
+    ]
+   },
+   "campos": [],
+   "fuente_min_px": 14,
+   "textos_menores_12px": 0,
+   "textos": 11,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "Tu asesor te visitará el 29 de octubre entre 09:00 a.m. y 10:00 a.m.\nTe contactaremos por WhatsApp para confirmar tu visita y avisarte cuando tu asesor vaya en camino.\nLa visita tendrá una duración de hasta 30 minutos.\nTen a la mano tu identificación oficial y asegúrate de estar en casa.\nAgregar a mi calendario\nContinuar",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "Agregar a mi calendario",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Continuar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 70.8,
+    "nivel": "bastante fácil",
+    "palabras": 55,
+    "frases": 6,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 4,
+    "menores_24": 0,
+    "menores_44": 1,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Agregar a mi calendario",
+      "w": 200,
+      "h": 32
+     }
+    ]
+   },
+   "estado": "visitaConfirmada",
+   "captura": "datos/tecnico/29-visitaConfirmada.png",
+   "paso_ruta": 58
+  },
+  {
+   "axe": {
+    "version": "4.10.3",
+    "violaciones": [
+     {
+      "id": "scrollable-region-focusable",
+      "impacto": "serious",
+      "ayuda": "Asegurar que la región de desplazamiento vertical ('scroll') tiene acceso por teclado",
+      "tags": [
+       "wcag2a",
+       "wcag211",
+       "wcag213"
+      ],
+      "nodos": 1,
+      "ejemplos": [
+       {
+        "selector": ".carrusel-montos",
+        "html": "<div class=\"carrusel-montos\">",
+        "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento debería tener contenido que admita el foco\n  El elemento debería admitir el foco"
+       }
+      ]
+     }
+    ],
+    "por_revisar": [
+     {
+      "id": "aria-valid-attr-value",
+      "impacto": "critical",
+      "ayuda": "Los atributos ARIA deben cumplir los requisitos para valores válidos",
+      "nodos": 1
+     },
+     {
+      "id": "color-contrast",
+      "impacto": "serious",
+      "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+      "nodos": 8
+     }
+    ]
+   },
+   "campos": [
+    {
+     "etiqueta": "¿Qué fue lo que más te gustó?",
+     "tipo": "textarea",
+     "inputmode": "",
+     "autocomplete": "",
+     "obligatorio": false,
+     "maxlength": 300,
+     "placeholder": "Cuéntanos...",
+     "describe": true
+    }
+   ],
+   "fuente_min_px": 12,
+   "textos_menores_12px": 0,
+   "textos": 28,
+   "desborde_horizontal": false,
+   "alto_documento": 839,
+   "alto_ventana": 839,
+   "h1": 1,
+   "main": 1,
+   "regiones_vivas": 0,
+   "texto": "¿Cómo fue tu experiencia al solicitar el préstamo?\n🤩 Excelente\n😀 Bien\n😐 Ni bien ni mal\n😕 Un poco mal\n😣 Muy mal\n¿Qué fue lo que más te gustó?\nEnviar\nCompletaste tu solicitud\n\nGracias por confiar en Banco Azteca\n\nSeguiremos en contacto vía WhatsApp\n\nRecuerda que tienes disponible:\n\n$23,700 en\nLínea blanca\n$25,000 en\nMotocicletas\n$28,000 en\nCelulares y cómputo\nVolver a empezar\nIr al sitio de Banco Azteca",
+   "titulo": "Solicitud Única · Banco Azteca · Línea Amarilla",
+   "red_fallida": [],
+   "interacciones": [],
+   "errores": [],
+   "foco": [
+    {
+     "nombre": "🤩 Excelente",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "😀 Bien",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "😐 Ni bien ni mal",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "😕 Un poco mal",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "😣 Muy mal",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Cuéntanos...",
+     "tag": "textarea",
+     "visible": true,
+     "dentro": true
+    },
+    {
+     "nombre": "Cerrar",
+     "tag": "button",
+     "visible": true,
+     "dentro": true
+    }
+   ],
+   "reflujo_320": {
+    "desborde": false,
+    "ancho_documento": 320,
+    "elementos_fuera": 0
+   },
+   "legibilidad": {
+    "indice": 84.0,
+    "nivel": "muy fácil",
+    "palabras": 63,
+    "frases": 20,
+    "escala": "INFLESZ"
+   },
+   "objetivos": {
+    "total": 8,
+    "menores_24": 0,
+    "menores_44": 1,
+    "ejemplos_24": [],
+    "ejemplos_44": [
+     {
+      "etiqueta": "Cerrar",
+      "w": 64,
+      "h": 28
+     }
+    ]
+   },
+   "estado": "completada",
+   "captura": "datos/tecnico/30-completada.png",
+   "paso_ruta": 59
+  }
+ ],
+ "ruta": [
+  {
+   "n": 1,
+   "accion": {
+    "nombre": "Inicia tu solicitud"
+   },
+   "estado": "producto",
+   "espera_ms": 326,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     24
+    ],
+    [
+     "click",
+     24
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 2,
+   "accion": {
+    "rol": "radio",
+    "nombre": "Efectivo"
+   },
+   "estado": "producto",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 3,
+   "accion": {
+    "nombre": "Continuar"
+   },
+   "estado": "simulador",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     40
+    ],
+    [
+     "pointerup",
+     40
+    ],
+    [
+     "click",
+     40
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 4,
+   "accion": {
+    "nombre": "¿En cuántas semanas quieres pagar?"
+   },
+   "estado": "simulador",
+   "espera_ms": 308,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 5,
+   "accion": {
+    "rol": "radio",
+    "nombre": "52 semanas"
+   },
+   "estado": "simulador",
+   "espera_ms": 309,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 6,
+   "accion": {
+    "nombre": "Continuar",
+    "ultimo": true
+   },
+   "estado": "simulador",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 7,
+   "accion": {
+    "nombre": "Confirmar"
+   },
+   "estado": "contacto",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 8,
+   "accion": {
+    "etiqueta": "¿Cómo prefieres que te llamemos?",
+    "llenar": "Prueba"
+   },
+   "estado": "contacto",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 9,
+   "accion": {
+    "etiqueta": "¿Cuál es tu número celular?",
+    "llenar": "5500000000"
+   },
+   "estado": "contacto",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [],
+   "errores": []
+  },
+  {
+   "n": 10,
+   "accion": {
+    "etiqueta": "¿Cuál es tu correo electrónico?",
+    "llenar": "prueba@example.com"
+   },
+   "estado": "contacto",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [],
+   "errores": []
+  },
+  {
+   "n": 11,
+   "accion": {
+    "nombre": "Continuar"
+   },
+   "estado": "otp",
+   "espera_ms": 914,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 12,
+   "accion": {
+    "selector": "input[autocomplete=one-time-code]",
+    "teclear_patron": "verificaci[oó]n[^0-9]*([0-9]{6})"
+   },
+   "estado": "otpVerificado",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 13,
+   "accion": {
+    "nombre": "¡Sigamos adelante!",
+    "timeout": 30000
+   },
+   "estado": "asesor",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 14,
+   "accion": {
+    "rol": "radio",
+    "nombre": "No",
+    "exacto": true
+   },
+   "estado": "asesor",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 15,
+   "accion": {
+    "nombre": "Confirmar"
+   },
+   "estado": "selfieIntro",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     24
+    ],
+    [
+     "click",
+     24
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 16,
+   "accion": {
+    "nombre": "Tomar foto"
+   },
+   "estado": "permisoCamara",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     24
+    ],
+    [
+     "click",
+     24
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 17,
+   "accion": {
+    "nombre": "Continuar"
+   },
+   "estado": "permisoUbicacion",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 18,
+   "accion": {
+    "nombre": "Permitir",
+    "exacto": true
+   },
+   "estado": "selfieEncuadre",
+   "espera_ms": 304,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 19,
+   "accion": {
+    "nombre": "Tomar selfie"
+   },
+   "estado": "selfieAprobada",
+   "espera_ms": 2723,
+   "vio_carga": true,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 20,
+   "accion": {
+    "nombre": "¡Sigamos adelante!",
+    "timeout": 30000
+   },
+   "estado": "ineIntro",
+   "espera_ms": 304,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 21,
+   "accion": {
+    "nombre": "Continuar"
+   },
+   "estado": "inePermisoUbicacion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 22,
+   "accion": {
+    "nombre": "Permitir",
+    "exacto": true
+   },
+   "estado": "incodeUbicacion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     40
+    ],
+    [
+     "keyup",
+     40
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 23,
+   "accion": {
+    "nombre": "Permitir",
+    "exacto": true
+   },
+   "estado": "incodeCamara",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 24,
+   "accion": {
+    "nombre": "Permitir",
+    "exacto": true
+   },
+   "estado": "ineFrente",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 25,
+   "accion": {
+    "nombre": "Escanear",
+    "exacto": true
+   },
+   "estado": "ineFrente",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     24
+    ],
+    [
+     "click",
+     24
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 26,
+   "accion": {
+    "nombre": "Escanear el reverso",
+    "timeout": 30000
+   },
+   "estado": "ineReverso",
+   "espera_ms": 1585,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 27,
+   "accion": {
+    "nombre": "¡Sigamos adelante!",
+    "timeout": 45000
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 6613,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     24
+    ],
+    [
+     "click",
+     24
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 28,
+   "accion": {
+    "etiqueta": "Primer apellido",
+    "llenar": "Ficticio"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 29,
+   "accion": {
+    "etiqueta": "Segundo apellido (opcional)",
+    "llenar": "Demo"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [],
+   "errores": []
+  },
+  {
+   "n": 30,
+   "accion": {
+    "nombre": "Selecciona una opción"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 31,
+   "accion": {
+    "rol": "radio",
+    "nombre": "Soltero(a)"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 32,
+   "accion": {
+    "nombre": "Continuar",
+    "ultimo": true
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 33,
+   "accion": {
+    "nombre": "Selecciona una opción"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 304,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 34,
+   "accion": {
+    "rol": "radio",
+    "nombre": "Empleado",
+    "exacto": true
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 35,
+   "accion": {
+    "nombre": "Continuar",
+    "ultimo": true
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 36,
+   "accion": {
+    "etiqueta": "Fecha de nacimiento",
+    "teclear": "15051990"
+   },
+   "estado": "datosPersonales",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 37,
+   "accion": {
+    "nombre": "Continuar",
+    "ultimo": true,
+    "timeout": 30000
+   },
+   "estado": "domicilioInicio",
+   "espera_ms": 1819,
+   "vio_carga": true,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 38,
+   "accion": {
+    "nombre": "Continuar",
+    "timeout": 30000
+   },
+   "estado": "direccion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 39,
+   "accion": {
+    "rol": "radio",
+    "nombre": "Sí",
+    "exacto": true
+   },
+   "estado": "direccion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 40,
+   "accion": {
+    "etiqueta": "Calle",
+    "llenar": "Calle Prueba"
+   },
+   "estado": "direccion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [],
+   "errores": []
+  },
+  {
+   "n": 41,
+   "accion": {
+    "etiqueta": "No. exterior",
+    "llenar": "100"
+   },
+   "estado": "direccion",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [],
+   "errores": []
+  },
+  {
+   "n": 42,
+   "accion": {
+    "etiqueta": "Código postal",
+    "teclear": "03100"
+   },
+   "estado": "direccion",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keypress",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 43,
+   "accion": {
+    "nombre": "Confirmar",
+    "timeout": 20000
+   },
+   "estado": "referencias",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 44,
+   "accion": {
+    "etiqueta": "Agrega las referencias para llegar",
+    "llenar": "Casa blanca con reja verde"
+   },
+   "estado": "referencias",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     48
+    ],
+    [
+     "keyup",
+     40
+    ],
+    [
+     "keydown",
+     40
+    ],
+    [
+     "keyup",
+     40
+    ],
+    [
+     "keydown",
+     40
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 45,
+   "accion": {
+    "nombre": "No aplica"
+   },
+   "estado": "referencias",
+   "espera_ms": 312,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 46,
+   "accion": {
+    "nombre": "No aplica"
+   },
+   "estado": "referencias",
+   "espera_ms": 318,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 47,
+   "accion": {
+    "nombre": "No aplica"
+   },
+   "estado": "referencias",
+   "espera_ms": 311,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 48,
+   "accion": {
+    "nombre": "No aplica"
+   },
+   "estado": "referencias",
+   "espera_ms": 309,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 49,
+   "accion": {
+    "nombre": "Confirmar"
+   },
+   "estado": "mapa",
+   "espera_ms": 334,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     32
+    ],
+    [
+     "pointerup",
+     32
+    ],
+    [
+     "click",
+     32
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 50,
+   "accion": {
+    "nombre": "Confirmar",
+    "timeout": 20000
+   },
+   "estado": "fachada",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 51,
+   "accion": {
+    "nombre": "Sí, es mi fachada"
+   },
+   "estado": "oferta",
+   "espera_ms": 3938,
+   "vio_carga": true,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 52,
+   "accion": {
+    "nombre": "Continuar",
+    "timeout": 60000
+   },
+   "estado": "agendaIntro",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 53,
+   "accion": {
+    "nombre": "Continuar"
+   },
+   "estado": "agendaDiaHora",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 54,
+   "accion": {
+    "rol": "radio"
+   },
+   "estado": "agendaDiaHora",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 55,
+   "accion": {
+    "rol": "radio",
+    "nombre": "a.m."
+   },
+   "estado": "agendaDiaHora",
+   "espera_ms": 307,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 56,
+   "accion": {
+    "nombre": "Confirmar"
+   },
+   "estado": "diaPago",
+   "espera_ms": 305,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     24
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 57,
+   "accion": {
+    "rol": "radio",
+    "nombre": "Viernes"
+   },
+   "estado": "diaPago",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     32
+    ],
+    [
+     "keydown",
+     32
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "keydown",
+     24
+    ],
+    [
+     "keyup",
+     24
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 58,
+   "accion": {
+    "nombre": "Confirmar"
+   },
+   "estado": "visitaConfirmada",
+   "espera_ms": 1518,
+   "vio_carga": true,
+   "error": null,
+   "interacciones": [
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  },
+  {
+   "n": 59,
+   "accion": {
+    "nombre": "Continuar",
+    "timeout": 30000
+   },
+   "estado": "completada",
+   "espera_ms": 306,
+   "vio_carga": false,
+   "error": null,
+   "interacciones": [
+    [
+     "keydown",
+     16
+    ],
+    [
+     "keyup",
+     16
+    ],
+    [
+     "pointerdown",
+     16
+    ],
+    [
+     "pointerup",
+     16
+    ],
+    [
+     "click",
+     16
+    ]
+   ],
+   "errores": []
+  }
+ ],
+ "retoma": [
+  {
+   "punto": "otp",
+   "tras_recargar": "contacto",
+   "tras_volver_a_entrar": "contacto",
+   "conserva": false
+  },
+  {
+   "punto": "datosPersonales",
+   "tras_recargar": "datosPersonales",
+   "tras_volver_a_entrar": "datosPersonales",
+   "conserva": true
+  },
+  {
+   "punto": "oferta",
+   "tras_recargar": "oferta",
+   "tras_volver_a_entrar": "oferta",
+   "conserva": true
+  }
+ ],
+ "resumen": {
+  "pantallas": 30,
+  "pasos_ruta": 59,
+  "toques_ruta": 49,
+  "campos_ruta": 10,
+  "espera_total_s": 35.1,
+  "espera_max_s": 6.6,
+  "pasos_con_carga": 4,
+  "reglas_wcag": [
+   {
+    "id": "color-contrast",
+    "ayuda": "Los elementos deben tener un contraste de colores suficiente",
+    "impacto": "serious",
+    "criterios": [
+     "1.4.3"
+    ],
+    "practica": false,
+    "pantallas": [
+     "otp",
+     "permisoCamara",
+     "permisoUbicacion",
+     "incodeUbicacion",
+     "incodeCamara",
+     "ineReverso",
+     "datosPersonales"
+    ],
+    "nodos": 14,
+    "ejemplo": [
+     {
+      "selector": ".reenviar",
+      "html": "<p class=\"reenviar inactivo\" aria-live=\"off\">Reenviar código en 56 seg.</p>",
+      "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento tiene un contraste de color insuficiente de 1.99 (color de primer plano: #acb1b4, color de fondo: #f5f6f6, tamaño de fuente: 12.0pt (16px), grosor de fuente: normal). Ratio de contraste esperado: 4.5:1"
+     }
+    ]
+   },
+   {
+    "id": "scrollable-region-focusable",
+    "ayuda": "Asegurar que la región de desplazamiento vertical ('scroll') tiene acceso por teclado",
+    "impacto": "serious",
+    "criterios": [
+     "2.1.1",
+     "2.1.3"
+    ],
+    "practica": false,
+    "pantallas": [
+     "bienvenida",
+     "completada"
+    ],
+    "nodos": 2,
+    "ejemplo": [
+     {
+      "selector": ".carrusel",
+      "html": "<div class=\"carrusel\" aria-roledescription=\"carrusel\" aria-label=\"Beneficios\">",
+      "resumen": "Corregir cualquiera de las siguientes incidencias:\n  El elemento debería tener contenido que admita el foco\n  El elemento debería admitir el foco"
+     }
+    ]
+   }
+  ],
+  "buenas_practicas": [],
+  "pantallas_sin_fallas": 21,
+  "por_impacto": {
+   "critical": 0,
+   "serious": 2,
+   "moderate": 0,
+   "minor": 0
+  },
+  "objetivos_24": 4,
+  "objetivos_44": 16,
+  "objetivos_total": 138,
+  "foco_visible": 128,
+  "foco_total": 129,
+  "reflujo_320_falla": [],
+  "desborde_412": [],
+  "fuente_min_px": 10,
+  "textos_menores_12": 16,
+  "campos": 20,
+  "campos_sin_etiqueta": 0,
+  "campos_sin_autocomplete": 9,
+  "legibilidad_media": 69.0,
+  "legibilidad_pantallas": 21,
+  "sin_h1": [
+   "permisoCamara",
+   "permisoUbicacion",
+   "selfieEncuadre",
+   "incodeUbicacion",
+   "incodeCamara",
+   "ineReverso"
+  ],
+  "sin_main": [],
+  "errores": [],
+  "red_fallida": [],
+  "inp_aprox_ms": 48,
+  "inp_estado": "bueno",
+  "lcp_ms": 2412,
+  "lcp_estado": "bueno",
+  "fcp_ms": 2412,
+  "fcp_estado": "mejorable",
+  "cls": 0,
+  "cls_estado": "bueno",
+  "ttfb_ms": 507,
+  "ttfb_estado": "bueno",
+  "tbt_ms": 20,
+  "tbt_estado": "bueno",
+  "peso_kb": 667,
+  "peticiones": 21,
+  "pwa": {
+   "https": true,
+   "manifiesto": true,
+   "nombre": "Solicitud Única · Banco Azteca",
+   "nombre_corto": "Solicitud Única",
+   "display": "standalone",
+   "start_url": "/app/",
+   "icono_192": true,
+   "icono_512": true,
+   "maskable": true,
+   "service_worker": true,
+   "sin_conexion": true,
+   "theme_color": "#10553d",
+   "lang": "es-MX",
+   "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  "retoma": [
+   {
+    "punto": "otp",
+    "tras_recargar": "contacto",
+    "tras_volver_a_entrar": "contacto",
+    "conserva": false
+   },
+   {
+    "punto": "datosPersonales",
+    "tras_recargar": "datosPersonales",
+    "tras_volver_a_entrar": "datosPersonales",
+    "conserva": true
+   },
+   {
+    "punto": "oferta",
+    "tras_recargar": "oferta",
+    "tras_volver_a_entrar": "oferta",
+    "conserva": true
+   }
+  ]
+ }
+}

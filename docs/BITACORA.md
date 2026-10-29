@@ -5,33 +5,32 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ---
 
-## Estado al 20 de octubre de 2026
+## Estado al 28 de octubre de 2026
 
-- **Funciona y está validado:** método `comprension` (réplica de recompra: 240 de 240 mediciones idénticas, 86% de
-  respuestas iguales al original, la misma variación que el original consigo mismo), bibliotecas `pwa` y `gic`,
-  auditoría con 3 evaluadores, guía de estilo de la PWA, conexión con el vault.
-- **Funciona, probado solo en material de prueba:** método `recorrido` y sus métricas de flujo, sobre
-  `tests/fixtures/flujo-web` (servido con `python3 -m http.server 8737`).
-- **Sin probar:** recorrido sobre un **prototipo de Figma real** (zonas activas por cursor del canvas) y sobre el
-  **ambiente dev** (puede pedir VPN).
+- **Funciona y está validado:** método `comprension` (réplica de recompra), método `recorrido` sobre un **prototipo de
+  Figma real** (OU 2.0, 22/10/2026) y sobre una **PWA real** (OU 2.0 MVP, 28/10/2026: 32 sesiones, celular emulado),
+  auditoría técnica sin tokens (`arnes tecnico`), auditoría experta con 3 evaluadores, guía de estilo de la PWA,
+  conexión con el vault, tablero de investigación con «Calidad técnica».
+- **Ver en vivo:** subtítulos y toque marcado en la ventana del celular + sala de observación local por perfil
+  (`arnes/observacion.py`); varios perfiles pueden correr en paralelo (una sesión del navegador por perfil).
+- **Sin probar:** el ambiente dev con VPN o login.
 - **Repositorios** privados en GitHub: `ShortwabeCustom/arnes-usuarios-sinteticos` y `ShortwabeCustom/vault-equipo`
   (submódulo en `vault/`), rama `main`.
-- **Estándares de UiX integrados** (naming, demográficos, semáforo de completitud, muestra, brief de protocolo):
-  `fuentes-equipo/uix/`, `arnes/estandares.py`.
-- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 18 pasan (también en GitHub Actions). Los dos estudios de ejemplo dan `arnes verificar`
-  → LISTO PARA ENTREGAR.
-- **Consumo acumulado** de la suscripción: antes del 22/10/2026 se registraba en dólares equivalentes (≈ US$ 9); desde
-  entonces, en tokens (`arnes estado <estudio>`).
+- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 29 pasan (también en GitHub Actions).
+- **Consumo** en tokens (`arnes estado <estudio>`). OU 2.0 prototipo ≈ 21 M; OU 2.0 MVP ≈ 37 M (≈ 3.7 M nuevos).
 
 ## Pendientes
 
-1. ~~Probar `recorrido` con un prototipo de Figma real~~ Hecho con OU 2.0 (22/10/2026). Siguiente: conectar en el
-   prototipo la rama «No» del asesor y los plazos, y repetir como segunda medición del benchmark.
+1. ~~Segunda medición del benchmark~~ Hecha sobre la PWA MVP (28/10/2026). Siguiente: tercera medición cuando el MVP
+   muestre el total a pagar y unifique los permisos de ubicación; recorrer también las ramas de error del MVP
+   (escenarios por URL: `otp=incorrecto`, `selfie=noReconocida`, `ine=vencida`, `evaluacion=scoreGuardian`…).
 2. Probar `recorrido` en el ambiente dev (`dev-bazsolicitudunica.com.mx`): pre-flight de acceso primero.
+   Revisión manual de accesibilidad con TalkBack (axe cubre solo una parte).
+3b. Tablero para estudios de comprensión (hoy solo recorrido).
 3. Las sesiones de `estudios/prueba-recorrido-web` se corrieron antes de corregir la medición de la espera del sistema
-   (pausas de 1.2 s); su tiempo estimado está inflado. Repetirlas si se quiere el ejemplo exacto (≈ US$ 1.80).
+   (pausas de 1.2 s); su tiempo estimado está inflado. Repetirlas si se quiere el ejemplo exacto (≈ 1 M de tokens).
 4. La réplica de recompra corrió solo la corrida 1 (32 de 96 sesiones). Correr 2 y 3 para tener estabilidad entre
-   corridas en el propio arnés (≈ US$ 4).
+   corridas en el propio arnés (≈ 3 M de tokens).
 5. Resolver con el equipo de UX writing las contradicciones internas de los manuales de la PWA (listadas en
    `fuentes-producto/pwa/reglas-estilo.yaml`, clave `contradicciones`).
 6. Acordar con UiX un código de metodología para investigación sintética (hoy el arnés usa `pdu` o `abtesting` y
@@ -40,6 +39,40 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
    cifras de muestra de encuestas y A/B son cualitativas.
 7. Ocupación AUSENTE en los 4 perfiles de la PWA: si alguna base la trae, agregarla a `personas/pwa/biblioteca.yaml`.
 8. Si se agrega una biblioteca nueva de personas, seguir `metodos/persona/METODO.md` y correr `arnes persona probar`.
+
+---
+
+## Sesión del 28 de octubre de 2026 (segunda medición: PWA MVP y herramienta de navegador)
+
+**Pedido:** segunda medición sobre `https://pwa.productdesign.mx/app/` (MVP sin reglas de backend) con todas las
+métricas posibles (heurísticas, accesibilidad…) y mejorar el módulo de Playwright para ver y «vivir» el recorrido.
+
+**Herramienta (sin cambiar el instrumento de Figma; `JS_PASO` de Figma quedó idéntico):**
+- `arnes/navegador.py`, web: celular emulado (`dispositivo.emular`, toques táctiles, deslizar con gesto CDP);
+  pantalla por `pantalla: {selector, atributo}` (`data-estado`); asentar por firma de la página, sin capturas cada
+  300 ms (adiós parpadeo); subtítulos y círculo del toque en una sombra cerrada que las capturas ocultan; acciones por
+  rol y texto (`mecanico`, `ruta_mecanica`, `teclear_patron` para códigos en pantalla); `limpiar_datos`; ventana de
+  observación de 3 s para avisos pasajeros (SMS simulado); pestañas nuevas (enlaces `_blank`) se miran, se cierran y se
+  le cuentan al perfil; campos transparentes y enlaces de dos líneas cuentan como tocables.
+- `arnes/observacion.py` + `observacion.html`: sala de observación local en vivo (pantalla, toque, pensamiento,
+  intención, acción, confianza y fricción por paso, espera, tokens contra lo estimado).
+- `arnes/tecnico.py` (`arnes tecnico`, 0 tokens): axe-core 4.10.3 en español (`arnes/vendor/axe`, MPL-2.0) por pantalla,
+  objetivos < 24/44 px, foco con Tab, reflujo 320 px, campos, legibilidad INFLESZ (Fernández-Huerta se descartó:
+  castiga frases cortas), errores, carga en frío y con caché en red lenta y CPU 4×, INP aproximado, PWA, retoma.
+- Tareas a mitad del flujo (`inicia_en` + ruta mecánica); una sesión del navegador por perfil (paralelo); fin revisado
+  tras el último paso; capítulos de video no fatales; `abrir` cierra una sesión vieja del mismo nombre.
+- Tablero: pestaña «Calidad técnica» y 4 KPIs técnicos en el Resumen. `arnes estilo` lee los textos de la ruta
+  mecánica; E02 y E08 sin falsos positivos. `arnes auditar` usa las pantallas de la ruta mecánica si existen.
+
+**Estudio `estudios/2026-10-28-ou2-pwa-mvp`:** 4 perfiles × 4 tareas × 2 corridas = 32 sesiones; auditoría técnica
+(30 pantallas), auditoría experta (244 observaciones con consenso), reporte LISTO PARA ENTREGAR, síntesis en el vault.
+- Hallazgo principal: el total a pagar no aparece ni en el simulador ni en el contrato (8 de 8 en T1 y en T4); Itzel
+  abandona T4 dos veces en el contrato «aproximado». La confianza cae ≈ 20 puntos en el tercer permiso de ubicación
+  (Incode, otro dominio). El código de verificación y la rama sin asesor ya están corregidos frente al prototipo.
+- Técnica: LCP 2.4 s, CLS 0, sin conexión ✓, retoma ✓ (salvo en el código), 21 de 30 pantallas sin fallas WCAG.
+- Fallas del instrumento, todas resueltas y documentadas en `datos/historial/`: SMS pasajero, «esperar», deslizar, campo
+  transparente, enlace de dos líneas, datos de prueba sin estado civil, límite de la suscripción, procesos colgados.
+- Consumo: ≈ 37.4 M tokens (panel 30.9 M, pilotos y repeticiones 5.6 M, auditoría 0.85 M), ≈ 3.7 M nuevos.
 
 ---
 

@@ -77,7 +77,7 @@ select { min-height: 36px; border-radius: 8px; border: 1px solid var(--borde-fue
 .kpi { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .kpi .e { font-size: 12px; color: var(--tinta-2); }
 .kpi .v { font-size: 26px; font-weight: 650; letter-spacing: -.01em; }
-.kpi .partes { display: flex; gap: 14px; } .kpi .partes div { display: flex; flex-direction: column; } .kpi .partes small { font-size: 11px; color: var(--tinta-2); }
+.kpi .partes { display: flex; flex-wrap: wrap; gap: 4px 14px; min-width: 0; } .kpi .partes div { display: flex; flex-direction: column; } .kpi .partes small { font-size: 11px; color: var(--tinta-2); }
 .kpi .partes b { font-size: 22px; }
 .kpi .c { font-size: 12px; color: var(--tinta-2); }
 .kpi .cmp { font-size: 12px; font-weight: 600; color: var(--atencion); }
@@ -242,3 +242,6 @@ section.bloque { margin-bottom: 40px; }
 }
 @media print { .barra, .pestanas, .cajon, .velo { display: none; } }
 @media (forced-colors: active) { .nodo .punto, .estado, .kpi { forced-color-adjust: auto; border: 1px solid CanvasText; } }
+
+.lista-check li.no{color:var(--tinta-2)}
+.lista-check li.no::before{content:none}

@@ -43,6 +43,47 @@ aprendidos en el primer prototipo real (OU 2.0, 22/10/2026):
 - El banner de cookies es HTML: se descarta con `{tipo: tocar_texto, texto: "No permitir cookies"}` en
   `preparacion`.
 
+### Productos web y PWA (primera vez: OU 2.0 MVP, 28/10/2026)
+
+- **Celular emulado:** `dispositivo: {emular: "Pixel 7"}` da viewport, toque, densidad y agente de usuario de Android.
+  Los toques son toques (`touchscreen.tap`), no clics de escritorio.
+- **Pantalla:** en una app de una sola página la URL no cambia. `pantalla: {selector: ".marco", atributo: "data-estado"}`
+  dice dónde declara la app su estado; con eso se miden embudo, fin (`fin: {pantallas: [...]}`) y retoma.
+- **Asentar sin parpadeo:** en web el arnés no compara capturas cada 300 ms: compara una firma de la página (pantalla,
+  texto sin cifras, valores de los campos, número de elementos) y espera a que no haya `aria-busy` ni animaciones
+  finitas en curso. Un spinner (animación infinita) no la detiene: es la espera, que se mide aparte.
+- **Ruta mecánica** (`ruta_mecanica` en `estudio.yaml`): las acciones de quien ya conoce el camino, por rol y texto
+  (`{nombre: "Continuar"}`, `{rol: radio, nombre: "No", exacto: true}`, `{etiqueta: "Calle", llenar: "…"}`,
+  `{selector: "…", teclear_patron: "…([0-9]{6})"}` para un código que la app muestra). La usan `arnes tecnico` y la
+  preparación de las tareas que no empiezan al inicio (`inicia_en: <pantalla>`): el arnés lleva la app hasta ahí y
+  no cuenta esos pasos en la tarea. Si no llega, se detiene antes de llamar al modelo.
+- **Cada sesión sin datos guardados** (`limpiar_datos: true`): borra almacenamiento local e IndexedDB, como alguien
+  que nunca abrió la app.
+- **Lo que ve el perfil en web:** además de la captura, la lista de elementos con su rol y estado (seleccionado,
+  desactivado, lo que dice un campo, el rango de un deslizador). «Escribir» reemplaza el contenido del campo; en un
+  deslizador, escribir un valor toca el punto de la barra que le corresponde. [SUPUESTO METODOLÓGICO]
+
+### Ver la sesión en vivo
+
+- **Ventana del navegador:** el producto en el celular emulado, con **subtítulos** arriba (quién es, qué piensa, qué
+  hace, confianza y fricción) y un **círculo** donde cae cada toque. Viven en una sombra cerrada: el perfil no los ve
+  (las capturas los ocultan) y no alteran el texto, las zonas ni la accesibilidad medida.
+- **Sala de observación** (`arnes/observacion.py`): con `visible: true` el arnés abre una página local
+  (`http://127.0.0.1:…`) que se actualiza cada segundo: la pantalla que ve el perfil con su toque, su pensamiento,
+  intención y acción, la respuesta de la app, la espera, confianza y fricción por paso, los tokens de la sesión
+  contra lo estimado y las sesiones ya terminadas. No sale de la máquina.
+- **Video por capítulos:** `datos/videos/<sesión>.webm`, un capítulo por paso.
+
+## Auditoría técnica (`arnes tecnico`, 0 tokens)
+
+Recorre la ruta mecánica en el celular emulado y mide, por pantalla: WCAG 2.0/2.1/2.2 A y AA con axe-core (en español;
+`arnes/vendor/axe`), objetivos < 24 y < 44 px, foco visible con Tab, reflujo a 320 px, campos (etiqueta,
+autocompletado, teclado), tamaño mínimo de texto, legibilidad INFLESZ y errores de consola y red. Una vez por
+estudio: carga en frío y con caché en red móvil lenta y CPU 4× (TTFB, FCP, LCP, CLS, TBT, peso), respuesta a toques
+(INP aproximado), PWA (manifiesto, íconos, service worker, sin conexión) y retoma en `tecnico.retoma_en`. Resultado en
+`datos/tecnico.json`; el tablero lo muestra en «Calidad técnica» y `arnes estilo` revisa también esos textos.
+axe encuentra una parte de los problemas: lo demás exige revisión manual.
+
 ## Cómo corre una sesión (modo autónomo)
 
 ```

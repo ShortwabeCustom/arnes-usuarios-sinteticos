@@ -1,0 +1,1443 @@
+{
+ "id": "T4-arturo-1",
+ "tarea": "T4",
+ "corrida": 1,
+ "integrante": "arturo",
+ "nombre": "Arturo Belmont",
+ "perfil": "D",
+ "segmento": "Boomer · 5.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T18:46:00",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "oferta",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p01.png",
+   "marcas": "datos/capturas/T4-arturo-1/p01-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Se ve clara y con letra grande en el título. Me dice cuánto me prestan, y eso se entiende bien.",
+    "que_miras_primero": "El letrero grande que dice que me pueden prestar hasta $22,000 en Efectivo.",
+    "interpretacion": "Ya me aprobaron, sujeto a aprobación según la letra chiquita de abajo. Me ofrecen efectivo, o llevarme algo como línea blanca o una moto. Para seguir hay que darle a Continuar.",
+    "pensamiento": "Yo ando buscando efectivo para un gasto de la casa, así que $22,000 en efectivo me sirve. La letra de abajo, la del asterisco, está muy chiquita y no la alcanzo a leer bien.",
+    "intencion": "Quiero quedarme con el efectivo, que es lo que vine a buscar, y seguir adelante con el botón de Continuar. Voy a ir con cuidado a ver qué datos me piden y para qué.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar para aceptar el efectivo. Las otras opciones, línea blanca y moto, no son lo que busco."
+    },
+    "marca": 5,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "No sé cuántos pasos faltan. Sé que ya me ofrecieron algo, pero no me dicen cuánto más me queda por hacer."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "D-01",
+     "D-03",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 17,
+     "y": 625,
+     "w": 312,
+     "h": 88,
+     "tipo": "button",
+     "etiqueta": "$23,700 en Línea blanca"
+    },
+    {
+     "x": 345,
+     "y": 625,
+     "w": 312,
+     "h": 88,
+     "tipo": "button",
+     "etiqueta": "$25,000 en Motocicletas"
+    },
+    {
+     "x": 17,
+     "y": 761,
+     "w": 378,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "¡Prueba, te podemos prestar hasta $22,000* en Efectivo!\n\n¡Tú decides cómo usarlo!\n\nO llévate:\n\n$23,700 en\nLínea blanca\n$25,000 en\nMotocicletas\n$28,000 en\nCelulares y cómputo\nContinuar\n\n*Sujeto a aprobación",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 30,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 785
+   },
+   "zona_tocada": {
+    "x": 17,
+    "y": 761,
+    "w": 378,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "validacion_disparada": [
+    "Prueba, agenda una visita para confirmar tu solicitud Es una visita segura ya que la realiza uno de nuestros asesores dentro de tu domicilio. ¡7 de cada 10 pers"
+   ],
+   "respuesta": "si",
+   "pantalla_despues": "agendaIntro"
+  },
+  {
+   "n": 2,
+   "pantalla": "agendaIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p02.png",
+   "marcas": "datos/capturas/T4-arturo-1/p02-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se entiende bastante bien, con letra grande y un dibujo de una casa, aunque la foto de la ayudante tapa un pedazo del título.",
+    "que_miras_primero": "El título que dice que agende una visita para confirmar mi solicitud.",
+    "interpretacion": "Me dicen que un asesor del banco va a ir a mi casa para confirmar la solicitud. No veo que me pidan escoger fecha todavía, solo darle a Continuar.",
+    "pensamiento": "Qué bueno que alguien viene en persona, eso me da más confianza que hacerlo todo en el teléfono. Pero no sé cuándo vienen ni qué tengo que tener listo.",
+    "intencion": "Quiero seguir, porque una visita en persona me conviene. Voy a ver si ahí me dejan escoger el día.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar para ver cómo se agenda la visita."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que lo que sigue es una visita, pero no sé cuántos pasos faltan ni qué documentos piden."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "D-04",
+     "D-08",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 14,
+     "y": 763,
+     "w": 384,
+     "h": 52,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Prueba, agenda una visita para confirmar tu solicitud\nEs una visita segura ya que la realiza uno de nuestros asesores dentro de tu domicilio.\n\n¡7 de cada 10 personas usan su préstamo el mismo día!\n\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [
+    "Prueba, agenda una visita para confirmar tu solicitud Es una visita segura ya que la realiza uno de nuestros asesores dentro de tu domicilio. ¡7 de cada 10 pers"
+   ],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 36,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 789
+   },
+   "zona_tocada": {
+    "x": 14,
+    "y": 763,
+    "w": 384,
+    "h": 52,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "agendaDiaHora"
+  },
+  {
+   "n": 3,
+   "pantalla": "agendaDiaHora",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p03.png",
+   "marcas": "datos/capturas/T4-arturo-1/p03-marcas.png",
+   "zonas": 9,
+   "perfil": {
+    "primera_impresion": "Se entiende fácil: son días para escoger, con números grandes, y hay una barra arriba que me dice que ya voy avanzado.",
+    "que_miras_primero": "Los días en círculos y el letrero verde que dice que escoja un día para ver los horarios.",
+    "interpretacion": "Tengo que escoger el día para que me visiten en mi casa, y luego me van a mostrar las horas. El botón de Confirmar está gris, todavía no sirve.",
+    "pensamiento": "Qué bueno que me dejan escoger a mí. Voy a agarrar uno de los primeros días, el viernes 30, para no esperar mucho.",
+    "intencion": "Quiero escoger un día cercano y ver qué horas me dan.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el viernes 30 de octubre para que me salgan los horarios."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "La barra de arriba va casi llena y dice 'Tu visita', así que parece que ya falta poco."
+    },
+    "confianza": 72,
+    "friccion": 1,
+    "reglas": [
+     "D-04",
+     "D-08",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 0,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "29 de octubre"
+    },
+    {
+     "x": 66,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "30 de octubre"
+    },
+    {
+     "x": 132,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "31 de octubre"
+    },
+    {
+     "x": 198,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "1 de noviembre"
+    },
+    {
+     "x": 264,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "2 de noviembre"
+    },
+    {
+     "x": 330,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "3 de noviembre"
+    },
+    {
+     "x": 396,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "4 de noviembre"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu visita\n¡Vamos a conocernos!\n\nTú eliges el día y la hora para la visita en tu domicilio.\n\nJue.\n29\nOct.\nVie.\n30\nOct.\nSáb.\n31\nOct.\nDom.\n1\nNov.\nLun.\n2\nNov.\nMar.\n3\nNov.\nMié.\n4\nNov.\n\nSelecciona un día para ver los horarios disponibles.\n\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 48,
+   "accion": {
+    "tipo": "tocar",
+    "x": 93,
+    "y": 295
+   },
+   "zona_tocada": {
+    "x": 66,
+    "y": 242,
+    "w": 54,
+    "h": 106,
+    "tipo": "button",
+    "etiqueta": "30 de octubre"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "agendaDiaHora"
+  },
+  {
+   "n": 4,
+   "pantalla": "agendaDiaHora",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p04.png",
+   "marcas": "datos/capturas/T4-arturo-1/p04-marcas.png",
+   "zonas": 16,
+   "perfil": {
+    "primera_impresion": "Está clara, el día que escogí quedó marcado y salieron las horas en botones grandes.",
+    "que_miras_primero": "El letrero que dice que seleccione la hora que prefiero y los botones de las horas.",
+    "interpretacion": "Ya escogí el viernes 30 y ahora toca escoger la hora de la visita. Después se activa Confirmar.",
+    "pensamiento": "Escojo la una de la tarde, ya con el día avanzado y yo en la casa. Me falta ver qué me piden después.",
+    "intencion": "Quiero escoger una hora en la tarde y luego darle a Confirmar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco las 01:00 p.m. para escoger la hora de la visita."
+    },
+    "marca": 11,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "La barra sigue casi llena, así que creo que ya casi acabo esta parte."
+    },
+    "confianza": 74,
+    "friccion": 1,
+    "reglas": [
+     "D-04",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 0,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "29 de octubre"
+    },
+    {
+     "x": 66,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "30 de octubre"
+    },
+    {
+     "x": 132,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "31 de octubre"
+    },
+    {
+     "x": 198,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "1 de noviembre"
+    },
+    {
+     "x": 264,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "2 de noviembre"
+    },
+    {
+     "x": 330,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "3 de noviembre"
+    },
+    {
+     "x": 396,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "4 de noviembre"
+    },
+    {
+     "x": 16,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "09:00 a.m."
+    },
+    {
+     "x": 148,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "12:00 p.m."
+    },
+    {
+     "x": 279,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "01:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "02:00 p.m."
+    },
+    {
+     "x": 148,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "03:00 p.m."
+    },
+    {
+     "x": 279,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "04:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 543,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "05:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu visita\n¡Vamos a conocernos!\n\nTú eliges el día y la hora para la visita en tu domicilio.\n\nJue.\n29\nOct.\nVie.\n30\nOct.\nSáb.\n31\nOct.\nDom.\n1\nNov.\nLun.\n2\nNov.\nMar.\n3\nNov.\nMié.\n4\nNov.\n\nSelecciona la hora que prefieras:\n\n09:00 a.m.\n12:00 p.m.\n01:00 p.m.\n02:00 p.m.\n03:00 p.m.\n04:00 p.m.\n05:00 p.m.\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 59,
+   "accion": {
+    "tipo": "tocar",
+    "x": 338,
+    "y": 453
+   },
+   "zona_tocada": {
+    "x": 279,
+    "y": 431,
+    "w": 117,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "01:00 p.m."
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "agendaDiaHora"
+  },
+  {
+   "n": 5,
+   "pantalla": "agendaDiaHora",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p05.png",
+   "marcas": "datos/capturas/T4-arturo-1/p05-marcas.png",
+   "zonas": 16,
+   "perfil": {
+    "primera_impresion": "Ya quedó todo marcado, el día y la hora, y el botón de Confirmar se puso verde.",
+    "que_miras_primero": "El botón verde de Confirmar abajo y la hora de la una marcada.",
+    "interpretacion": "Ya tengo escogido el viernes 30 de octubre a la 1:00 p.m. Para que quede agendada la visita tengo que darle a Confirmar.",
+    "pensamiento": "Todo está bien marcado, el día y la hora. Le doy Confirmar y a ver qué me dicen.",
+    "intencion": "Quiero confirmar la visita con el día y la hora que escogí.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Confirmar para dejar agendada la visita."
+    },
+    "marca": 16,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Ya escogí día y hora; con Confirmar creo que termina esta parte."
+    },
+    "confianza": 76,
+    "friccion": 1,
+    "reglas": [
+     "D-04",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 0,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "29 de octubre"
+    },
+    {
+     "x": 66,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "30 de octubre"
+    },
+    {
+     "x": 132,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "31 de octubre"
+    },
+    {
+     "x": 198,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "1 de noviembre"
+    },
+    {
+     "x": 264,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "2 de noviembre"
+    },
+    {
+     "x": 330,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "3 de noviembre"
+    },
+    {
+     "x": 396,
+     "y": 242,
+     "w": 54,
+     "h": 106,
+     "tipo": "button",
+     "etiqueta": "4 de noviembre"
+    },
+    {
+     "x": 16,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "09:00 a.m."
+    },
+    {
+     "x": 148,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "12:00 p.m."
+    },
+    {
+     "x": 279,
+     "y": 431,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "01:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "02:00 p.m."
+    },
+    {
+     "x": 148,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "03:00 p.m."
+    },
+    {
+     "x": 279,
+     "y": 487,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "04:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 543,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "05:00 p.m."
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu visita\n¡Vamos a conocernos!\n\nTú eliges el día y la hora para la visita en tu domicilio.\n\nJue.\n29\nOct.\nVie.\n30\nOct.\nSáb.\n31\nOct.\nDom.\n1\nNov.\nLun.\n2\nNov.\nMar.\n3\nNov.\nMié.\n4\nNov.\n\nSelecciona la hora que prefieras:\n\n09:00 a.m.\n12:00 p.m.\n01:00 p.m.\n02:00 p.m.\n03:00 p.m.\n04:00 p.m.\n05:00 p.m.\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 59,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "diaPago"
+  },
+  {
+   "n": 6,
+   "pantalla": "diaPago",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p06.png",
+   "marcas": "datos/capturas/T4-arturo-1/p06-marcas.png",
+   "zonas": 11,
+   "perfil": {
+    "primera_impresion": "Se lee bien el título, pero no esperaba que ahora me hablaran de pagos semanales; no me habían dicho que serían cada semana.",
+    "que_miras_primero": "El letrero grande que dice que tengo el control de mis pagos semanales.",
+    "interpretacion": "Me piden escoger un día de la semana para pagar. Abajo dice que al continuar acepto el contrato, pero que firmar no significa que el préstamo ya esté dado, y que si no me aprueban no hay cargos.",
+    "pensamiento": "Escojo un día y ya. Lo del contrato lo veo en letra chiquita; está muy pequeña y no la alcanzo a leer bien, pero dicen que si no me aprueban no me cobran nada.",
+    "intencion": "Quiero escoger un día para el pago, y antes de confirmar quisiera ver de qué trata el contrato.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Viernes como día de pago, para poder activar el botón de Confirmar. Todavía no acepto nada hasta ver qué sigue."
+    },
+    "marca": 7,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya no veo la barra de avance y no sé cuánto me falta después de esto."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "D-02",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Lunes"
+    },
+    {
+     "x": 148,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Martes"
+    },
+    {
+     "x": 279,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Miércoles"
+    },
+    {
+     "x": 16,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Jueves"
+    },
+    {
+     "x": 148,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Viernes"
+    },
+    {
+     "x": 279,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sábado"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Domingo"
+    },
+    {
+     "x": 209,
+     "y": 628,
+     "w": 129,
+     "h": 15,
+     "tipo": "button",
+     "etiqueta": "Contrato de préstamo."
+    },
+    {
+     "x": 16,
+     "y": 667,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "¡Prueba, tú tienes el control de tus pagos semanales!\n\nElige tu día de pago ideal, lo guardaremos para más adelante.\n\nLunes\nMartes\nMiércoles\nJueves\nViernes\nSábado\nDomingo\n\nAl continuar, aceptas el Contrato de préstamo.\n\nConfirmar\n\nLa aceptación y firma de los documentos no significa que el préstamo esté activo y solo serán válidos en caso de ser aprobado. Si el préstamo no se aprueba, no habrá ningún efecto legal ni se realizarán cargos.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 73,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 396
+   },
+   "zona_tocada": {
+    "x": 148,
+    "y": 374,
+    "w": 117,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Viernes"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "diaPago"
+  },
+  {
+   "n": 7,
+   "pantalla": "diaPago",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p07.png",
+   "marcas": "datos/capturas/T4-arturo-1/p07-marcas.png",
+   "zonas": 11,
+   "perfil": {
+    "primera_impresion": "Quedó marcado el viernes y el botón de Confirmar ya se puso verde, pero la letra de abajo sigue muy chiquita.",
+    "que_miras_primero": "El viernes marcado y, abajo, el letrero de que al continuar acepto el contrato.",
+    "interpretacion": "Si le doy Confirmar, acepto el contrato de préstamo. Abajo dicen que firmar no significa que ya esté el préstamo y que si no me aprueban no hay cargos, pero esa letra casi no se alcanza a leer.",
+    "pensamiento": "Antes de aceptar algo quiero saber qué dice ese contrato, no quiero que haya trampas. Si lo puedo abrir y leer, lo abro.",
+    "intencion": "Quiero abrir el contrato y leerlo antes de darle Confirmar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco 'Contrato de préstamo' para ver qué voy a aceptar antes de confirmar."
+    },
+    "marca": 10,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Parece que Confirmar es de los últimos pasos, pero no me dicen cuántos faltan."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "D-02",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Lunes"
+    },
+    {
+     "x": 148,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Martes"
+    },
+    {
+     "x": 279,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Miércoles"
+    },
+    {
+     "x": 16,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Jueves"
+    },
+    {
+     "x": 148,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Viernes"
+    },
+    {
+     "x": 279,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sábado"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Domingo"
+    },
+    {
+     "x": 209,
+     "y": 628,
+     "w": 129,
+     "h": 15,
+     "tipo": "button",
+     "etiqueta": "Contrato de préstamo."
+    },
+    {
+     "x": 16,
+     "y": 667,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "¡Prueba, tú tienes el control de tus pagos semanales!\n\nElige tu día de pago ideal, lo guardaremos para más adelante.\n\nLunes\nMartes\nMiércoles\nJueves\nViernes\nSábado\nDomingo\n\nAl continuar, aceptas el Contrato de préstamo.\n\nConfirmar\n\nLa aceptación y firma de los documentos no significa que el préstamo esté activo y solo serán válidos en caso de ser aprobado. Si el préstamo no se aprueba, no habrá ningún efecto legal ni se realizarán cargos.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 73,
+   "accion": {
+    "tipo": "tocar",
+    "x": 273,
+    "y": 636
+   },
+   "zona_tocada": {
+    "x": 209,
+    "y": 628,
+    "w": 129,
+    "h": 15,
+    "tipo": "button",
+    "etiqueta": "Contrato de préstamo."
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "diaPago"
+  },
+  {
+   "n": 8,
+   "pantalla": "diaPago",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p08.png",
+   "marcas": "datos/capturas/T4-arturo-1/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Por fin un resumen claro y con letra de buen tamaño, con los números a la vista.",
+    "que_miras_primero": "El préstamo de $22,000, las 52 semanas y el pago semanal aproximado de $728.",
+    "interpretacion": "Es un resumen del contrato: me prestan $22,000 en efectivo, pago cada viernes unos $728 durante 52 semanas. El contrato completo me lo dará el asesor en mi casa para firmarlo, y hasta entonces no se activa nada.",
+    "pensamiento": "Son $728 cada semana por un año, y eso sumado es bastante más de lo que me prestan. No sé cuánto es el costo total, pero dicen que el asesor me trae la tabla y el costo anual. Eso se lo preguntaré en persona.",
+    "intencion": "Ya lo leí; quiero cerrar esto y seguir. Como no firmo nada hasta que venga el asesor, puedo confirmar y preguntarle todo en persona.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Entendido para cerrar el resumen y volver a la pantalla anterior."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que lo que falta es confirmar y que el asesor venga a firmar, pero no sé si hay más pasos antes."
+    },
+    "confianza": 70,
+    "friccion": 1,
+    "reglas": [
+     "D-08",
+     "D-04",
+     "D-07"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 359,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Entendido"
+    }
+   ],
+   "texto_pantalla": "¡Prueba, tú tienes el control de tus pagos semanales!\n\nElige tu día de pago ideal, lo guardaremos para más adelante.\n\nLunes\nMartes\nMiércoles\nJueves\nViernes\nSábado\nDomingo\n\nAl continuar, aceptas el Contrato de préstamo.\n\nConfirmar\n\nLa aceptación y firma de los documentos no significa que el préstamo esté activo y solo serán válidos en caso de ser aprobado. Si el préstamo no se aprueba, no habrá ningún efecto legal ni se realizarán cargos.\n\nContrato de préstamo\nPréstamo:\n$22,000 en Efectivo\nPlazo:\n52 semanas\nPago semanal aproximado:\n$728\nDía de pago:\nViernes\nFolio:\nSU-261029-K5369R\n\nEste es un resumen para que revises las condiciones antes de la visita. Tu asesor te entregará el contrato completo para firmarlo en tu domicilio, junto con la tabla de amortización y el costo anual total.\n\nEl préstamo queda sujeto a aprobación y solo se activa cuando firmas con tu asesor.\n\nEntendido",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 145,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Entendido"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "diaPago"
+  },
+  {
+   "n": 9,
+   "pantalla": "diaPago",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p09.png",
+   "marcas": "datos/capturas/T4-arturo-1/p09-marcas.png",
+   "zonas": 11,
+   "perfil": {
+    "primera_impresion": "Volví a la pantalla de los días de pago, con el viernes todavía marcado y el botón de Confirmar listo.",
+    "que_miras_primero": "El botón verde de Confirmar y el viernes marcado.",
+    "interpretacion": "Ya revisé el resumen del contrato. Si confirmo, queda agendada mi visita y aceptó el resumen, pero según el contrato nada se activa hasta que firme con el asesor.",
+    "pensamiento": "Como no firmo hasta que venga el asesor, y ahí me explican todo, puedo confirmar. Lo del costo total se lo pregunto a él.",
+    "intencion": "Quiero darle Confirmar para dejar lista mi solicitud y ver cómo termina.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Confirmar para terminar la solicitud hasta donde la app me lleve."
+    },
+    "marca": 11,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Creo que Confirmar es de los últimos pasos, pero no me han dicho si falta algo más."
+    },
+    "confianza": 70,
+    "friccion": 1,
+    "reglas": [
+     "D-04",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Lunes"
+    },
+    {
+     "x": 148,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Martes"
+    },
+    {
+     "x": 279,
+     "y": 318,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Miércoles"
+    },
+    {
+     "x": 16,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Jueves"
+    },
+    {
+     "x": 148,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Viernes"
+    },
+    {
+     "x": 279,
+     "y": 374,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sábado"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 117,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Domingo"
+    },
+    {
+     "x": 209,
+     "y": 628,
+     "w": 129,
+     "h": 15,
+     "tipo": "button",
+     "etiqueta": "Contrato de préstamo."
+    },
+    {
+     "x": 16,
+     "y": 667,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "¡Prueba, tú tienes el control de tus pagos semanales!\n\nElige tu día de pago ideal, lo guardaremos para más adelante.\n\nLunes\nMartes\nMiércoles\nJueves\nViernes\nSábado\nDomingo\n\nAl continuar, aceptas el Contrato de préstamo.\n\nConfirmar\n\nLa aceptación y firma de los documentos no significa que el préstamo esté activo y solo serán válidos en caso de ser aprobado. Si el préstamo no se aprueba, no habrá ningún efecto legal ni se realizarán cargos.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 73,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 691
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 667,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 1814,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "validacion_disparada": [
+    "Tu asesor te visitará el 30 de octubre entre 01:00 p.m. y 02:00 p.m. Te contactaremos por WhatsApp para confirmar tu visita y avisarte cuando tu asesor vaya en "
+   ],
+   "respuesta": "si",
+   "pantalla_despues": "visitaConfirmada",
+   "indicador_carga": true
+  },
+  {
+   "n": 10,
+   "pantalla": "visitaConfirmada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p10.png",
+   "marcas": "datos/capturas/T4-arturo-1/p10-marcas.png",
+   "zonas": 4,
+   "perfil": {
+    "primera_impresion": "Esta es la que más me gusta: dice claro cuándo viene el asesor y qué tengo que tener listo.",
+    "que_miras_primero": "El título que dice que el asesor me visitará el 30 de octubre entre la 1:00 y las 2:00 p.m.",
+    "interpretacion": "Mi solicitud quedó agendada. Me van a avisar por WhatsApp, la visita dura hasta 30 minutos y debo tener mi identificación oficial y estar en casa.",
+    "pensamiento": "Qué bueno, ya sé qué sigue y que va a ser una persona la que me explique todo. Solo me preocupa si me llega bien el mensaje de WhatsApp, pero eso no lo puedo saber.",
+    "intencion": "Ya está agendado, no necesito el calendario. Quiero darle Continuar para ver si falta algo más.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar para ver si la app me lleva a algo más o si ahí termina."
+    },
+    "marca": 4,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Sé que ya quedó agendada la visita y lo que sigue es esperar al asesor con mi identificación."
+    },
+    "confianza": 82,
+    "friccion": 0,
+    "reglas": [
+     "D-04",
+     "D-08",
+     "D-07"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-sonnet-5-5,claude-haiku-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 106,
+     "y": 430,
+     "w": 200,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Agregar a mi calendario"
+    },
+    {
+     "x": 14,
+     "y": 763,
+     "w": 384,
+     "h": 52,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu asesor te visitará el 30 de octubre entre 01:00 p.m. y 02:00 p.m.\nTe contactaremos por WhatsApp para confirmar tu visita y avisarte cuando tu asesor vaya en camino.\nLa visita tendrá una duración de hasta 30 minutos.\nTen a la mano tu identificación oficial y asegúrate de estar en casa.\nAgregar a mi calendario\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [
+    "Tu asesor te visitará el 30 de octubre entre 01:00 p.m. y 02:00 p.m. Te contactaremos por WhatsApp para confirmar tu visita y avisarte cuando tu asesor vaya en "
+   ],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 57,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 789
+   },
+   "zona_tocada": {
+    "x": 14,
+    "y": 763,
+    "w": 384,
+    "h": 52,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "completada"
+  },
+  {
+   "n": 11,
+   "pantalla": "completada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T4-arturo-1/p11.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 1.8523,
+ "tokens": {
+  "entrada": 70,
+  "cache_escritura": 71514,
+  "cache_lectura": 347309,
+  "salida": 8979
+ },
+ "resultado": "exito",
+ "cierre": {
+  "pregunta": "Terminaste tu solicitud. ¿Qué crees que pasa ahora con tu préstamo y cuándo tendrás tu dinero? ¿Qué harías después?",
+  "respuesta": "Creo que mi préstamo todavía no está dado. Lo que hice fue dejar agendada la visita: el viernes 30 de octubre, entre la 1 y las 2 de la tarde, va a venir un asesor a mi casa. Ahí me trae el contrato completo y la tabla de pagos, y hasta que firme con él se activa el préstamo, si me aprueban. El dinero no sé exactamente cuándo lo tendría; supongo que después de esa visita, pero la pantalla no me lo dice. Después de esto, estaría en mi casa ese día con mi identificación oficial, esperando el mensaje de WhatsApp. Le preguntaría al asesor cuánto voy a pagar en total y cuándo me dan el dinero. Si no me llega el aviso, iría a una sucursal a preguntar.",
+  "por_que": "Porque en la pantalla del contrato decía que el préstamo queda sujeto a aprobación y que solo se activa cuando firme con el asesor. Me gustó que viniera una persona a explicarme, porque así no me quedo trabado solo. Lo que me falta saber es el costo total y la fecha en que me darían el dinero; eso no lo vi en la app. Al final sólo vi una encuesta con letra chiquita, y no sé si esa encuesta cuenta como un paso más del trámite.",
+  "confianza": 65
+ },
+ "ces": {
+  "ces": 5,
+  "texto": "Me resultó bastante fácil porque los pasos eran claros y al final venía una persona a explicarme, pero la letra chiquita de abajo casi no se lee y nunca me dijeron cuándo me dan el dinero ni cuánto pago en total."
+ },
+ "video": "datos/videos/T4-arturo-1.webm",
+ "fin": "2026-10-28T18:49:49"
+}

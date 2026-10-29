@@ -235,6 +235,15 @@ arnes auditar <estudio>                           # 3 evaluaciones expertas inde
 Cada sesión arranca con contexto limpio: un perfil no sabe qué hicieron los demás. Si algo se corta, el mismo comando
 retoma donde quedó, sin repetir lo hecho.
 
+**Para verlo en vivo** (recorrido con `visible: true`): se abren la ventana del celular, con subtítulos y el toque
+marcado, y la **sala de observación** en tu navegador, con lo que ve, piensa y decide cada perfil paso a paso, y los
+tokens que lleva. En un producto web o PWA corre también, antes de las sesiones y sin gastar tokens:
+
+```bash
+arnes tecnico <estudio>            # accesibilidad WCAG (axe), objetivos táctiles, teclado, reflujo, legibilidad,
+                                   # carga en red lenta, PWA, retoma y ruta mínima; necesita `ruta_mecanica`
+```
+
 `arnes auditar` pone a 3 evaluadores independientes a revisar cada pantalla (UX writing en comprensión, heurísticas
 de Nielsen en recorrido, más los criterios de la guía del producto). Lo que marcan 2 o más es consenso.
 
@@ -410,7 +419,8 @@ arnes recorrido <estudio> <integrante> --tarea T1  # recorrido, piloto
 
 # correr y analizar
 arnes sesiones <estudio>                           # comprensión
-arnes recorrido <estudio> todos [--corridas N]     # recorrido
+arnes recorrido <estudio> todos [--corridas N]     # recorrido (abre la sala de observación)
+arnes tecnico <estudio>                            # web/PWA: accesibilidad, rendimiento, PWA; 0 tokens
 arnes auditar <estudio>
 arnes analizar <estudio>
 arnes estado <estudio>                             # qué fases se hicieron y cuánto costó

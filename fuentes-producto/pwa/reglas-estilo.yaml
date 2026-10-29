@@ -47,7 +47,10 @@ reglas:
     patron: '\b\w{2,}(ito|ita|itos|itas|cito|cita)\b'
     excepciones: [guardadito, favorito, favorita, favoritos, favoritas, bonito, bonita, requisito, requisitos, depósito, depósitos,
                   propósito, éxito, tránsito, crédito, créditos, infinito, gratuito, gratuita, cita, visita, visitas, maldito,
-                  circuito, apetito, distrito, delito, escrito, escrita, inscrito, perito, mito, rito, grito, hito, chiquito, chiquita]
+                  circuito, apetito, distrito, delito, escrito, escrita, inscrito, perito, mito, rito, grito, hito, chiquito, chiquita,
+                  débito, débitos, dígito, dígitos, límite, necesita, necesitas, evita, evitas, habilita, habilitas, solicita,
+                  solicitas, facilita, invita, deposita, acredita, limita, permita, admita, emita, edita, editas, visita,
+                  repita, transmita, imita, gratuitas, gratuitos, explícita, explícito, implícita, ilimitado, ilimitada]
     nivel: aviso
     fuente: "Fundamentos «Uso de diminutivos: no los usamos» (ojo: Voz y Tono 13.3 permite «lanita extra»)"
   - id: E09

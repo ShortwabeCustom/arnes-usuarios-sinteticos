@@ -93,9 +93,12 @@ ESQUEMA_CIERRE = {"type": "object", "additionalProperties": False, "required": [
 RETOMA_TEXTO = r"contin[uú]a tu solicitud|retoma|sigue (con|donde)|guardamos tu (avance|progreso)|vuelve a donde"
 
 
-def _pantalla_id(material: str, url: str) -> str:
+def _pantalla_id(material: str, url: str, estado: str | None = None) -> str:
+    """Figma: node-id. Web: el estado que declara la app (`pantalla` en estudio.yaml) o, si no hay, la URL."""
     if material == "figma":
         return node_id(url) or "?"
+    if estado:
+        return estado
     from urllib.parse import urlparse
 
     u = urlparse(url)
@@ -105,7 +108,8 @@ def _pantalla_id(material: str, url: str) -> str:
 def _fin_alcanzado(fin: dict | None, info: dict, material: str) -> bool:
     if not fin:
         return False
-    if fin.get("node_ids") and _pantalla_id(material, info["url"]) in {str(x).replace(":", "-") for x in fin["node_ids"]}:
+    ids = list(fin.get("node_ids") or []) + list(fin.get("pantallas") or [])
+    if ids and _pantalla_id(material, info["url"], info.get("estado")) in {str(x).replace(":", "-") for x in ids}:
         return True
     if fin.get("url_contiene") and fin["url_contiene"] in info["url"]:
         return True
@@ -117,8 +121,19 @@ def _fin_alcanzado(fin: dict | None, info: dict, material: str) -> bool:
 def _lista_zonas(material: str, zonas: list[dict]) -> str:
     if material == "figma":
         return ""
-    lin = [f"{i}. {z['tipo']}{' (se puede escribir)' if z['editable'] else ''}: «{z['etiqueta'] or 'sin texto'}»"
-           for i, z in enumerate(zonas, 1)]
+    lin = []
+    for i, z in enumerate(zonas, 1):
+        extra = []
+        if z.get("tipo_input") == "range":
+            extra.append(f"deslizador de {z.get('min')} a {z.get('max')}, ahora en {z.get('valor')}: para moverlo usa «escribir» "
+                         "con el valor que quieres")
+        elif z["editable"]:
+            extra.append("se puede escribir" + (f"; ahora dice «{z['valor']}»" if z.get("valor") else ""))
+        if z.get("marcado"):
+            extra.append("seleccionado")
+        if z.get("desactivado"):
+            extra.append("desactivado")
+        lin.append(f"{i}. {z.get('rol') or z['tipo']}{' (' + '; '.join(extra) + ')' if extra else ''}: «{z['etiqueta'] or 'sin texto'}»")
     return "Elementos marcados:\n" + "\n".join(lin) + "\n\n"
 
 
@@ -130,6 +145,23 @@ def _overlay(it, tarea, paso, p) -> str:
             f'<div style="margin-top:8px;padding:8px;border-radius:8px;background:rgba(255,255,255,.08)">«{esc(p.get("pensamiento", ""))}»</div>'
             f'<div style="margin-top:6px;font-size:12px">→ {esc(p.get("accion", {}).get("opcion", ""))} · confianza {p.get("confianza", "")} · fricción {p.get("friccion", "")}</div>'
             '<div style="margin-top:6px;font-size:10px;opacity:.6">Ruta y toques reales. Pensamiento y ritmo simulados.</div>')
+
+
+def _subtitulo(it, tarea, paso, p) -> str:
+    """Subtítulos de la ventana en vivo (web). La persona usuaria del arnés los ve; el perfil no: las capturas los ocultan."""
+    esc = lambda s: str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")  # noqa: E731
+    acc = (p.get("accion") or {}).get("opcion", "")
+    return ('<div style="font-size:10px;letter-spacing:.08em;color:#C7F284">SESIÓN SINTÉTICA · SIMULACIÓN</div>'
+            f'<b>{esc(it.nombre)}</b> · {esc(tarea["id"])} · paso {paso}<br>«{esc(p.get("pensamiento", ""))}»'
+            f'<div style="opacity:.8;font-size:12px">→ {esc(acc)} · confianza {p.get("confianza", "")} · fricción {p.get("friccion", "")}</div>')
+
+
+def _ruta_hasta(c: dict, tarea: dict) -> dict | None:
+    """Acción mecánica que lleva la app al punto de partida de la tarea: los pasos de `ruta_mecanica` hasta ver la
+    pantalla `inicia_en`. La ejecuta el arnés, no el perfil, y no cuenta en las métricas de la tarea."""
+    if not tarea.get("inicia_en"):
+        return None
+    return {"tipo": "mecanico", "pasos": c.get("ruta_mecanica") or [], "hasta": tarea["inicia_en"]}
 
 
 def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int | None = None) -> dict:
@@ -144,7 +176,7 @@ def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int
     for t in tareas:
         pasos = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
         n = len(ids) * ncorr
-        est = consumo.estimar_recorrido(pasos, n)
+        est = consumo.estimar_recorrido(pasos, n, captura=_captura_estimada(c))
         tot = consumo.sumar(tot, est)
         filas.append((t["id"], n, pasos, "pasos_esperados" if t.get("pasos_esperados") else "max_pasos (techo)", est))
     print(f"{len(ids)} perfil(es) × {ncorr} corrida(s):")
@@ -154,21 +186,42 @@ def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int
     return tot
 
 
-def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = False, corridas: int | None = None) -> list[dict]:
+def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = False, corridas: int | None = None,
+           sala=None) -> list[dict]:
     c = e.cfg
     panel = {it.id: it for it in e.panel()}
-    if integrante == "todos":
-        out = []
-        for iid in panel:
-            out += sesion(e, iid, tarea, guion, corridas)
-        return out
+    propia = sala is None and c.get("visible", True) and c.get("observacion", True)
+    if propia:
+        # sala de observación: página local con lo que piensa y decide cada perfil (arnes/observacion.py)
+        from ..observacion import Sala
+
+        sala = Sala(e.dir, titulo=(c.get("titulo") or e.dir.name) + ("" if integrante == "todos" else f" · {integrante}"))
+        print(f"Sala de observación: {sala.abrir()}")
+    try:
+        if integrante == "todos":
+            out = []
+            for iid in panel:
+                out += sesion(e, iid, tarea, guion, corridas, sala=sala)
+            return out
+        return _sesiones(e, panel, integrante, tarea, guion, corridas, sala)
+    finally:
+        if propia:
+            sala.aviso("La corrida terminó. Esta página deja de actualizarse.")
+            time.sleep(1.5)
+            sala.cerrar()
+
+
+def _sesiones(e, panel, integrante, tarea, guion, corridas, sala) -> list[dict]:
+    c = e.cfg
     ncorr = corridas or c.get("corridas", 1)
     it = panel[integrante]
     tareas = [t for t in c["tareas"] if not tarea or t["id"] == tarea]
     material = c["material"]
     disp = c.get("dispositivo", {})
-    nav = Navegador(c.get("sesion_navegador", "arnes"), material, e.ruta("datos", "navegador"),
-                    (disp.get("ancho", 360), disp.get("alto", 800)) if material == "web" else None)
+    # una sesión del navegador por perfil: varios perfiles pueden correr a la vez en procesos separados
+    nav = Navegador(f'{c.get("sesion_navegador", "arnes")}-{integrante}', material, e.ruta("datos", "navegador"),
+                    (disp.get("ancho", 360), disp.get("alto", 800)) if material == "web" else None,
+                    emular=disp.get("emular"), pantalla=c.get("pantalla"))
     modelo = c.get("modelo", "sonnet")
     sistema = it.system_prompt(c.get("reglas_sesion", REGLAS_SESION))
     datos = "\n".join(f"- {k}: {v}" for k, v in (c.get("datos_prueba") or {}).items()) or "(ninguno)"
@@ -183,13 +236,29 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             continue
         cap = e.ruta("datos", "capturas", sid)
         cap.mkdir(parents=True, exist_ok=True)
+        url = t.get("url") or c["url"]
         if not abierto:
-            nav.abrir(t.get("url") or c["url"], visible=c.get("visible", True))
+            nav.abrir(url, visible=c.get("visible", True))
             abierto = True
             for a in c.get("preparacion", []):  # p. ej. descartar cookies antes de medir nada
                 nav.paso(cap / "prep.png", a)
+        elif material == "web" and c.get("limpiar_datos", False):
+            pass                                  # se limpia abajo, junto con la ruta mecánica
         elif c.get("reiniciar_entre_tareas", True) or n > 1:
-            nav.paso(cap / "prep.png", {"tipo": "ir", "url": t.get("url") or c["url"]})
+            nav.paso(cap / "prep.png", {"tipo": "ir", "url": url})
+        if material == "web" and c.get("limpiar_datos", False):
+            # cada sesión empieza como alguien que nunca abrió la app: sin almacenamiento local ni solicitud guardada
+            nav.paso(cap / "prep.png", {"tipo": "limpiar_datos", "url": url})
+        ruta = _ruta_hasta(c, t)
+        if ruta:
+            if sala:
+                sala.aviso(f"Preparando {t['id']}: el arnés lleva la app hasta «{t['inicia_en']}» (no cuenta en las métricas).")
+            pre = nav.paso(cap / "prep.png", ruta, max_ms=60000)
+            if _pantalla_id(material, pre["url"], pre.get("estado")) != t["inicia_en"]:
+                raise RuntimeError(f"La ruta mecánica no llegó a «{t['inicia_en']}» (quedó en «{pre.get('estado')}»; "
+                                   f"{pre.get('error_accion') or 'sin error'}). Revisa `ruta_mecanica` antes de gastar tokens.")
+            if sala:
+                sala.aviso("")
         if material == "figma":
             # esperar a que el prototipo termine de cargar y dibujarse (al abrir y al recargar entre tareas; con
             # hide-ui=1 tarda más): hasta ver zonas tocables, máximo ≈ 30 s
@@ -203,11 +272,15 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
         reg = dict(id=sid, tarea=t["id"], corrida=n, integrante=it.id, nombre=it.nombre, perfil=it.perfil, segmento=it.segmento,
                    ocean=it.ocean, modo="guion" if guion else "autonomo", material=material, modelo=modelo,
                    inicio=time.strftime("%Y-%m-%dT%H:%M:%S"), pasos=[], costo_usd=0.0, tokens=consumo.sumar())
+        if sala:
+            pasos_est = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
+            sala.iniciar_sesion(reg, t, t.get("max_pasos", c.get("max_pasos", 25)),
+                                consumo.total(consumo.estimar_recorrido(pasos_est, 1, captura=_captura_estimada(c))))
         try:
             if guion:
                 _guion(e, nav, it, t, cap, reg)
             else:
-                _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo)
+                _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo, sala)
         finally:
             if c.get("video", True):
                 nav.video(False)
@@ -220,6 +293,8 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
             with open(e.ruta("datos", "registro-sesiones.jsonl"), "a", encoding="utf-8") as f:
                 f.write(json.dumps(dict(id=sid, ok=True, costo_usd=reg["costo_usd"], tokens=reg["tokens"], resultado=reg.get("resultado"),
                                         t=reg["fin"]), ensure_ascii=False) + "\n")
+        if sala:
+            sala.cerrar_sesion(reg, consumo.total(reg["tokens"]))
         print(f"{sid}: {reg.get('resultado')} en {len(reg['pasos'])} pasos · {consumo.texto(reg['tokens'])}")
         registros.append(reg)
     if abierto and c.get("cerrar_al_terminar", True):
@@ -228,8 +303,16 @@ def sesion(e: Estudio, integrante: str, tarea: str | None = None, guion: bool = 
     return registros
 
 
-def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo):
-    _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo)
+def _captura_estimada(c: dict) -> tuple[int, int]:
+    """Tamaño de la captura que verá el perfil, para estimar tokens: el teléfono recortado (Figma) o el viewport."""
+    d = c.get("dispositivo") or {}
+    if c.get("material") == "web":
+        return (d.get("ancho", 412), d.get("alto", 839))
+    return consumo.CAPTURA_TELEFONO
+
+
+def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
+    _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala)
     ses = reg.pop("_ses", None)
     if ses and reg.get("resultado") not in ("fallo_max_pasos", "fallo_instrumento"):
         r = motor.llamar(motor.Llamada(f"{reg['id']}-ces", "La sesión terminó. Pensando en todo lo que hiciste para esta tarea, "
@@ -258,7 +341,7 @@ def _senales(info) -> dict:
                 palabras=len(t.split()) if t else None)
 
 
-def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
+def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
     c = e.cfg
     material = c["material"]
     actual = cap / "siguiente.png"  # captura de la pantalla que el perfil va a ver en el próximo paso
@@ -273,7 +356,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         zonas = info.get("zonas", [])
         marcar(png, zonas, marcas)
         recorte = _recortar(material, info, png, marcas)
-        pid = _pantalla_id(material, info["url"])
+        pid = _pantalla_id(material, info["url"], info.get("estado"))
         if _fin_alcanzado(t.get("fin"), info, material):
             reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
             reg["pasos"].append(dict(n=n, pantalla=pid, url=info["url"], captura=str(png.relative_to(e.dir)), fin=True))
@@ -310,6 +393,8 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
                   f"celular. En `{marcas.name}` está la misma pantalla con números sobre los {len(zonas)} elementos que responden "
                   f"al toque. Mira primero la limpia; usa la marcada solo para indicar dónde actúas.\n\n"
                   f"{_lista_zonas(material, zonas)}{FORMATO}\n\n{PLANTILLA}")
+        if sala:
+            sala.pantalla(n, pid, png, len(zonas))
         r = motor.llamar(motor.Llamada(f"{reg['id']}-p{n}", prompt, sistema, ESQUEMA, ["Read"], [png, marcas],
                                        reanudar=ses, modelo=modelo, persistir=True))
         ses = r.session_id
@@ -331,6 +416,11 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
             return
         accion, desc = _traducir(op, p, zonas, info, material)
         paso["accion"] = accion
+        if sala:
+            sala.decision(n, p, [accion["x"], accion["y"]] if accion and "x" in accion and accion["tipo"] != "desplazar" else None,
+                          consumo.total(reg["tokens"]), recorte)
+        if c.get("video", True) and material == "web":
+            nav.capitulo(f"{it.nombre} · {t['id']} · paso {n} · {op}")
         m = p.get("marca", 0)
         if accion and accion["tipo"] in ("tocar", "escribir") and 0 < m <= len(zonas):
             paso["zona_tocada"] = {k: zonas[m - 1][k] for k in ("x", "y", "w", "h", "tipo", "etiqueta")}
@@ -340,10 +430,19 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
             reg["pasos"].append(paso)
             quietos += 1
             info = nav.paso(actual)
+            if sala:
+                sala.resultado_paso(n, "fuera_de_marcas", None, pid)
         else:
             antes = info
-            info = nav.paso(actual, accion, overlay=_overlay(it, t, n, p) if c.get("video", True) else None)
-            cambio = info["cambio_url"] or info.get("cambio_telefono", info["cambio_imagen"])
+            sub = (_overlay if material == "figma" else _subtitulo)(it, t, n, p) if c.get("video", True) else None
+            info = nav.paso(actual, accion, overlay=sub)
+            if material == "web":
+                cambio = bool(info["cambio_url"] or info.get("cambio_estado") or info.get("cambio_firma") or info.get("cambio_imagen")
+                              or info.get("pestana_nueva"))
+                if info.get("error_accion"):
+                    paso["error_accion"] = info["error_accion"]
+            else:
+                cambio = info["cambio_url"] or info.get("cambio_telefono", info["cambio_imagen"])
             paso["espera_ms"] = info.get("espera_ms")
             if info.get("reintento"):
                 paso["reintento"] = True   # el primer toque no respondió y se repitió una vez [SUPUESTO METODOLÓGICO]
@@ -352,11 +451,26 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
             if nuevos:
                 paso["validacion_disparada"] = nuevos
             paso["respuesta"] = "si" if cambio else "no"
-            paso["pantalla_despues"] = _pantalla_id(material, info["url"])
+            paso["pantalla_despues"] = _pantalla_id(material, info["url"], info.get("estado"))
+            if info.get("vio_carga"):
+                paso["indicador_carga"] = True
+            if sala:
+                sala.resultado_paso(n, paso["respuesta"], info.get("espera_ms"), paso["pantalla_despues"])
             if accion["tipo"] in ("tocar", "escribir") and not cambio:
                 sin_resp += 1
             quietos = 0 if cambio else quietos + 1
             aviso = f"Resultado del paso anterior: {desc}: {'la pantalla cambió' if cambio else 'no pasó nada visible'}.\n\n"
+            if info.get("pestana_nueva"):
+                pn = info["pestana_nueva"]
+                paso["pestana_nueva"] = pn
+                aviso = (f"Resultado del paso anterior: {desc}: se abrió una pestaña nueva del navegador con «{pn.get('titulo') or 'sin título'}» "
+                         f"({pn.get('url')}). La miraste, la cerraste y volviste a la app, que sigue donde estabas.\n\n")
+            if info.get("avisos_nuevos"):
+                paso["avisos"] = info["avisos_nuevos"]
+            if info.get("avisos_idos"):
+                # el aviso apareció y se fue mientras el perfil «pensaba»: una persona lo habría visto [SUPUESTO METODOLÓGICO]
+                aviso += ("Mientras tanto apareció un aviso en tu pantalla que ya se quitó: "
+                          + " · ".join(f"«{x}»" for x in info["avisos_idos"]) + "\n\n")
             reg["pasos"].append(paso)
             if retoma and n == retoma.get("tras_paso") and "retoma" not in reg:
                 info, nota = _interrumpir(e, nav, actual, t, info, texto_inicio, retoma, reg, material)
@@ -364,6 +478,12 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo):
         if quietos >= c.get("max_sin_cambio", 4):
             reg["resultado"] = "atascado"
             return
+    if _fin_alcanzado(t.get("fin"), info, material):
+        # el último paso permitido llevó al fin: llegó, aunque ya no haya otro paso para verlo
+        reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
+        reg["pasos"].append(dict(n=len(reg["pasos"]) + 1, pantalla=_pantalla_id(material, info["url"], info.get("estado")),
+                                 url=info["url"], fin=True))
+        return
     reg["resultado"] = "fallo_max_pasos"
 
 
@@ -372,12 +492,14 @@ def _interrumpir(e, nav, actual, t, info, texto_inicio, retoma, reg, material):
     navegador); «reabrir» = vuelve a entrar por la URL de inicio. Compara lo que ve después con lo que veía antes."""
     import re
 
-    antes_pid, antes_txt = _pantalla_id(material, info["url"]), info.get("texto")
+    antes_pid, antes_txt = _pantalla_id(material, info["url"], info.get("estado")), info.get("texto")
     modo = retoma.get("modo", "recargar")
     accion = {"tipo": "recargar"} if modo == "recargar" else {"tipo": "ir", "url": t.get("url") or e.cfg["url"]}
     nuevo = nav.paso(actual, accion)
-    pid, txt = _pantalla_id(material, nuevo["url"]), nuevo.get("texto")
-    if material == "web" and antes_txt is not None:
+    pid, txt = _pantalla_id(material, nuevo["url"], nuevo.get("estado")), nuevo.get("texto")
+    if material == "web" and nuevo.get("estado") and info.get("estado"):
+        conserva, reinicia = pid == antes_pid, pid == e.cfg.get("pantalla_inicio")
+    elif material == "web" and antes_txt is not None:
         conserva = txt == antes_txt
         reinicia = txt == texto_inicio
     else:
@@ -400,10 +522,22 @@ def _traducir(op, p, zonas, info, material):
     m = p.get("marca", 0)
     z = zonas[m - 1] if 0 < m <= len(zonas) else None
     marco = info.get("marco") or {"x": 0, "y": 0, "w": 360, "h": 800}
-    centro = (marco["x"] + marco["w"] // 2, marco["y"] + marco["h"] // 2)
+    # deslizar donde va el pulgar (62 % de la altura): al centro caía en el encabezado de las hojas inferiores
+    centro = (marco["x"] + marco["w"] // 2, marco["y"] + round(marco["h"] * (0.62 if material == "web" else 0.5)))
     if op in ("tocar", "escribir"):
         if not z:
             return None, f"quisiste {op} algo que no está entre los elementos que responden ({p.get('intencion', '')})"
+        if op == "escribir" and material == "web" and z.get("tipo_input") == "range":
+            # deslizador: se toca el punto de la barra que corresponde al valor pedido
+            import re
+
+            num = re.sub(r"[^0-9.]", "", p.get("escribir", "") or "")
+            if num:
+                lo, hi = float(z.get("min", 0)), float(z.get("max", 100))
+                f = min(1.0, max(0.0, (float(num) - lo) / ((hi - lo) or 1)))
+                margen = min(12, z["w"] // 10)
+                return (dict(tipo="tocar", x=round(z["x"] + margen + f * (z["w"] - 2 * margen)), y=z["tocar"][1]),
+                        f"moviste el deslizador {m} hacia {p.get('escribir')}")
         if op == "escribir" and material == "web" and z["editable"]:
             return dict(tipo="escribir", x=z["tocar"][0], y=z["tocar"][1], texto=p.get("escribir", "")), f"escribiste en el {m}"
         return dict(tipo="tocar", x=z["tocar"][0], y=z["tocar"][1]), f"tocaste el {m}"
@@ -413,7 +547,7 @@ def _traducir(op, p, zonas, info, material):
         if material == "web":
             return dict(tipo="volver"), "volviste atrás con el navegador"
         return None, "este prototipo no tiene botón de atrás del navegador; si hay uno en la pantalla, tócalo"
-    return dict(tipo="esperar"), "esperaste"
+    return dict(tipo="esperar", ms=5000), "esperaste unos segundos"
 
 
 def _guion(e, nav, it, t, cap, reg):

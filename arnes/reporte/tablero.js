@@ -239,6 +239,7 @@
     h += seccion('Fricción del recorrido', '¿Dónde ocurre?', `<div class="tarjeta">${mapaRecorrido(true)}</div>`);
     h += `<div class="dos">${seccion('Qué cambiar primero', '', `<div class="tarjeta"><ol class="lista-num">${top.map((x) => `<li>${esc(x.recomendacion)} <span class="cap">(${esc(x.id)})</span></li>`).join('')}</ol></div>`)}
       ${seccion('Lo que ya funciona', '', `<div class="tarjeta"><ul class="lista-check">${funciona.map((p) => `<li><span>${esc(p)}</span></li>`).join('')}</ul></div>`)}</div>`;
+    if (D.tecnico) h += seccion('Calidad técnica', 'Accesibilidad y rendimiento medidos en el producto · sin perfiles', kpisTecnicos(D.tecnico, true));
     if (est.modo === 'ejecutivo') h += seccion('Qué validar con personas', 'Las sesiones sintéticas no cuentan como muestra', `<div class="rejilla-c">${D.validar.map(validacion).join('')}</div>`);
     else if (D.resumen.length) h += seccion('En resumen', '', `<div class="tarjeta"><ul class="lista-num" style="list-style:disc">${D.resumen.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`);
     return h;
@@ -329,8 +330,93 @@
           <p style="margin-top:12px"><a href="${esc(D.detalle)}">Reporte completo en formato documento →</a><br><span class="cap">Auditoría completa, guía de estilo, accesibilidad, demográficos, capturas y trazabilidad.</span></p></div>`)}</div>`;
   }
 
+  // ---------------------------------------------------------------- calidad técnica (arnes tecnico)
+  const IMP = { critical: ['✕', 'Crítico', 'critico'], serious: ['✕', 'Grave', 'critico'], moderate: ['▲', 'Moderado', 'atencion'], minor: ['○', 'Menor', 'contexto'] };
+  const UMB = { bueno: 'positivo', mejorable: 'atencion', malo: 'critico' };
+  const ms = (v) => (v == null ? 'Sin dato' : v >= 1000 ? `${r1(v / 1000)} s` : `${Math.round(v)} ms`);
+
+  function kpisTecnicos(T, corto = false) {
+    const s = T.resumen, pwa = s.pwa || {}, k = [];
+    const wc = s.reglas_wcag.length, graves = (s.por_impacto.critical || 0) + (s.por_impacto.serious || 0);
+    k.push({ etiqueta: 'Pantallas sin fallas WCAG automáticas', valor: `${s.pantallas_sin_fallas}/${s.pantallas}`, contexto: `${wc} reglas fallan · ${graves} críticas o graves`,
+      estado: graves ? 'critico' : wc ? 'atencion' : 'positivo' });
+    k.push({ etiqueta: 'Objetivos táctiles < 24 px (WCAG 2.5.8)', valor: String(s.objetivos_24), contexto: `${s.objetivos_44} bajo 44 px de ${s.objetivos_total} en todas las pantallas`,
+      estado: s.objetivos_24 ? 'atencion' : 'positivo' });
+    k.push({ etiqueta: 'Foco visible con teclado (2.4.7)', valor: s.foco_total ? `${s.foco_visible}/${s.foco_total}` : 'Sin dato', contexto: 'elementos que muestran el foco al recorrer con Tab',
+      estado: !s.foco_total ? 'contexto' : s.foco_visible / s.foco_total >= 0.9 ? 'positivo' : s.foco_visible / s.foco_total >= 0.6 ? 'atencion' : 'critico' });
+    k.push({ etiqueta: 'Carga: LCP en red móvil lenta', valor: ms(s.lcp_ms), contexto: `bueno ≤ 2.5 s · CLS ${s.cls ?? '—'} · ${s.peso_kb} KB`, estado: UMB[s.lcp_estado] || 'contexto' });
+    if (!corto) {
+      k.push({ etiqueta: 'Respuesta a toques (INP aprox.)', valor: ms(s.inp_aprox_ms), contexto: 'máximo de la ruta mecánica · bueno ≤ 200 ms', estado: UMB[s.inp_estado] || 'contexto' });
+      k.push({ etiqueta: 'Legibilidad (INFLESZ)', valor: s.legibilidad_media == null ? 'Sin dato' : r1(s.legibilidad_media),
+        contexto: `media de ${s.legibilidad_pantallas} pantallas con texto suficiente · 55–65 normal · ≥ 65 fácil`, derivado: true, estado: s.legibilidad_media == null ? 'contexto' : s.legibilidad_media >= 65 ? 'positivo' : s.legibilidad_media >= 55 ? 'atencion' : 'critico' });
+      k.push({ etiqueta: 'Funciona sin conexión', valor: pwa.sin_conexion ? 'Sí' : 'No', contexto: `service worker ${pwa.service_worker ? 'activo' : 'ausente'} · manifiesto ${pwa.manifiesto ? 'sí' : 'no'}`,
+        estado: pwa.sin_conexion ? 'positivo' : 'atencion' });
+      const ret = T.retoma || [], ok = ret.filter((r) => r.conserva).length;
+      k.push({ etiqueta: 'Retoma al volver a entrar', valor: ret.length ? `${ok}/${ret.length}` : 'Sin dato', contexto: 'puntos donde la app regresa a la misma pantalla',
+        estado: !ret.length ? 'contexto' : ok === ret.length ? 'positivo' : ok ? 'atencion' : 'critico' });
+    }
+    return `<div class="kpis">${k.map((x) => kpi({ ...x, id: '' })).join('')}</div>`;
+  }
+
+  function vistaTecnica() {
+    const T = D.tecnico; if (!T) return '<p class="vacio-msg">Sin auditoría técnica (arnes tecnico).</p>';
+    const s = T.resumen;
+    const reglas = s.reglas_wcag.concat(s.buenas_practicas);
+    const tReglas = reglas.length ? `<div class="desliza"><table class="tabla"><thead><tr><th>Regla</th><th>WCAG</th><th>Impacto</th><th>Pantallas</th><th>Elementos</th></tr></thead>
+      <tbody>${reglas.map((r) => { const i = IMP[r.impacto] || ['○', r.impacto || '—', 'contexto']; return `<tr><td><b>${esc(r.ayuda)}</b><br><span class="cap">${esc(r.id)}${r.ejemplo && r.ejemplo[0] ? ' · ' + esc(r.ejemplo[0].html) : ''}</span></td>
+        <td>${r.practica ? '<span class="cap">Buena práctica</span>' : esc(r.criterios.join(', ') || '—')}</td><td><span class="estado ${i[2]}">${i[0]} ${esc(i[1])}</span></td>
+        <td class="n" title="${esc(r.pantallas.join(', '))}">${r.pantallas.length}</td><td class="n">${r.nodos}</td></tr>`; }).join('')}</tbody></table></div>`
+      : '<p>Ninguna regla automática falla.</p>';
+    const tPant = `<div class="desliza"><table class="tabla"><thead><tr><th>Etapa · pantalla</th><th>Reglas WCAG</th><th>Críticas o graves</th><th>Objetivos &lt; 24 · &lt; 44 px</th><th>Foco visible</th><th>Reflujo 320 px</th><th>Legibilidad</th></tr></thead>
+      <tbody>${T.pantallas.map((p) => `<tr class="clic" tabindex="0" data-pantalla-t="${esc(p.id)}"><td><b>${esc(p.nombre)}</b><br><span class="cap">${esc(p.etapa)} · ${esc(p.id)}</span></td>
+        <td class="n">${p.wcag}</td><td class="n">${p.criticas ? `<span class="estado critico">✕ ${p.criticas}</span>` : '0'}</td><td class="n">${p.obj24} · ${p.obj44}</td>
+        <td class="n">${esc(p.foco)}</td><td>${p.reflujo ? '<span class="estado positivo">✓ Sí</span>' : '<span class="estado critico">✕ Se corta</span>'}</td>
+        <td class="n">${p.legibilidad ? `${r1(p.legibilidad.indice)} · ${esc(p.legibilidad.nivel)}` : '<span class="vacio-msg">Poco texto</span>'}</td></tr>`).join('')}</tbody></table></div>
+      <p class="cap">Clic o Enter abre la captura y las reglas de esa pantalla.</p>`;
+    const c = T.carga || {}, f = c.fria || {}, t = c.con_cache || {};
+    const filaCarga = (n, k, u) => `<tr><th scope="row">${n}</th><td class="n">${k === 'cls' ? (f[k] ?? '—') : ms(f[k])}</td><td class="n">${k === 'cls' ? (t[k] ?? '—') : ms(t[k])}</td><td>${u ? `<span class="cap">bueno ≤ ${k === 'cls' ? u[0] : ms(u[0])} · malo &gt; ${k === 'cls' ? u[1] : ms(u[1])}</span>` : ''}</td></tr>`;
+    const U = T.umbrales || {};
+    const tCarga = `<div class="desliza"><table class="tabla"><thead><tr><th>Métrica</th><th>Primera visita</th><th>Con caché</th><th>Umbral (Core Web Vitals)</th></tr></thead><tbody>
+      ${filaCarga('Primer byte (TTFB)', 'ttfb_ms', U.ttfb_ms)}${filaCarga('Primer contenido (FCP)', 'fcp_ms', U.fcp_ms)}${filaCarga('Contenido principal (LCP)', 'lcp_ms', U.lcp_ms)}
+      ${filaCarga('Movimiento de la página (CLS)', 'cls', U.cls)}${filaCarga('Bloqueo del hilo (TBT)', 'tbt_ms', U.tbt_ms)}${filaCarga('Carga completa', 'load_ms')}
+      <tr><th scope="row">Peso transferido</th><td class="n">${Math.round((f.bytes || 0) / 1024)} KB</td><td class="n">${Math.round((t.bytes || 0) / 1024)} KB</td><td></td></tr>
+      <tr><th scope="row">Peticiones</th><td class="n">${f.peticiones ?? '—'}</td><td class="n">${t.peticiones ?? '—'}</td><td></td></tr></tbody></table></div>
+      <p class="cap">${esc(T.dispositivo || '')} · red ${esc(T.condiciones?.red_carga || '')} · CPU ${esc(T.condiciones?.cpu_carga || '')} ${etq('Evidencia')}. Una medición de laboratorio: no sustituye datos de campo de personas reales.</p>`;
+    const p = s.pwa || {};
+    const si = (v, txt) => `<li class="${v ? '' : 'no'}"><span>${v ? '' : '✕ No: '}${esc(txt)}</span></li>`;
+    const pwa = `<ul class="lista-check">${si(p.https, 'Sirve por HTTPS')}${si(p.manifiesto, `Manifiesto${p.nombre ? ': «' + p.nombre + '»' : ''}${p.display ? ' · ' + p.display : ''}`)}
+      ${si(p.icono_192 && p.icono_512, 'Íconos de 192 y 512 px')}${si(p.maskable, 'Ícono adaptable (maskable)')}${si(p.service_worker, 'Service worker registrado')}
+      ${si(p.sin_conexion, 'Vuelve a abrir sin conexión')}${si(p.theme_color, 'Color de tema' + (p.theme_color ? ' ' + p.theme_color : ''))}${si(p.lang, 'Idioma declarado' + (p.lang ? ': ' + p.lang : ''))}</ul>`;
+    const ret = (T.retoma || []).length ? `<div class="desliza"><table class="tabla"><thead><tr><th>Dónde sale</th><th>Al recargar</th><th>Al volver a entrar</th></tr></thead><tbody>${T.retoma.map((r) => `<tr><td><b>${esc(r.punto_nombre)}</b></td>
+      <td>${esc(r.recargar_nombre || r.error || '—')}</td><td>${r.conserva ? '<span class="estado positivo">✓</span> ' : '<span class="estado atencion">▲</span> '}${esc(r.volver_nombre || '—')}</td></tr>`).join('')}</tbody></table></div>` : '<p class="vacio-msg">Sin dato</p>';
+    const ruta = `<div class="kpis" style="grid-template-columns:repeat(4,minmax(0,1fr));margin:0">
+      <div class="kpi contexto"><div class="e">Acciones mínimas</div><div class="v num">${s.pasos_ruta}</div><div class="c">${s.toques_ruta} toques · ${s.campos_ruta} campos</div></div>
+      <div class="kpi contexto"><div class="e">Espera del sistema</div><div class="v num">${r1(s.espera_total_s)} s</div><div class="c">${s.pasos_con_carga} pasos con indicador de carga · máx. ${r1(s.espera_max_s)} s</div></div>
+      <div class="kpi ${s.errores.length ? 'atencion' : 'positivo'}"><div class="e">Errores de JavaScript o consola</div><div class="v num">${s.errores.length}</div><div class="c">${s.red_fallida.length} peticiones fallidas</div></div>
+      <div class="kpi ${s.campos_sin_etiqueta ? 'atencion' : 'positivo'}"><div class="e">Campos sin etiqueta</div><div class="v num">${s.campos_sin_etiqueta}/${s.campos}</div><div class="c">${s.campos_sin_autocomplete} sin autocompletar</div></div></div>
+      ${s.errores.length ? `<details><summary class="cap">Ver errores</summary><ul class="cap">${s.errores.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}
+      <p class="cap">Ruta de quien ya conoce el camino (ruta mecánica): la línea base de esfuerzo contra la que se comparan las sesiones sintéticas.</p>`;
+    return seccion('Calidad técnica', `Medido en el producto con un celular emulado · ${esc(T.fecha || '')} · 0 tokens`, kpisTecnicos(T)
+      + `<p class="cap">${etq('Evidencia')} axe-core ${esc(T.version_axe || '')} revisa automáticamente WCAG 2.0, 2.1 y 2.2 (A y AA). Encuentra una parte de los problemas de accesibilidad: lo que no puede juzgar (orden de lectura, sentido de los textos, lectores de pantalla) hay que revisarlo a mano.</p>`)
+      + seccion('Accesibilidad por regla', '¿Qué falla y dónde?', `<div class="tarjeta">${tReglas}</div>`)
+      + seccion('Pantalla por pantalla', '¿En qué parte del recorrido se concentra?', `<div class="tarjeta">${tPant}</div>`)
+      + `<div class="dos">${seccion('Rendimiento de carga', '¿Qué tan rápido abre en un celular con red lenta?', `<div class="tarjeta">${tCarga}</div>`)}
+        ${seccion('PWA y retoma', '¿Se instala, abre sin red y recuerda el avance?', `<div class="tarjeta">${pwa}<h3 class="cap" style="margin-top:12px">Retoma</h3>${ret}</div>`)}</div>`
+      + seccion('Ruta mínima', '¿Cuánto pide el flujo a quien ya lo conoce?', `<div class="tarjeta">${ruta}</div>`);
+  }
+
+  function cajonPantallaTecnica(id) {
+    const p = (D.tecnico?.pantallas || []).find((x) => x.id === id); if (!p) return;
+    abrirCajon(`<span class="cap">${etq('Evidencia')} ${esc(p.etapa)}</span><h2>${esc(p.nombre)}</h2>
+      ${p.captura ? `<div class="galeria"><figure><img src="${p.captura}" alt="Captura de ${esc(p.nombre)}"><figcaption>${esc(p.id)}</figcaption></figure></div>` : ''}
+      <p class="num">${p.wcag} reglas WCAG · ${p.practicas} de buenas prácticas · ${p.por_revisar} por revisar a mano · objetivos &lt; 24 px: ${p.obj24} de ${p.objetivos} · foco visible ${esc(p.foco)} · ${p.campos} campos · fuente mínima ${p.fuente_min ?? '—'} px</p>
+      <h3>Reglas que fallan</h3>${p.reglas.length ? p.reglas.map((r) => { const i = IMP[r.impacto] || ['○', r.impacto, 'contexto']; return `<p><span class="estado ${i[2]}">${i[0]} ${esc(i[1])}</span> ${esc(r.ayuda)} <span class="cap">(${esc(r.id)} · ${r.nodos} elementos)</span></p>`; }).join('') : '<p>Ninguna.</p>'}`,
+    `Calidad técnica de ${p.nombre}`);
+  }
+
   const VISTAS = [['resumen', 'Resumen', vistaResumen], ['recorrido', 'Recorrido', vistaRecorrido], ['hallazgos', 'Hallazgos', vistaHallazgos],
-    ['perfiles', 'Perfiles', vistaPerfiles], ['evidencia', 'Evidencia', vistaEvidencia], ['metodologia', 'Metodología', vistaMetodologia]];
+    ['perfiles', 'Perfiles', vistaPerfiles]].concat(D.tecnico ? [['tecnica', 'Calidad técnica', vistaTecnica]] : [])
+    .concat([['evidencia', 'Evidencia', vistaEvidencia], ['metodologia', 'Metodología', vistaMetodologia]]);
 
   // ---------------------------------------------------------------- página
   function pintar() {
@@ -428,13 +514,14 @@
 
   // ---------------------------------------------------------------- eventos
   document.addEventListener('click', (ev) => {
-    const t = ev.target.closest('[data-modo],[data-pestana],[data-hallazgo],[data-sesion],[data-serie],[data-perfil],[data-accion],[data-cerrar]');
+    const t = ev.target.closest('[data-modo],[data-pestana],[data-hallazgo],[data-sesion],[data-serie],[data-perfil],[data-accion],[data-cerrar],[data-pantalla-t]');
     if (!t) return;
     if (t.dataset.cerrar) return cerrarCajon();
     if (t.dataset.modo) { est.modo = t.dataset.modo; return pintar(); }
     if (t.dataset.pestana) { est.pestana = t.dataset.pestana; pintar(); $(`[data-pestana="${est.pestana}"]`)?.focus(); return; }
     if (t.dataset.hallazgo) return cajonHallazgo(t.dataset.hallazgo);
     if (t.dataset.sesion) return cajonSesion(t.dataset.sesion);
+    if (t.dataset.pantallaT) return cajonPantallaTecnica(t.dataset.pantallaT);
     if (t.dataset.serie) { const s = t.dataset.serie; est.series.has(s) ? est.series.delete(s) : est.series.add(s); pintar(); $(`[data-serie="${s}"]`)?.focus(); return; }
     if (t.dataset.perfil) { est.perfil = est.perfil === t.dataset.perfil ? 'todos' : t.dataset.perfil; pintar(); $(`[data-perfil="${t.dataset.perfil}"]`)?.focus(); return; }
     if (t.dataset.accion === 'tabla-conf') { est.tablaConf = !est.tablaConf; pintar(); $('[data-accion="tabla-conf"]')?.focus(); }
@@ -447,7 +534,7 @@
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape') return cerrarCajon();
     const t = ev.target;
-    if ((ev.key === 'Enter' || ev.key === ' ') && t.matches && t.matches('tr[data-sesion],tr[data-hallazgo],g[data-hallazgo]')) { ev.preventDefault(); t.dataset.sesion ? cajonSesion(t.dataset.sesion) : cajonHallazgo(t.dataset.hallazgo); }
+    if ((ev.key === 'Enter' || ev.key === ' ') && t.matches && t.matches('tr[data-sesion],tr[data-hallazgo],g[data-hallazgo],tr[data-pantalla-t]')) { ev.preventDefault(); t.dataset.sesion ? cajonSesion(t.dataset.sesion) : t.dataset.pantallaT ? cajonPantallaTecnica(t.dataset.pantallaT) : cajonHallazgo(t.dataset.hallazgo); }
     if (t.getAttribute && t.getAttribute('role') === 'tab' && (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft')) {
       const i = VISTAS.findIndex((v) => v[0] === est.pestana), j = (i + (ev.key === 'ArrowRight' ? 1 : -1) + VISTAS.length) % VISTAS.length;
       est.pestana = VISTAS[j][0]; pintar(); $(`[data-pestana="${est.pestana}"]`)?.focus();

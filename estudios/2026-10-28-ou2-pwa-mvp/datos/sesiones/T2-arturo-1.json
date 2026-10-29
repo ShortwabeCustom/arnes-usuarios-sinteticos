@@ -1,0 +1,1145 @@
+{
+ "id": "T2-arturo-1",
+ "tarea": "T2",
+ "corrida": 1,
+ "integrante": "arturo",
+ "nombre": "Arturo Belmont",
+ "perfil": "D",
+ "segmento": "Boomer · 5.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T14:12:18",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "selfieIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p01.png",
+   "marcas": "datos/capturas/T2-arturo-1/p01-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve clara, con letra más o menos legible y una ilustración, pero me pide una selfie y eso me inquieta.",
+    "que_miras_primero": "El título grande sobre la selfie y la lista de indicaciones; luego el botón blanco de abajo.",
+    "interpretacion": "Me piden una foto de mi cara para comprobar que soy yo. Tengo que quitarme lentes, estar en un lugar con luz y dar permiso a la cámara y a la ubicación.",
+    "pensamiento": "Bueno, al menos dicen para qué es: proteger mi información. Pero la cámara es donde uno se atora, ojalá me avise si algo sale mal.",
+    "intencion": "Seguir con la foto como piden, con calma, y tocar el botón de tomar foto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Tomar foto» porque explican para qué sirve y quiero completarlo yo solo. Si falla la cámara, buscaré ayuda o la sucursal."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es el paso de comprobar quién soy, pero no veo cuántos pasos faltan."
+    },
+    "confianza": 60,
+    "friccion": 2,
+    "reglas": [
+     "D-06",
+     "D-08",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 14,
+     "y": 763,
+     "w": 384,
+     "h": 52,
+     "tipo": "button",
+     "etiqueta": "Tomar foto"
+    }
+   ],
+   "texto_pantalla": "¡Empezamos con tu selfie!\n\nTu foto nos ayuda a proteger tu información.\n\nEvita hacer caras y gestos.\nUbícate en un lugar bien iluminado.\nRetira gorra, lentes o cubrebocas.\nDa permisos de ubicación y acceso a tu cámara.\nTomar foto",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [
+    "¡Empezamos con tu selfie! Tu foto nos ayuda a proteger tu información. Evita hacer caras y gestos. Ubícate en un lugar bien iluminado. Retira gorra, lentes o cu"
+   ],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 789
+   },
+   "zona_tocada": {
+    "x": 14,
+    "y": 763,
+    "w": 384,
+    "h": 52,
+    "tipo": "button",
+    "etiqueta": "Tomar foto"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "permisoCamara"
+  },
+  {
+   "n": 2,
+   "pantalla": "permisoCamara",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p02.png",
+   "marcas": "datos/capturas/T2-arturo-1/p02-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Es un aviso chiquito en medio de la pantalla gris; la letra de abajo está muy pequeña.",
+    "que_miras_primero": "El letrero que dice que habilite el acceso a la cámara.",
+    "interpretacion": "El teléfono me pregunta si dejo que la aplicación use la cámara para mi foto. Dice que este paso es necesario.",
+    "pensamiento": "Ya me habían dicho que daría permiso a la cámara, así que es lo esperado. Si no lo doy, no puedo seguir.",
+    "intencion": "Darle permiso a la cámara para poder seguir con la foto.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Continuar» porque la pantalla anterior ya avisó de este permiso y dice que es necesario."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que voy en la foto de comprobar quién soy, pero no sé cuánto falta."
+    },
+    "confianza": 58,
+    "friccion": 2,
+    "reglas": [
+     "D-06",
+     "D-08",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 447,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Cancelar"
+    },
+    {
+     "x": 206,
+     "y": 447,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Habilita el acceso a la cámara para tomar tu fotografía.\n\nEste paso es necesario.\n\nCancelar\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 469
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 447,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "permisoUbicacion"
+  },
+  {
+   "n": 3,
+   "pantalla": "permisoUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p03.png",
+   "marcas": "datos/capturas/T2-arturo-1/p03-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otro aviso parecido, ahora preguntando por mi ubicación.",
+    "que_miras_primero": "La pregunta sobre permitir que «Solicitud Única» acceda a mi ubicación.",
+    "interpretacion": "Me piden dejar que la aplicación sepa dónde estoy. Es lo otro que la pantalla de la selfie mencionaba: permisos de ubicación y cámara.",
+    "pensamiento": "No dicen para qué quieren mi ubicación, pero ya lo habían avisado antes. Como es parte del trámite, lo permito.",
+    "intencion": "Permitir la ubicación, porque ya venía en las indicaciones, y seguir adelante.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque la pantalla de la selfie ya pedía este permiso y sin él probablemente no avance."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que sigo en la comprobación de identidad, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "D-08",
+     "D-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 11,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 459
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 437,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 610,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "selfieEncuadre"
+  },
+  {
+   "n": 4,
+   "pantalla": "selfieEncuadre",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p04.png",
+   "marcas": "datos/capturas/T2-arturo-1/p04-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Es una pantalla sencilla y de letra legible, pero el mensaje de que no hay cámara me confunde un poco.",
+    "que_miras_primero": "El letrero que dice que no encontraron una cámara y usarán una captura simulada.",
+    "interpretacion": "La aplicación no halla cámara y va a usar una foto de ejemplo en lugar de la mía. Aun así me deja tocar «Tomar selfie» para seguir.",
+    "pensamiento": "Qué raro, ¿no encontró mi cámara? Me dijeron que esto es parte de la prueba, así que sigo con el botón.",
+    "intencion": "Tocar el botón de tomar selfie para que pase la foto de ejemplo y continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Tomar selfie» porque es el único camino y el aviso explica qué va a pasar; así no me quedo trabado."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en la selfie para comprobar quién soy, pero no sé cuánto falta después."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "D-06",
+     "D-03",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 56,
+     "y": 496,
+     "w": 300,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Tomar selfie"
+    }
+   ],
+   "texto_pantalla": "No encontramos una cámara en este equipo. Usaremos una captura simulada.\n\nTomar selfie",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 13,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 520
+   },
+   "zona_tocada": {
+    "x": 56,
+    "y": 496,
+    "w": 300,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Tomar selfie"
+   },
+   "espera_ms": 3029,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "selfieAprobada",
+   "indicador_carga": true,
+   "avisos": [
+    "No te muevas"
+   ]
+  },
+  {
+   "n": 5,
+   "pantalla": "selfieAprobada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p05.png",
+   "marcas": "datos/capturas/T2-arturo-1/p05-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Una pantalla amable y clara, me dice que la foto salió bien.",
+    "que_miras_primero": "El letrero grande «¡Qué gran foto!» y la palomita verde en el celular dibujado.",
+    "interpretacion": "La foto ya pasó y estoy más cerca del préstamo. Lo que sigue es tocar el botón para continuar.",
+    "pensamiento": "Qué bueno que no se atoró la cámara. No sé qué sigue, pero el botón es claro.",
+    "intencion": "Seguir adelante con el botón de abajo.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «¡Sigamos adelante!» porque la foto ya quedó y es el único paso claro para continuar."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ya pasé la foto y estoy más cerca, pero no me dicen cuántos pasos faltan."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "D-03",
+     "D-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "¡Sigamos adelante!"
+    }
+   ],
+   "texto_pantalla": "¡Qué gran foto!\n\nAhora estás más cerca de tu préstamo.\n\n¡Sigamos adelante!",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 12,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "¡Sigamos adelante!"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineIntro"
+  },
+  {
+   "n": 6,
+   "pantalla": "ineIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p06.png",
+   "marcas": "datos/capturas/T2-arturo-1/p06-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Clara y con letra grande; me dice sin rodeos que saque mi INE.",
+    "que_miras_primero": "El letrero grande «Prueba, ten tu INE a la mano» y el dibujo de la credencial.",
+    "interpretacion": "Van a escanear mi credencial de elector para verificar que soy yo. Dicen para qué la piden, y eso me ayuda.",
+    "pensamiento": "Aquí sí explican para qué. Ya tengo la INE a la mano. Ojalá la cámara no me falle sin decirme por qué.",
+    "intencion": "Seguir con el botón, con la credencial lista.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Continuar» porque ya tengo la INE y explican para qué es."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ahora toca la credencial, pero no sé cuántos pasos faltan para terminar."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "D-08",
+     "D-03",
+     "D-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 20,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "inePermisoUbicacion"
+  },
+  {
+   "n": 7,
+   "pantalla": "inePermisoUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p07.png",
+   "marcas": "datos/capturas/T2-arturo-1/p07-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otra vez me preguntan lo de la ubicación, igual que antes.",
+    "que_miras_primero": "El aviso que pregunta si permito que «Solicitud Única» acceda a mi ubicación.",
+    "interpretacion": "Me vuelven a pedir permiso de ubicación, ahora sobre la pantalla de la INE. No sé por qué lo piden otra vez.",
+    "pensamiento": "Esto ya lo contesté. No dicen para qué lo quieren, pero no quiero quedarme trabado aquí.",
+    "intencion": "Permitirlo otra vez para poder seguir con la credencial.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque ya lo di antes y no quiero que se atore el trámite."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy en la parte de la credencial, pero no sé cuánto falta."
+    },
+    "confianza": 58,
+    "friccion": 2,
+    "reglas": [
+     "D-08",
+     "D-06"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 437,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "Prueba, ten tu INE a la mano\n\nVamos a escanear tu credencial de elector (INE) para verificar tu identidad.\n\nContinuar\n¿Permitir que Solicitud Única acceda a tu ubicación?\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 31,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 459
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 437,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "incodeUbicacion"
+  },
+  {
+   "n": 8,
+   "pantalla": "incodeUbicacion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p08.png",
+   "marcas": "datos/capturas/T2-arturo-1/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Pantalla negra con un aviso de otro sitio raro, y la letra chiquita; ya no se ve que sea el banco.",
+    "que_miras_primero": "El nombre largo «identidad-digital-ocrdual.com.mx» que no conozco.",
+    "interpretacion": "Otro sitio, que no es Banco Azteca, me pide usar mi ubicación. Es la tercera vez que me preguntan lo mismo y ahora con un nombre desconocido.",
+    "pensamiento": "¿Y esto quién es? No dicen para qué lo quieren. Me da desconfianza, pero ya voy a la mitad y la INE viene después.",
+    "intencion": "Permitirlo con reservas para no atorarme, porque no veo otra salida; en sucursal preferiría preguntar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque no veo otra manera de seguir y no quiero quedarme trabado, aunque no me explican para qué es."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "Ya no sé bien en qué parte voy; la pantalla cambió de aspecto y no dice cuánto falta."
+    },
+    "confianza": 40,
+    "friccion": 3,
+    "reglas": [
+     "D-08",
+     "D-04",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 482,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 482,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "\"identidad-digital-ocrdual.com.mx\" quiere utilizar tu ubicación\n\nSafari actualmente tiene acceso a tu ubicación precisa. ¿Quieres permitírselo a identidad-digital-ocrdual.com.mx también?\n\nNo permitir\nPermitir",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 21,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 504
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 482,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "incodeCamara"
+  },
+  {
+   "n": 9,
+   "pantalla": "incodeCamara",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p09.png",
+   "marcas": "datos/capturas/T2-arturo-1/p09-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Otro permiso más, ahora de la cámara, en la misma pantalla negra del sitio desconocido.",
+    "que_miras_primero": "La pregunta de si permito a «identidad-digital-ocrdual.com.mx» usar mi cámara.",
+    "interpretacion": "Para escanear la INE necesitan mi cámara, y el permiso lo pide ese sitio extraño, no el banco. Abajo, en letra muy chiquita, dice «verified by incode».",
+    "pensamiento": "Para la credencial sí tiene lógica que usen la cámara. Pero otra vez nadie me explica quién es este sitio.",
+    "intencion": "Permitir la cámara, porque sin ella no puedo escanear la INE.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Permitir» porque el paso anterior ya anunció escanear la INE y sin cámara no avanzo; lo hago con desconfianza."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuánto falta; la pantalla cambió y ya no parece del banco."
+    },
+    "confianza": 38,
+    "friccion": 3,
+    "reglas": [
+     "D-06",
+     "D-08",
+     "D-04",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 71,
+     "y": 448,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No permitir"
+    },
+    {
+     "x": 206,
+     "y": 448,
+     "w": 135,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Permitir"
+    }
+   ],
+   "texto_pantalla": "¿Permitir a \"identidad-digital-ocrdual.com.mx\" usar tu cámara?\nNo permitir\nPermitir\n\n✓ verified by incode",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 13,
+   "accion": {
+    "tipo": "tocar",
+    "x": 274,
+    "y": 470
+   },
+   "zona_tocada": {
+    "x": 206,
+    "y": 448,
+    "w": 135,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Permitir"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineFrente"
+  },
+  {
+   "n": 10,
+   "pantalla": "ineFrente",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p10.png",
+   "marcas": "datos/capturas/T2-arturo-1/p10-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Vuelve a verse del banco, limpia y sencilla; eso me tranquiliza un poco.",
+    "que_miras_primero": "El letrero «Coloca tu INE dentro del marco» y el dibujo de la credencial.",
+    "interpretacion": "Tengo que poner la INE frente a la cámara y tocar «Escanear». No veo ningún marco real en la pantalla, solo el dibujo.",
+    "pensamiento": "Dice que la ponga dentro del marco, pero no veo marco. Ojalá no falle sin decirme por qué.",
+    "intencion": "Tocar el botón de escanear con la INE en la mano y ver qué pasa.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Escanear» porque es el único botón y ya tengo la INE lista; si la cámara falla, voy a dudar."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es el escaneo de la credencial, pero no sé cuántos pasos quedan."
+    },
+    "confianza": 50,
+    "friccion": 2,
+    "reglas": [
+     "D-06",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 24,
+     "w": 172,
+     "h": 18,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Escanear"
+    }
+   ],
+   "texto_pantalla": "Coloca tu INE dentro del marco\nEscanear",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 7,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Escanear"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineFrente",
+   "avisos": [
+    "Procesando"
+   ]
+  },
+  {
+   "n": 11,
+   "pantalla": "ineFrente",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p11.png",
+   "marcas": "datos/capturas/T2-arturo-1/p11-marcas.png",
+   "zonas": 1,
+   "perfil": {
+    "primera_impresion": "Pantalla oscura con letra gris tenue que cuesta leer, pero dice que salió bien.",
+    "que_miras_primero": "La palomita verde y «Procesado con éxito».",
+    "interpretacion": "El frente de la INE ya se leyó bien. Ahora toca la parte de atrás, con el mismo botón de escanear.",
+    "pensamiento": "Qué bueno que el frente pasó. Volteo la credencial y sigo. La letra gris sobre negro se ve apagada.",
+    "intencion": "Voltear la INE y tocar el botón para escanear el reverso.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Escanear el reverso» porque explican qué sigue y el frente ya salió bien."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "si",
+     "texto": "Sé que ya va el frente y falta la parte de atrás de la credencial."
+    },
+    "confianza": 58,
+    "friccion": 2,
+    "reglas": [
+     "D-02",
+     "D-06",
+     "D-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 56,
+     "tipo": "button",
+     "etiqueta": "Escanear el reverso"
+    }
+   ],
+   "texto_pantalla": "Procesado con éxito\n\nAhora vamos a capturar la parte de atrás\n\nFrente capturado\nEscanear el reverso",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 779
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 56,
+    "tipo": "button",
+    "etiqueta": "Escanear el reverso"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "ineReverso"
+  },
+  {
+   "n": 12,
+   "pantalla": "ineReverso",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p12.png",
+   "marcas": "datos/capturas/T2-arturo-1/p12-marcas.png",
+   "zonas": 0,
+   "perfil": {
+    "primera_impresion": "Pantalla gris con el marco para la credencial y sin ningún botón; no sé qué tengo que hacer.",
+    "que_miras_primero": "El marco blanco y el letrero «Rellena el marco con tu INE».",
+    "interpretacion": "Está capturando la parte de atrás de la INE; dice «captura simulada». Abajo dice que las fotos están encriptadas, y eso me da algo de tranquilidad.",
+    "pensamiento": "No hay nada que tocar. Mejor espero un momento a ver si avanza sola; si no, ya no sabría qué hacer ni a quién preguntar.",
+    "intencion": "Esperar tantito a que la pantalla avance sola, con la INE frente al marco.",
+    "accion": {
+     "opcion": "esperar",
+     "texto": "No veo botones, así que espero a que procese la captura del reverso."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Entiendo que es el reverso de la INE, pero no sé si ya terminó ni cuánto falta."
+    },
+    "confianza": 50,
+    "friccion": 3,
+    "reglas": [
+     "D-06",
+     "D-09",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [],
+   "texto_pantalla": "Rellena el marco con tu INE\n\nCaptura simulada · reverso\n\n🔒 Todas las fotos están encriptadas",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 16,
+   "accion": {
+    "tipo": "esperar",
+    "ms": 5000
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "no",
+   "pantalla_despues": "ineValidada"
+  },
+  {
+   "n": 13,
+   "pantalla": "ineValidada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p13.png",
+   "marcas": "datos/capturas/T2-arturo-1/p13-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Qué alivio, se ve clara y me dice con letra grande que mi INE quedó validada.",
+    "que_miras_primero": "El letrero «¡Tu INE se validó con éxito!» y la palomita en la credencial.",
+    "interpretacion": "La credencial ya quedó verificada, frente y reverso. Sigo con el botón de abajo, que debe llevarme a confirmar mis datos.",
+    "pensamiento": "Qué bueno, lo logré solo y sin que se trabara. Ya solo falta lo que siga.",
+    "intencion": "Tocar el botón para seguir adelante.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «¡Sigamos adelante!» porque la INE ya se validó y es el único paso para continuar."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que la identidad ya quedó validada, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "D-03",
+     "D-07"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "¡Sigamos adelante!"
+    }
+   ],
+   "texto_pantalla": "¡Tu INE se validó con éxito!\n¡Sigamos adelante!",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 8,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "¡Sigamos adelante!"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 14,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T2-arturo-1/p14.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 2.118,
+ "tokens": {
+  "entrada": 80,
+  "cache_escritura": 54333,
+  "cache_lectura": 494116,
+  "salida": 10248
+ },
+ "resultado": "exito_con_friccion",
+ "ces": {
+  "ces": 5,
+  "texto": "Pude hacerlo solo y al final salió bien, pero me costó con tantos permisos repetidos, el sitio desconocido con letra chiquita y una pantalla sin botones donde no sabía si esperar."
+ },
+ "video": "datos/videos/T2-arturo-1.webm",
+ "fin": "2026-10-28T14:15:52"
+}

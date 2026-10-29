@@ -74,12 +74,19 @@ def _git(repo: Path, *args: str) -> str:
     return subprocess.run(["git", "-C", str(repo), *args], capture_output=True, text=True, check=True).stdout
 
 
+# Código de terceros copiado tal cual (p. ej. axe-core): sus constantes numéricas minificadas pasan Luhn por azar y
+# no son datos de nadie. Solo carpetas `vendor/`, revisadas al agregarlas.
+TERCEROS = ("arnes/vendor/",)
+
+
 def revisar_stage(repo: Path) -> list[str]:
     """Revisa solo las líneas que se agregan en el commit en curso."""
     hallazgos, archivo = [], None
     for linea in _git(repo, "diff", "--cached", "-U0", "--no-color", "--diff-filter=AM").splitlines():
         if linea.startswith("+++ "):
             archivo = linea[6:] if linea.startswith("+++ b/") else None
+            if archivo and archivo.startswith(TERCEROS):
+                archivo = None
         elif linea.startswith("+") and archivo:
             hallazgos += [f"{archivo}: {m}" for m in revisar_texto(linea[1:])]
     return hallazgos
@@ -89,6 +96,8 @@ def revisar_todo(repo: Path) -> list[str]:
     hallazgos = []
     for f in _git(repo, "ls-files").splitlines():
         p = repo / f
+        if f.startswith(TERCEROS):
+            continue
         if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webm", ".mp4", ".gif", ".pdf", ".ico", ".woff", ".woff2"}:
             continue
         try:

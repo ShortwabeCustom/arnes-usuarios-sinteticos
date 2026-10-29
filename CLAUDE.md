@@ -26,7 +26,8 @@ arnes revisar <estudio>           → preguntas sugestivas, baseline, lenguaje d
 arnes estilo <estudio>            → textos contra la guía de estilo del producto (`guia_estilo: pwa`)
   ⏸ APROBACIÓN del protocolo y del consumo en tokens (arnes sesiones|recorrido --simular)
 arnes sesiones --piloto           → estudio piloto: un perfil, corrida 1; revisar antes de seguir
-arnes medir / arnes sesiones / arnes recorrido
+arnes tecnico <estudio>           → web/PWA: auditoría técnica sin perfiles (WCAG con axe, rendimiento, PWA, retoma); 0 tokens
+arnes medir / arnes sesiones / arnes recorrido   (recorrido visible: subtítulos + sala de observación en vivo)
 arnes auditar <estudio>           → 3 evaluaciones expertas independientes, consolidadas (opcional, recomendado)
 arnes analizar                    → incluye estabilidad, brechas con intervalo, homogeneidad del panel
   escribir narrativa.yaml (hallazgos, interpretación, recomendaciones, aprendizajes_metodo)
@@ -101,7 +102,9 @@ Lo que el vault aportó al método y el arnés aplica:
 
 Pasos, clics, campos solicitados, tiempo, validaciones, cambios de canal, retoma de solicitud, visibilidad de estatus
 y distancia a la compra salen de `arnes analizar`, cada una con su origen (EVIDENCIA, MODELO, INFERENCIA,
-SIMULACIÓN). Detalle en `metodos/recorrido/METODO.md`. Para medir la retoma, poner `retoma` en la tarea más larga.
+SIMULACIÓN). Detalle en `metodos/recorrido/METODO.md`. Para medir la retoma, poner `retoma` en la tarea más larga. En web/PWA:
+celular emulado (`dispositivo.emular`), pantalla por `pantalla: {selector, atributo}`, `ruta_mecanica` para
+`arnes tecnico` y para empezar tareas a mitad del flujo (`inicia_en`).
 
 ## Guía de voz y estilo del producto
 

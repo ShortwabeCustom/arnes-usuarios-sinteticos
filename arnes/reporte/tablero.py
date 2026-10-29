@@ -195,7 +195,7 @@ def datos(e: Estudio, N: dict, img64) -> dict:
                             hallazgo=v.get("hallazgo", ""), prioridad=v.get("prioridad", "")))
     ncorr = c.get("corridas", 1)
     alcance = dict(perfiles=len(perfiles), corridas=ncorr, tareas=len(tareas), sesiones=len(S),
-                   material="Prototipo de Figma" if c.get("material") == "figma" else "Sitio web",
+                   material=c.get("material_nombre") or ("Prototipo de Figma" if c.get("material") == "figma" else "Sitio web"),
                    biblioteca=c.get("biblioteca"), panel=c.get("panel"))
     metricas = {t: {k: (v.get("mediana") if isinstance(v, dict) else v) for k, v in m.items()
                     if k in ("pasos", "clics", "campos", "tiempo_completan_s", "espera_sistema_s")} for t, m in met.items()}
@@ -220,7 +220,38 @@ def datos(e: Estudio, N: dict, img64) -> dict:
         alcance=alcance, robustez=(R.get("robustez") or {}).get("alertas") or [],
         proximos=N.get("proximos_pasos") or [], decision=N.get("decision") or [],
         auditoria_n=dict(evaluadores=A.get("evaluadores"), consenso=sum(1 for x in A.get("consolidado", []) if x.get("consenso")))
-        if A else None)
+        if A else None,
+        tecnico=tecnico(e, nombres, etapa_de, img64))
+
+
+def tecnico(e: Estudio, nombres: dict, etapa_de, img64) -> dict | None:
+    """Auditoría técnica (`arnes tecnico`): resumen y una fila por pantalla. Todo es EVIDENCIA medida en el producto."""
+    f = e.ruta("datos", "tecnico.json")
+    if not f.exists():
+        return None
+    T = json.loads(f.read_text(encoding="utf-8"))
+    s = T.get("resumen") or {}
+    pant = []
+    for p in T.get("pantallas") or []:
+        wc = [v for v in p["axe"]["violaciones"] if "best-practice" not in v["tags"]]
+        foco = p.get("foco") or []
+        ruta = e.ruta(p["captura"]) if p.get("captura") else None
+        pant.append(dict(
+            id=p["estado"], nombre=nombres.get(p["estado"], p["estado"]), etapa=etapa_de(p["estado"]),
+            criticas=sum(1 for v in wc if v["impacto"] in ("critical", "serious")), wcag=len(wc),
+            reglas=[dict(id=v["id"], ayuda=v["ayuda"], impacto=v["impacto"], nodos=v["nodos"]) for v in wc],
+            practicas=len(p["axe"]["violaciones"]) - len(wc), por_revisar=len(p["axe"].get("por_revisar") or []),
+            obj24=p["objetivos"]["menores_24"], obj44=p["objetivos"]["menores_44"], objetivos=p["objetivos"]["total"],
+            foco=f"{sum(1 for x in foco if x['visible'])}/{len(foco)}" if foco else "Sin dato",
+            reflujo=not (p.get("reflujo_320") or {}).get("desborde"), legibilidad=p.get("legibilidad"),
+            campos=len(p.get("campos") or []), fuente_min=p.get("fuente_min_px"),
+            captura=img64(ruta, 220, 72) if ruta and ruta.exists() else None))
+    retoma = [dict(r, punto_nombre=nombres.get(r["punto"], r["punto"]),
+                   recargar_nombre=nombres.get(r.get("tras_recargar"), r.get("tras_recargar")),
+                   volver_nombre=nombres.get(r.get("tras_volver_a_entrar"), r.get("tras_volver_a_entrar"))) for r in s.get("retoma") or []]
+    return dict(fecha=T.get("fecha"), dispositivo=T.get("dispositivo"), condiciones=T.get("condiciones"), umbrales=T.get("umbrales"),
+                resumen={k: v for k, v in s.items() if k != "retoma"}, retoma=retoma, pantallas=pant,
+                carga=T.get("carga"), version_axe=next((p["axe"].get("version") for p in T.get("pantallas") or []), None))
 
 
 def armar(e: Estudio, N: dict, detalle: str, img64) -> str:

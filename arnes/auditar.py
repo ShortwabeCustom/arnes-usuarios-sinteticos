@@ -69,6 +69,14 @@ def _material(e: Estudio) -> list[dict]:
             out.append(dict(pantalla=pid, imagen=e.ruta(p["imagen"]), zonas=list(zs) + ["general"], contexto=f"Textos de la pantalla, por zona:\n{textos}"))
         return out
     vistas = {}
+    tf = e.ruta("datos", "tecnico.json")
+    if tf.exists():
+        # web: las pantallas de la ruta mecánica (arnes tecnico), limpias y en orden, aunque ningún perfil llegue
+        for p in json.loads(tf.read_text(encoding="utf-8")).get("pantallas") or []:
+            if p.get("captura") and e.ruta(p["captura"]).exists():
+                vistas[p["estado"]] = dict(pantalla=p["estado"], imagen=e.ruta(p["captura"]), zonas=None,
+                                           contexto=f"Pantalla «{p['estado']}» del flujo, en orden de la ruta. Texto visible:\n"
+                                                    f"{(p.get('texto') or '')[:1500]}")
     for f in sorted(e.sesiones_dir.glob("*.json")):
         s = json.loads(f.read_text(encoding="utf-8"))
         for p in s["pasos"]:

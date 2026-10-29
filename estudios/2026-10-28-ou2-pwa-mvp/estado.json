@@ -1,0 +1,46 @@
+{
+ "fases": {
+  "tecnico": {
+   "t": "2026-10-28T13:33:55",
+   "pantallas": 30
+  },
+  "estilo": {
+   "t": "2026-10-28T13:34:28",
+   "guia": "pwa",
+   "errores": 10,
+   "avisos": 4
+  },
+  "sesiones": {
+   "t": "2026-10-28T19:10:50",
+   "ultima": "T4-itzel-2"
+  },
+  "auditar": {
+   "t": "2026-10-28T14:07:25",
+   "evaluadores": 3,
+   "consenso": 244,
+   "tokens": 850076
+  },
+  "analizar": {
+   "t": "2026-10-28T19:10:59",
+   "sesiones": 32
+  },
+  "reporte": {
+   "t": "2026-10-28T19:16:47",
+   "html": "reporte/oupwa-pdu-originacion-unica-2-0-pwa-sintetico_2026-10-28-v1.html",
+   "kb": 1513
+  },
+  "verificar": {
+   "t": "2026-10-28T19:14:54",
+   "avisos": 4
+  },
+  "sintesis": {
+   "t": "2026-10-28T19:17:07",
+   "nota": "03-Sintesis/estudio-2026-10-28-ou2-pwa-mvp.md"
+  }
+ },
+ "biblioteca": {
+  "id": "pwa",
+  "huella": "26e3e3cfcbc5",
+  "panel": "base4"
+ }
+}

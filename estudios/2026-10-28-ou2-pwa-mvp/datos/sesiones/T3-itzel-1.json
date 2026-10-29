@@ -1,0 +1,4149 @@
+{
+ "id": "T3-itzel-1",
+ "tarea": "T3",
+ "corrida": 1,
+ "integrante": "itzel",
+ "nombre": "Itzel Camacho",
+ "perfil": "B",
+ "segmento": "Millennial · 33.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T14:18:44",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p01.png",
+   "marcas": "datos/capturas/T3-itzel-1/p01-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y clara, con el formulario sencillo y la barra de avance arriba.",
+    "que_miras_primero": "El título «Prueba, confirma tus datos» y la barra de progreso casi llena.",
+    "interpretacion": "Me pide confirmar mis datos personales como salen en mi INE. El nombre ya viene puesto y faltan los apellidos, la fecha de nacimiento, el estado civil y la ocupación.",
+    "pensamiento": "Ok, es lo normal. Todavía no veo nada del monto ni de cuánto voy a pagar, pero sigo.",
+    "intencion": "Voy a llenar los datos en orden, empezando por el primer apellido. Después sigo con la fecha y los desplegables.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "El nombre ya está, así que sigo con el primer apellido para completar el formulario de arriba hacia abajo."
+    },
+    "marca": 6,
+    "escribir": "Ficticio",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra dice «Tu identificación» y va casi al final. No sé cuántos pasos faltan después de esto ni cuándo me dirán el monto."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 478,
+    "texto": "Ficticio"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 454,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Primer apellido"
+   },
+   "espera_ms": 305,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 2,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p02.png",
+   "marcas": "datos/capturas/T3-itzel-1/p02-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Sigue clara y sencilla; el apellido ya quedó escrito.",
+    "que_miras_primero": "El campo de primer apellido resaltado en verde con «Ficticio».",
+    "interpretacion": "Mi apellido se guardó en el campo. Faltan el segundo apellido, la fecha de nacimiento, el estado civil y la ocupación.",
+    "pensamiento": "Bien, va avanzando. Pongo el segundo apellido, que mi INE sí lo trae.",
+    "intencion": "Escribir el segundo apellido y luego la fecha de nacimiento.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "El segundo apellido es opcional, pero debe coincidir con mi INE, así que lo escribo."
+    },
+    "marca": 8,
+    "escribir": "Demo",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en «Tu identificación» y casi al final de la barra, pero no sé cuántos pasos faltan ni cuándo veré el monto."
+    },
+    "confianza": 65,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 566,
+    "texto": "Demo"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 542,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Segundo apellido (opcional)"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 3,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p03.png",
+   "marcas": "datos/capturas/T3-itzel-1/p03-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Va bien, los apellidos ya están y el formulario sigue siendo fácil de seguir.",
+    "que_miras_primero": "El campo «Demo» resaltado y, abajo, la fecha de nacimiento vacía con el formato DD/MM/AAAA.",
+    "interpretacion": "Ya tengo nombre y apellidos. Sigue la fecha de nacimiento, luego estado civil y ocupación, que son listas desplegables.",
+    "pensamiento": "Perfecto, el formato de la fecha viene indicado. Sigo con eso.",
+    "intencion": "Escribir mi fecha de nacimiento y luego elegir el estado civil.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo la fecha de nacimiento con el formato que indica el campo."
+    },
+    "marca": 10,
+    "escribir": "15/05/1990",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Veo que estoy en la parte de identificación y la barra está casi llena, pero no sé cuántas pantallas faltan antes de ver el monto."
+    },
+    "confianza": 66,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 655,
+    "texto": "15/05/1990"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 631,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Fecha de nacimiento"
+   },
+   "espera_ms": 305,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 4,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p04.png",
+   "marcas": "datos/capturas/T3-itzel-1/p04-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ya casi termino esta tarjeta de datos personales; todo quedó bien capturado.",
+    "que_miras_primero": "La fecha 15/05/1990 ya escrita y, abajo, el estado civil sin elegir.",
+    "interpretacion": "La tarjeta de datos personales está completa. Ahora me pide estado civil y ocupación en listas desplegables. El botón «Guardar» de la tarjeta quizá hay que tocarlo.",
+    "pensamiento": "Bien. Elijo el estado civil. Casada, como soy yo. Luego veo la ocupación y guardo.",
+    "intencion": "Abrir la lista de estado civil y escoger una opción.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de estado civil para ver las opciones y elegir una."
+    },
+    "marca": 11,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en confirmar identificación con la barra casi llena. Veo que faltan estado civil, ocupación y quizá domicilio, pero no sé cuánto más."
+    },
+    "confianza": 66,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 767
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 742,
+    "w": 380,
+    "h": 50,
+    "tipo": "button",
+    "etiqueta": "Selecciona una opción"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 5,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p05.png",
+   "marcas": "datos/capturas/T3-itzel-1/p05-marcas.png",
+   "zonas": 7,
+   "perfil": {
+    "primera_impresion": "Se abre una hoja clara con opciones grandes y fáciles de tocar.",
+    "que_miras_primero": "El título «Selecciona un estado civil» y la opción Casado(a) arriba.",
+    "interpretacion": "Tengo que escoger una opción y después tocar «Continuar», que está gris hasta que elija.",
+    "pensamiento": "Yo soy casada, así que esa. Luego Continuar.",
+    "intencion": "Elegir Casado(a) y luego tocar Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Elijo Casado(a), que es mi estado civil, para que se active Continuar."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en la confirmación de datos, con la barra casi llena. Falta la ocupación y quizá el domicilio, pero no sé cuántos pasos más."
+    },
+    "confianza": 66,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Soltero(a)"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Divorciado(a)"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Unión libre"
+    },
+    {
+     "x": 18,
+     "y": 772,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Viudo(a)"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar\nSelecciona un estado civil\nCasado(a)\nSoltero(a)\nDivorciado(a)\nUnión libre\nViudo(a)\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 50,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 507
+   },
+   "zona_tocada": {
+    "x": 18,
+    "y": 476,
+    "w": 376,
+    "h": 62,
+    "tipo": "button",
+    "etiqueta": "Casado(a)"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 6,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p06.png",
+   "marcas": "datos/capturas/T3-itzel-1/p06-marcas.png",
+   "zonas": 7,
+   "perfil": {
+    "primera_impresion": "Quedó clara mi selección y el botón ya se puso verde.",
+    "que_miras_primero": "Casado(a) marcada en verde y el botón Continuar activo.",
+    "interpretacion": "Mi opción quedó elegida. Ahora debo confirmar con Continuar para regresar al formulario.",
+    "pensamiento": "Listo, eso sí está bien. Continúo.",
+    "intencion": "Tocar Continuar para volver al formulario y seguir con la ocupación.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Confirmo mi estado civil con Continuar."
+    },
+    "marca": 7,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en confirmar mis datos, pero sigo sin saber cuántos pasos faltan para ver cuánto me prestan."
+    },
+    "confianza": 67,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Soltero(a)"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Divorciado(a)"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Unión libre"
+    },
+    {
+     "x": 18,
+     "y": 772,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Viudo(a)"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar\nSelecciona un estado civil\nCasado(a)\nSoltero(a)\nDivorciado(a)\nUnión libre\nViudo(a)\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 50,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 7,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p07.png",
+   "marcas": "datos/capturas/T3-itzel-1/p07-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ya casi está todo; mi estado civil quedó puesto.",
+    "que_miras_primero": "«Casado(a)» ya aparece en el campo de estado civil, y abajo se asoma «Ocupación».",
+    "interpretacion": "Me falta la ocupación, que está cortada al fondo de la pantalla. Además hay un botón «Guardar» arriba y no sé si tengo que tocarlo.",
+    "pensamiento": "Ocupación apenas se ve. Bajo un poco para ver bien qué opciones hay.",
+    "intencion": "Bajar para ver el campo de ocupación completo y ver qué más piden.",
+    "accion": {
+     "opcion": "desplazar_abajo",
+     "texto": "Bajo para ver completo el campo de ocupación y lo que sigue, antes de guardar."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es la confirmación de datos y que falta la ocupación, pero no veo cuántos pasos quedan ni cuándo sale el monto."
+    },
+    "confianza": 67,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nCasado(a)\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 37,
+   "accion": {
+    "tipo": "desplazar",
+    "x": 206,
+    "y": 520,
+    "dy": 500
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 8,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p08.png",
+   "marcas": "datos/capturas/T3-itzel-1/p08-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ahora sí veo todo el formulario; solo falta la ocupación.",
+    "que_miras_primero": "El botón «Continuar» gris abajo y el campo de ocupación vacío.",
+    "interpretacion": "Continuar está apagado porque falta elegir la ocupación. Cuando la elija, probablemente se active.",
+    "pensamiento": "Ah, es lo único que falta. Elijo la ocupación y sigo.",
+    "intencion": "Abrir la lista de ocupación y escoger la que me corresponda.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de ocupación para ver las opciones."
+    },
+    "marca": 11,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Veo que ya casi termino esta pantalla, pero no sé cuántas más hay antes de que me digan cuánto me prestan."
+    },
+    "confianza": 67,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 302,
+     "y": 108,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 156,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 179,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 244,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 268,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 333,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 356,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 421,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 445,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 556,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 16,
+     "y": 653,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nCasado(a)\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 37,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 678
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 653,
+    "w": 380,
+    "h": 50,
+    "tipo": "button",
+    "etiqueta": "Selecciona una opción"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 9,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p09.png",
+   "marcas": "datos/capturas/T3-itzel-1/p09-marcas.png",
+   "zonas": 7,
+   "perfil": {
+    "primera_impresion": "Otra hoja con opciones claras; igual de fácil que la anterior.",
+    "que_miras_primero": "«Empleado» arriba de la lista y el Continuar gris.",
+    "interpretacion": "Tengo que elegir mi ocupación y luego confirmar con Continuar.",
+    "pensamiento": "Mi ingreso viene de un trabajo estable, así que Empleado.",
+    "intencion": "Elegir Empleado y luego tocar Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Elijo Empleado porque es la opción que corresponde a mi situación laboral estable."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy terminando datos personales, pero sigo sin saber cuántos pasos faltan para el monto."
+    },
+    "confianza": 67,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Empleado"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Negocio propio"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Pensionado"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 66,
+     "tipo": "button",
+     "etiqueta": "Por su cuenta/trabajador independiente"
+    },
+    {
+     "x": 18,
+     "y": 776,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Becado"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nCasado(a)\nOcupación\nSelecciona una opción\nContinuar\nSelecciona una ocupación\nEmpleado\nNegocio propio\nPensionado\nPor su cuenta/trabajador independiente\nBecado\nEstudiante\nNo trabajo\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 53,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 507
+   },
+   "zona_tocada": {
+    "x": 18,
+    "y": 476,
+    "w": 376,
+    "h": 62,
+    "tipo": "button",
+    "etiqueta": "Empleado"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 10,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p10.png",
+   "marcas": "datos/capturas/T3-itzel-1/p10-marcas.png",
+   "zonas": 7,
+   "perfil": {
+    "primera_impresion": "Quedó seleccionado Empleado y el botón ya está activo.",
+    "que_miras_primero": "«Empleado» marcado en verde y el botón Continuar verde.",
+    "interpretacion": "Mi ocupación quedó elegida; falta confirmarla con Continuar.",
+    "pensamiento": "Listo, confirmo y regreso al formulario.",
+    "intencion": "Tocar Continuar para confirmar la ocupación.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Confirmo mi ocupación con Continuar."
+    },
+    "marca": 7,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Casi termino los datos personales, pero no sé cuántos pasos faltan hasta ver el monto."
+    },
+    "confianza": 67,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Empleado"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Negocio propio"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Pensionado"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 66,
+     "tipo": "button",
+     "etiqueta": "Por su cuenta/trabajador independiente"
+    },
+    {
+     "x": 18,
+     "y": 776,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Becado"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nCasado(a)\nOcupación\nSelecciona una opción\nContinuar\nSelecciona una ocupación\nEmpleado\nNegocio propio\nPensionado\nPor su cuenta/trabajador independiente\nBecado\nEstudiante\nNo trabajo\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 53,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 11,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p11.png",
+   "marcas": "datos/capturas/T3-itzel-1/p11-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Qué bueno, mis datos se guardaron y todo aparece ordenado en un resumen.",
+    "que_miras_primero": "El resumen de datos personales con mi nombre, apellidos y fecha, y que estado civil y ocupación siguen puestos.",
+    "interpretacion": "Salí y al volver la app recordó lo que capturé. Ahora solo me pide confirmar con Continuar. El domicilio todavía no me lo ha pedido.",
+    "pensamiento": "Bien que no perdí nada. Todo está correcto, sigo con Continuar.",
+    "intencion": "Revisar rápido que los datos estén bien y tocar Continuar para pasar al domicilio.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Los datos coinciden con lo que puse, así que toco Continuar para avanzar."
+    },
+    "marca": 5,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en la misma barra casi llena de identificación. Sigo sin saber cuántos pasos faltan hasta el monto."
+    },
+    "confianza": 72,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 298,
+     "y": 294,
+     "w": 82,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Editar"
+    },
+    {
+     "x": 16,
+     "y": 503,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 16,
+     "y": 600,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Empleado"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nCasado(a)\nOcupación\nEmpleado\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 38,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 2116,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "domicilioInicio",
+   "indicador_carga": true
+  },
+  {
+   "n": 12,
+   "pantalla": "domicilioInicio",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p12.png",
+   "marcas": "datos/capturas/T3-itzel-1/p12-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Pantalla de transición muy clara: ahora toca verificar mi domicilio.",
+    "que_miras_primero": "El título «vamos a verificar tu domicilio» y el logo de Banco Azteca arriba.",
+    "interpretacion": "Me van a pedir mi dirección y ubicarla en el mapa. Es el siguiente paso antes del monto, supongo.",
+    "pensamiento": "Ok, domicilio. Mientras siga en el celular y no me pidan salir, bien.",
+    "intencion": "Tocar Continuar para ver qué datos de domicilio me piden.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Sigo con Continuar porque es el único camino para llegar al monto."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ahora sigue el domicilio, pero no veo cuántos pasos faltan después ni cuándo me dirán el monto."
+    },
+    "confianza": 72,
+    "friccion": 1,
+    "reglas": [
+     "B-04",
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Prueba, vamos a verificar tu domicilio\n\nVerifica que la dirección donde vives sea correcta y ubícala en el mapa.\n\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 20,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 13,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p13.png",
+   "marcas": "datos/capturas/T3-itzel-1/p13-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Formulario de dirección claro, con barra nueva que dice «Tu domicilio».",
+    "que_miras_primero": "La pregunta «¿Vives en la misma dirección de tu INE?» con Sí y No.",
+    "interpretacion": "Primero me pregunta si vivo en la dirección de mi INE y después me pide calle, números, código postal y colonia. Los campos están vacíos.",
+    "pensamiento": "Vivo en la misma dirección del INE, así que contesto Sí. A ver si me llena algo solo.",
+    "intencion": "Contestar que sí vivo en la dirección del INE y luego llenar la calle y lo demás.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Sí porque mi domicilio es el mismo que el de mi INE."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra se reinició en «Tu domicilio» y va corta. Esto me dice que faltan más pasos, pero no cuántos."
+    },
+    "confianza": 70,
+    "friccion": 2,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 241,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 285,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 353,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 377,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 472,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 496,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 591,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 615,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 711,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 734,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 16,
+     "y": 830,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Colonia"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n0/25\nNo. exterior\n0/25\nNo. interior (opcional)\n0/25\nCódigo postal\n0/5\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 30,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 263
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 241,
+    "w": 380,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "Sí"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 14,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p14.png",
+   "marcas": "datos/capturas/T3-itzel-1/p14-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Marcó Sí, pero los campos siguen vacíos; me toca llenarlos yo.",
+    "que_miras_primero": "Que Sí quedó seleccionado y los campos de calle, número y código postal siguen en blanco.",
+    "interpretacion": "La app no me llenó nada con los datos del INE. Tengo que escribir mi dirección a mano.",
+    "pensamiento": "Raro que diga que es la del INE y no la traiga puesta. En fin, la escribo.",
+    "intencion": "Escribir la calle y luego el número exterior, el código postal y la colonia.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Empiezo por la calle, que es el primer campo del domicilio."
+    },
+    "marca": 5,
+    "escribir": "Calle Prueba",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy en «Tu domicilio» con la barra al inicio; sé que faltan campos, pero no cuántos pasos más hay."
+    },
+    "confianza": 68,
+    "friccion": 2,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 241,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 285,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 353,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 377,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 472,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 496,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 591,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 615,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 711,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 734,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 16,
+     "y": 830,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Colonia"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n0/25\nNo. exterior\n0/25\nNo. interior (opcional)\n0/25\nCódigo postal\n0/5\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 30,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 400,
+    "texto": "Calle Prueba"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 377,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Calle"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 15,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p15.png",
+   "marcas": "datos/capturas/T3-itzel-1/p15-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Va bien; la calle ya quedó y el contador de caracteres me ayuda.",
+    "que_miras_primero": "«Calle Prueba» en el campo y el contador 12/25.",
+    "interpretacion": "La calle se guardó. Sigue el número exterior, luego el código postal y la colonia.",
+    "pensamiento": "Bien. Sigo con el número exterior: 100.",
+    "intencion": "Escribir el número exterior.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Sigo en orden con el número exterior de mi domicilio."
+    },
+    "marca": 7,
+    "escribir": "100",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy en la parte de domicilio con la barra al inicio; no sé cuántos pasos faltan después para ver el monto."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 241,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 285,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 353,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 377,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 472,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 496,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 591,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 615,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 711,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 734,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 16,
+     "y": 830,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Colonia"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n12/25\nNo. exterior\n0/25\nNo. interior (opcional)\n0/25\nCódigo postal\n0/5\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 30,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 520,
+    "texto": "100"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 496,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "No. exterior"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 16,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p16.png",
+   "marcas": "datos/capturas/T3-itzel-1/p16-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Sigue sencillo; el número exterior ya quedó.",
+    "que_miras_primero": "El «100» en el número exterior y el campo de código postal abajo, con límite de 5 dígitos.",
+    "interpretacion": "Falta el código postal y la colonia. El número interior es opcional y no lo necesito.",
+    "pensamiento": "No tengo número interior, lo brinco. Pongo el código postal.",
+    "intencion": "Escribir el código postal; quizá me salga la colonia sola.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Salto el número interior porque es opcional y escribo el código postal."
+    },
+    "marca": 11,
+    "escribir": "03100",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy en el domicilio y veo cuántos campos faltan aquí, pero no cuántos pasos hay después para ver el monto."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 241,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 285,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 353,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 377,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 472,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 496,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 591,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 615,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 711,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 734,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 16,
+     "y": 830,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Colonia"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n12/25\nNo. exterior\n3/25\nNo. interior (opcional)\n0/25\nCódigo postal\n0/5\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 30,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 758,
+    "texto": "03100"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 734,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Código postal"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 17,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p17.png",
+   "marcas": "datos/capturas/T3-itzel-1/p17-marcas.png",
+   "zonas": 11,
+   "perfil": {
+    "primera_impresion": "Buena señal: al poner el código postal me apareció la alcaldía sola.",
+    "que_miras_primero": "El texto «Benito Juárez, Ciudad de México» que salió debajo del código postal.",
+    "interpretacion": "La app reconoció mi código postal y llenó la alcaldía y el estado. Debe seguir la colonia y el botón para continuar, pero quedan fuera de pantalla.",
+    "pensamiento": "Qué bien que lo reconoce. Bajo para ver la colonia y qué más falta.",
+    "intencion": "Bajar para ver la colonia y el botón de continuar.",
+    "accion": {
+     "opcion": "desplazar_abajo",
+     "texto": "Bajo porque lo que sigue (colonia y botón) queda cortado."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy en domicilio y falta la colonia; no sé cuántos pasos más hay hasta el monto."
+    },
+    "confianza": 70,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 241,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 285,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 353,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 377,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 472,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 496,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 591,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 615,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 711,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 734,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n12/25\nNo. exterior\n3/25\nNo. interior (opcional)\n0/25\nCódigo postal\n5/5\n\nBenito Juárez, Ciudad de México\n\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 35,
+   "accion": {
+    "tipo": "desplazar",
+    "x": 206,
+    "y": 520,
+    "dy": 500
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "direccion"
+  },
+  {
+   "n": 18,
+   "pantalla": "direccion",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p18.png",
+   "marcas": "datos/capturas/T3-itzel-1/p18-marcas.png",
+   "zonas": 13,
+   "perfil": {
+    "primera_impresion": "Todo el domicilio quedó completo y la colonia se llenó sola.",
+    "que_miras_primero": "La colonia «Del Valle Centro» ya puesta y el botón Confirmar abajo.",
+    "interpretacion": "La app completó la colonia con mi código postal. Ya está todo; solo falta confirmar la dirección.",
+    "pensamiento": "Todo bien con mi dirección. Confirmo, a ver si ya me dicen el monto.",
+    "intencion": "Tocar Confirmar para enviar la dirección.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Los datos de domicilio están correctos, así que toco Confirmar."
+    },
+    "marca": 13,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy terminando el domicilio, pero sigo sin saber cuántos pasos faltan antes del monto."
+    },
+    "confianza": 71,
+    "friccion": 1,
+    "reglas": [
+     "B-04"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 16,
+     "y": 43,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí"
+    },
+    {
+     "x": 16,
+     "y": 87,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 155,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 33,
+     "y": 179,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle"
+    },
+    {
+     "x": 16,
+     "y": 274,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 33,
+     "y": 298,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. exterior"
+    },
+    {
+     "x": 16,
+     "y": 393,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 33,
+     "y": 417,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "No. interior (opcional)"
+    },
+    {
+     "x": 16,
+     "y": 513,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 33,
+     "y": 536,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Código postal"
+    },
+    {
+     "x": 16,
+     "y": 655,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Colonia"
+    },
+    {
+     "x": 33,
+     "y": 678,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Colonia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, confirma tu dirección\n¿Vives en la misma dirección de tu INE?\nSí\nNo\nCalle\n12/25\nNo. exterior\n3/25\nNo. interior (opcional)\n0/25\nCódigo postal\n5/5\n\nBenito Juárez, Ciudad de México\n\nColonia\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 35,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 19,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p19.png",
+   "marcas": "datos/capturas/T3-itzel-1/p19-marcas.png",
+   "zonas": 15,
+   "perfil": {
+    "primera_impresion": "Piden más referencias de las que esperaba, pero al menos dicen que puedo poner «No aplica».",
+    "que_miras_primero": "El título «ayúdanos con más referencias» y los botones «No aplica» junto a cada calle.",
+    "interpretacion": "Quieren referencias para ubicar mi casa: una descripción y las calles de enfrente, derecha, izquierda y atrás. Si no sé alguna, pongo «No aplica».",
+    "pensamiento": "Otro paso más, ya van varios y sigo sin ver el monto. Pero es fácil, sigo.",
+    "intencion": "Escribir una referencia breve y luego marcar «No aplica» en las calles que no tengo.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Empiezo por el primer campo con una referencia corta y genérica."
+    },
+    "marca": 3,
+    "escribir": "Casa de prueba, frente a una tienda",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra avanzó un poco en «Tu domicilio», pero ya van varios pasos y no sé cuántos faltan para ver el monto."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 294,
+     "y": 428,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 294,
+     "y": 548,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 294,
+     "y": 667,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 294,
+     "y": 786,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n0/150\nCalle de enfrente\nNo aplica\n0/25\nCalle de la derecha\nNo aplica\n0/25\nCalle de la izquierda\nNo aplica\n0/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 50,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 325,
+    "texto": "Casa de prueba, frente a una tienda"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 301,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Agrega las referencias para llegar"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 20,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p20.png",
+   "marcas": "datos/capturas/T3-itzel-1/p20-marcas.png",
+   "zonas": 15,
+   "perfil": {
+    "primera_impresion": "La referencia quedó; ahora me faltan las cuatro calles.",
+    "que_miras_primero": "Mi texto en el primer campo y los botones «No aplica» al lado de cada calle.",
+    "interpretacion": "Tengo que llenar o descartar cada calle. No tengo datos de calles aledañas, así que uso «No aplica».",
+    "pensamiento": "No tengo esas calles a la mano. Toco «No aplica», una por una.",
+    "intencion": "Marcar «No aplica» en las cuatro calles, empezando por la de enfrente.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco No aplica en la calle de enfrente, ya que no tengo ese dato."
+    },
+    "marca": 6,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en domicilio; la barra va a la mitad, pero no sé cuánto falta hasta el monto."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 294,
+     "y": 428,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 294,
+     "y": 548,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 294,
+     "y": 667,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 294,
+     "y": 786,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\nNo aplica\n0/25\nCalle de la derecha\nNo aplica\n0/25\nCalle de la izquierda\nNo aplica\n0/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 50,
+   "accion": {
+    "tipo": "tocar",
+    "x": 336,
+    "y": 444
+   },
+   "zona_tocada": {
+    "x": 294,
+    "y": 428,
+    "w": 85,
+    "h": 32,
+    "tipo": "button",
+    "etiqueta": "No aplica"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 21,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p21.png",
+   "marcas": "datos/capturas/T3-itzel-1/p21-marcas.png",
+   "zonas": 14,
+   "perfil": {
+    "primera_impresion": "Funcionó: el botón me escribió «No aplica» solito.",
+    "que_miras_primero": "«No aplica» ya escrito en la calle de enfrente.",
+    "interpretacion": "El botón rellena el campo. Me faltan derecha, izquierda y atrás.",
+    "pensamiento": "Qué práctico. Sigo con las otras tres.",
+    "intencion": "Tocar «No aplica» en la calle de la derecha.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Marco No aplica en la calle de la derecha, igual que la anterior."
+    },
+    "marca": 8,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en domicilio, a la mitad de la barra; no sé cuántos pasos más hay antes del monto."
+    },
+    "confianza": 67,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 294,
+     "y": 548,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 294,
+     "y": 667,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 294,
+     "y": 786,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\n9/25\nCalle de la derecha\nNo aplica\n0/25\nCalle de la izquierda\nNo aplica\n0/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 48,
+   "accion": {
+    "tipo": "tocar",
+    "x": 336,
+    "y": 564
+   },
+   "zona_tocada": {
+    "x": 294,
+    "y": 548,
+    "w": 85,
+    "h": 32,
+    "tipo": "button",
+    "etiqueta": "No aplica"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 22,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p22.png",
+   "marcas": "datos/capturas/T3-itzel-1/p22-marcas.png",
+   "zonas": 13,
+   "perfil": {
+    "primera_impresion": "Igual que antes, voy bien: dos calles listas y dos por marcar.",
+    "que_miras_primero": "Los dos «No aplica» ya escritos y los botones de izquierda y atrás.",
+    "interpretacion": "Me faltan la calle de la izquierda y la de atrás. Después debe haber un botón para seguir, más abajo.",
+    "pensamiento": "Dos más y listo. Sigo.",
+    "intencion": "Tocar «No aplica» en la calle de la izquierda.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Marco No aplica en la calle de la izquierda, igual que las anteriores."
+    },
+    "marca": 10,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en domicilio con la barra a la mitad; no sé cuántos pasos más faltan para el monto."
+    },
+    "confianza": 67,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 294,
+     "y": 667,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 294,
+     "y": 786,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\n9/25\nCalle de la derecha\n9/25\nCalle de la izquierda\nNo aplica\n0/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "tocar",
+    "x": 336,
+    "y": 683
+   },
+   "zona_tocada": {
+    "x": 294,
+    "y": 667,
+    "w": 85,
+    "h": 32,
+    "tipo": "button",
+    "etiqueta": "No aplica"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 23,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p23.png",
+   "marcas": "datos/capturas/T3-itzel-1/p23-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ya solo falta la última calle.",
+    "que_miras_primero": "Tres campos con «No aplica» y el último con su botón.",
+    "interpretacion": "Me falta la calle de atrás. Luego tendré que bajar para encontrar el botón de seguir.",
+    "pensamiento": "La última. Después busco cómo avanzar.",
+    "intencion": "Tocar «No aplica» en la calle de atrás.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Marco No aplica en la calle de atrás para completar las referencias."
+    },
+    "marca": 12,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sigo en domicilio; ya casi termino esta pantalla pero no sé cuántas más faltan antes del monto."
+    },
+    "confianza": 67,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 245,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 294,
+     "y": 786,
+     "w": 85,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "No aplica"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\n9/25\nCalle de la derecha\n9/25\nCalle de la izquierda\n9/25\nCalle de atrás\nNo aplica\n0/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 44,
+   "accion": {
+    "tipo": "tocar",
+    "x": 336,
+    "y": 802
+   },
+   "zona_tocada": {
+    "x": 294,
+    "y": 786,
+    "w": 85,
+    "h": 32,
+    "tipo": "button",
+    "etiqueta": "No aplica"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 24,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p24.png",
+   "marcas": "datos/capturas/T3-itzel-1/p24-marcas.png",
+   "zonas": 11,
+   "perfil": {
+    "primera_impresion": "Ya llené todas las referencias, pero no veo ningún botón para seguir.",
+    "que_miras_primero": "Que los cuatro campos dicen «No aplica» y abajo no se ve ningún botón.",
+    "interpretacion": "Ya está todo lo que piden aquí. El botón para continuar debe estar más abajo, fuera de pantalla.",
+    "pensamiento": "¿Y ahora cómo sigo? Bajo a ver si ahí está el botón.",
+    "intencion": "Bajar para encontrar el botón de continuar.",
+    "accion": {
+     "opcion": "desplazar_abajo",
+     "texto": "No hay botón a la vista, así que bajo para buscarlo."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy en domicilio con la barra a la mitad; no sé cuántos pasos más faltan."
+    },
+    "confianza": 65,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 278,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 301,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 397,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 421,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 16,
+     "y": 516,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 540,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 16,
+     "y": 635,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 659,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 16,
+     "y": 755,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 778,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\n9/25\nCalle de la derecha\n9/25\nCalle de la izquierda\n9/25\nCalle de atrás\n9/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 42,
+   "accion": {
+    "tipo": "desplazar",
+    "x": 206,
+    "y": 520,
+    "dy": 500
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "referencias"
+  },
+  {
+   "n": 25,
+   "pantalla": "referencias",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p25.png",
+   "marcas": "datos/capturas/T3-itzel-1/p25-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ahí está el botón; todo quedó lleno y listo para confirmar.",
+    "que_miras_primero": "El botón verde «Confirmar» abajo.",
+    "interpretacion": "Ya llené todas las referencias. Solo falta confirmar para pasar al siguiente paso.",
+    "pensamiento": "Listo. Confirmo y ojalá ya me digan cuánto me prestan.",
+    "intencion": "Tocar Confirmar para avanzar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Todo está lleno, así que confirmo las referencias."
+    },
+    "marca": 12,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Estoy terminando el domicilio, pero sigo sin saber cuántos pasos faltan para ver el monto."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "B-08"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": -43,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 155,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 33,
+     "y": 178,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Agrega las referencias para llegar"
+    },
+    {
+     "x": 16,
+     "y": 274,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 33,
+     "y": 298,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de enfrente"
+    },
+    {
+     "x": 16,
+     "y": 393,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 33,
+     "y": 417,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la derecha"
+    },
+    {
+     "x": 16,
+     "y": 512,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 33,
+     "y": 536,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de la izquierda"
+    },
+    {
+     "x": 16,
+     "y": 632,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 33,
+     "y": 655,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Calle de atrás"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nPrueba, ayúdanos con más referencias\n\nSi no sabes alguna de tus calles, escribe “No aplica”.\n\nAgrega las referencias para llegar\n35/150\nCalle de enfrente\n9/25\nCalle de la derecha\n9/25\nCalle de la izquierda\n9/25\nCalle de atrás\n9/25\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 5,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 42,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 909,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "mapa"
+  },
+  {
+   "n": 26,
+   "pantalla": "mapa",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p26.png",
+   "marcas": "datos/capturas/T3-itzel-1/p26-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Un mapa con mi zona; hay un aviso encima que tapa un poco.",
+    "que_miras_primero": "El mapa con el pin al centro y el texto «Utiliza dos dedos para hacer zoom».",
+    "interpretacion": "Me piden ubicar mi domicilio con el pin en el mapa. El aviso de zoom cubre la pantalla y dice que lo toque para cerrarlo.",
+    "pensamiento": "Primero quito este aviso para ver bien el mapa. Sigue en el celular, bien.",
+    "intencion": "Cerrar el aviso y revisar si el pin está en mi calle.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el aviso para cerrarlo, como dice, y ver el mapa completo."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra avanzó un poco más en «Tu domicilio», pero sigo sin saber cuántos pasos faltan para el monto."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 0,
+     "y": 186,
+     "w": 412,
+     "h": 653,
+     "tipo": "button",
+     "etiqueta": "Utiliza dos dedos para hacer zoom. Toca para cerrar."
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nUbica tu domicilio con el pin en el mapa\n+\n−\n Leaflet | © OpenStreetMap\n⤢\nUtiliza dos dedos para hacer zoom\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 25,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 513
+   },
+   "zona_tocada": {
+    "x": 0,
+    "y": 186,
+    "w": 412,
+    "h": 653,
+    "tipo": "button",
+    "etiqueta": "Utiliza dos dedos para hacer zoom. Toca para cerrar."
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "no",
+   "pantalla_despues": "mapa"
+  },
+  {
+   "n": 27,
+   "pantalla": "mapa",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p27.png",
+   "marcas": "datos/capturas/T3-itzel-1/p27-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Ahora sí se ve el mapa completo, con el pin dentro de un círculo verde en la colonia Del Valle.",
+    "que_miras_primero": "El pin con una casita al centro del círculo verde.",
+    "interpretacion": "La app puso el pin en mi zona por el código postal. Puedo moverlo o tocar el mapa, o confirmar si ya está bien.",
+    "pensamiento": "Está en mi colonia, me sirve. Es una prueba, así que confirmo.",
+    "intencion": "Confirmar la ubicación sin moverla.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "El pin ya está en mi colonia, así que toco Confirmar."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra va a tres cuartos en domicilio. Parece que ya falta poco, pero no me dicen cuánto ni cuándo veo el monto."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 0,
+     "y": 186,
+     "w": 412,
+     "h": 653,
+     "tipo": "div",
+     "etiqueta": "Mapa de tu domicilio. Toca el mapa o arrastra el pin para ubicar tu casa."
+    },
+    {
+     "x": 16,
+     "y": 767,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\nUbica tu domicilio con el pin en el mapa\n+\n−\n Leaflet | © OpenStreetMap\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 18,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 791
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 767,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "fachada"
+  },
+  {
+   "n": 28,
+   "pantalla": "fachada",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p28.png",
+   "marcas": "datos/capturas/T3-itzel-1/p28-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Me sorprende: la foto es de una posada, no se parece a mi casa.",
+    "que_miras_primero": "La foto de la fachada con el letrero «Posada Flory».",
+    "interpretacion": "Me piden confirmar que esa foto es mi fachada. Dice que es para validar mi domicilio, y la app avisó que las fotos son de ejemplo en esta prueba.",
+    "pensamiento": "Esto no es mi casa, pero ya me avisaron que es foto de ejemplo. Confirmo para seguir.",
+    "intencion": "Confirmar la foto para pasar al siguiente paso y ver cuánto me prestan.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Sí, es mi fachada porque sé que la foto es simulada en esta prueba; en la vida real dudaría."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra está casi llena en domicilio, así que parece que falta poco, pero no me dicen cuánto ni cuándo sale el monto."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "B-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 567,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Sí, es mi fachada"
+    },
+    {
+     "x": 110,
+     "y": 639,
+     "w": 193,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "No es mi fachada"
+    }
+   ],
+   "texto_pantalla": "Tu domicilio\n¿Este es tu domicilio?\n\nConfirma que la foto corresponda a tu fachada.\n\nSí, es mi fachada\nNo es mi fachada",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 22,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 591
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 567,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Sí, es mi fachada"
+   },
+   "espera_ms": 4236,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "oferta",
+   "indicador_carga": true
+  },
+  {
+   "n": 29,
+   "pantalla": "oferta",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-itzel-1/p29.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 9.3045,
+ "tokens": {
+  "entrada": 168,
+  "cache_escritura": 116081,
+  "cache_lectura": 1832215,
+  "salida": 19803
+ },
+ "retoma": {
+  "tras_paso": 10,
+  "modo": "reabrir",
+  "pantalla_antes": "datosPersonales",
+  "pantalla_despues": "datosPersonales",
+  "resultado": "conserva_el_avance"
+ },
+ "resultado": "exito_con_friccion",
+ "ces": {
+  "ces": 5,
+  "texto": "Me resultó bastante fácil: campos claros, todo desde el celular y se guardó mi avance. Pero nunca supe cuántos pasos faltaban ni si ya me dirían el monto, y la foto de fachada no era mi casa."
+ },
+ "video": "datos/videos/T3-itzel-1.webm",
+ "fin": "2026-10-28T14:25:59"
+}
