@@ -21,6 +21,9 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ## Pendientes
 
+0. **Validar el modo ligero** (`estudios/2026-10-28-ou2-ligero-validacion`: T1 y T3, 4 perfiles, 1 corrida, ≈ 2.3 M de
+   tokens estimados contra ≈ 11.7 M que costaron las mismas 8 sesiones en modo completo). Espera aprobación de Alexis.
+   Si pasa V1–V4, `memoria: bitacora` se vuelve el predeterminado de recorrido.
 1. ~~Segunda medición del benchmark~~ Hecha sobre la PWA MVP (28/10/2026). Siguiente: tercera medición cuando el MVP
    muestre el total a pagar y unifique los permisos de ubicación; recorrer también las ramas de error del MVP
    (escenarios por URL: `otp=incorrecto`, `selfie=noReconocida`, `ine=vencida`, `evaluacion=scoreGuardian`…).
@@ -41,6 +44,31 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 8. Si se agrega una biblioteca nueva de personas, seguir `metodos/persona/METODO.md` y correr `arnes persona probar`.
 
 ---
+
+## Sesión del 28 de octubre de 2026, noche (investigaciones más baratas y rápidas)
+
+Pedido de Alexis: «hacer más efectivo, viable y menos costoso este tipo de investigaciones, porque está gastando
+tanto y tardando demasiado». Diagnóstico: de ≈ 37 M de tokens, el 91 % fue relectura de caché; en modo completo cada
+paso relee la sesión entera y el costo crece con el cuadrado de los pasos (T3, 28–35 pasos: 1.5–3 M por sesión).
+Además, 3 pilotos y varias sesiones se repitieron por problemas de ruta o de datos que no necesitaban al modelo.
+
+Lo que se construyó:
+- **Modo ligero** (`memoria: bitacora`): una llamada nueva por paso con escenario, tarea, datos, una bitácora corta
+  de lo hecho (`_recuerdo`, `_linea`) y una sola captura (la numerada), enviada dentro del mensaje (`motor.Llamada.imagenes`,
+  stream-json): el modelo ya no hace una vuelta extra para abrir el archivo. La retoma queda anotada en la bitácora.
+  Estimado (`consumo.LIGERO`): ≈ 13 mil tokens por paso, casi sin crecer; un panel como el de OU 2.0, de ≈ 41 M a ≈ 7 M.
+  Es un cambio de instrumento: **no es el predeterminado** hasta validarlo (pendiente 0).
+- **`arnes ensayar`** (0 tokens): recorre las tareas con acciones de perfil (zonas numeradas, desplazar, escribir,
+  tocar) y avisa rutas que no llegan, objetivos que el perfil no vería y datos de prueba que faltan; da los pasos
+  mínimos por tarea (`datos/ensayo.json`). Se detiene si 3 pasos seguidos no encuentran su objetivo (la primera
+  versión, sin ese freno, siguió más de hora y media con la ruta desviada). En OU 2.0: sin problemas, ≈ 10 min;
+  pasos mínimos T1 16 · T2 12 · T3 27 · T4 8.
+- **`arnes recorrido … todos --paralelo N`**: un proceso por perfil; baja el tiempo, no los tokens.
+- **Corrección del instrumento (zonas web):** un elemento recortado por un contenedor con desplazamiento (las
+  opciones de «Elige tu plazo») contaba como zona aunque no se viera. Ahora cuenta solo su parte visible. En el panel
+  de la segunda medición los perfiles pudieron ver números sobre opciones ocultas en esa hoja; eligieron plazo en 7
+  de 8 corridas de T1, así que no parece haber cambiado resultados, pero queda declarado.
+- Documentado en `metodos/recorrido/METODO.md`, `docs/GUIA.md` (consumo y por qué crece), la plantilla y CLAUDE.md.
 
 ## Sesión del 28 de octubre de 2026 (segunda medición: PWA MVP y herramienta de navegador)
 

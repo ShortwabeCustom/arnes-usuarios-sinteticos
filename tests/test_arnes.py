@@ -437,3 +437,25 @@ def test_guardia_ignora_codigo_de_terceros(tmp_path):
     subprocess.run(["git", "-C", str(tmp_path), "add", "-A"], check=True)
     h = revisar_stage(tmp_path)
     assert h and all(x.startswith("nota.md") for x in h)
+
+
+def test_modo_ligero_mensaje_bitacora_y_consumo(tmp_path):
+    from arnes import consumo, motor
+    from arnes.metodos.recorrido import _linea, _recuerdo
+
+    img = tmp_path / "p.png"
+    img.write_bytes(b"\x89PNG")
+    m = json.loads(motor._mensaje(motor.Llamada("x", "Mira la pantalla", imagenes=[img])))
+    assert [b["type"] for b in m["message"]["content"]] == ["image", "text"] and m["message"]["content"][1]["text"] == "Mira la pantalla"
+    salida = '{"type":"system"}\n{"type":"result","structured_output":{"a":1},"usage":{"input_tokens":3}}\n'
+    assert motor._resultado_stream(salida)["structured_output"] == {"a": 1}
+    t = {"escenario": "Quieres un préstamo.", "instruccion": "Pídelo."}
+    lin = _linea(3, "otp", {"pensamiento": "Llegó el código", "confianza": 70, "friccion": 1}, "escribiste en el 3", "la pantalla cambió",
+                 ["Tu código es 123456"])
+    assert "Paso 3 (otp)" in lin and "«Tu código es 123456»" in lin and "Confianza 70" in lin
+    r = _recuerdo(t, "- nombre: Prueba", [lin] * 45, ultimos=40)
+    assert "Tu tarea: Pídelo." in r and r.count("Paso 3") == 40 and "(…pasos anteriores…)" in r
+    assert _recuerdo(t, "-", []).count("memoria") == 0
+    completo = consumo.total(consumo.estimar_recorrido(30, 1, captura=(412, 839)))
+    ligero = consumo.total(consumo.estimar_recorrido(30, 1, captura=(412, 839), memoria="bitacora", capturas_por_paso=1))
+    assert ligero < completo / 4                                   # crece lineal, no con el cuadrado de los pasos

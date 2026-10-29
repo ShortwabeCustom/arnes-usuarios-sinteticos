@@ -212,8 +212,12 @@ sesiones y tokens estimados. Referencias en la sección 7.
 ```bash
 arnes medir <estudio>                     # comprensión: revisa el orden de lectura que imprime
 arnes sesiones <estudio> --piloto         # comprensión: un perfil, corrida 1
+arnes ensayar <estudio>                   # recorrido: ensayo sin modelo (0 tokens); primero esto
 arnes recorrido <estudio> S01 --tarea T1 --corridas 1    # recorrido: un perfil, una tarea
 ```
+
+En recorrido, `arnes ensayar` recorre cada tarea sin perfiles y avisa si una ruta no llega, si un botón no aparece
+entre las zonas o si faltan datos de prueba. Corrígelo antes del piloto: cada piloto fallido gasta tokens.
 
 Abre lo que salió (`datos/sesiones/`; en recorrido, también `datos/capturas/` y el video en `datos/videos/`) y
 pregúntate: ¿el perfil vio lo que tenía que ver?, ¿la pregunta se entendió?, ¿el toque cayó donde debía? Si algo
@@ -228,7 +232,7 @@ barato descubrir un error con 4 sesiones que con 96.
 
 ```bash
 arnes sesiones <estudio>                          # comprensión
-arnes recorrido <estudio> todos                   # recorrido
+arnes recorrido <estudio> todos [--paralelo 4]    # recorrido; --paralelo: varios perfiles a la vez
 arnes auditar <estudio>                           # 3 evaluaciones expertas independientes
 ```
 
@@ -376,6 +380,11 @@ capturas anteriores). Pesa mucho menos que un token nuevo, por eso el arnés mue
 | Recorrido, una sesión de 20 pasos | ≈ 1.1 M · ≈ 75 mil nuevos | 5–10 min |
 | Comprensión, auditoría y fidelidad | se miden desde la siguiente corrida | vistazo: segundos · lectura: ~30 s · 96 sesiones: 15–25 min |
 
+**Por qué un recorrido largo cuesta tanto.** En el modo completo cada paso relee todo lo anterior, así que el costo
+crece con el cuadrado de los pasos: una tarea de 30 pasos cuesta unas 7 veces lo que una de 10. Para bajarlo:
+partir las tareas largas (`inicia_en`), correr `arnes ensayar` antes del piloto y, cuando quede validado, el **modo
+ligero** (`memoria: bitacora`, ver `metodos/recorrido/METODO.md`): ≈ 13 mil tokens por paso, casi sin crecer (estimado).
+
 Las cifras de recorrido salen de 9 sesiones reales (octubre de 2026). Las demás no se pueden reconstruir: esas
 llamadas no guardaron sus tokens.
 
@@ -415,11 +424,12 @@ arnes estilo <estudio>
 arnes sesiones <estudio> --simular
 arnes medir <estudio>                              # comprensión
 arnes sesiones <estudio> --piloto                  # comprensión
+arnes ensayar <estudio>                            # recorrido: ensayo sin modelo; 0 tokens
 arnes recorrido <estudio> <integrante> --tarea T1  # recorrido, piloto
 
 # correr y analizar
 arnes sesiones <estudio>                           # comprensión
-arnes recorrido <estudio> todos [--corridas N]     # recorrido (abre la sala de observación)
+arnes recorrido <estudio> todos [--corridas N] [--paralelo N]  # recorrido (abre la sala de observación)
 arnes tecnico <estudio>                            # web/PWA: accesibilidad, rendimiento, PWA; 0 tokens
 arnes auditar <estudio>
 arnes analizar <estudio>

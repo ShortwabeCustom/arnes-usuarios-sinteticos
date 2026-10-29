@@ -72,7 +72,16 @@ const zonasWeb = async (page) => page.evaluate(() => {
     if (r.width < 4 || r.height < 4 || r.bottom < 0 || r.top > innerHeight || r.right < 0 || r.left > innerWidth) continue;
     const st = getComputedStyle(el);
     if (st.visibility === 'hidden' || st.display === 'none') continue;
-    let cx = Math.min(Math.max(r.left + r.width / 2, 1), innerWidth - 1), cy = Math.min(Math.max(r.top + r.height / 2, 1), innerHeight - 1);
+    // recortado por un contenedor con desplazamiento (una lista dentro de una hoja): cuenta solo la parte visible
+    let v = { l: Math.max(r.left, 0), t: Math.max(r.top, 0), r: Math.min(r.right, innerWidth), b: Math.min(r.bottom, innerHeight) };
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+      const sa = getComputedStyle(a);
+      if (sa.overflowX === 'visible' && sa.overflowY === 'visible') continue;
+      const q = a.getBoundingClientRect();
+      v = { l: Math.max(v.l, q.left), t: Math.max(v.t, q.top), r: Math.min(v.r, q.right), b: Math.min(v.b, q.bottom) };
+    }
+    if (v.r - v.l < 4 || v.b - v.t < 4) continue;
+    let cx = Math.min(Math.max((v.l + v.r) / 2, 1), innerWidth - 1), cy = Math.min(Math.max((v.t + v.b) / 2, 1), innerHeight - 1);
     let top = document.elementFromPoint(cx, cy);
     if (top && top !== el && !el.contains(top)) {
       // un enlace partido en dos líneas: el centro de su caja cae en el texto de al lado; se prueba cada línea
@@ -89,7 +98,7 @@ const zonasWeb = async (page) => page.evaluate(() => {
     const t = el.tagName.toLowerCase(), tipoInput = t === 'input' ? (el.type || 'text') : '';
     const lab = el.labels && el.labels[0] ? el.labels[0].innerText : '';
     const etiqueta = (el.getAttribute('aria-label') || lab || el.innerText || el.placeholder || el.title || el.name || el.value || '').trim().replace(/\s+/g, ' ').slice(0, 80);
-    const z = { el, x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height),
+    const z = { el, x: Math.round(v.l), y: Math.round(v.t), w: Math.round(v.r - v.l), h: Math.round(v.b - v.t),
                 tocar: [Math.round(cx), Math.round(cy)], tipo: t, editable: (t === 'input' && !['range', 'checkbox', 'radio', 'button', 'submit'].includes(tipoInput)) || t === 'textarea' || el.isContentEditable,
                 etiqueta, rol: el.getAttribute('role') || '', desactivado: !!(el.disabled || el.getAttribute('aria-disabled') === 'true') };
     if (t === 'input' || t === 'textarea') { z.valor = String(el.value || '').slice(0, 60); z.tipo_input = tipoInput; }

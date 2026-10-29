@@ -103,6 +103,35 @@ por cada paso:
 - `--guion` reproduce pasos escritos a mano (como entrecalles): sirve para un video demostrativo o para
   repetir una ruta exacta.
 
+### Modo ligero (`memoria: bitacora`, en validación)
+
+En el modo completo cada paso reanuda la sesión: el modelo relee todas las capturas y respuestas anteriores. El
+costo crece con el cuadrado de los pasos (OU 2.0 MVP: T3, de unos 30 pasos, costó ≈ 2.1 M de tokens por sesión; el
+91 % fue relectura de caché). En el modo ligero cada paso es una llamada nueva con:
+
+- el prompt del perfil (se relee de caché, igual para todos los pasos);
+- escenario, tarea y datos de prueba;
+- una **bitácora** corta de lo hecho («paso 3 · pantalla otp · toqué “Continuar” · cambió a datosPersonales»);
+- **una sola captura** (la marcada con números), dentro del mensaje, sin que el modelo tenga que abrir un archivo.
+
+Estimado: un panel como el de OU 2.0 baja de ≈ 41 M a ≈ 7 M de tokens, y cada paso responde más rápido. Lo que se
+pierde: el perfil ya no «ve» las pantallas anteriores, solo lo que anotó de ellas **[SUPUESTO METODOLÓGICO]**. Por
+eso es un cambio de instrumento: antes de usarlo como predeterminado se compara contra el modo completo en las mismas
+tareas (éxito, abandonos, fricciones y primer toque). `capturas_por_paso: 2` agrega la captura limpia.
+
+### Antes del piloto: `arnes ensayar` (0 tokens)
+
+Recorre cada tarea con el navegador y sin modelo: prepara la tarea con `ruta_mecanica` hasta `inicia_en` y la
+completa con acciones que un perfil podría elegir (zonas numeradas, desplazar hasta 3 veces en ambos sentidos, escribir, tocar). Avisa
+si una ruta no llega, si un paso no aparece entre las zonas o si faltan datos de prueba, y deja los **pasos mínimos**
+por tarea en `datos/ensayo.json` (sirven para `pasos_esperados` y para estimar el consumo). Sale con error si hay
+problemas. En OU 2.0 los 3 pilotos repetidos se habrían detectado aquí.
+
+### Varios perfiles a la vez: `--paralelo N`
+
+`arnes recorrido <estudio> todos --paralelo 4` corre un proceso por perfil, cada uno con su navegador y su sala de
+observación; las bitácoras quedan en `datos/paralelo/`. Reduce el tiempo total, no los tokens.
+
 ## Clasificar antes de puntuar (skill de auditoría)
 
 | | Categoría | Qué es | ¿Severidad? |

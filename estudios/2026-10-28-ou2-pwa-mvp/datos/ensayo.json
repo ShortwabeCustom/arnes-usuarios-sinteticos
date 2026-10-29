@@ -1,0 +1,14 @@
+{
+ "pasos_minimos": {
+  "T1": 16,
+  "T2": 12,
+  "T3": 27,
+  "T4": 8
+ },
+ "problemas": [],
+ "datos": [
+  "paso 39 (direccion): la ruta elige «Sí»; si es un dato personal, ponlo en datos_prueba (un perfil que no inventa datos se detiene)",
+  "paso 44 (referencias): la ruta escribe «Casa blanca con reja verde» y los datos de prueba no lo traen",
+  "paso 57 (diaPago): la ruta elige «Viernes»; si es un dato personal, ponlo en datos_prueba (un perfil que no inventa datos se detiene)"
+ ]
+}

@@ -45,6 +45,7 @@ class Llamada:
     modelo: str = "sonnet"
     persistir: bool = False  # True si otra llamada la va a reanudar
     meta: dict = field(default_factory=dict)  # se guarda tal cual junto al resultado
+    imagenes: list[Path] = field(default_factory=list)  # van dentro del mensaje: el modelo no gasta una vuelta en abrirlas
 
 
 @dataclass
@@ -78,7 +79,12 @@ def correr(ll: Llamada, reintentos: int = 2, timeout: int = 900) -> Resultado:
     cwd = _carpeta(ll.reanudar)
     for f in ll.archivos:
         shutil.copy(f, cwd / Path(f).name)
-    cmd = ["claude", "-p", ll.prompt, "--model", ll.modelo, "--output-format", "json", *AISLAR]
+    if ll.imagenes:
+        # imágenes en el mensaje (stream-json): una sola vuelta del modelo por llamada, sin la herramienta Read
+        cmd = ["claude", "-p", "--input-format", "stream-json", "--output-format", "stream-json", "--verbose",
+               "--model", ll.modelo, *AISLAR]
+    else:
+        cmd = ["claude", "-p", ll.prompt, "--model", ll.modelo, "--output-format", "json", *AISLAR]
     if ll.system:
         sp = cwd / f".sistema-{abs(hash(ll.id))}.md"
         sp.write_text(ll.system + AVISO_ENTORNO, encoding="utf-8")
@@ -92,12 +98,13 @@ def correr(ll: Llamada, reintentos: int = 2, timeout: int = 900) -> Resultado:
         cmd += ["--resume", ll.reanudar]
     if not ll.persistir and not ll.reanudar:
         cmd += ["--no-session-persistence"]
+    entrada = _mensaje(ll) if ll.imagenes else None
     err = None
     for intento in range(reintentos + 1):
         t0 = time.time()
         try:
-            r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
-            o = json.loads(r.stdout)
+            r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout, input=entrada)
+            o = _resultado_stream(r.stdout) if ll.imagenes else json.loads(r.stdout)
             if o.get("is_error"):
                 raise RuntimeError(o.get("result") or o.get("subtype"))
             salida = o.get("structured_output")
@@ -113,6 +120,27 @@ def correr(ll: Llamada, reintentos: int = 2, timeout: int = 900) -> Resultado:
             err = f"{type(e).__name__}: {e}"[:500]
             time.sleep(3 * (intento + 1))
     return Resultado(ll.id, False, None, "", None, 0.0, 0.0, error=err, meta=ll.meta)
+
+
+def _mensaje(ll: Llamada) -> str:
+    import base64
+
+    tipos = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
+    contenido = [{"type": "image", "source": {"type": "base64", "media_type": tipos.get(Path(f).suffix.lower(), "image/png"),
+                                              "data": base64.b64encode(Path(f).read_bytes()).decode()}} for f in ll.imagenes]
+    contenido.append({"type": "text", "text": ll.prompt})
+    return json.dumps({"type": "user", "message": {"role": "user", "content": contenido}}, ensure_ascii=False) + "\n"
+
+
+def _resultado_stream(salida: str) -> dict:
+    for linea in reversed(salida.splitlines()):
+        try:
+            o = json.loads(linea)
+        except json.JSONDecodeError:
+            continue
+        if o.get("type") == "result":
+            return o
+    raise RuntimeError(f"sin resultado en la salida: {salida[-300:]}")
 
 
 def _json_de(t: str) -> dict | None:

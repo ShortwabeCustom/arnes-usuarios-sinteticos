@@ -67,8 +67,20 @@ def texto(d: dict | None) -> str:
     return f"{cifra(t)} tokens" + (f" · {cifra(n)} nuevos (el resto es relectura de caché)" if n < 0.95 * t else "")
 
 
-def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = CAPTURA_TELEFONO) -> dict:
+# Modo ligero (memoria: bitacora): una llamada nueva por paso. El prompt del perfil se relee de caché; lo nuevo es la
+# tarea, la lista de elementos, la bitácora (≈ 120 tokens por paso ya hecho) y la captura. [SUPUESTO] hasta calibrar.
+LIGERO = dict(sistema=7_600, texto_paso=2_400, bitacora_por_paso=120, salida_por_paso=890)
+
+
+def estimar_recorrido(pasos: int, sesiones: int = 1, captura: tuple[int, int] = CAPTURA_TELEFONO, memoria: str = "completa",
+                      capturas_por_paso: int = 2) -> dict:
     """Tokens esperados de `sesiones` recorridos de `pasos` pasos (más la pregunta final), con capturas de `captura`."""
+    if memoria == "bitacora":
+        m = LIGERO
+        nuevo = sum(m["texto_paso"] + m["bitacora_por_paso"] * k + capturas_por_paso * tokens_imagen(*captura) for k in range(pasos))
+        d = dict(entrada=0, cache_escritura=nuevo + 2_000, cache_lectura=m["sistema"] * (pasos + 1),
+                 salida=m["salida_por_paso"] * pasos + 60)
+        return {k: v * sesiones for k, v in d.items()}
     m = RECORRIDO
     crece = m["texto_por_paso"] + 2 * tokens_imagen(*captura)
     ctx = [m["contexto_inicial"] + crece * k for k in range(pasos)]

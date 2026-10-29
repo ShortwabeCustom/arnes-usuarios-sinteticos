@@ -176,7 +176,8 @@ def simular(e: Estudio, integrante: str, tarea: str | None = None, corridas: int
     for t in tareas:
         pasos = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
         n = len(ids) * ncorr
-        est = consumo.estimar_recorrido(pasos, n, captura=_captura_estimada(c))
+        est = consumo.estimar_recorrido(pasos, n, captura=_captura_estimada(c), memoria=c.get("memoria", "completa"),
+                                       capturas_por_paso=c.get("capturas_por_paso", 1 if c.get("memoria") == "bitacora" else 2))
         tot = consumo.sumar(tot, est)
         filas.append((t["id"], n, pasos, "pasos_esperados" if t.get("pasos_esperados") else "max_pasos (techo)", est))
     print(f"{len(ids)} perfil(es) × {ncorr} corrida(s):")
@@ -274,8 +275,9 @@ def _sesiones(e, panel, integrante, tarea, guion, corridas, sala) -> list[dict]:
                    inicio=time.strftime("%Y-%m-%dT%H:%M:%S"), pasos=[], costo_usd=0.0, tokens=consumo.sumar())
         if sala:
             pasos_est = int(t.get("pasos_esperados") or t.get("max_pasos") or c.get("max_pasos", 25))
-            sala.iniciar_sesion(reg, t, t.get("max_pasos", c.get("max_pasos", 25)),
-                                consumo.total(consumo.estimar_recorrido(pasos_est, 1, captura=_captura_estimada(c))))
+            sala.iniciar_sesion(reg, t, t.get("max_pasos", c.get("max_pasos", 25)), consumo.total(consumo.estimar_recorrido(
+                pasos_est, 1, captura=_captura_estimada(c), memoria=c.get("memoria", "completa"),
+                capturas_por_paso=c.get("capturas_por_paso", 1 if c.get("memoria") == "bitacora" else 2))))
         try:
             if guion:
                 _guion(e, nav, it, t, cap, reg)
@@ -314,14 +316,35 @@ def _captura_estimada(c: dict) -> tuple[int, int]:
 def _autonomo(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
     _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala)
     ses = reg.pop("_ses", None)
-    if ses and reg.get("resultado") not in ("fallo_max_pasos", "fallo_instrumento"):
-        r = motor.llamar(motor.Llamada(f"{reg['id']}-ces", "La sesión terminó. Pensando en todo lo que hiciste para esta tarea, "
-                                       "¿qué tan fácil o difícil te resultó? Responde en JSON: «ces» de 1 (muy difícil) a 7 (muy fácil) "
-                                       "y «texto» con una frase de por qué.", sistema, ESQUEMA_CES, [], [], reanudar=ses,
-                                       modelo=modelo, persistir=True))
+    bit = reg.pop("_bitacora", None)
+    if (ses or bit) and reg.get("resultado") not in ("fallo_max_pasos", "fallo_instrumento"):
+        pregunta = ("La sesión terminó. Pensando en todo lo que hiciste para esta tarea, ¿qué tan fácil o difícil te resultó? "
+                    "Responde en JSON: «ces» de 1 (muy difícil) a 7 (muy fácil) y «texto» con una frase de por qué.")
+        if bit:
+            pregunta = _recuerdo(t, datos, bit) + pregunta
+        r = motor.llamar(motor.Llamada(f"{reg['id']}-ces", pregunta, sistema, ESQUEMA_CES, [], [], reanudar=ses,
+                                       modelo=modelo, persistir=bool(ses)))
         reg["ces"] = r.salida
         reg["costo_usd"] += r.costo_usd
         reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
+
+
+def _recuerdo(t: dict, datos: str, bitacora: list[str], ultimos: int = 40) -> str:
+    """Modo bitácora: lo que el perfil sabe al empezar cada llamada (escenario, tarea, datos y su propio recorrido)."""
+    s = (f"{' '.join(t.get('escenario', '').split())}\n\nTu tarea: {' '.join(t['instruccion'].split())}\n\n"
+         f"Datos de prueba (ficticios) por si el producto te los pide:\n{datos}\n\n")
+    if bitacora:
+        omit = len(bitacora) - ultimos
+        s += ("Lo que llevas hecho en esta tarea (tu memoria, en tus palabras):\n" + ("(…pasos anteriores…)\n" if omit > 0 else "")
+              + "\n".join(bitacora[-ultimos:]) + "\n\n")
+    return s
+
+
+def _linea(n, pid, p, desc, resultado, avisos=(), pestana=None) -> str:
+    extra = (f" Apareció y se fue un aviso: {' · '.join(f'«{a}»' for a in avisos)}." if avisos else "")
+    extra += (f" Se abrió una pestaña con «{pestana.get('titulo')}» y volviste." if pestana else "")
+    return (f"- Paso {n} ({pid}): pensaste «{p.get('pensamiento', '')}»; {desc}: {resultado}.{extra} "
+            f"Confianza {p.get('confianza')}, fricción {p.get('friccion')}.")
 
 
 def _recortar(material, info, png, marcas) -> list[int] | None:
@@ -349,6 +372,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
     texto_inicio = info.get("texto")
     retoma = t.get("retoma")
     ses, aviso, quietos = None, "", 0
+    ligero, bitacora = c.get("memoria") == "bitacora", []
     friccion_max, sin_resp = 0, 0
     for n in range(1, t.get("max_pasos", c.get("max_pasos", 25)) + 1):
         png, marcas = cap / f"p{n:02d}.png", cap / f"p{n:02d}-marcas.png"
@@ -360,12 +384,16 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
         if _fin_alcanzado(t.get("fin"), info, material):
             reg["resultado"] = "exito" if friccion_max < 3 and not sin_resp else "exito_con_friccion"
             reg["pasos"].append(dict(n=n, pantalla=pid, url=info["url"], captura=str(png.relative_to(e.dir)), fin=True))
-            if t.get("pregunta_cierre") and ses:
-                r = motor.llamar(motor.Llamada(
-                    f"{reg['id']}-cierre", f"Llegaste a esta pantalla: `{png.name}` (ábrela con Read). Aquí termina la tarea; no "
-                    f"toques nada. {' '.join(t['pregunta_cierre'].split())} Responde en JSON: «respuesta» (qué harías o "
-                    "contestarías), «por_que» (en tus palabras) y «confianza» de 0 a 100.",
-                    sistema, ESQUEMA_CIERRE, ["Read"], [png], reanudar=ses, modelo=modelo, persistir=True))
+            if t.get("pregunta_cierre") and (ses or bitacora):
+                cola = (f"Aquí termina la tarea; no toques nada. {' '.join(t['pregunta_cierre'].split())} Responde en JSON: "
+                        "«respuesta» (qué harías o contestarías), «por_que» (en tus palabras) y «confianza» de 0 a 100.")
+                if ligero:
+                    ll = motor.Llamada(f"{reg['id']}-cierre", _recuerdo(t, datos, bitacora) + "Llegaste a la pantalla de la imagen. "
+                                       + cola, sistema, ESQUEMA_CIERRE, modelo=modelo, imagenes=[png])
+                else:
+                    ll = motor.Llamada(f"{reg['id']}-cierre", f"Llegaste a esta pantalla: `{png.name}` (ábrela con Read). " + cola,
+                                       sistema, ESQUEMA_CIERRE, ["Read"], [png], reanudar=ses, modelo=modelo, persistir=True)
+                r = motor.llamar(ll)
                 reg["cierre"] = dict(pregunta=t["pregunta_cierre"], **(r.salida or {}))
                 reg["costo_usd"] += r.costo_usd
                 reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
@@ -385,20 +413,36 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
                                          sin_zonas=True))
                 print(f"  ! {reg['nota_instrumento']}")
                 return
-        intro = ""
-        if n == 1:
-            intro = (f"{' '.join(t.get('escenario', '').split())}\n\nTu tarea: {' '.join(t['instruccion'].split())}\n\n"
-                     f"Datos de prueba (ficticios) por si el producto te los pide:\n{datos}\n\n")
-        prompt = (f"{intro}{aviso}Paso {n}. La pantalla actual es `{png.name}`: ábrela con Read y mírala como la verías en tu "
-                  f"celular. En `{marcas.name}` está la misma pantalla con números sobre los {len(zonas)} elementos que responden "
-                  f"al toque. Mira primero la limpia; usa la marcada solo para indicar dónde actúas.\n\n"
-                  f"{_lista_zonas(material, zonas)}{FORMATO}\n\n{PLANTILLA}")
+        if ligero:
+            # modo ligero: llamada nueva por paso con la bitácora de lo hecho y solo la pantalla actual, dentro del mensaje.
+            # El costo crece lineal con los pasos, no con su cuadrado. [SUPUESTO METODOLÓGICO] (validar contra el modo completo)
+            una = c.get("capturas_por_paso", 1) == 1
+            prompt = (f"{_recuerdo(t, datos, bitacora)}{aviso}Paso {n}. "
+                      + (f"La imagen es la pantalla actual, como la ves en tu celular, con números sobre los {len(zonas)} elementos "
+                         "que responden al toque (en tu celular no los ves; úsalos solo para indicar dónde actúas).\n\n" if una else
+                         f"La primera imagen es la pantalla actual, como la ves en tu celular; la segunda es la misma con números sobre "
+                         f"los {len(zonas)} elementos que responden al toque. Usa la numerada solo para indicar dónde actúas.\n\n")
+                      + f"{_lista_zonas(material, zonas)}{FORMATO}\n\n{PLANTILLA}")
+            ll = motor.Llamada(f"{reg['id']}-p{n}", prompt, sistema, ESQUEMA, modelo=modelo, imagenes=[marcas] if una else [png, marcas])
+        else:
+            intro = ""
+            if n == 1:
+                intro = (f"{' '.join(t.get('escenario', '').split())}\n\nTu tarea: {' '.join(t['instruccion'].split())}\n\n"
+                         f"Datos de prueba (ficticios) por si el producto te los pide:\n{datos}\n\n")
+            prompt = (f"{intro}{aviso}Paso {n}. La pantalla actual es `{png.name}`: ábrela con Read y mírala como la verías en tu "
+                      f"celular. En `{marcas.name}` está la misma pantalla con números sobre los {len(zonas)} elementos que responden "
+                      f"al toque. Mira primero la limpia; usa la marcada solo para indicar dónde actúas.\n\n"
+                      f"{_lista_zonas(material, zonas)}{FORMATO}\n\n{PLANTILLA}")
+            ll = motor.Llamada(f"{reg['id']}-p{n}", prompt, sistema, ESQUEMA, ["Read"], [png, marcas],
+                               reanudar=ses, modelo=modelo, persistir=True)
         if sala:
             sala.pantalla(n, pid, png, len(zonas))
-        r = motor.llamar(motor.Llamada(f"{reg['id']}-p{n}", prompt, sistema, ESQUEMA, ["Read"], [png, marcas],
-                                       reanudar=ses, modelo=modelo, persistir=True))
-        ses = r.session_id
-        reg["_ses"] = ses
+        r = motor.llamar(ll)
+        if ligero:
+            reg["_bitacora"] = bitacora
+        else:
+            ses = r.session_id
+            reg["_ses"] = ses
         reg["costo_usd"] += r.costo_usd
         reg["tokens"] = consumo.sumar(reg["tokens"], r.tokens)
         p = r.salida
@@ -427,6 +471,7 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
         if accion is None:
             paso["respuesta"] = "fuera_de_marcas"
             aviso = f"Resultado del paso anterior: {desc}\n\n"
+            bitacora.append(_linea(n, pid, p, desc, "no pasó nada"))
             reg["pasos"].append(paso)
             quietos += 1
             info = nav.paso(actual)
@@ -472,9 +517,12 @@ def _bucle(e, nav, it, t, cap, reg, sistema, datos, modelo, sala=None):
                 aviso += ("Mientras tanto apareció un aviso en tu pantalla que ya se quitó: "
                           + " · ".join(f"«{x}»" for x in info["avisos_idos"]) + "\n\n")
             reg["pasos"].append(paso)
+            bitacora.append(_linea(n, pid, p, desc, "la pantalla cambió" if cambio else "no pasó nada visible",
+                                   info.get("avisos_idos") or [], info.get("pestana_nueva")))
             if retoma and n == retoma.get("tras_paso") and "retoma" not in reg:
                 info, nota = _interrumpir(e, nav, actual, t, info, texto_inicio, retoma, reg, material)
                 aviso += nota
+                bitacora.append(f"(después del paso {n} saliste de la app y volviste a entrar)")
         if quietos >= c.get("max_sin_cambio", 4):
             reg["resultado"] = "atascado"
             return
@@ -790,3 +838,113 @@ def _heatmaps_toques(e: Estudio, S: list[dict]):
             col = (34, 160, 90, 110) if ok else (210, 50, 40, 140)
             d.ellipse([x - 16, y - 16, x + 16, y + 16], fill=col, outline=col[:3] + (255,), width=2)
         Image.alpha_composite(im, capa).convert("RGB").save(e.ruta("heatmaps", f"toques-{slug(pid)}.png"))
+
+
+# ---------------------------------------------------------------------------------------------
+# Ensayo sin modelo (0 tokens)
+
+JS_CAJA = r"""async (page) => { const s = __S__;
+  const l = s.selector ? page.locator(s.selector) : s.etiqueta ? page.getByLabel(s.etiqueta, { exact: !!s.exacto })
+    : page.getByRole(s.rol || 'button', s.nombre ? { name: s.nombre, exact: !!s.exacto } : {});
+  const el = s.ultimo ? l.last() : l.first();
+  await el.waitFor({ state: 'visible', timeout: __ESPERA__ }).catch(() => {});
+  return JSON.stringify(await el.boundingBox().catch(() => null)); }"""
+
+
+def ensayar(e: Estudio, visible: bool = False) -> dict:
+    """Recorre la `ruta_mecanica` como lo haría un perfil (elementos numerados, toque en su centro, escribir, desplazar),
+    sin llamar al modelo. Encuentra antes de gastar tokens lo que en OU 2.0 MVP costó 5.6 M: objetivos que el perfil no
+    puede tocar, tareas cuyo fin no se alcanza y datos que la ruta usa pero los datos de prueba no traen. Da los pasos
+    mínimos por tarea (para `pasos_esperados` y la estimación de tokens)."""
+    import re
+
+    c = e.cfg
+    if c.get("material") != "web" or not c.get("ruta_mecanica"):
+        raise SystemExit("El ensayo necesita material web y `ruta_mecanica` en estudio.yaml.")
+    disp = c.get("dispositivo") or {}
+    d = e.ruta("datos", "ensayo")
+    d.mkdir(parents=True, exist_ok=True)
+    nav = Navegador("arnes-ensayo", "web", e.ruta("datos", "navegador"), (disp.get("ancho", 412), disp.get("alto", 839)),
+                    emular=disp.get("emular"), pantalla=c.get("pantalla"))
+    tareas = c.get("tareas", [])
+    inicio = {t.get("inicia_en"): t["id"] for t in tareas if t.get("inicia_en")}
+    fines = {t["id"]: {str(x) for x in (t.get("fin") or {}).get("pantallas") or (t.get("fin") or {}).get("node_ids") or []} for t in tareas}
+    actual = tareas[0]["id"] if tareas and not tareas[0].get("inicia_en") else None
+    conteo, problemas, avisos_datos = {t["id"]: 0 for t in tareas}, [], []
+    seguidos = 0                                  # pasos seguidos sin encontrar el objetivo: la ruta se desvió
+    datos_txt = " ".join(str(v) for v in (c.get("datos_prueba") or {}).values()).lower()
+    norm = lambda x: re.sub(r"[^a-z0-9áéíóúñ]", "", str(x).lower())  # noqa: E731
+    png = d / "paso.png"
+    nav.abrir(c["url"], visible=visible)
+    try:
+        info = nav.paso(png, {"tipo": "limpiar_datos", "url": c["url"]}, instrumentar=True)
+        for i, s in enumerate(c["ruta_mecanica"], 1):
+            est = info.get("estado")
+            if est in inicio:
+                actual = inicio[est]
+            dato = s.get("llenar", s.get("teclear"))
+            if dato is not None and norm(dato) and norm(dato) not in norm(datos_txt):
+                avisos_datos.append(f"paso {i} ({est}): la ruta escribe «{dato}» y los datos de prueba no lo traen")
+            if s.get("rol") == "radio" and est not in ("producto", "simulador") and s.get("nombre") and norm(s["nombre"]) not in norm(datos_txt):
+                avisos_datos.append(f"paso {i} ({est}): la ruta elige «{s['nombre']}»; si es un dato personal, ponlo en datos_prueba "
+                                    "(un perfil que no inventa datos se detiene)")
+            caja, zona = None, None
+            for intento in range(4):              # si no lo ve, desliza (hasta 3 veces)
+                espera = (s.get("timeout") or 15000) if intento == 0 else 1000   # tras desplazar, ya cargó
+                caja = nav.ejecutar(JS_CAJA.replace("__S__", json.dumps(s)).replace("__ESPERA__", str(espera)))
+                info = nav.paso(png, observar_ms=0)
+                m = info.get("marco") or {"w": 412, "h": 839}
+                if isinstance(caja, dict):          # la zona visible del objetivo (la que un perfil vería numerada)
+                    zona = next((z for z in info.get("zonas", []) if caja["x"] <= z["tocar"][0] <= caja["x"] + caja["width"]
+                                 and caja["y"] <= z["tocar"][1] <= caja["y"] + caja["height"]), None)
+                if zona or intento == 3:
+                    break
+                # como un perfil: desliza de a poco, hacia arriba si el objetivo quedó arriba (una lista dentro de una hoja)
+                arriba = isinstance(caja, dict) and caja["y"] + caja["height"] / 2 < m["h"] * 0.45
+                info = nav.paso(png, {"tipo": "desplazar", "x": m["w"] // 2, "y": round(m["h"] * 0.62), "dy": -200 if arriba else 300},
+                                observar_ms=0)
+                if actual:
+                    conteo[actual] += 1
+            print(f"  paso {i}/{len(c['ruta_mecanica'])} · {est} · {s.get('nombre') or s.get('etiqueta') or s.get('selector')}"
+                  + ("" if zona else " · no encontrado"), flush=True)
+            seguidos = 0 if zona else seguidos + 1
+            if seguidos >= 3:
+                problemas.append(f"la ruta se desvió: 3 pasos seguidos sin encontrar su objetivo (desde el paso {i - 2}); "
+                                 "revisa la ruta antes de ese punto. Ensayo detenido.")
+                break
+            if not zona:
+                problemas.append(f"paso {i} ({info.get('estado')}): «{s.get('nombre') or s.get('etiqueta') or s.get('selector')}» "
+                                 + ("no aparece en pantalla" if not isinstance(caja, dict) else "no está entre los elementos que ve el perfil"))
+                info = nav.paso(png, {"tipo": "mecanico", "pasos": [s]}, max_ms=60000)      # seguir con la ruta para revisar el resto
+            else:
+                texto = dato
+                if s.get("teclear_patron"):
+                    m = re.search(s["teclear_patron"], " ".join([info.get("texto") or ""] + (info.get("avisos_nuevos") or [])), re.S)
+                    texto = (m.group(1) if m and m.groups() else m.group(0)) if m else None
+                    if texto is None:
+                        problemas.append(f"paso {i} ({info.get('estado')}): el perfil no tendría a la vista el texto {s['teclear_patron']}")
+                if texto is not None and zona.get("editable"):
+                    accion = dict(tipo="escribir", x=zona["tocar"][0], y=zona["tocar"][1], texto=str(texto))
+                else:
+                    accion = dict(tipo="tocar", x=zona["tocar"][0], y=zona["tocar"][1])
+                info = nav.paso(png, accion, max_ms=60000)
+            if actual:
+                conteo[actual] += 1
+            if info.get("error_accion"):
+                problemas.append(f"paso {i}: {info['error_accion']}")
+            if actual and info.get("estado") in fines.get(actual, set()):
+                actual = inicio.get(info.get("estado"))   # la siguiente tarea empieza donde termina esta
+    finally:
+        nav.cerrar()
+    png.unlink(missing_ok=True)
+    res = dict(pasos_minimos=conteo, problemas=problemas, datos=avisos_datos)
+    e.ruta("datos", "ensayo.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+    print("Ensayo sin modelo (0 tokens):")
+    for t in tareas:
+        print(f"  {t['id']}: {conteo[t['id']]} pasos mínimos (pasos_esperados en estudio.yaml: {t.get('pasos_esperados', '—')})")
+    for x in problemas:
+        print("  ✕ " + x)
+    for x in avisos_datos:
+        print("  ! " + x)
+    print("Sin problemas del instrumento." if not problemas else f"{len(problemas)} problemas: corrígelos antes del piloto.")
+    return res

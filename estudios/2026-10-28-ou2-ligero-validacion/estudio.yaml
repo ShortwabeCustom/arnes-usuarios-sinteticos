@@ -1,0 +1,171 @@
+# Estudio de recorrido de un flujo interactivo (prototipo Figma o sitio web real).
+# Validación del modo ligero (memoria: bitacora) contra el modo completo: mismas tareas, panel y URL que
+# estudios/2026-10-28-ou2-pwa-mvp, que corrió en modo completo. Es un estudio del instrumento, no del producto.
+id: 2026-10-28-ou2-ligero-validacion
+titulo: "Validación del modo ligero: ¿los perfiles llegan a lo mismo con una bitácora y una captura por paso?"
+pregunta_principal: "¿El modo ligero reproduce los resultados del modo completo en T1 y T3 de la PWA de OU 2.0 (éxito, abandono, fricciones principales y primer toque) con mucho menos consumo?"
+metodo: recorrido
+fecha: "2026-10-28"
+autor: "Alexis Valdez + Claude"
+producto: "Originación Única · PWA"
+marca: {color: "#0B6B4F", nombre: "Banco Azteca"}
+
+# Estándares de UiX (fuentes-equipo/uix/). Con este bloque el reporte se llama proyecto-metodologia-tema_aaaa-mm-dd-vN
+# y el tema lleva «-sintetico» al final, para que no se confunda con un estudio hecho con personas.
+uix:
+  proyecto: oupwa
+  metodologia: pdu
+  tema: validacion-modo-ligero
+  version: 1
+  cliente: "Originación Única · PWA"
+  autorizacion: "Alexis Valdez"
+  alcance: descriptiva
+  decision: {impacto: alto, incertidumbre: media}
+
+guia_estilo: pwa
+biblioteca: pwa
+panel: base4              # el mismo panel que la primera medición (OU 2.0 en Figma): las dos se pueden comparar
+modelo: sonnet
+
+material: web
+# MVP en una URL de pruebas: los servicios son simulados (sin reglas de negocio del backend). Escenarios por URL:
+# velocidad=rapida (esperas ×10 más cortas), camara=simulada, ubicacion=simulada (Del Valle, CDMX). El resto queda en
+# su valor por omisión: OTP correcto, selfie aprobada, INE válida, dirección encontrada, evaluación aprobada, agenda
+# disponible. [SUPUESTO METODOLÓGICO] Las esperas reales declaradas por la app son 20, 45, 40 y 18 s.
+url: "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada"
+pantalla: {selector: ".marco", atributo: "data-estado"}   # la URL no cambia: la app declara su pantalla en data-estado
+pantalla_inicio: bienvenida
+dispositivo: {emular: "Pixel 7", ancho: 412, alto: 839}   # celular Android emulado: toque, densidad y agente de usuario
+visible: true            # ventana visible con subtítulos + sala de observación en vivo
+observacion: true
+video: false             # sin video: la comparación usa registros y capturas
+limpiar_datos: true      # cada sesión empieza como alguien que nunca abrió la app
+max_pasos: 30
+memoria: bitacora         # lo que se valida: una llamada por paso con bitácora y una captura
+corridas: 1
+baseline_url: null
+sin_baseline_porque: "La línea base es el modo completo: sesiones de T1 y T3 de estudios/2026-10-28-ou2-pwa-mvp (mismo panel, misma URL, 2 corridas)."
+max_sin_cambio: 4
+
+# Datos claramente ficticios. Nunca datos personales reales.
+datos_prueba:
+  nombre: "Prueba"
+  apellidos: "Ficticio Demo"
+  celular: "5500000000"
+  correo: "prueba@example.com"
+  fecha_de_nacimiento: "15/05/1990"
+  domicilio: "Calle Prueba 100, código postal 03100 (Ciudad de México)"
+  estado_civil: "soltero(a)"
+  ocupacion: "empleado(a)"   # agregados el 28/10/2026 tras T3-arturo (faltaban: el perfil no quiso inventarlos)
+  codigo_de_verificacion: "el que te llegue en el mensaje"
+  nota: "En esta prueba la cámara y la ubicación son simuladas: la app usa una foto de ejemplo en lugar de tu cámara. Es parte de la prueba, no una falla de tu teléfono."
+
+# Ruta mecánica: lo que haría alguien que ya conoce el camino, por rol y texto. La usa `arnes tecnico` (auditoría sin
+# perfiles, 0 tokens) y prepara las tareas que no empiezan en la bienvenida (`inicia_en`). No cuenta en las métricas
+# de las tareas.
+ruta_mecanica:
+  - {nombre: "Inicia tu solicitud"}
+  - {rol: radio, nombre: "Efectivo"}
+  - {nombre: "Continuar"}
+  - {nombre: "¿En cuántas semanas quieres pagar?"}
+  - {rol: radio, nombre: "52 semanas"}
+  - {nombre: "Continuar", ultimo: true}
+  - {nombre: "Confirmar"}
+  - {etiqueta: "¿Cómo prefieres que te llamemos?", llenar: "Prueba"}
+  - {etiqueta: "¿Cuál es tu número celular?", llenar: "5500000000"}
+  - {etiqueta: "¿Cuál es tu correo electrónico?", llenar: "prueba@example.com"}
+  - {nombre: "Continuar"}
+  - {selector: "input[autocomplete=one-time-code]", teclear_patron: "verificaci[oó]n[^0-9]*([0-9]{6})"}   # lo lee del mensaje simulado
+  - {nombre: "¡Sigamos adelante!", timeout: 30000}
+  - {rol: radio, nombre: "No", exacto: true}
+  - {nombre: "Confirmar"}
+  - {nombre: "Tomar foto"}
+  - {nombre: "Continuar"}
+  - {nombre: "Permitir", exacto: true}
+  - {nombre: "Tomar selfie"}
+  - {nombre: "¡Sigamos adelante!", timeout: 30000}
+  - {nombre: "Continuar"}
+  - {nombre: "Permitir", exacto: true}   # ubicación (app)
+  - {nombre: "Permitir", exacto: true}   # ubicación (Incode)
+  - {nombre: "Permitir", exacto: true}   # cámara (Incode)
+  - {nombre: "Escanear", exacto: true}    # tutorial del frente
+  - {nombre: "Escanear el reverso", timeout: 30000}
+  - {nombre: "¡Sigamos adelante!", timeout: 45000}
+  - {etiqueta: "Primer apellido", llenar: "Ficticio"}
+  - {etiqueta: "Segundo apellido (opcional)", llenar: "Demo"}
+  - {nombre: "Selecciona una opción"}
+  - {rol: radio, nombre: "Soltero(a)"}
+  - {nombre: "Continuar", ultimo: true}
+  - {nombre: "Selecciona una opción"}
+  - {rol: radio, nombre: "Empleado", exacto: true}
+  - {nombre: "Continuar", ultimo: true}
+  - {etiqueta: "Fecha de nacimiento", teclear: "15051990"}
+  - {nombre: "Continuar", ultimo: true, timeout: 30000}
+  - {nombre: "Continuar", timeout: 30000}
+  - {rol: radio, nombre: "Sí", exacto: true}
+  - {etiqueta: "Calle", llenar: "Calle Prueba"}
+  - {etiqueta: "No. exterior", llenar: "100"}
+  - {etiqueta: "Código postal", teclear: "03100"}
+  - {nombre: "Confirmar", timeout: 20000}
+  - {etiqueta: "Agrega las referencias para llegar", llenar: "Casa blanca con reja verde"}
+  - {nombre: "No aplica"}
+  - {nombre: "No aplica"}
+  - {nombre: "No aplica"}
+  - {nombre: "No aplica"}
+  - {nombre: "Confirmar"}
+  - {nombre: "Confirmar", timeout: 20000}
+  - {nombre: "Sí, es mi fachada"}
+  - {nombre: "Continuar", timeout: 60000}
+  - {nombre: "Continuar"}
+  - {rol: radio}
+  - {rol: radio, nombre: "a.m."}
+  - {nombre: "Confirmar"}
+  - {rol: radio, nombre: "Viernes"}
+  - {nombre: "Confirmar"}
+  - {nombre: "Continuar", timeout: 30000}
+
+tecnico:
+  retoma_en: [otp, datosPersonales, oferta]   # recargar y volver a entrar en estos puntos
+  cpu_ruta: 4
+
+# Cuatro tareas por etapas: una sesión de 80 pasos costaría ≈ 21 M de tokens; por etapas, cada sesión arranca con
+# contexto limpio. Las tareas 2–4 empiezan donde las deja la ruta mecánica (el perfil no hizo lo anterior: el
+# escenario se lo cuenta). [SUPUESTO METODOLÓGICO]
+tareas:
+  - id: T1
+    escenario: "Quieres un préstamo en efectivo y entraste desde tu celular a la app de Banco Azteca para pedirlo. Nadie te está ayudando: lo haces por tu cuenta."
+    instruccion: "Pide un préstamo en efectivo: elige cuánto y en cuánto tiempo, deja tus datos de contacto y sigue hasta donde la app te pida tomarte una foto."
+    exito: "Llega a «¡Empezamos con tu selfie!» habiendo elegido monto y plazo y verificado su celular."
+    fin: {pantallas: [selfieIntro]}
+    max_pasos: 26
+    pasos_esperados: 18
+    primer_toque: {etiqueta_contiene: "Inicia tu solicitud"}
+  - id: T3
+    inicia_en: datosPersonales
+    escenario: "Ya verificaste tu identidad con tu selfie y tu INE. Ahora la app te pide revisar tus datos y tu domicilio para evaluar tu solicitud."
+    instruccion: "Revisa y completa tus datos y tu domicilio hasta que la app te diga cuánto te puede prestar."
+    exito: "Llega a la oferta («te podemos prestar hasta…»)."
+    fin: {pantallas: [oferta]}
+    primer_toque: {etiqueta_contiene: "apellido"}   # el primer campo vacío
+    max_pasos: 34
+    pasos_esperados: 26
+    retoma: {tras_paso: 10, modo: reabrir}   # a mitad de la tarea sale de la app y vuelve a entrar
+
+# Criterios de validación (comparación con las mismas tareas del modo completo, 16 sesiones de T1 y T3).
+hipotesis:
+  - id: V1
+    texto: "El modo ligero da el mismo resultado por perfil y tarea que el modo completo (éxito, éxito con fricción o abandono)."
+    se_sostiene_si: "En 6 de las 8 sesiones o más el resultado coincide con al menos una de las 2 corridas del modo completo del mismo perfil y tarea."
+    se_cae_si: "Coinciden 5 o menos."
+  - id: V2
+    texto: "El modo ligero encuentra las mismas fricciones principales: el total a pagar que no aparece en el simulador (T1) y los apellidos y la fecha de nacimiento vacíos en «Confirma tus datos» (T3)."
+    se_sostiene_si: "Cada una aparece en al menos 2 de las 4 sesiones de su tarea, como en el modo completo."
+    se_cae_si: "Alguna aparece en menos de 2 sesiones."
+  - id: V3
+    texto: "El modo ligero no se pierde por falta de memoria: no repite pasos ya hechos ni se atasca más que el modo completo."
+    se_sostiene_si: "Pasos por sesión dentro de ±30% de la mediana del modo completo por tarea, sin sesiones atascadas nuevas."
+    se_cae_si: "Más de 30% de pasos extra o alguna sesión atascada que en modo completo no se atascó."
+  - id: V4
+    texto: "El modo ligero consume al menos 4 veces menos tokens por sesión que el modo completo en las mismas tareas."
+    se_sostiene_si: "Tokens totales por sesión (con relectura de caché) ≤ 25% del modo completo, por tarea."
+    se_cae_si: "Más de 25%."

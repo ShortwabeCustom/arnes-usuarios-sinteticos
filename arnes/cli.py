@@ -169,7 +169,34 @@ def cmd_recorrido(a):
         recorrido.simular(e, a.integrante, tarea=a.tarea, corridas=a.corridas)
         return
     _revisar_o_salir(e, a.forzar)
+    if a.integrante == "todos" and (a.paralelo or 1) > 1:
+        # un proceso por perfil (cada uno con su navegador y su sala), hasta `--paralelo` a la vez
+        import subprocess
+        from concurrent.futures import ThreadPoolExecutor
+
+        ids = [it.id for it in e.panel()]
+        extra = (["--tarea", a.tarea] if a.tarea else []) + (["--corridas", str(a.corridas)] if a.corridas else []) + ["--forzar"]
+        log = e.ruta("datos", "paralelo")
+        log.mkdir(parents=True, exist_ok=True)
+
+        def uno(i):
+            with open(log / f"{i}.log", "w", encoding="utf-8") as f:
+                return i, subprocess.run([sys.executable, "-m", "arnes.cli", "recorrido", str(e.dir), i, *extra], stdout=f,
+                                         stderr=subprocess.STDOUT).returncode
+
+        print(f"{len(ids)} perfiles, {a.paralelo} a la vez · bitácoras en {log}")
+        with ThreadPoolExecutor(a.paralelo) as ex:
+            for i, rc in ex.map(uno, ids):
+                print(f"  {i}: {'terminó' if rc == 0 else f'se detuvo (código {rc}); revisa su bitácora'}")
+        return
     recorrido.sesion(e, a.integrante, tarea=a.tarea, guion=a.guion, corridas=a.corridas)
+
+
+def cmd_ensayar(a):
+    from .metodos import recorrido
+
+    r = recorrido.ensayar(Estudio(a.estudio), visible=a.visible)
+    sys.exit(1 if r["problemas"] else 0)
 
 
 def cmd_tecnico(a):
@@ -333,7 +360,12 @@ def main(argv=None):
     x.add_argument("--corridas", type=int, help="repeticiones por integrante y tarea (para medir qué se repite)")
     x.add_argument("--simular", action="store_true", help="cuántas sesiones y tokens, sin correr nada")
     x.add_argument("--forzar", action="store_true")
+    x.add_argument("--paralelo", type=int, help="con «todos»: cuántos perfiles corren a la vez (un navegador cada uno)")
     x.set_defaults(fn=cmd_recorrido)
+    x = s.add_parser("ensayar", help="recorre las tareas como un perfil, sin modelo: lo que fallaría antes de gastar; 0 tokens")
+    x.add_argument("estudio")
+    x.add_argument("--visible", action="store_true")
+    x.set_defaults(fn=cmd_ensayar)
     x = s.add_parser("tecnico", help="auditoría técnica de un producto web (accesibilidad, rendimiento, PWA); 0 tokens")
     x.add_argument("estudio")
     x.add_argument("--visible", action="store_true", help="muestra la ventana del navegador mientras mide")

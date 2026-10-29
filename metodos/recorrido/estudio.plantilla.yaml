@@ -34,6 +34,8 @@ dispositivo: {ancho: 360, alto: 800}   # preset de «Prototype settings» en Fig
 visible: true            # ventana visible: permite ver el recorrido mientras corre
 video: true              # graba datos/videos/<sesión>.webm con el pensamiento del perfil superpuesto
 max_pasos: 25
+# memoria: bitacora      # modo ligero (en validación): una captura por paso y un resumen de lo hecho, en lugar de
+#                        # releer toda la sesión; ≈ 5× menos tokens. Sin la clave: modo completo (instrumento validado).
 corridas: 2              # repeticiones por perfil y tarea: «creer en lo que se repite»
 baseline_url: null       # diseño actual, para comparar; si no hay, explicarlo:
 # sin_baseline_porque: "…"
