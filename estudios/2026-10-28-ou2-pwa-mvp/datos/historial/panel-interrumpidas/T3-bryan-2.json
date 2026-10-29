@@ -1,0 +1,24 @@
+{
+ "id": "T3-bryan-2",
+ "tarea": "T3",
+ "corrida": 2,
+ "integrante": "bryan",
+ "nombre": "Bryan Nájera",
+ "perfil": "A",
+ "segmento": "Centennial · 43.9%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T14:30:14",
+ "pasos": [],
+ "costo_usd": 0.0,
+ "tokens": {
+  "entrada": 0,
+  "cache_escritura": 0,
+  "cache_lectura": 0,
+  "salida": 0
+ },
+ "video": "datos/videos/T3-bryan-2.webm",
+ "fin": "2026-10-28T14:30:38"
+}

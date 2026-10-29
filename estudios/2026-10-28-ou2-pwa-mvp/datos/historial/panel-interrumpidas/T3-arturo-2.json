@@ -1,0 +1,1219 @@
+{
+ "id": "T3-arturo-2",
+ "tarea": "T3",
+ "corrida": 2,
+ "integrante": "arturo",
+ "nombre": "Arturo Belmont",
+ "perfil": "D",
+ "segmento": "Boomer · 5.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T14:23:37",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p01.png",
+   "marcas": "datos/capturas/T3-arturo-2/p01-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y la letra de los títulos es grande, pero los campos vacíos tienen letra muy clarita y fina.",
+    "que_miras_primero": "El título grande que dice «Prueba, confirma tus datos» y la explicación de que debe coincidir con mi INE.",
+    "interpretacion": "Me piden revisar y llenar mis datos personales: nombre, apellidos y fecha de nacimiento. Más abajo parece que siguen otras preguntas, como estado civil y ocupación.",
+    "pensamiento": "Qué bueno que me dicen que debe coincidir con la INE, así sé para qué es. El nombre ya está, falta el primer apellido.",
+    "intencion": "Quiero llenar lo que falta, empezando por el primer apellido, que está vacío, y seguir hacia abajo hasta terminar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "El nombre ya viene puesto. Sigo con el primer apellido, que es el primer campo vacío, y pongo el apellido de mi INE."
+    },
+    "marca": 6,
+    "escribir": "Ficticio",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "La barra de arriba va casi llena y dice «Tu identificación», pero no sé cuántas preguntas más faltan, porque la pantalla sigue hacia abajo."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "D-08",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 478,
+    "texto": "Ficticio"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 454,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Primer apellido"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 2,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p02.png",
+   "marcas": "datos/capturas/T3-arturo-2/p02-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Sigue igual de clara; ya se ve mi apellido puesto y el campo marcado en verde.",
+    "que_miras_primero": "El recuadro verde con «Ficticio», para confirmar que sí se escribió.",
+    "interpretacion": "Mi primer apellido ya quedó. Faltan el segundo apellido, que es opcional, y la fecha de nacimiento.",
+    "pensamiento": "Ya quedó el apellido. El segundo apellido es opcional, pero mi INE trae los dos, así que lo pongo para que coincida.",
+    "intencion": "Quiero poner el segundo apellido, porque la pantalla dice que debe coincidir con la INE, y luego la fecha de nacimiento.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el segundo apellido para que coincida con mi INE, aunque diga opcional."
+    },
+    "marca": 8,
+    "escribir": "Demo",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Veo que voy llenando de arriba hacia abajo, pero no sé cuántas preguntas faltan después de la fecha."
+    },
+    "confianza": 62,
+    "friccion": 1,
+    "reglas": [
+     "D-08",
+     "D-03"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 566,
+    "texto": "Demo"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 542,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Segundo apellido (opcional)"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 3,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p03.png",
+   "marcas": "datos/capturas/T3-arturo-2/p03-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ya casi está esta parte; solo me falta la fecha de nacimiento.",
+    "que_miras_primero": "El campo vacío de fecha, que tiene el formato DD/MM/AAAA en letra muy clarita.",
+    "interpretacion": "Me piden la fecha de nacimiento y me indican cómo escribirla: día, mes y año.",
+    "pensamiento": "Me dicen cómo ponerla, eso ayuda. La letra gris casi no se lee, pero con el ejemplo me oriento.",
+    "intencion": "Quiero escribir la fecha de nacimiento tal como lo indica el formato.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo la fecha en el formato día/mes/año que indica el campo."
+    },
+    "marca": 10,
+    "escribir": "15/05/1990",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Voy bien con esta tarjeta, pero abajo hay más preguntas y no sé cuántas son."
+    },
+    "confianza": 62,
+    "friccion": 1,
+    "reglas": [
+     "D-08",
+     "D-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 655,
+    "texto": "15/05/1990"
+   },
+   "zona_tocada": {
+    "x": 49,
+    "y": 631,
+    "w": 314,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "Fecha de nacimiento"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 4,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p04.png",
+   "marcas": "datos/capturas/T3-arturo-2/p04-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Ya llené toda la tarjeta de datos personales y se ve bien, con mi información a la vista.",
+    "que_miras_primero": "Los cuatro campos llenos y, arriba a la derecha, el botón «Guardar».",
+    "interpretacion": "La tarjeta de datos personales ya está completa. Hay que guardarla, y abajo siguen más preguntas, como estado civil y ocupación.",
+    "pensamiento": "Antes de seguir, mejor guardo lo que ya puse, no vaya a perderlo. Luego veo lo de abajo. Lo del estado civil no me dieron ese dato, así que lo veo con calma.",
+    "intencion": "Quiero guardar esta parte para no perder lo escrito y después bajar a ver qué más piden.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Guardar» para asegurar lo que escribí antes de seguir hacia abajo."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que terminé la primera tarjeta, pero no sé cuántas preguntas más hay abajo ni cuánto falta para saber el monto."
+    },
+    "confianza": 62,
+    "friccion": 1,
+    "reglas": [
+     "D-08"
+    ],
+    "sin_cobertura": [
+     "Estado civil: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 302,
+     "y": 294,
+     "w": 78,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Guardar"
+    },
+    {
+     "x": 32,
+     "y": 342,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 49,
+     "y": 365,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Nombre(s)"
+    },
+    {
+     "x": 32,
+     "y": 430,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 49,
+     "y": 454,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Primer apellido"
+    },
+    {
+     "x": 32,
+     "y": 519,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 49,
+     "y": 542,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Segundo apellido (opcional)"
+    },
+    {
+     "x": 32,
+     "y": 607,
+     "w": 348,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 49,
+     "y": 631,
+     "w": 314,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "Fecha de nacimiento"
+    },
+    {
+     "x": 16,
+     "y": 742,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 839,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nGuardar\nNombre(s)\nPrimer apellido\nSegundo apellido (opcional)\nFecha de nacimiento\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 4,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 39,
+   "accion": {
+    "tipo": "tocar",
+    "x": 341,
+    "y": 310
+   },
+   "zona_tocada": {
+    "x": 302,
+    "y": 294,
+    "w": 78,
+    "h": 32,
+    "tipo": "button",
+    "etiqueta": "Guardar"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 5,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p05.png",
+   "marcas": "datos/capturas/T3-arturo-2/p05-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Mis datos quedaron guardados y ordenados, pero ahora me piden estado civil y ocupación, y el botón de continuar está apagado.",
+    "que_miras_primero": "El botón gris de «Continuar» abajo, que no me deja avanzar.",
+    "interpretacion": "Tengo que escoger una opción en estado civil y otra en ocupación para que se active «Continuar». No me dicen para qué quieren esos datos.",
+    "pensamiento": "¿Para qué necesitan eso? Si me dicen para qué, se los doy. De estos dos datos no me dieron nada para contestar, mejor primero veo qué opciones traen.",
+    "intencion": "Quiero abrir la lista de estado civil y ver qué opciones tiene, sin escoger todavía, porque no tengo ese dato a la mano.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el campo de estado civil, que es el primero que sigue, para ver qué opciones me ofrece."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que me faltan dos datos para poder continuar, pero no sé cuántas pantallas más hay antes del domicilio y del monto."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "D-08",
+     "D-02"
+    ],
+    "sin_cobertura": [
+     "Estado civil: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+     "Ocupación e ingreso: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 298,
+     "y": 294,
+     "w": 82,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Editar"
+    },
+    {
+     "x": 16,
+     "y": 503,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 600,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 42,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 528
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 503,
+    "w": 380,
+    "h": 50,
+    "tipo": "button",
+    "etiqueta": "Selecciona una opción"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 6,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p06.png",
+   "marcas": "datos/capturas/T3-arturo-2/p06-marcas.png",
+   "zonas": 7,
+   "perfil": {
+    "primera_impresion": "Las opciones se leen bien y la letra es grande, pero no sé cuál escoger ni para qué piden esto.",
+    "que_miras_primero": "El título grande «Selecciona un estado civil» y la lista de opciones con círculos.",
+    "interpretacion": "Tengo que marcar una sola opción de estado civil para que se active «Continuar». La lista sigue hacia abajo, se ve cortada, y no explican para qué sirve este dato.",
+    "pensamiento": "¿Para qué necesitan eso? Si me dicen para qué, se los doy. Los datos de prueba no traen estado civil y no voy a inventar uno. Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+    "intencion": "No quiero marcar una respuesta al azar. Quiero cerrar esta lista y buscar si hay una explicación o alguien que me oriente.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Cierro la lista sin escoger nada, porque no tengo el dato y no quiero inventarlo; voy a buscar una explicación o ayuda."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuánto falta ni si me quedo trabado aquí, porque el botón sigue apagado y no me dicen por qué piden este dato."
+    },
+    "confianza": 45,
+    "friccion": 3,
+    "reglas": [
+     "D-08",
+     "D-09"
+    ],
+    "sin_cobertura": [
+     "Estado civil: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Casado(a)"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Soltero(a)"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Divorciado(a)"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Unión libre"
+    },
+    {
+     "x": 18,
+     "y": 772,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "Viudo(a)"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar\nSelecciona un estado civil\nCasado(a)\nSoltero(a)\nDivorciado(a)\nUnión libre\nViudo(a)\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 53,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 390
+   },
+   "zona_tocada": {
+    "x": 174,
+    "y": 376,
+    "w": 64,
+    "h": 28,
+    "tipo": "button",
+    "etiqueta": "Cerrar"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 7,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p07.png",
+   "marcas": "datos/capturas/T3-arturo-2/p07-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Volví a lo mismo: «Continuar» apagado y dos preguntas sin contestar.",
+    "que_miras_primero": "El botón gris «Continuar», que sigue sin dejarme avanzar, y los campos vacíos.",
+    "interpretacion": "Sin escoger estado civil y ocupación no puedo seguir. La pantalla no me explica para qué los piden ni qué pasa si no los contesto.",
+    "pensamiento": "Aquí me quedo trabado y no hay a quién preguntarle. Arriba hay una carita redonda de ayuda, a ver si ahí me explican para qué piden esto.",
+    "intencion": "Quiero tocar la carita de ayuda de arriba a la derecha para ver si me explican para qué sirven estos datos.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco la ayuda de Olivia porque es lo único que veo parecido a alguien que me oriente; no hay opción de sucursal."
+    },
+    "marca": 1,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No sé cuánto falta; sigo en la misma pantalla y no veo qué sigue después ni cuándo llega el monto."
+    },
+    "confianza": 40,
+    "friccion": 3,
+    "reglas": [
+     "D-08",
+     "D-09",
+     "D-04"
+    ],
+    "sin_cobertura": [
+     "Estado civil y ocupación: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 298,
+     "y": 294,
+     "w": 82,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Editar"
+    },
+    {
+     "x": 16,
+     "y": 503,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 600,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 42,
+   "accion": {
+    "tipo": "tocar",
+    "x": 382,
+    "y": 110
+   },
+   "zona_tocada": {
+    "x": 352,
+    "y": 80,
+    "w": 60,
+    "h": 60,
+    "tipo": "button",
+    "etiqueta": "Ayuda de Olivia"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 8,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p08.png",
+   "marcas": "datos/capturas/T3-arturo-2/p08-marcas.png",
+   "zonas": 2,
+   "perfil": {
+    "primera_impresion": "Me cae bien que alguien me hable y me diga en qué paso voy, con letra grande y clara.",
+    "que_miras_primero": "El saludo «¡Hola, Prueba! Soy Olivia» y el recuadro verde que dice cuál es el paso actual.",
+    "interpretacion": "Olivia me confirma que estoy en datos personales y que me falta estado civil y ocupación. También dice que mi avance se guarda y me da un folio. No dice para qué piden esos datos.",
+    "pensamiento": "Qué bueno que se guarda y que me dan un folio, ya no me da miedo perder lo hecho. Pero no me dijeron para qué sirven esos dos datos.",
+    "intencion": "Quiero seguir con mi solicitud, regresar a la pantalla anterior y ver qué hago con lo que me falta.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el botón grande verde de seguir con mi solicitud, porque ya sé que lo avanzado está guardado."
+    },
+    "marca": 2,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en datos personales y que faltan dos datos, pero no me dicen cuántos pasos quedan después."
+    },
+    "confianza": 55,
+    "friccion": 2,
+    "reglas": [
+     "D-03",
+     "D-08",
+     "D-12"
+    ],
+    "sin_cobertura": [
+     "Estado civil y ocupación: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 315,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Seguir con mi solicitud"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar\n¡Hola, Prueba! Soy Olivia\nPaso actual: Datos personales\nConfirmar los datos leídos de la INE y completar estado civil y ocupación.\n\nTu avance se guarda en este teléfono a cada paso. Si cierras la app, retomas donde te quedaste.\n\nFolio de tu solicitud: SU-261028-D52EYX\n\nSeguir con mi solicitud",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 90,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Seguir con mi solicitud"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "datosPersonales"
+  },
+  {
+   "n": 9,
+   "pantalla": "datosPersonales",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T3-arturo-2/p09.png",
+   "marcas": "datos/capturas/T3-arturo-2/p09-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Estoy otra vez en la misma pantalla, con «Continuar» apagado y sin saber qué contestar.",
+    "que_miras_primero": "El botón gris «Continuar» y los dos campos vacíos de estado civil y ocupación.",
+    "interpretacion": "Para avanzar necesito contestar estado civil y ocupación. Olivia ya me confirmó que eso falta, pero no me dijo para qué sirven. Para esos dos datos no tengo qué responder.",
+    "pensamiento": "Ya intenté pedir ayuda y no me dijeron para qué piden esto. No voy a marcar cualquier cosa. Los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+    "intencion": "Prefiero dejar aquí la solicitud, que quedó guardada con el folio, y consultarlo en una sucursal donde alguien me explique.",
+    "accion": {
+     "opcion": "abandonar",
+     "texto": "Me quedo trabado sin quien me explique para qué piden estado civil y ocupación, y no voy a inventar respuestas. Dejo la solicitud guardada y prefiero ir a una sucursal."
+    },
+    "marca": 0,
+    "escribir": "",
+    "progreso": {
+     "opcion": "no",
+     "texto": "No logro avanzar, no sé cuánto falta para el domicilio ni para saber cuánto me prestan."
+    },
+    "confianza": 40,
+    "friccion": 4,
+    "reglas": [
+     "D-04",
+     "D-08",
+     "D-09"
+    ],
+    "sin_cobertura": [
+     "Estado civil: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil.",
+     "Ocupación e ingreso: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 298,
+     "y": 294,
+     "w": 82,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Editar"
+    },
+    {
+     "x": 16,
+     "y": 503,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 600,
+     "w": 380,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Selecciona una opción"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Tu identificación\nPrueba, confirma tus datos\n\nLa información debe coincidir con tu INE. Edítala si es necesario.\n\nDatos personales\nEditar\nNombre(s):\nPrueba\nPrimer apellido:\nFicticio\nSegundo apellido:\nDemo\nFecha de nacimiento:\n15/05/1990\nEstado civil\nSelecciona una opción\nOcupación\nSelecciona una opción\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": "barra de progreso",
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 42
+  }
+ ],
+ "costo_usd": 1.1567,
+ "tokens": {
+  "entrada": 56,
+  "cache_escritura": 41165,
+  "cache_lectura": 291252,
+  "salida": 8331
+ },
+ "resultado": "abandono",
+ "ces": {
+  "ces": 3,
+  "texto": "Llenar mi nombre, apellidos y fecha fue fácil y se leía bien, pero me trabé en estado civil y ocupación, porque no me dijeron para qué los piden y el botón de continuar seguía apagado. Nadie me explicó, así que prefiero ir a una sucursal."
+ },
+ "video": "datos/videos/T3-arturo-2.webm",
+ "fin": "2026-10-28T14:26:17"
+}

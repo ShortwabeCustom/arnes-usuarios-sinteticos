@@ -1,0 +1,25 @@
+{
+ "id": "T3-itzel-2",
+ "tarea": "T3",
+ "corrida": 2,
+ "integrante": "itzel",
+ "nombre": "Itzel Camacho",
+ "perfil": "B",
+ "segmento": "Millennial · 33.4%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-28T18:23:41",
+ "pasos": [],
+ "costo_usd": 0.0244,
+ "tokens": {
+  "entrada": 4,
+  "cache_escritura": 3365,
+  "cache_lectura": 13326,
+  "salida": 913
+ },
+ "_ses": "c72c0949-3337-44b9-84a9-4f117f0c3155",
+ "video": "datos/videos/T3-itzel-2.webm",
+ "fin": "2026-10-28T18:24:27"
+}
