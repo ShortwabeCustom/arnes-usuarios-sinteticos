@@ -1,0 +1,2175 @@
+{
+ "id": "T1-rosalba",
+ "tarea": "T1",
+ "corrida": 1,
+ "integrante": "rosalba",
+ "nombre": "Rosalba Quintero",
+ "perfil": "C",
+ "segmento": "Gen X · 17.3%",
+ "ocean": null,
+ "modo": "autonomo",
+ "material": "web",
+ "modelo": "sonnet",
+ "inicio": "2026-10-29T10:23:29",
+ "pasos": [
+  {
+   "n": 1,
+   "pantalla": "bienvenida",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p01.png",
+   "marcas": "datos/capturas/T1-rosalba/p01-marcas.png",
+   "zonas": 8,
+   "perfil": {
+    "primera_impresion": "Se ve formal y con el logo del banco arriba, eso me da confianza, aunque el letrero verde con letras blancas es muy llamativo.",
+    "que_miras_primero": "El logo de Banco Azteca y el letrero grande que dice que me prestan hasta $70,000 para usar como quiera.",
+    "interpretacion": "Es la bienvenida de la solicitud de un préstamo. Hay un botón para iniciar la solicitud y unas rayitas abajo que parecen ser pasos o tarjetas. No sé bien cuántos pasos son.",
+    "pensamiento": "Se ve serio, es el banco. Voy a empezar, pero quiero leer las condiciones antes de aceptar algo. Ojalá haya a quién preguntarle si me atoro.",
+    "intencion": "Quiero darle a empezar la solicitud para ver qué me piden y cuánto me van a cobrar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «Inicia tu solicitud» porque la pantalla se ve institucional y es lo que me lleva a pedir el préstamo."
+    },
+    "marca": 8,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Veo cinco rayitas abajo, pero no sé si son pasos de la solicitud o solo imágenes. No sé cuánto me falta."
+    },
+    "confianza": 68,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-03",
+     "C-05",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 118,
+     "y": 633,
+     "w": 56,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Tarjeta 1"
+    },
+    {
+     "x": 174,
+     "y": 633,
+     "w": 30,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Tarjeta 2"
+    },
+    {
+     "x": 204,
+     "y": 633,
+     "w": 30,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Tarjeta 3"
+    },
+    {
+     "x": 234,
+     "y": 633,
+     "w": 30,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Tarjeta 4"
+    },
+    {
+     "x": 264,
+     "y": 633,
+     "w": 30,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Tarjeta 5"
+    },
+    {
+     "x": 16,
+     "y": 685,
+     "w": 380,
+     "h": 52,
+     "tipo": "button",
+     "etiqueta": "Inicia tu solicitud"
+    }
+   ],
+   "texto_pantalla": "¡Te prestamos hasta $70,000 para usar como quieras!\n\nObtén el préstamo ideal para cumplir tus sueños.\n\n¡Tu oferta en menos de 5 minutos!\n\nCompleta tu solicitud en tan solo 4 pasos.\n\n¡Tus datos están 100% seguros!\n\nProtegemos tu información en cada momento, desde que inicias tu solicitud.\n\n¡Si pagas antes, pagas menos!\n\nCon tu pago puntual ahorras en tus pagos semanales.\n\n¡Recibe tu préstamo en tu cuenta de débito!\n\nAbre tu cuenta fácil y rápido para tus depósitos de hasta $200,000.\n\nInicia tu solicitud\n\nBanco Azteca S.A., Institución de Banca Múltiple.\nDerechos reservados, 2026.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 94,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 711
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 685,
+    "w": 380,
+    "h": 52,
+    "tipo": "button",
+    "etiqueta": "Inicia tu solicitud"
+   },
+   "espera_ms": 324,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "producto"
+  },
+  {
+   "n": 2,
+   "pantalla": "producto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p02.png",
+   "marcas": "datos/capturas/T1-rosalba/p02-marcas.png",
+   "zonas": 9,
+   "perfil": {
+    "primera_impresion": "Se ve formal y ordenado, con el logo del banco arriba y opciones claras, y eso me da confianza.",
+    "que_miras_primero": "El título «Elige cómo usarás tu préstamo» y la primera opción, Efectivo, que es lo que yo quiero.",
+    "interpretacion": "Me pide escoger para qué quiero el préstamo. El botón Continuar sigue gris, así que supongo que se activa cuando elija una opción.",
+    "pensamiento": "Yo quiero efectivo, así que lo marco. Ojalá más adelante me dejen leer bien las condiciones.",
+    "intencion": "Marcar la opción de Efectivo y luego darle a Continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el círculo de Efectivo porque es el préstamo que vengo a pedir."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que apenas voy empezando y que hay que elegir un tipo de préstamo, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 70,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-03",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 254,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Efectivo"
+    },
+    {
+     "x": 16,
+     "y": 340,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Celulares y cómputo"
+    },
+    {
+     "x": 16,
+     "y": 426,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Línea blanca"
+    },
+    {
+     "x": 16,
+     "y": 512,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Motocicletas"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Autos"
+    },
+    {
+     "x": 16,
+     "y": 684,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Mi negocio"
+    },
+    {
+     "x": 16,
+     "y": 778,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Elige cómo usarás tu préstamo\n\nCuéntanos qué necesitas\n\nEfectivo\nCelulares y cómputo\nLínea blanca\nMotocicletas\nAutos\nMi negocio\nContinuar\n\nCrédito sujeto a aprobación.\n\nVer información legal",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 26,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 289
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 254,
+    "w": 380,
+    "h": 70,
+    "tipo": "button",
+    "etiqueta": "Efectivo"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "producto"
+  },
+  {
+   "n": 3,
+   "pantalla": "producto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p03.png",
+   "marcas": "datos/capturas/T1-rosalba/p03-marcas.png",
+   "zonas": 9,
+   "perfil": {
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco Continuar porque Efectivo ya está seleccionado y es lo que necesito."
+    },
+    "confianza": 70,
+    "escribir": "",
+    "friccion": 1,
+    "intencion": "Confirmar que es efectivo y seguir adelante para ver cuánto y a qué plazo.",
+    "interpretacion": "Parece que la pantalla me muestra mi elección de efectivo y me pide confirmarla para seguir. No veo todavía cuánto ni en cuánto tiempo, así que supongo que viene después.",
+    "marca": 9,
+    "pensamiento": "Efectivo es lo que quiero, ya está marcado. Le doy continuar y espero que más adelante me muestren las condiciones con letra que pueda leer.",
+    "primera_impresion": "Es la misma pantalla de antes, con Efectivo ya marcado y el botón de Continuar abajo; se ve limpia y seria.",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que voy al inicio, eligiendo el tipo de préstamo, pero no veo cuántos pasos faltan."
+    },
+    "que_miras_primero": "Que Efectivo sigue seleccionado y el botón verde de Continuar.",
+    "reglas": [
+     "C-02",
+     "C-03",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 254,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Efectivo"
+    },
+    {
+     "x": 16,
+     "y": 340,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Celulares y cómputo"
+    },
+    {
+     "x": 16,
+     "y": 426,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Línea blanca"
+    },
+    {
+     "x": 16,
+     "y": 512,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Motocicletas"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Autos"
+    },
+    {
+     "x": 16,
+     "y": 684,
+     "w": 380,
+     "h": 70,
+     "tipo": "button",
+     "etiqueta": "Mi negocio"
+    },
+    {
+     "x": 16,
+     "y": 778,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Elige cómo usarás tu préstamo\n\nCuéntanos qué necesitas\n\nEfectivo\nCelulares y cómputo\nLínea blanca\nMotocicletas\nAutos\nMi negocio\nContinuar\n\nCrédito sujeto a aprobación.\n\nVer información legal",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 26,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 802
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 778,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 336,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "simulador"
+  },
+  {
+   "n": 4,
+   "pantalla": "simulador",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p04.png",
+   "marcas": "datos/capturas/T1-rosalba/p04-marcas.png",
+   "zonas": 6,
+   "perfil": {
+    "primera_impresion": "Se ve formal y con el logo del banco, pero me aparece un monto ya puesto y un pago de $0 que no entiendo.",
+    "que_miras_primero": "El logo de Banco Azteca y el número grande de $22,000.",
+    "interpretacion": "Me piden elegir cuánto dinero quiero y en cuántas semanas pagarlo. El botón Confirmar está apagado, así que supongo que primero tengo que elegir las semanas.",
+    "pensamiento": "Cuánto pediría yo: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil. Dejo el monto como viene y veo qué semanas me ofrecen, porque el pago dice $0 y así no sé lo que voy a deber.",
+    "intencion": "Quiero ver las opciones de semanas y que me muestren cuánto pagaría cada semana, antes de confirmar nada.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el selector de semanas para ver las opciones. Sin eso no se calcula el pago y no puedo confirmar."
+    },
+    "marca": 5,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy al inicio, pidiendo monto y plazo. No sé cuántos pasos faltan hasta la foto."
+    },
+    "confianza": 66,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-08",
+     "C-12"
+    ],
+    "sin_cobertura": [
+     "monto que pediría",
+     "plazo en semanas que elegiría"
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 360,
+     "y": 223,
+     "w": 44,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Editar monto"
+    },
+    {
+     "x": 35,
+     "y": 289,
+     "w": 343,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Monto del préstamo"
+    },
+    {
+     "x": 16,
+     "y": 451,
+     "w": 380,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "--- Semanas"
+    },
+    {
+     "x": 16,
+     "y": 683,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Lo soñaste\n\nAhora cuéntanos, ¿cuánto dinero\nnecesitas?\n\n$22,000\n$2,000\n$70,000\n\n¿En cuántas semanas quieres pagar?\n\n---\nSemanas\n\nTu pago semanal sería de:\n\n$0 Pesos\n\nTú tienes el control de tus pagos.\n¡Si pagas antes, pagas menos!\n\nConfirmar\n\nCrédito sujeto a aprobación.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 1,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 41,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 482
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 451,
+    "w": 380,
+    "h": 62,
+    "tipo": "button",
+    "etiqueta": "--- Semanas"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "simulador"
+  },
+  {
+   "n": 5,
+   "pantalla": "simulador",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p05.png",
+   "marcas": "datos/capturas/T1-rosalba/p05-marcas.png",
+   "zonas": 6,
+   "perfil": {
+    "primera_impresion": "Me piden elegir las semanas; se ve ordenado, pero 128 semanas me parece mucho tiempo.",
+    "que_miras_primero": "«Elige tu plazo» y la lista de semanas: 128, 120, 110. Arriba sigue el monto de $22,000.",
+    "interpretacion": "Tengo que escoger en cuántas semanas pago el préstamo. El botón de Continuar está apagado hasta que marque una opción. La última opción está cortada y no la alcanzo a ver completa.",
+    "pensamiento": "Todavía no veo cuánto pagaría en cada plazo. Voy a marcar uno y a ver si ahora sí me muestran el pago y el total con letra que pueda leer.",
+    "intencion": "Quiero escoger un plazo y ver cuánto me sale a pagar antes de seguir. Prefiero un plazo no tan largo, pero no sé cuánto cuesta cada uno.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Marco 110 semanas, que es un plazo intermedio y más corto que los dos primeros, para que se active Continuar y ver si me muestran el pago. Todavía no avanzo hasta ver las cifras."
+    },
+    "marca": 4,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy eligiendo monto y plazo, pero no sé cuántos pasos faltan ni cuánto voy a pagar."
+    },
+    "confianza": 64,
+    "friccion": 2,
+    "reglas": [
+     "C-01",
+     "C-02",
+     "C-08",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "128 semanas"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "120 semanas"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "110 semanas"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 29,
+     "tipo": "button",
+     "etiqueta": "100 semanas"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Lo soñaste\n\nAhora cuéntanos, ¿cuánto dinero\nnecesitas?\n\n$22,000\n$2,000\n$70,000\n\n¿En cuántas semanas quieres pagar?\n\n---\nSemanas\n\nTu pago semanal sería de:\n\n$0 Pesos\n\nTú tienes el control de tus pagos.\n¡Si pagas antes, pagas menos!\n\nConfirmar\n\nCrédito sujeto a aprobación.\n\nElige tu plazo\n128 semanas\n120 semanas\n110 semanas\n100 semanas\n80 semanas\n65 semanas\n52 semanas\n39 semanas\n26 semanas\n25 semanas\n13 semanas\n8 semanas\n4 semanas\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 1,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 71,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 655
+   },
+   "zona_tocada": {
+    "x": 18,
+    "y": 624,
+    "w": 376,
+    "h": 62,
+    "tipo": "button",
+    "etiqueta": "110 semanas"
+   },
+   "espera_ms": 301,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "simulador"
+  },
+  {
+   "n": 6,
+   "pantalla": "simulador",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p06.png",
+   "marcas": "datos/capturas/T1-rosalba/p06-marcas.png",
+   "zonas": 6,
+   "perfil": {
+    "primera_impresion": "Se ve institucional, con el logo del banco, pero 110 semanas es un plazo larguísimo y no veo cuánto pagaría.",
+    "que_miras_primero": "El título 'Elige tu plazo' y las semanas; la de 110 ya está marcada.",
+    "interpretacion": "Me piden escoger en cuántas semanas pagar. Ya hay una opción seleccionada, la de 110 semanas, y abajo está Continuar. No veo pago por semana ni total.",
+    "pensamiento": "Ya está marcada una, pero no sé cuánto voy a pagar ni cuánto sale el total. Quiero leer las condiciones antes de seguir, aunque aquí no aparecen.",
+    "intencion": "Seguir adelante con el plazo marcado para ver si en la siguiente pantalla me muestran el pago y el total con letra que pueda leer.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Doy Continuar con el plazo ya elegido, esperando que más adelante me enseñen las condiciones antes de firmar nada."
+    },
+    "marca": 6,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya elegí monto y plazo, pero no sé cuántos pasos faltan ni cuánto pagaré."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-08",
+     "C-05"
+    ],
+    "sin_cobertura": [
+     "Monto que pediría y plazo preferido: los datos disponibles no permiten determinar con suficiente confianza cómo reaccionaría este perfil."
+    ]
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 174,
+     "y": 376,
+     "w": 64,
+     "h": 28,
+     "tipo": "button",
+     "etiqueta": "Cerrar"
+    },
+    {
+     "x": 18,
+     "y": 476,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "128 semanas"
+    },
+    {
+     "x": 18,
+     "y": 550,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "120 semanas"
+    },
+    {
+     "x": 18,
+     "y": 624,
+     "w": 376,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "110 semanas"
+    },
+    {
+     "x": 18,
+     "y": 698,
+     "w": 376,
+     "h": 29,
+     "tipo": "button",
+     "etiqueta": "100 semanas"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    }
+   ],
+   "texto_pantalla": "Lo soñaste\n\nAhora cuéntanos, ¿cuánto dinero\nnecesitas?\n\n$22,000\n$2,000\n$70,000\n\n¿En cuántas semanas quieres pagar?\n\n---\nSemanas\n\nTu pago semanal sería de:\n\n$0 Pesos\n\nTú tienes el control de tus pagos.\n¡Si pagas antes, pagas menos!\n\nConfirmar\n\nCrédito sujeto a aprobación.\n\nElige tu plazo\n128 semanas\n120 semanas\n110 semanas\n100 semanas\n80 semanas\n65 semanas\n52 semanas\n39 semanas\n26 semanas\n25 semanas\n13 semanas\n8 semanas\n4 semanas\nContinuar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 1,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 71,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "simulador"
+  },
+  {
+   "n": 7,
+   "pantalla": "simulador",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p07.png",
+   "marcas": "datos/capturas/T1-rosalba/p07-marcas.png",
+   "zonas": 6,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y seria, con el logo del banco, y ahora sí muestra un pago semanal de $505.",
+    "que_miras_primero": "El monto grande de $22,000 y el pago semanal de $505 pesos.",
+    "interpretacion": "Me pide confirmar cuánto quiero y en cuántas semanas pagar: 110 semanas de $505. Abajo dice que el crédito está sujeto a aprobación.",
+    "pensamiento": "110 semanas son más de dos años, y no veo el total a pagar. Lo de abajo está muy chiquito, pero el pago semanal sí lo leo.",
+    "intencion": "Quisiera ver cuánto voy a pagar en total y compararlo con los $22,000 antes de confirmar. Como no lo veo, confirmo para ver si más adelante me lo muestran antes de firmar nada.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Confirmo para avanzar, porque la pantalla se ve institucional y entiendo que todavía no estoy firmando nada. Espero que después me muestren las condiciones y el total con letra legible."
+    },
+    "marca": 6,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy eligiendo monto y plazo, pero no sé cuántos pasos faltan ni cuál es el total."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-08",
+     "C-01",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 360,
+     "y": 223,
+     "w": 44,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Editar monto"
+    },
+    {
+     "x": 35,
+     "y": 289,
+     "w": 343,
+     "h": 44,
+     "tipo": "input",
+     "etiqueta": "Monto del préstamo"
+    },
+    {
+     "x": 16,
+     "y": 451,
+     "w": 380,
+     "h": 62,
+     "tipo": "button",
+     "etiqueta": "110 Semanas"
+    },
+    {
+     "x": 16,
+     "y": 683,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Lo soñaste\n\nAhora cuéntanos, ¿cuánto dinero\nnecesitas?\n\n$22,000\n$2,000\n$70,000\n\n¿En cuántas semanas quieres pagar?\n\n110\nSemanas\n\nTu pago semanal sería de:\n\n$505 Pesos\n\nTú tienes el control de tus pagos.\n¡Si pagas antes, pagas menos!\n\nConfirmar\n\nCrédito sujeto a aprobación.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 1,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 41,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 707
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 683,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "contacto"
+  },
+  {
+   "n": 8,
+   "pantalla": "contacto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p08.png",
+   "marcas": "datos/capturas/T1-rosalba/p08-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Me piden mis datos de contacto para seguir. Empiezo por el nombre, que es el primer campo."
+    },
+    "confianza": 62,
+    "escribir": "Prueba",
+    "friccion": 2,
+    "intencion": "Llenar el nombre, luego el celular y el correo, y después darle continuar. Quiero leer lo que autorizo, aunque las letras de abajo están muy chiquitas.",
+    "interpretacion": "La pantalla me pide mi nombre, mi celular y mi correo para iniciar la solicitud. El botón de continuar está gris porque todavía no llené nada. Abajo dice que al continuar acepto el aviso de privacidad y autorizo consultar mi historial crediticio.",
+    "marca": 4,
+    "pensamiento": "Se ve serio y los datos que piden son normales. Lo de abajo sobre el historial crediticio está muy chiquito, pero sí alcanzo a ver que lo mencionan. Ojalá pueda abrirlo antes de aceptar.",
+    "primera_impresion": "Es un formulario sencillo, con el logo del banco arriba, y se ve formal.",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es el paso de mis datos de contacto, pero no sé cuántos pasos faltan hasta la foto."
+    },
+    "que_miras_primero": "El título «¡Vamos por tu préstamo!» y el logo de Banco Azteca, que me dan confianza. Luego los campos en blanco.",
+    "reglas": [
+     "C-02",
+     "C-01",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 214,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 33,
+     "y": 238,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 16,
+     "y": 333,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 123,
+     "y": 357,
+     "w": 256,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 33,
+     "y": 453,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 16,
+     "y": 526,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    },
+    {
+     "x": 148,
+     "y": 598,
+     "w": 113,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Aviso de Privacidad"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 372,
+     "h": 29,
+     "tipo": "a",
+     "etiqueta": "Consulta de Historial Crediticio"
+    },
+    {
+     "x": 154,
+     "y": 613,
+     "w": 115,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Información laboral."
+    }
+   ],
+   "texto_pantalla": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n0/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 3,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 261,
+    "texto": "Prueba"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 238,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "¿Cómo prefieres que te llamemos?"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "contacto"
+  },
+  {
+   "n": 9,
+   "pantalla": "contacto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p09.png",
+   "marcas": "datos/capturas/T1-rosalba/p09-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Se ve formal y ordenada, con el logo del banco; el nombre ya está puesto y faltan el celular y el correo.",
+    "que_miras_primero": "El título «Vamos por tu préstamo» y el nombre «Prueba» ya escrito en el primer campo.",
+    "interpretacion": "Me piden mi celular y mi correo para iniciar la solicitud. El botón Continuar está gris porque todavía faltan datos.",
+    "pensamiento": "Ya puse el nombre, ahora sigue el celular. Lo de abajo del aviso de privacidad está chiquito, pero ahí está.",
+    "intencion": "Voy a escribir mi número de celular en el campo que dice 10 dígitos.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el celular de prueba en el campo del número, porque es lo que sigue y el botón no se activa sin eso."
+    },
+    "marca": 6,
+    "escribir": "5500000000",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en datos de contacto y que faltan dos campos, pero no sé cuántos pasos quedan después hasta la foto."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "C-02",
+     "C-01",
+     "C-12"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 214,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 33,
+     "y": 238,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 16,
+     "y": 333,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 123,
+     "y": 357,
+     "w": 256,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 33,
+     "y": 453,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 16,
+     "y": 526,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    },
+    {
+     "x": 148,
+     "y": 598,
+     "w": 113,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Aviso de Privacidad"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 372,
+     "h": 29,
+     "tipo": "a",
+     "etiqueta": "Consulta de Historial Crediticio"
+    },
+    {
+     "x": 154,
+     "y": 613,
+     "w": 115,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Información laboral."
+    }
+   ],
+   "texto_pantalla": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n6/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 3,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "escribir",
+    "x": 251,
+    "y": 381,
+    "texto": "5500000000"
+   },
+   "zona_tocada": {
+    "x": 123,
+    "y": 357,
+    "w": 256,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "¿Cuál es tu número celular?"
+   },
+   "espera_ms": 300,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "contacto"
+  },
+  {
+   "n": 10,
+   "pantalla": "contacto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p10.png",
+   "marcas": "datos/capturas/T1-rosalba/p10-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Se ve seria y ordenada, con el logo del banco arriba, pero abajo la letra es muy chiquita.",
+    "que_miras_primero": "El título «Vamos por tu préstamo» y el logo de Banco Azteca; luego los campos que ya llené.",
+    "interpretacion": "Me falta poner mi correo electrónico; el botón Continuar está gris porque todavía no lo tengo.",
+    "pensamiento": "Ya van el nombre y el celular, falta el correo. Lo de abajo no lo alcanzo a leer bien, pero lo quiero ver antes de continuar.",
+    "intencion": "Escribir mi correo para que se active el botón de continuar.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "Escribo el correo de prueba en el campo que está vacío, que es lo que impide seguir."
+    },
+    "marca": 8,
+    "escribir": "prueba@example.com",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy en mis datos de contacto y que falta el correo, pero no sé cuántos pasos más hay."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "C-01",
+     "C-02",
+     "C-09"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 214,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 33,
+     "y": 238,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 16,
+     "y": 333,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 123,
+     "y": 357,
+     "w": 256,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 33,
+     "y": 453,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 16,
+     "y": 526,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    },
+    {
+     "x": 148,
+     "y": 598,
+     "w": 113,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Aviso de Privacidad"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 372,
+     "h": 29,
+     "tipo": "a",
+     "etiqueta": "Consulta de Historial Crediticio"
+    },
+    {
+     "x": 154,
+     "y": 613,
+     "w": 115,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Información laboral."
+    }
+   ],
+   "texto_pantalla": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n6/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 3,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 477,
+    "texto": "prueba@example.com"
+   },
+   "zona_tocada": {
+    "x": 33,
+    "y": 453,
+    "w": 346,
+    "h": 48,
+    "tipo": "input",
+    "etiqueta": "¿Cuál es tu correo electrónico?"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "contacto"
+  },
+  {
+   "n": 11,
+   "pantalla": "contacto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p11.png",
+   "marcas": "datos/capturas/T1-rosalba/p11-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "primera_impresion": "Se ve formal y ordenada, con los tres datos ya llenos, pero el texto de abajo sigue muy chiquito.",
+    "que_miras_primero": "El logo del banco y los tres datos que ya puse, nombre, celular y correo.",
+    "interpretacion": "Me piden mis datos de contacto para iniciar la solicitud. Abajo dice que al continuar acepto el aviso de privacidad, la consulta de historial crediticio y la información laboral.",
+    "pensamiento": "Los tres datos ya están. Antes de darle continuar quisiera leer lo que autorizo, pero casi no alcanzo a leerlo. Voy a tocar el aviso de privacidad a ver si abre.",
+    "intencion": "Quiero abrir el aviso de privacidad y leer qué autorizo antes de continuar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco el enlace del Aviso de Privacidad porque no quiero autorizar la consulta de mi historial sin poder leer qué dice."
+    },
+    "marca": 10,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que estoy dando mis datos de contacto al inicio de la solicitud, pero no sé cuántos pasos faltan."
+    },
+    "confianza": 62,
+    "friccion": 2,
+    "reglas": [
+     "C-01",
+     "C-02",
+     "C-05",
+     "C-09"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 214,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 33,
+     "y": 238,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 16,
+     "y": 333,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 123,
+     "y": 357,
+     "w": 256,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 33,
+     "y": 453,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 16,
+     "y": 526,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    },
+    {
+     "x": 148,
+     "y": 598,
+     "w": 113,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Aviso de Privacidad"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 372,
+     "h": 29,
+     "tipo": "a",
+     "etiqueta": "Consulta de Historial Crediticio"
+    },
+    {
+     "x": 154,
+     "y": 613,
+     "w": 115,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Información laboral."
+    }
+   ],
+   "texto_pantalla": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n6/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 3,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "tocar",
+    "x": 204,
+    "y": 605
+   },
+   "zona_tocada": {
+    "x": 148,
+    "y": 598,
+    "w": 113,
+    "h": 14,
+    "tipo": "a",
+    "etiqueta": "Aviso de Privacidad"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "contacto",
+   "pestana_nueva": {
+    "url": "https://www.bancoazteca.com.mx/",
+    "titulo": "Banco Azteca, tu banca en línea | Sueñas, Decides, Logras"
+   }
+  },
+  {
+   "n": 12,
+   "pantalla": "contacto",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p12.png",
+   "marcas": "datos/capturas/T1-rosalba/p12-marcas.png",
+   "zonas": 12,
+   "perfil": {
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Doy Continuar porque los tres datos están completos y la imagen es institucional, aunque no pude leer bien lo que autorizo."
+    },
+    "confianza": 58,
+    "escribir": "",
+    "friccion": 2,
+    "intencion": "Quiero leer la consulta de historial crediticio antes de seguir, pero el aviso no me sirvió. Voy a darle continuar para ver qué sigue, porque es el banco y espero que más adelante me expliquen.",
+    "interpretacion": "Me piden nombre, celular y correo, y al darle continuar acepto el aviso de privacidad, la consulta de mi historial crediticio y la información laboral. El aviso de privacidad solo me llevó a la página del banco, no a un documento que pueda leer.",
+    "marca": 9,
+    "pensamiento": "No pude leer lo que autorizo, pero es un banco conocido. Los datos ya están y no veo otra forma de leerlo, así que sigo.",
+    "primera_impresion": "Es la misma pantalla de mis datos, con los tres campos llenos y el botón de continuar; se ve seria.",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ya puse mis datos de contacto y que falta algo más, pero no sé cuántos pasos quedan."
+    },
+    "que_miras_primero": "El botón verde de Continuar y, abajo, el texto chiquito de lo que autorizo.",
+    "reglas": [
+     "C-01",
+     "C-02",
+     "C-12",
+     "C-10"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 214,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 33,
+     "y": 238,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cómo prefieres que te llamemos?"
+    },
+    {
+     "x": 16,
+     "y": 333,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 123,
+     "y": 357,
+     "w": 256,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu número celular?"
+    },
+    {
+     "x": 16,
+     "y": 430,
+     "w": 380,
+     "h": 19,
+     "tipo": "label",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 33,
+     "y": 453,
+     "w": 346,
+     "h": 48,
+     "tipo": "input",
+     "etiqueta": "¿Cuál es tu correo electrónico?"
+    },
+    {
+     "x": 16,
+     "y": 526,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Continuar"
+    },
+    {
+     "x": 148,
+     "y": 598,
+     "w": 113,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Aviso de Privacidad"
+    },
+    {
+     "x": 16,
+     "y": 598,
+     "w": 372,
+     "h": 29,
+     "tipo": "a",
+     "etiqueta": "Consulta de Historial Crediticio"
+    },
+    {
+     "x": 154,
+     "y": 613,
+     "w": 115,
+     "h": 14,
+     "tipo": "a",
+     "etiqueta": "Información laboral."
+    }
+   ],
+   "texto_pantalla": "¡Vamos por tu préstamo!\n\nIngresa los datos para iniciar tu solicitud.\n\n¿Cómo prefieres que te llamemos?\n6/15\n¿Cuál es tu número celular?\n+52\n¿Cuál es tu correo electrónico?\nContinuar\n\nAl continuar, aceptas el Aviso de Privacidad y autorizas la Consulta de Historial Crediticio e Información laboral.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 3,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 46,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 550
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 526,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Continuar"
+   },
+   "espera_ms": 306,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "otp",
+   "avisos": [
+    "Mensaje de Banco Azteca: Tu código de verificación de Banco Azteca es 818411. No lo compartas con nadie.. Toca para usar el código."
+   ]
+  },
+  {
+   "n": 13,
+   "pantalla": "otp",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p13.png",
+   "marcas": "datos/capturas/T1-rosalba/p13-marcas.png",
+   "zonas": 4,
+   "perfil": {
+    "primera_impresion": "Se ve ordenada y seria, y me llegó el mensaje con el código del banco.",
+    "que_miras_primero": "El aviso arriba con el código 818411 y los cuadritos para escribirlo.",
+    "interpretacion": "Me piden el código de 6 dígitos que mandaron al número 55 00 00 00 00 para verificar que soy yo.",
+    "pensamiento": "Ahí está el código en el mensaje, qué bueno que llegó rápido. Lo voy a poner en los cuadritos.",
+    "intencion": "Escribir el código que me llegó en el mensaje en los cuadritos.",
+    "accion": {
+     "opcion": "escribir",
+     "texto": "El código viene en el mensaje del banco y el campo ya está listo para escribirlo; lo tecleo yo misma."
+    },
+    "marca": 3,
+    "escribir": "818411",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que es la verificación del número, pero no sé cuántos pasos faltan para la foto."
+    },
+    "confianza": 60,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 267,
+     "y": 294,
+     "w": 82,
+     "h": 32,
+     "tipo": "button",
+     "etiqueta": "Editar"
+    },
+    {
+     "x": 55,
+     "y": 358,
+     "w": 303,
+     "h": 60,
+     "tipo": "input",
+     "etiqueta": "Código de verificación de 6 dígitos - - - - -"
+    },
+    {
+     "x": 8,
+     "y": 8,
+     "w": 396,
+     "h": 80,
+     "tipo": "button",
+     "etiqueta": "Mensaje de Banco Azteca: Tu código de verificación de Banco Azteca es 818411. No"
+    }
+   ],
+   "texto_pantalla": "¡Hola, Prueba!\nVerifica tu número\n\nIngresa el código que se envió al:\n\n55 00 00 00 00\nEditar\nCódigo de verificación de 6 dígitos\n-\n-\n-\n-\n-\n\nPuedes recibirlo por WhatsApp o por SMS\n\nReenviar código en 57 seg.\n\n✉︎\nBanco Azteca · ahora\n\nTu código de verificación de Banco Azteca es 818411. No lo compartas con nadie.",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 1,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 60,
+   "accion": {
+    "tipo": "escribir",
+    "x": 206,
+    "y": 388,
+    "texto": "818411"
+   },
+   "zona_tocada": {
+    "x": 55,
+    "y": 358,
+    "w": 303,
+    "h": 60,
+    "tipo": "input",
+    "etiqueta": "Código de verificación de 6 dígitos - - - - -"
+   },
+   "espera_ms": 302,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "otpVerificado"
+  },
+  {
+   "n": 14,
+   "pantalla": "otpVerificado",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p14.png",
+   "marcas": "datos/capturas/T1-rosalba/p14-marcas.png",
+   "zonas": 3,
+   "perfil": {
+    "primera_impresion": "Se ve limpia y seria, con el logo del banco y un letrero grande que dice que mi número se verificó con éxito.",
+    "que_miras_primero": "El letrero grande «¡Tu número se verificó con éxito!» y la palomita en el celular dibujado.",
+    "interpretacion": "El código que puse salió bien y el banco ya confirmó mi celular. Me piden darle al botón para seguir con el trámite.",
+    "pensamiento": "Qué bueno, el código estuvo bien. Sigo, pero ojalá más adelante me dejen leer bien lo que autorizo.",
+    "intencion": "Quiero darle al botón de abajo para seguir con la solicitud.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Toco «¡Sigamos adelante!» porque el número ya quedó verificado y es lo único que me piden hacer en esta pantalla."
+    },
+    "marca": 3,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Sé que ya pasé el código, pero no me dicen cuántos pasos faltan ni cuándo llegaré a la foto."
+    },
+    "confianza": 64,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "¡Sigamos adelante!"
+    }
+   ],
+   "texto_pantalla": "¡Tu número se verificó con éxito!\n¡Sigamos adelante!",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 8,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "¡Sigamos adelante!"
+   },
+   "espera_ms": 309,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "asesor"
+  },
+  {
+   "n": 15,
+   "pantalla": "asesor",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p15.png",
+   "marcas": "datos/capturas/T1-rosalba/p15-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Se ve seria, con el logo del banco, pero me pregunta algo raro: si un asesor me está ayudando.",
+    "que_miras_primero": "La pregunta grande de arriba, «Prueba, ¿te está ayudando un asesor?», y las dos opciones.",
+    "interpretacion": "Quieren saber si alguien del banco me acompaña en el trámite. Tengo que elegir sí o no y luego confirmar.",
+    "pensamiento": "Nadie me está ayudando, lo estoy haciendo yo sola. Marco que no y luego confirmo.",
+    "intencion": "Contestar la verdad: que no me ayuda nadie, y darle confirmar.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Marco «No», porque lo estoy haciendo por mi cuenta; después podré darle Confirmar, que ahora está apagado."
+    },
+    "marca": 4,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya pasé varias pantallas y el código, pero no sé cuánto me falta para la foto."
+    },
+    "confianza": 64,
+    "friccion": 1,
+    "reglas": [
+     "C-02",
+     "C-05"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 218,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí, me están ayudando"
+    },
+    {
+     "x": 16,
+     "y": 274,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Prueba, ¿te está ayudando un asesor?\nSí, me están ayudando\nNo\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 12,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 296
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 274,
+    "w": 380,
+    "h": 44,
+    "tipo": "button",
+    "etiqueta": "No"
+   },
+   "espera_ms": 304,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "respuesta": "si",
+   "pantalla_despues": "asesor"
+  },
+  {
+   "n": 16,
+   "pantalla": "asesor",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p16.png",
+   "marcas": "datos/capturas/T1-rosalba/p16-marcas.png",
+   "zonas": 5,
+   "perfil": {
+    "primera_impresion": "Es la misma pantalla de si me ayuda un asesor, con \"No\" ya marcado, y se ve ordenada y seria.",
+    "que_miras_primero": "La pregunta de arriba y la opción \"No\" ya seleccionada.",
+    "interpretacion": "Me pide confirmar que nadie me está ayudando. Ya tengo marcado \"No\", que es lo cierto, y solo falta darle Confirmar.",
+    "pensamiento": "Ya dije que no, estoy sola en esto. Le doy Confirmar a ver qué sigue.",
+    "intencion": "Confirmar mi respuesta para seguir adelante.",
+    "accion": {
+     "opcion": "tocar",
+     "texto": "Mi respuesta ya está marcada como No, que es la verdad. Toco Confirmar para avanzar."
+    },
+    "marca": 5,
+    "escribir": "",
+    "progreso": {
+     "opcion": "mas_o_menos",
+     "texto": "Ya pasé el código y los datos, así que voy avanzando, pero no sé cuántos pasos faltan para la foto."
+    },
+    "confianza": 64,
+    "friccion": 1,
+    "reglas": [
+     "C-02"
+    ],
+    "sin_cobertura": []
+   },
+   "modelo_id": "claude-haiku-5-5,claude-sonnet-5-5",
+   "zonas_detalle": [
+    {
+     "x": 120,
+     "y": 8,
+     "w": 172,
+     "h": 50,
+     "tipo": "button",
+     "etiqueta": "Banco Azteca"
+    },
+    {
+     "x": 352,
+     "y": 80,
+     "w": 60,
+     "h": 60,
+     "tipo": "button",
+     "etiqueta": "Ayuda de Olivia"
+    },
+    {
+     "x": 16,
+     "y": 218,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "Sí, me están ayudando"
+    },
+    {
+     "x": 16,
+     "y": 274,
+     "w": 380,
+     "h": 44,
+     "tipo": "button",
+     "etiqueta": "No"
+    },
+    {
+     "x": 16,
+     "y": 751,
+     "w": 380,
+     "h": 48,
+     "tipo": "button",
+     "etiqueta": "Confirmar"
+    }
+   ],
+   "texto_pantalla": "Prueba, ¿te está ayudando un asesor?\nSí, me están ayudando\nNo\nConfirmar",
+   "marco": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 839
+   },
+   "recorte": null,
+   "campos": 0,
+   "progreso_visible": null,
+   "errores_visibles": [],
+   "permisos": [],
+   "host": "pwa.productdesign.mx",
+   "paginas": 1,
+   "palabras": 12,
+   "accion": {
+    "tipo": "tocar",
+    "x": 206,
+    "y": 775
+   },
+   "zona_tocada": {
+    "x": 16,
+    "y": 751,
+    "w": 380,
+    "h": 48,
+    "tipo": "button",
+    "etiqueta": "Confirmar"
+   },
+   "espera_ms": 303,
+   "host_despues": "pwa.productdesign.mx",
+   "paginas_despues": 1,
+   "validacion_disparada": [
+    "¡Empezamos con tu selfie! Tu foto nos ayuda a proteger tu información. Evita hacer caras y gestos. Ubícate en un lugar bien iluminado. Retira gorra, lentes o cu"
+   ],
+   "respuesta": "si",
+   "pantalla_despues": "selfieIntro"
+  },
+  {
+   "n": 17,
+   "pantalla": "selfieIntro",
+   "url": "https://pwa.productdesign.mx/app/?velocidad=rapida&camara=simulada&ubicacion=simulada",
+   "captura": "datos/capturas/T1-rosalba/p17.png",
+   "fin": true
+  }
+ ],
+ "costo_usd": 0.4595,
+ "tokens": {
+  "entrada": 58,
+  "cache_escritura": 73314,
+  "cache_lectura": 116704,
+  "salida": 14863
+ },
+ "resultado": "exito",
+ "ces": {
+  "ces": 4,
+  "texto": "Pude avanzar sola y se ve serio como un banco, pero el pago salía en $0, nunca vi el total y la letra de las condiciones y del aviso de privacidad era tan chica que no pude leer lo que autorizaba, así que no fue ni difícil ni cómodo."
+ },
+ "fin": "2026-10-29T10:27:27"
+}

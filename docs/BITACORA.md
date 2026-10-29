@@ -21,9 +21,11 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 
 ## Pendientes
 
-0. **Validar el modo ligero** (`estudios/2026-10-28-ou2-ligero-validacion`: T1 y T3, 4 perfiles, 1 corrida, ≈ 2.3 M de
-   tokens estimados contra ≈ 11.7 M que costaron las mismas 8 sesiones en modo completo). Espera aprobación de Alexis.
-   Si pasa V1–V4, `memoria: bitacora` se vuelve el predeterminado de recorrido.
+0. **Decidir si el modo ligero pasa a ser el predeterminado.** Validación corrida el 29/10/2026
+   (`estudios/2026-10-28-ou2-ligero-validacion/RESULTADOS.md`): 2.54 M tokens contra ≈ 11.5 M (4.5× menos). Reproduce
+   los hallazgos fuertes con la misma causa (total que no se ve, buró que no abre, fachada de ejemplo) y llega o no
+   llega igual en 8 de 8. Con los criterios fijados antes, no pasa completo: V1 5 de 8 (umbral 6, todas las
+   diferencias entre «éxito» y «éxito con fricción») y V4 en T1 28% (umbral 25%). Decide Alexis.
 1. ~~Segunda medición del benchmark~~ Hecha sobre la PWA MVP (28/10/2026). Siguiente: tercera medición cuando el MVP
    muestre el total a pagar y unifique los permisos de ubicación; recorrer también las ramas de error del MVP
    (escenarios por URL: `otp=incorrecto`, `selfie=noReconocida`, `ine=vencida`, `evaluacion=scoreGuardian`…).
@@ -370,3 +372,26 @@ En el vault «vault-equipo» (respaldos previos en `respaldos-vault/`, fuera de 
 - `03-Sintesis/voz-y-tono-de-la-originacion-unica.md`
 - `01-Fuentes/manuales-ux-writing-pwa.md`
 - Entradas en `00-Indice/index.md` y `00-Indice/log.md`; una línea en «Ver también» de 12 notas de concepto.
+
+
+## 2026-10-29 — Hero editorial animado del reporte OU2 PWA
+
+- Se sustituyó el carrusel de portada por una escena editorial de ancho completo, con ilustraciones SVG originales en azul y marfil.
+- La escena presenta 24 personajes en tres planos (15 en tablet y 9 en móvil), celulares, ciclos de articulación y un protagonista que se detiene para consultar el teléfono.
+- Movimiento continuo mediante Web Animations API, pausa manual, pausa fuera de pantalla y respeto de `prefers-reduced-motion`. Recursos locales en `reporte/assets/people-hero/`.
+- Verificación en Chrome: 1440×900, 1366×768, 1024×768, 768×1024, 390×844 y 375×812; sin desbordamiento horizontal. Comprobación de desplazamiento, pausa y movimiento reducido. Sintaxis de ambos scripts comprobada con `node --check`.
+- La entrega es una animación vectorial web, no un archivo de video renderizado.
+
+### Refinamiento del hero — composición y movimiento
+
+- Composición con CSS Grid: texto, escena y pie ocupan filas propias; se eliminó el espacio vacío excesivo en móvil. La escala de las figuras responde a la altura disponible mediante unidades de contenedor.
+- Jerarquía tipográfica, separación de frases, llamada a la acción y pie editorial refinados. Controles con foco visible y área de interacción de 44 px.
+- Personajes con inclinaciones individuales, detalles de cabello, parpadeos y balanceo del celular. El protagonista desacelera y acelera al detenerse a leer.
+- Se conserva la fase de las rutas al redimensionar. Verificación en seis resoluciones, sin errores de consola ni desbordamiento; pausa y movimiento reducido correctos.
+
+### Nueva dirección del hero: panorama humano de escala pequeña
+
+- Se revisó la referencia de movimiento del 29 de octubre a las 10:11 y se sustituyeron los bustos por figuras originales de cuerpo completo, pequeñas y de perfil.
+- El título conserva el protagonismo; el panorama usa dos planos, 18 figuras en escritorio, 12 en tablet y 6 en móvil, con articulación de rodillas, balanceo, miradas y lectura del teléfono.
+- Se recuperaron los tokens de color del reporte: marfil, verde y azul apagado. El resto del documento permanece igual.
+- Chrome: seis tamaños entre 375×812 y 1440×900, sin superposición entre texto y escena ni desbordamiento horizontal, sin errores de consola; pausa y movimiento reducido verificados. Ambos scripts pasan `node --check`.

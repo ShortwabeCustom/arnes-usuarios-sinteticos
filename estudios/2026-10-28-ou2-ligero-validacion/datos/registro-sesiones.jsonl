@@ -1,0 +1,8 @@
+{"id": "T1-bryan", "ok": true, "costo_usd": 0.4161, "tokens": {"entrada": 40, "cache_escritura": 70647, "cache_lectura": 90736, "salida": 11807}, "resultado": "exito", "t": "2026-10-29T10:27:14"}
+{"id": "T1-rosalba", "ok": true, "costo_usd": 0.4595, "tokens": {"entrada": 58, "cache_escritura": 73314, "cache_lectura": 116704, "salida": 14863}, "resultado": "exito", "t": "2026-10-29T10:27:27"}
+{"id": "T1-itzel", "ok": true, "costo_usd": 0.4744, "tokens": {"entrada": 62, "cache_escritura": 74383, "cache_lectura": 129212, "salida": 15794}, "resultado": "abandono", "t": "2026-10-29T10:27:30"}
+{"id": "T1-arturo", "ok": true, "costo_usd": 0.5152, "tokens": {"entrada": 70, "cache_escritura": 82639, "cache_lectura": 140767, "salida": 16397}, "resultado": "exito_con_friccion", "t": "2026-10-29T10:27:54"}
+{"id": "T3-bryan", "ok": true, "costo_usd": 0.7496, "tokens": {"entrada": 88, "cache_escritura": 121854, "cache_lectura": 220011, "salida": 22688}, "resultado": "exito_con_friccion", "t": "2026-10-29T10:34:48"}
+{"id": "T3-arturo", "ok": true, "costo_usd": 0.7752, "tokens": {"entrada": 124, "cache_escritura": 115948, "cache_lectura": 282661, "salida": 27001}, "resultado": "exito", "t": "2026-10-29T10:35:52"}
+{"id": "T3-itzel", "ok": true, "costo_usd": 0.9697, "tokens": {"entrada": 112, "cache_escritura": 155948, "cache_lectura": 265438, "salida": 30208}, "resultado": "exito_con_friccion", "t": "2026-10-29T10:36:12"}
+{"id": "T3-rosalba", "ok": true, "costo_usd": 0.9866, "tokens": {"entrada": 120, "cache_escritura": 155520, "cache_lectura": 277758, "salida": 31935}, "resultado": "fallo_max_pasos", "t": "2026-10-29T10:36:24"}

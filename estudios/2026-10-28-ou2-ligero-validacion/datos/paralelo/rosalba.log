@@ -1,0 +1,4 @@
+Instrumento: 0 errores · 0 avisos
+Sala de observación: http://127.0.0.1:50440/
+T1-rosalba: exito en 17 pasos · 205 mil tokens · 88 mil nuevos (el resto es relectura de caché)
+T3-rosalba: fallo_max_pasos en 34 pasos · 465 mil tokens · 188 mil nuevos (el resto es relectura de caché)
