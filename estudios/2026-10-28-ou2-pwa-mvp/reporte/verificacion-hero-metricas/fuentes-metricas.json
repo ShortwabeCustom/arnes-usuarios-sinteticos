@@ -1,0 +1,23 @@
+{
+  "28/32": {
+    "fuente": "../datos/agregado.json",
+    "campo": "metricas.sesiones[].completa",
+    "completas": 28,
+    "total": 32
+  },
+  "8/8": {
+    "fuente": "../narrativa.yaml",
+    "hallazgo": "H1",
+    "contexto": "simulador, tramo T1"
+  },
+  "2/8": {
+    "fuente": "../datos/agregado.json",
+    "tramo": "T4",
+    "sesiones": [
+      "T4-itzel-1",
+      "T4-itzel-2"
+    ],
+    "base": 8
+  },
+  "contenido_principal_preservado": true
+}

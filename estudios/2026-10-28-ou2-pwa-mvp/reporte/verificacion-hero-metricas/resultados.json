@@ -1,0 +1,92 @@
+{
+  "sizes": [
+    {
+      "w": 1440,
+      "overflow": false,
+      "separate": false,
+      "ratio": 2.1357558341637506,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    },
+    {
+      "w": 1280,
+      "overflow": false,
+      "separate": false,
+      "ratio": 1.9506155201562017,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    },
+    {
+      "w": 1024,
+      "overflow": false,
+      "separate": false,
+      "ratio": 1.678688524590164,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    },
+    {
+      "w": 768,
+      "overflow": false,
+      "separate": false,
+      "ratio": 1.259016393442623,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    },
+    {
+      "w": 390,
+      "overflow": false,
+      "separate": true,
+      "ratio": 1.7777777777777777,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    },
+    {
+      "w": 360,
+      "overflow": false,
+      "separate": true,
+      "ratio": 1.7777777777777777,
+      "oldScene": false,
+      "oldScripts": false,
+      "animations": 0
+    }
+  ],
+  "wraps": 2,
+  "samples": [
+    0.375,
+    1.4058,
+    2.4283,
+    3.6526,
+    4.6713,
+    5.6899,
+    6.7049,
+    7.9132,
+    1.2632,
+    2.4848,
+    3.5062,
+    4.5243,
+    5.5448,
+    6.564,
+    7.5802,
+    0.7854,
+    2.1789,
+    3.3731,
+    4.3913
+  ],
+  "errors": [],
+  "checks": [
+    "keyboard pause",
+    "manual pause persisted",
+    "offscreen pause/resume",
+    "simulated hidden document handler",
+    "reduced motion and opt-in",
+    "print poster",
+    "simulated blocked autoplay and retry",
+    "CTA"
+  ],
+  "recordingPath": "/tmp/urban-hero-video/page@8a2671d23e07069be7dbf6abd6d0b655.webm"
+}

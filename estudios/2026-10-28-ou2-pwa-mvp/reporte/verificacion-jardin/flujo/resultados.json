@@ -1,0 +1,69 @@
+{
+  "sizes": [
+    {
+      "w": 1440,
+      "overflow": false,
+      "people": 20,
+      "walking": 5
+    },
+    {
+      "w": 1280,
+      "overflow": false,
+      "people": 20,
+      "walking": 5
+    },
+    {
+      "w": 390,
+      "overflow": false,
+      "people": 8,
+      "walking": 3
+    },
+    {
+      "w": 360,
+      "overflow": false,
+      "people": 8,
+      "walking": 3
+    }
+  ],
+  "moving": [
+    [
+      "quiet-neighbour",
+      "passer",
+      "observer",
+      "walker",
+      "stroller"
+    ],
+    [
+      "quiet-neighbour",
+      "passer",
+      "observer",
+      "walker",
+      "stroller"
+    ],
+    [
+      "quiet-neighbour",
+      "passer",
+      "observer",
+      "walker",
+      "stroller"
+    ],
+    [
+      "quiet-neighbour",
+      "passer",
+      "observer",
+      "walker",
+      "stroller"
+    ],
+    [
+      "quiet-neighbour",
+      "passer",
+      "observer",
+      "walker",
+      "stroller"
+    ]
+  ],
+  "errors": [],
+  "pause": "pass",
+  "reducedMotion": "pass",
+  "videoPath": "/tmp/garden-flow-video/page@269d74e6ed671b4702a9f15e9a5d9c5f.webm"
+}

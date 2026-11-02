@@ -424,6 +424,15 @@ def test_tablero_con_calidad_tecnica():
     assert "vistaTecnica" in html and "\"tecnico\": {" in html
 
 
+def test_guardia_no_confunde_decimales_ni_videos_de_playwright():
+    from arnes.guardia import revisar_texto
+
+    assert not revisar_texto('"ratio": 2.1357558341637506')          # la parte decimal pasa Luhn
+    assert not revisar_texto('"video": "page@8a2671d23e07069be7dbf6abd6d0b655.webm"')
+    assert revisar_texto("tarjeta: 4111 1111 " + "1111 1111")
+    assert revisar_texto("page@" + "hotmail.com")
+
+
 def test_guardia_ignora_codigo_de_terceros(tmp_path):
     import subprocess
 

@@ -1,0 +1,29 @@
+{
+  "unidad": "Respuestas repetidas dentro de sesiones sintéticas",
+  "sesiones": 24,
+  "por_tramo": {
+    "T1": {
+      "si": 0,
+      "mas_o_menos": 98,
+      "no": 29
+    },
+    "T2": {
+      "si": 3,
+      "mas_o_menos": 87,
+      "no": 16
+    },
+    "T3": {
+      "si": 1,
+      "mas_o_menos": 215,
+      "no": 17
+    }
+  },
+  "totales": {
+    "si": 4,
+    "mas_o_menos": 400,
+    "no": 62
+  },
+  "respuestas_con_dudas": 462,
+  "respuestas_totales": 466,
+  "verificacion": "Coincidencia exacta entre registros individuales y agregado; fuente editorial y entregable sincronizados."
+}

@@ -17,7 +17,8 @@ from pathlib import Path
 # Dominios de ejemplo que aparecen en plantillas y en notas de UX writing.
 # Dominios de ejemplo y textos de ayuda típicos de un campo de correo («ejemplo@mail.com», «tucorreo@…»).
 CORREOS_DE_EJEMPLO = re.compile(r"@(example\.(com|org|net)|ejemplo\.com|empresa\.com|correo\.com|dominio\.com)$"
-                                r"|^(noreply|ejemplo|example|tucorreo|tu\.correo|usuario|nombre|correo)@", re.I)
+                                r"|^(noreply|ejemplo|example|tucorreo|tu\.correo|usuario|nombre|correo)@"
+                                r"|^page@[0-9a-f]{32}\.webm$", re.I)  # nombre de video que genera Playwright
 
 PATRONES = [
     ("correo", re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")),
@@ -27,7 +28,8 @@ PATRONES = [
     ("llave privada", re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----")),
     ("contraseña escrita", re.compile(r"(?i)\b(password|contrase(ñ|n)a|passwd)\s*[:=]\s*[\"']?[^\s\"'{}]{4,}")),
     ("CURP", re.compile(r"\b[A-Z][AEIOUX][A-Z]{2}\d{6}[HM][A-Z]{5}[A-Z0-9]\d\b")),
-    ("número de tarjeta", re.compile(r"\b(?:\d[ -]?){15,16}\b")),
+    # Sin la parte decimal de un número: 2.1357558341637506 no es una tarjeta.
+    ("número de tarjeta", re.compile(r"(?<!\d\.)\b(?:\d[ -]?){15,16}\b")),
 ]
 
 

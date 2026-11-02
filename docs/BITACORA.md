@@ -16,7 +16,7 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 - **Sin probar:** el ambiente dev con VPN o login.
 - **Repositorios** privados en GitHub: `ShortwabeCustom/arnes-usuarios-sinteticos` y `ShortwabeCustom/vault-equipo`
   (submódulo en `vault/`), rama `main`.
-- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 29 pasan (también en GitHub Actions).
+- **Pruebas:** `.venv/bin/python -m pytest tests -q` → 43 pasan (también en GitHub Actions).
 - **Consumo** en tokens (`arnes estado <estudio>`). OU 2.0 prototipo ≈ 21 M; OU 2.0 MVP ≈ 37 M (≈ 3.7 M nuevos).
 
 ## Pendientes
@@ -29,6 +29,9 @@ quedó pendiente. Lo más reciente va arriba. Al terminar una sesión de trabajo
 2. Probar `recorrido` en el ambiente dev (`dev-bazsolicitudunica.com.mx`): pre-flight de acceso primero.
    Revisión manual de accesibilidad con TalkBack (axe cubre solo una parte).
 3b. Tablero para estudios de comprensión (hoy solo recorrido).
+3c. Pulir `arnes ensayar`: escribir los pasos mínimos en `pasos_esperados`, quitar el falso aviso de datos faltantes
+    («Sí», «Viernes») y probar `--paralelo`. Prueba automática de la regla de recorte de zonas en `navegador.py`.
+    Baja prioridad: el estimador del modo completo sobreestima (OU 2.0: 41 M estimados, 30.9 M reales).
 3. Las sesiones de `estudios/prueba-recorrido-web` se corrieron antes de corregir la medición de la espera del sistema
    (pausas de 1.2 s); su tiempo estimado está inflado. Repetirlas si se quiere el ejemplo exacto (≈ 1 M de tokens).
 4. La réplica de recompra corrió solo la corrida 1 (32 de 96 sesiones). Correr 2 y 3 para tener estabilidad entre
@@ -67,6 +70,8 @@ constructores atados a sus rutas. Copiarlo habría heredado esas cifras, así qu
 - `arnes verificar` marcaba 9 errores falsos sobre la edición de Alexis (buscaba `id="H1"` en la página principal); ahora revisa
   también las lecturas. OU 2.0 dice LISTO.
 - Límite: el reporte ya no es un archivo autocontenido (necesita `assets/`, `lecturas/` y `datos/`). Solo cubre recorrido.
+- Alexis pidió subir `reporte/respaldos/` y `reporte/verificacion-*` de OU 2.0. La guardia los bloqueaba por 11 falsas alarmas:
+  decimales que pasan Luhn y nombres de video de Playwright (`page@<hash>.webm`). Se corrigieron ambos casos, con prueba.
 
 ## Sesión del 29 de octubre de 2026 (validación y cierre del modo ligero)
 
