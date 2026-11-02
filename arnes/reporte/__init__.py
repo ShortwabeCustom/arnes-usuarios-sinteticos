@@ -430,6 +430,21 @@ def pagina(e: Estudio, N: dict, secciones: list[tuple[str, str, str, str]], dato
 """
 
 
+def _presentacion_editorial(e: Estudio, N: dict, generado: str) -> str:
+    """Una presentación local optativa conserva la edición editorial del estudio.
+
+    Es una fuente HTML revisada, no una plantilla que interpole datos sin verificar.
+    El documento de detalle y Markdown siguen saliendo de los datos del estudio.
+    """
+    fuente = (N.get("presentacion") or {}).get("html_local")
+    if not fuente:
+        return generado
+    ruta = (e.dir / fuente).resolve()
+    if not ruta.is_relative_to(e.dir):
+        raise ValueError("presentacion.html_local debe estar dentro del estudio")
+    return ruta.read_text(encoding="utf-8")
+
+
 def construir(e: Estudio) -> str:
     from importlib import import_module
 
@@ -439,11 +454,15 @@ def construir(e: Estudio) -> str:
     nombre = e.entregable(al_construir=True)
     salida = e.ruta("reporte", f"{nombre}.html")
     if e.metodo == "recorrido":
-        # el reporte principal es el tablero (docs/TABLERO.md); el documento completo queda como -detalle
-        from . import tablero
+        # el reporte principal es el editorial (docs/REPORTE-EDITORIAL.md); tablero y documento completo quedan a un clic
+        from . import editorial, tablero
 
         e.ruta("reporte", f"{nombre}-detalle.html").write_text(html_txt, encoding="utf-8")
         html_txt = tablero.armar(e, N, f"{nombre}-detalle.html", img64)
+        e.ruta("reporte", f"{nombre}-tablero.html").write_text(html_txt, encoding="utf-8")
+        if not (N.get("presentacion") or {}).get("html_local"):
+            html_txt = editorial.construir(e, N, nombre)
+    html_txt = _presentacion_editorial(e, N, html_txt)
     salida.write_text(html_txt, encoding="utf-8")
     e.ruta("reporte", f"{nombre}.md").write_text(md, encoding="utf-8")
     e.marcar("reporte", html=str(salida.relative_to(e.dir)), kb=round(len(html_txt.encode()) / 1024))

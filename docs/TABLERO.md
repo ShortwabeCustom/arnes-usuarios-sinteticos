@@ -1,8 +1,11 @@
 # Tablero de investigación (reporte de recorrido)
 
-Diseño del reporte principal de un estudio de recorrido: un tablero para decidir con evidencia UX, no un informe
-lineal. Lo genera `arnes reporte` (`arnes/reporte/tablero.py`, `tablero.css`, `tablero.js`) desde los datos del
-estudio. El reporte anterior, completo y lineal, sigue disponible como `<nombre>-detalle.html`.
+> Desde noviembre de 2026 el reporte principal de un recorrido es el editorial ([REPORTE-EDITORIAL.md](REPORTE-EDITORIAL.md)).
+> El tablero sigue generándose como `<nombre>-tablero.html` y se abre desde «Cómo leer este estudio».
+
+Un tablero para decidir con evidencia UX, no un informe lineal. Lo genera `arnes reporte` (`arnes/reporte/tablero.py`,
+`tablero.css`, `tablero.js`) desde los datos del estudio. El reporte completo y lineal sigue disponible como
+`<nombre>-detalle.html`.
 
 Principio: **Resumen → Hallazgo → Evidencia → Detalle**. Menos información visible a la vez no es menos información
 disponible: todo lo del reporte anterior sigue a un clic.

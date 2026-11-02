@@ -1,0 +1,65 @@
+# Texto editorial del reporte. Se escribe DESPUÉS de la narrativa; guía completa en docs/REPORTE-EDITORIAL.md.
+# Ejemplo real: estudios/2026-10-28-ou2-pwa-mvp/editorial.yaml. Todo es opcional: lo que falte sale de la narrativa.
+# Formato en los textos: **negritas**, [enlace](lectura), {{cifra}} → 8/8, {{cifra|de}} → 8 de 8, {{cifra|x}} → 8.
+# Las cifras NO se escriben a mano: se declaran aquí y `arnes verificar` las recuenta contra las sesiones.
+marca: ""              # nombre corto para la barra, p. ej. «OU 2.0»
+producto_nombre: ""
+medicion: ""           # p. ej. «Primera medición»
+material_nombre: ""    # cómo llamarle: «el MVP», «el prototipo»
+
+cifras: {}
+  # {auto: completan, tarea: T1} · {auto: abandonan, tarea: T4}  → se calculan (también `completan_T1`, `abandonan_T4` directo)
+  # {hallazgo: H1, tarea: T1}                                     → sesiones de ese hallazgo sobre las de la tarea
+  # {sesiones: [T1-bryan-1, T1-itzel-2], tarea: T1}               → esa lista sobre las de la tarea
+
+portada:
+  titular: ["", ""]    # dos frases cortas; la segunda va en color. Da la conclusión, no el tema
+  intro: ""
+  accion: "Leer los hallazgos"
+  escena: ""           # pie de la imagen de portada
+  encabezado: ["", ""]
+  senales: []          # tres: {cifra: completan, titulo, texto, enlace, destino}; destino = lectura (recorrido, hallazgos, evidencia-…)
+
+apertura:
+  pregunta: ""         # si falta, pregunta_principal de estudio.yaml
+  respuesta: ""
+
+tramos:                # nombres de acción por tarea: los códigos T1, T2… no salen en la página
+  T1: {nombre: "", logro: "", nota: ""}
+
+recorrido:
+  titulo: ""
+  tension: []          # dos: {cifra: "{{x|de}}", texto: "", nota: ""}
+
+casos: []              # hasta cuatro; `arnes verificar` revisa que sesión, paso y pantalla existan
+  # - id: evidencia-tema        sesion: T1-perfil-1    paso: 1          pantalla: <la del paso>
+  #   tema, titulo, heuristica  criterios: [N1, N10]   (trae lo que dijo la auditoría experta de esa pantalla)
+  #   observacion: qué muestra la pantalla · interpretacion · limite: qué NO permite afirmar · nota_mapa
+  #   siguiente: true agrega el pensamiento del paso siguiente
+
+voces: []              # {sesion, momento, cita}: la cita debe ser textual o `arnes verificar` bloquea
+voces_tras_capitulo: 1
+
+capitulos:             # hallazgos: [H1] marca qué cubre; `arnes verificar` avisa si queda fuera una severidad 3–4
+  - etiqueta: ""
+    titulo: ""
+    intro: ""
+    hallazgos: []
+    # tras_hipotesis: true  → va después de las hipótesis (comparar con una medición anterior)
+    bloques: []
+    # {tipo: historia, paneles: [{acento: true, etiqueta, cifra, titulo, texto, accion}]}
+    # {tipo: duo, tarjetas: [...]}  una tarjeta es {tipo: hallazgo, etiqueta, cifra, titulo, texto, fuentes}, o:
+    # {tipo: confianza, tarea: T2, antes: <pantalla>, despues: <pantalla>, etiqueta, etiqueta_antes, etiqueta_despues, titulo, texto, fuentes}
+    # {tipo: orientacion, tareas: [T1, T2], base: "", otro_titulo: "", otro: ""}
+    # {tipo: accion, texto: ""} · {tipo: nota, texto: ""}
+    # {tipo: comparacion, elementos: [{estado, titulo, texto}]}  sin este bloque se agrega «Lo que ya funciona»
+
+# antecedente: {titulo: "", descripcion: "", ruta: "../otro-estudio/reporte/…md"}   → lectura «antecedente»
+hipotesis: {}          # H1: {titulo, texto, matiz: "Se sostiene, con matiz"}; el estado sale de hipotesis_resultado
+decisiones:
+  titulo: ""
+  intro: ""
+  prioridades: []      # {titulo, texto}; si falta, las recomendaciones de los hallazgos más severos
+metodo:
+  parrafos: []         # lo propio del estudio; sesiones, perfiles, dispositivo y estabilidad se calculan
+  falta: ""

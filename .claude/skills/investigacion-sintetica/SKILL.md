@@ -80,6 +80,9 @@ recorrido mira las capturas de los momentos candidatos. Escribe `narrativa.yaml`
 
 ## 6. Reporte y control final
 
+En recorrido, primero llena `editorial.yaml` (docs/REPORTE-EDITORIAL.md): titular de dos frases, tramos con nombres de
+acción, casos, voces textuales y capítulos. Las cifras se declaran en `cifras` y se usan con `{{cifra}}`; no se escriben a mano.
+
 ```bash
 arnes reporte <estudio>
 arnes verificar <estudio>     # debe terminar en LISTO PARA ENTREGAR

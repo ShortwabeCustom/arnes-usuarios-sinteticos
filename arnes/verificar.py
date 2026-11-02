@@ -132,8 +132,16 @@ def verificar(e: Estudio) -> bool:
         avi.append("sin «aprendizajes_metodo»: es lo que la síntesis lleva al vault")
     if not N.get("positivos"):
         avi.append("no hay hallazgos positivos («positivos»)")
+    # reporte editorial (recorrido): cifras recontadas, citas textuales, casos y enlaces
+    editoriales = []
+    if e.metodo == "recorrido" and agg_f.exists() and not (N.get("presentacion") or {}).get("html_local"):
+        from .reporte import editorial
+
+        o_, a_, e_ = editorial.revisar(e, N)
+        ok, avi, err = ok + o_, avi + a_, err + e_
+        editoriales = list(editorial.textos(editorial.cargar(e)))
     # lenguaje
-    for donde, t in _textos(N):
+    for donde, t in list(_textos(N)) + editoriales:
         tl = t.lower()
         for w in PROHIBIDAS:
             m = re.search(rf"\b{w}\b", tl)
@@ -159,10 +167,14 @@ def verificar(e: Estudio) -> bool:
     else:
         h = rep.read_text(encoding="utf-8")
         nar = e.ruta("narrativa.yaml")
-        if nar.stat().st_mtime > rep.stat().st_mtime or (agg_f.exists() and agg_f.stat().st_mtime > rep.stat().st_mtime):
-            err.append("el reporte es más viejo que narrativa.yaml o agregado.json: vuelve a correr `arnes reporte`")
+        edi = e.ruta("editorial.yaml")
+        if any(f.exists() and f.stat().st_mtime > rep.stat().st_mtime for f in (nar, agg_f)) or (edi.exists() and not (N.get("presentacion") or {}).get("html_local") and edi.stat().st_mtime > rep.stat().st_mtime):
+            err.append("el reporte es más viejo que narrativa.yaml, editorial.yaml o agregado.json: vuelve a correr `arnes reporte`")
+        # el reporte editorial lleva todos los hallazgos en sus lecturas, no en la página principal
+        lecturas = rep.parent / "assets/report-reader/data"
+        visibles = h + "".join(lecturas.joinpath(f).read_text(encoding="utf-8") for f in ("hallazgos.js", "sintesis.js") if lecturas.joinpath(f).exists())
         for x in N.get("hallazgos") or []:
-            if x.get("id") and f'id="{x["id"]}"' not in h:
+            if x.get("id") and not re.search(rf'id=\\?"{x["id"]}\\?"|"id":"{x["id"]}"', visibles):
                 err.append(f"el reporte no incluye el hallazgo {x['id']}")
         for need, msg in (('<meta charset="utf-8">', "charset"), ("Investigación sintética", "aviso de investigación sintética"),
                           ('<html lang="es">', "idioma")):

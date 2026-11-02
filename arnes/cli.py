@@ -111,6 +111,8 @@ def cmd_nuevo(a):
             prot = prot.replace("{{" + k + "}}", v)
     (d / "PROTOCOLO.md").write_text(prot, encoding="utf-8")
     shutil.copy(RAIZ / "metodos" / "narrativa.plantilla.yaml", d / "narrativa.yaml")
+    if a.metodo == "recorrido":
+        shutil.copy(RAIZ / "metodos" / "recorrido" / "editorial.plantilla.yaml", d / "editorial.yaml")
     print(f"Creado {d.relative_to(RAIZ)}\n  1. Copia el material a material/\n  2. Completa estudio.yaml (bloque uix incluido)\n"
           f"  3. Completa PROTOCOLO.md, empezando por el brief, y apruébalo antes de correr sesiones")
 

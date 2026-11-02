@@ -32,6 +32,7 @@ arnes medir / arnes sesiones / arnes recorrido   (recorrido visible: subtítulos
 arnes auditar <estudio>           → 3 evaluaciones expertas independientes, consolidadas (opcional, recomendado)
 arnes analizar                    → incluye estabilidad, brechas con intervalo, homogeneidad del panel
   escribir narrativa.yaml (hallazgos, interpretación, recomendaciones, aprendizajes_metodo)
+  recorrido: escribir editorial.yaml (portada, tramos, casos, voces, capítulos; cifras con `{{cifra}}`, no a mano)
 arnes reporte
 arnes verificar                   → debe decir LISTO PARA ENTREGAR
 arnes sintesis <estudio>          → archiva lo aprendido en 03-Sintesis/ del vault (con --simular antes)
@@ -148,7 +149,8 @@ una entrada en la bitácora por sesión.
 
 ## Entregables
 
-`reporte/<nombre-uix>.html` (autocontenido, abre con doble clic; en recorrido es el **tablero de investigación**, ver
-`docs/TABLERO.md`, y el documento completo queda en `<nombre-uix>-detalle.html`) y `.md` con el mismo nombre (naming de UiX; sin
-bloque `uix`, el nombre de la carpeta). Si la persona usuaria lo pide o el reporte es para otras personas, publicarlo
+`reporte/<nombre-uix>.html` y `.md` con el mismo nombre (naming de UiX; sin bloque `uix`, el nombre de la carpeta). En
+comprensión el HTML es autocontenido. En recorrido es el **reporte editorial** (`docs/REPORTE-EDITORIAL.md`): abre con doble
+clic, pero necesita su carpeta (`assets/`, `lecturas/`) y `datos/`; su texto va en `editorial.yaml` y sus cifras salen de las
+sesiones. Al lado quedan `<nombre-uix>-tablero.html` (`docs/TABLERO.md`) y `<nombre-uix>-detalle.html`. Si la persona usuaria lo pide o el reporte es para otras personas, publicarlo
 además como Artifact privado y dar el link.

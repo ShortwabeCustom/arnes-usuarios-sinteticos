@@ -302,6 +302,10 @@ arnes reporte <estudio>
 arnes verificar <estudio>      # tiene que terminar en LISTO PARA ENTREGAR
 ```
 
+En recorrido, antes de este paso se llena `editorial.yaml` (portada, tramos, casos, voces y capítulos): el reporte
+principal sale con el diseño editorial; ver [REPORTE-EDITORIAL.md](REPORTE-EDITORIAL.md). Sin ese archivo el reporte sale
+igual, con textos automáticos.
+
 `arnes verificar` recuenta cada cifra de los KPI contra los datos, revisa que cada hallazgo tenga su cadena completa,
 marca el lenguaje que la guía editorial prohíbe y avisa si un KPI se apoya en algo que no se repite.
 
@@ -442,7 +446,7 @@ arnes analizar <estudio>
 arnes estado <estudio>                             # qué fases se hicieron y cuánto costó
 
 # comunicar
-arnes reporte <estudio>                            # recorrido: tablero + <nombre>-detalle.html
+arnes reporte <estudio>                            # recorrido: editorial + -tablero.html + -detalle.html
 arnes verificar <estudio>
 arnes sintesis <estudio> [--simular]
 

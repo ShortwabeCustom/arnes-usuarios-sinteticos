@@ -81,7 +81,7 @@ Recorre la ruta mecánica en el celular emulado y mide, por pantalla: WCAG 2.0/2
 autocompletado, teclado), tamaño mínimo de texto, legibilidad INFLESZ y errores de consola y red. Una vez por
 estudio: carga en frío y con caché en red móvil lenta y CPU 4× (TTFB, FCP, LCP, CLS, TBT, peso), respuesta a toques
 (INP aproximado), PWA (manifiesto, íconos, service worker, sin conexión) y retoma en `tecnico.retoma_en`. Resultado en
-`datos/tecnico.json`; el tablero lo muestra en «Calidad técnica» y `arnes estilo` revisa también esos textos.
+`datos/tecnico.json`; el tablero interactivo (`<nombre>-tablero.html`) lo muestra en «Calidad técnica» y `arnes estilo` revisa también esos textos.
 axe encuentra una parte de los problemas: lo demás exige revisión manual.
 
 ## Cómo corre una sesión (modo autónomo)

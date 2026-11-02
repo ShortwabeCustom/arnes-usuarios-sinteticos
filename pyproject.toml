@@ -21,4 +21,4 @@ arnes = "arnes.cli:main"
 include = ["arnes*"]
 
 [tool.setuptools.package-data]
-arnes = ["reporte/*.css", "reporte/*.js"]
+arnes = ["reporte/*.css", "reporte/*.js", "reporte/plantilla_editorial/assets/**/*"]
