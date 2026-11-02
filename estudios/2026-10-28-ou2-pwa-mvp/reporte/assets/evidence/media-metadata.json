@@ -1,0 +1,482 @@
+{
+  "T1-arturo-1": {
+    "signature": [
+      9568576,
+      1793218055900183596
+    ],
+    "duration": 264.24,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-arturo-2": {
+    "signature": [
+      9356125,
+      1793218320358304762
+    ],
+    "duration": 258.76,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-bryan-1": {
+    "signature": [
+      9475037,
+      1793218049114982662
+    ],
+    "duration": 260.6,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-bryan-2": {
+    "signature": [
+      9965837,
+      1793218343428982691
+    ],
+    "duration": 288.64,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-itzel-1": {
+    "signature": [
+      9146727,
+      1793218034973341882
+    ],
+    "duration": 245.8,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-itzel-2": {
+    "signature": [
+      6279466,
+      1793233375490246446
+    ],
+    "duration": 211.96,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-rosalba-1": {
+    "signature": [
+      9616853,
+      1793218051734878899
+    ],
+    "duration": 261.56,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T1-rosalba-2": {
+    "signature": [
+      8747969,
+      1793218310458241478
+    ],
+    "duration": 251.92,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-arturo-1": {
+    "signature": [
+      6434751,
+      1793218552813911053
+    ],
+    "duration": 214.12,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-arturo-2": {
+    "signature": [
+      6748420,
+      1793218793188965494
+    ],
+    "duration": 222.36,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-bryan-1": {
+    "signature": [
+      7026345,
+      1793218598614842999
+    ],
+    "duration": 237.12,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-bryan-2": {
+    "signature": [
+      7162592,
+      1793218850656922213
+    ],
+    "duration": 233.96,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-itzel-1": {
+    "signature": [
+      6465926,
+      1793218452551540996
+    ],
+    "duration": 206.56,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-itzel-2": {
+    "signature": [
+      6589890,
+      1793218682655183019
+    ],
+    "duration": 212.0,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-rosalba-1": {
+    "signature": [
+      6804979,
+      1793218547501123225
+    ],
+    "duration": 216.04,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T2-rosalba-2": {
+    "signature": [
+      6887844,
+      1793218780447671436
+    ],
+    "duration": 211.88,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-arturo-1": {
+    "signature": [
+      19318220,
+      1793233878323954045
+    ],
+    "duration": 635.64,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-arturo-2": {
+    "signature": [
+      23029665,
+      1793234695453413730
+    ],
+    "duration": 773.32,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-bryan-1": {
+    "signature": [
+      17407125,
+      1793219373045872425
+    ],
+    "duration": 480.8,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-bryan-2": {
+    "signature": [
+      18111896,
+      1793233775573266162
+    ],
+    "duration": 588.36,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-itzel-1": {
+    "signature": [
+      16708838,
+      1793219159666185166
+    ],
+    "duration": 435.28,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-itzel-2": {
+    "signature": [
+      16860321,
+      1793235826877369166
+    ],
+    "duration": 468.92,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-rosalba-1": {
+    "signature": [
+      17245572,
+      1793219265424361211
+    ],
+    "duration": 440.4,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T3-rosalba-2": {
+    "signature": [
+      24035115,
+      1793233999668479028
+    ],
+    "duration": 765.0,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-arturo-1": {
+    "signature": [
+      8314733,
+      1793234989786862703
+    ],
+    "duration": 229.28,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-arturo-2": {
+    "signature": [
+      6484485,
+      1793235240824731160
+    ],
+    "duration": 186.52,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-bryan-1": {
+    "signature": [
+      9367788,
+      1793234124358914936
+    ],
+    "duration": 284.68,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-bryan-2": {
+    "signature": [
+      7326093,
+      1793234402280879811
+    ],
+    "duration": 213.56,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-itzel-1": {
+    "signature": [
+      5473398,
+      1793236038652965151
+    ],
+    "duration": 147.64,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-itzel-2": {
+    "signature": [
+      5528085,
+      1793236249874208502
+    ],
+    "duration": 146.76,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-rosalba-1": {
+    "signature": [
+      8529880,
+      1793234302467907644
+    ],
+    "duration": 238.32,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  },
+  "T4-rosalba-2": {
+    "signature": [
+      8421592,
+      1793234600222842041
+    ],
+    "duration": 233.6,
+    "streams": [
+      {
+        "codec_name": "vp8",
+        "codec_type": "video",
+        "width": 392,
+        "height": 800
+      }
+    ]
+  }
+}

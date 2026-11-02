@@ -19,7 +19,7 @@ Los cuatro perfiles llegan de la bienvenida a la verificación del celular (7 de
 - La verificación de identidad pide cinco permisos. En el tercero de ubicación, ahora desde «identidad-digital-ocrdual.com.mx», la confianza cae de alrededor de 60 a 40 en 8 de 8 sesiones de T2; Bryan lo niega en sus dos corridas (pasa por «cámara negada» y luego acepta).
 - La autorización de buró sigue implícita al tocar «Continuar». 8 de 8 sesiones de T1 la notan, la mayoría no la lee («Ni me puse a leer la letra chiquita») y el enlace «Consulta de Historial Crediticio» abre la página de inicio del banco, no el documento: Itzel se detiene ahí.
 - La visita a domicilio aparece hasta la agenda. 4 de 8 sesiones de T4 lo dicen así: «Yo quería resolverlo desde el celular».
-- Saber dónde va: en T1–T3, 435 de 439 respuestas dicen «no» o «más o menos». La barra de progreso del domicilio se nota (6 de 8 sesiones de T3 la mencionan), pero arranca vacía por etapa: «La barra casi vacía… otra vez a empezar» (Bryan).
+- Saber dónde va: en T1–T3, 462 de 466 respuestas dicen «no» o «más o menos». La barra de progreso del domicilio se nota (6 de 8 sesiones de T3 la mencionan), pero arranca vacía por etapa: «La barra casi vacía… otra vez a empezar» (Bryan).
 - En «Confirma tus datos» 8 de 8 sesiones de T3 notan que la app pide coincidir con la INE pero no trae los apellidos ni la dirección que acaba de leer.
 - La foto de fachada de ejemplo parece un hotel: 8 de 8 sesiones de T3 lo comentan; 7 confirman «para avanzar» y Rosalba se niega en una corrida y no llega a la oferta.
 - Técnica: carga en 2.4 s (LCP) con red móvil lenta, 667 KB, funciona sin conexión y conserva el avance al volver (8 de 8 sesiones de T3). Accesibilidad automática (WCAG 2.2 AA): 21 de 30 pantallas sin fallas; contraste insuficiente en 7 (los botones «No permitir», el contador del código) y carruseles sin teclado.
@@ -134,7 +134,7 @@ Los cuatro perfiles llegan de la bienvenida a la verificación del celular (7 de
 
 **Severidad:** 2 (Menor) · **Confianza:** alta
 
-**Hallazgo.** La bienvenida promete «4 pasos»; la ruta mínima son 59 acciones en 30 pantallas. En T1–T3, 435 de 439 respuestas dicen no saber, o saber más o menos, en qué parte van. La barra «Tu domicilio» se nota (6 de 8 sesiones de T3), pero mide la etapa: «La barra casi vacía… otra vez a empezar» (Bryan).
+**Hallazgo.** La bienvenida promete «4 pasos»; la ruta mínima son 59 acciones en 30 pantallas. En T1–T3, 462 de 466 respuestas dicen no saber, o saber más o menos, en qué parte van. La barra «Tu domicilio» se nota (6 de 8 sesiones de T3), pero mide la etapa: «La barra casi vacía… otra vez a empezar» (Bryan).
 
 **Interpretación.** Una barra por etapa que vuelve a cero confirma que falta mucho sin decir cuánto. La promesa de 4 pasos sigue sin corresponder al recorrido.
 

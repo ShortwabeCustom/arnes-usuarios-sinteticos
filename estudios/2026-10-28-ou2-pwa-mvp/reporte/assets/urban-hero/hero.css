@@ -1,0 +1,81 @@
+/* Editorial panorama: one visual story, followed by sourced study signals. */
+.microcosmos-hero{--hero-paper:var(--paper,#f7f3ea);--hero-green:#174f40;background:var(--hero-paper);isolation:isolate;position:relative}
+.microcosmos-hero .urban-stage{position:relative;isolation:isolate;overflow:hidden;min-height:620px;padding:44px 32px 200px}
+.microcosmos-hero .urban-panorama{position:absolute;inset:0;z-index:-2;pointer-events:none;background:var(--hero-paper)}
+.microcosmos-hero .urban-poster,.microcosmos-hero .urban-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:saturate(.68) contrast(.95) brightness(1.025)}
+.microcosmos-hero .urban-video{opacity:0}
+.microcosmos-hero[data-frame="video"] .urban-video{opacity:1}
+.microcosmos-hero .urban-panorama:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#f7f3ea 0%,#f7f3ea 28%,rgba(247,243,234,.97) 40%,rgba(247,243,234,.86) 52%,rgba(247,243,234,.24) 70%,rgba(21,48,35,.04) 85%,rgba(14,39,29,.6) 100%)}
+.microcosmos-hero .urban-editorial{position:relative;text-align:center;max-width:1150px;margin:auto}
+.microcosmos-hero .urban-edition{max-width:none;display:flex;justify-content:center;align-items:center;gap:20px;margin:0 0 22px;font-size:.65rem;line-height:1.6;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-green)}
+.microcosmos-hero .urban-edition>span{font-weight:500;letter-spacing:.08em;border-left:1px solid #adc0b5;padding-left:20px}
+.microcosmos-hero h1{max-width:none;margin:0 auto 22px;font-size:clamp(3.35rem,5.5vw,5.3rem);line-height:1.025;letter-spacing:-.055em;font-weight:620;color:var(--ink,#192924)}
+.microcosmos-hero h1>span{color:var(--hero-green)}
+.microcosmos-hero .urban-intro{font-size:1.04rem;line-height:1.6;color:#3e5349;margin:0 auto 22px;max-width:65ch}
+.microcosmos-hero .urban-intro strong{font-weight:600;color:#1a3d30}
+.microcosmos-hero .urban-cta{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;padding:13px 24px;background:var(--hero-green);color:#fffaf0;border:1px solid var(--hero-green);border-radius:4px;font-size:.79rem;font-weight:650;text-decoration:none;transition:background .2s}
+.microcosmos-hero .urban-cta:hover{background:#103d30}
+.microcosmos-hero .urban-cta>span{font-size:1.15rem;line-height:1}
+.microcosmos-hero .urban-actions{display:flex;justify-content:center;align-items:stretch;gap:12px;flex-wrap:wrap}
+.microcosmos-hero .urban-method{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;margin:0;padding:12px 18px;border:1px solid #789185;border-radius:4px;background:#f7f3ea;color:#284c3c;font-size:.72rem;font-weight:500;line-height:1.5;text-decoration:none;transition:background .2s,border-color .2s}
+.microcosmos-hero .urban-method:hover{background:#e6ecdf;border-color:#174f40}
+.microcosmos-hero .urban-scene-footer{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:min(100% - 96px,1280px);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;color:#fffaf0}
+.microcosmos-hero .urban-caption{font-size:.82rem;line-height:1.5;font-weight:600;text-shadow:0 1px 3px #183f31}
+.microcosmos-hero .urban-caption small{display:block;font-weight:400;font-size:.59rem;color:#f3f2e7;margin-top:4px}
+.microcosmos-hero .microcosmos-toggle{display:inline-flex;align-items:center;gap:9px;min-height:44px;border:1px solid #faf6e7;border-radius:99px;background:#f7f3ea;color:#284c3c;padding:10px 15px;font-size:.66rem;line-height:1.3;white-space:nowrap}
+.microcosmos-hero .microcosmos-toggle[hidden]{display:none}
+.microcosmos-hero .microcosmos-toggle:hover{background:#fffdf6}
+.microcosmos-hero .microcosmos-toggle:disabled{cursor:default}
+.microcosmos-hero .urban-control-icon{font-size:12px}
+.microcosmos-hero .urban-evidence{background:#174f40;color:#fffaf0;padding:28px max(32px,calc((100% - 1280px)/2)) 21px}
+.microcosmos-hero .urban-evidence-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:20px}
+.microcosmos-hero .urban-evidence-heading p{margin:0;font-size:.95rem;font-weight:500;letter-spacing:-.01em}
+.microcosmos-hero .urban-evidence-heading>span{font-size:.65rem;color:#c0d3c8}
+.microcosmos-hero .urban-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.microcosmos-hero .urban-metric{color:inherit;text-decoration:none;display:grid;grid-template-columns:auto 1fr;gap:18px;padding:0 24px 3px 0;border-right:1px solid #53796a}
+.microcosmos-hero .urban-metric:last-child{border-right:0;padding-right:0}
+.microcosmos-hero .urban-metric-value{font-size:clamp(2.8rem,4.1vw,4rem);line-height:1.05;font-weight:450;letter-spacing:-.065em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.microcosmos-hero .urban-metric-value>span{font-size:.54em;color:#cadccb;letter-spacing:-.03em}
+.microcosmos-hero .urban-metric-copy{display:flex;flex-direction:column;padding-top:4px;font-size:.8rem;line-height:1.45}
+.microcosmos-hero .urban-metric-copy>strong{font-size:.88rem;font-weight:650;margin-bottom:6px}
+.microcosmos-hero .urban-metric-copy>span{color:#d1e0d7}
+.microcosmos-hero .urban-metric-copy>.urban-metric-link{color:#e4edb7;margin-top:11px;font-size:.7rem}
+.microcosmos-hero .urban-metric:hover .urban-metric-link{text-decoration:underline;text-underline-offset:3px}
+.microcosmos-hero .urban-evidence-note{max-width:none;color:#ccddd2;font-size:.7rem;line-height:1.65;margin:20px 0 0}
+.microcosmos-hero .urban-evidence-note>a{color:inherit;text-underline-offset:3px;white-space:nowrap}
+.microcosmos-hero a:focus-visible,.microcosmos-hero button:focus-visible{outline:3px solid #90a949;outline-offset:5px}
+.microcosmos-hero .urban-evidence a:focus-visible{outline-color:#e4edb7}
+@media(min-width:1600px){.microcosmos-hero .urban-stage{min-height:730px;padding-top:60px}}
+@media(max-width:1100px){.microcosmos-hero .urban-metric{display:block}.microcosmos-hero .urban-metric-copy{margin-top:9px}.microcosmos-hero .urban-stage{min-height:610px;padding-bottom:210px}.microcosmos-hero .urban-evidence{padding-left:32px;padding-right:32px}}
+@media(max-width:700px){
+ .microcosmos-hero .urban-stage{padding:34px 0 0;min-height:0;display:flex;flex-direction:column}
+ .microcosmos-hero .urban-editorial{padding:0 24px;order:0}
+ .microcosmos-hero .urban-edition{display:block;font-size:.55rem;letter-spacing:.1em;margin-bottom:22px}
+ .microcosmos-hero .urban-edition>span{display:block;border:0;padding:0;margin-top:4px;font-size:.54rem}
+ .microcosmos-hero h1{font-size:clamp(2.4rem,9.7vw,4rem);line-height:1.06;letter-spacing:-.055em;margin-bottom:20px}
+ .microcosmos-hero h1 br{display:none}.microcosmos-hero h1>span{display:block}
+ .microcosmos-hero .urban-intro{font-size:.9rem;line-height:1.55;max-width:37ch;margin-bottom:20px}
+ .microcosmos-hero .urban-desktop-break{display:none}
+ .microcosmos-hero .urban-cta{font-size:.73rem;padding:12px 16px;gap:16px}
+ .microcosmos-hero .urban-actions{flex-direction:column;align-items:stretch;gap:10px;max-width:380px;margin:auto}
+ .microcosmos-hero .urban-method{font-size:.65rem;margin:0;max-width:none;padding:11px 10px;gap:8px;min-height:46px}
+ .microcosmos-hero .urban-panorama{position:relative;inset:auto;order:1;z-index:0;aspect-ratio:16/9;width:100%;margin-top:12px}
+ .microcosmos-hero .urban-poster,.microcosmos-hero .urban-video{object-fit:contain}
+ .microcosmos-hero .urban-panorama:after{background:linear-gradient(180deg,#f7f3ea,rgba(247,243,234,0) 22%,rgba(23,79,64,0) 82%,#174f40)}
+ .microcosmos-hero .urban-scene-footer{position:relative;order:2;left:auto;bottom:auto;transform:none;width:100%;padding:8px 24px 20px;align-items:center;background:#174f40;gap:16px}
+ .microcosmos-hero .urban-caption{font-size:.66rem;text-shadow:none;max-width:25ch}
+ .microcosmos-hero .urban-caption small{font-size:.52rem;line-height:1.5}
+ .microcosmos-hero .microcosmos-toggle{font-size:.6rem;padding:9px 11px;gap:6px}
+ .microcosmos-hero .urban-evidence{padding:24px;border-top:1px solid #53796a}
+ .microcosmos-hero .urban-evidence-heading{display:block;margin-bottom:21px}
+ .microcosmos-hero .urban-evidence-heading p{font-size:1rem;max-width:26ch;line-height:1.4;margin-bottom:6px}
+ .microcosmos-hero .urban-evidence-heading>span{font-size:.61rem}
+ .microcosmos-hero .urban-metrics{grid-template-columns:1fr;gap:0}
+ .microcosmos-hero .urban-metric{display:grid;grid-template-columns:95px 1fr;gap:14px;border-right:0;border-bottom:1px solid #53796a;padding:18px 0}
+ .microcosmos-hero .urban-metric:first-child{padding-top:0}.microcosmos-hero .urban-metric:last-child{border-bottom:0;padding-bottom:0}
+ .microcosmos-hero .urban-metric-value{font-size:3.25rem}.microcosmos-hero .urban-metric-copy{margin:0;padding-top:3px}
+ .microcosmos-hero .urban-metric-copy>strong{font-size:.79rem}.microcosmos-hero .urban-metric-copy>.urban-metric-link{margin-top:8px}
+ .microcosmos-hero .urban-evidence-note{font-size:.6rem;margin-top:23px}
+}
+@media(prefers-reduced-motion:reduce){.microcosmos-hero *{transition:none}}
+@media print{.microcosmos-hero .urban-stage{padding:24px 0 0;min-height:0}.microcosmos-hero .urban-editorial{padding:0 24px}.microcosmos-hero h1{font-size:36px}.microcosmos-hero .urban-panorama{position:relative;width:100%;aspect-ratio:16/9;z-index:0;margin-top:20px}.microcosmos-hero .urban-video{display:none!important}.microcosmos-hero .urban-poster{opacity:1!important}.microcosmos-hero .urban-panorama:after,.microcosmos-hero .urban-scene-footer{display:none}.microcosmos-hero .urban-evidence{break-inside:avoid;background:#f7f3ea;color:#174f40}.microcosmos-hero .urban-evidence *{color:#174f40!important}.microcosmos-hero .urban-metrics{grid-template-columns:repeat(3,1fr)}.microcosmos-hero .urban-metric{display:block;border:0}.microcosmos-hero .urban-metric-value{font-size:34px}}

@@ -1,0 +1,190 @@
+# Texto editorial del reporte: la edición de Alexis expresada en el template (docs/REPORTE-EDITORIAL.md).
+# Este estudio conserva su HTML revisado (presentacion.html_local en narrativa.yaml); este archivo es el ejemplo de referencia.
+marca: "OU 2.0"
+producto_nombre: "Originación Única 2.0"
+medicion: "Segunda medición"
+material_nombre: "el MVP"
+
+cifras:
+  buscan_total_simulador: {hallazgo: H1, tarea: T1}
+  buscan_total_contrato: {hallazgo: H1, tarea: T4}
+  notan_buro: {hallazgo: H3, tarea: T1}
+  visita_sorpresa: {hallazgo: H4, tarea: T4}
+  ine_vacia: {hallazgo: H6, tarea: T3}
+
+portada:
+  titular: ["El préstamo avanza.", "La certeza se queda atrás."]
+  intro: "La solicitud se puede completar. Pero antes de aceptar, falta la respuesta que permite decidir: **¿cuánto pagaré en total?**"
+  accion: "Descubrir qué frena la decisión"
+  escena: "La decisión necesita claridad."
+  encabezado: ["Avanzar es solo una parte de la experiencia.", "Tres señales para entender lo que falta"]
+  senales:
+    - {cifra: completan, titulo: "Llegan al final de su tramo.", texto: "Completar el recorrido no garantiza comprender la decisión.", enlace: "Ver el recorrido", destino: recorrido}
+    - {cifra: buscan_total_simulador, titulo: "Buscan el costo total.", texto: "En el simulador, ninguna de esas corridas encuentra la cifra.", enlace: "Entender la información que falta", destino: hallazgos}
+    - {cifra: abandonan_T4, titulo: "Abandonan en el contrato.", texto: "Son las dos corridas de un mismo perfil sintético: Itzel.", enlace: "Leer qué detiene la aceptación", destino: hallazgos}
+
+apertura:
+  pregunta: "¿Una persona nueva puede pedir un préstamo desde su celular, sin ayuda, entendiendo qué acepta y qué ocurrirá después?"
+  respuesta: "La respuesta es parcial. El recorrido funciona; la información decisiva llega tarde o no llega. En el simulador, **{{buscan_total_simulador|de}} sesiones** buscaron el costo total. En el contrato, otras **{{buscan_total_contrato|de}}** volvieron a buscarlo. Ninguna lo encontró."
+
+tramos:
+  T1: {nombre: "Elegir y registrarse", logro: "Llegan a la selfie", nota: "Una sesión se detiene en la autorización de buró. Solo una llega sin fricción."}
+  T2: {nombre: "Verificar identidad", logro: "Terminan selfie e INE", nota: "Las ocho lo logran con fricción: el permiso repetido desde otro dominio reduce la confianza."}
+  T3: {nombre: "Completar datos", logro: "Alcanzan la oferta", nota: "La app vuelve a pedir datos de la INE; una sesión se pierde al confirmar la fachada."}
+  T4: {nombre: "Aceptar y cerrar", logro: "Finalizan la solicitud", nota: "Las dos salidas ocurren en el contrato: el mismo perfil abandona en ambas corridas."}
+
+recorrido:
+  titulo: "El camino se completa. La fricción viaja con él."
+  tension:
+    - {cifra: "{{buscan_total_simulador|de}}", texto: "buscan el total al elegir plazo."}
+    - {cifra: "{{buscan_total_contrato|de}}", texto: "vuelven a buscarlo antes de aceptar el contrato.", nota: "Son ocho corridas de cada tramo; no se debe leer como 16 clientes distintos."}
+
+casos:
+  - id: evidencia-costo
+    sesion: T4-itzel-1
+    paso: 7
+    pantalla: diaPago
+    tema: "Decisión financiera"
+    titulo: "El contrato muestra la cuota, pero deja fuera el total"
+    heuristica: "Reconocer antes que recordar"
+    observacion: "El resumen muestra $22,000, 52 semanas y una cuota semanal aproximada de $728; remite el contrato completo y el costo anual total a la visita."
+    interpretacion: "La persona tiene que calcular el costo por su cuenta para decidir. Conviene mostrar total, número de pagos y condiciones junto a la cuota."
+    limite: "La cuenta expresada por Itzel es una estimación del perfil sintético. Esta captura no verifica las condiciones de un préstamo real."
+    nota_mapa: "Este mapa agrupa acciones en la pantalla de día de pago. Su imagen base tiene el contrato cerrado; no permite atribuir cada marca al resumen abierto."
+  - id: evidencia-permisos
+    sesion: T2-bryan-2
+    paso: 8
+    pantalla: incodeUbicacion
+    tema: "Confianza y permisos"
+    titulo: "Un permiso llega con un nombre que no reconocen"
+    heuristica: "Correspondencia con el mundo real · ayuda y documentación"
+    criterios: [N2, N10]
+    observacion: "El diálogo pide ubicación para identidad-digital-ocrdual.com.mx sobre un fondo negro, sin explicación del proveedor dentro de esta pantalla."
+    interpretacion: "El nombre técnico del proveedor rompe la continuidad de marca. Anunciar quién verifica la identidad, para qué pide ubicación y qué ocurre al negarla reduce la sorpresa."
+    limite: "El rechazo de Bryan pertenece a una simulación. No permite estimar cuántos clientes reales negarían el permiso."
+    nota_mapa: "Verde indica que hubo una respuesta visible a la acción. Elegir «No permitir» también puede producir una marca verde; verde no significa consentimiento ni éxito."
+  - id: evidencia-fachada
+    sesion: T3-rosalba-2
+    paso: 34
+    pantalla: fachada
+    tema: "Control y recuperación"
+    titulo: "La foto no coincide y la corrección no queda clara"
+    heuristica: "Control y libertad · prevención de errores"
+    criterios: [N3, N5, N6]
+    observacion: "La pantalla pide confirmar una foto de una posada y ofrece «No es mi fachada» como enlace bajo el botón principal."
+    interpretacion: "Confirmar y corregir deben ser opciones comprensibles. Mostrar la dirección y explicar qué pasa al rechazar la foto ayuda a evitar confirmaciones incorrectas."
+    limite: "La foto forma parte del MVP de pruebas. La corrida termina por límite de pasos; no debe presentarse como un abandono voluntario ni como una falla de datos reales."
+    nota_mapa: "Los toques se agregan sobre la primera captura de esta pantalla. Las repeticiones de una misma sesión también cuentan."
+  - id: evidencia-buro
+    sesion: T1-itzel-2
+    paso: 8
+    pantalla: contacto
+    siguiente: true
+    tema: "Consentimiento informado"
+    titulo: "El consentimiento depende de un documento que no logra leer"
+    heuristica: "Control y libertad · ayuda y documentación"
+    criterios: [N3, N10]
+    observacion: "La autorización de consulta de historial aparece en el texto inferior de la pantalla de contacto. El paso registra un toque sobre ese enlace."
+    interpretacion: "La autorización necesita un documento accesible y una aceptación explícita. La pantalla de datos no debería obligar a decidir sin poder revisar sus implicaciones."
+    limite: "La captura muestra el estado previo al intento. El problema al abrir el documento se describe en el siguiente registro de la sesión; una imagen fija por sí sola no demuestra ese comportamiento."
+    nota_mapa: "Este mapa combina acciones de la pantalla de contacto, incluidos campos de texto. No mide qué textos se leyeron ni la atención visual."
+
+voces:
+  - {sesion: T4-itzel-1, momento: "Al revisar el contrato", cita: "Son 52 semanas de $728, unos $37,800 por $22,000, y eso lo saqué yo. El costo total me lo darán en mi casa, y “aproximado” no me basta."}
+  - {sesion: T2-bryan-2, momento: "Al verificar la INE", cita: "Ya no se ve del banco y nadie me avisó que iba a salir de la app. No le doy mi ubicación a un dominio que no conozco."}
+  - {sesion: T3-rosalba-2, momento: "Al confirmar su domicilio", cita: "Eso es una posada, no mi casa. No voy a decir que sí solo para avanzar, porque estaría firmando algo que no es cierto."}
+  - {sesion: T2-arturo-2, momento: "Al verificar la INE", cita: "Ya van tres veces que piden la ubicación y ahora es otro nombre. No sé si es seguro, pero si no le doy, creo que no puedo seguir con la INE."}
+
+capitulos:
+  - etiqueta: "La decisión financiera"
+    titulo: "Se ve la cuota. Falta el costo de la decisión."
+    intro: "El simulador ofrece pagos semanales y abre con 128 semanas como primera opción. El contrato vuelve a mostrar una cuota “aproximada”. En ninguno de esos dos puntos aparece el total a pagar."
+    hallazgos: [H1]
+    bloques:
+      - tipo: historia
+        paneles:
+          - {acento: true, etiqueta: "Al elegir monto y plazo", cifra: buscan_total_simulador, titulo: "Buscan una cifra que la pantalla no da.", texto: "Varios intentan hacer la cuenta por su lado. La confianza media del simulador es **56/100**, y registra diez observaciones de fricción alta."}
+          - {etiqueta: "Al llegar al contrato", cifra: abandonan_T4, titulo: "Abandonan justo antes de aceptar.", texto: "Son las dos corridas de Itzel. Calcula unos $37,800 por un préstamo de $22,000, pero no encuentra la confirmación en la app; su confianza baja hasta **28/100**.", accion: "Mostrar total, número de pagos y costo del crédito junto a la cuota semanal; repetir los mismos datos en el contrato."}
+      - {tipo: nota, texto: "La cuenta de Itzel es una estimación expresada por el perfil sintético, no una condición contractual verificada. Evidencia: [ver contrato, video y lectura UX](evidencia-costo). Fuente: [corrida de Itzel](T4-itzel-1) · [síntesis del estudio](sintesis)."}
+  - etiqueta: "La confianza"
+    titulo: "El flujo pide permiso antes de explicar del todo."
+    intro: "La fricción no está concentrada en un único toque. Se acumula cuando la app pide confiar en un tercero, aceptar una consulta crediticia y confirmar datos que no puede mostrar."
+    hallazgos: [H2, H3]
+    bloques:
+      - tipo: duo
+        tarjetas:
+          - tipo: confianza
+            tarea: T2
+            antes: inePermisoUbicacion
+            despues: incodeUbicacion
+            etiqueta: "Identidad · permiso de ubicación de Incode"
+            etiqueta_antes: "Antes del nuevo permiso"
+            etiqueta_despues: "Al aparecer el permiso"
+            titulo: "Al pedir ubicación otra vez, la confianza baja."
+            texto: "El permiso de Incode muestra un dominio distinto al del banco. La confianza baja en las ocho corridas; Bryan lo niega en las dos suyas. El patrón aparece en los cuatro perfiles: **no hay una diferencia clara por edad**."
+            fuentes: "[Ver permiso y grabación](evidencia-permisos)"
+          - tipo: hallazgo
+            etiqueta: "Contacto · autorización de buró"
+            cifra: notan_buro
+            titulo: "Notan la letra chica, pero no pueden informarse bien"
+            texto: "La hipótesis de que pasaría inadvertida se cayó: todos la notaron. La mayoría siguió sin leerla. Cuando Itzel intentó abrir la consulta de historial, el enlace la llevó a la página de inicio del banco y abandonó."
+            fuentes: "[Ver el intento de leer la autorización](evidencia-buro) · [Síntesis](sintesis)"
+      - {tipo: accion, texto: "Explicar por qué se repite un permiso y quién verifica la INE; separar la autorización de buró, mostrar el documento real y pedir una aceptación explícita."}
+  - etiqueta: "Las expectativas"
+    titulo: "Lo que falta saber aparece demasiado tarde."
+    intro: "La app anuncia “4 pasos”, pero la ruta mínima observada recorre 30 pantallas y 59 acciones. La barra de domicilio aparece tarde y vuelve a empezar desde cero para esa etapa."
+    hallazgos: [H4, H5, H6]
+    bloques:
+      - tipo: duo
+        tarjetas:
+          - tipo: orientacion
+            tareas: [T1, T2, T3]
+            base: "Son los tramos de registro, identidad y datos."
+            otro_titulo: "Otro hallazgo · datos de la INE"
+            otro: "En las {{ine_vacia|x}} corridas del tramo de datos, los perfiles notan campos vacíos de apellidos, fecha y dirección, aunque la INE acaba de leerse. Este conteo es independiente del dato de orientación."
+          - tipo: hallazgo
+            etiqueta: "Oferta y visita"
+            cifra: visita_sorpresa
+            titulo: "Mencionan la visita como una sorpresa"
+            texto: "La visita a domicilio se anuncia hasta la agenda. De las seis corridas que terminan, todas entienden que sigue la visita y luego, si se aprueba, el dinero; ninguna puede precisar **cuándo llegará**."
+      - {tipo: nota, texto: "También hubo fricción de prototipo: la fachada de ejemplo parecía una posada en las ocho corridas; siete la confirmaron para avanzar y Rosalba no lo hizo en una de sus corridas. [Ver pantalla, sesión y mapa de toques](evidencia-fachada). Fuente: [síntesis](sintesis) · [datos agregados](datos-agregados)."}
+  - etiqueta: "Frente al primer prototipo"
+    titulo: "Hay avances reales. La pregunta crucial sigue abierta."
+    intro: "La comparación usa el mismo panel de cuatro perfiles de la primera medición. No es una estimación de mejora poblacional; sirve para ver qué problemas del prototipo persisten en el MVP."
+    tras_hipotesis: true
+    bloques:
+      - tipo: comparacion
+        elementos:
+          - {estado: "Mejoró", titulo: "El código dejó de atascarse", texto: "El SMS ofrece autollenado y se valida solo. Las siete corridas que llegan al código lo resuelven en un paso."}
+          - {estado: "Ya existe", titulo: "La ruta sin asesor", texto: "El flujo se puede continuar sin ese apoyo; en el prototipo esa rama estaba pendiente."}
+          - {estado: "Sigue abierto", titulo: "Costo, buró y progreso", texto: "El costo total no se ve, la autorización sigue implícita y la persona no obtiene una señal global de cuánto falta."}
+      - {tipo: nota, texto: "Fuentes: [primera medición](antecedente) y [síntesis de esta prueba](sintesis)."}
+
+antecedente:
+  titulo: "La primera medición"
+  descripcion: "Antecedente del estudio · 22 de octubre de 2026."
+  ruta: "../2026-10-22-ou2-descubrimiento/reporte/oupwa-pdu-originacion-unica-2-0-sintetico_2026-10-22-v1.md"
+
+hipotesis:
+  H1: {titulo: "Sin costo total, se confirma sin una cifra completa", texto: "{{buscan_total_simulador}} lo buscan en el simulador y {{buscan_total_contrato}} en el contrato; dos abandonos al aceptar. [Ver protocolo](protocolo)"}
+  H2: {titulo: "La autorización de buró pasaría inadvertida", texto: "{{notan_buro}} la notan: esa predicción se cae. El problema observado es que la saltan o no pueden abrir el documento."}
+  H3: {titulo: "Los permisos de identidad reducen la confianza", matiz: "Se sostiene, con matiz", texto: "La confianza baja entre 12 y 26 puntos por corrida, en una escala de 0 a 100; ocurre en las ocho corridas. Ocurre en todos los perfiles; la parte que anticipaba mayor efecto por edad no se confirma."}
+  H4: {titulo: "La app pide confirmar datos que la INE ya leyó", texto: "{{ine_vacia}} corridas lo comentan al encontrar vacíos los apellidos y la dirección."}
+  H5: {titulo: "Al principio habría menos orientación que en domicilio", texto: "La predicción de diferencia se cae: la desorientación permanece en los tres tramos. Ver [cómo se cuentan las respuestas](orientacion-calculo)."}
+  H6: {titulo: "Al terminar, no sabrían qué sigue", matiz: "Se cae, deja una duda", texto: "Las seis corridas finalizadas explican visita → posible depósito, así que esa parte se cae. Sigue sin respuesta la fecha del dinero y el costo total."}
+
+decisiones:
+  titulo: "Corregir lo que impide decidir con confianza."
+  intro: "El orden prioriza la decisión financiera y los puntos donde el estudio observó abandono o caídas de confianza. Después conviene validar los cambios con personas."
+  prioridades:
+    - {titulo: "Mostrar el costo completo antes de cada decisión", texto: "Total a pagar, número de pagos, cuota, CAT y qué puede cambiar el monto “aproximado” en simulador y contrato."}
+    - {titulo: "Hacer legible y verificable el consentimiento", texto: "Casilla explícita para buró, documento correcto y explicación breve de su propósito."}
+    - {titulo: "Reducir la sorpresa en identidad y agenda", texto: "Unificar permisos de ubicación, anunciar al proveedor externo y avisar de la visita desde el inicio."}
+    - {titulo: "Aclarar cuánto falta y qué dato se necesita", texto: "Progreso global, datos de INE precargados, campos obligatorios visibles y respuesta clara al rechazar la foto de fachada."}
+    - {titulo: "Probar de nuevo con personas", texto: "Observar si ver el total cambia la elección, si el permiso explicado reduce negativas y si la visita anunciada cambia la intención de terminar."}
+
+metodo:
+  parrafos:
+    - "La cámara, ubicación y servicios del MVP estaban simulados; se recorrió el escenario feliz. Las tareas de identidad, datos y cierre empezaron a mitad del flujo mediante una ruta preparada. Por eso sus resultados no son una tasa de conversión de personas que iniciaron en la bienvenida."
+    - "La auditoría técnica encontró carga de 2.4 s en laboratorio y retoma en las ocho sesiones del tramo de datos. También detectó problemas automáticos de contraste en siete pantallas y carruseles sin teclado. Esto requiere revisión manual adicional."
+  falta: "La frecuencia de estos patrones en clientes reales, el efecto de las correcciones y las ramas de error del producto."

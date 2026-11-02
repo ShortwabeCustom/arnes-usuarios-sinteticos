@@ -3,6 +3,9 @@
 titulo_corto: OU 2.0 · PWA MVP
 confianza: alta
 tablero: {pasos_prometidos: 4}   # la bienvenida promete «4 pasos»
+# Presentación editorial revisada; la fuente se edita y se copia al HTML entregable.
+# Si cambian los resultados, revisar también esta presentación antes de regenerar.
+presentacion: {html_local: reporte/fuente-editorial.html}
 titular: "La PWA se recorre de punta a punta, pero el costo total del préstamo no aparece en ningún momento: 8 de 8 sesiones lo buscan al elegir el plazo y 8 de 8 al aceptar el contrato"
 veredicto: >-
   Los cuatro perfiles llegan de la bienvenida a la verificación del celular (7 de 8 sesiones), completan selfie e INE
@@ -30,7 +33,7 @@ resumen:
   - "La verificación de identidad pide cinco permisos. En el tercero de ubicación, ahora desde «identidad-digital-ocrdual.com.mx», la confianza cae de alrededor de 60 a 40 en 8 de 8 sesiones de T2; Bryan lo niega en sus dos corridas (pasa por «cámara negada» y luego acepta)."
   - "La autorización de buró sigue implícita al tocar «Continuar». 8 de 8 sesiones de T1 la notan, la mayoría no la lee («Ni me puse a leer la letra chiquita») y el enlace «Consulta de Historial Crediticio» abre la página de inicio del banco, no el documento: Itzel se detiene ahí."
   - "La visita a domicilio aparece hasta la agenda. 4 de 8 sesiones de T4 lo dicen así: «Yo quería resolverlo desde el celular»."
-  - "Saber dónde va: en T1–T3, 435 de 439 respuestas dicen «no» o «más o menos». La barra de progreso del domicilio se nota (6 de 8 sesiones de T3 la mencionan), pero arranca vacía por etapa: «La barra casi vacía… otra vez a empezar» (Bryan)."
+  - "Saber dónde va: en T1–T3, 462 de 466 respuestas dicen «no» o «más o menos». La barra de progreso del domicilio se nota (6 de 8 sesiones de T3 la mencionan), pero arranca vacía por etapa: «La barra casi vacía… otra vez a empezar» (Bryan)."
   - "En «Confirma tus datos» 8 de 8 sesiones de T3 notan que la app pide coincidir con la INE pero no trae los apellidos ni la dirección que acaba de leer."
   - "La foto de fachada de ejemplo parece un hotel: 8 de 8 sesiones de T3 lo comentan; 7 confirman «para avanzar» y Rosalba se niega en una corrida y no llega a la oferta."
   - "Técnica: carga en 2.4 s (LCP) con red móvil lenta, 667 KB, funciona sin conexión y conserva el avance al volver (8 de 8 sesiones de T3). Accesibilidad automática (WCAG 2.2 AA): 21 de 30 pantallas sin fallas; contraste insuficiente en 7 (los botones «No permitir», el contador del código) y carruseles sin teclado."
@@ -114,9 +117,9 @@ momentos:
 hipotesis_resultado:
   - {id: H1, estado: se_sostiene, evidencia: "8 de 8 sesiones de T1 buscan el total en el simulador y no lo encuentran; vuelven a buscarlo en el contrato en 8 de 8 sesiones de T4."}
   - {id: H2, estado: se_cae, evidencia: "No pasa inadvertida: 8 de 8 sesiones de T1 notan la letra chica del buró. Lo que pasa es que la saltan sin leerla («Ni me puse a leer la letra chiquita»), o, como Itzel, intentan leerla y el enlace abre la página de inicio del banco."}
-  - {id: H3, estado: se_sostiene, evidencia: "En 8 de 8 sesiones de T2 la confianza cae 17 a 25 puntos en el permiso de ubicación de Incode (de 52–66 a 35–45). Bryan lo niega en sus dos corridas; Arturo: «Ya van tres veces que piden la ubicación y ahora es otro nombre». No hay diferencia clara por generación: cae en los cuatro perfiles."}
+  - {id: H3, estado: se_sostiene, evidencia: "En 8 de 8 sesiones de T2 la confianza cae 12 a 26 puntos sobre una escala de 0 a 100 en el permiso de ubicación de Incode (de 52–66 a 35–45). Bryan lo niega en sus dos corridas; Arturo: «Ya van tres veces que piden la ubicación y ahora es otro nombre». No hay diferencia clara por generación: cae en los cuatro perfiles."}
   - {id: H4, estado: se_sostiene, evidencia: "8 de 8 sesiones de T3 comentan que «debe coincidir con la INE» pero los apellidos y la dirección vienen vacíos; Rosalba: «Raro que no la traiga de la INE, pero la escribo yo»."}
-  - {id: H5, estado: se_cae, evidencia: "No hay diferencia: «no» o «más o menos» en 127 de 127 respuestas de T1, 103 de 106 de T2 y 205 de 206 de T3. La barra del domicilio se ve (6 de 8 sesiones de T3), pero mide la etapa, no el proceso, y arranca vacía."}
+  - {id: H5, estado: se_cae, evidencia: "No hay diferencia: «no» o «más o menos» en 127 de 127 respuestas de T1, 103 de 106 de T2 y 232 de 233 de T3. La barra del domicilio se ve (6 de 8 sesiones de T3), pero mide la etapa, no el proceso, y arranca vacía."}
   - {id: H6, estado: se_cae, evidencia: "De las 6 sesiones que terminan T4, las 6 explican que primero viene la visita y después, si aprueban, el dinero; ninguna sabe cuándo llega ni cuánto pagará en total. Las 2 de Itzel abandonan antes."}
 perfiles:
   bryan: {cita: "Ya no se ve del banco y nadie me avisó que iba a salir de la app.", entiende: "Lo rápido del código y el orden del flujo.", rompe: "Dominios que no son del banco, tocar algo que no responde (la moto en la oferta) y una barra que vuelve a empezar."}
@@ -211,7 +214,7 @@ hallazgos:
     sesiones: [T3-arturo-1, T3-bryan-1, T3-bryan-2, T3-itzel-1, T3-rosalba-1, T3-rosalba-2]
     impacto_negocio: 3
     walkthrough: 4
-    hallazgo: "La bienvenida promete «4 pasos»; la ruta mínima son 59 acciones en 30 pantallas. En T1–T3, 435 de 439 respuestas dicen no saber, o saber más o menos, en qué parte van. La barra «Tu domicilio» se nota (6 de 8 sesiones de T3), pero mide la etapa: «La barra casi vacía… otra vez a empezar» (Bryan)."
+    hallazgo: "La bienvenida promete «4 pasos»; la ruta mínima son 59 acciones en 30 pantallas. En T1–T3, 462 de 466 respuestas dicen no saber, o saber más o menos, en qué parte van. La barra «Tu domicilio» se nota (6 de 8 sesiones de T3), pero mide la etapa: «La barra casi vacía… otra vez a empezar» (Bryan)."
     interpretacion: "Una barra por etapa que vuelve a cero confirma que falta mucho sin decir cuánto. La promesa de 4 pasos sigue sin corresponder al recorrido."
     recomendacion: "Un indicador global de pocos pasos con nombre («Paso 3 de 5 · Tu domicilio») en todo el flujo, o ajustar la promesa de la bienvenida."
     evidencia: "Métrica «sabe dónde va» · pensamientos de direccion y domicilioInicio (T3) · primera medición, hallazgo H3."
